@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:module="http://tuc.web.engineering/module#"
+         xmlns:dept="http://tuc.web.engineering/department#"
+         >
+  
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#CTWE">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">435660</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Self-Organizing Networks</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Einführung. Drahtlose Netze nach IEEE 802: Übersicht; IEEE 802.11 [Wireless Local Area Networks, [WLAN] (Einführung, System- und Protokollarchitektur, PHY-Schicht, MAC-Schicht, Roaming, Dienstgüteunterstützung, Sicherheitskonzept, Netzaspekte); IEEE 802.11s [Wireless Mesh Networks]</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#CommunicationNetworks"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</module:hasCreditPoints>
+  </rdf:Description>
+
+    <rdf:Description rdf:about="http://tuc.web.engineering/module#CTWE">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">652110</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informationsmanagement</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information ist die zentrale Ressource der Wirtschaft. Die Vorlesung Informationsmanagement vermittelt Kenntnisse und Fähigkeiten zum Umgang mit dieser Ressource.</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#BusinessInformatics"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</module:hasCreditPoints>
+  </rdf:Description>
+  
+    <rdf:Description rdf:about="http://tuc.web.engineering/module#CTWE">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">652120</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategic IT Management</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Veranstaltung behandelt die Aufgaben des strategischen IT-Managements.</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#BusinessInformatics"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
+  </rdf:Description>
+   
+    <rdf:Description rdf:about="http://tuc.web.engineering/module#CTWE">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500410</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seminar Web Engineering</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Übersichtsartige Auseinandersetzung mit vorgegebenen Themen aus dem Bereich Web Engineering, insbesondere aus den Bereichen Software Engineering und Web Technologien.</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#WebEngineering"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
+  </rdf:Description>
+     
+    <rdf:Description rdf:about="http://tuc.web.engineering/module#CTWE">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500420</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorbereitungsseminar Planspiel Web Engineering</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Übersichtsartige Auseinandersetzung mit vorgegebenen Themen aus dem Bereich Web Engineering, insbesondere aus den Bereichen moderne Entwicklungsansätze für Web- Anwendungen, strategische Planung, Ansätze aus dem Umfeld von Agile, Lean und Design Thinking sowie User Interface Experience, Service Design und Cloud Computing.</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#WebEngineering"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</module:hasCreditPoints>
+  </rdf:Description>
+       
+    <rdf:Description rdf:about="http://tuc.web.engineering/module#CTWE">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">613002</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Businessplanung und Management von Gründungen</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Studenten setzen sich mit allen Aspekten der Selbständigkeit und der Gründung eines Unternehmens auseinander. Dazu zählen u.a. Ideenfindung und -bewertung, die Erstellung eines Businessplans, die Finanzierung einer Gründung und das Management von Start-Ups und KMUs.</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#BusinessAdministration"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</module:hasCreditPoints>
+  </rdf:Description>
+       
+    <rdf:Description rdf:about="http://tuc.web.engineering/module#CTWE">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">613230</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gründungsfinanzierung</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Vorlesung vermittelt neben finanztechnischen und analytischen Grundkenntnissen auch Wissen über Liquiditätsplanung und Finanzierungsquellen, Verständnis für die Rolle von Fremdkapitalgebern und Investoren und Grundkenntnisse über die Bewertung von Wachstumsunternehmen. Das erlernte Wissen wird in Fallstudien vertieft und praktisch angewendet.</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#BusinessAdministration"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</module:hasCreditPoints>
+  </rdf:Description>
+
+    <rdf:Description rdf:about="http://tuc.web.engineering/module#CTWE">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">613004 </module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technischer Vertrieb</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Besonders bei technologieorientierten Gründungen und KMUs kommt dem technischen Vertrieb an Firmenkunden eine Schlüsselfunktion zu. Die Vorlesung vermittelt daher umfangreiche Kenntnisse über den Ablauf von Business-to-Business-Geschäften.</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#BusinessAdministration"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
+  </rdf:Description>
+
+</rdf:RDF>
