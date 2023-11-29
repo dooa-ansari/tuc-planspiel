@@ -13,11 +13,11 @@ WHERE {
 }"""
 
 qresponse = graph.query(module_list)
-data = ""
+data = "<html><body>"
 for row in qresponse:
-    data = data + f"{row.moduleName} has id {row.moduleId} and belongs to department {row.deptName}\n"
+    data = data + f"<p><b>{row.moduleName}</b> has id <i>{row.moduleId}</i> and belongs to department <u>{row.deptName}</u></p>"
 
-
+data = data + "</html></body>"
 
 def index(request):
-    return HttpResponse("Sparql Query Returned data {data}."+data)
+    return HttpResponse(data)
