@@ -20,7 +20,7 @@
     <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">565130</module:hasModuleNumber>
     <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verlässliche Systeme</module:hasName>
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundlegende Ansätze und Maße der Fehlertoleranz; Störungsmodelle; Techniken der Fehlerdiagnose; Fehlertoleranz auf Systemebene; Fehler in Software; Modellierung</module:hasContent>
-    <dept:hasName rdf:resource="http://tuc.web.engineering/department#Betriebssysteme"/>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#OperatingSystems"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
   </rdf:Description>
 
@@ -83,7 +83,7 @@
     <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">578050</module:hasModuleNumber>
     <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mediencodierung</module:hasName>
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es werden zentrale Aspekte der Codierung medialer Daten besprochen.</module:hasContent>
-    <dept:hasName rdf:resource="http://tuc.web.engineering/department#MediaInformatics"/>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#Medieninformatik"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
   </rdf:Description>
 
@@ -92,7 +92,7 @@
     <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">578070</module:hasModuleNumber>
     <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mensch-Computer-Interaktion II</module:hasName>
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Mensch-Computer-Interaktion II behandelt Interaktionsmöglichkeiten zwischen Mensch und Computer insbesondere bei multimedialen Inhalten.</module:hasContent>
-    <dept:hasName rdf:resource="http://tuc.web.engineering/department#MediaInformatics"/>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#Medieninformatik"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
   </rdf:Description>
 
@@ -112,7 +112,8 @@
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vermittlung von Grundkenntnissen der deutschen Sprache (Lexik, Grammatik,Phonetik)</module:hasContent>
     <dept:hasName rdf:resource="http://tuc.web.engineering/department#GermanLanguage"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</module:hasCreditPoints>
-      </rdf:Description>
+  </rdf:Description>
+  
   <rdf:Description rdf:about="http://tuc.web.engineering/module#SSE">
     <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">553090</module:hasModuleNumber>
@@ -127,7 +128,7 @@
     <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">563050</module:hasModuleNumber>
     <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datenbanken und Web-Techniken</module:hasName>
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basistechniken der Internetprogrammierung zum Zugriff auf Datenbanken,ODBC, JDBC, DCE, CORBA, COM/DCOM, Portaltechnik, XML, Web-Services</module:hasContent>
-    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDatenverwaltungssysteme"/>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DataManagement"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
   </rdf:Description>
 
@@ -136,7 +137,7 @@
     <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">563090</module:hasModuleNumber>
     <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datenbanken und Objektorientierung</module:hasName>
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erweiterungen des relationalen Datenmodells mit Hinführung zum , objektorientierten Datenmodell in Datenbanken; abschließend mit dem objektrelationalen , Ansatz heutiger Datenbanksysteme</module:hasContent>
-    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDatenverwaltungssysteme"/>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DataManagement"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
   </rdf:Description>
 
@@ -145,7 +146,7 @@
     <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">577020</module:hasModuleNumber>
     <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Model-Driven Software Development</module:hasName>
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Vorlesung gibt eine Einführung in Model-Driven Software Development und bettet sie ein in Softwaremodellierung und –entwicklung. Der Schwerpunkt liegt auf der OMG Sicht von modellgetriebener Softwareentwicklung.</module:hasContent>
-    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptSoftwaretechnik"/>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#SoftwareEngineering"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
   </rdf:Description>
 
@@ -154,7 +155,7 @@
     <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">577040</module:hasModuleNumber>
     <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quantitative Analysis of Software Designs</module:hasName>
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neben der Erfüllung der funktionalen Anforderungen muss Software auch eine . Reihe nichtfunktionaler Eigenschaften wie Performance, Skalierbarkeit und Zuverlässigkeit erfüllen. Letztere sind oftmals ausschlaggebend für den eigentlichen Erfolg des Softwareeinsatzes.</module:hasContent>
-    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptSoftwaretechnik"/>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#SoftwareEngineering"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
   </rdf:Description>
 
@@ -163,7 +164,7 @@
     <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9100</module:hasModuleNumber>
     <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master-Arbeit</module:hasName>
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Im Rahmen des Moduls wird eine Masterarbeit erstellt und öffentlich verteidigt. Das Thema der Arbeit steht in inhaltlichem Zusammenhang zu einem der Anwendungsschwerpunkte.</module:hasContent>
-    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDatenverwaltungssysteme"/>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#WebEngineering"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</module:hasCreditPoints>
   </rdf:Description>
   

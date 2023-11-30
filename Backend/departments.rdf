@@ -67,7 +67,7 @@
     <Dept:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professur Künstliche Intelligenz</Dept:hasName>
   </rdf:Description>
                   
-  <rdf:Description rdf:about="http://tuc.web.engineering/department#MediaInformatics">
+  <rdf:Description rdf:about="http://tuc.web.engineering/department#Medieninformatik">
     <rdf:type rdf:resource="http://tuc.web.engineering/department#"/>
     <rdfs:comment>This is department of Media Informatics</rdfs:comment>
     <Dept:hasDeptId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Dept:hasDeptId>
