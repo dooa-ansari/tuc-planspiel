@@ -1,0 +1,23 @@
+.landingImage {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.landingImage__banner {
+  width: inherit;
+  object-fit: cover;
+}
+
+.landingImage__slogan {
+  background-color: #ececec;
+}
+
+.landingImage__slogan > p {
+  font-style: italic;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 3.2px;
+  color: #007991;
+}
