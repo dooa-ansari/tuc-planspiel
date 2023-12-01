@@ -4,8 +4,11 @@ import rdflib
 from django.http import HttpResponse
 
 graph = rdflib.Graph()
-graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\web_engineering_modules.rdf")
-graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\departments.rdf")
+#complete isn't required , incase required we need to do it some other way becuase path will be different for different machines
+#graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\web_engineering_modules.rdf")
+graph.parse("web_engineering_modules.rdf")
+#graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\departments.rdf")
+graph.parse("departments.rdf")
 module_list = """
 SELECT ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints ?deptName ?dName ?deptId
 WHERE {
