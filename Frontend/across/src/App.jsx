@@ -6,12 +6,11 @@ import Header from "./components/Header";
 import LandingContent from "./components/LandingContent";
 import LandingImage from "./components/LandingImage";
 import About from "./components/About";
-import ShowModules from "./screens/show_modules/ShowModules";
+import ShowModules from "./components/ShowModules";
 
 const App = () => {
   return (
     <>
-      <ShowModules/>
       <Header brandName="Across" />
       <div className="siteContents">
         <LandingImage source={blogBanner} title="Student Service" />
@@ -20,6 +19,7 @@ const App = () => {
           description=" Lorem ipsum, dolor sit amet consectetur adipisicing elit."
         /> */}
         <About />
+        <ShowModules/>
       </div>
     </>
   );
