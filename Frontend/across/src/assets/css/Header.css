@@ -1,0 +1,54 @@
+.header {
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 0;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 12%;
+  z-index: 9;
+}
+
+.header__contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__brandName {
+  font-size: 1.9rem;
+  letter-spacing: 5px;
+  text-transform: lowercase;
+  color: #439a86;
+}
+
+.header__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__link {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+}
+
+.header__link:hover {
+  color: #439a86;
+  filter: drop-shadow(0 0 30px #439a86);
+}
+
+.header__signup-btn {
+  background: #fff;
+  border: 1px solid #439a86;
+  border-radius: 15px;
+  color: #242424;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.header__signup-btn:hover {
+  background: #439a86;
+  color: #fff;
+}
