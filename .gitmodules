@@ -1,0 +1,3 @@
+[submodule "Backend/across/RDF"]
+	path = Backend/across/RDF
+	url = https://github.com/dooamindshine/WebWizardsRDF.git
