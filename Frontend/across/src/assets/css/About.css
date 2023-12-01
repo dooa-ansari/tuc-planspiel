@@ -1,0 +1,29 @@
+.about {
+  padding: 78px 0;
+}
+.about__features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.feature > p {
+  padding-left: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.feature p > span {
+  display: block;
+}
+
+.svg {
+width: 140px;
+height: 130px;
+flex-shrink: 0;
+}

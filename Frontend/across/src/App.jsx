@@ -17,7 +17,7 @@ const App = () => {
           title="Across Student Service"
           description=" Lorem ipsum, dolor sit amet consectetur adipisicing elit."
         /> */}
-        {/* <About /> */}
+        <About />
       </div>
     </>
   );
