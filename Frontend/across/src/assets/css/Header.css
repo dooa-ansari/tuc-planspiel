@@ -4,7 +4,7 @@
   border-radius: 0;
   position: fixed;
   width: 100%;
-  padding: 1rem 12%;
+  padding: 0 2%;
   z-index: 9;
 }
 
@@ -14,12 +14,18 @@
   align-items: center;
 }
 
-.header__brandName {
+/* .header__brandName {
   font-size: 1.9rem;
   letter-spacing: 5px;
   text-transform: lowercase;
   color: #439a86;
+} */
+
+.header__brandImage {
+  width: 180px;
+  height: 80px;
 }
+
 
 .header__links {
   display: flex;
@@ -30,7 +36,7 @@
 .header__link {
   list-style: none;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0.5rem 2rem;
 }
 
@@ -39,12 +45,16 @@
   filter: drop-shadow(0 0 30px #439a86);
 }
 
+.header__right {
+  display: flex;
+}
+
 .header__signup-btn {
-  background: #fff;
-  border: 1px solid #439a86;
-  border-radius: 15px;
-  color: #242424;
-  font-weight: 600;
+  background: #439a86;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: white;
+  font-weight: 500;
   margin-left: 10px;
 }
 
