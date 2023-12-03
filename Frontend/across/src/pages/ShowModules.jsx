@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import data_static from "./data";
+import data_static from "../components/data";
 import "../assets/css/ShowModules.css";
 
 const ShowModules = () => {

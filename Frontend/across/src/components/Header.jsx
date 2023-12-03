@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/css/Header.css";
 import { Link } from "react-scroll";
+import { Link as RLink } from 'react-router-dom';
 import brandLogo from "../assets/brandLogo.png";
 
 const duration = 500;
@@ -29,7 +30,7 @@ const Header = ({ brandName }) => {
               </Link>
             </li>
             <li className="header__link">
-              <Link activeClass="active" to="#" spy smooth duration={duration}>
+              <Link activeClass="active" to="modules" spy smooth duration={duration}>
                 ACROSS
               </Link>
             </li>
