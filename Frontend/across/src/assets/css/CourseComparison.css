@@ -1,0 +1,35 @@
+.courseComparison {
+  width: 100%;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.courseComparison__image{
+  width: inherit;
+  padding: 20px;
+}
+
+.courseComparison__contents {
+  width: 25%;
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.courseComparison__contents .courseComparison__title, .courseComparison__contents .courseComparison__description {
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.courseComparison__contents .courseComparison__button {
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #E9D985;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 15px 0;
+}

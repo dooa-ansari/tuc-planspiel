@@ -1,0 +1,47 @@
+.footer {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.footer__contents {
+  border-top: 6px solid #222E50;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.footer__social-handles {
+  display: flex;
+  gap: 1rem;
+  width: 40px;
+  height: 40px;
+}
+
+.footer__middle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.company__logo > img {
+  width: 200px;
+  height: 80px;
+}
+
+
+.footer__right-contactIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__bottom-contents {
+  background: #4A546F;
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
