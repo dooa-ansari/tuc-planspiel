@@ -43,4 +43,4 @@ data = data + f"<p>Total Modules are: {counter} </p></html></body>"
 
 
 def index(request):
-    return HttpResponse(json_data)
+    return HttpResponse(data)
