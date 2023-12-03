@@ -1,30 +1,22 @@
 import React from "react";
 import "./App.css";
-import blogBanner from "./assets/BlogBanner.png";
-import Header from "./components/Header";
-import LandingContent from "./components/LandingContent";
-import LandingImage from "./components/LandingImage";
-import About from "./components/About";
-import CourseFinder from "./components/CourseFinder";
-import CourseComparison from "./components/CourseComparison";
-import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const App = () => {
   return (
-    <>
-      <Header brandName="Across" />
-      <div className="siteContents">
-        <LandingImage source={blogBanner} title="Student Service" />
-        {/* <LandingContent
-          title="Across Student Service"
-          description=" Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-        /> */}
-        <About />
-        <CourseFinder />
-        <CourseComparison />
-        <Footer />
-      </div>
-    </>
+    <div className="app">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/login" exact element={<Login />} />
+          <Route path="/register" exact element={<Register />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 };
 
