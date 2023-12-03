@@ -1,0 +1,91 @@
+.register{
+    background-color: #BCD8C1;
+    height: 100vh;
+    position: relative;
+}
+
+.register__wrapper {
+    width: 70%;
+    padding: 122px 120px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 35px;
+  border-right: 3px solid #FBFBFB;
+  border-bottom: 3px solid #FBFBFB;
+  background: #FFF;
+  box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .register__characterSvg {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .register__title {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .signupgoogle__button {
+    display: block;
+    width: 390px;
+    height: 70px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    background: #439A86;
+    border: none;
+    margin-bottom: 58px;
+  }
+
+  .signupemail__button {
+    display: block;
+    width: 390px;
+    height: 70px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    background: #439A86;
+    border: none;
+    margin-bottom: 58px;
+  }
+
+  .singupgoogle__image{
+    width: 17.6px;
+    height: 20.907px;
+    flex-shrink: 0;
+    background:lightgray;
+  }
+
+  .singupemail__image{
+    width: 23.467px;
+    height: 19.465px;
+    flex-shrink: 0;
+    background:lightgray;
+  }
+
+  .eclips__image {
+    width: 33px;
+    height: 31px;
+    flex-shrink: 0;
+  }
+
+  .register__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
