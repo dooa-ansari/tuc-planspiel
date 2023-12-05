@@ -32,7 +32,7 @@ const Header = ({ brandName }) => {
               </Link>
             </li>
             <li className="header__link">
-              <Link activeClass="active" to="#" spy smooth duration={duration}>
+              <Link activeClass="active" to="modules" spy smooth duration={duration}>
                 ACROSS
               </Link>
             </li>
