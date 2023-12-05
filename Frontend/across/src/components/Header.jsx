@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/css/Header.css";
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import brandLogo from "../assets/brandLogo.png";
 
 const duration = 500;
@@ -9,7 +10,9 @@ const Header = ({ brandName }) => {
     <div className="header">
       <div className="header__contents">
         <div className="header__left">
-          <img src={brandLogo} className="header__brandImage" />
+          <NavLink to="/">
+            <img src={brandLogo} className="header__brandImage" />
+          </NavLink>
         </div>
         <div className="header__middle">
           <ul className="header__links">
@@ -29,7 +32,7 @@ const Header = ({ brandName }) => {
               </Link>
             </li>
             <li className="header__link">
-              <Link activeClass="active" to="#" spy smooth duration={duration}>
+              <Link activeClass="active" to="modules" spy smooth duration={duration}>
                 ACROSS
               </Link>
             </li>
@@ -42,14 +45,14 @@ const Header = ({ brandName }) => {
         </div>
         <div className="header__right">
           <li className="header__link">
-            <Link activeClass="active" to="#" spy smooth duration={duration}>
+            <NavLink className="login__link" to="login">
               Log in
-            </Link>
+            </NavLink>
           </li>
           <li className="header__link header__signup-btn">
-            <Link to="#" spy smooth duration={duration}>
+            <NavLink className="register__link" to="register">
               Sign Up
-            </Link>
+            </NavLink>
           </li>
         </div>
       </div>

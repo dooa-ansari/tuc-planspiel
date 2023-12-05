@@ -14,12 +14,7 @@
   align-items: center;
 }
 
-/* .header__brandName {
-  font-size: 1.9rem;
-  letter-spacing: 5px;
-  text-transform: lowercase;
-  color: #439a86;
-} */
+
 
 .header__brandImage {
   width: 180px;
@@ -60,5 +55,22 @@
 
 .header__signup-btn:hover {
   background: #439a86;
+  color: #fff;
+}
+
+.login__link, .register__link{
+  text-decoration: none;
+}
+
+.login__link {
+  color: #242424;
+}
+
+.login__link:hover {
+  color: #439a86;
+  filter: drop-shadow(0 0 30px #439a86);
+}
+
+.register__link {
   color: #fff;
 }

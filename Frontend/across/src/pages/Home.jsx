@@ -16,9 +16,9 @@ const Home = () => {
         <div className="siteContents">
           <LandingImage source={blogBanner} title="Student Service" />
           {/* <LandingContent
-          title="Across Student Service"
-          description=" Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-        /> */}
+            title="Across Student Service"
+            description=" Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+          /> */}
           <About />
           <CourseFinder />
           <CourseComparison />
