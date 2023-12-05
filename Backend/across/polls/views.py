@@ -2,6 +2,7 @@ import json
 
 import rdflib
 from django.http import HttpResponse
+from pymantic import sparql
 
 graph = rdflib.Graph()
 #complete isn't required , incase required we need to do it some other way becuase path will be different for different machines
@@ -9,6 +10,8 @@ graph = rdflib.Graph()
 graph.parse("web_engineering_modules.rdf")
 #graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\departments.rdf")
 graph.parse("departments.rdf")
+server = sparql.SPARQLServer('http://localhost:9999/blazegraph/')
+server.update('load <file:///web_engineering_modules.rdf>')
 module_list = """
 SELECT ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints ?deptName ?dName ?deptId
 WHERE {
@@ -22,25 +25,33 @@ WHERE {
 }
 """
 
-qresponse = graph.query(module_list)
-data = "<html><body>"
-counter = 0
-data_list = []
-for row in qresponse:
-    counter = counter + 1
-    data_dict = {
-        'moduleName': str(row.moduleName),
-        'moduleId': str(row.moduleId),
-        'moduleContent': str(row.moduleContent),
-        'moduleCreditPoints': str(row.moduleCreditPoints),
-        'deptName': str(row.dName),
-        'deptId': str(row.deptId)
-    }
-    data_list.append(data_dict)
-json_data = json.dumps(data_list, indent=2)
-data = data + json_data
-data = data + f"<p>Total Modules are: {counter} </p></html></body>"
+qresponse = server.query(module_list)
+data = qresponse['results']['bindings']
+print(data)
+for row in data:
+   print("Module:")
+   print("Name:"+row['moduleName']['value'])
+   print("Id:"+row['moduleId']['value'])
+   print("Department:"+row['deptName']['value'])
+
+# data = "<html><body>"
+# counter = 0
+# data_list = []
+# for row in qresponse:
+#     counter = counter + 1
+#     data_dict = {
+#         'moduleName': str(row.moduleName),
+#         'moduleId': str(row.moduleId),
+#         'moduleContent': str(row.moduleContent),
+#         'moduleCreditPoints': str(row.moduleCreditPoints),
+#         'deptName': str(row.dName),
+#         'deptId': str(row.deptId)
+#     }
+#     data_list.append(data_dict)
+# json_data = json.dumps(data_list, indent=2)
+# data = data + json_data
+# data = data + f"<p>Total Modules are: {counter} </p></html></body>"
 
 
 def index(request):
-    return HttpResponse(data)
+    return HttpResponse("Dooa")
