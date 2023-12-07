@@ -24,14 +24,26 @@
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#CWEA">
+   <rdf:Description rdf:about="http://tuc.web.engineering/module#CWEA">
     <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
-    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">553050</module:hasModuleNumber>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#">553050</module:hasModuleNumber>
     <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cloud and Web Anwendungen</module:hasName>
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul führt in das „Phänomen Web und Cloud“ sowie die Entwicklung verteilter Anwendungen und Systeme ein. Der ständige und schnelle Wandel der Anforderungen durch den globalen Wettbewerb an Softwarelösungen stellt neue Herausforderungen an Technologie, Software-Entwicklung, und -Betrieb dar.Das Modul führt in das „Phänomen Web und Cloud“ sowie die Entwicklung verteilter Anwendungen und Systeme ein. Der ständige und schnelle Wandel der Anforderungen durch den globalen Wettbewerb an Softwarelösungen stellt neue Herausforderungen an Technologie, Software-Entwicklung, und -Betrieb dar.</module:hasContent>
     <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
+    <module:hasModules rdf:resource="http://tuc.web.engineering/module#BSE" />
+    <module:hasModules rdf:resource="http://tuc.web.engineering/module#BWADJ" />
   </rdf:Description>
+
+    <rdf:Description rdf:about="http://tuc.web.engineering/module#XML">
+        <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+        <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553150</module:hasModuleNumber>
+        <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XML</module:hasName>
+        <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die eXtensible Markup Language (XML) ist die Basis für eine Vielzahl von Entwicklungen im Bereich des World Wide Web. Die Themen behandeln: Einführung in Markupsprachen und XML, Grundlegende Ansätze, z.B. DTD, XML-Schemas, XML-Editoren, XML- Anwendungen, Linking, XPath, XSL/XSLT, Formate und Werkzeuge im Bereich Daten, z.B. SVG, RSS, Formate und Werkzeuge im Bereich Semantik, z.B. RDF, OWL, digitale Rechte mit Creative Commons, Formate und Werkzeuge im Bereich Benutzerschnittstellen, z.B. XHTML, XForms, MicroFormats, Formate und Werkzeuge im Bereich Anwendungslogik, z.B. Web Services, Blogs, Collaboration, Content Analysis, E-Commerce, Maps, Social Bookmarking, Search, Sight/Sound/Motion, Storage, Tagging</module:hasContent>
+        <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
+        <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
+        <module:hasModules rdf:resource="http://tuc.web.engineering/module#BWADJ" />
+    </rdf:Description>
 
   <rdf:Description rdf:about="http://tuc.web.engineering/module#PP">
     <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
@@ -364,15 +376,6 @@
         <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">553130</module:hasModuleNumber>
         <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sicherheit Verteilter Software</module:hasName>
         <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Angebot fokussiert das Problem der Sicherheit im Internet und Web, den daran angeschlossenen Anwendungssystemen sowie Verteilter Software im Allgemeinen. Das Modul vertieft vier Bereiche: Bereich - Sicherheit - Einführung in Methoden und Ansätze der Kryptographie, Ansätze, Dienste und Werkzeuge zur Rechnernetz-Sicherheit, z. B. IPSec, Kerberos, Zertifikate, LDAP, RADIUS, Firewalls, IDS, Sniffer, Scanner, Management und Sicherheitsaspekte von drahtlosen lokalen Netzen</module:hasContent>
-        <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
-        <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="http://tuc.web.engineering/module#XML">
-        <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
-        <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">553150</module:hasModuleNumber>
-        <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XML</module:hasName>
-        <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die eXtensible Markup Language (XML) ist die Basis für eine Vielzahl von Entwicklungen im Bereich des World Wide Web. Die Themen behandeln: Einführung in Markupsprachen und XML, Grundlegende Ansätze, z.B. DTD, XML-Schemas, XML-Editoren, XML- Anwendungen, Linking, XPath, XSL/XSLT, Formate und Werkzeuge im Bereich Daten, z.B. SVG, RSS, Formate und Werkzeuge im Bereich Semantik, z.B. RDF, OWL, digitale Rechte mit Creative Commons, Formate und Werkzeuge im Bereich Benutzerschnittstellen, z.B. XHTML, XForms, MicroFormats, Formate und Werkzeuge im Bereich Anwendungslogik, z.B. Web Services, Blogs, Collaboration, Content Analysis, E-Commerce, Maps, Social Bookmarking, Search, Sight/Sound/Motion, Storage, Tagging</module:hasContent>
         <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
         <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
     </rdf:Description>
