@@ -6,16 +6,16 @@ const ShowModules = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/polls/')
-      .then(response => response.json())
-      .then(json => setData(json))
-      .catch(error => console.error(error));
+    // fetch('http://127.0.0.1:8000/polls/')
+    //   .then(response => response.json())
+    //   .then(json => setData(json))
+    //   .catch(error => console.error(error));
   }, []);
 
   return (
     <div style={{ flex: 1 }}>
       <p id="moduleHeading">Web Engineering Modules</p>
-      {data?.map((item) => {
+      {data_static?.map((item) => {
         return (
           <div id="module" key={item.moduleId}>
             <div id="moduleid">{item.moduleId} - {item.moduleName}</div>
