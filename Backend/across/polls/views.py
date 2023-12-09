@@ -2,6 +2,7 @@ import json
 
 import rdflib
 from django.http import HttpResponse
+from .translator import translateText
 
 graph = rdflib.Graph()
 graph2 = rdflib.Graph()
@@ -40,6 +41,11 @@ for row in qresponse:
 json_data = json.dumps(data_list, indent=2)
 data = data + json_data
 data = data + f"<p>Total Modules are: {counter} </p></html></body>"
+
+
+def translator(request):
+    data = translateText()
+    return  HttpResponse(data)
 
 
 def index(request):
