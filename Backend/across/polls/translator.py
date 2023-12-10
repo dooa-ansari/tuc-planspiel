@@ -1,38 +1,32 @@
-from .read_rdf_file import readRDFFile
-from deep_translator import GoogleTranslator, PonsTranslator
-from ponstrans import translate
+from .read_rdf_module_file import readRDFFile
+from deep_translator import GoogleTranslator , single_detection
+
 
 import json
 
-def translateText():
-   web_engineering_modules = readRDFFile("web_engineering_modules.rdf")
-   data_list = []
-   for row in web_engineering_modules:
-      translated = GoogleTranslator(source='de', target='en').translate(row.moduleContent)
-      translatedWordList = translate(row.moduleContent, source_language="de", target_language="en")
-      # try:
-      # #  translatedWordList = PonsTranslator(source='de', target='en').translate('Medienretrieval', return_all=False)
-      #  translatedWordList = translate(word="Medienretrieval", source_language="de", target_language="en")
-      # except Exception as e:
-      #   print(e) 
-          
-      # words = row.moduleContent.split(" ")
-      # translatedWordList = ""
-      # try:
-      #  for word in words:
-          
-         
-      # except Exception as e:
-      #   print(e)   
-      
+def detectLanguage(text):
+  language = single_detection(text, api_key='1971a88654d9d0f0e17d3cb291f261a6')
+  return language
+
+def translateModules(file):
+   modules = readRDFFile(file)
+   if(modules.length > 0):
+    sourceLanguage = detectLanguage(modules[0].moduleContent)
+    translationRequired = sourceLanguage != 'en'
+    data_list = []
+    try:
+     for row in modules:
+      translated =  GoogleTranslator(source=sourceLanguage, target='en').translate(row.moduleContent) if translationRequired else row.moduleContent
       data_dict = {
         'name': str(row.moduleName),
         'moduleContent': str(translated),
-        'ponTranslation': str(''.join(translatedWordList))
       }
       data_list.append(data_dict)
-   json_data = json.dumps(data_list, indent=2)
-
-   return json_data
+     json_data = json.dumps(data_list, indent=2)
+    except Exception as e:
+     print(e)
+    return json_data
+   else:
+     return {}
 
 # add word translation caching in order to avoid too many api calls

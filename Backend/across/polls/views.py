@@ -2,7 +2,7 @@ import json
 
 import rdflib
 from django.http import HttpResponse
-from .translator import translateText
+from .translator import translateModules
 
 graph = rdflib.Graph()
 graph2 = rdflib.Graph()
@@ -44,7 +44,7 @@ data = data + f"<p>Total Modules are: {counter} </p></html></body>"
 
 
 def translator(request):
-    data = translateText()
+    data = translateModules()
     return  HttpResponse(data)
 
 
