@@ -25,5 +25,15 @@
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</module:hasCreditPoints>
     <module:hasModules rdf:resource="http://tuc.web.engineering/module#CWEA" />
   </rdf:Description>
+  
+   <rdf:Description rdf:about="http://tuc.web.engineering/module#WAD">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00046</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Applications Development in Java</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Programming Web applications. The concepts of server-side, client-side. Overview of tools. Characteristics of HTTP (HyperText Transfer Protocol). Technology AJAX (Asynchronous Javascript And XML).</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</module:hasCreditPoints>
+     <module:hasModules rdf:resource="http://tuc.web.engineering/module#XML" />
+  </rdf:Description>
 
 </rdf:RDF>

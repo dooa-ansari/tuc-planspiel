@@ -3,13 +3,14 @@ import json
 import rdflib
 from django.http import HttpResponse
 from .translator import translateModules
+from .module_similarity import read_modules_and_compare
 
 graph = rdflib.Graph()
 graph2 = rdflib.Graph()
 #complete isn't required , incase required we need to do it some other way becuase path will be different for different machines
 #graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\web_engineering_modules.rdf")
 graph.parse("web_engineering_modules.rdf")
-graph.parse("bialoystok_modules.rdf")
+graph.parse("bialystok_modules.rdf")
 #graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\departments.rdf")
 graph.parse("departments.rdf")
 module_list = """
@@ -44,7 +45,7 @@ data = data + f"<p>Total Modules are: {counter} </p></html></body>"
 
 
 def translator(request):
-    data = translateModules()
+    data = read_modules_and_compare("web_engineering_modules.rdf", "bialystok_modules.rdf")
     return  HttpResponse(data)
 
 
