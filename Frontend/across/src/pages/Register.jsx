@@ -8,22 +8,8 @@ const Register = () => {
   return (
     <div className="register">
       <div className="register__wrapper">
-        <div className=" register__left">
+        <div className="register__left">
           <h2 className="register__title">Sign up</h2>
-          <form action="#" className="register__form">
-            <button className="signupgoogle__button" type="button">
-              <div className="singupgoogle__image">
-                <img src={google} alt="" />
-              </div>
-              Sign up with Google
-            </button>
-            <button className="signupemail__button" type="button">
-              <div className="singupemail__image">
-                <img src={emailSvg} alt="" />
-              </div>
-              Sign up with Email
-            </button>
-          </form>
           <p className="register__already-account">
             Already have account?{" "}
             <span
@@ -37,6 +23,49 @@ const Register = () => {
               Log in
             </span>
           </p>
+          <form action="#" className="register__form">
+            <input
+              type="text"
+              className="register__name"
+              name=""
+              id=""
+              placeholder="Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              className="register__email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              className="register__password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <select name="" className="register__universitySelection" id="">
+              <option value="" disabled selected hidden>
+                Select Your University
+              </option>
+              <option value="">Technical University of Chemnitz</option>
+              <option value="">Other</option>
+            </select>
+            <button className="register__button" type="button">
+              Sign Up
+            </button>
+          </form>
+
+          <button className="signupgoogle__button" type="button">
+            <div className="singupgoogle__image">
+              <img src={google} alt="" />
+            </div>
+            Continue with Google
+          </button>
         </div>
         <div className="register__right">
           <img className="register__characterSvg" src={resigterSvg} alt="" />

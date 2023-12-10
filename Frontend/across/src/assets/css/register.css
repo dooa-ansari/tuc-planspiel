@@ -6,7 +6,7 @@
 
 .register__wrapper {
     width: 70%;
-    padding: 122px 120px;
+    padding: 35px 120px;
     background-color: #fff;
     display: flex;
     flex-direction: row;
@@ -24,9 +24,9 @@
   }
 
   .register__characterSvg {
-    width: 400px;
+    width: 350px;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .register__title {
@@ -44,10 +44,11 @@
     width: 400px;
     height: 55px;
     font-size: 1.15rem;
+    color: #242424;
     letter-spacing: 2px;
     border-radius: 50px;
-    background: #439A86;
-    border: none;
+    background: #fff;
+    border: 1px solid #242424;
     margin-bottom: 58px;
   }
 
@@ -70,4 +71,35 @@
     align-items: center;
   }
   
+  .register__name,.register__email, .register__password, .register__universitySelection {
+    display: block;
+    width: 380px;
+    padding: 8px 0;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: #B9B9B9;
+    border-bottom: 1px solid #8f8f8f ;
+    background: transparent;
+    margin: 46px 0;
+  }
   
+  .register__button {
+    display: block;
+    width: 380px;
+    height: 50px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    background: var(--primary-color);
+    border: none;
+    margin-bottom: 58px;
+  }
+
+  input::placeholder {
+    color: #b9b9b9;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: normal;
+  }
