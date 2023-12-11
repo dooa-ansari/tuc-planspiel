@@ -32,10 +32,9 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile)
     data_list = []
     for module in firstUniversityModules:
         for module2 in secondUniversityModules:
-            print("module:"+module.name+" - "+module2.name)
             # similarity = find_text_similarity_pytorch(module.moduleContent, module2.moduleContent)
-            similarity = find_text_similarity_spacy(module.moduleContent, "I play the piano in this red room.")
-            print(similarity)
+            similarity = find_text_similarity_spacy(module.moduleContent, module2.moduleContent)
+            print(f"{module.name} - {module2.name} similarity value is : {similarity}")
             # data_dict = {
             # 'name': str(module.moduleName),
             # 'similarity': str(similarity),
@@ -104,7 +103,7 @@ def find_text_similarity_bert(module1Content, module2Content):
 
      # Calculate the cosine similarity between the embeddings
      similarity = numpy.dot(encoding1, encoding2) / (numpy.linalg.norm(encoding1) * numpy.linalg.norm(encoding2))
-     print(similarity)
+    #  print(similarity)
 
     except Exception as e:
        print("error"+e) 
@@ -159,13 +158,7 @@ def find_text_similarity_pytorch(text1, text2):
 
 def find_text_similarity_spacy(module1Content, module2Content):
     nlp = spacy.load('en_core_web_lg')
-    w1 = "red"
-    w2 = "walking"
-
-    w1 = nlp.vocab[w1]
-    w2 = nlp.vocab[w2]
-    print(w1.similarity(w2))
-
+    
     s1 = nlp(module1Content)
     s2 = nlp(module2Content)
     s1.similarity(s2)
@@ -177,7 +170,13 @@ def find_text_similarity_spacy(module1Content, module2Content):
     s2_verbs = " ".join([token.lemma_ for token in s2 if token.pos_ == "VERB"])
     s2_adjs = " ".join([token.lemma_ for token in s2 if token.pos_ == "ADJ"])
     s2_nouns = " ".join([token.lemma_ for token in s2 if token.pos_ == "NOUN"])
-
-    print(f"{s1} and {s2} VERBS: {nlp(s1_verbs).similarity(nlp(s2_verbs))}")
-    print(f"{s1} and {s2} ADJ: {nlp(s1_adjs).similarity(nlp(s2_adjs))}")
-    print(f"{s1} and {s2} NOUNS: {nlp(s1_nouns).similarity(nlp(s2_nouns))}")
+    
+    verbs_similarity = nlp(s1_verbs).similarity(nlp(s2_verbs))
+    adj_similarity = nlp(s1_adjs).similarity(nlp(s2_adjs))
+    noun_similarity = nlp(s1_nouns).similarity(nlp(s2_nouns))
+    
+    is_similar = True if(verbs_similarity > 0.2 and adj_similarity > 0.2 and noun_similarity > 0.5) else False
+    return is_similar
+    # print(f"{s1} and {s2} VERBS: {nlp(s1_verbs).similarity(nlp(s2_verbs))}")
+    # print(f"{s1} and {s2} ADJ: {nlp(s1_adjs).similarity(nlp(s2_adjs))}")
+    # print(f"{s1} and {s2} NOUNS: {nlp(s1_nouns).similarity(nlp(s2_nouns))}")

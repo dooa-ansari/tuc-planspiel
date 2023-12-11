@@ -24,7 +24,7 @@ def translateModules(file):
 
    for row in modules:
     translated =  GoogleTranslator(source=sourceLanguage, target='en').translate(row.moduleContent) if translationRequired else row.moduleContent
-    objectData = module(row.moduleName, translated) 
+    objectData = module(str(row.moduleName), str(translated)) 
     data_list.append(objectData)
    
    return data_list
