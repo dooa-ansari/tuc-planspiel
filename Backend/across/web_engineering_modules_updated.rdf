@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dept="http://tuc.web.engineering/department#"
+   xmlns:module="http://tuc.web.engineering/module#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#CWEA">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553050</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cloud and Web Anwendungen</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul führt in das „Phänomen Web und Cloud“ sowie die Entwicklung verteilter Anwendungen und Systeme ein. Der ständige und schnelle Wandel der Anforderungen durch den globalen Wettbewerb an Softwarelösungen stellt neue Herausforderungen an Technologie, Software-Entwicklung, und -Betrieb dar. Um organisatorische Ziele zu erreichen, müssen IT-Systeme nicht nur anpassungsfähig, flexibel und integrativ sein, sondern sich möglichst auch elastisch und selbstorganisierend verhalten. Moderne Softwareentwicklung nutzt daher flexible Entwicklungsprozesse und setzt zur Entwicklung
+der Softwarelösungen einen Mix aus Service-orientierten Architekturen, Web-Anwendungen
+und Cloud-Infrastrukturen ein. Die Softwareentwicklung solcher Lösungen muss eine
+Vielzahl unterschiedlicher Aspekte verteilter Software berücksichtigen, um den
+Anforderungen und grundlegenden Qualitätskriterien gerecht zu werden.
+Der erste der drei Schwerpunkte des Moduls fokussiert daher grundlegende und moderne
+Software-Entwicklungsprozesse aus dem Web Engineering. Neben dem
+Entwicklungsprozess stehen als weiterer Schwerpunkt Architekturen, Modelle, Prinzipien,
+Protokolle, Technologien und Werkzeuge sowie die Evolution der Web-Anwendung im Fokus.
+Ein besonderes Augenmerk liegt hierbei auf flexiblen und elastischen Softwarelösungen.
+Hierzu werden sowohl technische Lösungen als auch entsprechende elastische Konzepte
+betrachtet. Im Zentrum stehen dabei die verschiedenen Ausprägungen und Möglichkeiten
+der Public- und Private Cloud, die den dritten Schwerpunkt des Moduls darstellen. Darüber
+hinaus werden relevante, aktuelle Aspekte und Trends thematisiert. Kenntnisse über grundlegende Frage- und Problemstellungen im Bereich
+moderner Softwarelösungen, Verteilter Software, Web-Anwendungen und Cloud Computing;
+vertiefte Kenntnis von Ansätzen, Methoden, Modellen, Prinzipien und Werkzeugen im Bereich
+Web Engineering und Cloud Computing; Fähigkeit zu Entwurf, Realisierung und Betrieb
+anspruchsvoller verteilter Anwendungen; Verständnis für und Kenntnis über
+unterschiedliche Anwendungsarchitekturen für flexible und elastische Softwarelösungen;
+
+Vorgehensmodelle, Ansätze, Modelle, Technologien, Prinzipien und Werkzeuge für Web-
+Anwendungen und Cloud Computing</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#XML">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553150</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XML</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die eXtensible Markup Language (XML) ist die Basis für eine Vielzahl von Entwicklungen im Bereich des World Wide Web. Die Themen behandeln: Einführung in Markupsprachen und XML, Grundlegende Ansätze, z.B. DTD, XML-Schemas, XML-Editoren, XML- Anwendungen, Linking, XPath, XSL/XSLT, Formate und Werkzeuge im Bereich Daten, z.B. SVG, RSS, Formate und Werkzeuge im Bereich Semantik, z.B. RDF, OWL, digitale Rechte mit Creative Commons, Formate und Werkzeuge im Bereich Benutzerschnittstellen, z.B. XHTML, XForms, MicroFormats, Formate und Werkzeuge im Bereich Anwendungslogik, z.B. Web Services, Blogs, Collaboration, Content Analysis, E-Commerce, Maps, Social Bookmarking, Search, Sight/Sound/Motion, Storage, Tagging</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
+    <module:hasModules rdf:resource="http://tuc.web.engineering/module#BSE"/>
+    <module:hasModules rdf:resource="http://tuc.web.engineering/module#XML"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#BSE">
+    <module:hasModules rdf:resource="http://tuc.web.engineering/module#BSE"/>
+    <module:hasModules rdf:resource="http://tuc.web.engineering/module#XML"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#CWEA1">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553050</module:hasModuleNumber>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cloud and Web Anwendungen</module:hasName>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul führt in das „Phänomen Web und Cloud“ sowie die Entwicklung verteilter Anwendungen und Systeme ein. Der ständige und schnelle Wandel der Anforderungen durch den globalen Wettbewerb an Softwarelösungen stellt neue Herausforderungen an Technologie, Software-Entwicklung, und -Betrieb dar. Um organisatorische Ziele zu erreichen, müssen IT-Systeme nicht nur anpassungsfähig, flexibel und integrativ sein, sondern sich möglichst auch elastisch und selbstorganisierend verhalten. Moderne Softwareentwicklung nutzt daher flexible Entwicklungsprozesse und setzt zur Entwicklung
+der Softwarelösungen einen Mix aus Service-orientierten Architekturen, Web-Anwendungen
+und Cloud-Infrastrukturen ein. Die Softwareentwicklung solcher Lösungen muss eine
+Vielzahl unterschiedlicher Aspekte verteilter Software berücksichtigen, um den
+Anforderungen und grundlegenden Qualitätskriterien gerecht zu werden.
+Der erste der drei Schwerpunkte des Moduls fokussiert daher grundlegende und moderne
+Software-Entwicklungsprozesse aus dem Web Engineering. Neben dem
+Entwicklungsprozess stehen als weiterer Schwerpunkt Architekturen, Modelle, Prinzipien,
+Protokolle, Technologien und Werkzeuge sowie die Evolution der Web-Anwendung im Fokus.
+Ein besonderes Augenmerk liegt hierbei auf flexiblen und elastischen Softwarelösungen.
+Hierzu werden sowohl technische Lösungen als auch entsprechende elastische Konzepte
+betrachtet. Im Zentrum stehen dabei die verschiedenen Ausprägungen und Möglichkeiten
+der Public- und Private Cloud, die den dritten Schwerpunkt des Moduls darstellen. Darüber
+hinaus werden relevante, aktuelle Aspekte und Trends thematisiert. Kenntnisse über grundlegende Frage- und Problemstellungen im Bereich
+moderner Softwarelösungen, Verteilter Software, Web-Anwendungen und Cloud Computing;
+vertiefte Kenntnis von Ansätzen, Methoden, Modellen, Prinzipien und Werkzeugen im Bereich
+Web Engineering und Cloud Computing; Fähigkeit zu Entwurf, Realisierung und Betrieb
+anspruchsvoller verteilter Anwendungen; Verständnis für und Kenntnis über
+unterschiedliche Anwendungsarchitekturen für flexible und elastische Softwarelösungen;
+
+Vorgehensmodelle, Ansätze, Modelle, Technologien, Prinzipien und Werkzeuge für Web-
+Anwendungen und Cloud Computing</module:hasContent>
+    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
+    <module:hasModules rdf:resource="http://tuc.web.engineering/module#BSE"/>
+    <module:hasModules rdf:resource="http://tuc.web.engineering/module#CWEA1"/>
+  </rdf:Description>
+</rdf:RDF>

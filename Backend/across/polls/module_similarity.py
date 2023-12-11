@@ -5,6 +5,7 @@ from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from .translator import translateModules
+from .update_rdf_module import add_predicate_for_module_similarity
 import json
 import ssl
 import numpy as np
@@ -27,20 +28,27 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile)
     
     # nltk.download('all')
     firstUniversityModules = translateModules(universityOneModulesFile)
-    print(len(firstUniversityModules))
     secondUniversityModules = translateModules(univeristyTwoModulesFile)
     data_list = []
     for module in firstUniversityModules:
         for module2 in secondUniversityModules:
             # similarity = find_text_similarity_pytorch(module.moduleContent, module2.moduleContent)
             similarity = find_text_similarity_spacy(module.moduleContent, module2.moduleContent)
-            print(f"{module.name} - {module2.name} similarity value is : {similarity}")
+            print(f"{module.name} - {module2.name} - {module.uri} similarity value is : {similarity}")
+            if(similarity):
+               similar_modules = []
+               similar_modules.append(module2.uri)
+               similar_modules.append(module.uri)
+               module['similar_modules'] = similar_modules
+               module2['similar_modules'] = similar_modules
+               data_list.append(module)
+               data_list.append(module2)
             # data_dict = {
             # 'name': str(module.moduleName),
             # 'similarity': str(similarity),
             # }
             # data_list.append(data_dict)
-    json_data = json.dumps(data_list, indent=2)
+    add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list)
     return {}
     
 def find_text_similarity(module1Content, module2Content):

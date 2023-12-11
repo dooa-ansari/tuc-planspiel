@@ -13,7 +13,7 @@
         <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Programming Web applications. The concepts of server-side, client-side. Overview of tools. Characteristics of HTTP (HyperText Transfer Protocol). Technology AJAX (Asynchronous Javascript And XML). </module:hasContent>
         <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
         <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</module:hasCreditPoints>
-        <module:hasModules rdf:resource="http://tuc.web.engineering/module#XML" />
+      
     </rdf:Description>
 
    <rdf:Description rdf:about="http://tuc.web.engineering/module#BSE">
@@ -23,7 +23,7 @@
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Requirements issues are essential for documenting and evaluating user needs. Requirements represent the real-world needs of users, customers and other stakeholders affected by the system. Scope and subject of software engineering. Essential motivations and concepts.</module:hasContent>
     <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</module:hasCreditPoints>
-    <module:hasModules rdf:resource="http://tuc.web.engineering/module#CWEA" />
+   
   </rdf:Description>
   
    <rdf:Description rdf:about="http://tuc.web.engineering/module#WAD">
@@ -33,7 +33,7 @@
     <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Programming Web applications. The concepts of server-side, client-side. Overview of tools. Characteristics of HTTP (HyperText Transfer Protocol). Technology AJAX (Asynchronous Javascript And XML).</module:hasContent>
     <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</module:hasCreditPoints>
-     <module:hasModules rdf:resource="http://tuc.web.engineering/module#XML" />
+  
   </rdf:Description>
 
 </rdf:RDF>
