@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ShowModules from "./pages/ShowModules";
 import { gapi } from "gapi-script";
+import UserPage from "./pages/UserPage";
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
               history("/"); // Update this to the actual path of your homepage
             }}
           />
+          <Route path="/user" exact element={<UserPage />} />
           {/* Add other routes as needed */}
         </Routes>
       </BrowserRouter>

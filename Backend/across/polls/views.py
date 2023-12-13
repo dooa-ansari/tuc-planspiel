@@ -1,13 +1,17 @@
 import rdflib
+from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
+
 from .models import UserProfile
-from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth import login, get_user_model
+from django.contrib.auth import login, get_user_model, authenticate
 import json
 import requests
-from django.http import JsonResponse
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request as GoogleAuthRequest
+
+from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 
 graph = rdflib.Graph()
 #complete isn't required , incase required we need to do it some other way becuase path will be different for different machines
@@ -61,12 +65,14 @@ def register_user(request):
         university_name = data.get('university_name', '').strip()
 
         # Validate and save the data
-        user_profile = UserProfile(email=email, full_name=full_name, password=password, university_name=university_name)
+        user_profile = UserProfile(email=email, full_name=full_name, password=password, university_name=university_name,
+                                   signup_using='FORM')
         user_profile.save()
 
         return JsonResponse({'message': 'User registered successfully'})
 
     return JsonResponse({'message': 'Invalid request method'})
+
 
 #### ABOVE METHOD JUST MADE FOR TESTING PURPOSE, AFTER TESTING IT WILL BE REMOVED, DON't USE IT
 
@@ -75,7 +81,7 @@ def index(request):
 
 
 @csrf_exempt
-def process_login(request):
+def google_login(request):
     print(request)
 
     # Get the raw request body
@@ -96,12 +102,19 @@ def process_login(request):
     except ValueError as e:
         return JsonResponse({'error': f'Token verification failed: {str(e)}'}, status=400)
 
-    token_info_url = 'https://oauth2.googleapis.com/tokeninfo'
-    token_info_response = requests.get(f'{token_info_url}?id_token={access_token}')
-    token_info = token_info_response.json()
+    # Step 2: Access data from access_token
+    try:
+        token_info_url = 'https://oauth2.googleapis.com/tokeninfo'
+        token_info_response = requests.get(f'{token_info_url}?id_token={access_token}')
+        token_info = token_info_response.json()
+    except Exception as e:
+        return JsonResponse({'error': f'Invalid token info from oauth2, {str(e)}'}, status=400)
 
-    user_info = json.dumps(token_info)
-    user_info_json = json.loads(user_info)
+    try:
+        user_info = json.dumps(token_info)
+        user_info_json = json.loads(user_info)
+    except Exception as e:
+        return JsonResponse({'error': f'Error in JSON format, {str(e)}'}, status=400)
 
     # Step 3: Create or Authenticate User
     # You may customize this part based on your Django User model and application logic
@@ -109,14 +122,67 @@ def process_login(request):
     first_name = user_info_json.get('given_name')
     last_name = user_info_json.get('family_name')
 
-    User = get_user_model()
-    user, created = User.objects.get_or_create(email=email_id,
-                                               defaults={'first_name': first_name, 'last_name': last_name})
+    if None in (email_id, first_name, last_name):
+        return JsonResponse({'error': 'One or more required fields are missing.'}, status=400)
+
+    try:
+        User = get_user_model()
+        user, created = User.objects.get_or_create(
+            email=email_id,
+            defaults={'first_name': first_name, 'last_name': last_name, 'username': email_id,
+                      'password': make_password('encryptedsamplepasswordforgooglesignin')}
+        )
+        user.save()
+    except Exception as e:
+        return JsonResponse({'error': f'Error in handling User Model, {str(e)}'}, status=400)
 
     # Step 4: Authenticate User in Django
-    # user = authenticate(request, username=emailId, backend=ModelBackend())
+    user = authenticate(username=email_id, password='encryptedsamplepasswordforgooglesignin')
+
     if user is not None:
         login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-        return JsonResponse({'success': 'User authenticated successfully'})
+
+        # Step 5: Make a entry in common database as well for maintaining the data
+        existing_user_profile = UserProfile.objects.filter(email=email_id).first()
+        if not existing_user_profile:
+            # Perform additional actions after successful login
+            user_profile_from_google = UserProfile(email=email_id, full_name=first_name + ' ' + last_name,
+                                                   password=make_password('encryptedsamplepasswordforgooglesignin'),
+                                                   university_name='', signup_using='GOOGLE')
+            user_profile_from_google.save()
+
+        response_data = {
+            'success': 'User authenticated successfully',
+            'token': access_token,
+        }
+        return JsonResponse(response_data)
     else:
         return JsonResponse({'error': 'Authentication failed'}, status=401)
+
+
+@login_required
+@csrf_exempt
+def google_logout(request):
+    # You might revoke the Google access token here
+    # Logout the user from the Django session
+    request.session.flush()
+
+    if not request.user.is_authenticated:
+        return JsonResponse({'message': 'Google logout successful'})
+    else:
+        return JsonResponse({'message': 'Failed to logout'})
+
+## BELOW SAMPLE METHOD TO TEST LOGIN REMOVED LATER
+@csrf_exempt
+def user_profile(request):
+    user = request.user
+
+    user_details = {
+        'username': user.username,
+        'email': user.email,
+        'first_name': user.first_name,
+        'last_name': user.last_name,
+        # Add other fields as needed
+    }
+
+    return JsonResponse(user_details)
