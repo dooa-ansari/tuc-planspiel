@@ -1,7 +1,13 @@
 import urllib.request
 import ssl
 from bs4 import BeautifulSoup
+from rdflib import Namespace
+from rdflib import Graph, URIRef, Literal, BNode
+from rdflib.namespace import FOAF, RDF
 
+NAME_SPACE = Namespace("http://tuc.bialystok/module#")
+graph = Graph()
+graph.bind("module", NAME_SPACE)
 
 base_url = "https://usos-ects.uci.pb.edu.pl/"
 try:
@@ -35,7 +41,21 @@ for page in pages:
      credit_points = parser_courses.find("div", class_="item punkty_ects")
      department = parser_courses.find("div", class_="item jednostka").find("a").getText()
      credit_points_value = credit_points.getText()
-     print(module_content)
+
+     uri_end = ''.join(e for e in module_id if e.isalnum())
+     module_uri_g = URIRef(f"{NAME_SPACE}{uri_end}")
+     
+     module_name_g = Literal(module_name, datatype=URIRef('http://www.w3.org/2001/XMLSchema#string'))
+     module_content_g = Literal(module_content, datatype=URIRef('http://www.w3.org/2001/XMLSchema#string'))
+     module_id_g = Literal(module_id, datatype=URIRef('http://www.w3.org/2001/XMLSchema#string'))
+     credit_points_g = Literal(credit_points_value, datatype=URIRef('http://www.w3.org/2001/XMLSchema#integer'))
+     department_g = Literal(department, datatype=URIRef('http://www.w3.org/2001/XMLSchema#string'))
+     
+     graph.add((module_uri_g, RDF.type, NAME_SPACE))
+     graph.add((module_uri_g, "http://tuc.bialystok/module#hasName", module_name_g))
+     graph.add((module_uri_g, "http://tuc.bialystok/module#hasModuleNumber", module_id_g))
+     graph.add((module_uri_g, "http://tuc.bialystok/module#hasContent", module_content_g))
+     graph.add((module_uri_g, "http://tuc.bialystok/module#hasCreditPoints", credit_points_g))
      
 
 
