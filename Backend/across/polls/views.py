@@ -43,6 +43,8 @@ json_data = json.dumps(data_list, indent=2)
 data = data + json_data
 data = data + f"<p>Total Modules are: {counter} </p></html></body>"
 
+def scrape_bialystok_data(request):
+    return HttpResponse("Dooa Ansari")
 
 def translator(request):
     data = read_modules_and_compare("web_engineering_modules.rdf", "bialystok_modules.rdf")
