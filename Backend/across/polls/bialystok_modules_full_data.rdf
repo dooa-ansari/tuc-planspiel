@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:module="http://tuc.bialystok/module#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME0269W">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Interim Work Project (Computer Aided Design)
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-0269W</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            5 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00210S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Design of pneumatic system
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00210S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            6 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00268S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Biocybernetics
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00268S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            4 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00262S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Creating and financing startups
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00262S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            1 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00263S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Innovative entrepreneurship and technology transfer
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00263S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            3 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#IS03339">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Zarządzanie bezpieczeństwem i higieną pracy
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03339</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            1 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00272S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Thermal Engineering
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00272S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            5 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFM00080S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Sport animation
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00080S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Description:To familiarize students with new forms of leisure activities: Interval-Step Reebok, Body ART- Dynamic, Body Stretching ART, ART Deep Body Work, Pilates, and Exercise Rotary. Principles and methods of training, recreational. To assess the state of health, fitness and motor abilities. Development of sports reporting
+Requirements:Test the technical skills of the modern forms of recreation (Step Reebok, Body ART Rotating Exercises, Stretching, Power Yoga). Run the courses using the known forms of recreation.
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            3 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00261S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Communication in processor systems
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00261S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            5 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00271S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Advanced manufacturing techniques in biomedical engineering
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00271S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            6 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00267W">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">  Thermodynamics
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00267W</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            5 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00265S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Programming of industrial robots
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00265S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            3 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#IS06735II">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Projektowanie usług informatycznych II
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06735II</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            10 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00260S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Career management
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00260S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            1 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00266W">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Intellectual property
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00266W</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            1 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFM00076S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Financial Management
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00076S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Description:The students examines the general nature of global financial management, the taxes and the major financial decisions of corporations. Specific attention is given to present value and capital budgeting risk and assets pricing financial analysis and forecasting financial decisions and market efficiency Problem-solving methodology is used to illustrate the theories and tools in financial decision making.
+Requirements:Students will learn to: calculate selected financial ratios common measures of investment performance understand future value of present sum, present value and present and future value of annuities describe common features and types of bonds.
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            6 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00264S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Manufacturing techniques
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00264S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            4 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#IS05740II">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Usługi wirtualne i hybrydowe II
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS05740II</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            10 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00267S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Artificial Intelligence
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00267S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            5 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00269S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Planning research experiments and measurements
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00269S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            6 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME0268W">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Active vibration control methods
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-0268W</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            3 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.bialystok/module#ISFME00266S">
+    <rdf:type rdf:resource="http://tuc.bialystok/module#module"/>
+    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Advanced biomaterials and research methods
+        </module:hasName>
+    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00266S</module:hasModuleNumber>
+    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</module:hasContent>
+    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+ECTS credits:
+        
+            3 
+        
+    </module:hasCreditPoints>
+  </rdf:Description>
+</rdf:RDF>
