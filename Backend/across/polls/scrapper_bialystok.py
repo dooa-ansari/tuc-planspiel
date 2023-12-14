@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from rdflib import Namespace
 from rdflib import Graph, URIRef, Literal, BNode
 from rdflib.namespace import FOAF, RDF, XSD
+import re
 
 graph = Graph()
 
@@ -50,7 +51,8 @@ for page in pages:
      credit_points = parser_courses.find("div", class_="item punkty_ects")
      department = parser_courses.find("div", class_="item jednostka").find("a").getText()
      credit_points_value = credit_points.getText()
-
+     credit_points_value_number = re.findall("\d+", credit_points_value)
+     
      uri_end = ''.join(e for e in module_id if e.isalnum())
      if(uri_end!="None" and uri_end!="inPolish"):
         print(f"{base_url}{id_url}")
@@ -59,7 +61,7 @@ for page in pages:
         module_name_g = Literal(module_name, datatype=XSD.string)
         module_content_g = Literal(module_content, datatype=XSD.string)
         module_id_g = Literal(module_id, datatype=XSD.string)
-        credit_points_g = Literal(credit_points_value, datatype=XSD.string)
+        credit_points_g = Literal(credit_points_value_number[0], datatype=XSD.string)
         department_g = Literal(department, datatype=XSD.string)
         
         graph.add((module_uri_g, RDF.type, NAME_SPACE.module))

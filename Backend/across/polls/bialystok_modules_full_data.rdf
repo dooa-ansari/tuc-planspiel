@@ -3,67 +3,25 @@
    xmlns:ns1="http://tuc.web.engineering/module#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-<!--1 is fail , 5 is pass-->
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00080S">
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00266W">
     <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Sport animation
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Intellectual property
         </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00080S</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-Description:To familiarize students with new forms of leisure activities: Interval-Step Reebok, Body ART- Dynamic, Body Stretching ART, ART Deep Body Work, Pilates, and Exercise Rotary. Principles and methods of training, recreational. To assess the state of health, fitness and motor abilities. Development of sports reporting
-Requirements:Test the technical skills of the modern forms of recreation (Step Reebok, Body ART Rotating Exercises, Stretching, Power Yoga). Run the courses using the known forms of recreation.
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            3 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#IS03339">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Zarządzanie bezpieczeństwem i higieną pracy
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03339</ns1:hasModuleNumber>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00266W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 This course has not yet been described...
 </ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            1 
-        
-    </ns1:hasCreditPoints>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ns1:hasCreditPoints>
   </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME0268W">
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00264S">
     <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Active vibration control methods
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Manufacturing techniques
         </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-0268W</ns1:hasModuleNumber>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00264S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 This course has not yet been described...
 </ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            3 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00265S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Programming of industrial robots
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00265S</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            3 
-        
-    </ns1:hasCreditPoints>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</ns1:hasCreditPoints>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00210S">
     <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
@@ -73,12 +31,27 @@ ECTS credits:
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 This course has not yet been described...
 </ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            6 
-        
-    </ns1:hasCreditPoints>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00272S">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Thermal Engineering
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00272S</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06735II">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Projektowanie usług informatycznych II
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06735II</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</ns1:hasCreditPoints>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00267S">
     <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
@@ -88,12 +61,78 @@ ECTS credits:
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 This course has not yet been described...
 </ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            5 
-        
-    </ns1:hasCreditPoints>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#IS05740II">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Usługi wirtualne i hybrydowe II
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS05740II</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00080S">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Sport animation
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00080S</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+Description:To familiarize students with new forms of leisure activities: Interval-Step Reebok, Body ART- Dynamic, Body Stretching ART, ART Deep Body Work, Pilates, and Exercise Rotary. Principles and methods of training, recreational. To assess the state of health, fitness and motor abilities. Development of sports reporting
+Requirements:Test the technical skills of the modern forms of recreation (Step Reebok, Body ART Rotating Exercises, Stretching, Power Yoga). Run the courses using the known forms of recreation.
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00267W">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">  Thermodynamics
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00267W</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00271S">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Advanced manufacturing techniques in biomedical engineering
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00271S</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME0269W">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Interim Work Project (Computer Aided Design)
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-0269W</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00268S">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Biocybernetics
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00268S</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00269S">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Planning research experiments and measurements
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00269S</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00262S">
     <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
@@ -103,12 +142,57 @@ ECTS credits:
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 This course has not yet been described...
 </ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            1 
-        
-    </ns1:hasCreditPoints>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#IS03339">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Zarządzanie bezpieczeństwem i higieną pracy
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03339</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00265S">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Programming of industrial robots
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00265S</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00266S">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Advanced biomaterials and research methods
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00266S</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00260S">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Career management
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00260S</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</ns1:hasCreditPoints>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00263S">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Innovative entrepreneurship and technology transfer
+        </ns1:hasName>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00263S</ns1:hasModuleNumber>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+This course has not yet been described...
+</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ns1:hasCreditPoints>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00076S">
     <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
@@ -119,102 +203,17 @@ ECTS credits:
 Description:The students examines the general nature of global financial management, the taxes and the major financial decisions of corporations. Specific attention is given to present value and capital budgeting risk and assets pricing financial analysis and forecasting financial decisions and market efficiency Problem-solving methodology is used to illustrate the theories and tools in financial decision making.
 Requirements:Students will learn to: calculate selected financial ratios common measures of investment performance understand future value of present sum, present value and present and future value of annuities describe common features and types of bonds.
 </ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            6 
-        
-    </ns1:hasCreditPoints>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
   </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00271S">
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME0268W">
     <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Advanced manufacturing techniques in biomedical engineering
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Active vibration control methods
         </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00271S</ns1:hasModuleNumber>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-0268W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 This course has not yet been described...
 </ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            6 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00260S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Career management
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00260S</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            1 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#IS05740II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Usługi wirtualne i hybrydowe II
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS05740II</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            10 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00268S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Biocybernetics
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00268S</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            4 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00266S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Advanced biomaterials and research methods
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00266S</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            3 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06735II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Projektowanie usług informatycznych II
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06735II</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            10 
-        
-    </ns1:hasCreditPoints>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ns1:hasCreditPoints>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00261S">
     <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
@@ -224,116 +223,6 @@ ECTS credits:
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 This course has not yet been described...
 </ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            5 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00267W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">  Thermodynamics
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00267W</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            5 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00269S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Planning research experiments and measurements
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00269S</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            6 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00272S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Thermal Engineering
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00272S</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            5 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00264S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Manufacturing techniques
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00264S</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            4 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME0269W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Interim Work Project (Computer Aided Design)
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-0269W</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            5 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00263S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Innovative entrepreneurship and technology transfer
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00263S</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            3 
-        
-    </ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00266W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Intellectual property
-        </ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00266W</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-ECTS credits:
-        
-            1 
-        
-    </ns1:hasCreditPoints>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</ns1:hasCreditPoints>
   </rdf:Description>
 </rdf:RDF>
