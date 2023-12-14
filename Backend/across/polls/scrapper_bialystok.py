@@ -6,12 +6,14 @@ from rdflib import Graph, URIRef, Literal, BNode
 from rdflib.namespace import FOAF, RDF, XSD
 
 graph = Graph()
-namespace_manager = graph.namespace_manager
-uri_main = "http://tuc.bialystok/module#"
-ns_module = Namespace(uri_main)
 
-prefix = "module"
-namespace_manager.bind(prefix, ns_module)
+NAME_SPACE = Namespace("http://tuc.web.engineering/")
+NAME_SPACE.module
+
+# namespace_manager = graph.namespace_manager
+uri_main = "http://tuc.web.engineering/module#"
+# ns_module = Namespace(uri_main)
+
 
 base_url = "https://usos-ects.uci.pb.edu.pl/"
 try:
@@ -51,7 +53,7 @@ for page in pages:
 
      uri_end = ''.join(e for e in module_id if e.isalnum())
      if(uri_end!="None" and uri_end!="inPolish"):
-        print(uri_end)
+        print(f"{base_url}{id_url}")
         module_uri_g = URIRef(f"{uri_main}{uri_end}")
         
         module_name_g = Literal(module_name, datatype=XSD.string)
@@ -60,13 +62,12 @@ for page in pages:
         credit_points_g = Literal(credit_points_value, datatype=XSD.string)
         department_g = Literal(department, datatype=XSD.string)
         
-        graph.add((module_uri_g, RDF.type, ns_module.module))
-        graph.add((module_uri_g, URIRef("http://tuc.bialystok/module#hasName"), module_name_g))
-        graph.add((module_uri_g, URIRef("http://tuc.bialystok/module#hasModuleNumber"), module_id_g))
-        graph.add((module_uri_g, URIRef("http://tuc.bialystok/module#hasContent"), module_content_g))
-        graph.add((module_uri_g, URIRef("http://tuc.bialystok/module#hasCreditPoints"), credit_points_g))
-        count = count + 1
-     
+        graph.add((module_uri_g, RDF.type, NAME_SPACE.module))
+        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasName"), module_name_g))
+        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasModuleNumber"), module_id_g))
+        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasContent"), module_content_g))
+        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasCreditPoints"), credit_points_g))
+        
 
 
 
