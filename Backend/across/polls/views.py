@@ -1,9 +1,17 @@
 import rdflib
 from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
-
 from .models import UserProfile
+
 from django.contrib.auth import login, get_user_model, authenticate
+from django.contrib.auth.password_validation import validate_password
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
+from django.conf import settings
+import jwt  # Import PyJWT library
+from datetime import datetime, timedelta
+
+
 import json
 import requests
 from google.oauth2 import id_token
@@ -63,14 +71,42 @@ def register_user(request):
         full_name = data.get('full_name', '').strip()
         password = data.get('password', '').strip()
         university_name = data.get('university_name', '').strip()
+        
+        try:
+            existing_profiles = UserProfile.objects.filter(email=email)
+            if existing_profiles.exists():
+                return JsonResponse({'message': 'User already exists, go to login page'})  
 
-        # Validate and save the data
-        user_profile = UserProfile(email=email, full_name=full_name, password=password, university_name=university_name,
-                                   signup_using='FORM')
-        user_profile.save()
+            validate_email(email)
+            validate_password(password)
+            hashed_password = make_password(password)
 
-        return JsonResponse({'message': 'User registered successfully'})
+              # Save the data with the hashed password
+            user_profile = UserProfile(email=email, full_name=full_name, password=hashed_password, university_name=university_name,
+                                       signup_using='FORM')
+            user_profile.save()
+            # Generate JWT token upon successful registration
+            payload = {
+                'email': user_profile.email,
+                'exp': datetime.utcnow() + timedelta(days=1)  # Token expiration time (adjust as needed)
+            }
+            jwt_token = jwt.encode(payload,settings.SECRET_KEY , algorithm='HS256')
+            return JsonResponse({'message': 'User registered successfully', 'token': jwt_token})
 
+        except ValidationError as e:
+            return JsonResponse({'message': str(e)})
+        except jwt.InvalidTokenError as e:
+            return JsonResponse({'message': 'Invalid token: ' + str(e)})
+        except jwt.ExpiredSignatureError as e:
+            return JsonResponse({'message': 'Token expired: ' + str(e)})
+        except jwt.InvalidSignatureError as e:
+            return JsonResponse({'message': 'Invalid signature: ' + str(e)})
+        except jwt.InvalidIssuerError as e:
+            return JsonResponse({'message': 'Invalid issuer: ' + str(e)})
+        except Exception as ex:
+            # Handle other exceptions if needed
+            return JsonResponse({'message': 'Error generating token: ' + str(ex)})
+ 
     return JsonResponse({'message': 'Invalid request method'})
 
 
