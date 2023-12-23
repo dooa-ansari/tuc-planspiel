@@ -33,7 +33,9 @@ Anwendungen und Cloud Computing</module:hasContent>
     <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
     <module:hasModules rdf:resource="http://tuc.web.engineering/module#BSE"/>
-    <module:hasModules rdf:resource="http://tuc.web.engineering/module#CWEA"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#BSE">
+    <module:hasModules rdf:resource="http://tuc.web.engineering/module#XML"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#XML">
     <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
@@ -43,10 +45,5 @@ Anwendungen und Cloud Computing</module:hasContent>
     <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
     <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</module:hasCreditPoints>
     <module:hasModules rdf:resource="http://tuc.web.engineering/module#BSE"/>
-    <module:hasModules rdf:resource="http://tuc.web.engineering/module#XML"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#BSE">
-    <module:hasModules rdf:resource="http://tuc.web.engineering/module#BSE"/>
-    <module:hasModules rdf:resource="http://tuc.web.engineering/module#XML"/>
   </rdf:Description>
 </rdf:RDF>

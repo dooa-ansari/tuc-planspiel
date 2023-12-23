@@ -36,11 +36,12 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile)
             similarity = find_text_similarity_spacy(module.moduleContent, module2.moduleContent)
             print(f"{module.name} - {module2.name} - {module.uri} similarity value is : {similarity}")
             if(similarity):
-               similar_modules = []
-               similar_modules.append(module2.uri)
-               similar_modules.append(module.uri)
-               module['similar_modules'] = similar_modules
-               module2['similar_modules'] = similar_modules
+               similar_modules_m1 = []
+               similar_modules_m2 = []
+               similar_modules_m1.append(module2.uri)
+               similar_modules_m2.append(module.uri)
+               module['similar_modules'] = similar_modules_m1
+               module2['similar_modules'] = similar_modules_m2
                data_list.append(module)
                data_list.append(module2)
             # data_dict = {
