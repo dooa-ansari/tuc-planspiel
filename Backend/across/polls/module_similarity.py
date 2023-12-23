@@ -29,7 +29,8 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile)
     # nltk.download('all')
     firstUniversityModules = translateModules(universityOneModulesFile)
     secondUniversityModules = translateModules(univeristyTwoModulesFile)
-    data_list = []
+    data_list_first = []
+    data_list_second = []
     for module in firstUniversityModules:
         for module2 in secondUniversityModules:
             # similarity = find_text_similarity_pytorch(module.moduleContent, module2.moduleContent)
@@ -42,14 +43,14 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile)
                similar_modules_m2.append(module.uri)
                module['similar_modules'] = similar_modules_m1
                module2['similar_modules'] = similar_modules_m2
-               data_list.append(module)
-               data_list.append(module2)
+               data_list_first.append(module)
+               data_list_second.append(module2)
             # data_dict = {
             # 'name': str(module.moduleName),
             # 'similarity': str(similarity),
             # }
             # data_list.append(data_dict)
-    add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list)
+    add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second)
     return {}
     
 def find_text_similarity(module1Content, module2Content):

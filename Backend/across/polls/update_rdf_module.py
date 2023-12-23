@@ -2,7 +2,7 @@ from rdflib import Graph, Literal, RDF, URIRef
 from rdflib.namespace import FOAF , XSD
 from .sparql import *
 
-def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list):
+def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second):
 
 
     modulesTUC = Graph()
@@ -10,13 +10,17 @@ def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoM
     modulesTUC.parse(universityOneModulesFile)
     modulesBialstok.parse(univeristyTwoModulesFile)
 
-    for similar_module in data_list:
+    for similar_module in data_list_first:
        list = similar_module['similar_modules']
        for item in list:
            uri = URIRef(item)
            modulesTUC.update(insert_module_similarity  % (similar_module.uri,uri))
-           modulesBialstok.update(insert_module_similarity  % (similar_module.uri,uri))
            
+    for similar_module in data_list_second:
+       list = similar_module['similar_modules']
+       for item in list:
+           uri = URIRef(item)
+           modulesBialstok.update(insert_module_similarity  % (similar_module.uri,uri))
     
         
     fileOneContent = modulesTUC.serialize(format='xml')
