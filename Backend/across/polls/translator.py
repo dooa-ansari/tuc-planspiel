@@ -20,12 +20,15 @@ def detectLanguage(text):
   return language
 
 def translateModules(file):
-   modules = readRDFFile(file)
+   modules_data = readRDFFile(file)
+   modules = modules_data[0]
+   first_module = modules_data[1]
+   
    sourceLanguage = ''
    translationRequired = True
    data_list = []
-    
-   for language in modules:
+ 
+   for language in first_module:
     sourceLanguage = detectLanguage(language.moduleContent)
     translationRequired = sourceLanguage != 'en'
     break
