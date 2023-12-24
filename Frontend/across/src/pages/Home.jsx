@@ -7,26 +7,30 @@ import About from "../components/About";
 import CourseFinder from "../components/CourseFinder";
 import CourseComparison from "../components/CourseComparison";
 import Footer from "../components/Footer";
+import Converter from "./Converter";
 
 const Home = () => {
-  return (
-    <>
-      <div className="home">
-        <Header brandName="Across" />
-        <div className="siteContents">
-          <LandingImage source={blogBanner} title="Student Service" />
-          {/* <LandingContent
-            title="Across Student Service"
-            description=" Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-          /> */}
-          <About />
-          <CourseFinder />
-          <CourseComparison />
-          <Footer />
-        </div>
-      </div>
-    </>
-  );
+  return <div className="home">
+       <Converter/>
+  </div>
+  // return (
+  //   <>
+  //     <div className="home">
+  //       <Header brandName="Across" />
+  //       <div className="siteContents">
+  //         <LandingImage source={blogBanner} title="Student Service" />
+  //         {/* <LandingContent
+  //           title="Across Student Service"
+  //           description=" Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+  //         /> */}
+  //         <About />
+  //         <CourseFinder />
+  //         <CourseComparison />
+  //         <Footer />
+  //       </div>
+  //     </div>
+  //   </>
+  // );
 };
 
 export default Home;

@@ -33,6 +33,7 @@ SITE_ID = 2
 REST_USE_JWT = True
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,7 +47,10 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    
 ]
+
+ASGI_APPLICATION = 'across.asgi.application'
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -96,7 +100,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'across.wsgi.application'
 
-
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    },
+}
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 # These will be changing according to your MySQL Configurations
