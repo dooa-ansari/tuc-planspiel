@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
-import data_static from "../components/data";
 import "../assets/css/ShowModules.css";
 
 const Converter = () => {
   const [data, setData] = useState(null);
   const ws = new WebSocket('ws://localhost:8000/ws/updates')
+
+//   useEffect(() => {
+//     console.log("called")
+//     fetch('http://localhost:8000/polls/translator')
+//       .catch(error => console.error(error));
+//   }, []);
 
   ws.onopen = () => {
     // connection opened
@@ -13,7 +18,9 @@ const Converter = () => {
   
   ws.onmessage = e => {
     // a message was received
+    console.log("message")
     console.log(e.data);
+    setData(e.data)
   };
   
   ws.onerror = e => {
@@ -23,15 +30,11 @@ const Converter = () => {
   
   ws.onclose = e => {
     // connection closed
-    console.log(e.code, e.reason);
+    console.log("Closing connection")
   };
-  useEffect(() => {
-    
-  }, []);
-
   return (
     <div style={{ flex: 1 }}>
-      <p id="moduleHeading">Convert Modules</p>
+      <p id="moduleHeading">{data}</p>
       
     </div>
   );

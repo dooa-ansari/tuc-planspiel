@@ -18,7 +18,7 @@ import fasttext.util
 import torch
 import spacy
 
-def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile):
+def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile, consumer):
     try:
      _create_unverified_https_context = ssl._create_unverified_context
     except AttributeError:
@@ -27,8 +27,11 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile)
      ssl._create_default_https_context = _create_unverified_https_context
     
     # nltk.download('all')
+    consumer.send_message("Starting module conversions -->")
     firstUniversityModules = translateModules(universityOneModulesFile)
+    consumer.send_message("First University modules translated successfully")
     secondUniversityModules = translateModules(univeristyTwoModulesFile)
+    consumer.send_message("Second University modules translated successfully")
     data_list_first = []
     data_list_second = []
     for module in firstUniversityModules:
