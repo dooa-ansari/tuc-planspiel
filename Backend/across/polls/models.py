@@ -9,6 +9,7 @@ class UserProfile(models.Model):
     password = models.CharField(max_length=255)
     university_name = models.TextField()
     signup_using = models.TextField()
+    role = models.TextField()
 
     def __str__(self):
         return self.email

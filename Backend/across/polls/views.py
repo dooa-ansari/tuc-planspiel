@@ -22,44 +22,45 @@ from google.auth.transport.requests import Request as GoogleAuthRequest
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.hashers import check_password
 
-graph = rdflib.Graph()
-graph2 = rdflib.Graph()
-#complete isn't required , incase required we need to do it some other way becuase path will be different for different machines
-#graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\web_engineering_modules.rdf")
-graph.parse("web_engineering_modules.rdf")
-graph.parse("bialystok_modules.rdf")
-#graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\departments.rdf")
-graph.parse("departments.rdf")
-module_list = """
-SELECT ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints ?deptName ?dName ?deptId ?similarModule ?actualName
-WHERE {
-    ?name <http://tuc.web.engineering/module#hasName> ?moduleName ;
-          <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
-          <http://tuc.web.engineering/module#hasContent> ?moduleContent ;
-          <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints ;
-          <http://tuc.web.engineering/department#hasName> ?deptName ;
-          <http://tuc.web.engineering/module#hasModules> ?similarModule .
-    ?deptName <http://tuc.web.engineering/department#hasName> ?dName .
-    ?deptName <http://tuc.web.engineering/department#hasDeptId> ?deptId .
-    ?similarModule <http://tuc.web.engineering/module#hasName> ?actualName.
-}
-"""
+# graph = rdflib.Graph()
+# graph2 = rdflib.Graph()
+# #complete isn't required , incase required we need to do it some other way becuase path will be different for different machines
+# #graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\web_engineering_modules.rdf")
+# graph.parse("web_engineering_modules.rdf")
+# graph.parse("bialystok_modules.rdf")
+# #graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\departments.rdf")
+# graph.parse("departments.rdf")
+# module_list = """
+# SELECT ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints ?deptName ?dName ?deptId ?similarModule ?actualName
+# WHERE {
+#     ?name <http://tuc.web.engineering/module#hasName> ?moduleName ;
+#           <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
+#           <http://tuc.web.engineering/module#hasContent> ?moduleContent ;
+#           <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints ;
+#           <http://tuc.web.engineering/department#hasName> ?deptName ;
+#           <http://tuc.web.engineering/module#hasModules> ?similarModule .
+#     ?deptName <http://tuc.web.engineering/department#hasName> ?dName .
+#     ?deptName <http://tuc.web.engineering/department#hasDeptId> ?deptId .
+#     ?similarModule <http://tuc.web.engineering/module#hasName> ?actualName.
+# }
+# """
 
-qresponse = graph.query(module_list)
-data = "<html><body>"
-counter = 0
-data_list = []
-for row in qresponse:
-    counter = counter + 1
-    data_dict = {
-        'name': str(row.moduleName),
-        'similarURI': str(row.actualName),
-    }
-    data_list.append(data_dict)
-json_data = json.dumps(data_list, indent=2)
-data = data + json_data
-data = data + f"<p>Total Modules are: {counter} </p></html></body>"
+# qresponse = graph.query(module_list)
+# data = "<html><body>"
+# counter = 0
+# data_list = []
+# for row in qresponse:
+#     counter = counter + 1
+#     data_dict = {
+#         'name': str(row.moduleName),
+#         'similarURI': str(row.actualName),
+#     }
+#     data_list.append(data_dict)
+# json_data = json.dumps(data_list, indent=2)
+# data = data + json_data
+# data = data + f"<p>Total Modules are: {counter} </p></html></body>"
 
 
 def translator(request):
@@ -90,7 +91,7 @@ def register_user(request):
 
               # Save the data with the hashed password
             user_profile = UserProfile(email=email, full_name=full_name, password=hashed_password, university_name=university_name,
-                                       signup_using='FORM')
+                                       signup_using='FORM', role='USER')
             user_profile.save()
             # Generate JWT token upon successful registration
             payload = {
@@ -136,13 +137,15 @@ def authenticate_user_login(request):
             # Perform authentication
             user_profile = UserProfile.objects.get(email=email)
             if user_profile is not None:
-                if user_profile.password == password:
+                passwords_match = check_password(password, user_profile.password)
+                if passwords_match:
                     # Serialize the UserProfile instance to JSON
                     user_profile_data = {
                         'email': user_profile.email,
                         'full_name': user_profile.full_name,
                         'university_name': user_profile.university_name,
                         'signup_using': user_profile.signup_using,
+                        'role':user_profile.role
                     }                    
                     response = {
                         "message":"Login Successful",
@@ -227,13 +230,14 @@ def google_login(request):
             # Perform additional actions after successful login
             user_profile_from_google = UserProfile(email=email_id, full_name=first_name + ' ' + last_name,
                                                    password=make_password('encryptedsamplepasswordforgooglesignin'),
-                                                   university_name='', signup_using='GOOGLE')
+                                                   university_name='', signup_using='GOOGLE', role="USER")
             user_profile_from_google.save()
             user_profile_data = {
                         'email': user_profile_from_google.email,
                         'full_name': user_profile_from_google.full_name,
                         'university_name': user_profile_from_google.university_name,
                         'signup_using': user_profile_from_google.signup_using,
+                        'role':user_profile_from_google.role
                     } 
             response_data = {
                 'message': 'User account created successfully'
@@ -246,6 +250,7 @@ def google_login(request):
                         'full_name': user_profile.full_name,
                         'university_name': user_profile.university_name,
                         'signup_using': user_profile.signup_using,
+                        'role':user_profile_from_google.role
                     }
             response_data = {
                 'message': 'User account already exist, logging you in...'
