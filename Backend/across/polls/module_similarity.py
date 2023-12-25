@@ -28,16 +28,18 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile,
     
     # nltk.download('all')
     consumer.send_message("Starting module conversions -->")
-    firstUniversityModules = translateModules(universityOneModulesFile)
-    consumer.send_message("First University modules translated successfully")
-    secondUniversityModules = translateModules(univeristyTwoModulesFile)
-    consumer.send_message("Second University modules translated successfully")
+    firstUniversityModules = translateModules(universityOneModulesFile, consumer)
+    consumer.send_message("First modules file translated to english successfully")
+    secondUniversityModules = translateModules(univeristyTwoModulesFile , consumer)
+    consumer.send_message("Second modules file translated to english successfully")
     data_list_first = []
     data_list_second = []
+    consumer.send_message("Starting to find similarities between modules")
     for module in firstUniversityModules:
         for module2 in secondUniversityModules:
             # similarity = find_text_similarity_pytorch(module.moduleContent, module2.moduleContent)
             similarity = find_text_similarity_spacy(module.moduleContent, module2.moduleContent)
+            consumer.send_message(f"{module.name} - {module.name} are similar : {similarity}")
             print(f"{module.name} - {module2.name} - {module.uri} similarity value is : {similarity}")
             if(similarity):
                similar_modules_m1 = []
@@ -48,12 +50,13 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile,
                module2['similar_modules'] = similar_modules_m2
                data_list_first.append(module)
                data_list_second.append(module2)
+               consumer.send_message(f"similarity values saved successfully")
             # data_dict = {
             # 'name': str(module.moduleName),
             # 'similarity': str(similarity),
             # }
             # data_list.append(data_dict)
-    add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second)
+    add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second, consumer)
     return {}
     
 def find_text_similarity(module1Content, module2Content):

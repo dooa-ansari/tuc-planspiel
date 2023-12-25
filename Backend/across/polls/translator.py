@@ -19,7 +19,7 @@ def detectLanguage(text):
   language = single_detection(text, api_key='1971a88654d9d0f0e17d3cb291f261a6')
   return language
 
-def translateModules(file):
+def translateModules(file, consumer):
    modules_data = readRDFFile(file)
    modules = modules_data[0]
    first_module = modules_data[1]
@@ -32,8 +32,9 @@ def translateModules(file):
     sourceLanguage = detectLanguage(language.moduleContent)
     translationRequired = sourceLanguage != 'en'
     break
-
+   consumer.send_message(f"Translation requirement for modules {file} - {translationRequired}")
    for row in modules:
+    consumer.send_message(f"Translating {row.moduleName}")
     translated =  GoogleTranslator(source=sourceLanguage, target='en').translate(row.moduleContent) if translationRequired else row.moduleContent
     objectData = module(str(row.moduleName), str(translated), str(row.module), []) 
     data_list.append(objectData)

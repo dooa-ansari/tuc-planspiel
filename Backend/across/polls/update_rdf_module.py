@@ -2,21 +2,23 @@ from rdflib import Graph, Literal, RDF, URIRef
 from rdflib.namespace import FOAF , XSD
 from .sparql import *
 
-def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second):
+def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second, consumer):
 
 
     modulesTUC = Graph()
     modulesBialstok = Graph()
     modulesTUC.parse(universityOneModulesFile)
     modulesBialstok.parse(univeristyTwoModulesFile)
-
+    consumer.send_message("Starting to update RDF files:")
     for similar_module in data_list_first:
+       consumer.send_message(f"Updating file {similar_module}:")
        list = similar_module['similar_modules']
        for item in list:
            uri = URIRef(item)
            modulesTUC.update(insert_module_similarity  % (similar_module.uri,uri))
            
     for similar_module in data_list_second:
+       consumer.send_message(f"Updating file {similar_module}:")
        list = similar_module['similar_modules']
        for item in list:
            uri = URIRef(item)
@@ -31,7 +33,7 @@ def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoM
     
     file1.write(fileOneContent)
     file2.write(fileTwoContent)
-    
+    consumer.send_message(f"Updating RDF files process finished successfully")
     file1.close()
     file2.close()
 
