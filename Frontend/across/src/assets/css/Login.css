@@ -1,30 +1,31 @@
 .login {
-  background-color: #BCD8C1;
-  height: 100vh;
-  position: relative;
+  background-color: #bcd8c1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .login__wrapper {
   width: 70%;
-  padding: 122px 120px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 35px;
-  border-right: 3px solid #FBFBFB;
-  border-bottom: 3px solid #FBFBFB;
-  background: #FFF;
+  background: #fff;
+  padding: 40px 0 33px 0;
+  border-radius: 25px;
+  -webkit-box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.25);
+  border-bottom: 3px solid #fbfbfb;
+  border-right: 3px solid #fbfbfb;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .login__characterSvg {
-  width: 400px;
+  width: 350px;
   height: auto;
   object-fit: contain;
 }
@@ -90,8 +91,8 @@ input::placeholder {
 
 @media screen and (max-width: 640px) {
   .login__wrapper {
-    width: 80%;
-    padding: 110px;
+    width: 70%;
+    padding: 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -130,8 +131,8 @@ input::placeholder {
 
 @media screen and (min-width: 641px) and (max-width: 768px) { 
   .login__wrapper {
-    width: 80%;
-    padding: 110px;
+    width: 70%;
+    padding: 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -171,7 +172,7 @@ input::placeholder {
 @media screen and (min-width: 769px) and (max-width: 1251px) {
   .login__wrapper {
     width: 70%;
-    padding: 110px;
+    padding: 80px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
