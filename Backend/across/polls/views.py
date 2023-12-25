@@ -1,7 +1,7 @@
 import rdflib
 from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
-from .translator import translateModules
+from .list_similar_modules import find_all_similar_modules_list
 from .module_similarity import read_modules_and_compare
 from .models import UserProfile
 
@@ -60,6 +60,10 @@ for row in qresponse:
 json_data = json.dumps(data_list, indent=2)
 data = data + json_data
 data = data + f"<p>Total Modules are: {counter} </p></html></body>"
+
+def listsimilarmodules(request):
+    data = find_all_similar_modules_list()
+    return HttpResponse(data)
 
 
 def translator(request):

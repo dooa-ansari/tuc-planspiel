@@ -5,6 +5,7 @@ from .views import google_logout, user_profile
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path("listsimilarmodules/", views.listsimilarmodules, name="listsimilarmodules"),
     path("translator/", views.translator, name="translator"),
     path("getData/", views.index, name="index"),
     path('api/register/', views.register_user, name='register_user'),
