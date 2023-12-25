@@ -8,7 +8,7 @@ class Consumer(WebsocketConsumer):
     def connect(self):
         self.accept()
         self.send(text_data=json.dumps({"progress": 1 , "message": "Converstion Started"}))
-        read_modules_and_compare("web_engineering_modules.rdf", "bialystok_modules.rdf", self)
+        read_modules_and_compare("tuc_modules.rdf", "bialystok_modules_full_data.rdf", self)
         # self.send({
         #     "type": "websocket.accept",
         # })

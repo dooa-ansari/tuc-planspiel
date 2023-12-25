@@ -16,7 +16,6 @@ const ShowSimilarityTable = () => {
     <div style={{ flex: 1 }}>
       <p id="moduleHeading">Similarity Table</p>
       {data?.map((item) => {
-        console.log(item)
         return (
           <div id="module" key={item.id}>
             <div id="moduleid">{item.id} - {item.name}</div>

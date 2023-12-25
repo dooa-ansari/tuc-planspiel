@@ -12,25 +12,7 @@ Lecture:Binary arithmetic. Basic topics of the microprocessor engineering. Micro
 </ns1:hasContent>
     <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
   </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10050W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automatics in Telecommunication</ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10050W</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10044W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project of Electrical Installations in Industrial Building</ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10044W</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFA00054W">
+ <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFA00054W">
     <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sculpture</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FA-00054W</ns1:hasModuleNumber>
@@ -39,15 +21,6 @@ This course has not yet been described...
 Short task description: To design an environmental situation, that reduces or enlarges the scale of the human model in a restricted 30x30 cm area.
 Skills: To develop students' sculptural skills. Their understanding of proportions, scale, voids and solids.
 Requirements:Spoken English, min. B+
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00258W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transport phenomena</ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00258W</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
 </ns1:hasContent>
     <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
   </rdf:Description>
@@ -77,15 +50,6 @@ Requirements:Lecture � a written exam. Classes � a written tests + case stud
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
 Description:Systems of linear equations and matrices (Gauss-Jordan elimination, homogeneous systems, matrix algebra, elementary matrices, inverses) Determinants (by row reduction and cofactor expansions, Cramer�s rule) Vector Spaces (real vector spaces, subspaces, linear independence, basis and dimension, row, column and null spaces, rank and nullity) Inner products (norms, orthogonal bases and Gram-Schmidt orthogonalization) Linear transformations (kernel and range, inverse transformations, matrices of linear transformations, change of basis, similarity)  
 Requirements:High school Mathematics
-</ns1:hasContent>
-    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00134W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
-    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Autonomous Flying Robots</ns1:hasName>
-    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME-00134W</ns1:hasModuleNumber>
-    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-This course has not yet been described...
 </ns1:hasContent>
     <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
   </rdf:Description>
@@ -6785,7 +6749,7 @@ This course has not yet been described...
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structural mechanics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCEE-00003S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-Description:Presentation of solving methods for statically determinate and indeterminate structures. Learning the calculation of the internal forces in the indeterminate structures using Force Method and Direct Displacement Method. Presentation of drawing the influence lines of internal forces, reactions and displacements in statically determinate and indeterminate structures. Learning the calculation of any crosssection internal forces and displacements using influence lines. Introduction to the stability of the structures.
+Description:Presentation of solving methods for statically determinate and indeterminate structures. Learning the calculation of the internal forces in the indeterminate structures using Force Method and Direct Displacement Method. Presentation of drawing the influence lines of internal forces, reactions and displacements in statically determinate and indeterminate structures. Learning the calculation of any cross section internal forces and displacements using influence lines. Introduction to the stability of the structures.
 Requirements:Required knowledge: Theoretical Mechanics, Strength of Materials
 </ns1:hasContent>
     <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
@@ -8517,7 +8481,7 @@ This course has not yet been described...
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Urban Buildings</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCEE-00174W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-Description:Presentation of the classification of urban buildings and the principles of forming the construction systems. Learning the methods of ensuring the spatial stiffness of multistorey buildings. Presentation of calculation of internal forces in structural elements using analytical and computational methods. Presentation of principles of designing the multi-storey structures made of various structural materials.
+Description:Presentation of the classification of urban buildings and the principles of forming the construction systems. Learning the methods of ensuring the spatial stiffness of multistorey buildings. Presentation of calculation of internal forces in structural elements using analytical and computational methods. Presentation of principles of designing the multi-storey structures made of various structural materials.
 
 </ns1:hasContent>
     <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
@@ -9398,7 +9362,7 @@ Requirements:Calculus 1,   Calculus 3,   Probability Theory,   Information Techn
 This course has not yet been described...
 </ns1:hasContent>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-Description:Developing the ability to understand corrosion processes and to identify environmental and material corrosive hazards in building objects. Strengthening and expanding knowledge about effective methods of protecting buildings against moisture and corrosion. Developing competences in the field of laboratory and insitu tests in the field of corrosion diagnostics and assessment of the moisture content of building objects.
+Description:Developing the ability to understand corrosion processes and to identify environmental and material corrosive hazards in building objects. Strengthening and expanding knowledge about effective methods of protecting buildings against moisture and corrosion. Developing competences in the field of laboratory and insitu tests in the field of corrosion diagnostics and assessment of the moisture content of building objects.
 Requirements:Required knowledge: does not concern
 </ns1:hasContent>
     <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
@@ -11809,7 +11773,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structural mechanics in Civil Engineering</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCEE-00003-1W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-Description:Presentation of solving methods for statically determinate and indeterminate structures. Learning the calculation of the internal forces in the indeterminate structures using Force Method and Direct Displacement Method. Presentation of drawing the influence lines of internal forces, reactions and displacements in statically determinate and indeterminate structures. Learning the calculation of any crosssection internal forces and displacements using influence lines. Introduction to the stability of the structures.
+Description:Presentation of solving methods for statically determinate and indeterminate structures. Learning the calculation of the internal forces in the indeterminate structures using Force Method and Direct Displacement Method. Presentation of drawing the influence lines of internal forces, reactions and displacements in statically determinate and indeterminate structures. Learning the calculation of any crosssection internal forces and displacements using influence lines. Introduction to the stability of the structures.
 Requirements:Required knowledge: Theoretical Mechanics, Strength of Materials
 </ns1:hasContent>
     <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</ns1:hasCreditPoints>
