@@ -27,19 +27,20 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile,
      ssl._create_default_https_context = _create_unverified_https_context
     
     # nltk.download('all')
-    consumer.send_message("Starting module conversions -->")
+    consumer.send_message({"progress": 2 , "message": "Starting module conversions"})
     firstUniversityModules = translateModules(universityOneModulesFile, consumer)
-    consumer.send_message("First modules file translated to english successfully")
+    consumer.send_message({"progress": 3 , "message": "First modules file translated to english successfully"})
     secondUniversityModules = translateModules(univeristyTwoModulesFile , consumer)
-    consumer.send_message("Second modules file translated to english successfully")
+    consumer.send_message({"progress": 4 , "message": "Second modules file translated to english successfully"})
     data_list_first = []
     data_list_second = []
     consumer.send_message("Starting to find similarities between modules")
+    count = 4
     for module in firstUniversityModules:
         for module2 in secondUniversityModules:
             # similarity = find_text_similarity_pytorch(module.moduleContent, module2.moduleContent)
             similarity = find_text_similarity_spacy(module.moduleContent, module2.moduleContent)
-            consumer.send_message(f"{module.name} - {module.name} are similar : {similarity}")
+            consumer.send_message({"progress": 5 , "message": f"{module.name} - {module2.name} are similar : {similarity}"})
             print(f"{module.name} - {module2.name} - {module.uri} similarity value is : {similarity}")
             if(similarity):
                similar_modules_m1 = []

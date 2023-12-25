@@ -3,7 +3,9 @@ import "../assets/css/ShowModules.css";
 import useWebSocket from 'react-use-websocket';
 
 const Converter = () => {
-  const [data, setData] = useState("Hello");
+  const [data, setData] = useState("Conversion Process");
+  const [progress, setProgress] = useState(0);
+  const [messages, setMessages] = useState([]);
 //   const socket = React.useRef(new WebSocket('ws://localhost:8000/ws/updates')).current; 
   const socketUrl = 'ws://localhost:8000/ws/updates';
 
@@ -16,7 +18,13 @@ const {
   getWebSocket,
 } = useWebSocket(socketUrl, {
   onOpen: () => console.log('opened'),
-  onMessage: (event) => setData(event.data),
+  onMessage: (event) => {
+    const jsonData = JSON.parse(event.data)
+    console.log(jsonData)
+    setData(jsonData.message)
+    setProgress(jsonData.progress)
+    setMessages([...messages, jsonData.message]);
+  },
   //Will attempt to reconnect on all close events, such as server shutting down
   shouldReconnect: (closeEvent) => true,
 });
@@ -49,7 +57,11 @@ const {
   
   return (
     <div style={{ flex: 1 }}>
-      <p id="moduleHeading">{data}</p>
+      <progress value={progress} max={100} />
+      <p style={{color: "#979"}}>{data}</p>
+      <div style={{border: "1px solid black"}}>
+      {messages.map((message, index) => <p key={index}>{message}</p>)}
+      </div>
       {/* <button onClick={startProcessing}>Click Me</button> */}
     </div>
   );

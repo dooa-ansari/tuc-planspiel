@@ -7,7 +7,7 @@ from .module_similarity import read_modules_and_compare
 class Consumer(WebsocketConsumer):
     def connect(self):
         self.accept()
-        self.send(text_data="Converstion Started")
+        self.send(text_data=json.dumps({"progress": 1 , "message": "Converstion Started"}))
         read_modules_and_compare("web_engineering_modules.rdf", "bialystok_modules.rdf", self)
         # self.send({
         #     "type": "websocket.accept",
@@ -31,4 +31,4 @@ class Consumer(WebsocketConsumer):
         
         # message = event['message']
 
-        self.send(text_data=value)
+        self.send(text_data=json.dumps(value))
