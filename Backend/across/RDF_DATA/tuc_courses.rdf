@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:course="http://tuc/course#"
+         xmlns:university="http://across/university#"
+         >
+
+  <!-- Course: ASE (Automotive Software Engineering) -->
+  <rdf:Description rdf:about="http://tuc/course#ASE">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automotive Software Engineering</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+
+  <!-- Course: Web Engineering -->
+  <rdf:Description rdf:about="http://tuc/course#WebEngineering">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Engineering</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+
+  
+  <!-- Course: Data Science -->
+  <rdf:Description rdf:about="http://tuc/course#DataScience">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Science</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+
+  
+  <!-- Course: Informatik -->
+  <rdf:Description rdf:about="http://tuc/course#Informatik">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informatik</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+
+  <!-- Course: System Engineering -->
+  <rdf:Description rdf:about="http://tuc/course#SystemEngineering">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System Engineering</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+
+    <!-- Course: Mathematik -->
+  <rdf:Description rdf:about="http://tuc/course#Mathematik">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematik</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+  
+</rdf:RDF>
