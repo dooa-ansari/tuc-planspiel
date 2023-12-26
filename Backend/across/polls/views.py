@@ -62,6 +62,8 @@ from django.contrib.auth.hashers import check_password
 # data = data + json_data
 # data = data + f"<p>Total Modules are: {counter} </p></html></body>"
 
+def scrape_bialystok_data(request):
+    return HttpResponse("Dooa Ansari")
 
 def translator(request):
     data = read_modules_and_compare("web_engineering_modules.rdf", "bialystok_modules.rdf")
