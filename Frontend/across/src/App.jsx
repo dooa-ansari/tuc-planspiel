@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import ShowModules from "./pages/ShowModules";
 import { gapi } from "gapi-script";
 import UserPage from "./pages/UserPage";
+import AdminPanel from "./admin/AdminPanel";
 
 
 const App = () => {
@@ -39,7 +40,10 @@ const App = () => {
             }}
           />
           <Route path="/user" exact element={<UserPage />} />
-          {/* Add other routes as needed */}
+
+          <Route path="/admin/*" element={<AdminPanel />} />
+          {/* Other routes */}
+
         </Routes>
       </BrowserRouter>
     </div>

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'polls',
+    'adminapp',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -101,14 +102,14 @@ WSGI_APPLICATION = 'across.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 # These will be changing according to your MySQL Configurations
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'sample',
-    #     'USER': 'root',
-    #     'PASSWORD': 'root',
-    #     'HOST': '127.0.0.1',  # or the hostname where your MySQL server is running
-    #     'PORT': '3306',      # or the port on which your MySQL server is listening
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sample2',
+        'USER': 'root',
+        'PASSWORD': 'root@123',
+        'HOST': '127.0.0.1',  # or the hostname where your MySQL server is running
+        'PORT': '3306',      # or the port on which your MySQL server is listening
+    }
 }
 
 

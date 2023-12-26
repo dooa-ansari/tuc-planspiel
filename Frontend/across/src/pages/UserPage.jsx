@@ -15,7 +15,7 @@ const UserProfile = () => {
                 const response = await axios.get('https://oauth2.googleapis.com/tokeninfo?id_token=' + authToken, {
                 });
 
-                setUserDetails(response.data); 6
+                setUserDetails(response.data);
             } catch (error) {
                 console.error('Error fetching user details:', error);
             }
