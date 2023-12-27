@@ -32,3 +32,6 @@ LIMIT 1
 """
 
 insert_module_similarity = "INSERT DATA { <%s>  <http://tuc.web.engineering/module#hasModules>  <%s> }"
+
+insert_module_univeristy = "INSERT DATA { <%s>  <http://tuc.web.engineering/module#hasUniversity>  <%s> }"
+insert_module_course = "INSERT DATA { <%s>  <http://tuc.web.engineering/module#hasCourse>  <%s> }"
