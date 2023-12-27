@@ -54,5 +54,52 @@
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematik</course:hasCourseName>
     <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
   </rdf:Description>
+
+      <!-- Course: Computer Science Faculty -->
+  <rdf:Description rdf:about="http://tuc/course#BCS">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Computer Science</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
   
+      <!-- Course: Foreign Language Center -->
+  <rdf:Description rdf:about="http://tuc/course#FLC">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foreign Language Centre</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
+
+      <!-- Course: Engineering Management -->
+  <rdf:Description rdf:about="http://tuc/course#EM">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Engineering Management</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
+
+      <!-- Course: Mechinical Engineering -->
+  <rdf:Description rdf:about="http://tuc/course#ME">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Mechanical Engineering</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
+
+        <!-- Course: Civil Engineering -->
+  <rdf:Description rdf:about="http://tuc/course#Civil">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Civil Engineering and Environmental Sciences</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
+
+        <!-- Course: Electrical Engineering -->
+  <rdf:Description rdf:about="http://tuc/course#Electrical">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Electrical Engineering</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
 </rdf:RDF>

@@ -2,8 +2,8 @@ import urllib.request
 import ssl
 from bs4 import BeautifulSoup
 from rdflib import Namespace
-from rdflib import Graph, URIRef, Literal, BNode
-from rdflib.namespace import FOAF, RDF, XSD
+from rdflib import Graph, URIRef, Literal
+from rdflib.namespace import RDF, XSD
 import re
 
 graph = Graph()
@@ -14,7 +14,12 @@ NAME_SPACE.module
 # namespace_manager = graph.namespace_manager
 uri_main = "http://tuc.web.engineering/module#"
 # ns_module = Namespace(uri_main)
-
+DEPARTMENT_CS = "Faculty of Computer Science"
+DEPARTMENT_FOREIGN_LC = "Foreign Language Centre"
+DEPARTMENT_ENGINEERING_MANAGEMENT = "Faculty of Engineering Management"
+DEPARTMENT_MECHINICAL_ENGINEERING = "Faculty of Mechanical Engineering"
+DEPARTMENT_CIVIL_ENGINEERING = "Faculty of Civil Engineering and Environmental Sciences"
+DEPARTMENT_ELECTRICAL_ENGINEERING = "Faculty of Electrical Engineering"
 
 base_url = "https://usos-ects.uci.pb.edu.pl/"
 try:
@@ -46,9 +51,6 @@ for page in pages:
      parser_courses = BeautifulSoup(data_courses, 'html.parser')
      module_name = parser_courses.find("h1").getText().split("\n")
      module_name_value = module_name[1].lstrip(' ')
-    #  print(module_name_value)
-    #  print(module_name[1])
-    #  module_id = parser_courses.find_all("span", class_="note")[1].getText() if len(parser_courses.find_all("span", class_="note")) > 2 else "None"
      module_id =  id_url.split("=")[1]
      module_content = parser_courses.find("div", class_="opis iml").getText()
      credit_points = parser_courses.find("div", class_="item punkty_ects")
@@ -59,27 +61,31 @@ for page in pages:
      
      uri_end = ''.join(e for e in module_id if e.isalnum())
      print(uri_end)
-     if(uri_end!="None" and uri_end!="inPolish"):
+     if(uri_end!="None" and uri_end!="inPolish" and department == DEPARTMENT_ELECTRICAL_ENGINEERING):
         print(f"{base_url}{id_url}")
         module_uri_g = URIRef(f"{uri_main}{uri_end}")
-        
+        uriUniversity = URIRef("http://across/university#BU")
+        uriCourse = URIRef("http://tuc/course#Electrical")
         module_name_g = Literal(module_name_value, datatype=XSD.string)
         module_content_g = Literal(module_content, datatype=XSD.string)
         module_id_g = Literal(module_id, datatype=XSD.string)
         credit_points_g = Literal(credit_points_value_to_be_added, datatype=XSD.string)
         department_g = Literal(department, datatype=XSD.string)
+        university_g = Literal("", datatype=XSD.string)
         
         graph.add((module_uri_g, RDF.type, NAME_SPACE.module))
         graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasName"), module_name_g))
         graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasModuleNumber"), module_id_g))
         graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasContent"), module_content_g))
         graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasCreditPoints"), credit_points_g))
+        graph.add((module_uri_g, URIRef("http://tuc/course#hasCourse"), uriCourse))
+        graph.add((module_uri_g, URIRef("http://across/university#hasUniversity"), uriUniversity))
         
 
 
 
 bialystok_modules_data = graph.serialize(format='xml')
-bialystok_modules_file = open('bialystok_modules_full_data.rdf', 'w')
+bialystok_modules_file = open('bu_Engineering_electrical.rdf', 'w')
 bialystok_modules_file.write(bialystok_modules_data)
 bialystok_modules_file.close()
     
