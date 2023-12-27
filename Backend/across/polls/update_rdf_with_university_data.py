@@ -1,12 +1,20 @@
-import rdflib, URIRef
-from .sparql import *
+from rdflib import Graph, Literal, RDF, URIRef
+from sparql import *
 
-graph = rdflib.Graph()
-graph.parse(file)
+graph = Graph()
+graph.parse("./RDF_DATA/tuc_System_Engineering.rdf")
 module_list = graph.query(module_list_query)
 for module in module_list:
-    uri = URIRef(item)
-    graph.update(insert_module_univeristy  % (module.module,uri))
-    graph.update(insert_module_course  % (module.module,uri))
+    uriUniversity = URIRef("http://across/university#TUC")
+    uriCourse = URIRef("http://tuc/course#SystemEngineering")
+    graph.update(insert_module_univeristy  % (module.module,uriUniversity))
+    graph.update(insert_module_course  % (module.module,uriCourse))
+
+
+fileOneContent = graph.serialize(format='xml')
+file1 = open('tuc_System_Engineering.rdf', 'w')
+file1.write(fileOneContent)
+file1.close()
+    
 
  
