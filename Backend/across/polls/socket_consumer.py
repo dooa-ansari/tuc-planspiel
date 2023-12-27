@@ -3,12 +3,16 @@ import json
 from channels.generic.websocket import WebsocketConsumer
 from asgiref.sync import async_to_sync
 from .module_similarity import read_modules_and_compare
+from os import listdir
+from os.path import isfile, join
 
 class Consumer(WebsocketConsumer):
     def connect(self):
         self.accept()
         self.send(text_data=json.dumps({"progress": 1 , "message": "Converstion Started"}))
-        read_modules_and_compare("tuc_modules.rdf", "bialystok_modules_full_data.rdf", self)
+        onlyfiles = [f for f in listdir("uploads") if isfile(join("uploads", f))]
+        print(onlyfiles)
+        read_modules_and_compare(f"uploads/{onlyfiles[0]}", f"uploads/{onlyfiles[1]}", self)
         # self.send({
         #     "type": "websocket.accept",
         # })

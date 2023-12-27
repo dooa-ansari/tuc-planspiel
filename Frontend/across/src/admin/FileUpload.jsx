@@ -3,16 +3,22 @@ import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 import { FiCheckCircle } from 'react-icons/fi';
 import '../assets/css/FileUpload.css';
+import { useNavigate } from 'react-router-dom';
 
 
 const FileUpload = () => {
     const [uploadedFiles, setUploadedFiles] = useState([]);
     const [uploadStatus, setUploadStatus] = useState(null);
+    const navigate = useNavigate();
 
+    const onPressStartProcess = () => {
+        navigate('/admin/automation')
+    }
     const onDrop = useCallback(async (acceptedFiles) => {
         try {
             const formData = new FormData();
             acceptedFiles.forEach((file) => {
+                console.log(JSON.stringify(file))
                 formData.append('files', file);
             });
 
@@ -37,7 +43,7 @@ const FileUpload = () => {
                 {isDragActive ? (
                     <p>Drop the files here ...</p>
                 ) : (
-                    <p>Drag 'n' drop some files here, or click to select files</p>
+                    <p>Drag 'n' drop University module files here, or click to select files</p>
                 )}
             </div>
 
@@ -55,6 +61,10 @@ const FileUpload = () => {
                     </div>
                 </div>
             )}
+            <div className="start-button-parent">
+            <button onClick={onPressStartProcess} className='start-button'>Start Processing Files</button>
+            </div>
+           
         </div>
     );
 };

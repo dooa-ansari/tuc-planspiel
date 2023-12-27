@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dept="http://tuc.web.engineering/department#"
-   xmlns:module="http://tuc.web.engineering/module#"
+   xmlns:course="http://tuc/course#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:university="http://across/university#"
 >
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#BSE">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
-    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00014</module:hasModuleNumber>
-    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Engineering</module:hasName>
-    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Requirements issues are essential for documenting and evaluating user needs. Requirements represent the real-world needs of users, customers and other stakeholders affected by the system. Scope and subject of software engineering. Essential motivations and concepts.</module:hasContent>
-    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
-    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</module:hasCreditPoints>
-    <module:hasModules rdf:resource="http://tuc.web.engineering/module#XML"/>
+  <rdf:Description rdf:about="http://tuc/course#Electrical">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Electrical Engineering</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://tuc.web.engineering/module#WAD">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
-    <module:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00046</module:hasModuleNumber>
-    <module:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Applications Development in Java</module:hasName>
-    <module:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Programming Web applications. The concepts of server-side, client-side. Overview of tools. Characteristics of HTTP (HyperText Transfer Protocol). Technology AJAX (Asynchronous Javascript And XML).</module:hasContent>
-    <dept:hasName rdf:resource="http://tuc.web.engineering/department#DeptDistributedSystems"/>
-    <module:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</module:hasCreditPoints>
+  <rdf:Description rdf:about="http://tuc/course#DataScience">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Science</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc/course#Civil">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Civil Engineering and Environmental Sciences</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc/course#EM">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Engineering Management</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc/course#ME">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Mechanical Engineering</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc/course#FLC">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foreign Language Centre</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc/course#SystemEngineering">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System Engineering</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc/course#BCS">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Computer Science</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc/course#ASE">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automotive Software Engineering</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc/course#Informatik">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informatik</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc/course#WebEngineering">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Engineering</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc/course#Mathematik">
+    <rdf:type rdf:resource="http://tuc/course#"/>
+    <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</course:hasCourseNumber>
+    <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematik</course:hasCourseName>
+    <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
   </rdf:Description>
 </rdf:RDF>

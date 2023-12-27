@@ -35,13 +35,13 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile,
     data_list_first = []
     data_list_second = []
     consumer.send_message("Starting to find similarities between modules")
-    count = 4
+    nlp = spacy.load('en_core_web_lg')
     for module in firstUniversityModules:
         for module2 in secondUniversityModules:
-            # similarity = find_text_similarity_pytorch(module.moduleContent, module2.moduleContent)
-            similarity = find_text_similarity_spacy(module.moduleContent, module2.moduleContent)
+            text1 = module.name if(module.moduleContent == "This course has not yet been described...") else module.moduleContent
+            text2 = module2.name if(module2.moduleContent == "This course has not yet been described...") else module2.moduleContent
+            similarity = find_text_similarity_spacy(text1, text2, nlp)
             consumer.send_message({"progress": 5 , "message": f"{module.name} - {module2.name} are similar : {similarity}"})
-            print(f"{module.name} - {module2.name} - {module.uri} similarity value is : {similarity}")
             if(similarity):
                similar_modules_m1 = []
                similar_modules_m2 = []
@@ -52,11 +52,8 @@ def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile,
                data_list_first.append(module)
                data_list_second.append(module2)
                consumer.send_message(f"similarity values saved successfully")
-            # data_dict = {
-            # 'name': str(module.moduleName),
-            # 'similarity': str(similarity),
-            # }
-            # data_list.append(data_dict)
+               
+          
     add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second, consumer)
     return {}
     
@@ -173,12 +170,10 @@ def find_text_similarity_pytorch(text1, text2):
     return cosine_similarity
 
 
-def find_text_similarity_spacy(module1Content, module2Content):
-    nlp = spacy.load('en_core_web_lg')
+def find_text_similarity_spacy(module1Content, module2Content, nlp):
     
     s1 = nlp(module1Content)
     s2 = nlp(module2Content)
-    s1.similarity(s2)
     
     s1_verbs = " ".join([token.lemma_ for token in s1 if token.pos_ == "VERB"])
     s1_adjs = " ".join([token.lemma_ for token in s1 if token.pos_ == "ADJ"])
@@ -192,8 +187,6 @@ def find_text_similarity_spacy(module1Content, module2Content):
     adj_similarity = nlp(s1_adjs).similarity(nlp(s2_adjs))
     noun_similarity = nlp(s1_nouns).similarity(nlp(s2_nouns))
     
-    is_similar = True if(verbs_similarity > 0.2 and adj_similarity > 0.2 and noun_similarity > 0.5) else False
+    is_similar = True if(verbs_similarity >= 0.8 and adj_similarity >= 0.8 and noun_similarity >= 0.9) else False
     return is_similar
-    # print(f"{s1} and {s2} VERBS: {nlp(s1_verbs).similarity(nlp(s2_verbs))}")
-    # print(f"{s1} and {s2} ADJ: {nlp(s1_adjs).similarity(nlp(s2_adjs))}")
-    # print(f"{s1} and {s2} NOUNS: {nlp(s1_nouns).similarity(nlp(s2_nouns))}")
+   
