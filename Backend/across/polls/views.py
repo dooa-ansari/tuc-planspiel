@@ -22,6 +22,7 @@ from google.auth.transport.requests import Request as GoogleAuthRequest
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.hashers import check_password
 
 graph = rdflib.Graph()
 graph.parse("bialystok_modules_full_data.rdf")
@@ -48,7 +49,46 @@ json_data = json.dumps(data_list, indent=2)
 def listsimilarmodules(request):
     data = find_all_similar_modules_list()
     return HttpResponse(data)
+# graph = rdflib.Graph()
+# graph2 = rdflib.Graph()
+# #complete isn't required , incase required we need to do it some other way becuase path will be different for different machines
+# #graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\web_engineering_modules.rdf")
+# graph.parse("web_engineering_modules.rdf")
+# graph.parse("bialystok_modules.rdf")
+# #graph.parse("D:\Web Engineering\SEM-III\Planspiel\ACROSS\ACROSS_MAIN\web-wizards\Backend\departments.rdf")
+# graph.parse("departments.rdf")
+# module_list = """
+# SELECT ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints ?deptName ?dName ?deptId ?similarModule ?actualName
+# WHERE {
+#     ?name <http://tuc.web.engineering/module#hasName> ?moduleName ;
+#           <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
+#           <http://tuc.web.engineering/module#hasContent> ?moduleContent ;
+#           <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints ;
+#           <http://tuc.web.engineering/department#hasName> ?deptName ;
+#           <http://tuc.web.engineering/module#hasModules> ?similarModule .
+#     ?deptName <http://tuc.web.engineering/department#hasName> ?dName .
+#     ?deptName <http://tuc.web.engineering/department#hasDeptId> ?deptId .
+#     ?similarModule <http://tuc.web.engineering/module#hasName> ?actualName.
+# }
+# """
 
+# qresponse = graph.query(module_list)
+# data = "<html><body>"
+# counter = 0
+# data_list = []
+# for row in qresponse:
+#     counter = counter + 1
+#     data_dict = {
+#         'name': str(row.moduleName),
+#         'similarURI': str(row.actualName),
+#     }
+#     data_list.append(data_dict)
+# json_data = json.dumps(data_list, indent=2)
+# data = data + json_data
+# data = data + f"<p>Total Modules are: {counter} </p></html></body>"
+
+def scrape_bialystok_data(request):
+    return HttpResponse("Dooa Ansari")
 
 def translator(request):
     data = read_modules_and_compare("tuc_modules.rdf", "bialystok_modules_full_data.rdf", None)
@@ -78,7 +118,7 @@ def register_user(request):
 
               # Save the data with the hashed password
             user_profile = UserProfile(email=email, full_name=full_name, password=hashed_password, university_name=university_name,
-                                       signup_using='FORM')
+                                       signup_using='FORM', role='USER')
             user_profile.save()
             # Generate JWT token upon successful registration
             payload = {
@@ -110,10 +150,44 @@ def register_user(request):
 def index(request):
     return HttpResponse(json_data)
 
+@csrf_exempt
+def authenticate_user_login(request):
+    if request.method == 'POST':
+        try:
+            # Parse JSON data from the request body
+            data = json.loads(request.body.decode('utf-8'))
+
+            # Extract email and password from the data
+            email = data.get('email', '')
+            password = data.get('password', '')
+
+            # Perform authentication
+            user_profile = UserProfile.objects.get(email=email)
+            if user_profile is not None:
+                passwords_match = check_password(password, user_profile.password)
+                if passwords_match:
+                    # Serialize the UserProfile instance to JSON
+                    user_profile_data = {
+                        'email': user_profile.email,
+                        'full_name': user_profile.full_name,
+                        'university_name': user_profile.university_name,
+                        'signup_using': user_profile.signup_using,
+                        'role':user_profile.role
+                    }                    
+                    response = {
+                        "message":"Login Successful",
+                        "data": user_profile_data
+                    }
+                    return JsonResponse(response, status =200)
+                else:
+                    return JsonResponse({'message': 'Email or password is incorrect'}, status = 401)
+            return JsonResponse({'message': 'Login Failed'}, status = 400)
+        except json.JSONDecodeError:
+            return JsonResponse({'message': 'Invalid JSON data in the request body'}, status=400)
+    return JsonResponse({'message':'Method not allowed'}, status = 405)
 
 @csrf_exempt
 def google_login(request):
-    print(request)
 
     # Get the raw request body
     body = request.body.decode('utf-8')
@@ -172,21 +246,48 @@ def google_login(request):
 
     if user is not None:
         login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+        user_profile_data = {}
 
         # Step 5: Make a entry in common database as well for maintaining the data
         existing_user_profile = UserProfile.objects.filter(email=email_id).first()
+
+        # Check if the user already exist or not. If not then create new account else collect data and send with the message
         if not existing_user_profile:
+
             # Perform additional actions after successful login
             user_profile_from_google = UserProfile(email=email_id, full_name=first_name + ' ' + last_name,
                                                    password=make_password('encryptedsamplepasswordforgooglesignin'),
-                                                   university_name='', signup_using='GOOGLE')
+                                                   university_name='', signup_using='GOOGLE', role="USER")
             user_profile_from_google.save()
-
-        response_data = {
-            'success': 'User authenticated successfully',
-            'token': access_token,
+            user_profile_data = {
+                        'email': user_profile_from_google.email,
+                        'full_name': user_profile_from_google.full_name,
+                        'university_name': user_profile_from_google.university_name,
+                        'signup_using': user_profile_from_google.signup_using,
+                        'role':user_profile_from_google.role
+                    } 
+            response_data = {
+                'message': 'User account created successfully'
+            } 
+        ## In future need to remove this access_token from here
+        else:
+            user_profile = UserProfile.objects.get(email=email_id)
+            user_profile_data = {
+                        'email': user_profile.email,
+                        'full_name': user_profile.full_name,
+                        'university_name': user_profile.university_name,
+                        'signup_using': user_profile.signup_using,
+                        'role':user_profile_from_google.role
+                    }
+            response_data = {
+                'message': 'User account already exist, logging you in...'
+            }
+        update_fields = {
+            'token' : access_token,
+            "data"  : user_profile_data
         }
-        return JsonResponse(response_data)
+        response_data.update(update_fields)
+        return JsonResponse(response_data, status =200)
     else:
         return JsonResponse({'error': 'Authentication failed'}, status=401)
 
