@@ -11,7 +11,6 @@ class Consumer(WebsocketConsumer):
         self.accept()
         self.send(text_data=json.dumps({"progress": 1 , "message": "Converstion Started"}))
         onlyfiles = [f for f in listdir("uploads") if isfile(join("uploads", f))]
-        print(onlyfiles)
         read_modules_and_compare(f"uploads/{onlyfiles[0]}", f"uploads/{onlyfiles[1]}", self)
         # self.send({
         #     "type": "websocket.accept",

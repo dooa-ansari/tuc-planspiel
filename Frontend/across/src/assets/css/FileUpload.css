@@ -51,3 +51,23 @@
     justify-self: center;
     justify-content: center;
 }
+
+.instructions {
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+    padding: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.instructions-font {
+    font-weight: 500;
+    font-size: large;
+    margin-bottom: 30px;
+}
+
+.instructions-font-subtext {
+    font-weight: 200;
+    font-style: italic;
+    margin-bottom: 20px;
+}

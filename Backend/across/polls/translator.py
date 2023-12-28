@@ -32,9 +32,9 @@ def translateModules(file, consumer):
     sourceLanguage = detectLanguage(language.moduleContent)
     translationRequired = sourceLanguage != 'en'
     break
-   consumer.send_message({"progress": 5 , "message": f"Translation requirement for modules {file} - {translationRequired}"})
+   consumer.send_message({"progress": 5 , "type": 10 , "message": f"Translation requirement for modules {file} - {translationRequired}"})
    for row in modules:
-    consumer.send_message({"progress": 8 , "message": f"Translating {row.moduleName}"})
+    consumer.send_message({"progress": 8 , "type": 10 ,"message": f"Translating {row.moduleName}"})
     translated =  GoogleTranslator(source=sourceLanguage, target='en').translate(row.moduleContent) if translationRequired else row.moduleContent
     objectData = module(str(row.moduleName), str(translated), str(row.module), []) 
     data_list.append(objectData)

@@ -38,6 +38,16 @@ const FileUpload = () => {
 
     return (
         <div className="file-upload-container">
+            <div className='instructions'>
+                <p className='instructions-font'>This is utility to find similar modules based on their content or names. The purpose of this utility is to reduce the human-effort for finding if two modules can be deemed similar</p>
+                <p className='instructions-font-subtext'>How to use this utility</p>
+                <ul>
+                    <li>Upload two RDF files with modules you want to find similarities between</li>
+                    <li>Click Start processing</li>
+                    <li>After processing a new RDF file will be generated with a relation identifying similar modules</li>
+                    <li>The newly generated files can be than used with different API's and sparql queries</li>
+                </ul>
+            </div>
             <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
                 <input {...getInputProps()} />
                 {isDragActive ? (

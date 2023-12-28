@@ -20,9 +20,13 @@ const ShowSimilarityTable = () => {
           <div id="module" key={item.id}>
             <div id="moduleid">{item.id} - {item.name}</div>
             <div id="creditPoints">Credit Points : {item.creditPoints}</div>
+            <div id="creditPoints">University : {item.university}</div>
+            <div id="creditPoints">Course : {item.courseName}</div>
             <div>{item.content}</div>
             <div id="moduleid">{item.similarModuleId} - {item.similarModuleName}</div>
             <div id="creditPoints">Credit Points : {item.similarModuleCreditPoints}</div>
+            <div id="creditPoints">University : {item.similarUniversity}</div>
+            <div id="creditPoints">Course : {item.courseNameSimilar}</div>
             <div>{item.similarModuleContent}</div>
           </div>
         );
