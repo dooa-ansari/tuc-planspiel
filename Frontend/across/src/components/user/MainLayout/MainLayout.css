@@ -1,0 +1,12 @@
+.mainlayout__content {
+  padding: 30px;
+}
+.mainlayout__content main {
+  padding-top: 55px;
+  padding-left: 13%;
+  flex: 0.85;
+}
+
+.mainlayout__footer {
+  padding-left: 13%;
+}

@@ -37,33 +37,6 @@
     margin-bottom: 15px;
   }
 
-  .signupgoogle__button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 380px;
-    height: 50px;
-    font-size: 1.15rem;
-    color: #242424;
-    letter-spacing: 2px;
-    border-radius: 50px;
-    background: #fff;
-    border: 1px solid #242424;
-    margin-bottom: 58px;
-  }
-
-  
-  .singupgoogle__image, .singupemail__image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    background:#fff;
-    border-radius: 50%;
-    margin-right: 1rem;
-  }
-
   .register__left {
     display: flex;
     flex-direction: column;
@@ -91,6 +64,15 @@
     margin: 35px 0;
   }
 
+  input::placeholder {
+    color: #898989;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+
   .register__universitySelection{
     display: block;
     width: 380px;
@@ -112,21 +94,65 @@
     display: block;
     width: 380px;
     height: 50px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-family: "Inter", sans-serif;
     letter-spacing: 2px;
     border-radius: 50px;
     background: var(--primary-color);
     border: none;
-    margin-bottom: 58px;
   }
 
-  input::placeholder {
-    color: #b9b9b9;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
+.register__or-separator {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
+    margin-top: 12px;
+}
+  
+.register__or-separator .register__or-text {
+    font-size: 1rem;
+    line-height: 1.5;
     font-weight: 400;
-    line-height: normal;
-  }
+    color: rgba(0,0,0,0.6);
+    margin: 0 12px;
+}
+
+.register__or-separator::before, .register__or-separator::after {
+    content: "";
+    width: 28%;
+    height: 2px;
+    background-color: rgba(0,0,0,0.15);
+}
+
+.signupgoogle__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 380px;
+  height: 50px;
+  font-size: 1.15rem;
+  color: #242424;
+  font-family: inherit;
+  border-radius: 50px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  margin: 20px;
+}
+
+
+.singupgoogle__image, .singupemail__image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background:#fff;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
 
   @media screen and (max-width: 600px) {
     .register__wrapper {
@@ -152,7 +178,7 @@
       width: 250px;
       height: 50px;
       margin: 15px;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Inter", sans-serif;
     }
 
     .register__universitySelection{
@@ -166,7 +192,7 @@
       width: 250px;
       height: 50px;
       font-size: 1rem;
-      margin-bottom: 40px;
+      margin-bottom: 12px;
       font-family: inherit;
     }
 
@@ -184,7 +210,7 @@
     input::placeholder {
       color: #b9b9b9;
       font-size: 0.9rem;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Inter", sans-serif;
       font-weight: 400;
       line-height: normal;
     }
@@ -215,7 +241,7 @@
       width: 300px;
       height: 50px;
       margin: 15px;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Inter", sans-serif;
     }
 
     .register__universitySelection{
@@ -229,7 +255,7 @@
       width: 300px;
       height: 50px;
       font-size: 1rem;
-      margin-bottom: 40px;
+      margin-bottom: 12px;
       font-family: inherit;
     }
 
@@ -247,7 +273,7 @@
     input::placeholder {
       color: #b9b9b9;
       font-size: 1rem;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Inter", sans-serif;
       font-weight: 400;
       line-height: normal;
     }

@@ -1,0 +1,8 @@
+.homepage__images {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px
+}

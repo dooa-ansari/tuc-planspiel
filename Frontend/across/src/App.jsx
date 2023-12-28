@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ShowModules from "./pages/ShowModules";
 import UniversitySelection from "./pages/UniversitySelection";
+import HomePage from "./pages/user/HomePage/HomePage";
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
             exact
             element={<UniversitySelection />}
           />
+
+          <Route path="/campus-flow/home" exact element={<HomePage />} />
         </Routes>
       </BrowserRouter>
     </div>

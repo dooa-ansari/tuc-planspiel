@@ -1,10 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
+// @css imports
 import "../assets/css/Register.css";
+
+// @image imports
 import google from "../assets/google_logo_icon.png";
-import emailSvg from "../assets/email_icon.svg";
 import resigterSvg from "../assets/registerPage_highschool.svg";
 
 const Register = () => {
+  const navigate = useNavigate();
   return (
     <div className="register">
       <div className="register__wrapper">
@@ -15,12 +20,12 @@ const Register = () => {
             <span
               style={{
                 color: "#439a86",
-                fontWeight: "600",
+                fontWeight: "500",
                 cursor: "pointer",
                 textDecoration: "underline",
               }}
             >
-              Log in
+              <a onClick={() => navigate("/login")}>Log in</a>
             </span>
           </p>
           <form action="#" className="register__form">
@@ -52,7 +57,17 @@ const Register = () => {
               <option value="" disabled selected hidden>
                 Select Your University
               </option>
-              <option value="">Technical University of Chemnitz</option>
+              <option value="">
+                Technical University of Chemnitz (Germany)
+              </option>
+              <option value="">
+                Bialystok University of Technology (Poland)
+              </option>
+              <option value="">University of Craiova (Romania)</option>
+              <option value="">University of Girona (Catalonia/Spain)</option>
+              <option value="">University of Nova Gorica (Slovenia)</option>
+              <option value="">University of Perpignan (France)</option>
+              <option value="">University of Ruse (Bulgaria)</option>
               <option value="">Other</option>
             </select>
             <button className="register__button" type="button">
@@ -60,12 +75,20 @@ const Register = () => {
             </button>
           </form>
 
-          <button className="signupgoogle__button" type="button">
-            <div className="singupgoogle__image">
-              <img src={google} alt="" />
+          {/* snapple separator with or text in between */}
+          {/* start */}
+          <div className="register__alternate-signin-container">
+            <div className="register__or-separator">
+              <span class="register__or-text">or</span>
             </div>
-            Continue with Google
-          </button>
+            <button className="signupgoogle__button" type="button">
+              <div className="singupgoogle__image">
+                <img src={google} alt="" />
+              </div>
+              Continue with Google
+            </button>
+          </div>
+          {/* end */}
         </div>
         <div className="register__right">
           <img className="register__characterSvg" src={resigterSvg} alt="" />
