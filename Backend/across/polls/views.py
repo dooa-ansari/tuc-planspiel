@@ -23,6 +23,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.hashers import check_password
+from django.views.decorators.http import require_POST
 
 # graph = rdflib.Graph()
 # graph2 = rdflib.Graph()
@@ -293,3 +294,61 @@ def user_profile(request):
     }
 
     return JsonResponse(user_details)
+
+@csrf_exempt
+@require_POST
+def get_courses_from_university(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        university = data.get('university','')
+
+        # Create an RDF graph
+        g = rdflib.Graph()
+
+        # Load RDF data from files
+        g.parse("Backend//across//RDF_DATA//universities.rdf")
+        g.parse("Backend//across//RDF_DATA//tuc_courses.rdf")
+        
+        # SPARQL query to retrieve university names and course names
+        query = """
+        SELECT ?courseName
+        WHERE {
+        ?course rdf:type <http://tuc/course#> .
+        ?course <http://across/university#belongsToUniversity> ?university .
+        ?university rdf:type <http://across/university#> .
+        ?university <http://across/university#hasUniversityName> "%s"^^<http://www.w3.org/2001/XMLSchema#string> .
+        ?course <http://tuc/course#hasCourseName> ?courseName .
+        }
+        """% university
+
+        # Execute the SPARQL query
+        results = g.query(query)
+        # Collect results in a list
+        course_list = [row.courseName for row in results]
+
+        # Return JSON response
+        response = {
+            "message": "Course list returned successfully",
+            "courses": course_list
+        }
+        return JsonResponse(response, status =200)
+
+    except json.JSONDecodeError as json_error:
+        response = {
+            "message": f"JSON decoding error: {json_error}"
+        }
+        return JsonResponse(response, status =400)
+    except rdflib.exceptions.Error as rdf_error:
+        response = {
+            "message": f"RDF parsing error: {rdf_error}"
+        }
+        return JsonResponse(response, status =500)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
