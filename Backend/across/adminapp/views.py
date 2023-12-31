@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+import rdflib
 import os, json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -38,6 +39,72 @@ def get_namespaces(graph):
         namespaces[prefix] = Namespace(uri)
     return namespaces
 
+def get_course_code(course_name):
+    try:
+        # Load Graph data
+        g = rdflib.Graph()
+        g.parse("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA/tuc_courses.rdf")
+
+        # Sparql query to retrieve course code for given course name
+        query = """
+                SELECT (STR(?course_code) as ?course_code_str)
+                WHERE {
+                    ?course rdf:type <http://tuc/course#> .
+                    ?course <http://tuc/course#hasCourseName> "%s"^^<http://www.w3.org/2001/XMLSchema#string> .
+                    BIND(STRAFTER(STR(?course), "#") as ?course_code)
+                } 
+        """ % course_name 
+
+        # Execute Sparql query
+        results = g.query(query)
+
+        # Retrieve course code from results
+        for row in results:
+            course_code = str(row.course_code_str)
+            return course_code
+
+        # Return None if nothing is present
+        return None
+    except Exception as ex:
+        # Handle other exceptions if needed
+        response_data = {
+                    'message': f"Module Updation Failed - {str(ex)}" 
+        }
+        return JsonResponse(response_data, status =500)
+
+def get_university_code(university_name):
+    try:
+        # Load Graph data
+        g = rdflib.Graph()
+        g.parse("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA/universities.rdf")
+
+        # Sparql query to retrieve course code for given course name
+        query = """
+                SELECT (STR(?uni_code) as ?uni_code_str)
+                WHERE {
+                    ?university rdf:type <http://across/university#> .
+                    ?university <http://across/university#hasUniversityName> "%s"^^<http://www.w3.org/2001/XMLSchema#string> .
+                    BIND(STRAFTER(STR(?university), "#") as ?uni_code)
+                }
+        """ % university_name 
+
+        # Execute Sparql query
+        results = g.query(query)
+
+        # Retrieve course code from results
+        for row in results:
+            uni_code = str(row.uni_code_str)
+            return uni_code
+        
+        # Return None if nothing is present
+        return None
+    except Exception as ex:
+        # Handle other exceptions if needed
+        response_data = {
+                    'message': f"Module Updation Failed - {str(ex)}" 
+        }
+        return JsonResponse(response_data, status =500)
+
 @csrf_exempt
 @require_POST
 def update_module(request):
@@ -54,23 +121,33 @@ def update_module(request):
     module_credit_points = data.get('module_credit_points','').strip()
 
     formatted_module_name = module_name.replace(' ', '_')
-    formatted_course_name = course_name.replace(' ', '_')
     formatted_module_number = module_number.replace(' ', '_')
 
+    course_code = get_course_code(course_name)
+    if course_code is None:
+        response_data = {
+                        'message': "The course which you provided is not available"
+            }
+        return JsonResponse(response_data, status =404) 
+
+    uni_code = get_university_code(university_name)
+    if uni_code is None:
+        response_data = {
+                        'message': "The university which you provided is not available"
+            }
+        return JsonResponse(response_data, status =404) 
+    
     try:
         existing_user_profile = UserProfile.objects.filter(email=email).first()
         if existing_user_profile:
             if existing_user_profile.role == 'ADMIN':
 
-                # Normalize case for university and course names
-                normalized_university_name = university_name.lower()
-                normalized_course_name = formatted_course_name.lower()
-                modules_rdf_path = os.path.join("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA", f"{normalized_university_name}_{normalized_course_name}.rdf")
+                modules_rdf_path = os.path.join("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA", "modules.rdf")
                 modules_graph = Graph()
                 modules_graph.parse(modules_rdf_path, format="xml")
                 modules_ns = get_namespaces(modules_graph)["module"]
 
-                universities_rdf_path = os.path.join("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA", "tuc_universities.rdf")
+                universities_rdf_path = os.path.join("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA", "universities.rdf")
                 course_rdf_path = os.path.join("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA", "tuc_courses.rdf")
                 
                 # Load the universities RDF file
@@ -86,10 +163,10 @@ def update_module(request):
                 course_ns = get_namespaces(courses_graph)["course"]
 
                 # Find the relevant university in the universities RDF file
-                university_uri = university_ns[university_name]
+                university_uri = university_ns[uni_code]
 
                 # Find the relevant course in the courses RDF file
-                course_uri = course_ns[formatted_course_name]
+                course_uri = course_ns[course_code]
 
                 # Construct the module URI based on the provided parameters
                 module_uri = modules_ns[f"{formatted_module_name}"]
@@ -98,8 +175,9 @@ def update_module(request):
                 university_ns_uri = modules_graph.namespace_manager.store.namespace("university").toPython()
                 course_ns_uri = modules_graph.namespace_manager.store.namespace("course").toPython()
 
-                university_ns_uri = university_ns_uri+university_name
-                course_ns_uri = course_ns_uri+formatted_course_name
+                university_ns_uri = university_ns_uri+uni_code
+                course_ns_uri = course_ns_uri+course_code
+
                 # Check if predicates are found
                 if university_ns_uri is not None and course_ns_uri is not None:
                     if university_ns_uri == university_uri.toPython() and course_ns_uri == course_uri.toPython():
