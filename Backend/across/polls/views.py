@@ -1,7 +1,7 @@
 import rdflib
 from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
-from .list_similar_modules import find_all_similar_modules_list
+from .list_similar_modules_blazegraph import find_all_similar_modules_list
 from .module_similarity import read_modules_and_compare
 from .models import UserProfile
 
