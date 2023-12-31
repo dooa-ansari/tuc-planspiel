@@ -15,6 +15,7 @@ from datetime import datetime, timedelta
 
 
 import json
+import os
 import requests
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request as GoogleAuthRequest
@@ -314,8 +315,100 @@ def get_courses_from_university(request):
         # Return JSON response
         response = {
             "message": "Course list returned successfully",
-            "courses": course_list
+            "courses": course_list,
+            "university": university
         }
+        return JsonResponse(response, status =200)
+
+    except json.JSONDecodeError as json_error:
+        response = {
+            "message": f"JSON decoding error: {json_error}"
+        }
+        return JsonResponse(response, status =400)
+    except rdflib.exceptions.Error as rdf_error:
+        response = {
+            "message": f"RDF parsing error: {rdf_error}"
+        }
+        return JsonResponse(response, status =500)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_POST
+def get_modules_from_course_and_university(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        course = data.get('course','')
+        university = data.get('university','')
+
+        # Create an RDF graph
+        g = rdflib.Graph()
+
+        # Load RDF data from files
+        g.parse("Backend//across//RDF_DATA//modules.rdf")
+        g.parse("Backend//across//RDF_DATA//tuc_courses.rdf")
+        g.parse("Backend//across//RDF_DATA//universities.rdf")
+     
+        # SPARQL query to retrieve university names and course names
+        query = """
+        SELECT ?moduleName (SAMPLE(?moduleNumber) as ?sampleModuleNumber) (SAMPLE(?moduleContent) as ?sampleModuleContent) (SAMPLE(?moduleCreditPoints) as ?sampleModuleCreditPoints)
+        WHERE {       
+            ?module rdf:type <http://tuc.web.engineering/module#> .
+            ?module <http://tuc.web.engineering/module#hasName> ?moduleName .
+            ?module <http://tuc.web.engineering/module#hasModuleNumber> ?moduleNumber .
+            ?module <http://tuc.web.engineering/module#hasContent> ?moduleContent .
+            ?module <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints .
+            ?course rdf:type <http://tuc/course#> .
+            ?module <http://tuc/course#hasCourse> ?course .
+            ?course <http://tuc/course#hasCourseName> "%s"^^<http://www.w3.org/2001/XMLSchema#string> .
+            ?university rdf:type <http://across/university#> .
+            ?university <http://across/university#hasUniversityName> "%s"^^<http://www.w3.org/2001/XMLSchema#string> .
+            ?course <http://across/university#belongsToUniversity> ?university .  
+        }
+        GROUP BY ?moduleName
+        """%(course,university)
+
+        # Execute the SPARQL query
+        results = g.query(query)
+        # Collect results in a list
+        module_list = []
+        for index, row in enumerate(results):
+            try:
+                module_data = {
+                    "counter": index + 1,
+                    "moduleName": row.get('moduleName', '').strip(),
+                    "moduleNumber": row.get('sampleModuleNumber', '').strip(),
+                    "moduleContent": row.get('sampleModuleContent', '').strip(),
+                    "moduleCreditPoints": row.get('sampleModuleCreditPoints', '').strip()
+                }
+                module_list.append(module_data)
+            except Exception as e:
+                print(f"An error occurred while processing data: {e}")
+
+        # Check if module_list is empty
+        if not module_list:
+            response = {
+                "message": "No modules found for the specified criteria",
+                "university": university,
+                "course": course
+            }
+        else:
+            # Return JSON response with modules
+            response = {
+                "message": "Module list returned successfully",
+                "modules": module_list,
+                "university": university,
+                "course": course
+            }
+
         return JsonResponse(response, status =200)
 
     except json.JSONDecodeError as json_error:
