@@ -12,11 +12,11 @@ services:
     build:
       context: .
     ports:
-      - 8082:8082
+      - "8082:8082"
   blazegraph:
     image: blazegraph
     ports:
-      - 9999:9999
+      - "9999:9999"
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
