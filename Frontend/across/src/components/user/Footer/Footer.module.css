@@ -1,10 +1,6 @@
 .footer {
   background: #ececec;
   border-top: 6px solid #439A86;
-  /* opacity: 0.8;
-  position: fixed;
-  bottom: 0;
-  width: 100%; */
 }
 
 .footer__contents {
@@ -38,10 +34,28 @@
 
 .infoContainer {
   background: var(--primary-color);
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 8px 0;
+}
+
+.disclaimerText {
+  text-align: center;
+}
+
+@media screen and (max-width: 840px) {
+  .footer__contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__left, .footer__middle, .footer__right {
+    padding: 1rem 0;
+    text-align: center;
+  }
 }

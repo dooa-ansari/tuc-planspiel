@@ -16,7 +16,9 @@
 
 
   --primary-color: #439a86;
+  --text-white: #fff;
 }
+
 
 body {
   font-family: "Inter", sans-serif;

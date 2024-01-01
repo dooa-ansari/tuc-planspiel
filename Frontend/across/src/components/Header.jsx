@@ -32,7 +32,13 @@ const Header = ({ brandName }) => {
               </Link>
             </li>
             <li className="header__link">
-              <Link activeClass="active" to="modules" spy smooth duration={duration}>
+              <Link
+                activeClass="active"
+                to="modules"
+                spy
+                smooth
+                duration={duration}
+              >
                 ACROSS
               </Link>
             </li>
@@ -45,12 +51,12 @@ const Header = ({ brandName }) => {
         </div>
         <div className="header__right">
           <li className="header__link">
-            <NavLink className="login__link" to="login">
+            <NavLink className="login__link" to="/campus-flow/login">
               Log in
             </NavLink>
           </li>
           <li className="header__link header__signup-btn">
-            <NavLink className="register__link" to="register">
+            <NavLink className="register__link" to="/campus-flow/register">
               Sign Up
             </NavLink>
           </li>

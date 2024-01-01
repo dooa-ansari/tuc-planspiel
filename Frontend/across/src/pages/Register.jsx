@@ -25,7 +25,7 @@ const Register = () => {
                 textDecoration: "underline",
               }}
             >
-              <a onClick={() => navigate("/login")}>Log in</a>
+              <a onClick={() => navigate("/campus-flow/login")}>Log in</a>
             </span>
           </p>
           <form action="#" className="register__form">
@@ -79,7 +79,7 @@ const Register = () => {
           {/* start */}
           <div className="register__alternate-signin-container">
             <div className="register__or-separator">
-              <span class="register__or-text">or</span>
+              <span className="register__or-text">or</span>
             </div>
             <button className="signupgoogle__button" type="button">
               <div className="singupgoogle__image">

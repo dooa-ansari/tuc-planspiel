@@ -8,6 +8,11 @@
   width: 100vw;
 }
 
+.navbar__container {
+  max-width: 94%;
+  margin: 0 auto;
+}
+
 .navbar__brand {
   font-family: "Inter", sans-serif;
   font-size: 2.25rem;

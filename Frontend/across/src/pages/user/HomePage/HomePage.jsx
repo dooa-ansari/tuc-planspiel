@@ -1,59 +1,83 @@
 import React from "react";
 import "./HomePage.css";
+import SearchBox from "../../../components/user/SearchBox/SearchBox";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
     <>
       <MainLayout>
-        <h2 style={{ textAlign: "center" }}>Contents of HomePage</h2>
-        <p style={{ textAlign: "center" }}>
-          for testing random images from a source
-        </p>
+        <div className="homePage">
+          <SearchBox />
+          <div className="app__features">
+            <h2>Welcome to CampusFlow</h2>
+            <h4>
+              The CampusFlow by Web Wizards provides a variety of functions for
+              students to organise and administer their across courses.
+            </h4>
+            <p>
+              It's available online 24/7. Here are some of the available
+              services:
+            </p>
+            <ul className="highlighted__features">
+              <li className="app__feature">
+                List of Across Universities updated information
+              </li>
+              <li className="app__feature">Module comparisons</li>
+              <li className="app__feature">Transferring the credits</li>
+              <li className="app__feature">Credit Transfer applications</li>
+              <li className="app__feature">Checkin your application status</li>
+              <li className="app__feature">Guideline on Studying Abroad</li>
+            </ul>
+            <small>
+              Answers to questions related to Across studies can be found under
+              “Help and Contact”.This page also shows you notifications (Quick
+              Links, News, Notifications.).
+            </small>
+          </div>
 
-        <h4>Lorem, ipsum.</h4>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
-          veniam totam enim inventore. Debitis facilis odit enim provident
-          dolores magnam, quas nobis suscipit quo porro inventore, cum id
-          quaerat, similique ad ratione quasi saepe laudantium consequatur
-          dolorum itaque nemo. Facere quisquam cum doloremque ut ipsa illum fuga
-          in nisi aliquam alias mollitia blanditiis voluptates odio inventore
-          dignissimos maiores, incidunt vel veniam tempora. Labore, nisi
-          consequuntur quia ad assumenda obcaecati ut vel aperiam laborum cumque
-          quam rem itaque cum est accusamus illo a fugiat corporis aliquid
-          beatae totam modi qui consequatur odio. Vitae placeat aliquam
-          blanditiis. Architecto ipsum eaque error blanditiis.
-        </p>
-        <div className="homepage__images">
-          <img
-            src="https://source.unsplash.com/random/400x400?landscape"
-            alt=""
-          />
-          <img
-            src="https://source.unsplash.com/random/400x400?landscape"
-            alt=""
-          />
-          <img
-            src="https://source.unsplash.com/random/400x400?landscape"
-            alt=""
-          />
-          <img
-            src="https://source.unsplash.com/random/400x400?landscape"
-            alt=""
-          />
-          <img
-            src="https://source.unsplash.com/random/400x400?landscape"
-            alt=""
-          />
-          <img
-            src="https://source.unsplash.com/random/400x400?landscape"
-            alt=""
-          />
-          <img
-            src="https://source.unsplash.com/random/400x400?landscape"
-            alt=""
-          />
+          <section className="homePage__quick__links">
+            <h2>Quick Links for the Services</h2>
+            <div className="quicklinksWrapper">
+              <NavLink className="quicklink quicklinkOne">
+                <h4>List of Across Universities</h4>
+                <p>
+                  Information of the Across Universities, their departments and
+                  modules
+                </p>
+              </NavLink>
+              <NavLink className="quicklink quicklinkTwo">
+                <h4>Compare of the Modules</h4>
+                <p>
+                  Comparing the modules quickly without full module descriptions
+                </p>
+              </NavLink>
+              <NavLink className="quicklink quicklinkThree">
+                <h4>Transferring the Credits</h4>
+                <p>
+                  Transferring the selected credits from one university to
+                  another
+                </p>
+              </NavLink>
+              <NavLink className="quicklink quicklinkFour">
+                <h4>Studying Abroad</h4>
+                <p>Suggestions on studying abroad,</p>
+              </NavLink>
+            </div>
+          </section>
+          <section className="homePage__notifications">
+            <h2>Notifications</h2>
+            <h4>You have one new notification</h4>
+            <p>
+              Your application status of transfering your credits to TU Chemnitz
+              has changed.
+            </p>
+
+            <button className="notification__button" type="button">
+              See More
+            </button>
+          </section>
         </div>
       </MainLayout>
     </>

@@ -56,7 +56,7 @@ const Login = () => {
                 textDecoration: "underline",
               }}
             >
-              <a onClick={() => navigate("/register")}>Sign up</a>
+              <a onClick={() => navigate("/campus-flow/register")}>Sign up</a>
             </span>
           </p>
         </div>

@@ -9,9 +9,9 @@ const MainLayout = ({ children }) => {
   return (
     <div className="main-layout">
       <Navbar />
-      <div className="mainlayout__content">
+      <div className="mainlayout__contents">
         <Sidebar />
-        <main>{children}</main>
+        <main className="mainlayout__content">{children}</main>
       </div>
       <div className="mainlayout__footer">
         <Footer />

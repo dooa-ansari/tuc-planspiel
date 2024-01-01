@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <>
       <section id="navbar">
-        <div className="container">
+        <div className="navbar__container">
           <header className="navbar__contents">
             <h1 className="navbar__brand">
               campus<span>flow</span>
