@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -16,8 +16,23 @@ import Modules from "./pages/user/Modules/Modules";
 import Courses from "./pages/user/Courses/Courses";
 import Applications from "./pages/user/Applications/Applications";
 import PageNotFound from "./pages/PageNotFound";
+import { gapi } from "gapi-script";
+import UserPage from "./pages/UserPage";
+import AdminPanel from "./admin/AdminPanel";
+
 
 const App = () => {
+
+  useEffect(() => {
+    gapi.load("client:auth2", () => {
+      gapi.client.init({
+        clientId:
+          "939129256680-qe0149eq0b5g9oc14cj3lc78inbue6rq.apps.googleusercontent.com",
+        plugin_name: "chat",
+      });
+    });
+
+  }, []);
   return (
     <div className="app">
       <BrowserRouter>
@@ -61,6 +76,18 @@ const App = () => {
           <Route path="/campus-flow/user/modules" exact element={<Modules />} />
           <Route path="/campus-flow/user/courses" exact element={<Courses />} />
           <Route path="*" element={<PageNotFound />} />
+          <Route  path="/register"
+            element={<Register />}
+            onClick={() => {
+              const history = useNavigate();
+              history("/"); // Update this to the actual path of your homepage
+            }}
+          />
+          <Route path="/user" exact element={<UserPage />} />
+
+          <Route path="/admin/*" element={<AdminPanel />} />
+          {/* Other routes */}
+
         </Routes>
       </BrowserRouter>
     </div>
