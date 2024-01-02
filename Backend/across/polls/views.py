@@ -106,8 +106,8 @@ def register_user(request):
 
 #### ABOVE METHOD JUST MADE FOR TESTING PURPOSE, AFTER TESTING IT WILL BE REMOVED, DON't USE IT
 
-# def index(request):
-#     return HttpResponse(json_data)
+def index(request):
+    return HttpResponse(json_data)
 
 @csrf_exempt
 def authenticate_user_login(request):
@@ -290,37 +290,12 @@ def get_courses_from_university(request):
         universityName = data.get('universityName','')
         universityUri = data.get('universityUri','')
 
-        # # Create an RDF graph
-        # g = rdflib.Graph()
-
-        # # Load RDF data from files
-        # g.parse("Backend//across//RDF_DATA//universities.rdf")
-        # g.parse("Backend//across//RDF_DATA//tuc_courses.rdf")
-        
         # SPARQL query to retrieve university names and course names
-        query = """
-        SELECT ?courseName ?courseUri ?courseNumber
-        WHERE {
-            ?course rdf:type <http://tuc/course#> .
-            ?course <http://across/university#belongsToUniversity> ?university .
-            ?university rdf:type <http://across/university#> .
-            ?university <http://across/university#hasUniversityName> ?universityName .
-            ?course <http://tuc/course#hasCourseName> ?courseName .
-            ?course <http://tuc/course#hasCourseNumber> ?courseNumber .
-            
-            BIND(str(?course) AS ?courseUri)
-            BIND(str(?university) AS ?universityUri)
-
-            FILTER (
-                ?universityUri = "%s" &&
-                ?universityName = "%s"^^<http://www.w3.org/2001/XMLSchema#string>
-            )
-        }
-        """% (universityUri,universityName)
+        sparql_query = get_course_from_university_query(universityUri, universityName)
 
         server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
 
-        qresponse = server.query(query)
+        qresponse = server.query(sparql_query)
         course_list = []
         data = qresponse['results']['bindings']
         
@@ -374,70 +349,44 @@ def get_modules_from_course_and_university(request):
     try:
         # Parse JSON data from the request body
         data = json.loads(body)
-        course = data.get('course','')
-        university = data.get('university','')
-
-        # Create an RDF graph
-        g = rdflib.Graph()
-
-        # Load RDF data from files
-        g.parse("Backend//across//RDF_DATA//modules.rdf")
-        g.parse("Backend//across//RDF_DATA//tuc_courses.rdf")
-        g.parse("Backend//across//RDF_DATA//universities.rdf")
+        courseUri = data.get('courseUri','')
+        universityUri = data.get('universityUri','')
+        courseName = data.get('courseName','')
      
         # SPARQL query to retrieve university names and course names
-        query = """
-        SELECT ?moduleName (SAMPLE(?moduleNumber) as ?sampleModuleNumber) (SAMPLE(?moduleContent) as ?sampleModuleContent) (SAMPLE(?moduleCreditPoints) as ?sampleModuleCreditPoints)
-        WHERE {       
-            ?module rdf:type <http://tuc.web.engineering/module#> .
-            ?module <http://tuc.web.engineering/module#hasName> ?moduleName .
-            ?module <http://tuc.web.engineering/module#hasModuleNumber> ?moduleNumber .
-            ?module <http://tuc.web.engineering/module#hasContent> ?moduleContent .
-            ?module <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints .
-            ?course rdf:type <http://tuc/course#> .
-            ?module <http://tuc/course#hasCourse> ?course .
-            ?course <http://tuc/course#hasCourseName> "%s"^^<http://www.w3.org/2001/XMLSchema#string> .
-            ?university rdf:type <http://across/university#> .
-            ?university <http://across/university#hasUniversityName> "%s"^^<http://www.w3.org/2001/XMLSchema#string> .
-            ?course <http://across/university#belongsToUniversity> ?university .  
-        }
-        GROUP BY ?moduleName
-        """%(course,university)
+        sparql_query = get_modules_from_course_and_university_query(courseUri, courseName, universityUri)
 
         # Execute the SPARQL query
-        results = g.query(query)
-        # Collect results in a list
-        module_list = []
-        for index, row in enumerate(results):
-            try:
-                module_data = {
-                    "counter": index + 1,
-                    "moduleName": row.get('moduleName', '').strip(),
-                    "moduleNumber": row.get('sampleModuleNumber', '').strip(),
-                    "moduleContent": row.get('sampleModuleContent', '').strip(),
-                    "moduleCreditPoints": row.get('sampleModuleCreditPoints', '').strip()
-                }
-                module_list.append(module_data)
-            except Exception as e:
-                print(f"An error occurred while processing data: {e}")
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
 
-        # Check if module_list is empty
+        qresponse = server.query(sparql_query)
+        module_list = []
+        data = qresponse['results']['bindings']
+        # Process the results
+        for result in data:
+            module_list_temp = {
+                'moduleUri' :  str(result['sampleModuleUri']['value']),
+                'moduleName' : str(result['moduleName']['value']),
+                'moduleNumber' : str(result['sampleModuleNumber']['value']),
+                'moduleContent' : str(result['sampleModuleContent']['value']),
+                'moduleCreditPoints' : str(result['sampleModuleCreditPoints']['value'])
+            }
+            module_list.append(module_list_temp)
+
+        # Return JSON response
         if not module_list:
             response = {
-                "message": "No modules found for the specified criteria",
-                "university": university,
-                "course": course
+                "message": f"No modules found for course named as {courseName}, please check university uri or course uri or course name",
+                "course": courseName
             }
+            return JsonResponse(response, status =404)
         else:
-            # Return JSON response with modules
             response = {
                 "message": "Module list returned successfully",
                 "modules": module_list,
-                "university": university,
-                "course": course
+                "course": courseName
             }
-
-        return JsonResponse(response, status =200)
+            return JsonResponse(response, status =200)
 
     except json.JSONDecodeError as json_error:
         response = {
