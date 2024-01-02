@@ -13,7 +13,8 @@ from django.conf import settings
 import jwt  # Import PyJWT library
 from datetime import datetime, timedelta
 
-
+from pymantic import sparql
+from .sparql import *
 import json
 import requests
 from google.oauth2 import id_token
@@ -285,38 +286,66 @@ def get_courses_from_university(request):
     try:
         # Parse JSON data from the request body
         data = json.loads(body)
-        university = data.get('university','')
+        universityName = data.get('universityName','')
+        universityUri = data.get('universityUri','')
 
-        # Create an RDF graph
-        g = rdflib.Graph()
+        # # Create an RDF graph
+        # g = rdflib.Graph()
 
-        # Load RDF data from files
-        g.parse("Backend//across//RDF_DATA//universities.rdf")
-        g.parse("Backend//across//RDF_DATA//tuc_courses.rdf")
+        # # Load RDF data from files
+        # g.parse("Backend//across//RDF_DATA//universities.rdf")
+        # g.parse("Backend//across//RDF_DATA//tuc_courses.rdf")
         
         # SPARQL query to retrieve university names and course names
         query = """
-        SELECT ?courseName
+        SELECT ?courseName ?courseUri ?courseNumber
         WHERE {
-        ?course rdf:type <http://tuc/course#> .
-        ?course <http://across/university#belongsToUniversity> ?university .
-        ?university rdf:type <http://across/university#> .
-        ?university <http://across/university#hasUniversityName> "%s"^^<http://www.w3.org/2001/XMLSchema#string> .
-        ?course <http://tuc/course#hasCourseName> ?courseName .
-        }
-        """% university
+            ?course rdf:type <http://tuc/course#> .
+            ?course <http://across/university#belongsToUniversity> ?university .
+            ?university rdf:type <http://across/university#> .
+            ?university <http://across/university#hasUniversityName> ?universityName .
+            ?course <http://tuc/course#hasCourseName> ?courseName .
+            ?course <http://tuc/course#hasCourseNumber> ?courseNumber .
+            
+            BIND(str(?course) AS ?courseUri)
+            BIND(str(?university) AS ?universityUri)
 
-        # Execute the SPARQL query
-        results = g.query(query)
-        # Collect results in a list
-        course_list = [row.courseName for row in results]
+            FILTER (
+                ?universityUri = "%s" &&
+                ?universityName = "%s"^^<http://www.w3.org/2001/XMLSchema#string>
+            )
+        }
+        """% (universityUri,universityName)
+
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+
+        qresponse = server.query(query)
+        course_list = []
+        data = qresponse['results']['bindings']
+        
+        # Process the results
+        for result in data:
+            course_list_temp = {
+                'courseUri' :  str(result['courseUri']['value']),
+                'courseName' : str(result['courseName']['value']),
+                'courseNumber' : str(result['courseNumber']['value'])
+            }
+            course_list.append(course_list_temp)
 
         # Return JSON response
-        response = {
-            "message": "Course list returned successfully",
-            "courses": course_list
-        }
-        return JsonResponse(response, status =200)
+        if not course_list:
+            response = {
+                "message": f"No courses found for {universityName}, please check university uri or university name",
+                "university": universityName
+            }
+            return JsonResponse(response, status =404)
+        else:
+            response = {
+                "message": "Course list returned successfully",
+                "courses": course_list,
+                "university": universityName
+            }
+            return JsonResponse(response, status =200)
 
     except json.JSONDecodeError as json_error:
         response = {
