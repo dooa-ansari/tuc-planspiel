@@ -6,7 +6,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00090W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logistics in SME</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00090W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -18,7 +18,7 @@ Requirements: lecture - test class - two tests and teamwork
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00101">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International marketing </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00101</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -31,7 +31,7 @@ Requirements:Lecture - The mark on the basis of a test. Classes - The mark for a
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00080S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(in Polish) Sport animation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00080S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -44,7 +44,7 @@ Requirements:Test the technical skills of the modern forms of recreation (Step R
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Neurokognition_I__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00055">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innovation Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00055</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -58,7 +58,7 @@ Requirements:Participation:Students are expected to attend all classes, and acti
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00094">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International trade </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00094</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -70,7 +70,7 @@ Requirements:Lecture � The mark on the basis of a test, including class activi
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00094W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International trade</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00094W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -82,7 +82,7 @@ Requirements:Lecture � The mark on the basis of a test, including class activi
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06735I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Designing IT services I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06735I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -93,7 +93,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00080W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sport animation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00080W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -106,7 +106,7 @@ Requirements:Test the technical skills of the modern forms of recreation (Step R
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Neurokognition_I__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06735II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(in Polish) Projektowanie usług informatycznych II</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06735II</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -117,7 +117,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01040">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occupational Health and Safety Training</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01040</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -128,7 +128,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS02123">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The basics of technique and technology</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS02123</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -139,7 +139,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00078W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New information technologies and multi-media tools</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00078W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -151,7 +151,7 @@ Requirements:Getting a new skill in using electronic office devices e.g.: webcam
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00107W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermodal transport</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00107W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -162,7 +162,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00107S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intermodal transport</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00107S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -173,7 +173,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS05734">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Designing business models of service activities</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS05734</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -184,7 +184,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06771">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National security</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06771</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -195,7 +195,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00110">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet marketing</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00110</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -208,7 +208,7 @@ The aim of the course is showing the essence of Internet marketing and its tools
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Entwurf_Verteilter__Systeme__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00082W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statistics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00082W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -221,7 +221,7 @@ Requirements:Students examine the methods of descriptive statistics and can be u
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_thermomechanisch_-gekoppelter_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00088W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coaching</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00088W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -233,7 +233,7 @@ Requirements:class - tests, evaluation of student's performace in classes, evalu
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00109">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circular economy</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00109</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -245,7 +245,7 @@ Course objectives:Understanding the relationship between socio-economic developm
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_thermomechanisch_-gekoppelter_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00016W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality Management and Control</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00016W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -258,7 +258,7 @@ Requirements:Getting new skills of implementing requirements of ISO 9001 standar
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Nachhaltigkeitsmanagement_von_Innovationen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06740I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virtual and hybrid services I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06740I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -269,7 +269,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00044W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Simulation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00044W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -281,7 +281,7 @@ Requirements:class evaluation is done on business plan project completion, prese
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS03730I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Man, culture, business I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03730I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -292,7 +292,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00076S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(in Polish) Financial Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00076S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -305,7 +305,7 @@ Requirements:Students will learn to: calculate selected financial ratios common 
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00082S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statistics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00082S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -318,7 +318,7 @@ Requirements:Students examine the methods of descriptive statistics and can be u
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_thermomechanisch_-gekoppelter_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00073W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Productivity analysis</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00073W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -330,7 +330,7 @@ Requirements:evaluation of the project, verification of preparation for classes
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00077">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Forecasting</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00077</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -343,7 +343,7 @@ Requirements:The subject is designed to get the students acquainted with the mod
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Neurokognition_I__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00092W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benchmarking for competitive advantage</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00092W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -354,7 +354,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00098W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optimization for transport planning</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00098W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -367,7 +367,7 @@ Requirements:Assumptions and goals of the subject:To familiarize students with t
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_thermomechanisch_-gekoppelter_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00070">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategic Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00070</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -379,7 +379,7 @@ Requirements:written exam, verification of preparation for classes, presentation
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS02724">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of service engineering</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS02724</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -390,7 +390,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00002">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tourism management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00002</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -402,7 +402,7 @@ Requirements:Skills: students will be able to analyze changes on the tourist mar
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00089">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate foresight</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00089</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -415,7 +415,7 @@ Requirements:lecture - test class - evaluation of miniprojects, presentation and
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Simulation_naturwissenschaftlicher_Prozesse__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00079">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innovative projects management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00079</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -428,7 +428,7 @@ Requirements:lecture - written exam, specialization workshop - evaluation of pro
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Nachhaltigkeitsmanagement_von_Innovationen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS07221">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graduate studio</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS07221</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -439,7 +439,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS04728I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical infrastructure of service systems I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS04728I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -450,7 +450,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00070W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategic Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00070W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -462,7 +462,7 @@ Requirements:written exam, verification of preparation for classes, presentation
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS04217">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intellectual property rights</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS04217</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -473,7 +473,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00077W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Forecasting</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00077W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -486,7 +486,7 @@ Requirements:The subject is designed to get the students acquainted with the mod
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Neurokognition_I__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS05737II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Practice II</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS05737II</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -497,7 +497,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00075S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Production and Service Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00075S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -510,7 +510,7 @@ Requirements:Skills To understand the essentials problems of production and serv
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Nachhaltigkeitsmanagement_von_Innovationen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00078">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New information technologies and multi-media tools </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00078</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -522,7 +522,7 @@ Requirements:Getting a new skill in using electronic office devices e.g.: webcam
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00069S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00069S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -535,7 +535,7 @@ Requirements:Lecture � a written exam. Classes � a written tests + case stud
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS04732">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management of service enterprise</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS04732</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -546,7 +546,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00081">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Resource Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00081</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -559,7 +559,7 @@ Requirements:Students should have knowledge about basic of management � histor
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_thermomechanisch_-gekoppelter_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00100">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International law</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00100</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -572,7 +572,7 @@ Requirements:evaluation of the students' reports and cases, assessment of the st
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01726">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organization and teamwork</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01726</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -583,7 +583,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS03795I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of structure recording and engineering design I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03795I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -594,7 +594,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00108S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theory of Constraints</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00108S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -605,7 +605,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00016S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality Management and Control</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00016S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -618,7 +618,7 @@ Requirements:Getting new skills of implementing requirements of ISO 9001 standar
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Nachhaltigkeitsmanagement_von_Innovationen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06071">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineering diploma seminar</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06071</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -629,7 +629,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00095">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic management concepts</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00095</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -643,7 +643,7 @@ The demonstrate of the essence and limitations of each classical concept of mana
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Neurokognition_I__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS07071">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diploma seminar</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS07071</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -654,7 +654,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00078S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New information technologies and multi-media tools</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00078S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -666,7 +666,7 @@ Requirements:Getting a new skill in using electronic office devices e.g.: webcam
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06640I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Study visits I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06640I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -677,7 +677,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00002W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tourism management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00002W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -689,7 +689,7 @@ Requirements:Skills: students will be able to analyze changes on the tourist mar
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00086W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer tools in financial planning</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00086W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -701,7 +701,7 @@ Requirements:laboratory class - practical computer assisted test, presentation a
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00074S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketing research</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00074S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -714,7 +714,7 @@ Requirements:The aim of the course is to introduce students with the marketing r
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Stochastik__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00111S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robotic Process Automation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00111S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -725,7 +725,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS04733">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technological foresight of services</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS04733</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -736,7 +736,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01793">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Library didactic lecture</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01793</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -747,7 +747,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00071S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innovation economics and policy</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00071S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -759,7 +759,7 @@ Requirements:Homeworks' assessment, activity during classes, written test.
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01001">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01001</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -770,7 +770,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00081W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Resource Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00081W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -783,7 +783,7 @@ Requirements:Students should have knowledge about basic of management � histor
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_thermomechanisch_-gekoppelter_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00101W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International marketing</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00101W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -796,7 +796,7 @@ Requirements:Lecture - The mark on the basis of a test. Classes - The mark for a
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00098S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optimization for transport planning</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00098S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -809,7 +809,7 @@ Requirements:Assumptions and goals of the subject:To familiarize students with t
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_thermomechanisch_-gekoppelter_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS03795II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of structure recording and engineering design II</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03795II</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -820,7 +820,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS03732">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management of service enterprise</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03732</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -831,7 +831,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00087">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Process management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00087</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -843,7 +843,7 @@ Requirements:lecture - written exam, laboratory class - evaluation of project, w
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00095W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic management concepts</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00095W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -857,7 +857,7 @@ The demonstrate of the essence and limitations of each classical concept of mana
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Neurokognition_I__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00112">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International transport</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00112</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -868,7 +868,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00099S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International taxation and accountancy</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00099S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -880,7 +880,7 @@ Requirements:discussion and test on classes written exam
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00092S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benchmarking for competitive advantage</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00092S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -891,7 +891,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00093">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology Innovation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00093</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -903,7 +903,7 @@ Requirements:the assessment of: student�s activity during the workshop, studen
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00101S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International marketing</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00101S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -916,7 +916,7 @@ Requirements:Lecture - The mark on the basis of a test. Classes - The mark for a
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00073S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Productivity analysis</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00073S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -928,7 +928,7 @@ Assessment method: evaluation of the project, verification of preparation for cl
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00104S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to database</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00104S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -940,7 +940,7 @@ The concept of database. Database Management System. Basic navigation in Microso
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_flexibler_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00031">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entrepreneurship</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00031</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -952,7 +952,7 @@ Requirements:lecture - written exam, oral exam, tests class - two tests laborato
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00102S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketing management and planning</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00102S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -967,7 +967,7 @@ The aim of the course is to provide for students basic theoretical knowledge wit
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS02726">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organization and teamwork</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS02726</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -978,7 +978,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00071W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innovation economics and policy</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00071W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -990,7 +990,7 @@ Requirements:Homeworks' assessment, activity during classes, written test.
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00091W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategic modelling and business dynamics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00091W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1002,7 +1002,7 @@ Requirements:lecture - written exam/tests laboratory class - evaluation of repor
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00110S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet marketing</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00110S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1013,7 +1013,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01123">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The basics of technique and technology</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01123</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1024,7 +1024,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS04730I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Man, culture, business I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS04730I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1035,7 +1035,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00104W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to database</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00104W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1047,7 +1047,7 @@ The concept of database. Database Management System. Basic navigation in Microso
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_flexibler_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00081S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Resource Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00081S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1060,7 +1060,7 @@ Requirements:Students should have knowledge about basic of management � histor
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_thermomechanisch_-gekoppelter_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00075W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Production and Service Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00075W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1073,7 +1073,7 @@ Requirements:Skills To understand the essentials problems of production and serv
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Nachhaltigkeitsmanagement_von_Innovationen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00088S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coaching</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00088S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1085,7 +1085,7 @@ Requirements:class - tests, evaluation of student's performace in classes, evalu
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00009W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00009W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1098,7 +1098,7 @@ Requirements:Skills: Course contains software support for the critical concepts 
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Simulation_naturwissenschaftlicher_Prozesse__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00077S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Forecasting</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00077S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1111,7 +1111,7 @@ Requirements:The subject is designed to get the students acquainted with the mod
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Neurokognition_I__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS05794">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automation and robotization in service engineering</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS05794</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1122,7 +1122,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00091">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategic modelling and business dynamics </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00091</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1134,7 +1134,7 @@ Requirements:lecture - written exam/tests laboratory class - evaluation of repor
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS04795I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of structure recording and engineering design I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS04795I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1145,7 +1145,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00072S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management of Innovation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00072S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1157,7 +1157,7 @@ Requirements:lecture - written exam, oral exam, tests.
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS04730II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Man, culture, business II</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS04730II</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1168,7 +1168,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00105S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods of artificial intelligence</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00105S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1179,7 +1179,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01721">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project management in work organization</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01721</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1190,7 +1190,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00105W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods of artificial intelligence</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00105W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1201,7 +1201,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00069">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00069</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1214,7 +1214,7 @@ Requirements:Lecture � a written exam. Classes � a written tests + case stud
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00091S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategic modelling and business dynamics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00091S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1226,7 +1226,7 @@ Requirements:lecture - written exam/tests laboratory class - evaluation of repor
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00111">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robotic Process Automation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00111</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1237,7 +1237,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS07220">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professional industrial internship</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS07220</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1248,7 +1248,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00086S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer tools in financial planning</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00086S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1260,7 +1260,7 @@ Requirements:laboratory class - practical computer assisted test, presentation a
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01001M">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01001M</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1271,7 +1271,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01137F">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01137F</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1282,7 +1282,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00086">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer tools in financial planning</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00086</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1294,7 +1294,7 @@ Requirements:laboratory class - practical computer assisted test, presentation a
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00087W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Process management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00087W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1306,7 +1306,7 @@ Requirements:lecture - written exam, laboratory class - evaluation of project, w
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00009S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00009S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1319,7 +1319,7 @@ Requirements:Skills: Course contains software support for the critical concepts 
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Simulation_naturwissenschaftlicher_Prozesse__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS04026">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entrepreneurship</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS04026</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1330,7 +1330,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS04728II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical infrastructure of service systems II</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS04728II</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1341,7 +1341,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06740II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virtual and hybrid services II</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06740II</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1352,7 +1352,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00098">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optimization for transport planning</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00098</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1365,7 +1365,7 @@ Requirements:Assumptions and goals of the subject:To familiarize students with t
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_thermomechanisch_-gekoppelter_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00112S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International transport</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00112S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1376,7 +1376,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00087S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Process management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00087S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1388,7 +1388,7 @@ Requirements:lecture - written exam, laboratory class - evaluation of project, w
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00082">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statistics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00082</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1401,7 +1401,7 @@ Requirements:Students examine the methods of descriptive statistics and can be u
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Numerische_Dynamik_thermomechanisch_-gekoppelter_Strukturen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06739">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logistics and marketing services</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06739</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1412,7 +1412,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00108W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theory of Constraints</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00108W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1423,7 +1423,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00089S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate foresight</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00089S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1435,7 +1435,7 @@ Requirements:class - tests, evaluation of student's performace in classes, evalu
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00080">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sport animation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00080</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1448,7 +1448,7 @@ Requirements:Test the technical skills of the modern forms of recreation (Step R
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Neurokognition_I__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00090">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logistics in SME</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00090</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1460,7 +1460,7 @@ Requirements: lecture - test class - two tests and teamwork
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00109S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circular economy</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00109S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1471,7 +1471,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00100S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International law</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00100S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1483,7 +1483,7 @@ Requirements:evaluation of the students' reports and cases, assessment of the st
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00102W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketing management and planning</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00102W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1498,7 +1498,7 @@ The aim of the course is to provide for students basic theoretical knowledge wit
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00094S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International trade</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00094S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1510,7 +1510,7 @@ Requirements:Lecture � The mark on the basis of a test, including class activi
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS05735I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Designing IT services I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS05735I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1521,7 +1521,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS03339">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(in Polish) Zarządzanie bezpieczeństwem i higieną pracy</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03339</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1532,7 +1532,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00031S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entrepreneurship</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00031S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1544,7 +1544,7 @@ Requirements:lecture - written exam, oral exam, tests class - two tests laborato
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS05740I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virtual and hybrid services I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS05740I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1555,7 +1555,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS03018">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physical Education</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03018</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1566,7 +1566,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00002S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tourism management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00002S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1578,7 +1578,7 @@ Requirements:Skills: students will be able to analyze changes on the tourist mar
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS03727">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical tools in management and service engineering</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03727</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1589,7 +1589,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00031W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entrepreneurship</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00031W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1601,7 +1601,7 @@ Requirements:lecture - written exam, oral exam, tests class - two tests laborato
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00092">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benchmarking for competitive advantage</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00092</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1613,7 +1613,7 @@ Requirements:lecture - test class -  verification of preparation for classes, pr
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00073">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Productivity analysis</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00073</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1626,7 +1626,7 @@ Requirements:Assessment: Lecture - written, lab specialist - tests, the evaluati
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Nachhaltigkeitsmanagement_von_Innovationen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS05737I">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Practice I</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS05737I</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1637,7 +1637,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00016">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality Management and Control</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00016</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1650,7 +1650,7 @@ Requirements:Getting new skills of implementing requirements of ISO 9001 standar
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Nachhaltigkeitsmanagement_von_Innovationen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00106S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00106S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1661,7 +1661,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS02725">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IT basics of service systems</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS02725</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1672,7 +1672,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00069W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00069W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1685,7 +1685,7 @@ Requirements:Lecture � a written exam. Classes � a written tests + case stud
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00009">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00009</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1698,7 +1698,7 @@ Requirements:Skills: Course contains software support for the critical concepts 
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Simulation_naturwissenschaftlicher_Prozesse__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00074">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketing research</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00074</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1711,7 +1711,7 @@ Requirements:The aim of the course is to introduce students with the marketing r
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Stochastik__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00072">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management of Innovation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00072</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1723,7 +1723,7 @@ Requirements:lecture - written exam, oral exam, tests.
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00071">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innovation economics and policy</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00071</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1735,7 +1735,7 @@ Requirements:Homeworks' assessment, activity during classes, written test.
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00103S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Savoir-vivre in business</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00103S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1749,7 +1749,7 @@ AIM: The aim of module is to familiarize students with the principles of savoir 
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00088">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coaching</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00088</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1761,7 +1761,7 @@ Requirements:class - tests, evaluation of student's performace in classes, evalu
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00076W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Financial Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00076W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1774,7 +1774,7 @@ Requirements:Students will learn to: calculate selected financial ratios common 
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00074W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketing research</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00074W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1787,7 +1787,7 @@ Requirements:The aim of the course is to introduce students with the marketing r
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Stochastik__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00095S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic management concepts</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00095S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1801,7 +1801,7 @@ The demonstrate of the essence and limitations of each classical concept of mana
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Neurokognition_I__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00089W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate foresight</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00089W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1813,7 +1813,7 @@ Requirements:class - tests, evaluation of student's performace in classes, evalu
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS04795II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of structure recording and engineering design II</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS04795II</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1824,7 +1824,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00076">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Financial Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00076</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1837,7 +1837,7 @@ Requirements:Students will learn to: calculate selected financial ratios common 
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00093S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology Innovation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00093S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1849,7 +1849,7 @@ Requirements:the assessment of: student�s activity during the workshop, studen
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00072W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management of Innovation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00072W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1861,7 +1861,7 @@ Requirements:lecture - written exam, oral exam, tests.
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00106W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00106W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1872,7 +1872,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS03728II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical infrastructure of service systems II</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS03728II</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1883,7 +1883,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS02040">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occupational health and safety</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS02040</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1894,7 +1894,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00075">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Production and Service Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00075</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1907,7 +1907,7 @@ Requirements:Skills To understand the essentials problems of production and serv
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Nachhaltigkeitsmanagement_von_Innovationen__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00100W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International law</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00100W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1919,7 +1919,7 @@ Requirements:evaluation of the students' reports and cases, assessment of the st
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00070S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategic Management</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00070S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1931,7 +1931,7 @@ Requirements:written exam, verification of preparation for classes, presentation
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01723">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematics with elements of physics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01723</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1942,7 +1942,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00099">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International taxation and accountancy</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00099</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1954,7 +1954,7 @@ Requirements:discussion and test on classes written exam
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00099W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International taxation and accountancy</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00099W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1966,7 +1966,7 @@ Requirements:discussion and test on classes written exam
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06640II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Study visits II</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06640II</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1977,7 +1977,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00103W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Savoir-vivre in business</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00103W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1991,7 +1991,7 @@ AIM: The aim of module is to familiarize students with the principles of savoir 
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Gesundheits_-_und_Qualitätsmanagement__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00093W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology Innovation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00093W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -2003,7 +2003,7 @@ Requirements:the assessment of: student�s activity during the workshop, studen
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00044S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Simulation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00044S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -2015,7 +2015,7 @@ Requirements:class evaluation is done on business plan project completion, prese
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00044">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Simulation</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FM-00044</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -2027,7 +2027,7 @@ Requirements:class evaluation is done on business plan project completion, prese
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS06744">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Controlling</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS06744</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -2038,7 +2038,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS05740II">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(in Polish) Usługi wirtualne i hybrydowe II</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS05740II</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -2049,7 +2049,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01137">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01137</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -2060,7 +2060,7 @@ This course has not yet been described...
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#IS01722">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Services in the modern economy</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS01722</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
