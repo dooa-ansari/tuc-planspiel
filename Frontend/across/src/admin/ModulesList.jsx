@@ -5,6 +5,8 @@ import Table from "react-bootstrap/Table";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Button from "react-bootstrap/Button";
 import Spinner from "react-bootstrap/Spinner";
+import Modal from "react-bootstrap/Modal";
+import Badge from 'react-bootstrap/Badge';
 
 const ModulesList = () => {
   const [universities, setUniversities] = useState([]);
@@ -14,6 +16,14 @@ const ModulesList = () => {
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [modules, setModules] = useState(null);
   const [loadingModule, setLoadingModules] = useState(-1);
+  const [currentModule, setCurrentModule] = useState(null);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = (module) => {
+    setCurrentModule(module)
+    setShow(true);
+  } 
 
   useEffect(() => {
     fetch("http://localhost:8000/adminapp/universitieslist")
@@ -78,6 +88,19 @@ const ModulesList = () => {
 
   return (
     <div style={{ flex: 1 }}>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal Details</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <p> <Badge bg="secondary">Number</Badge> {currentModule?.moduleNumber}</p>
+            <p><Badge bg="secondary">Name</Badge> {currentModule?.moduleName}</p>
+            <p><Badge bg="secondary">Uri</Badge> {currentModule?.moduleUri}</p>
+            <p><Badge bg="secondary">Credit Points</Badge> {currentModule?.moduleCreditPoints}</p>
+            <p>{currentModule?.moduleContent}</p>
+
+        </Modal.Body>
+      </Modal>
       <p id="moduleHeading">Modules Table</p>
       <div className="dropdowns">
         <Dropdown>
@@ -136,7 +159,9 @@ const ModulesList = () => {
                     <td>{module.moduleUri}</td>
                     <td>
                       <ButtonGroup size="sm">
-                        <Button variant="info">Details</Button>
+                        <Button onClick={() => handleShow(module)} variant="info">
+                          Details
+                        </Button>
                         <Button variant="warning">Update</Button>
                         <Button variant="danger">Delete</Button>
                       </ButtonGroup>
@@ -148,11 +173,11 @@ const ModulesList = () => {
           </Table>
         </div>
       )}
-      {
-        (loadingModule == 0 && loadingModule != -1)  && <div className="spinner">
-        <Spinner animation="grow" variant="success" />
-       </div>
-      }
+      {loadingModule == 0 && loadingModule != -1 && (
+        <div className="spinner">
+          <Spinner animation="grow" variant="success" />
+        </div>
+      )}
     </div>
   );
 };
