@@ -386,3 +386,4 @@ def get_modules_from_course_and_university(request):
 @csrf_exempt
 def get_similar_module_against_given_module_uri(request):
     return get_similar_module_against_module_uri(request)
+

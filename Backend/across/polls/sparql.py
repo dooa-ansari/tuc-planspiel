@@ -7,6 +7,7 @@ WHERE {
 }
 """
 
+
 list_with_similar_modules_query = """
 SELECT ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityName ?universityNameSimilar ?courseName ?courseNameSimilar
 WHERE {

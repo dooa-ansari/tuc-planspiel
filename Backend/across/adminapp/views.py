@@ -4,6 +4,10 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.core.files.storage import FileSystemStorage
+from .universitiy_list import get_all_universities
+from django.http import HttpResponse
+
+
 
 @csrf_exempt
 @require_POST
@@ -26,3 +30,8 @@ def upload_file(request):
             return JsonResponse({'message': 'Files uploaded and saved successfully', 'saved_files': saved_files}, status=200)
     except Exception as e:
             return JsonResponse({'message': f'Error uploading and saving files: {str(e)}'}, status=500)
+    
+@csrf_exempt
+def get_universities(request):
+    data = get_all_universities(request)
+    return JsonResponse(data , safe=False)

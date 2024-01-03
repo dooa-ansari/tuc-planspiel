@@ -15,5 +15,4 @@ urlpatterns = [
     path('courses/', get_courses_from_university, name="get-courses"),
     path('modules/', get_modules_from_course_and_university, name="get-modules"),
     path('similarModules/', get_similar_module_against_given_module_uri, name="get-similar-modules"),
-
 ]
