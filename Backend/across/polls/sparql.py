@@ -44,6 +44,37 @@ insert_module_similarity = "INSERT DATA { <%s>  <http://tuc.web.engineering/modu
 insert_module_univeristy = "INSERT DATA { <%s>  <http://across/university#hasUniversity>  <%s> }"
 insert_module_course = "INSERT DATA { <%s>  <http://tuc/course#hasCourse>  <%s> }"
 
+def get_similar_module_against_module_uri_query(moduleUri):
+    list_all_against_uri_with_similar_modules_query = f"""
+        SELECT ?moduleId ?moduleName ?moduleContent ?moduleCreditPoints ?universityName ?courseName ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityNameSimilar ?courseNameSimilar
+        WHERE {{
+            ?module <http://tuc.web.engineering/module#hasName> ?moduleName ;
+                <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
+                <http://tuc.web.engineering/module#hasContent> ?moduleContent ;
+                <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints ;
+                <http://tuc.web.engineering/module#hasModules> ?similarModule ;
+                <http://across/university#hasUniversity> ?university ;
+                <http://tuc/course#hasCourse> ?course .
+            ?university <http://across/university#hasUniversityName> ?universityName .
+            ?course <http://tuc/course#hasCourseName> ?courseName .
+            ?similarModule <http://tuc.web.engineering/module#hasName> ?similarModuleName;
+                        <http://tuc.web.engineering/module#hasModuleNumber> ?similarModuleId ;
+                        <http://tuc.web.engineering/module#hasContent> ?similarModuleContent;
+                        <http://tuc.web.engineering/module#hasCreditPoints> ?similarModuleCreditPoints ;
+                        <http://across/university#hasUniversity> ?similarUniversity ;
+                        <http://tuc/course#hasCourse> ?similarCourse .
+            ?similarUniversity <http://across/university#hasUniversityName> ?universityNameSimilar .
+            ?similarCourse <http://tuc/course#hasCourseName> ?courseNameSimilar .
+
+            BIND(str(?module) AS ?moduleUri)
+            
+            FILTER (
+                    ?moduleUri = "{moduleUri}"
+                    )
+        }}
+    """
+    return list_all_against_uri_with_similar_modules_query
+
 
 def get_course_from_university_query(universityUri, universityName):
     query = f"""

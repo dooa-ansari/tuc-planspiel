@@ -1,3 +1,4 @@
+from .get_similar_module_against_module_uri import get_similar_module_against_module_uri
 import rdflib
 from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
@@ -26,28 +27,6 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.hashers import check_password
 from django.views.decorators.http import require_POST
-
-# graph = rdflib.Graph()
-# graph.parse("bialystok_modules_full_data.rdf")
-# module_list = """
-# SELECT ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints
-# WHERE {
-#     ?name <http://tuc.web.engineering/module#hasName> ?moduleName ;
-#           <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
-#           <http://tuc.web.engineering/module#hasContent> ?moduleContent ;
-#           <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints .
-# }
-# """
-
-# qresponse = graph.query(module_list)
-# data_list = []
-# for row in qresponse:
-#     data_dict = {
-#         'name': str(row.moduleName),
-#         'content': str(row.moduleContent),
-#     }
-#     data_list.append(data_dict)
-# json_data = json.dumps(data_list, indent=2)
 
 def listsimilarmodules(request):
     data = find_all_similar_modules_list()
@@ -403,3 +382,7 @@ def get_modules_from_course_and_university(request):
             "message": f"An unexpected error occurred: {e}"
         }
         return JsonResponse(response, status =500)
+    
+@csrf_exempt
+def get_similar_module_against_given_module_uri(request):
+    return get_similar_module_against_module_uri(request)
