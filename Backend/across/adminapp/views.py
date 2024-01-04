@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.core.files.storage import FileSystemStorage
 from .universitiy_list import get_all_universities
+from .add_module import add_module_in_blaze
 from django.http import HttpResponse
 
 
@@ -35,3 +36,11 @@ def upload_file(request):
 def get_universities(request):
     data = get_all_universities(request)
     return JsonResponse(data , safe=False)
+
+
+
+@csrf_exempt
+@require_POST
+def add_module(request):
+    data = add_module_in_blaze(request)
+    return data
