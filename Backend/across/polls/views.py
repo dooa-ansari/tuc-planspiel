@@ -61,7 +61,8 @@ def register_user(request):
         email = data.get('email', '').strip()
         full_name = data.get('full_name', '').strip()
         password = data.get('password', '').strip()
-        university_name = data.get('university_name', '').strip()
+        confirmPassword = data.get('confirmPassword', '').strip()
+        
         
         try:
             existing_profiles = UserProfile.objects.filter(email=email)
@@ -70,11 +71,12 @@ def register_user(request):
 
             validate_email(email)
             validate_password(password)
+            if password !=confirmPassword:
+                return JsonResponse({"message": "Passwords don't match"})
             hashed_password = make_password(password)
 
               # Save the data with the hashed password
-            user_profile = UserProfile(email=email, full_name=full_name, password=hashed_password, university_name=university_name,
-                                       signup_using='FORM', role='USER')
+            user_profile = UserProfile(email=email, full_name=full_name, password=hashed_password,signup_using='FORM', role='USER')
             user_profile.save()
             # Generate JWT token upon successful registration
             payload = {
@@ -85,7 +87,6 @@ def register_user(request):
             user_profile_data = {
                 'email': user_profile.email,
                 'full_name': user_profile.full_name,
-                'university_name': user_profile.university_name,
                 'signup_using': user_profile.signup_using,
                 'role':user_profile.role
             }  

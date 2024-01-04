@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../assets/css/Register.css";
 import google from "../assets/google_logo_icon.png";
 
@@ -7,30 +7,42 @@ import axios from "axios";
 import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button/Button";
+import { useAuth } from "../context/AuthContext";
 
 const Register = () => {
   const navigate = useNavigate();
-  const handleGoogleSignup = async googleUser => {
-    try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/polls/google/signin",
-        {
-          access_token: googleUser.getAuthResponse().id_token,
-        }
-      );
-      const authToken = response.data.token;
-      localStorage.setItem("authToken", authToken);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [auth, setAuth] = useAuth();
 
-      console.log(response.data);
-      navigate("/user");
-    } catch (error) {
-      console.error("Error during Google login:", error);
-    }
+  const handleRegister = async evt => {
+    evt.preventDefault();
+    const data = { name, email, password, confirmPassword };
   };
-  const handleGoogleLogout = async () => {
-    localStorage.removeItem("authToken");
-    window.location.href = "/login";
-  };
+
+  // const handleGoogleSignup = async googleUser => {
+  //   try {
+  //     const response = await axios.post(
+  //       "http://127.0.0.1:8000/polls/google/signin",
+  //       {
+  //         access_token: googleUser.getAuthResponse().id_token,
+  //       }
+  //     );
+  //     const authToken = response.data.token;
+  //     localStorage.setItem("authToken", authToken);
+
+  //     console.log(response.data);
+  //     navigate("/user");
+  //   } catch (error) {
+  //     console.error("Error during Google login:", error);
+  //   }
+  // };
+  // const handleGoogleLogout = async () => {
+  //   localStorage.removeItem("authToken");
+  //   window.location.href = "/login";
+  // };
 
   // useEffect(() => {
   //   // Check if the user is already authenticated
@@ -90,14 +102,18 @@ const Register = () => {
           <form action="#" className="register__form">
             <input
               type="text"
+              value={name}
+              onChange={evt => setName(evt.target.value)}
               className="register__name"
-              name=""
-              id=""
+              name="name"
+              id="name"
               placeholder="Name"
               required
             />
             <input
               type="email"
+              value={email}
+              onChange={evt => setEmail(evt.target.value)}
               name="email"
               className="register__email"
               id="email"
@@ -106,6 +122,8 @@ const Register = () => {
             />
             <input
               type="password"
+              value={password}
+              onChange={evt => setPassword(evt.target.value)}
               className="register__password"
               name="password"
               id="password"
@@ -114,6 +132,8 @@ const Register = () => {
             />
             <input
               type="password"
+              value={confirmPassword}
+              onChange={evt => setConfirmPassword(evt.target.value)}
               className="register__confirmPassword"
               name="confirmPassword"
               id="confirmPassword"
@@ -121,7 +141,7 @@ const Register = () => {
               required
             />
 
-            <Button primary rounded>
+            <Button primary rounded onClick={handleRegister}>
               Sign Up
             </Button>
           </form>
@@ -140,7 +160,7 @@ const Register = () => {
             </button>
           </div>
           {/* end */}
-          <button onClick={handleGoogleLogout}>Logout from Google</button>
+          {/* <button onClick={handleGoogleLogout}>Logout from Google</button> */}
         </div>
         <div className="register__right">
           <img className="register__characterSvg" src={resigterSvg} alt="" />

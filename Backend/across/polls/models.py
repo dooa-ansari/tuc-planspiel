@@ -7,7 +7,6 @@ class UserProfile(models.Model):
     email = models.CharField(max_length=255, unique=True)
     full_name = models.TextField()
     password = models.CharField(max_length=255)
-    university_name = models.TextField()
     signup_using = models.TextField()
     role = models.TextField()
 
