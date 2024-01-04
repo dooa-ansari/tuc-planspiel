@@ -135,5 +135,7 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
-package-lock.json
-package.json
+*.bin
+*.bin.gz
+*.jar
+*.jnl

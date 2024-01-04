@@ -1,16 +1,15 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-
 // @css imports
 import React, { useEffect } from "react";
 import "../assets/css/Register.css";
 
 // @image imports
 import google from "../assets/google_logo_icon.png";
+
 import resigterSvg from "../assets/registerPage_highschool.svg";
 import axios from "axios";
 import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
+import Button from "../components/Button/Button";
 
 const Register = () => {
   const navigate = useNavigate(); // Use the useNavigate hook
@@ -67,7 +66,7 @@ const Register = () => {
         <div className="register__left">
           <h2 className="register__title">Sign up</h2>
           <form action="#" className="register__form">
-            <button className="signupgoogle__button" type="button">
+            {/* <button className="signupgoogle__button" type="button">
               <GoogleLogin
                 clientId="939129256680-qe0149eq0b5g9oc14cj3lc78inbue6rq.apps.googleusercontent.com"
                 buttonText="Sign up with Google"
@@ -77,13 +76,7 @@ const Register = () => {
                 }
                 cookiePolicy="single_host_origin"
               />
-            </button>
-            <button className="signupemail__button" type="button">
-              <div className="singupemail__image">
-                <img src={emailSvg} alt="" />
-              </div>
-              Sign up with Email
-            </button>
+            </button> */}
           </form>
           <p className="register__already-account">
             Already have account?{" "}
@@ -123,7 +116,15 @@ const Register = () => {
               placeholder="Password"
               required
             />
-            <select name="" className="register__universitySelection" id="">
+            <input
+              type="password"
+              className="register__confirmPassword"
+              name="password"
+              id="password"
+              placeholder="Confirm Password"
+              required
+            />
+            {/* <select name="" className="register__universitySelection" id="">
               <option value="" disabled selected hidden>
                 Select Your University
               </option>
@@ -139,10 +140,13 @@ const Register = () => {
               <option value="">University of Perpignan (France)</option>
               <option value="">University of Ruse (Bulgaria)</option>
               <option value="">Other</option>
-            </select>
-            <button className="register__button" type="button">
+            </select> */}
+            {/* <button className="register__button" type="button">
               Sign Up
-            </button>
+            </button> */}
+            <Button primary rounded>
+              Sign Up
+            </Button>
           </form>
 
           {/* snapple separator with or text in between */}
@@ -159,11 +163,11 @@ const Register = () => {
             </button>
           </div>
           {/* end */}
+          <button onClick={handleGoogleLogout}>Logout from Google</button>
         </div>
         <div className="register__right">
           <img className="register__characterSvg" src={resigterSvg} alt="" />
         </div>
-        <button onClick={handleGoogleLogout}>Logout from Google</button>
       </div>
     </div>
   );

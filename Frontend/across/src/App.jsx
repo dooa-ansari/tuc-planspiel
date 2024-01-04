@@ -19,10 +19,10 @@ import PageNotFound from "./pages/PageNotFound";
 import { gapi } from "gapi-script";
 import UserPage from "./pages/UserPage";
 import AdminPanel from "./admin/AdminPanel";
-
+import CompareModules from "./pages/user/CompareModules/CompareModules";
+import Protected from "./components/Protected/Protected";
 
 const App = () => {
-
   useEffect(() => {
     gapi.load("client:auth2", () => {
       gapi.client.init({
@@ -31,7 +31,6 @@ const App = () => {
         plugin_name: "chat",
       });
     });
-
   }, []);
   return (
     <div className="app">
@@ -44,50 +43,107 @@ const App = () => {
           <Route
             path="/select-university"
             exact
-            element={<UniversitySelection />}
+            element={
+              <Protected>
+                <UniversitySelection />
+              </Protected>
+            }
           />
 
-          <Route path="/campus-flow/user/home" exact element={<HomePage />} />
+          <Route
+            path="/campus-flow/user/home"
+            exact
+            element={
+              <Protected>
+                <HomePage />
+              </Protected>
+            }
+          />
           <Route
             path="/campus-flow/user/universities"
             exact
-            element={<AcrossUniversitiesPage />}
+            element={
+              <Protected>
+                <AcrossUniversitiesPage />
+              </Protected>
+            }
           />
           <Route
             path="/campus-flow/user/profile"
             exact
-            element={<MyProfile />}
+            element={
+              <Protected>
+                <MyProfile />
+              </Protected>
+            }
           />
           <Route
             path="/campus-flow/user/settings"
             exact
-            element={<Settings />}
+            element={
+              <Protected>
+                <Settings />
+              </Protected>
+            }
           />
           <Route
             path="/campus-flow/user/services"
             exact
-            element={<Services />}
+            element={
+              <Protected>
+                <Services />
+              </Protected>
+            }
           />
           <Route
             path="/campus-flow/user/applications"
             exact
-            element={<Applications />}
+            element={
+              <Protected>
+                <Applications />
+              </Protected>
+            }
           />
-          <Route path="/campus-flow/user/modules" exact element={<Modules />} />
-          <Route path="/campus-flow/user/courses" exact element={<Courses />} />
-          <Route path="*" element={<PageNotFound />} />
-          <Route  path="/register"
+          <Route
+            path="/campus-flow/user/modules"
+            exact
+            element={
+              <Protected>
+                <Modules />
+              </Protected>
+            }
+          />
+          <Route
+            path="/campus-flow/user/compare-modules"
+            exact
+            element={
+              <Protected>
+                <CompareModules />
+              </Protected>
+            }
+          />
+          <Route
+            path="/campus-flow/user/courses"
+            exact
+            element={
+              <Protected>
+                <Courses />
+              </Protected>
+            }
+          />
+          {/* <Route  path="/register"
             element={<Register />}
             onClick={() => {
               const history = useNavigate();
               history("/"); // Update this to the actual path of your homepage
             }}
-          />
-          <Route path="/user" exact element={<UserPage />} />
+          /> */}
+          {/* <Route path="/user" exact element={<UserPage />} />
 
-          <Route path="/admin/*" element={<AdminPanel />} />
+<Route path="/admin/*" element={<AdminPanel />} /> */}
           {/* Other routes */}
 
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

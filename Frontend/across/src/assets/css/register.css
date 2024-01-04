@@ -51,7 +51,7 @@
     align-items: center;
   }
   
-  .register__name,.register__email, .register__password {
+  .register__name,.register__email, .register__password, .register__confirmPassword {
     display: block;
     width: 380px;
     padding: 8px 0;
@@ -173,7 +173,7 @@
       margin-bottom: 15px;
     }
   
-    .register__name, .register__email, .register__password {
+    .register__name, .register__email, .register__password,.register__confirmPassword {
       font-size: 1rem;
       width: 250px;
       height: 50px;
@@ -236,7 +236,7 @@
       margin-bottom: 20px;
     }
   
-    .register__name, .register__email, .register__password {
+    .register__name, .register__email, .register__password, .register__confirmPassword {
       font-size: 1rem;
       width: 300px;
       height: 50px;

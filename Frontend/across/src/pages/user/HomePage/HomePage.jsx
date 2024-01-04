@@ -4,7 +4,7 @@ import SearchBox from "../../../components/user/SearchBox/SearchBox";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import { NavLink } from "react-router-dom";
 
-const HomePage = () => {
+const HomePage = () => { 
   return (
     <>
       <MainLayout>
@@ -47,7 +47,10 @@ const HomePage = () => {
                   modules
                 </p>
               </NavLink>
-              <NavLink className="quicklink quicklinkTwo">
+              <NavLink
+                className="quicklink quicklinkTwo"
+                to="/campus-flow/user/compare-modules"
+              >
                 <h4>Compare of the Modules</h4>
                 <p>
                   Comparing the modules quickly without full module descriptions
