@@ -8,6 +8,7 @@ import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button/Button";
 import { useAuth } from "../context/AuthContext";
+import { register, storeUserInLocalStorage } from "../api/userApi";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -20,6 +21,24 @@ const Register = () => {
   const handleRegister = async evt => {
     evt.preventDefault();
     const data = { name, email, password, confirmPassword };
+
+    try {
+      const response = await register(data);
+      if (response.status === 200 && response.statusText === "OK") {
+        setAuth({
+          ...auth,
+          user: response.data.user,
+          token: response.data.token,
+        });
+        storeUserInLocalStorage(response.data);
+
+        navigate("/campus-flow/user/home");
+      } else if (response.code === "ERR_BAD_REQUEST") {
+        toast.error(response.response.data.message);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   // const handleGoogleSignup = async googleUser => {

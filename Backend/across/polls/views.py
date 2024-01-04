@@ -76,7 +76,7 @@ def register_user(request):
             hashed_password = make_password(password)
 
               # Save the data with the hashed password
-            user_profile = UserProfile(email=email, full_name=full_name, password=hashed_password,signup_using='FORM', role='USER')
+            user_profile = UserProfile(email=email, full_name=full_name, password=hashed_password, university_name="", signup_using='FORM', role='USER')
             user_profile.save()
             # Generate JWT token upon successful registration
             payload = {

@@ -21,7 +21,7 @@ const Login = () => {
 
     try {
       const response = await login(data);
-      if (response.status === 200) {
+      if (response.status === 200 && response.statusText === "OK") {
         setAuth({
           ...auth,
           user: response.data.user,
