@@ -17,8 +17,8 @@ import Courses from "./pages/user/Courses/Courses";
 import Applications from "./pages/user/Applications/Applications";
 import PageNotFound from "./pages/PageNotFound";
 import { gapi } from "gapi-script";
-import UserPage from "./pages/UserPage";
-import AdminPanel from "./admin/AdminPanel";
+// import UserPage from "./pages/UserPage";
+// import AdminPanel from "./admin/AdminPanel";
 import CompareModules from "./pages/user/CompareModules/CompareModules";
 import Protected from "./components/Protected/Protected";
 

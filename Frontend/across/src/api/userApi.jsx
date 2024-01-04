@@ -31,7 +31,7 @@ export const register = async data => {
   return response;
 };
 
-const storeUserInLocalStorage = data => {
+export const storeUserInLocalStorage = data => {
   localStorage.setItem("token", data.token);
   localStorage.setItem("user", JSON.stringify(data.user));
 };

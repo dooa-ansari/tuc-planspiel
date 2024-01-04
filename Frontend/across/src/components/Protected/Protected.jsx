@@ -6,7 +6,7 @@ function Protected({ children }) {
   const [auth] = useAuth();
 
   if (!auth.token) {
-    return <Navigate to="/campus-flow/signin" />;
+    return <Navigate to="/campus-flow/login" />;
   } else {
     return children;
   }

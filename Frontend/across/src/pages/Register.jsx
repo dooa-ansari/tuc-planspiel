@@ -1,19 +1,15 @@
-// @css imports
 import React, { useEffect } from "react";
 import "../assets/css/Register.css";
-
-// @image imports
 import google from "../assets/google_logo_icon.png";
 
 import resigterSvg from "../assets/registerPage_highschool.svg";
 import axios from "axios";
 import GoogleLogin from "react-google-login";
-import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
+import { useNavigate } from "react-router-dom";
 import Button from "../components/Button/Button";
 
 const Register = () => {
-  const navigate = useNavigate(); // Use the useNavigate hook
-
+  const navigate = useNavigate();
   const handleGoogleSignup = async googleUser => {
     try {
       const response = await axios.post(
@@ -36,29 +32,29 @@ const Register = () => {
     window.location.href = "/login";
   };
 
-  useEffect(() => {
-    // Check if the user is already authenticated
-    // If yes, redirect them to the user profile page
-    const checkAuthentication = async () => {
-      try {
-        const response = await axios.get(
-          "http://127.0.0.1:8000/polls/user/profile",
-          {
-            withCredentials: true,
-          }
-        );
+  // useEffect(() => {
+  //   // Check if the user is already authenticated
+  //   // If yes, redirect them to the user profile page
+  //   const checkAuthentication = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "http://127.0.0.1:8000/polls/user/profile",
+  //         {
+  //           withCredentials: true,
+  //         }
+  //       );
 
-        if (response.data.username) {
-          // User is authenticated, redirect to the user profile page
-          navigate("/user");
-        }
-      } catch (error) {
-        console.error("Error checking authentication:", error);
-      }
-    };
+  //       if (response.data.username) {
+  //         // User is authenticated, redirect to the user profile page
+  //         navigate("/user");
+  //       }
+  //     } catch (error) {
+  //       console.error("Error checking authentication:", error);
+  //     }
+  //   };
 
-    checkAuthentication();
-  }, [navigate]);
+  //   checkAuthentication();
+  // }, [navigate]);
 
   return (
     <div className="register">
@@ -119,31 +115,12 @@ const Register = () => {
             <input
               type="password"
               className="register__confirmPassword"
-              name="password"
-              id="password"
+              name="confirmPassword"
+              id="confirmPassword"
               placeholder="Confirm Password"
               required
             />
-            {/* <select name="" className="register__universitySelection" id="">
-              <option value="" disabled selected hidden>
-                Select Your University
-              </option>
-              <option value="">
-                Technical University of Chemnitz (Germany)
-              </option>
-              <option value="">
-                Bialystok University of Technology (Poland)
-              </option>
-              <option value="">University of Craiova (Romania)</option>
-              <option value="">University of Girona (Catalonia/Spain)</option>
-              <option value="">University of Nova Gorica (Slovenia)</option>
-              <option value="">University of Perpignan (France)</option>
-              <option value="">University of Ruse (Bulgaria)</option>
-              <option value="">Other</option>
-            </select> */}
-            {/* <button className="register__button" type="button">
-              Sign Up
-            </button> */}
+
             <Button primary rounded>
               Sign Up
             </Button>

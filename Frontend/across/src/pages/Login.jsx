@@ -2,15 +2,15 @@ import "../assets/css/Login.css";
 import googleSvg from "../assets/google_icon.svg";
 import loginSvg from "../assets/loginPage_characterSet.svg";
 import GoogleLogin from "react-google-login";
-import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 import Button from "../components/Button/Button";
-import { login } from "../api/userApi";
+import { login, storeUserInLocalStorage } from "../api/userApi";
+import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const navigate = useNavigate();
-
+  const [auth, setAuth] = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -21,19 +21,24 @@ const Login = () => {
 
     try {
       const response = await login(data);
+      if (response.status === 200) {
+        setAuth({
+          ...auth,
+          user: response.data.user,
+          token: response.data.token,
+        });
+        storeUserInLocalStorage(response.data);
 
-      console.log(response.data);
-      console.log(response.data.user);
+        const roleAssigned = response.data.user.role;
 
-      // const authToken = response.data.token;
-      // localStorage.setItem("authToken", authToken);
-
-      // const role = response.data.data.role;
-      // if (role === "ADMIN") {
-      //   navigate("/admin/home");
-      // } else {
-      //   navigate("/campus-flow/user/home");
-      // }
+        if (roleAssigned === "ADMIN") {
+          navigate("/admin/home");
+        } else {
+          navigate("/campus-flow/user/home");
+        }
+      } else if (response.code === "ERR_BAD_REQUEST") {
+        console.log(response.data.message);
+      }
     } catch (error) {
       console.error("Error during login:", error);
     }
