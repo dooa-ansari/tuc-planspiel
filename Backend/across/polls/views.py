@@ -16,6 +16,7 @@ from datetime import datetime, timedelta
 from pymantic import sparql
 from .sparql import *
 import json
+import os
 import requests
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request as GoogleAuthRequest
@@ -289,37 +290,12 @@ def get_courses_from_university(request):
         universityName = data.get('universityName','')
         universityUri = data.get('universityUri','')
 
-        # # Create an RDF graph
-        # g = rdflib.Graph()
-
-        # # Load RDF data from files
-        # g.parse("Backend//across//RDF_DATA//universities.rdf")
-        # g.parse("Backend//across//RDF_DATA//tuc_courses.rdf")
-        
         # SPARQL query to retrieve university names and course names
-        query = """
-        SELECT ?courseName ?courseUri ?courseNumber
-        WHERE {
-            ?course rdf:type <http://tuc/course#> .
-            ?course <http://across/university#belongsToUniversity> ?university .
-            ?university rdf:type <http://across/university#> .
-            ?university <http://across/university#hasUniversityName> ?universityName .
-            ?course <http://tuc/course#hasCourseName> ?courseName .
-            ?course <http://tuc/course#hasCourseNumber> ?courseNumber .
-            
-            BIND(str(?course) AS ?courseUri)
-            BIND(str(?university) AS ?universityUri)
-
-            FILTER (
-                ?universityUri = "%s" &&
-                ?universityName = "%s"^^<http://www.w3.org/2001/XMLSchema#string>
-            )
-        }
-        """% (universityUri,universityName)
+        sparql_query = get_course_from_university_query(universityUri, universityName)
 
         server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
 
-        qresponse = server.query(query)
+        qresponse = server.query(sparql_query)
         course_list = []
         data = qresponse['results']['bindings']
         
@@ -344,6 +320,71 @@ def get_courses_from_university(request):
                 "message": "Course list returned successfully",
                 "courses": course_list,
                 "university": universityName
+            }
+            return JsonResponse(response, status =200)
+
+    except json.JSONDecodeError as json_error:
+        response = {
+            "message": f"JSON decoding error: {json_error}"
+        }
+        return JsonResponse(response, status =400)
+    except rdflib.exceptions.Error as rdf_error:
+        response = {
+            "message": f"RDF parsing error: {rdf_error}"
+        }
+        return JsonResponse(response, status =500)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_POST
+def get_modules_from_course_and_university(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        courseUri = data.get('courseUri','')
+        universityUri = data.get('universityUri','')
+        courseName = data.get('courseName','')
+     
+        # SPARQL query to retrieve university names and course names
+        sparql_query = get_modules_from_course_and_university_query(courseUri, courseName, universityUri)
+
+        # Execute the SPARQL query
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+
+        qresponse = server.query(sparql_query)
+        module_list = []
+        data = qresponse['results']['bindings']
+        # Process the results
+        for result in data:
+            module_list_temp = {
+                'moduleUri' :  str(result['sampleModuleUri']['value']),
+                'moduleName' : str(result['moduleName']['value']),
+                'moduleNumber' : str(result['sampleModuleNumber']['value']),
+                'moduleContent' : str(result['sampleModuleContent']['value']),
+                'moduleCreditPoints' : str(result['sampleModuleCreditPoints']['value'])
+            }
+            module_list.append(module_list_temp)
+
+        # Return JSON response
+        if not module_list:
+            response = {
+                "message": f"No modules found for course named as {courseName}, please check university uri or course uri or course name",
+                "course": courseName
+            }
+            return JsonResponse(response, status =404)
+        else:
+            response = {
+                "message": "Module list returned successfully",
+                "modules": module_list,
+                "course": courseName
             }
             return JsonResponse(response, status =200)
 

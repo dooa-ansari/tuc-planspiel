@@ -6,7 +6,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00070S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus 2</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00070S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -18,7 +18,7 @@ Requirements:Calculus 1
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00017S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operating Systems</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00017S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -31,7 +31,7 @@ Requirements:C programming skills. General knowledge of computer architecture.
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00054W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete Mathematics </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00054W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -43,7 +43,7 @@ Requirements:logics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00060">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear Algebra and Analytic Geometry 2 </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00060</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -55,7 +55,7 @@ Requirements:Linear Algebra and Analytic Geometry 1
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00019W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open Source Frameworks for Rapid Application Development</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00019W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -68,7 +68,7 @@ Requirements:Knowledge on and skills in object oriented programming. Knowledge o
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00045">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bussiness Application Programming in Java </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00045</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -80,7 +80,7 @@ Requirements:Objected Oriented Programming, Relational Databases
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00096">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Databases</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00096</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -92,7 +92,7 @@ Requirements:General knowledge of data structures, algebra.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00042W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Security</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00042W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -104,7 +104,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00038">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human-Computer Interaction </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00038</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -116,7 +116,7 @@ Requirements:Object Oriented Programming
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00039">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linux Administration</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00039</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -128,7 +128,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00094S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet Applications Based on Components</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00094S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -140,7 +140,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00054">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete Mathematics </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00054</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -152,7 +152,7 @@ Requirements:logics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00055">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Probabilistic Methods and Statistics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00055</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -164,7 +164,7 @@ Requirements:Linear Algebra and Analytic Geometry,   Calculus,   Discrete Mathem
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00022">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods of Optimization</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00022</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -176,7 +176,7 @@ Requirements:Calculus I, II. Linear Algebra.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00091">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data exploration and analytics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00091</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -189,7 +189,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00030W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear algebra</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00030W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -201,7 +201,7 @@ Requirements:High school Mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00092">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data visualiation and communication</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00092</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -214,7 +214,7 @@ Requirements:.
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Empirical_Software_Engineering__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00062">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus 3 </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00062</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -226,7 +226,7 @@ Requirements:Linear Algebra and Analytic Geometry 1,   Linear Algebra and Analyt
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00020W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithms and Data Structures</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00020W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -239,7 +239,7 @@ Requirements:Programming in C, C++, Java or C#, mathematical analysis - basic kn
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00053">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundations of Electrotechnics and Electronics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00053</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -251,7 +251,7 @@ Requirements:Linear Algebra and Analytic Geometry,   Calculus
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00065W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematical Statistics </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00065W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -263,7 +263,7 @@ Requirements:Calculus 1,   Calculus 3,   Probability Theory,   Information Techn
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00086S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommender Systems</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00086S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -275,7 +275,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00092S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data visualiation and communication</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00092S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -288,7 +288,7 @@ Requirements:.
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Empirical_Software_Engineering__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00003S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WWW Applications Programming in .NET Technology</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00003S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -300,7 +300,7 @@ Requirements:Knowledge of object oriented programming concepts. Knowledge of one
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00028S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Database Systems and Data Warehouses</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00028S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -313,7 +313,7 @@ Requirements:SQL, rational database model.
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Management_of_Data__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00037W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mobile Systems </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00037W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -327,7 +327,7 @@ Requirements:Human-Computer Interaction,   Object Oriented Programming,
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Platforms_for_Automotive_Systems__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00022W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods of Optimization</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00022W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -339,7 +339,7 @@ Requirements:Calculus I, II. Linear Algebra.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00065S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematical Statistics </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00065S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -351,7 +351,7 @@ Requirements:Calculus 1,   Calculus 3,   Probability Theory,   Information Techn
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00057S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Linux </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00057S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -362,7 +362,7 @@ Description:Introduction to Linux operating system,  free software licenses,  sy
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00099W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Machine Audition</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00099W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -373,7 +373,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00086W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommender Systems</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00086W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -385,7 +385,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00011">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer organization and architecture (COA)</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00011</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -398,7 +398,7 @@ Requirements:Digital logic design, Boolean algebra, HLL language programming
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS000100S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet of Things</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-000100S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -409,7 +409,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00057">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Linux </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00057</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -422,7 +422,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00056S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Circuit Engineering </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00056S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -435,7 +435,7 @@ Requirements:Logic for Computer Scientists,   Introduction to Computer Science,
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00005S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Intelligence</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00005S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -451,7 +451,7 @@ Requirements:Knowledge of any programming language. Knowledge of logics and sets
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Software_Service_Engineering__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS000101W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human-Machine Interaction</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-000101W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -462,7 +462,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00038W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human-Computer Interaction </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00038W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -474,7 +474,7 @@ Requirements:Object Oriented Programming
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00060S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear Algebra and Analytic Geometry 2 </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00060S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -486,7 +486,7 @@ Requirements:Linear Algebra and Analytic Geometry 1
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00094W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet Applications Based on Components</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00094W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -498,7 +498,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00030">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear algebra</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00030</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -510,7 +510,7 @@ Requirements:High school Mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00046">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Applications Development in Java </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00046</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -523,7 +523,7 @@ Requirements:
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00096W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Databases</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00096W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -535,7 +535,7 @@ Requirements:General knowledge of data structures, algebra.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00031S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programming Basics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00031S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -548,7 +548,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00008W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informatics in Robotics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00008W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -560,7 +560,7 @@ Requirements:Student should have knowlage of computer architecture, programing i
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00050">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Development of Database-Driven Applications </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00050</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -572,7 +572,7 @@ Requirements:Database Systems
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00008">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informatics in Robotics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00008</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -584,7 +584,7 @@ Requirements:Student should have knowlage of computer architecture, programing i
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00058W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logic and Set Theory </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00058W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -596,7 +596,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00070">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus 2</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00070</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -608,7 +608,7 @@ Requirements:Calculus 1
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00098W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithmics - Selected Issues</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00098W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -619,7 +619,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00072S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Embedded systems</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00072S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -633,7 +633,7 @@ Requirements:Computer Organization and Architecture (INF1AKO)
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Platforms_for_Automotive_Systems__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00069W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear Control Theory </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00069W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -645,7 +645,7 @@ Requirements:Linear Algebra and Analytic Geometry,   Linear Algebra and Analytic
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00090">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Object-Oriented Programming Technics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00090</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -657,7 +657,7 @@ Requirements:TO TAKE THIS COURSE YOU HAVE TO KNOW AT LEAST ONE OBJECT-ORIENTED P
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00062W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus 3 </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00062W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -669,7 +669,7 @@ Requirements:Linear Algebra and Analytic Geometry 1,   Linear Algebra and Analyt
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00045W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bussiness Application Programming in Java </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00045W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -681,7 +681,7 @@ Requirements:Objected Oriented Programming, Relational Databases
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00086">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommender Systems</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00086</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -693,7 +693,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00082S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Human-Computer Interaction and Application Usability</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00082S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -707,7 +707,7 @@ Requirements:
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Platforms_for_Automotive_Systems__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00014">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Engineering</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00014</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -720,7 +720,7 @@ Requirements:Knowledge of object-oriented programming.
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00070W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus 2</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00070W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -732,7 +732,7 @@ Requirements:Calculus 1
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00046S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Applications Development in Java </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00046S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -745,7 +745,7 @@ Requirements:
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00052W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Investment Portfolio Management </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00052W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -757,7 +757,7 @@ Requirements:Probabilistic Methods and Statistics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00010W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Graphics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00010W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -770,7 +770,7 @@ Requirements:Programming skills in Java. Knowledge of matrix mathematical operat
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00061W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Technologies</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00061W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -783,7 +783,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS000103W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logic and Set Theory for Computer Scientists</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-000103W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -794,7 +794,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00094">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet Applications Based on Components</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00094</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -806,7 +806,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00071S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software development tools</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00071S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -820,7 +820,7 @@ Requirements:Programming Basics (INF1PPR)
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00055S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Probabilistic Methods and Statistics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00055S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -832,7 +832,7 @@ Requirements:Linear Algebra and Analytic Geometry,   Calculus,   Discrete Mathem
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00037">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mobile Systems </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00037</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -846,7 +846,7 @@ Requirements:Human-Computer Interaction,   Object Oriented Programming,
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Platforms_for_Automotive_Systems__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00062S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus 3 </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00062S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -858,7 +858,7 @@ Requirements:Linear Algebra and Analytic Geometry 1,   Linear Algebra and Analyt
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00042S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Security</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00042S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -870,7 +870,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00090W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Object-Oriented Programming Technics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00090W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -882,7 +882,7 @@ Requirements:TO TAKE THIS COURSE YOU HAVE TO KNOW AT LEAST ONE OBJECT-ORIENTED P
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00072">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Embedded systems</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00072</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -896,7 +896,7 @@ Requirements:Computer Organization and Architecture (INF1AKO)
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Platforms_for_Automotive_Systems__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00017">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operating Systems</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00017</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -909,7 +909,7 @@ Requirements:C programming skills. General knowledge of computer architecture.
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00064">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Differential and Difference Equations </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00064</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -921,7 +921,7 @@ Requirements:Linear Algebra and Analytic Geometry 1,   Linear Algebra and Analyt
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00058S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logic and Set Theory </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00058S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -933,7 +933,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00039S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linux Administration</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00039S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -945,7 +945,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00061S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Technologies</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00061S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -958,7 +958,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00036S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronic Circuits and Measurements </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00036S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -970,7 +970,7 @@ Requirements:Foundations of Electrotechnics and Electronics,  Digital Circuit En
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00091S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data exploration and analytics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00091S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -983,7 +983,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00031W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programming Basics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00031W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -996,7 +996,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00005W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Intelligence</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00005W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1012,7 +1012,7 @@ Requirements:Knowledge of any programming language. Knowledge of logics and sets
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Software_Service_Engineering__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00014S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Engineering</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00014S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1025,7 +1025,7 @@ Requirements:Knowledge of object-oriented programming.
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00052">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Investment Portfolio Management </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00052</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1037,7 +1037,7 @@ Requirements:Probabilistic Methods and Statistics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00014W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Engineering</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00014W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1050,7 +1050,7 @@ Requirements:Knowledge of object-oriented programming.
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00082">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Human-Computer Interaction and Application Usability</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00082</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1064,7 +1064,7 @@ Requirements:
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Platforms_for_Automotive_Systems__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00061">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Technologies</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00061</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1077,7 +1077,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00036W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronic Circuits and Measurements </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00036W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1089,7 +1089,7 @@ Requirements:Foundations of Electrotechnics and Electronics,  Digital Circuit En
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00096S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Databases</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00096S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1101,7 +1101,7 @@ Requirements:General knowledge of data structures, algebra.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00098S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithmics - Selected Issues</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00098S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1112,7 +1112,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00026W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Networks </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00026W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1125,7 +1125,7 @@ Requirements:Basic knowledge of UNIX/Linux systems (recommended RedHat/Fedora di
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Platforms_for_Automotive_Systems__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00002W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00002W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1137,7 +1137,7 @@ Requirements:High school Mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00012S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object Oriented Programming</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00012S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1150,7 +1150,7 @@ Requirements:Students should already know at least on procedural programming lan
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00019">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open Source Frameworks for Rapid Application Development</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00019</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1163,7 +1163,7 @@ Requirements:Knowledge on and skills in object oriented programming. Knowledge o
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00019S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open Source Frameworks for Rapid Application Development</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00019S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1176,7 +1176,7 @@ Requirements:Knowledge on and skills in object oriented programming. Knowledge o
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00085">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Information System</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00085</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1189,7 +1189,7 @@ Requirements:
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00085S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Information System</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00085S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1202,7 +1202,7 @@ Requirements:
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00011S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer organization and architecture (COA)</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00011S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1215,7 +1215,7 @@ Requirements:Digital logic design, Boolean algebra, HLL language programming
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00039W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linux Administration</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00039W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1227,7 +1227,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00011W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer organization and architecture (COA)</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00011W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1240,7 +1240,7 @@ Requirements:Digital logic design, Boolean algebra, HLL language programming
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00030S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear algebra</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00030S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1252,7 +1252,7 @@ Requirements:High school Mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00056">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Circuit Engineering </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00056</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1265,7 +1265,7 @@ Requirements:Logic for Computer Scientists,   Introduction to Computer Science,
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00003">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WWW Applications Programming in .NET Technology</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00003</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1277,7 +1277,7 @@ Requirements:Knowledge of object oriented programming concepts. Knowledge of one
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00031">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programming Basics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00031</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1290,7 +1290,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00058">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logic and Set Theory </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00058</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1302,7 +1302,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00005">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Intelligence</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00005</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1318,7 +1318,7 @@ Requirements:Knowledge of any programming language. Knowledge of logics and sets
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Software_Service_Engineering__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00036">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronic Circuits and Measurements </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00036</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1330,7 +1330,7 @@ Requirements:Foundations of Electrotechnics and Electronics,  Digital Circuit En
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00097S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wireless Networks</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00097S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1342,7 +1342,7 @@ Course contentElectromagnetic waves, Maxwell's equations. The spectrum of electr
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00054S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete Mathematics </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00054S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1354,7 +1354,7 @@ Requirements:logics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00053S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundations of Electrotechnics and Electronics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00053S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1366,7 +1366,7 @@ Requirements:Linear Algebra and Analytic Geometry,   Calculus
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00069S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear Control Theory </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00069S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1378,7 +1378,7 @@ Requirements:Linear Algebra and Analytic Geometry,   Linear Algebra and Analytic
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00020">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithms and Data Structures</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00020</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1391,7 +1391,7 @@ Requirements:Programming in C, C++, Java or C#, mathematical analysis - basic kn
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00010">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Graphics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00010</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1404,7 +1404,7 @@ Requirements:Programming skills in Java. Knowledge of matrix mathematical operat
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00028">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Database Systems and Data Warehouses</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00028</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1417,7 +1417,7 @@ Requirements:SQL, rational database model.
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Management_of_Data__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS000102S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerical Methods</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-000102S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1428,7 +1428,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00071">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software development tools</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00071</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1442,7 +1442,7 @@ Requirements:Programming Basics (INF1PPR)
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00020S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithms and Data Structures</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00020S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1455,7 +1455,7 @@ Requirements:Programming in C, C++, Java or C#, mathematical analysis - basic kn
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00092W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data visualiation and communication</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00092W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1468,7 +1468,7 @@ Requirements:.
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Empirical_Software_Engineering__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00064W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Differential and Difference Equations </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00064W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1480,7 +1480,7 @@ Requirements:Linear Algebra and Analytic Geometry 1,   Linear Algebra and Analyt
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00038S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human-Computer Interaction </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00038S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1492,7 +1492,7 @@ Requirements:Object Oriented Programming
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00002">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00002</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1504,7 +1504,7 @@ Requirements:High school Mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00010S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Graphics</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00010S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1517,7 +1517,7 @@ Requirements:Programming skills in Java. Knowledge of matrix mathematical operat
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00065">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematical Statistics </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00065</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1529,7 +1529,7 @@ Requirements:Calculus 1,   Calculus 3,   Probability Theory,   Information Techn
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00012">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object Oriented Programming</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00012</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1542,7 +1542,7 @@ Requirements:Students should already know at least on procedural programming lan
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00022S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods of Optimization</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00022S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1554,7 +1554,7 @@ Requirements:Calculus I, II. Linear Algebra.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00026">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Networks </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00026</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1567,7 +1567,7 @@ Requirements:Basic knowledge of UNIX/Linux systems (recommended RedHat/Fedora di
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Platforms_for_Automotive_Systems__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00003W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WWW Applications Programming in .NET Technology</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00003W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1579,7 +1579,7 @@ Requirements:Knowledge of object oriented programming concepts. Knowledge of one
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00042">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Security</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00042</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1591,7 +1591,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00069">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear Control Theory </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00069</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1603,7 +1603,7 @@ Requirements:Linear Algebra and Analytic Geometry,   Linear Algebra and Analytic
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00082W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Human-Computer Interaction and Application Usability</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00082W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1617,7 +1617,7 @@ Requirements:
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Advanced_Platforms_for_Automotive_Systems__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00085W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Information System</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00085W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1630,7 +1630,7 @@ Requirements:
     <ns1:hasModules rdf:resource="http://tuc.web.engineering/module#_Hardware_Development_with_VHDL__"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00064S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Differential and Difference Equations </ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00064S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1642,7 +1642,7 @@ Requirements:Linear Algebra and Analytic Geometry 1,   Linear Algebra and Analyt
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCS00002S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus</ns1:hasName>
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FCS-00002S</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
