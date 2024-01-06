@@ -7,6 +7,10 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.core.files.storage import FileSystemStorage
+from .universitiy_list import get_all_universities
+from .add_module import add_module_in_blaze
+from django.http import HttpResponse
+
 from polls.models import UserProfile
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
@@ -35,6 +39,10 @@ def upload_file(request):
     except Exception as e:
             return JsonResponse({'message': f'Error uploading and saving files: {str(e)}'}, status=500)
     
+@csrf_exempt
+def get_universities(request):
+    data = get_all_universities(request)
+    return JsonResponse(data , safe=False)
 
 def get_namespaces(graph):
     namespaces = {}

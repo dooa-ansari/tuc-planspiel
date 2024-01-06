@@ -9,6 +9,7 @@ import ShowModules from "./pages/ShowModules";
 import { gapi } from "gapi-script";
 import UserPage from "./pages/UserPage";
 import AdminPanel from "./admin/AdminPanel";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const App = () => {
