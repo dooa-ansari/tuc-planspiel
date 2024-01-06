@@ -6,14 +6,27 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ShowModules from "./pages/ShowModules";
+import UniversitySelection from "./pages/UniversitySelection";
+import HomePage from "./pages/user/HomePage/HomePage";
+import AcrossUniversitiesPage from "./pages/user/AcrossUniversitiesPage/AcrossUniversitiesPage";
+import MyProfile from "./pages/user/MyProfile/MyProfile";
+import Settings from "./pages/user/Settings/Settings";
+import Services from "./pages/user/Services/Services";
+import Modules from "./pages/user/Modules/Modules";
+import Courses from "./pages/user/Courses/Courses";
+import Applications from "./pages/user/Applications/Applications";
+import PageNotFound from "./pages/PageNotFound";
 import { gapi } from "gapi-script";
 import UserPage from "./pages/UserPage";
 import AdminPanel from "./admin/AdminPanel";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// import UserPage from "./pages/UserPage";
+// import AdminPanel from "./admin/AdminPanel";
+import CompareModules from "./pages/user/CompareModules/CompareModules";
+import Protected from "./components/Protected/Protected";
 
 const App = () => {
-
   useEffect(() => {
     gapi.load("client:auth2", () => {
       gapi.client.init({
@@ -22,29 +35,119 @@ const App = () => {
         plugin_name: "chat",
       });
     });
-
   }, []);
   return (
     <div className="app">
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/login" exact element={<Login />} />
-          <Route path="/register" exact element={<Register />} />
+          <Route path="/campus-flow/login" exact element={<Login />} />
+          <Route path="/campus-flow/register" exact element={<Register />} />
           <Route path="/modules" exact element={<ShowModules />} />
           <Route
-            path="/register"
+            path="/select-university"
+            exact
+            element={
+              <Protected>
+                <UniversitySelection />
+              </Protected>
+            }
+          />
+
+          <Route
+            path="/campus-flow/user/home"
+            exact
+            element={
+              <Protected>
+                <HomePage />
+              </Protected>
+            }
+          />
+          <Route
+            path="/campus-flow/user/universities"
+            exact
+            element={
+              <Protected>
+                <AcrossUniversitiesPage />
+              </Protected>
+            }
+          />
+          <Route
+            path="/campus-flow/user/profile"
+            exact
+            element={
+              <Protected>
+                <MyProfile />
+              </Protected>
+            }
+          />
+          <Route
+            path="/campus-flow/user/settings"
+            exact
+            element={
+              <Protected>
+                <Settings />
+              </Protected>
+            }
+          />
+          <Route
+            path="/campus-flow/user/services"
+            exact
+            element={
+              <Protected>
+                <Services />
+              </Protected>
+            }
+          />
+          <Route
+            path="/campus-flow/user/applications"
+            exact
+            element={
+              <Protected>
+                <Applications />
+              </Protected>
+            }
+          />
+          <Route
+            path="/campus-flow/user/modules"
+            exact
+            element={
+              <Protected>
+                <Modules />
+              </Protected>
+            }
+          />
+          <Route
+            path="/campus-flow/user/compare-modules"
+            exact
+            element={
+              <Protected>
+                <CompareModules />
+              </Protected>
+            }
+          />
+          <Route
+            path="/campus-flow/user/courses"
+            exact
+            element={
+              <Protected>
+                <Courses />
+              </Protected>
+            }
+          />
+          {/* <Route  path="/register"
             element={<Register />}
             onClick={() => {
               const history = useNavigate();
               history("/"); // Update this to the actual path of your homepage
             }}
-          />
-          <Route path="/user" exact element={<UserPage />} />
+          /> */}
+          {/* <Route path="/user" exact element={<UserPage />} /> */}
 
-          <Route path="/admin/*" element={<AdminPanel />} />
+         <Route path="/admin/*" element={<AdminPanel />} />
           {/* Other routes */}
 
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

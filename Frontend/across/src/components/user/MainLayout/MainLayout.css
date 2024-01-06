@@ -1,0 +1,20 @@
+.mainlayout__content {
+  padding-top: 55px;
+  padding-left: 210px;
+  padding-right: 2rem;
+ 
+}
+
+.mainlayout__footer {
+  padding-left: 180px;
+}
+
+@media screen and (max-width: 515px) {
+  .mainlayout__content {
+    padding-left: 100px;
+  }
+
+  .mainlayout__footer {
+    padding-left: 70px;
+  }
+}
