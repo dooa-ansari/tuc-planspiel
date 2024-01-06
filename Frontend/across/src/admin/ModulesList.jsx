@@ -56,14 +56,15 @@ const ModulesList = () => {
 
   const postAddData = () => {
     console.log(JSON.stringify({
-      courseUri: addCourseUri,
-      universityUri: addUniversityUri,
-      moduleName: moduleName,
-      moduleContent: moduleContent,
-      moduleCreditPoints: modulePoints,
-      moduleId: moduleId,
+      email: "",
+      university: "",
+      course: "",
+      module_name: "",
+      module_number: "",
+      module_content: "",
+      module_credit_points: ""
     }))
-    fetch("http://localhost:8000/adminapp/addmodule/", {
+    fetch("http://127.0.0.1:8000/adminapp/api/insert/", {
       method: "POST",
       headers: {
         Accept: "application/json",
