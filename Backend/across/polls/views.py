@@ -43,7 +43,8 @@ def register_user(request):
         email = data.get('email', '').strip()
         full_name = data.get('full_name', '').strip()
         password = data.get('password', '').strip()
-        university_name = data.get('university_name', '').strip()
+        confirmPassword = data.get('confirmPassword', '').strip()
+        
         
         try:
             existing_profiles = UserProfile.objects.filter(email=email)
@@ -52,19 +53,27 @@ def register_user(request):
 
             validate_email(email)
             validate_password(password)
+            if password !=confirmPassword:
+                return JsonResponse({"message": "Passwords don't match"})
             hashed_password = make_password(password)
 
               # Save the data with the hashed password
-            user_profile = UserProfile(email=email, full_name=full_name, password=hashed_password, university_name=university_name,
-                                       signup_using='FORM', role='USER')
+            user_profile = UserProfile(email=email, full_name=full_name, password=hashed_password, university_name="", signup_using='FORM', role='USER')
             user_profile.save()
             # Generate JWT token upon successful registration
             payload = {
                 'email': user_profile.email,
                 'exp': datetime.utcnow() + timedelta(days=1)  # Token expiration time (adjust as needed)
             }
+            # Serialize the UserProfile instance to JSON
+            user_profile_data = {
+                'email': user_profile.email,
+                'full_name': user_profile.full_name,
+                'signup_using': user_profile.signup_using,
+                'role':user_profile.role
+            }  
             jwt_token = jwt.encode(payload,settings.SECRET_KEY , algorithm='HS256')
-            return JsonResponse({'message': 'User registered successfully', 'token': jwt_token})
+            return JsonResponse({'message': 'User registered successfully', 'token': jwt_token, "data": user_profile_data})
 
         except ValidationError as e:
             return JsonResponse({'message': str(e)})
@@ -111,10 +120,17 @@ def authenticate_user_login(request):
                         'university_name': user_profile.university_name,
                         'signup_using': user_profile.signup_using,
                         'role':user_profile.role
-                    }                    
+                    }
+
+                    payload = {
+                        'email': user_profile.email,
+                        'exp': datetime.utcnow() + timedelta(days=1)  # Token expiration time (adjust as needed)
+                    }
+                    jwt_token = jwt.encode(payload,settings.SECRET_KEY , algorithm='HS256')                    
                     response = {
                         "message":"Login Successful",
-                        "data": user_profile_data
+                        "user": user_profile_data,
+                        "token": jwt_token
                     }
                     return JsonResponse(response, status =200)
                 else:
@@ -122,6 +138,14 @@ def authenticate_user_login(request):
             return JsonResponse({'message': 'Login Failed'}, status = 400)
         except json.JSONDecodeError:
             return JsonResponse({'message': 'Invalid JSON data in the request body'}, status=400)
+        except jwt.InvalidTokenError as e:
+            return JsonResponse({'message': 'Invalid token: ' + str(e)})
+        except jwt.ExpiredSignatureError as e:
+            return JsonResponse({'message': 'Token expired: ' + str(e)})
+        except jwt.InvalidSignatureError as e:
+            return JsonResponse({'message': 'Invalid signature: ' + str(e)})
+        except jwt.InvalidIssuerError as e:
+            return JsonResponse({'message': 'Invalid issuer: ' + str(e)})
     return JsonResponse({'message':'Method not allowed'}, status = 405)
 
 @csrf_exempt
