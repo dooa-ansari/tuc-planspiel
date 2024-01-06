@@ -44,14 +44,6 @@ def get_universities(request):
     data = get_all_universities(request)
     return JsonResponse(data , safe=False)
 
-
-
-@csrf_exempt
-@require_POST
-def add_module(request):
-    data = add_module_in_blaze(request)
-    return data
-
 def get_namespaces(graph):
     namespaces = {}
     for prefix, uri in graph.namespaces():
@@ -136,5 +128,53 @@ def update_module(request):
         # Handle other exceptions if needed
         response_data = {
                     'message': f"Module Updation Failed - {str(ex)}" 
+        }
+        return JsonResponse(response_data, status =500)
+
+@csrf_exempt
+@require_POST
+def delete_module(request):
+    data = json.loads(request.body.decode('utf-8'))
+    
+    # Extract data fields
+    email=data.get('email', '').strip()
+    module_uri = data.get('module_uri','').strip()
+
+    try:
+        existing_user_profile = UserProfile.objects.filter(email=email).first()
+        if existing_user_profile:
+            if existing_user_profile.role == 'ADMIN':
+                try:
+                    payload = {'update': delete_individual_module(module_uri)}
+
+                    result = requests.post("http://54.242.11.117/blazegraph/namespace/kb/sparql", data=payload)
+
+                    # Check the response status
+                    if result.status_code == 200:
+                        response_data = {
+                            'message': "Module deletion successful.",
+                        }
+                        return JsonResponse(response_data, status=200)
+                        
+                except Exception as ex:
+                    # Handle other exceptions if needed
+                    response_data = {
+                                'message': f"Module Deletion Failed - {str(ex)}" 
+                    }
+                    return JsonResponse(response_data, status =500)
+            else:
+                response_data = {
+                    'message': "User doesn't have admin privileges!" 
+                }
+                return JsonResponse(response_data, status =403)
+        else:
+            response_data = {
+                    'message': "User does not exist" 
+            }
+            return JsonResponse(response_data, status =404) 
+    except Exception as ex:
+        # Handle other exceptions if needed
+        response_data = {
+                    'message': f"Module Deletion Failed - {str(ex)}" 
         }
         return JsonResponse(response_data, status =500)

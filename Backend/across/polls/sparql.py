@@ -192,4 +192,12 @@ def is_module_already_present(module_name, module_number, university_uri, course
     """
 
     return query
-    
+
+def delete_individual_module(module_uri):
+    query = f"""
+    DELETE WHERE {{
+    <{module_uri}> ?predicate ?object .
+    }}
+    """
+
+    return query  
