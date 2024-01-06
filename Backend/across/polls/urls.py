@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import views
-from .views import google_logout, user_profile, authenticate_user_login
+from .views import google_logout, user_profile, authenticate_user_login, get_courses_from_university
 
 urlpatterns = [
     path("", views.index, name="index"),
@@ -11,5 +11,6 @@ urlpatterns = [
     path('google/signin', views.google_login, name='google_login'),
     path('google/logout/', google_logout, name='google-logout'),
     path('user/profile/', user_profile, name='user_profile'),
-    path('login', authenticate_user_login, name="user_login")
+    path('login', authenticate_user_login, name="user_login"),
+    path('courses/', get_courses_from_university, name="get-courses"),
 ]
