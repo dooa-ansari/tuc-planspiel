@@ -142,9 +142,9 @@ const App = () => {
               history("/"); // Update this to the actual path of your homepage
             }}
           /> */}
-          {/* <Route path="/user" exact element={<UserPage />} />
+          {/* <Route path="/user" exact element={<UserPage />} /> */}
 
-<Route path="/admin/*" element={<AdminPanel />} /> */}
+         <Route path="/admin/*" element={<AdminPanel />} />
           {/* Other routes */}
 
           <Route path="*" element={<PageNotFound />} />

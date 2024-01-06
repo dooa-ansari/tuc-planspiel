@@ -5,7 +5,7 @@ const Home = () => {
     const [token, setToken] = useState(null)
 
     useEffect(() => {
-        const authToken = localStorage.getItem('authToken');
+        const authToken = localStorage.getItem('token');
         setToken(authToken)
     }, [])
     console.log(token)

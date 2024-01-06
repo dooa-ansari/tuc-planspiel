@@ -277,6 +277,7 @@ const ModulesList = () => {
     );
   };
 
+  
   const getModuleDetailsModal = () => {
     return (
       <Modal show={show} onHide={handleClose}>
