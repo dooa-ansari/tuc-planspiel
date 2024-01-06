@@ -55,15 +55,6 @@ const ModulesList = () => {
   };
 
   const postAddData = () => {
-    console.log(JSON.stringify({
-      email: "",
-      university: "",
-      course: "",
-      module_name: "",
-      module_number: "",
-      module_content: "",
-      module_credit_points: ""
-    }))
     fetch("http://127.0.0.1:8000/adminapp/api/insert/", {
       method: "POST",
       headers: {
@@ -71,12 +62,13 @@ const ModulesList = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        courseUri: addCourseUri,
-        universityUri: addUniversityUri,
-        moduleName: moduleName,
-        moduleContent: moduleContent,
-        moduleCreditPoints: modulePoints,
-        moduleId: moduleId,
+        email: "dansari@gmail.com",
+        university: addUniversityUri,
+        course: addCourseUri,
+        module_name: moduleName,
+        module_number: moduleId,
+        module_content: moduleContent,
+        module_credit_points: modulePoints
       }),
     })
       .then((response) => response.json())
@@ -86,6 +78,26 @@ const ModulesList = () => {
       })
       .catch((error) => console.error(error));
   }
+
+  const deleteModule = (uri) => {
+    fetch("http://127.0.0.1:8000/adminapp/api/delete/", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: "dansari@gmail.com",
+        module_uri: uri,
+      }),
+    })
+      .then((response) => response.json())
+      .then((json) => {
+         
+      })
+      .catch((error) => console.error(error));
+  } 
+
   const handleCloseAddModal = () => setShowAddModal(false);
   const handleShowAddModal = () => {
     setShowAddModal(true);
@@ -118,11 +130,11 @@ const ModulesList = () => {
 
   const onClickUniversityAdd = (item) => {
     getCoursesList(item.uri, item.name, true);
-    setAddUniversityUri(item.uri)
+    setAddUniversityUri(item.name)
   };
 
   const onClickCourseAdd = (item) => {
-    setAddCourseUri(item.courseUri)
+    setAddCourseUri(item.courseName)
   };
 
   
@@ -363,7 +375,7 @@ const ModulesList = () => {
                           Details
                         </Button>
                         <Button variant="warning">Update</Button>
-                        <Button variant="danger">Delete</Button>
+                        <Button onClick={() => deleteModule(module.moduleUri)} variant="danger">Delete</Button>
                       </ButtonGroup>
                     </td>
                   </tr>
