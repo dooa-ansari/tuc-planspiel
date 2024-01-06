@@ -1,7 +1,8 @@
 from django.shortcuts import render
 
-import rdflib
 import os, json
+from pymantic import sparql
+from polls.sparql import *
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
@@ -9,6 +10,8 @@ from django.core.files.storage import FileSystemStorage
 from polls.models import UserProfile
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
+import requests
+
 
 @csrf_exempt
 @require_POST
@@ -39,72 +42,6 @@ def get_namespaces(graph):
         namespaces[prefix] = Namespace(uri)
     return namespaces
 
-def get_course_code(course_name):
-    try:
-        # Load Graph data
-        g = rdflib.Graph()
-        g.parse("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA/tuc_courses.rdf")
-
-        # Sparql query to retrieve course code for given course name
-        query = """
-                SELECT (STR(?course_code) as ?course_code_str)
-                WHERE {
-                    ?course rdf:type <http://tuc/course#> .
-                    ?course <http://tuc/course#hasCourseName> "%s"^^<http://www.w3.org/2001/XMLSchema#string> .
-                    BIND(STRAFTER(STR(?course), "#") as ?course_code)
-                } 
-        """ % course_name 
-
-        # Execute Sparql query
-        results = g.query(query)
-
-        # Retrieve course code from results
-        for row in results:
-            course_code = str(row.course_code_str)
-            return course_code
-
-        # Return None if nothing is present
-        return None
-    except Exception as ex:
-        # Handle other exceptions if needed
-        response_data = {
-                    'message': f"Module Updation Failed - {str(ex)}" 
-        }
-        return JsonResponse(response_data, status =500)
-
-def get_university_code(university_name):
-    try:
-        # Load Graph data
-        g = rdflib.Graph()
-        g.parse("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA/universities.rdf")
-
-        # Sparql query to retrieve course code for given course name
-        query = """
-                SELECT (STR(?uni_code) as ?uni_code_str)
-                WHERE {
-                    ?university rdf:type <http://across/university#> .
-                    ?university <http://across/university#hasUniversityName> "%s"^^<http://www.w3.org/2001/XMLSchema#string> .
-                    BIND(STRAFTER(STR(?university), "#") as ?uni_code)
-                }
-        """ % university_name 
-
-        # Execute Sparql query
-        results = g.query(query)
-
-        # Retrieve course code from results
-        for row in results:
-            uni_code = str(row.uni_code_str)
-            return uni_code
-        
-        # Return None if nothing is present
-        return None
-    except Exception as ex:
-        # Handle other exceptions if needed
-        response_data = {
-                    'message': f"Module Updation Failed - {str(ex)}" 
-        }
-        return JsonResponse(response_data, status =500)
-
 @csrf_exempt
 @require_POST
 def update_module(request):
@@ -123,94 +60,52 @@ def update_module(request):
     formatted_module_name = module_name.replace(' ', '_')
     formatted_module_number = module_number.replace(' ', '_')
 
-    course_code = get_course_code(course_name)
-    if course_code is None:
-        response_data = {
-                        'message': "The course which you provided is not available"
-            }
-        return JsonResponse(response_data, status =404) 
-
-    uni_code = get_university_code(university_name)
-    if uni_code is None:
-        response_data = {
-                        'message': "The university which you provided is not available"
-            }
-        return JsonResponse(response_data, status =404) 
-    
     try:
         existing_user_profile = UserProfile.objects.filter(email=email).first()
         if existing_user_profile:
             if existing_user_profile.role == 'ADMIN':
+                server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
 
-                modules_rdf_path = os.path.join("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA", "modules.rdf")
-                modules_graph = Graph()
-                modules_graph.parse(modules_rdf_path, format="xml")
-                modules_ns = get_namespaces(modules_graph)["module"]
-
-                universities_rdf_path = os.path.join("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA", "universities.rdf")
-                course_rdf_path = os.path.join("D:/Web Engineering/SEM-III/Planspiel/ACROSS/ACROSS_MAIN/web-wizards/Backend/across/RDF_DATA", "tuc_courses.rdf")
+                qresponse = server.query(get_university_uri_by_university_name(university_name))
+                data_for_unviersity_uri = qresponse['results']['bindings'] 
+                for result in data_for_unviersity_uri:
+                    university_uri = str(result['universityUri']['value'])
                 
-                # Load the universities RDF file
-                universities_graph = Graph()
-                universities_graph.parse(universities_rdf_path, format="xml")
+                query = get_course_uri_by_course_and_university_name(course_name, university_name)
+                qresponse = server.query(query)
+                data_for_course_uri = qresponse['results']['bindings'] 
+                for result in data_for_course_uri:
+                    course_uri = str(result['courseUri']['value'])
+
+                qresponse = server.query(is_module_already_present(module_name, module_number, university_uri, course_uri))
                 
-                # Load the courses RDF file
-                courses_graph = Graph()
-                courses_graph.parse(course_rdf_path, format="xml")
-
-                # Extract namespaces from universities RDF file
-                university_ns = get_namespaces(universities_graph)["university"]
-                course_ns = get_namespaces(courses_graph)["course"]
-
-                # Find the relevant university in the universities RDF file
-                university_uri = university_ns[uni_code]
-
-                # Find the relevant course in the courses RDF file
-                course_uri = course_ns[course_code]
-
-                # Construct the module URI based on the provided parameters
-                module_uri = modules_ns[f"{formatted_module_name}"]
-
-                # Get the namespace URIs directly from the graph's namespace_manager
-                university_ns_uri = modules_graph.namespace_manager.store.namespace("university").toPython()
-                course_ns_uri = modules_graph.namespace_manager.store.namespace("course").toPython()
-
-                university_ns_uri = university_ns_uri+uni_code
-                course_ns_uri = course_ns_uri+course_code
-
-                # Check if predicates are found
-                if university_ns_uri is not None and course_ns_uri is not None:
-                    if university_ns_uri == university_uri.toPython() and course_ns_uri == course_uri.toPython():
-
-                        # Check if the module already exists, if not, create a new description
-                        if (module_uri, None, None) not in modules_graph:
-                            modules_graph.add((module_uri, RDF.type, URIRef(str(modules_ns))))
-
-                        # Update the module information in the module RDF graph
-                        modules_graph.set((module_uri, modules_ns.hasModuleNumber, Literal(formatted_module_number, datatype=XSD.string)))
-                        modules_graph.set((module_uri, modules_ns.hasName, Literal(module_name, datatype=XSD.string)))
-                        modules_graph.set((module_uri, modules_ns.hasContent, Literal(module_content, datatype=XSD.string)))
-                        modules_graph.set((module_uri, modules_ns.hasCreditPoints, Literal(int(module_credit_points))))
-                        modules_graph.add((module_uri, university_ns.hasUniversity, university_uri))
-                        modules_graph.add((module_uri, course_ns.hasCourse, course_uri))
-
-                        # Save the updated module RDF graph
-                        modules_graph.serialize(destination=modules_rdf_path, format="xml")
-                        response_data = {
-                            'message': "Module Updated Successfully",
-                            'module_name': module_name 
-                        }
-                        return JsonResponse(response_data, status =200)
-                    else:
-                        response_data = {
-                            'message': "Doesn't find any matching university or course to add module, Please check RDF data"
-                    }
-                    return JsonResponse(response_data, status =404) 
-                else:
+                # Module already exists, return a message
+                if qresponse.get('boolean') is True:                    
                     response_data = {
-                    'message': "University and Course predicates are not available, Please check RDF data" 
+                        'message': "Module already exists for the given University and Course.",
+                        'module_name': module_name 
                     }
-                    return JsonResponse(response_data, status =404) 
+                    return JsonResponse(response_data, status=200)
+                else:
+                    try:
+                        payload = {'update': add_individual_module_by_admin(formatted_module_name, module_name, formatted_module_number, module_content, module_credit_points, university_uri, course_uri)}
+        
+                        result = requests.post("http://54.242.11.117/blazegraph/namespace/kb/sparql", data=payload)
+
+                        # Check the response status
+                        if result.status_code == 200:
+                            response_data = {
+                                'message': "Module updation successful.",
+                                'module_name': module_name 
+                            }
+                            return JsonResponse(response_data, status=200)
+                        
+                    except Exception as ex:
+                        # Handle other exceptions if needed
+                        response_data = {
+                                    'message': f"Module Updation Failed - {str(ex)}" 
+                        }
+                        return JsonResponse(response_data, status =500)
             else:
                 response_data = {
                     'message': "User doesn't have admin privileges!" 
