@@ -1,3 +1,4 @@
+import csv
 from django.shortcuts import render
 
 import os, json
@@ -12,6 +13,7 @@ from .add_module import add_module_in_blaze
 from django.http import HttpResponse
 
 from polls.models import UserProfile
+from polls.csvTordf import University,CsvToRDF, UpdateModules, InsertModules
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
 import requests
@@ -34,6 +36,25 @@ def upload_file(request):
             for file in uploaded_files:
                 saved_file = fs.save(file.name, file)
                 saved_files.append(saved_file)
+            
+            uni = University()
+            unis = uni.get_all_university()
+            csv_rdf= CsvToRDF(uni)
+            csv_readers=[]
+            file_path = os.path.join(fs.location, file.name)
+            print(file_path)
+            if os.path.exists(file_path):
+                with open(file_path, 'r', newline='', encoding='utf-8') as file:
+                    csv_reader = csv.reader(file)
+                    for row in csv_reader:
+                        csv_readers.append(row)
+
+            csvModels=csv_rdf.get_all_csv_models(csv_readers, unis)
+            csv_rdf.csvModules= csvModels
+            upModule = UpdateModules()
+            upModule.getUpdateModels(csv_rdf)
+            inModule = InsertModules()
+            inModule.insertModul(csv_rdf)
 
             return JsonResponse({'message': 'Files uploaded and saved successfully', 'saved_files': saved_files}, status=200)
     except Exception as e:
