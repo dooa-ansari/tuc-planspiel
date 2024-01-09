@@ -33,6 +33,12 @@ const ModulesList = () => {
   const [moduleName, setModuleName] = useState("")
   const [modulePoints, setModulePoints] = useState("")
   const [moduleContent, setModuleContent] = useState("")
+  const [token, setToken] = useState(null)
+
+  useEffect(() => {
+      const authToken = localStorage.getItem('token');
+      setToken(authToken)
+  }, [])
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -56,7 +62,7 @@ const ModulesList = () => {
   };
 
   const postAddData = () => {
-    fetch("http://127.0.0.1:8000/adminapp/api/insert/", {
+    fetch("http://127.0.0.1:8000/admin/api/insert/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -81,7 +87,7 @@ const ModulesList = () => {
   }
 
   const deleteModule = (uri) => {
-    fetch("http://127.0.0.1:8000/adminapp/api/delete/", {
+    fetch("http://127.0.0.1:8000/admin/api/delete/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -116,7 +122,14 @@ const ModulesList = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8000/adminapp/universitieslist")
+    fetch("http://localhost:8000/admin/universitieslist", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        token: token
+      },
+    })
       .then((response) => response.json())
       .then((json) => {
         setUniversities(json);
