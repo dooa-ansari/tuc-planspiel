@@ -61,8 +61,31 @@ const ModulesList = () => {
    
   };
 
+  const handleSubmitUpdate = (event) => {
+    const form = event.currentTarget;
+    event.preventDefault();
+    console.log(moduleId)
+    console.log(moduleName)
+    console.log(modulePoints)
+    console.log(moduleContent)
+    console.log(selectedUniversityName)
+    console.log(selectedCourse)
+    postUpdateData()
+    setValidated(true);     
+    if (form.checkValidity() === false) {
+      
+        
+    }else{
+       
+    }
+   
+   
+   
+   
+  };
+
   const postAddData = () => {
-    fetch("http://127.0.0.1:8000/admin/api/insert/", {
+    fetch("http://127.0.0.1:8000/adminapp/api/insert/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -86,8 +109,45 @@ const ModulesList = () => {
       .catch((error) => console.error(error));
   }
 
+
+  const postUpdateData = () => {
+    console.log({
+      email: "dansari@gmail.com",
+      university: selectedUniversityName,
+      course: selectedCourse,
+      module_name: currentModule.moduleName,
+      module_number: currentModule.moduleNumber,
+      module_content: currentModule.moduleContent,
+      module_credit_points: currentModule.moduleCreditPoints,
+      module_uri: currentModule.moduleUri
+    })
+    fetch("http://127.0.0.1:8000/adminapp/api/update/", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: "dansari@gmail.com",
+        university: selectedUniversityName,
+        course: selectedCourse,
+        module_name: currentModule.moduleName,
+        module_number: currentModule.moduleNumber,
+        module_content: currentModule.moduleContent,
+        module_credit_points: currentModule.moduleCreditPoints,
+        module_uri: currentModule.moduleUri
+      }),
+    })
+      .then((response) => response.json())
+      .then((json) => {
+         console.log(json)
+         handleCloseUpdateModal()
+      })
+      .catch((error) => console.error(error));
+  }
+
   const deleteModule = (uri) => {
-    fetch("http://127.0.0.1:8000/admin/api/delete/", {
+    fetch("http://127.0.0.1:8000/adminapp/api/delete/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -118,17 +178,18 @@ const ModulesList = () => {
   };
 
   const handleShowUpdate = (module) => {
-    setShow(true);
+    setCurrentModule(module);
+    setShowUpdateModal(true);
   };
 
   useEffect(() => {
-    fetch("http://localhost:8000/admin/universitieslist", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        token: token
-      },
+    fetch("http://localhost:8000/adminapp/universitieslist", {
+      // method: "GET",
+      // headers: {
+      //   Accept: "application/json",
+      //   "Content-Type": "application/json",
+      //   token: token
+      // },
     })
       .then((response) => response.json())
       .then((json) => {
@@ -143,6 +204,7 @@ const ModulesList = () => {
   };
 
   const onClickCourse = (item) => {
+    setSelectedCourse(item.courseName)
     setLoadingModules(1);
     getModuleList(item.courseUri, item.courseName);
   };
@@ -158,7 +220,7 @@ const ModulesList = () => {
 
   
   const getModuleList = (uri, name) => {
-    fetch("http://localhost:8000/polls/modules/", {
+    fetch("http://localhost:8000/api/modules/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -179,7 +241,7 @@ const ModulesList = () => {
   };
 
   const getCoursesList = (uri, name, isAdd) => {
-    fetch("http://localhost:8000/polls/courses/", {
+    fetch("http://localhost:8000/api/courses/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -196,14 +258,14 @@ const ModulesList = () => {
 
             setCourses(json.courses);
        
-            setSelectedUniversityUri(uri);
-            setSelectedUniversityName(name); }
+         }
             else{
                 setCoursesAdd(json.courses);
        
-                setSelectedUniversityUri(uri);
-                setSelectedUniversityName(name);
+                
           }
+          setSelectedUniversityUri(uri);
+          setSelectedUniversityName(name);
          
        
       })
@@ -299,7 +361,7 @@ const ModulesList = () => {
 
   const getUpdateModuleFormModal = () => {
     return (
-      <Modal show={showUpdateModal} onHide={handleCloseUpdateModal}>
+      <Modal show={showUpdateModal} onHide={ handleCloseUpdateModal}>
         <Modal.Header closeButton>
           <Modal.Title>Update Module</Modal.Title>
         </Modal.Header>
@@ -307,7 +369,7 @@ const ModulesList = () => {
           <div className="dropdowns">
             <Dropdown>
               <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                Select Univeristy
+                 {selectedUniversityName ? selectedUniversityName : "Select Univeristy"}
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
@@ -324,7 +386,7 @@ const ModulesList = () => {
             {universitiesForAdd.length > 0 && selectedUniversityUri && (
               <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  Select Course
+                {selectedCourse ? selectedCourse : "Select Course"}
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
@@ -340,23 +402,24 @@ const ModulesList = () => {
               </Dropdown>
             )}
           </div>
-          <Form noValidate validated={validated} name="addForm">
+          <Form noValidate validated={validated} name="updateForm">
             <Row className="mb-3">
-              <Form.Group as={Col} md="5" controlId="addForm.id">
+              <Form.Group as={Col} md="5" controlId="updateForm.id">
                 <Form.Label>Id/Number</Form.Label>
-                <Form.Control  onChange={(event) => setModuleId(event.target.value)}  name="id" required type="text" placeholder="Module Id" />
+                <Form.Control defaultValue={currentModule?.moduleNumber}  onChange={(event) => setModuleId(event.target.value)}  name="id" required type="text" placeholder="Module Id" />
                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               </Form.Group>
-              <Form.Group as={Col} md="5" controlId="addForm.name">
+              <Form.Group as={Col} md="5" controlId="updateForm.name">
                 <Form.Label>Name</Form.Label>
-                <Form.Control  onChange={(event) => setModuleName(event.target.value)}  name="name" required type="text" placeholder="Module Name" />
+                <Form.Control defaultValue={currentModule?.moduleName}  onChange={(event) => setModuleName(event.target.value)}  name="name" required type="text" placeholder="Module Name" />
                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               </Form.Group>
             </Row>
             <Row className="mb-3">
-              <Form.Group as={Col} md="6" controlId="addForm.points">
+              <Form.Group as={Col} md="6" controlId="updateForm.points">
                 <Form.Label>Credit Points</Form.Label>
                 <Form.Control
+                  defaultValue={currentModule?.moduleCreditPoints}
                   type="text"
                   placeholder="Credit Points"
                   required
@@ -371,12 +434,12 @@ const ModulesList = () => {
 
             <Form.Group
               className="mb-3"
-              controlId="addForm.content"
+              controlId="updateForm.content"
             >
               <Form.Label>Content</Form.Label>
-              <Form.Control  onChange={(event) => setModuleContent(event.target.value)}  name="content" as="textarea" rows={3} />
+              <Form.Control defaultValue={currentModule?.moduleContent}  onChange={(event) => setModuleContent(event.target.value)}  name="content" as="textarea" rows={3} />
             </Form.Group>
-            <Button onClick={handleSubmit} type="submit">Submit</Button>
+            <Button onClick={handleSubmitUpdate} type="submit">Update Module</Button>
           </Form>
         </Modal.Body>
       </Modal>
