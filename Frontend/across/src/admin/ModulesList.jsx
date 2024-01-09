@@ -25,6 +25,7 @@ const ModulesList = () => {
   const [currentModule, setCurrentModule] = useState(null);
   const [show, setShow] = useState(false);
   const [showAddModal, setShowAddModal] = useState(false);
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [validated, setValidated] = useState(false);
   const [addUniversityUri, setAddUniversityUri] = useState("")
   const [addCourseUri, setAddCourseUri] = useState("")
@@ -99,6 +100,7 @@ const ModulesList = () => {
   } 
 
   const handleCloseAddModal = () => setShowAddModal(false);
+  const handleCloseUpdateModal = () => setShowAddModal(false);
   const handleShowAddModal = () => {
     setShowAddModal(true);
   };
@@ -106,6 +108,10 @@ const ModulesList = () => {
   const handleClose = () => setShow(false);
   const handleShow = (module) => {
     setCurrentModule(module);
+    setShow(true);
+  };
+
+  const handleShowUpdate = (module) => {
     setShow(true);
   };
 
@@ -277,6 +283,93 @@ const ModulesList = () => {
     );
   };
 
+
+  const getUpdateModuleFormModal = () => {
+    return (
+      <Modal show={showUpdateModal} onHide={handleCloseUpdateModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Update Module</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="dropdowns">
+            <Dropdown>
+              <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                Select Univeristy
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                {universitiesForAdd?.map((item) => (
+                  <Dropdown.Item
+                    onClick={() => onClickUniversityAdd(item)}
+                    key={item.id}
+                  >
+                    {item.name}
+                  </Dropdown.Item>
+                ))}
+              </Dropdown.Menu>
+            </Dropdown>
+            {universitiesForAdd.length > 0 && selectedUniversityUri && (
+              <Dropdown>
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                  Select Course
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  {coursesAdd?.map((item) => (
+                    <Dropdown.Item
+                      key={item.courseNumber}
+                      onClick={() => onClickCourseAdd(item)}
+                    >
+                      {item.courseName}
+                    </Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            )}
+          </div>
+          <Form noValidate validated={validated} name="addForm">
+            <Row className="mb-3">
+              <Form.Group as={Col} md="5" controlId="addForm.id">
+                <Form.Label>Id/Number</Form.Label>
+                <Form.Control  onChange={(event) => setModuleId(event.target.value)}  name="id" required type="text" placeholder="Module Id" />
+                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group as={Col} md="5" controlId="addForm.name">
+                <Form.Label>Name</Form.Label>
+                <Form.Control  onChange={(event) => setModuleName(event.target.value)}  name="name" required type="text" placeholder="Module Name" />
+                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              </Form.Group>
+            </Row>
+            <Row className="mb-3">
+              <Form.Group as={Col} md="6" controlId="addForm.points">
+                <Form.Label>Credit Points</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Credit Points"
+                  required
+                  name="points"
+                  onChange={(event) => setModulePoints(event.target.value)} 
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please provide Credit Points
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Row>
+
+            <Form.Group
+              className="mb-3"
+              controlId="addForm.content"
+            >
+              <Form.Label>Content</Form.Label>
+              <Form.Control  onChange={(event) => setModuleContent(event.target.value)}  name="content" as="textarea" rows={3} />
+            </Form.Group>
+            <Button onClick={handleSubmit} type="submit">Submit</Button>
+          </Form>
+        </Modal.Body>
+      </Modal>
+    );
+  };
+
   
   const getModuleDetailsModal = () => {
     return (
@@ -308,6 +401,7 @@ const ModulesList = () => {
     <div style={{ flex: 1 }}>
       {getModuleDetailsModal()}
       {getAddModuleFormModal()}
+      {getUpdateModuleFormModal()}
 
       <p id="moduleHeading">Modules Table</p>
       <div className="dropdowns">
@@ -375,7 +469,7 @@ const ModulesList = () => {
                         >
                           Details
                         </Button>
-                        <Button variant="warning">Update</Button>
+                        <Button onClick={() => handleShowUpdate(module)}  variant="warning">Update</Button>
                         <Button onClick={() => deleteModule(module.moduleUri)} variant="danger">Delete</Button>
                       </ButtonGroup>
                     </td>
