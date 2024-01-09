@@ -1,7 +1,7 @@
 import os
 import csv
 from typing import Any
-from rdflib import Graph, Namespace, Literal
+from rdflib import Graph, Namespace, Literal, URIRef
 from rdflib.namespace import RDF, XSD
 from rdflib.plugins.sparql import prepareQuery
 
@@ -13,6 +13,11 @@ university_dict = {
 #Give the correct rdf file path
 rdf_file = r'Backend\across\uploads\models3.rdf'
 university_rdf= r'Backend\across\RDF_DATA\universities.rdf'
+
+# Define namespaces
+ns1 = Namespace("http://tuc.web.engineering/module#")
+ns2 = Namespace("http://tuc/course#")
+ns3 = Namespace("http://across/university#")
 
 
 class Module:
@@ -50,9 +55,6 @@ class University:
         return query
     
     def get_all_university(self):
-        ns1 = Namespace("http://tuc.web.engineering/module#")
-        ns2 = Namespace("http://tuc/course#")
-        ns3 = Namespace("http://across/university#")
         # Create an RDF graph
         g = Graph()
         # Add namespaces to the graph
@@ -110,10 +112,6 @@ WHERE {
 class CsvToRDF():
     def __init__(self, university):
         self.uni = university
-        # Define namespaces
-        self.ns1 = Namespace("http://tuc.web.engineering/module#")
-        self.ns2 = Namespace("http://tuc/course#")
-        self.ns3 = Namespace("http://across/university#")
     def csvModules(self, value):
         self.csvModules = value
     
@@ -156,19 +154,19 @@ class UpdateModules():
             # Create an RDF graph
             g = Graph()
             # Add namespaces to the graph
-            g.bind("module", csvToRDF.ns1)
-            g.bind("course", csvToRDF.ns2 )
-            g.bind("university", csvToRDF.ns3 )
+            g.bind("module", ns1)
+            g.bind("course", ns2)
+            g.bind("university", ns3)
             for updateModule in updateModules:
              string_without_hyphen = updateModule.hasModuleNumber.replace('-', '').replace(' ', '')
-             subject = csvToRDF.ns1[string_without_hyphen]
-             g.set((subject, RDF.type, csvToRDF.ns1["module"]))
-             g.set((subject, csvToRDF.ns1["hasModuleNumber"], Literal(updateModule.hasModuleNumber, datatype=XSD.string)))
-             g.set((subject, csvToRDF.ns1["hasName"], Literal(updateModule.hasName, datatype=XSD.string)))
-             g.set((subject, csvToRDF.ns1["hasContent"], Literal(updateModule.hasContent, datatype=XSD.string)))
-             g.set((subject, csvToRDF.ns2["hasCourse"], csvToRDF.ns2[updateModule.hasCourse]))
-             g.set((subject, csvToRDF.ns3["hasUniversity"], csvToRDF.ns3[updateModule.hasUniversity]))
-             g.set((subject, csvToRDF.ns1["hasCreditPoints"], Literal(updateModule.hasCreditPoints, datatype=XSD.string)))
+             subject = ns1[string_without_hyphen]
+             g.set((subject, RDF.type, URIRef('http://tuc.web.engineering/module#')))
+             g.set((subject, ns1["hasModuleNumber"], Literal(updateModule.hasModuleNumber, datatype=XSD.string)))
+             g.set((subject, ns1["hasName"], Literal(updateModule.hasName, datatype=XSD.string)))
+             g.set((subject, ns1["hasContent"], Literal(updateModule.hasContent, datatype=XSD.string)))
+             g.set((subject, ns2["hasCourse"], ns2[updateModule.hasCourse]))
+             g.set((subject, ns3["hasUniversity"], ns3[updateModule.hasUniversity]))
+             g.set((subject, ns1["hasCreditPoints"], Literal(updateModule.hasCreditPoints, datatype=XSD.string)))
             new_rdf_content = g.serialize(format='xml')
             new_rdf_bytes = new_rdf_content.encode('utf-8')
             with open(rdf_file, 'wb') as file:
@@ -181,9 +179,9 @@ class InsertModules():
             g = Graph()
             g.parse(rdf_file, format="xml")
             # Add namespaces to the graph
-            g.bind("module", csvToRDF.ns1)
-            g.bind("course", csvToRDF.ns2 )
-            g.bind("university", csvToRDF.ns3 )
+            g.bind("module", ns1)
+            g.bind("course", ns2 )
+            g.bind("university", ns3 )
 
             newModels = []
             for newModule in csvToRDF.csvModules:
@@ -192,14 +190,14 @@ class InsertModules():
                     newModels.append(newModule) 
             for row in newModels:
                 string_without_hyphen = row.hasModuleNumber.replace('-', '').replace(' ', '')
-                subject = csvToRDF.ns1[string_without_hyphen]
-                g.add((subject, RDF.type, csvToRDF.ns1["module"]))
-                g.add((subject, csvToRDF.ns1["hasModuleNumber"], Literal(row.hasModuleNumber, datatype=XSD.string)))
-                g.add((subject, csvToRDF.ns1["hasName"], Literal(row.hasName, datatype=XSD.string)))
-                g.add((subject, csvToRDF.ns1["hasContent"], Literal(row.hasContent, datatype=XSD.string)))
-                g.add((subject, csvToRDF.ns2["hasCourse"], csvToRDF.ns2[row.hasCourse]))
-                g.add((subject, csvToRDF.ns3["hasUniversity"], csvToRDF.ns3[row.hasUniversity.replace(" ", "_")]))
-                g.add((subject, csvToRDF.ns1["hasCreditPoints"], Literal(row.hasCreditPoints, datatype=XSD.string)))
+                subject = ns1[string_without_hyphen]
+                g.add((subject, RDF.type, URIRef('http://tuc.web.engineering/module#')))
+                g.add((subject, ns1["hasModuleNumber"], Literal(row.hasModuleNumber, datatype=XSD.string)))
+                g.add((subject, ns1["hasName"], Literal(row.hasName, datatype=XSD.string)))
+                g.add((subject, ns1["hasContent"], Literal(row.hasContent, datatype=XSD.string)))
+                g.add((subject, ns2["hasCourse"], ns2[row.hasCourse]))
+                g.add((subject, ns3["hasUniversity"], ns3[row.hasUniversity.replace(" ", "_")]))
+                g.add((subject, ns1["hasCreditPoints"], Literal(row.hasCreditPoints, datatype=XSD.string)))
 
             new_rdf_content = g.serialize(format='xml')
             new_rdf_bytes = new_rdf_content.encode('utf-8')
@@ -208,3 +206,27 @@ class InsertModules():
                 file.write(new_rdf_bytes)
         except Exception as e:
             print(f'the error occurs at {e}')
+
+'''
+uni = University()
+unis = uni.get_all_university()
+csv_rdf= CsvToRDF(uni)
+csv_readers=[]
+            
+file_path = r'C:\Users\User\Desktop\Source\web-wizards-11\Backend\across\uploads\Data2.csv'
+print(file_path)
+if os.path.exists(file_path):
+
+    with open(file_path, 'r', newline='', encoding='utf-8') as file:
+            csv_reader = csv.reader(file)
+            for row in csv_reader:
+                csv_readers.append(row)
+
+            newModules=csv_rdf.get_all_csv_models(csv_readers, unis)
+            csv_rdf.csvModules= newModules
+            upModule = UpdateModules()
+            upModule.getUpdateModels(csv_rdf)
+            inModule = InsertModules()
+            inModule.insertModul(csv_rdf)
+
+'''
