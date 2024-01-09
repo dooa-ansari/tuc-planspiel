@@ -1,3 +1,4 @@
+from .get_similar_module_against_module_uri import get_similar_module_against_module_uri
 import rdflib
 from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
@@ -16,8 +17,10 @@ from django.conf import settings
 import jwt  # Import PyJWT library
 from datetime import datetime, timedelta
 
-
+from pymantic import sparql
+from .sparql import *
 import json
+import os
 import requests
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request as GoogleAuthRequest
@@ -27,6 +30,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.hashers import check_password
 
+from django.views.decorators.http import require_POST
 
 def listsimilarmodules(request):
     data = find_all_similar_modules_list()
@@ -281,3 +285,134 @@ def user_profile(request):
     }
 
     return JsonResponse(user_details)
+
+@csrf_exempt
+@require_POST
+def get_courses_from_university(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        universityName = data.get('universityName','')
+        universityUri = data.get('universityUri','')
+
+        # SPARQL query to retrieve university names and course names
+        sparql_query = get_course_from_university_query(universityUri, universityName)
+
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+
+        qresponse = server.query(sparql_query)
+        course_list = []
+        data = qresponse['results']['bindings']
+        
+        # Process the results
+        for result in data:
+            course_list_temp = {
+                'courseUri' :  str(result['courseUri']['value']),
+                'courseName' : str(result['courseName']['value']),
+                'courseNumber' : str(result['courseNumber']['value'])
+            }
+            course_list.append(course_list_temp)
+
+        # Return JSON response
+        if not course_list:
+            response = {
+                "message": f"No courses found for {universityName}, please check university uri or university name",
+                "university": universityName
+            }
+            return JsonResponse(response, status =404)
+        else:
+            response = {
+                "message": "Course list returned successfully",
+                "courses": course_list,
+                "university": universityName
+            }
+            return JsonResponse(response, status =200)
+
+    except json.JSONDecodeError as json_error:
+        response = {
+            "message": f"JSON decoding error: {json_error}"
+        }
+        return JsonResponse(response, status =400)
+    except rdflib.exceptions.Error as rdf_error:
+        response = {
+            "message": f"RDF parsing error: {rdf_error}"
+        }
+        return JsonResponse(response, status =500)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_POST
+def get_modules_from_course_and_university(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        courseUri = data.get('courseUri','')
+        universityUri = data.get('universityUri','')
+        courseName = data.get('courseName','')
+     
+        # SPARQL query to retrieve university names and course names
+        sparql_query = get_modules_from_course_and_university_query(courseUri, courseName, universityUri)
+
+        # Execute the SPARQL query
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+
+        qresponse = server.query(sparql_query)
+        module_list = []
+        data = qresponse['results']['bindings']
+        # Process the results
+        for result in data:
+            module_list_temp = {
+                'moduleUri' :  str(result['sampleModuleUri']['value']),
+                'moduleName' : str(result['moduleName']['value']),
+                'moduleNumber' : str(result['sampleModuleNumber']['value']),
+                'moduleContent' : str(result['sampleModuleContent']['value']),
+                'moduleCreditPoints' : str(result['sampleModuleCreditPoints']['value'])
+            }
+            module_list.append(module_list_temp)
+
+        # Return JSON response
+        if not module_list:
+            response = {
+                "message": f"No modules found for course named as {courseName}, please check university uri or course uri or course name",
+                "course": courseName
+            }
+            return JsonResponse(response, status =404)
+        else:
+            response = {
+                "message": "Module list returned successfully",
+                "modules": module_list,
+                "course": courseName
+            }
+            return JsonResponse(response, status =200)
+
+    except json.JSONDecodeError as json_error:
+        response = {
+            "message": f"JSON decoding error: {json_error}"
+        }
+        return JsonResponse(response, status =400)
+    except rdflib.exceptions.Error as rdf_error:
+        response = {
+            "message": f"RDF parsing error: {rdf_error}"
+        }
+        return JsonResponse(response, status =500)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+    
+@csrf_exempt
+def get_similar_module_against_given_module_uri(request):
+    return get_similar_module_against_module_uri(request)
+
