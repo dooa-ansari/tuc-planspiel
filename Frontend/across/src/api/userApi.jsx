@@ -31,6 +31,17 @@ export const register = async data => {
   return response;
 };
 
+export const googleSignIn = async data => {
+  let response;
+  try {
+    response = await api.post("/api/google/signin", data);
+  } catch (error) {
+    return error;
+  }
+
+  return response;
+};
+
 export const storeUserInLocalStorage = data => {
   localStorage.setItem("token", data.token);
   localStorage.setItem("user", JSON.stringify(data.user));
