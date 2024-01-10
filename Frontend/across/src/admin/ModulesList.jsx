@@ -125,10 +125,10 @@ const ModulesList = () => {
         email: "dansari@gmail.com",
         university: selectedUniversityName,
         course: selectedCourse,
-        module_name: moduleName,
-        module_number: moduleId,
-        module_content: moduleContent,
-        module_credit_points: modulePoints,
+        module_name: moduleName.length == 0 ? currentModule.moduleName : moduleName,
+        module_number: moduleId.length == 0 ? currentModule.moduleNumber : moduleId,
+        module_content: moduleContent.length == 0 ? currentModule.moduleContent : moduleContent,
+        module_credit_points: modulePoints.length == 0 ? currentModule.moduleCreditPoints : modulePoints,
         module_uri: currentModule.moduleUri
       }),
     })
