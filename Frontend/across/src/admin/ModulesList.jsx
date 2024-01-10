@@ -64,12 +64,6 @@ const ModulesList = () => {
   const handleSubmitUpdate = (event) => {
     const form = event.currentTarget;
     event.preventDefault();
-    console.log(moduleId)
-    console.log(moduleName)
-    console.log(modulePoints)
-    console.log(moduleContent)
-    console.log(selectedUniversityName)
-    console.log(selectedCourse)
     postUpdateData()
     setValidated(true);     
     if (form.checkValidity() === false) {
@@ -131,10 +125,10 @@ const ModulesList = () => {
         email: "dansari@gmail.com",
         university: selectedUniversityName,
         course: selectedCourse,
-        module_name: currentModule.moduleName,
-        module_number: currentModule.moduleNumber,
-        module_content: currentModule.moduleContent,
-        module_credit_points: currentModule.moduleCreditPoints,
+        module_name: moduleName,
+        module_number: moduleId,
+        module_content: moduleContent,
+        module_credit_points: modulePoints,
         module_uri: currentModule.moduleUri
       }),
     })
@@ -166,7 +160,7 @@ const ModulesList = () => {
   } 
 
   const handleCloseAddModal = () => setShowAddModal(false);
-  const handleCloseUpdateModal = () => setShowAddModal(false);
+  const handleCloseUpdateModal = () => setShowUpdateModal(false);
   const handleShowAddModal = () => {
     setShowAddModal(true);
   };
@@ -178,12 +172,13 @@ const ModulesList = () => {
   };
 
   const handleShowUpdate = (module) => {
+    console.log(JSON.stringify(module))
     setCurrentModule(module);
     setShowUpdateModal(true);
   };
 
   useEffect(() => {
-    fetch("http://localhost:8000/adminapp/universitieslist", {
+    fetch("http://localhost:8000/adminapp/universitieslist/", {
       // method: "GET",
       // headers: {
       //   Accept: "application/json",
