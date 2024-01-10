@@ -127,14 +127,14 @@ const ModulesList = () => {
         course: selectedCourse,
         module_name: moduleName.length == 0 ? currentModule.moduleName : moduleName,
         module_number: moduleId.length == 0 ? currentModule.moduleNumber : moduleId,
-        module_content: moduleContent.length == 0 ? currentModule.moduleContent : moduleContent,
+        module_content: moduleContent.length == 0 ? currentModule.moduleContent.replace("\n", "\\n") : moduleContent,
         module_credit_points: modulePoints.length == 0 ? currentModule.moduleCreditPoints : modulePoints,
         module_uri: currentModule.moduleUri
       }),
     })
       .then((response) => response.json())
       .then((json) => {
-         console.log(json)
+        // getModuleList(item.courseUri, selectedCourse);
          handleCloseUpdateModal()
       })
       .catch((error) => console.error(error));
