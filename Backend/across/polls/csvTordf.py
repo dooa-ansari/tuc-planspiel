@@ -1,24 +1,27 @@
 import os
-import csv
 from typing import Any
 from rdflib import Graph, Namespace, Literal, URIRef
 from rdflib.namespace import RDF, XSD
 from rdflib.plugins.sparql import prepareQuery
+from django.conf import settings
 
 university_dict = {
     'Technical University of Chemnitz': 'TUC',
     'Bialystok University': 'BU'
 }
 
+
+
 #Give the correct rdf file path
-rdf_file = r'Backend\across\uploads\models3.rdf'
-university_rdf= r'Backend\across\RDF_DATA\universities.rdf'
+#rdf_file = r'uploads/models3.rdf'
+#models_absolute_path = os.path.abspath(rdf_file)
+#university_rdf= 'universities.rdf'
+#university_absolute_path = os.path.abspath('Backend/across/RDF_DATA/university_rdf')
 
 # Define namespaces
 ns1 = Namespace("http://tuc.web.engineering/module#")
 ns2 = Namespace("http://tuc/course#")
 ns3 = Namespace("http://across/university#")
-
 
 class Module:
     def __init__(self, module_number, name, content, credit_points, course, university):
@@ -62,7 +65,7 @@ class University:
         g.bind("course", ns2)
         g.bind("university", ns3)
         query = self.get_all_university_query()
-        g.parse(university_rdf, format='xml')
+        g.parse(r'C:\Users\User\Desktop\Source\web-wizards-11\Backend\across\RDF_DATA\universities.rdf', format='xml')
         results = g.query(query)
         unis = []
         for row in results:
@@ -71,13 +74,14 @@ class University:
             uni_url = str(row['university'])
             uni = University(uni_id, uni_name, uni_url)
             unis.append(uni)
+        print('get_all_university')    
         return unis
 
 class RDFModels():
     def get_rdf_modules(self):
         # Create an RDF graph
          g = Graph()
-         g.parse(rdf_file, format='xml')
+         g.parse(r'C:\Users\User\Desktop\Source\web-wizards-11\Backend\across\uploads\models3.rdf', format='xml')
          query = """
 PREFIX module: <http://tuc.web.engineering/module#>
 PREFIX ns1: <http://across/university#>
@@ -126,6 +130,7 @@ class CsvToRDF():
     def get_all_csv_models(self, csv_readers, unis):
         try:
              newModules = []
+             print(len(csv_readers))
              for row in csv_readers:
                 hasModuleNumber, hasName, hasContent, hasCourseName, hasUniversity, hasCreditPoints = row
                 '''Excape haeader row in csv file'''
@@ -169,7 +174,7 @@ class UpdateModules():
              g.set((subject, ns1["hasCreditPoints"], Literal(updateModule.hasCreditPoints, datatype=XSD.string)))
             new_rdf_content = g.serialize(format='xml')
             new_rdf_bytes = new_rdf_content.encode('utf-8')
-            with open(rdf_file, 'wb') as file:
+            with open(r'C:\Users\User\Desktop\Source\web-wizards-11\Backend\across\uploads\models3.rdf', 'wb') as file:
                 file.write(new_rdf_bytes)
     
 class InsertModules():
@@ -177,7 +182,7 @@ class InsertModules():
         try:
             # Read the existing RDF file
             g = Graph()
-            g.parse(rdf_file, format="xml")
+            g.parse(r'C:\Users\User\Desktop\Source\web-wizards-11\Backend\across\uploads\models3.rdf', format="xml")
             # Add namespaces to the graph
             g.bind("module", ns1)
             g.bind("course", ns2 )
@@ -202,31 +207,7 @@ class InsertModules():
             new_rdf_content = g.serialize(format='xml')
             new_rdf_bytes = new_rdf_content.encode('utf-8')
 
-            with open(rdf_file, 'wb') as file:
+            with open(r'C:\Users\User\Desktop\Source\web-wizards-11\Backend\across\uploads\models3.rdf', 'wb') as file:
                 file.write(new_rdf_bytes)
         except Exception as e:
             print(f'the error occurs at {e}')
-
-'''
-uni = University()
-unis = uni.get_all_university()
-csv_rdf= CsvToRDF(uni)
-csv_readers=[]
-            
-file_path = r'C:\Users\User\Desktop\Source\web-wizards-11\Backend\across\uploads\Data2.csv'
-print(file_path)
-if os.path.exists(file_path):
-
-    with open(file_path, 'r', newline='', encoding='utf-8') as file:
-            csv_reader = csv.reader(file)
-            for row in csv_reader:
-                csv_readers.append(row)
-
-            newModules=csv_rdf.get_all_csv_models(csv_readers, unis)
-            csv_rdf.csvModules= newModules
-            upModule = UpdateModules()
-            upModule.getUpdateModels(csv_rdf)
-            inModule = InsertModules()
-            inModule.insertModul(csv_rdf)
-
-'''

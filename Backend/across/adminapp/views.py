@@ -18,47 +18,63 @@ from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
 import requests
 
+uploadLoaction =""
+def saveFiles(request):
+    uploaded_files = request.FILES.getlist('files')
+    # Specify the directory where you want to save the files
+    upload_directory = 'uploads/'
+
+    # Create a FileSystemStorage instance with the upload directory
+    fs = FileSystemStorage(location=upload_directory)
+    uploadLoaction= fs.location
+    print(fs.location)
+    # Process and save the uploaded files
+    saved_files = []
+    for file in uploaded_files:
+        saved_file = fs.save(file.name, file)
+        saved_files.append(saved_file)
+    return saved_files
+
+@csrf_exempt
+@require_POST
+def csv_rdf(request):
+    try:
+       saved_files= saveFiles(request)  
+       uni = University()
+       unis = uni.get_all_university()
+       csv_rdf= CsvToRDF(uni)
+       csv_readers=[]
+
+       for csvFile in saved_files:
+                print(uploadLoaction)
+                #replace the file path from csvfile
+                file_path = r'C:\Users\User\Desktop\Source\web-wizards-11\uploads\Data2.csv'
+                with open(file_path, 'r', newline='', encoding='utf-8') as file:
+                    csv_reader = csv.reader(file)
+                    for row in csv_reader:
+                        csv_readers.append(row)
+                csvModels=csv_rdf.get_all_csv_models(csv_readers, unis)
+                csv_rdf.csvModules= csvModels
+                upModule = UpdateModules()
+                upModule.getUpdateModels(csv_rdf)
+                inModule = InsertModules()
+                inModule.insertModul(csv_rdf)
+                return JsonResponse({'message': 'csv Files successfully converted to RDF file'}, status=200)
+    except Exception as e:
+            return JsonResponse({'message': f'Error converting csv to RDF file: {str(e)}'}, status=500)
+
 
 @csrf_exempt
 @require_POST
 def upload_file(request):
     try:
             uploaded_files = request.FILES.getlist('files')
-
-            # Specify the directory where you want to save the files
-            upload_directory = 'uploads/'
-
-            # Create a FileSystemStorage instance with the upload directory
-            fs = FileSystemStorage(location=upload_directory)
-
-            # Process and save the uploaded files
-            saved_files = []
-            for file in uploaded_files:
-                saved_file = fs.save(file.name, file)
-                saved_files.append(saved_file)
-            
-            uni = University()
-            unis = uni.get_all_university()
-            csv_rdf= CsvToRDF(uni)
-            csv_readers=[]
-            file_path = os.path.join(fs.location, file.name)
-            print(file_path)
-            if os.path.exists(file_path):
-                with open(file_path, 'r', newline='', encoding='utf-8') as file:
-                    csv_reader = csv.reader(file)
-                    for row in csv_reader:
-                        csv_readers.append(row)
-
-            csvModels=csv_rdf.get_all_csv_models(csv_readers, unis)
-            csv_rdf.csvModules= csvModels
-            upModule = UpdateModules()
-            upModule.getUpdateModels(csv_rdf)
-            inModule = InsertModules()
-            inModule.insertModul(csv_rdf)
-
+            saved_files=saveFiles(uploaded_files)
+        
             return JsonResponse({'message': 'Files uploaded and saved successfully', 'saved_files': saved_files}, status=200)
     except Exception as e:
             return JsonResponse({'message': f'Error uploading and saving files: {str(e)}'}, status=500)
+
     
 @csrf_exempt
 def get_universities(request):
