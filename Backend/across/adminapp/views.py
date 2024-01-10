@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 import os, json
 from pymantic import sparql
-from polls.sparql import *
+from .sparql import *
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
@@ -15,6 +15,7 @@ from polls.models import UserProfile
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
 import requests
+import uuid
 
 
 @csrf_exempt
@@ -65,7 +66,11 @@ def insert_module(request):
     module_content = data.get('module_content','').strip()
     module_credit_points = data.get('module_credit_points','').strip()
 
-    formatted_module_name = module_name.replace(' ', '_')
+    # Generate a UUID based on the current timestamp and node (hardware address)
+    module_uuid = uuid.uuid1()
+
+    # Convert the UUID to a string
+    module_uuid_str = str(module_uuid)
 
     try:
         existing_user_profile = UserProfile.objects.filter(email=email).first()
@@ -95,7 +100,7 @@ def insert_module(request):
                     return JsonResponse(response_data, status=200)
                 else:
                     try:
-                        payload = {'update': add_individual_module_by_admin(formatted_module_name, module_name, module_number, module_content, module_credit_points, university_uri, course_uri)}
+                        payload = {'update': add_individual_module_by_admin(module_uuid_str, module_name, module_number, module_content, module_credit_points, university_uri, course_uri)}
         
                         result = requests.post("http://54.242.11.117/blazegraph/namespace/kb/sparql", data=payload)
 
@@ -103,7 +108,8 @@ def insert_module(request):
                         if result.status_code == 200:
                             response_data = {
                                 'message': "Module Insertion successful.",
-                                'module_name': module_name 
+                                'module_name': module_name ,
+                                'module_uri': f"http://tuc.web.engineering/module#{module_uuid_str}"
                             }
                             return JsonResponse(response_data, status=200)
                         
