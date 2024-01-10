@@ -1,5 +1,5 @@
 .dropdownWrapper {
-  width: 250px; 
+  width: 350px; 
   position: relative;
 }
 
@@ -36,4 +36,9 @@
 .renderedOptions:hover {
   background-color: var(--primary-color);
   color: #fff;
+}
+
+.angleIcon {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
