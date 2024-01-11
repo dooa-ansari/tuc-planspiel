@@ -11,6 +11,8 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ModulesList = () => {
   const [universities, setUniversities] = useState([]);
@@ -44,17 +46,10 @@ const ModulesList = () => {
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     event.preventDefault();
-    console.log(moduleId)
-    console.log(moduleName)
-    console.log(modulePoints)
-    console.log(moduleContent)
-    postAddData()
-    setValidated(true);     
-    if (form.checkValidity() === false) {
-      
+    if (form.checkValidity() == true) {
+      setValidated(true);     
+      postAddData()
         
-    }else{
-       
     }
    
    
@@ -65,15 +60,11 @@ const ModulesList = () => {
   const handleSubmitUpdate = (event) => {
     const form = event.currentTarget;
     event.preventDefault();
-    postUpdateData()
-    setValidated(true);     
-    if (form.checkValidity() === false) {
+    if (form.checkValidity() == true) {
       
-        
-    }else{
-       
+      postUpdateData()
+      setValidated(true);            
     }
-   
    
    
    
@@ -98,8 +89,13 @@ const ModulesList = () => {
     })
       .then((response) => response.json())
       .then((json) => {
-         console.log(json)
-         handleCloseAddModal()
+        if(json.message == "Module Insertion successful."){
+          getModuleList(selectedCourseUri, selectedCourse);
+          toast("Module Added Successfully");  
+        }else{
+          toast("Failed to add module");  
+        } 
+        handleCloseAddModal()
       })
       .catch((error) => console.error(error));
   }
@@ -135,7 +131,12 @@ const ModulesList = () => {
     })
       .then((response) => response.json())
       .then((json) => {
-         getModuleList(selectedCourseUri, selectedCourse);
+        if(json.message == "Module Updation successful."){
+          getModuleList(selectedCourseUri, selectedCourse);
+          toast("Module Updated Successfully");   
+        }else{
+          toast("Failed to update module");  
+        }
          handleCloseUpdateModal()
       })
       .catch((error) => console.error(error));
@@ -155,7 +156,16 @@ const ModulesList = () => {
     })
       .then((response) => response.json())
       .then((json) => {
-         
+         console.log(json)
+         if(json.message == "Module deletion successful."){
+          setModules(modules => modules.filter((item) => {
+            return item.moduleUri !== uri} ))
+          toast("Module Deleted Successfully");   
+         }else{
+          toast("Failed to delete module");   
+         }
+        
+
       })
       .catch((error) => console.error(error));
   } 
@@ -252,19 +262,14 @@ const ModulesList = () => {
       .then((response) => response.json())
       .then((json) => {
           if(!isAdd){
-
             setCourses(json.courses);
-       
          }
             else{
                 setCoursesAdd(json.courses);
-       
-                
           }
           setSelectedUniversityUri(uri);
           setSelectedUniversityName(name);
-         
-       
+             
       })
       .catch((error) => console.error(error));
   };
@@ -472,6 +477,7 @@ const ModulesList = () => {
   };
   return (
     <div style={{ flex: 1 }}>
+     <ToastContainer />
       {getModuleDetailsModal()}
       {getAddModuleFormModal()}
       {getUpdateModuleFormModal()}
