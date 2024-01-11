@@ -1,48 +1,129 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./CompareModules.css";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
 
 import Dropdown from "../../../components/Dropdown/Dropdown";
+
 import SearchBox from "../../../components/user/SearchBox/SearchBox";
+import {
+  getCoursesOfParticularUniversity,
+  getModulesOfCourse,
+  getSimilarModules,
+  getUniversities,
+} from "../../../api/compareModuleApi";
 
 const CompareModules = () => {
+  const [universities, setUniversities] = useState([]);
+  const [courses, setCourses] = useState([]);
+  const [modules, setModules] = useState([]);
   const [selectedUniversity, setSelectedUniversity] = useState(null);
   const [selectedModule, setSelectedModule] = useState(null);
   const [selectedCourse, setSelectedCourse] = useState(null);
 
   const handleUniversityChange = university => {
     setSelectedUniversity(university);
+    setSelectedCourse(null);
+    setSelectedModule(null);
+    setModules([]);
   };
+
+  const handleCourseChange = course => {
+    setSelectedCourse(course);
+    setSelectedModule(null);
+  };
+
   const handleModuleChange = module => {
     setSelectedModule(module);
   };
-  const handleCourseChange = course => {
-    setSelectedCourse(course);
+
+  useEffect(() => {
+    async function fetchUniversities() {
+      try {
+        const retrievedUniversities = await getUniversities();
+        if (
+          retrievedUniversities.status === 200 &&
+          retrievedUniversities.statusText === "OK"
+        ) {
+          setUniversities(retrievedUniversities.data);
+        }
+      } catch (error) {
+        console.log("error fetching universities");
+      }
+    }
+
+    fetchUniversities();
+
+    if (selectedUniversity !== null) {
+      fetchCoursesOfUniversity();
+    }
+
+    if (selectedUniversity !== null && selectedCourse !== null) {
+      fetchModulesOfCourse();
+    }
+
+    if (selectedModule !== null) {
+      fetchSimilarModules();
+    }
+  }, [selectedUniversity, selectedCourse, selectedModule]);
+
+  const dropdownOptionsForUniversities = universities.map(university => ({
+    id: university.id,
+    value: university.uri,
+    label: university.name,
+  }));
+
+  const fetchCoursesOfUniversity = async () => {
+    try {
+      const universityName = selectedUniversity.label;
+      const universityUri = selectedUniversity.value;
+
+      const data = { universityName, universityUri };
+
+      const retrievedCourses = await getCoursesOfParticularUniversity(data);
+      setCourses(retrievedCourses.data.courses);
+    } catch (error) {
+      console.log("error fetching courses");
+    }
   };
 
-  const universities = [
-    {
-      label: "Bialystok University of Technology",
-      value: "Bialystok University of Technology",
-    },
-    {
-      label: "Chemnitz University of Technology",
-      value: "Chemnitz University of Technology",
-    },
-    { label: "University of Craiova", value: "University of Craiova" },
-    { label: "University of Girona", value: "University of Girona" },
-    { label: "University of Lleida", value: "University of Lleida" },
-  ];
+  const dropdownOptionsForCourses = courses.map(course => ({
+    id: course.courseNumber,
+    value: course.courseUri,
+    label: course.courseName,
+  }));
 
-  const modules = [
-    { label: "Module1", value: "module1" },
-    { label: "Module2", value: "module2" },
-  ];
+  const fetchModulesOfCourse = async () => {
+    try {
+      const courseUri = selectedCourse.value;
+      const universityUri = selectedUniversity.value;
+      const courseName = selectedCourse.label;
 
-  const courses = [
-    { label: "Course1", value: "course1" },
-    { label: "Course2", value: "course2" },
-  ];
+      const data = { courseUri, universityUri, courseName };
+
+      const retrievedModules = await getModulesOfCourse(data);
+      setModules(retrievedModules.data.modules);
+    } catch (error) {
+      console.log("error fetching modules");
+    }
+  };
+
+  const dropdownOptionsForModules = modules.map(module => ({
+    id: module.moduleNumber,
+    label: module.moduleName,
+    value: module.moduleUri,
+  }));
+
+  const fetchSimilarModules = async () => {
+    try {
+      const moduleUri = selectedModule.value;
+
+      const retrievedSimilarModules = await getSimilarModules(moduleUri);
+      console.log(retrievedSimilarModules.response.data.message);
+    } catch (error) {
+      console.log("error fetching similar modules");
+    }
+  };
+
   return (
     <>
       <MainLayout>
@@ -59,34 +140,10 @@ const CompareModules = () => {
         >
           <h4 style={{ width: "10%" }}>Universities</h4>
           <Dropdown
-            options={universities}
+            options={dropdownOptionsForUniversities}
             value={selectedUniversity}
             onChange={handleUniversityChange}
-          />
-          <Dropdown
-            options={universities}
-            value={selectedUniversity}
-            onChange={handleUniversityChange}
-          />
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-            marginBottom: "40px",
-          }}
-        >
-          <h4 style={{ width: "10%" }}>Modules</h4>
-          <Dropdown
-            options={modules}
-            value={selectedModule}
-            onChange={handleModuleChange}
-          />
-          <Dropdown
-            options={modules}
-            value={selectedModule}
-            onChange={handleModuleChange}
+            placeholderText="Select your university..."
           />
         </div>
         <div
@@ -99,14 +156,26 @@ const CompareModules = () => {
         >
           <h4 style={{ width: "10%" }}>Courses</h4>
           <Dropdown
-            options={courses}
+            options={dropdownOptionsForCourses}
             value={selectedCourse}
             onChange={handleCourseChange}
+            placeholderText="Select your course..."
           />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            marginBottom: "40px",
+          }}
+        >
+          <h4 style={{ width: "10%" }}>Modules</h4>
           <Dropdown
-            options={courses}
-            value={selectedCourse}
-            onChange={handleCourseChange}
+            options={dropdownOptionsForModules}
+            value={selectedModule}
+            onChange={handleModuleChange}
+            placeholderText="Select your module..."
           />
         </div>
       </MainLayout>

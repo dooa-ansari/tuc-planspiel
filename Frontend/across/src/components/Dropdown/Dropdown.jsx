@@ -3,7 +3,7 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 
 import "./Dropdown.css";
 
-const Dropdown = ({ options, value, onChange }) => {
+const Dropdown = ({ options, value, onChange, placeholderText }) => {
   const [isOpen, setIsOpen] = useState(false);
   const divElement = useRef();
 
@@ -54,7 +54,7 @@ const Dropdown = ({ options, value, onChange }) => {
       style={{ zIndex: zIndexValue }}
     >
       <div className="dropdown__options" onClick={handleClick}>
-        {value?.label || "Select ..."}
+        {value?.label || placeholderText}
         {isOpen ? (
           <FaAngleUp className="angleIcon" />
         ) : (

@@ -1,5 +1,5 @@
 .dropdownWrapper {
-  width: 350px; 
+  width: 50%; 
   position: relative;
 }
 
@@ -23,6 +23,8 @@
   padding: 12px;
   background-color: #fff;
   width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 
