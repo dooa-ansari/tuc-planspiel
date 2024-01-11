@@ -18,6 +18,7 @@ from pymantic import sparql
 from .sparql import *
 import json
 import os
+import ast
 import requests
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request as GoogleAuthRequest
@@ -424,10 +425,9 @@ def save_completed_modules_by_user(request):
         courseName = data.get('courseName','')
         # It will consists the list of module URI and module Name
         completedModulesList = data.get('completedModulesList','')
-
-        user_profile = UserProfile.objects.get(email=email)
-        
-        if user_profile is not None:
+        try:
+            user_profile = UserProfile.objects.get(email=email)
+            
             user_data, created = UserData.objects.get_or_create(
             email=user_profile,
             defaults={'university_name': universityName, 'course_name': courseName, 'completed_modules': completedModulesList}
@@ -440,16 +440,61 @@ def save_completed_modules_by_user(request):
                 user_data.completed_modules = completedModulesList
 
             user_data.save()
-            
+
             response = {
                 'message': 'Successfully Updated Completed Modules by User'
             }
             return JsonResponse(response, status =200)
-        else:
+        except Exception as e:
             response = {
                 "message": f"User with email: {email} does not exist"
             }
-            return JsonResponse(response, status =500)
+            return JsonResponse(response, status =404)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+@csrf_exempt
+@require_POST
+def get_completed_modules_by_user(request):
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        try: 
+            user_profile = UserProfile.objects.get(email=email)
+            try:
+                user_data = UserData.objects.get(email=email)
+
+                # Use ast.literal_eval to safely evaluate the string as a Python literal
+                completed_modules_list = ast.literal_eval(user_data.completed_modules)
+
+                user_profile_data = {  
+                    'university_name': user_data.university_name,
+                    'course_name': user_data.course_name,
+                    'completed_modules':completed_modules_list
+                }
+                response= {
+                    'message': 'Successfully returned completed module list of user',
+                    'user_profile_data' : user_profile_data
+                }
+                return JsonResponse(response, status =200)
+            except UserData.DoesNotExist:
+                # Handle the case where UserData does not exist for the given email
+                response = {
+                    'message': f'UserData not found for the given email: {email}',
+                    'user_profile_data': {}
+                }
+                return JsonResponse(response, status=404)
+        except Exception as e:
+            response = {
+                "message": f"User with email: {email} does not exist"
+            }
+            return JsonResponse(response, status =404)
     except Exception as e:
         response = {
             "message": f"An unexpected error occurred: {e}"
