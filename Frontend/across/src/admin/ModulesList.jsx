@@ -222,6 +222,7 @@ const ModulesList = () => {
   };
 
   const onClickCourseAdd = (item) => {
+    setSelectedCourse(item.courseName)
     setAddCourseUri(item.courseName)
   };
 
@@ -284,7 +285,7 @@ const ModulesList = () => {
           <div className="dropdowns">
             <Dropdown>
               <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                Select Univeristy
+              {selectedUniversityName ? selectedUniversityName : "Select Univeristy"}
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
@@ -301,7 +302,7 @@ const ModulesList = () => {
             {universitiesForAdd.length > 0 && selectedUniversityUri && (
               <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  Select Course
+                {selectedCourse ? selectedCourse : "Select Course"}
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
