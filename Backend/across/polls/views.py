@@ -4,7 +4,7 @@ from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
 from .list_similar_modules_blazegraph import find_all_similar_modules_list
 from .module_similarity import read_modules_and_compare
-from .models import UserProfile
+from .models import UserProfile, UserData
 
 from django.contrib.auth import login, get_user_model, authenticate
 from django.contrib.auth.password_validation import validate_password
@@ -411,3 +411,47 @@ def get_modules_from_course_and_university(request):
 def get_similar_module_against_given_module_uri(request):
     return get_similar_module_against_module_uri(request)
 
+@csrf_exempt
+@require_POST
+def save_completed_modules_by_user(request):
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        universityName = data.get('universityName','')
+        courseName = data.get('courseName','')
+        # It will consists the list of module URI and module Name
+        completedModulesList = data.get('completedModulesList','')
+
+        user_profile = UserProfile.objects.get(email=email)
+        
+        if user_profile is not None:
+            user_data, created = UserData.objects.get_or_create(
+            email=user_profile,
+            defaults={'university_name': universityName, 'course_name': courseName, 'completed_modules': completedModulesList}
+            )
+
+            # If the instance is not created (i.e., already exists), update the fields
+            if not created:
+                user_data.university_name = universityName
+                user_data.course_name = courseName
+                user_data.completed_modules = completedModulesList
+
+            user_data.save()
+            
+            response = {
+                'message': 'Successfully Updated Completed Modules by User'
+            }
+            return JsonResponse(response, status =200)
+        else:
+            response = {
+                "message": f"User with email: {email} does not exist"
+            }
+            return JsonResponse(response, status =500)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
