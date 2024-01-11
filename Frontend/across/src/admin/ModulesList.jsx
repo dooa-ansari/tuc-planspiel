@@ -20,6 +20,7 @@ const ModulesList = () => {
   const [selectedUniversityUri, setSelectedUniversityUri] = useState(null);
   const [selectedUniversityName, setSelectedUniversityName] = useState(null);
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const [selectedCourseUri, setSelectedCourseUri] = useState(null);
   const [modules, setModules] = useState(null);
   const [loadingModule, setLoadingModules] = useState(-1);
   const [currentModule, setCurrentModule] = useState(null);
@@ -134,7 +135,7 @@ const ModulesList = () => {
     })
       .then((response) => response.json())
       .then((json) => {
-        // getModuleList(item.courseUri, selectedCourse);
+         getModuleList(selectedCourseUri, selectedCourse);
          handleCloseUpdateModal()
       })
       .catch((error) => console.error(error));
@@ -200,6 +201,7 @@ const ModulesList = () => {
 
   const onClickCourse = (item) => {
     setSelectedCourse(item.courseName)
+    setSelectedCourseUri(item.courseUri)
     setLoadingModules(1);
     getModuleList(item.courseUri, item.courseName);
   };
