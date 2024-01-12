@@ -1,0 +1,21 @@
+.universityItem{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    
+}
+
+.universityItemSelected{
+    background: #439a86;
+}
+.universityItemFlag{
+    display: flex;
+    flex: 0.1;
+    flex-direction: row;
+}
+
+.universityItemText{
+    display: flex;
+    flex: 0.9;
+    flex-direction: row;
+}

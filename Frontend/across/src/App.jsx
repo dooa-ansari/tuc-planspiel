@@ -24,6 +24,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import UserPage from "./pages/UserPage";
 // import AdminPanel from "./admin/AdminPanel";
 import CompareModules from "./pages/user/CompareModules/CompareModules";
+import TransferCredits from "./pages/user/TransferCredits/TransferCredits";
 import Protected from "./components/Protected/Protected";
 
 const App = () => {
@@ -123,6 +124,15 @@ const App = () => {
             element={
               <Protected>
                 <CompareModules />
+              </Protected>
+            }
+          />
+            <Route
+            path="/campus-flow/user/transfer-credits"
+            exact
+            element={
+              <Protected>
+                <TransferCredits />
               </Protected>
             }
           />
