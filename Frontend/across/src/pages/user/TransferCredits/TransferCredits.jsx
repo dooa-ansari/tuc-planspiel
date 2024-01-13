@@ -9,28 +9,38 @@ import poland from "../../../assets/lotties/poland_flag.json";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 
+
+
 const TransferCredits = () => {
   const [universities, setUniversities] = useState([]);
   const [univerisitiesLoading, setUniversitiesLoading] = useState(true);
-  const [selectedUniversity, setSelectedUniverity] = useState(true);
+  const [selectedUniversity, setSelectedUniverity] = useState(null);
 
+
+
+const buttonStyle = {
+  background: "#439a86",
+  borderRadius: "10px",
+  color: "white",
+  width: "60px"
+}
   useEffect(() => {
     axios
       .get("http://localhost:8000/adminapp/universitieslist/")
       .then((response) => {
         if (response.status == 200) {
-          console.log(response.data)
-          const returnedData = response.data
+          console.log(response.data);
+          const returnedData = response.data;
           returnedData.forEach((item) => {
-            item.selected = false
-          })
+            item.selected = false;
+          });
           setUniversities(returnedData);
         }
-        setUniversitiesLoading(false)
+        setUniversitiesLoading(false);
       })
       .catch((error) => {
         console.log(error);
-        setUniversitiesLoading(false)
+        setUniversitiesLoading(false);
       });
   }, []);
 
@@ -43,12 +53,17 @@ const TransferCredits = () => {
     },
   };
 
-
   const onPressUniversityItem = (item) => {
-    setSelectedUniverity(item)
-  }
+    const updateList = [];
+    universities.forEach((unis) => {
+      unis.selected = item.id == unis.id ? true : false;
+      updateList.push(unis);
+    });
+    setUniversities(updateList);
+    setSelectedUniverity(item);
+  };
   const getFlagOptions = (id) => {
-    if(id == 1){
+    if (id == 1) {
       return {
         loop: true,
         autoplay: true,
@@ -57,8 +72,8 @@ const TransferCredits = () => {
           preserveAspectRatio: "xMidYMid slice",
         },
       };
-    }else if(id == 2){
-       return {
+    } else if (id == 2) {
+      return {
         loop: true,
         autoplay: true,
         animationData: poland,
@@ -67,29 +82,47 @@ const TransferCredits = () => {
         },
       };
     }
-  }
+  };
 
   return (
     <>
       <MainLayout>
         <h1>Transfer Credits</h1>
-        <AwesomeSlider>
-          <div style={{background: "white"}}>
-           
-           {univerisitiesLoading ? <Lottie options={defaultOptions} height={200} width={200} /> : <div>
-              {universities.map((university) => {
-                 return <div className={"universityItem " + (university.selected && "universityItemSelected")} key={university.id}>
-                  <div className="universityItemFlag">
-                  <Lottie options={getFlagOptions(university.id)} height={30} width={30} />
-                  
-                  </div>
-                  <div className="universityItemText">
-                  <p>{university.name}</p>
-                  </div>
-                         
-                        </div>
-              })}
-            </div>}
+        <AwesomeSlider infinite={false}  organicArrows={false}
+      buttonContentRight={<button style={selectedUniversity && buttonStyle}>Next</button>}
+      buttonContentLeft={<p style={{ color: "black" }}>Right</p>}>
+          <div style={{ background: "white"}}>
+          <p>Please choose university you want to transfer your credits to : </p>
+                
+            {univerisitiesLoading ? (
+              <Lottie options={defaultOptions} height={200} width={200} />
+            ) : (
+              <div>
+                {universities.map((university) => {
+                  return (
+                    <div
+                      onClick={() => onPressUniversityItem(university)}
+                      className={
+                        "universityItem " +
+                        (university.selected && "universityItemSelectedBorder universityItemSelected")
+                      }
+                      key={university.id}
+                    >
+                      <div className="universityItemFlag">
+                        <Lottie
+                          options={getFlagOptions(university.id)}
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <div  className="universityItemText">
+                        <p>{university.name}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
           <div>2</div>
           <div>3</div>
