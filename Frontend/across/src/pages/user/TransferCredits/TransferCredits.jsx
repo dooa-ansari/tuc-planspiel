@@ -6,6 +6,7 @@ import Lottie from "react-lottie";
 import loadingData from "../../../assets/lotties/loading_transfer_v0.json";
 import germany from "../../../assets/lotties/germany_flag.json";
 import poland from "../../../assets/lotties/poland_flag.json";
+import arrow from "../../../assets/lotties/arrow.json";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 
