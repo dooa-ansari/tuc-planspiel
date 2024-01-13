@@ -19,7 +19,6 @@ import PageNotFound from "./pages/PageNotFound";
 import { gapi } from "gapi-script";
 import UserPage from "./pages/UserPage";
 import AdminPanel from "./admin/AdminPanel";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import UserPage from "./pages/UserPage";
 // import AdminPanel from "./admin/AdminPanel";
@@ -144,7 +143,7 @@ const App = () => {
           /> */}
           {/* <Route path="/user" exact element={<UserPage />} /> */}
 
-         <Route path="/admin/*" element={<AdminPanel />} />
+          <Route path="/admin/*" element={<AdminPanel />} />
           {/* Other routes */}
 
           <Route path="*" element={<PageNotFound />} />
