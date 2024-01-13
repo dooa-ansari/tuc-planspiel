@@ -14,7 +14,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 
 from django.conf import settings
-import jwt  # Import PyJWT library
+import jwt 
 from datetime import datetime, timedelta
 
 from pymantic import sparql

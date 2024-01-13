@@ -19,6 +19,7 @@ const CompareModules = () => {
   const [selectedUniversity, setSelectedUniversity] = useState(null);
   const [selectedModule, setSelectedModule] = useState(null);
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const [similarModules, setSimilarModules] = useState([]);
 
   const handleUniversityChange = university => {
     setSelectedUniversity(university);
@@ -118,17 +119,36 @@ const CompareModules = () => {
       const moduleUri = selectedModule.value;
 
       const retrievedSimilarModules = await getSimilarModules(moduleUri);
-      console.log(retrievedSimilarModules.response.data.message);
+
+      console.log(retrievedSimilarModules.data.modules);
+
+      setSimilarModules(retrievedSimilarModules.data.modules);
     } catch (error) {
       console.log("error fetching similar modules");
     }
   };
 
+  const renderedSimilarModules = similarModules.map(similarModule => {
+    return (
+      <div className="similarModuleCard">
+        <div className="similarModuleName">
+          {similarModule.similarModuleName}
+        </div>
+        <div className="similarModuleUniversity">
+          {similarModule.similarUniversity}
+        </div>
+        <p className="similarModuleContent">
+          {similarModule.similarModuleContent}
+        </p>
+      </div>
+    );
+  });
+
   return (
     <>
       <MainLayout>
         <SearchBox />
-        <h1 style={{ textAlign: "center" }}>Compare Modules Page</h1>
+        <h1 className="text-center">Compare Modules Page</h1>
         <div
           style={{
             display: "flex",
@@ -178,6 +198,7 @@ const CompareModules = () => {
             placeholderText="Select your module..."
           />
         </div>
+        <div className="similarModuleCards">{renderedSimilarModules}</div>
       </MainLayout>
     </>
   );

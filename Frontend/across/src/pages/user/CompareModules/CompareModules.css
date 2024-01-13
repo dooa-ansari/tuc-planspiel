@@ -3,3 +3,22 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.similarModuleCards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.similarModuleCard {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 1.5rem;
+  margin: 1.5rem;
+
+}

@@ -42,7 +42,11 @@ export const getModulesOfCourse = async data => {
 export const getSimilarModules = async data => {
   let response;
   try {
-    response = await api.post("/api/similarModules/", data);
+    response = await api.get("/api/similarModules/", {
+      params: {
+        moduleUri: data,
+      },
+    });
   } catch (error) {
     return error;
   }
