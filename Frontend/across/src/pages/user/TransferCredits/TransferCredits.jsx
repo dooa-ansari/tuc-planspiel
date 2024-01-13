@@ -193,13 +193,6 @@ const onPressNextTransition = (event) => {
                       }
                       key={completedModule.id}
                     >
-                      <div className="universityItemFlag">
-                        <Lottie
-                          options={getFlagOptions(completedModule.id)}
-                          height={30}
-                          width={30}
-                        />
-                      </div>
                       <div  className="universityItemText">
                         <p>{completedModule.name}</p>
                       </div>
