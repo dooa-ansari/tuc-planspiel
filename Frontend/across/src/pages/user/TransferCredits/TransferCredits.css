@@ -53,3 +53,64 @@
     border-radius: 10px;
     color: white;
 }
+
+
+.showModules{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#module{
+    border: 1px solid #439a86;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#moduleid {
+    font-style: bold;
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 3.2px;
+    color: #007991;
+}
+
+#moduleName {
+    font-style: bold;
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 3.2px;
+    color: #007991;
+}
+
+#creditPoints{
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #439a86;
+}
+
+#dept{
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: black;
+}
+
+#moduleHeading{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.scrollView{
+    height: 500px;
+    overflow-x: scroll;
+}

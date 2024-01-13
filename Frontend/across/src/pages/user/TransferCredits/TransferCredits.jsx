@@ -80,12 +80,13 @@ const buttonStyle = {
         if (response.status == 200) {
           list.push(response.data.modules)
         }
-        setsimilarModulesLoading(false);
+      
       })
       .catch((error) => {
-        setsimilarModulesLoading(false);
+        
       });
     })
+    setsimilarModulesLoading(false)
     setSimilarModules(list)
     console.log(list)
      
@@ -154,6 +155,7 @@ const onPressNextTransition = (event) => {
     setusersModulesLoading(true) 
     getUsersCompletedModules()
    }else if(event.currentIndex == 2){
+    setsimilarModulesLoading(true)
     getSimilarAgainst()
    }
 }
@@ -228,7 +230,31 @@ const onPressNextTransition = (event) => {
               </div>
             )}
           </div>
-          <div>3</div>
+          <div style={{ background: "white"}}>
+          <p>Possible Transferable Credits</p>
+            {similarModulesLoading ? (
+              <Lottie options={defaultOptions2} height={200} width={200} />
+            ) : (
+              <div className="scrollView">
+                {similarModules.map((similarModule) => {
+                  return similarModule.map((item) => {
+                    return  <div id="module" key={item.id}>
+                    <div id="moduleid">{item.id} - {item.name}</div>
+                    <div id="creditPoints">Credit Points : {item.creditPoints}</div>
+                    <div id="creditPoints">University : {item.university}</div>
+                    <div id="creditPoints">Course : {item.courseName}</div>
+                    <div>{item.content}</div>
+                    <div id="moduleid">{item.similarModuleId} - {item.similarModuleName}</div>
+                    <div id="creditPoints">Credit Points : {item.similarModuleCreditPoints}</div>
+                    <div id="creditPoints">University : {item.similarUniversity}</div>
+                    <div id="creditPoints">Course : {item.courseNameSimilar}</div>
+                    <div>{item.similarModuleContent}</div>
+                  </div>
+                  })
+                })}
+              </div>
+            )}
+          </div>
           <div>4</div>
         </AwesomeSlider>
       </MainLayout>
