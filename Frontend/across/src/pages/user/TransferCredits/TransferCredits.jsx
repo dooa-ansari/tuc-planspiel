@@ -16,6 +16,8 @@ const TransferCredits = () => {
   const [usersCompleteModules, setUsersCompletedModules] = useState([]);
   const [univerisitiesLoading, setUniversitiesLoading] = useState(true);
   const [usersModulesLoading, setusersModulesLoading] = useState(false);
+  const [similarModulesLoading, setsimilarModulesLoading] = useState(false);
+  const [similarModules, setSimilarModules] = useState([]);//
   const [selectedUniversity, setSelectedUniverity] = useState(null);
   const [lastSelectedModule, setLastSelectedModule] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -67,6 +69,28 @@ const buttonStyle = {
       setusersModulesLoading(false);
     }); 
   }
+
+  const getSimilarAgainst = async () => {
+    const selectedModules = usersCompleteModules.filter((item) => item.selected)
+    const list = []
+    await selectedModules?.forEach((selected) => {
+      axios
+      .get("http://localhost:8000/api/similarModules?moduleUri="+encodeURIComponent("http://tuc.web.engineering/module#CWEA"))
+      .then((response) => {
+        if (response.status == 200) {
+          list.push(response.data.modules)
+        }
+        setsimilarModulesLoading(false);
+      })
+      .catch((error) => {
+        setsimilarModulesLoading(false);
+      });
+    })
+    setSimilarModules(list)
+    console.log(list)
+     
+  }
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -129,6 +153,8 @@ const onPressNextTransition = (event) => {
    if(event.currentIndex == 1){
     setusersModulesLoading(true) 
     getUsersCompletedModules()
+   }else if(event.currentIndex == 2){
+    getSimilarAgainst()
    }
 }
   return (
@@ -188,12 +214,12 @@ const onPressNextTransition = (event) => {
                     <div
                       onClick={() => onPressCompletedModuleItem(completedModule)}
                       className={
-                        "universityItem " +
-                        (completedModule.selected && "universityItemSelectedBorder universityItemSelected")
+                        "completedCourseItem " +
+                        (completedModule.selected && "courseItemSelectedBorder universityItemSelected")
                       }
                       key={completedModule.id}
                     >
-                      <div  className="universityItemText">
+                      <div  className="courseItemText">
                         <p>{completedModule.name}</p>
                       </div>
                     </div>

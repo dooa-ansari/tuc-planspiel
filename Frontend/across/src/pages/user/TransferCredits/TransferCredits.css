@@ -5,13 +5,30 @@
     cursor: inherit;
     border-radius: 8px;
 }
-
+.completedCourseItem div{
+    width: "30%";
+    cursor: inherit;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: #f5f5f5;
+}
 .universityItemSelected div{
-    background: #439a86;
+    background-color: #439a86;
 }
 
 .universityItemSelectedBorder{
    border-radius: 10px;
+}
+
+.courseItemSelectedBorder{
+    border-radius: 10px;
+ }
+ 
+
+.courseItemText{
+    display: flex;
+    flex-direction: row;
+    flex: 0.5
 }
 
 .universityItemFlag{
