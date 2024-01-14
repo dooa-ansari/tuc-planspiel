@@ -129,17 +129,25 @@ const CompareModules = () => {
   };
 
   const renderedSimilarModules = similarModules.map(similarModule => {
+    const contentHighlights = similarModule.similarModuleContent.split(". ");
+
+    const contents = contentHighlights.map((indContent, index) => (
+      <ul type="circle" key={index} className="similarModuleContent text-sm">
+        <li>{indContent}</li>
+      </ul>
+    ));
     return (
       <div className="similarModuleCard">
-        <div className="similarModuleName">
+        <div className="similarModuleName text-lg">
           {similarModule.similarModuleName}
         </div>
-        <div className="similarModuleUniversity">
+        <div className="similarModuleUniversity text-base">
           {similarModule.similarUniversity}
         </div>
-        <p className="similarModuleContent">
+        {/* <p className="similarModuleContent text-sm">
           {similarModule.similarModuleContent}
-        </p>
+        </p> */}
+        <div style={{ textAlign: "left" }}>{contents}</div>
       </div>
     );
   });
@@ -199,6 +207,7 @@ const CompareModules = () => {
           />
         </div>
         <div className="similarModuleCards">{renderedSimilarModules}</div>
+        <div style={{ marginTop: "200px" }}></div>
       </MainLayout>
     </>
   );

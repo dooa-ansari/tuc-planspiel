@@ -64,6 +64,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
+  display: none;
 }
 
 #menu-button svg rect, #menu-close-button svg rect {
@@ -83,3 +84,13 @@
   fill: #fff;
   
 }
+
+@media screen and (max-width: 786px) {
+  .navbar__link {
+    display: none;
+  }
+
+  #menu-button {
+    display: block;
+  }
+} 
