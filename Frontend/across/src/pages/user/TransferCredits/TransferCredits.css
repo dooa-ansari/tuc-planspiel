@@ -66,17 +66,18 @@
     margin-top: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
     flex: 1;
 }
 
 
 .moduleInner{
-    border: 1px solid #439a86;
+    border: 1px dashed #439a86;
     border-radius: 8px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+   
 }
 
 #moduleid {

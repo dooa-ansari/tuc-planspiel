@@ -6,7 +6,7 @@ import Lottie from "react-lottie";
 import loadingData from "../../../assets/lotties/loading_transfer_v0.json";
 import germany from "../../../assets/lotties/germany_flag.json";
 import poland from "../../../assets/lotties/poland_flag.json";
-import arrow from "../../../assets/lotties/arrow.json";
+import arrow from "../../../assets/lotties/arrow_down.json";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 
@@ -71,15 +71,17 @@ const buttonStyle = {
     }); 
   }
 
-  const getSimilarAgainst = async () => {
+  const getSimilarAgainst = () => {
     const selectedModules = usersCompleteModules.filter((item) => item.selected)
     const list = []
-    await selectedModules?.forEach((selected) => {
+    selectedModules?.forEach((selected) => {
       axios
       .get("http://localhost:8000/api/similarModules?moduleUri="+encodeURIComponent("http://tuc.web.engineering/module#CWEA"))
       .then((response) => {
         if (response.status == 200) {
           list.push(response.data.modules)
+          setSimilarModules([...similarModules, ...list])
+    
         }
       
       })
@@ -88,10 +90,18 @@ const buttonStyle = {
       });
     })
     setsimilarModulesLoading(false)
-    setSimilarModules(list)
     console.log(list)
      
   }
+
+  const defaultOptionsArrow = {
+    loop: true,
+    autoplay: true,
+    animationData: arrow,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   const defaultOptions = {
     loop: true,
@@ -245,15 +255,16 @@ const onPressNextTransition = (event) => {
                     <div id="creditPoints">Credit Points : {item.creditPoints}</div>
                     <div id="creditPoints">University : {item.university}</div>
                     <div id="creditPoints">Course : {item.courseName}</div>
-                    <div>{item.content}</div>
+                    {/* <div>{item.content}</div> */}
                     
                     </div>
+                    <Lottie options={defaultOptionsArrow} height={70} width={100} />
                     <div className="moduleInner">
                     <div id="moduleid">{item.similarModuleId} - {item.similarModuleName}</div>
                     <div id="creditPoints">Credit Points : {item.similarModuleCreditPoints}</div>
                     <div id="creditPoints">University : {item.similarUniversity}</div>
                     <div id="creditPoints">Course : {item.courseNameSimilar}</div>
-                    <div>{item.similarModuleContent}</div>
+                    {/* <div>{item.similarModuleContent}</div> */}
                     </div>  
                     
                   </div>
