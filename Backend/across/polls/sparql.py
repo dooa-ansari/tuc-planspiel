@@ -201,3 +201,34 @@ def delete_individual_module(module_uri):
     """
 
     return query  
+
+
+def update_individual_module_by_admin(module_uri, updated_module_name, updated_module_number, updated_module_content, updated_module_credit_points, university_uri, course_uri):
+    query = f"""
+    DELETE {{
+    <{module_uri}> <http://tuc.web.engineering/module#hasModuleNumber> ?oldModuleNumber .
+    <{module_uri}> <http://tuc.web.engineering/module#hasName> ?oldName .
+    <{module_uri}> <http://tuc.web.engineering/module#hasContent> ?oldContent.
+    <{module_uri}> <http://tuc.web.engineering/module#hasCreditPoints> ?oldCreditPoints .
+    
+    }}
+    INSERT {{
+    <{module_uri}> <http://tuc.web.engineering/module#hasModuleNumber> "{updated_module_number}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <{module_uri}> <http://tuc.web.engineering/module#hasName> "{updated_module_name}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <{module_uri}> <http://tuc.web.engineering/module#hasContent> "{updated_module_content}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <{module_uri}> <http://tuc.web.engineering/module#hasCreditPoints> "{updated_module_credit_points}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    }}
+    WHERE {{
+    <{module_uri}> rdf:type <http://tuc.web.engineering/module#> .
+    <{module_uri}> <http://across/university#hasUniversity> <{university_uri}> .
+    <{module_uri}> <http://tuc/course#hasCourse> <{course_uri}> .
+    OPTIONAL {{
+    <{module_uri}> <http://tuc.web.engineering/module#hasModuleNumber> ?oldModuleNumber .
+    <{module_uri}> <http://tuc.web.engineering/module#hasName> ?oldName .
+    <{module_uri}> <http://tuc.web.engineering/module#hasContent> ?oldContent.
+    <{module_uri}> <http://tuc.web.engineering/module#hasCreditPoints> ?oldCreditPoints .
+    }}
+    }}
+    """
+
+    return query
