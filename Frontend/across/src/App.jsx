@@ -38,7 +38,7 @@ const App = () => {
     });
   }, []);
   return (
-    <div className="app">
+    <div className="app" id="app">
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<Home />} />
