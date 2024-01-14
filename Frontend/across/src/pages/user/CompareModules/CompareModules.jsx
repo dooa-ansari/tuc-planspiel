@@ -144,9 +144,6 @@ const CompareModules = () => {
         <div className="similarModuleUniversity text-base">
           {similarModule.similarUniversity}
         </div>
-        {/* <p className="similarModuleContent text-sm">
-          {similarModule.similarModuleContent}
-        </p> */}
         <div style={{ textAlign: "left" }}>{contents}</div>
       </div>
     );
