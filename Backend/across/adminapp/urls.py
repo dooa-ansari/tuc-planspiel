@@ -10,4 +10,6 @@ urlpatterns= [
     path('universitieslist/', get_universities, name="get-universities"),
     path('api/insert/', update_module, name='update_module'),
     path('api/delete/', delete_module, name='delete_module'),
+    path('api/update/', update_module, name='update_module'),
+
 ]

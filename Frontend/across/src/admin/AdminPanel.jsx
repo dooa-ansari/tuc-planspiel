@@ -9,9 +9,9 @@ import ShowSimilarityTable from './ShowSimilarityTable';
 import ModulesList from './ModulesList';
 
 const AdminPanel = () => {
-    return (
-        <div>
-            <Outlet />
+  return (
+    <div>
+      <Outlet />
 
             {/* Nested Routes */}
             <Routes>
