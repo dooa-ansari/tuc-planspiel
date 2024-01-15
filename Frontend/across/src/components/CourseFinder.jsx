@@ -8,12 +8,11 @@ const CourseFinder = () => {
 
   return (
     <div className="courseFinder">
-      <img className="courseFinder__image" src={courseFinderImage} alt="" />
       <div className="courseFinder__details">
         <h2 className="courseFinder__title">
           Find Your Course That Makes Bright Future
         </h2>
-        <p className="courseFinder__description">
+        <p className="courseFinder__description text-sm">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         </p>
         <button
@@ -24,6 +23,7 @@ const CourseFinder = () => {
           Get Started
         </button>
       </div>
+      <img className="courseFinder__image" src={courseFinderImage} alt="" />
     </div>
   );
 };

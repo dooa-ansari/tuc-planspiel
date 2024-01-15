@@ -1,5 +1,5 @@
 .header {
-  background: #fff;
+  background: #ececec;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border-radius: 0;
   position: fixed;
@@ -18,7 +18,7 @@
 
 .header__brandImage {
   width: 150px;
-  height: 80px;
+  object-fit: contain;
 }
 
 
@@ -32,7 +32,7 @@
   list-style: none;
   cursor: pointer;
   font-weight: 500;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1.5rem;
 }
 
 .header__link:hover {
@@ -45,16 +45,21 @@
 }
 
 .header__signup-btn {
-  background: #007991;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  background: #347986;
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
   color: white;
   font-weight: 500;
   margin-left: 10px;
+  
 }
 
 .header__signup-btn:hover {
-  background: #439a86;
+  background: #036d83;
   color: #fff;
 }
 

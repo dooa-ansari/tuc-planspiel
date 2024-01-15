@@ -46,7 +46,7 @@ const Footer = () => {
             All rights reserved
           </small>
         </div>
-        <div className="footer__disclaimer-text">
+        <div className="footer__disclaimer-text text-center">
           <small>
             Disclaimer: This website is not associated with an actual company
             but is a part of a web engineering project called Planspiel at the

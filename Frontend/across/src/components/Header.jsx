@@ -55,7 +55,7 @@ const Header = ({ brandName }) => {
               Log in
             </NavLink>
           </li>
-          <li className="header__link header__signup-btn">
+          <li className="header__signup-btn">
             <NavLink className="register__link" to="/campus-flow/register">
               Sign Up
             </NavLink>

@@ -79,6 +79,8 @@ const Login = () => {
         access_token: googleUser.getAuthResponse().id_token,
       });
 
+      console.log(response);
+
       setAuth({
         ...auth,
         user: response.data.data,
