@@ -500,3 +500,68 @@ def get_completed_modules_by_user(request):
             "message": f"An unexpected error occurred: {e}"
         }
         return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_GET
+def get_universities(request):
+    try:
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+        qresponse = server.query(get_university_list())
+        universiy_list = []
+        universiy_list = [result['universityName']['value'] for result in qresponse['results']['bindings']]
+
+        # Return JSON response
+        if not universiy_list:
+            response = {
+                "message": f"No Universities found"
+            }
+            return JsonResponse(response, status =404)
+        else:
+            response = {
+                "message": "University list returned successfully",
+                "universities": universiy_list
+            }
+            return JsonResponse(response, status =200)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_POST
+def select_university_after_signup(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        selectedUniversity = data.get('selectedUniversity','')
+        
+        # Fetch User Profile from database
+        user_profile = UserProfile.objects.get(email=email)
+
+        if user_profile is None:
+            response = {
+                "message": f"User with this email {email} does not exist"
+            }
+            return JsonResponse(response, status =404)
+        else:
+            # Update University value
+            user_profile.university_name = selectedUniversity
+            user_profile.save()
+            response = {
+                    "message": "University updated successfully",
+                    "university": selectedUniversity
+                }
+            return JsonResponse(response, status =200)
+        
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+    
