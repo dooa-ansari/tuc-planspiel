@@ -4,20 +4,24 @@ from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
 from .list_similar_modules_blazegraph import find_all_similar_modules_list
 from .module_similarity import read_modules_and_compare
-from .models import UserProfile
+from .models import UserProfile, UserData
 
 from django.contrib.auth import login, get_user_model, authenticate
 from django.contrib.auth.password_validation import validate_password
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+from django.core.exceptions import ObjectDoesNotExist
+
+
 from django.conf import settings
-import jwt  # Import PyJWT library
+import jwt 
 from datetime import datetime, timedelta
 
 from pymantic import sparql
 from .sparql import *
 import json
 import os
+import ast
 import requests
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request as GoogleAuthRequest
@@ -26,7 +30,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.hashers import check_password
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_POST, require_GET
 
 def listsimilarmodules(request):
     data = find_all_similar_modules_list()
@@ -54,7 +58,7 @@ def register_user(request):
             validate_email(email)
             validate_password(password)
             if password !=confirmPassword:
-                return JsonResponse({"message": "Passwords don't match"})
+                return JsonResponse({"message": "Passwords don't match"}, status=400)
             hashed_password = make_password(password)
 
               # Save the data with the hashed password
@@ -73,10 +77,10 @@ def register_user(request):
                 'role':user_profile.role
             }  
             jwt_token = jwt.encode(payload,settings.SECRET_KEY , algorithm='HS256')
-            return JsonResponse({'message': 'User registered successfully', 'token': jwt_token, "data": user_profile_data})
+            return JsonResponse({'message': 'User registered successfully', 'token': jwt_token, "user": user_profile_data})
 
         except ValidationError as e:
-            return JsonResponse({'message': str(e)})
+            return JsonResponse({'message': str(e)}, status=400)
         except jwt.InvalidTokenError as e:
             return JsonResponse({'message': 'Invalid token: ' + str(e)})
         except jwt.ExpiredSignatureError as e:
@@ -132,10 +136,11 @@ def authenticate_user_login(request):
                         "user": user_profile_data,
                         "token": jwt_token
                     }
-                    return JsonResponse(response, status =200)
+                    return JsonResponse(response, status=200)
                 else:
                     return JsonResponse({'message': 'Email or password is incorrect'}, status = 401)
-            return JsonResponse({'message': 'Login Failed'}, status = 400)
+        except ObjectDoesNotExist:
+            return JsonResponse({'message': "Email or password is incorrect"}, status = 401)
         except json.JSONDecodeError:
             return JsonResponse({'message': 'Invalid JSON data in the request body'}, status=400)
         except jwt.InvalidTokenError as e:
@@ -239,7 +244,7 @@ def google_login(request):
                         'full_name': user_profile.full_name,
                         'university_name': user_profile.university_name,
                         'signup_using': user_profile.signup_using,
-                        'role':user_profile_from_google.role
+                        'role':user_profile.role
                     }
             response_data = {
                 'message': 'User account already exist, logging you in...'
@@ -411,3 +416,156 @@ def get_modules_from_course_and_university(request):
 def get_similar_module_against_given_module_uri(request):
     return get_similar_module_against_module_uri(request)
 
+@csrf_exempt
+@require_POST
+def save_completed_modules_by_user(request):
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        universityName = data.get('universityName','')
+        courseName = data.get('courseName','')
+        # It will consists the list of module URI and module Name
+        completedModulesList = data.get('completedModulesList','')
+        try:
+            user_profile = UserProfile.objects.get(email=email)
+            
+            user_data, created = UserData.objects.get_or_create(
+            email=user_profile,
+            defaults={'university_name': universityName, 'course_name': courseName, 'completed_modules': completedModulesList}
+            )
+
+            # If the instance is not created (i.e., already exists), update the fields
+            if not created:
+                user_data.university_name = universityName
+                user_data.course_name = courseName
+                user_data.completed_modules = completedModulesList
+
+            user_data.save()
+
+            response = {
+                'message': 'Successfully Updated Completed Modules by User'
+            }
+            return JsonResponse(response, status =200)
+        except Exception as e:
+            response = {
+                "message": f"User with email: {email} does not exist"
+            }
+            return JsonResponse(response, status =404)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+@csrf_exempt
+@require_POST
+def get_completed_modules_by_user(request):
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        try: 
+            user_profile = UserProfile.objects.get(email=email)
+            try:
+                user_data = UserData.objects.get(email=email)
+
+                # Use ast.literal_eval to safely evaluate the string as a Python literal
+                completed_modules_list = ast.literal_eval(user_data.completed_modules)
+
+                user_profile_data = {  
+                    'university_name': user_data.university_name,
+                    'course_name': user_data.course_name,
+                    'completed_modules':completed_modules_list
+                }
+                response= {
+                    'message': 'Successfully returned completed module list of user',
+                    'user_profile_data' : user_profile_data
+                }
+                return JsonResponse(response, status =200)
+            except UserData.DoesNotExist:
+                # Handle the case where UserData does not exist for the given email
+                response = {
+                    'message': f'UserData not found for the given email: {email}',
+                    'user_profile_data': {}
+                }
+                return JsonResponse(response, status=404)
+        except Exception as e:
+            response = {
+                "message": f"User with email: {email} does not exist"
+            }
+            return JsonResponse(response, status =404)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_GET
+def get_universities(request):
+    try:
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+        qresponse = server.query(get_university_list())
+        universiy_list = []
+        universiy_list = [result['universityName']['value'] for result in qresponse['results']['bindings']]
+
+        # Return JSON response
+        if not universiy_list:
+            response = {
+                "message": f"No Universities found"
+            }
+            return JsonResponse(response, status =404)
+        else:
+            response = {
+                "message": "University list returned successfully",
+                "universities": universiy_list
+            }
+            return JsonResponse(response, status =200)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_POST
+def select_university_after_signup(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        selectedUniversity = data.get('selectedUniversity','')
+        
+        # Fetch User Profile from database
+        user_profile = UserProfile.objects.get(email=email)
+
+        if user_profile is None:
+            response = {
+                "message": f"User with this email {email} does not exist"
+            }
+            return JsonResponse(response, status =404)
+        else:
+            # Update University value
+            user_profile.university_name = selectedUniversity
+            user_profile.save()
+            response = {
+                    "message": "University updated successfully",
+                    "university": selectedUniversity
+                }
+            return JsonResponse(response, status =200)
+        
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+    

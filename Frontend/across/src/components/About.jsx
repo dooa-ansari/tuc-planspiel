@@ -1,7 +1,7 @@
 import React from "react";
-import moduleSvg from "../assets/module.svg";
-import courseSvg from "../assets/course.svg";
-import acrossSvg from "../assets/across_logo.svg";
+import moduleSvg from "../assets/images/module.svg";
+import courseSvg from "../assets/images/course.svg";
+import acrossSvg from "../assets/images/across_logo.svg";
 import "../assets/css/About.css";
 
 const About = () => {

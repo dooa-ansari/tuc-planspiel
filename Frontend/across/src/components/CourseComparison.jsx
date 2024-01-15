@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/CourseComparison.css";
-import courseCompareImage from "../assets/compare_modules.png";
+import courseCompareImage from "../assets/images/compare_modules.png";
 
 const CourseComparison = () => {
   return (
