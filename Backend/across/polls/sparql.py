@@ -127,3 +127,108 @@ def get_modules_from_course_and_university_query(courseUri, courseName, universi
         GROUP BY ?moduleName
         """
     return query
+
+
+def add_individual_module_by_admin(formatted_module_name, module_name, formatted_module_number, module_content, module_credit_points, university_uri, course_uri):
+    query = f"""
+    INSERT DATA {{
+    <http://tuc.web.engineering/module#{formatted_module_name}> rdf:type <http://tuc.web.engineering/module#> .
+    <http://tuc.web.engineering/module#{formatted_module_name}> <http://tuc.web.engineering/module#hasModuleNumber> "{formatted_module_number}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://tuc.web.engineering/module#{formatted_module_name}> <http://tuc.web.engineering/module#hasName> "{module_name}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://tuc.web.engineering/module#{formatted_module_name}> <http://tuc.web.engineering/module#hasContent> "{module_content}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://tuc.web.engineering/module#{formatted_module_name}> <http://tuc.web.engineering/module#hasCreditPoints> "{module_credit_points}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://tuc.web.engineering/module#{formatted_module_name}> <http://across/university#hasUniversity> <{university_uri}>.
+    <http://tuc.web.engineering/module#{formatted_module_name}> <http://tuc/course#hasCourse> <{course_uri}> .
+    }}
+    """
+
+    return query
+
+def get_course_uri_by_course_and_university_name(course_name, university_name):
+    query = f"""
+    SELECT ?courseUri
+        WHERE {{
+            ?course rdf:type <http://tuc/course#> .
+            ?course <http://across/university#belongsToUniversity> ?university .
+            ?university rdf:type <http://across/university#> .
+            ?university <http://across/university#hasUniversityName> ?universityName .
+            ?course <http://tuc/course#hasCourseName> ?courseName .
+            
+            BIND(str(?course) AS ?courseUri)
+
+            FILTER (
+                ?courseName = "{course_name}"^^<http://www.w3.org/2001/XMLSchema#string> &&
+                ?universityName = "{university_name}"^^<http://www.w3.org/2001/XMLSchema#string>
+            )
+        }}
+    """
+    return query
+
+def get_university_uri_by_university_name(university_name):
+    query = f"""
+    SELECT ?universityUri 
+        WHERE {{
+            ?university rdf:type <http://across/university#> .
+            ?university <http://across/university#hasUniversityName> ?universityName .
+            
+            BIND(str(?university) AS ?universityUri)
+
+            FILTER (
+                ?universityName = "{university_name}"^^<http://www.w3.org/2001/XMLSchema#string>
+            )
+        }}
+    """
+    return query
+
+def is_module_already_present(module_name, module_number, university_uri, course_uri):
+    query = f"""
+    ASK {{
+    ?module rdf:type <http://tuc.web.engineering/module#> .
+    ?module <http://tuc.web.engineering/module#hasName> "{module_name}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    ?module <http://tuc.web.engineering/module#hasModuleNumber> "{module_number}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    ?module <http://across/university#hasUniversity> <{university_uri}> .
+    ?module <http://tuc/course#hasCourse> <{course_uri}> .
+    }}
+    """
+
+    return query
+
+def delete_individual_module(module_uri):
+    query = f"""
+    DELETE WHERE {{
+    <{module_uri}> ?predicate ?object .
+    }}
+    """
+
+    return query  
+
+
+def update_individual_module_by_admin(module_uri, updated_module_name, updated_module_number, updated_module_content, updated_module_credit_points, university_uri, course_uri):
+    query = f"""
+    DELETE {{
+    <{module_uri}> <http://tuc.web.engineering/module#hasModuleNumber> ?oldModuleNumber .
+    <{module_uri}> <http://tuc.web.engineering/module#hasName> ?oldName .
+    <{module_uri}> <http://tuc.web.engineering/module#hasContent> ?oldContent.
+    <{module_uri}> <http://tuc.web.engineering/module#hasCreditPoints> ?oldCreditPoints .
+    
+    }}
+    INSERT {{
+    <{module_uri}> <http://tuc.web.engineering/module#hasModuleNumber> "{updated_module_number}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <{module_uri}> <http://tuc.web.engineering/module#hasName> "{updated_module_name}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <{module_uri}> <http://tuc.web.engineering/module#hasContent> "{updated_module_content}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <{module_uri}> <http://tuc.web.engineering/module#hasCreditPoints> "{updated_module_credit_points}"^^<http://www.w3.org/2001/XMLSchema#string> .
+    }}
+    WHERE {{
+    <{module_uri}> rdf:type <http://tuc.web.engineering/module#> .
+    <{module_uri}> <http://across/university#hasUniversity> <{university_uri}> .
+    <{module_uri}> <http://tuc/course#hasCourse> <{course_uri}> .
+    OPTIONAL {{
+    <{module_uri}> <http://tuc.web.engineering/module#hasModuleNumber> ?oldModuleNumber .
+    <{module_uri}> <http://tuc.web.engineering/module#hasName> ?oldName .
+    <{module_uri}> <http://tuc.web.engineering/module#hasContent> ?oldContent.
+    <{module_uri}> <http://tuc.web.engineering/module#hasCreditPoints> ?oldCreditPoints .
+    }}
+    }}
+    """
+
+    return query

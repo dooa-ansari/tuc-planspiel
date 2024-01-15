@@ -26,7 +26,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.hashers import check_password
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_POST, require_GET
 
 def listsimilarmodules(request):
     data = find_all_similar_modules_list()
@@ -411,3 +411,65 @@ def get_modules_from_course_and_university(request):
 def get_similar_module_against_given_module_uri(request):
     return get_similar_module_against_module_uri(request)
 
+@csrf_exempt
+@require_POST
+def select_university(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        selectedUniversity = data.get('selectedUniversity','')
+        
+        # Fetch User Profile from database
+        user_profile = UserProfile.objects.get(email=email)
+
+        if user_profile is None:
+            response = {
+                "message": f"User with this email {email} does not exist"
+            }
+            return JsonResponse(response, status =404)
+        else:
+            # Update University value
+            user_profile.university_name = selectedUniversity
+            user_profile.save()
+            response = {
+                    "message": "University updated successfully",
+                    "university": selectedUniversity
+                }
+            return JsonResponse(response, status =200)
+        
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+    
+
+@csrf_exempt
+@require_GET
+def get_universities(request):
+    try:
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+        qresponse = server.query(get_university_list())
+        universiy_list = []
+        universiy_list = [result['universityName']['value'] for result in qresponse['results']['bindings']]
+
+        # Return JSON response
+        if not universiy_list:
+            response = {
+                "message": f"No Universities found"
+            }
+            return JsonResponse(response, status =404)
+        else:
+            response = {
+                "message": "University list returned successfully",
+                "universities": universiy_list
+            }
+            return JsonResponse(response, status =200)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
