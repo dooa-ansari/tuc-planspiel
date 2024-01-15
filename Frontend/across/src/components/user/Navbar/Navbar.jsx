@@ -7,7 +7,18 @@ import { RiLogoutBoxRFill } from "react-icons/ri";
 
 import enLanSvg from "../../../assets/en.svg";
 
+import { useAuth } from "../../../context/AuthContext";
+
 const Navbar = () => {
+  const [auth, setAuth] = useAuth();
+
+  const handleSignOut = () => {
+    setAuth({ ...auth, user: null, token: "" });
+    localStorage.removeItem("auth");
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+  };
+
   return (
     <>
       <section id="navbar">
@@ -18,17 +29,24 @@ const Navbar = () => {
             </h1>
             <nav>
               <ul className="navbar__links">
-                <Link className="navbar__link userName">
-                  John Doe
-                  <span>Student</span>
-                </Link>
-                <Link className="navbar__link">
+                {auth.token && (
+                  <Link className="navbar__link userName">
+                    {auth.user.full_name}
+                    <span>Student</span>
+                  </Link>
+                )}
+
+                <Link className="navbar__link" to="/campus-flow/user/profile">
                   <FaUserGraduate />
                 </Link>
                 <Link className="navbar__link">
                   <FaBell />
                 </Link>
-                <Link className="navbar__link">
+                <Link
+                  onClick={handleSignOut}
+                  className="navbar__link"
+                  to="/campus-flow/login"
+                >
                   <RiLogoutBoxRFill />
                 </Link>
                 <Link className="navbar__link">

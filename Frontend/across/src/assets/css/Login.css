@@ -50,8 +50,8 @@
   background: transparent;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   margin-bottom: 25px;
+  padding-right: 50px;
 }
-
 
 .login__right {
   display: flex;
@@ -116,7 +116,35 @@ input::placeholder {
   object-fit: contain;
 }
 
+.Toastify__toast {
+  font-family: inherit !important;
+}
 
+.google__loginButton {
+  width: 250px;
+  padding-left: 20px !important;
+  border-radius: 9999px !important;
+  margin: 20px 0;
+  font-family: inherit !important;
+  color: #000 !important;
+}
+
+.login__inputGroup {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.eyeIcon, .mailIcon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: rgba(0,0,0,0.6);
+  bottom: 40px;
+}
 
 
 @media screen and (max-width: 640px) {

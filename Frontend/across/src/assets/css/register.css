@@ -62,6 +62,7 @@
     border-bottom: 1px solid #8F8F8F ;
     background: transparent;
     margin: 35px 0;
+    padding-right: 50px;
   }
 
   input::placeholder {
@@ -151,6 +152,23 @@
   background:#fff;
   border-radius: 50%;
   margin-right: 1rem;
+}
+
+.register__inputGroup {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.eyeIcon, .userIcon, .mailIcon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: rgba(0,0,0,0.6);
+  bottom: 40px;
 }
 
 

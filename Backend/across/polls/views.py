@@ -10,6 +10,9 @@ from django.contrib.auth import login, get_user_model, authenticate
 from django.contrib.auth.password_validation import validate_password
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+from django.core.exceptions import ObjectDoesNotExist
+
+
 from django.conf import settings
 import jwt  # Import PyJWT library
 from datetime import datetime, timedelta
@@ -55,7 +58,7 @@ def register_user(request):
             validate_email(email)
             validate_password(password)
             if password !=confirmPassword:
-                return JsonResponse({"message": "Passwords don't match"})
+                return JsonResponse({"message": "Passwords don't match"}, status=400)
             hashed_password = make_password(password)
 
               # Save the data with the hashed password
@@ -74,10 +77,10 @@ def register_user(request):
                 'role':user_profile.role
             }  
             jwt_token = jwt.encode(payload,settings.SECRET_KEY , algorithm='HS256')
-            return JsonResponse({'message': 'User registered successfully', 'token': jwt_token, "data": user_profile_data})
+            return JsonResponse({'message': 'User registered successfully', 'token': jwt_token, "user": user_profile_data})
 
         except ValidationError as e:
-            return JsonResponse({'message': str(e)})
+            return JsonResponse({'message': str(e)}, status=400)
         except jwt.InvalidTokenError as e:
             return JsonResponse({'message': 'Invalid token: ' + str(e)})
         except jwt.ExpiredSignatureError as e:
@@ -133,10 +136,11 @@ def authenticate_user_login(request):
                         "user": user_profile_data,
                         "token": jwt_token
                     }
-                    return JsonResponse(response, status =200)
+                    return JsonResponse(response, status=200)
                 else:
                     return JsonResponse({'message': 'Email or password is incorrect'}, status = 401)
-            return JsonResponse({'message': 'Login Failed'}, status = 400)
+        except ObjectDoesNotExist:
+            return JsonResponse({'message': "Email or password is incorrect"}, status = 401)
         except json.JSONDecodeError:
             return JsonResponse({'message': 'Invalid JSON data in the request body'}, status=400)
         except jwt.InvalidTokenError as e:
@@ -240,7 +244,7 @@ def google_login(request):
                         'full_name': user_profile.full_name,
                         'university_name': user_profile.university_name,
                         'signup_using': user_profile.signup_using,
-                        'role':user_profile_from_google.role
+                        'role':user_profile.role
                     }
             response_data = {
                 'message': 'User account already exist, logging you in...'
