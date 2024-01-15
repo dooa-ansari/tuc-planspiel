@@ -1,5 +1,5 @@
 import "../assets/css/Login.css";
-import loginSvg from "../assets/loginPage_characterSet.svg";
+import loginSvg from "../assets/images/loginPage_characterSet.svg";
 import GoogleLogin from "react-google-login";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +13,7 @@ import { MdEmail } from "react-icons/md";
 import Button from "../components/Button/Button";
 import { googleSignIn, login, storeUserInLocalStorage } from "../api/userApi";
 import { useAuth } from "../context/AuthContext";
+import Loader from "../components/Loader/Loader";
 
 const Login = () => {
   const navigate = useNavigate();
