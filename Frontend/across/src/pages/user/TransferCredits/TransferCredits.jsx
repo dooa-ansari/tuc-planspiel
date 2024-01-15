@@ -21,39 +21,19 @@ const TransferCredits = () => {
   const [selectedUniversity, setSelectedUniverity] = useState(null);
   const [lastSelectedModule, setLastSelectedModule] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
-  const afterOpenModal = () => {
-    //subtitle.style.color = '#f00';
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-
-  const customStyles = {
-    content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
-    },
-  };
-
-  // Modal.setAppElement("#app");
-
+  const [details, showDetails] = useState(null)
+  
   const buttonStyle = {
     background: "#439a86",
     borderRadius: "10px",
     color: "white",
     width: "60px",
   };
+
+  const onPressShowDetails = (item) => {
+    showDetails(item)
+
+  }
   useEffect(() => {
     axios
       .get("http://localhost:8000/adminapp/universitieslist/")
@@ -281,13 +261,8 @@ const TransferCredits = () => {
               </div>
             )}
           </div>
-          <div style={{ background: "white" }}>
-            {/* <Modal
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-              style={customStyles}
-              content
-            ></Modal> */}
+          <div style={{ background: "white" }} id="app">
+            <div>{}</div>
             <p>Possible Transferable Credits</p>
             {similarModulesLoading ? (
               <Lottie options={defaultOptions2} height={200} width={200} />
@@ -310,8 +285,10 @@ const TransferCredits = () => {
                           <div id="creditPoints">
                             Course : {item.courseName}
                           </div>
-                          <button>Show Details</button>
-                          {/* <div>{item.content}</div> */}
+                          <details id="creditPoints">
+                            <summary>Show Details</summary>
+                            <p>{item.content}</p>
+                          </details>
                         </div>
                         <Lottie
                           options={defaultOptionsArrow}
@@ -331,8 +308,12 @@ const TransferCredits = () => {
                           <div id="creditPoints">
                             Course : {item.courseNameSimilar}
                           </div>
-                          {/* <div>{item.similarModuleContent}</div> */}
-                        </div>
+                          <details id="creditPoints">
+                            <summary>Show Details</summary>
+                            <p>{item.similarModuleContent}</p>
+                          </details>
+      
+                         </div>
                       </div>
                     );
                   });
