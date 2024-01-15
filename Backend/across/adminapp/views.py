@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-import os, json
+import os, json , os.path
 from pymantic import sparql
 from polls.sparql import *
 from django.http import JsonResponse
@@ -15,6 +15,20 @@ from polls.models import UserProfile
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
 import requests
+
+
+
+@csrf_exempt
+@require_POST
+def clean_up_upload_folder(request):
+    try:
+        filelist = [ f for f in os.listdir("uploads/") if f.endswith(".rdf") ]
+        for f in filelist:
+         os.remove(os.path.join("uploads/", f))
+
+        return JsonResponse({'message': 'Files deleted successfully'}, status=200)
+    except Exception as e:
+         return JsonResponse({'message': f'Error deleting files: {str(e)}'}, status=500)
 
 
 @csrf_exempt
