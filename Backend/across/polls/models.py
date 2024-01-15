@@ -13,3 +13,15 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.email
+
+class UserData(models.Model):
+    # Define email as a foreign key
+    email = models.ForeignKey(UserProfile, to_field='email', on_delete=models.CASCADE)
+
+    # Other Fields
+    university_name =  models.TextField()
+    course_name = models.TextField()
+    completed_modules = models.TextField()
+
+    def __str__(self):
+        return f"{self.email} - University: {self.university_name}, Course: {self.course_name}, Completed Modules: {self.completed_modules}"

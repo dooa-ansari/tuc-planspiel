@@ -1,9 +1,10 @@
+from .get_similar_module_against_module_uri import get_similar_module_against_module_uri
 import rdflib
 from django.contrib.auth.hashers import make_password
 from django.http import HttpResponse
 from .list_similar_modules_blazegraph import find_all_similar_modules_list
 from .module_similarity import read_modules_and_compare
-from .models import UserProfile
+from .models import UserProfile, UserData
 
 from django.contrib.auth import login, get_user_model, authenticate
 from django.contrib.auth.password_validation import validate_password
@@ -16,8 +17,11 @@ from django.conf import settings
 import jwt  # Import PyJWT library
 from datetime import datetime, timedelta
 
-
+from pymantic import sparql
+from .sparql import *
 import json
+import os
+import ast
 import requests
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request as GoogleAuthRequest
@@ -26,7 +30,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.hashers import check_password
-
+from django.views.decorators.http import require_POST, require_GET
 
 def listsimilarmodules(request):
     data = find_all_similar_modules_list()
@@ -281,3 +285,287 @@ def user_profile(request):
     }
 
     return JsonResponse(user_details)
+
+@csrf_exempt
+@require_POST
+def get_courses_from_university(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        universityName = data.get('universityName','')
+        universityUri = data.get('universityUri','')
+
+        # SPARQL query to retrieve university names and course names
+        sparql_query = get_course_from_university_query(universityUri, universityName)
+
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+
+        qresponse = server.query(sparql_query)
+        course_list = []
+        data = qresponse['results']['bindings']
+        
+        # Process the results
+        for result in data:
+            course_list_temp = {
+                'courseUri' :  str(result['courseUri']['value']),
+                'courseName' : str(result['courseName']['value']),
+                'courseNumber' : str(result['courseNumber']['value'])
+            }
+            course_list.append(course_list_temp)
+
+        # Return JSON response
+        if not course_list:
+            response = {
+                "message": f"No courses found for {universityName}, please check university uri or university name",
+                "university": universityName
+            }
+            return JsonResponse(response, status =404)
+        else:
+            response = {
+                "message": "Course list returned successfully",
+                "courses": course_list,
+                "university": universityName
+            }
+            return JsonResponse(response, status =200)
+
+    except json.JSONDecodeError as json_error:
+        response = {
+            "message": f"JSON decoding error: {json_error}"
+        }
+        return JsonResponse(response, status =400)
+    except rdflib.exceptions.Error as rdf_error:
+        response = {
+            "message": f"RDF parsing error: {rdf_error}"
+        }
+        return JsonResponse(response, status =500)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_POST
+def get_modules_from_course_and_university(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        courseUri = data.get('courseUri','')
+        universityUri = data.get('universityUri','')
+        courseName = data.get('courseName','')
+     
+        # SPARQL query to retrieve university names and course names
+        sparql_query = get_modules_from_course_and_university_query(courseUri, courseName, universityUri)
+
+        # Execute the SPARQL query
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+
+        qresponse = server.query(sparql_query)
+        module_list = []
+        data = qresponse['results']['bindings']
+        # Process the results
+        for result in data:
+            module_list_temp = {
+                'moduleUri' :  str(result['sampleModuleUri']['value']),
+                'moduleName' : str(result['moduleName']['value']),
+                'moduleNumber' : str(result['sampleModuleNumber']['value']),
+                'moduleContent' : str(result['sampleModuleContent']['value']),
+                'moduleCreditPoints' : str(result['sampleModuleCreditPoints']['value'])
+            }
+            module_list.append(module_list_temp)
+
+        # Return JSON response
+        if not module_list:
+            response = {
+                "message": f"No modules found for course named as {courseName}, please check university uri or course uri or course name",
+                "course": courseName
+            }
+            return JsonResponse(response, status =404)
+        else:
+            response = {
+                "message": "Module list returned successfully",
+                "modules": module_list,
+                "course": courseName
+            }
+            return JsonResponse(response, status =200)
+
+    except json.JSONDecodeError as json_error:
+        response = {
+            "message": f"JSON decoding error: {json_error}"
+        }
+        return JsonResponse(response, status =400)
+    except rdflib.exceptions.Error as rdf_error:
+        response = {
+            "message": f"RDF parsing error: {rdf_error}"
+        }
+        return JsonResponse(response, status =500)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+    
+@csrf_exempt
+def get_similar_module_against_given_module_uri(request):
+    return get_similar_module_against_module_uri(request)
+
+@csrf_exempt
+@require_POST
+def save_completed_modules_by_user(request):
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        universityName = data.get('universityName','')
+        courseName = data.get('courseName','')
+        # It will consists the list of module URI and module Name
+        completedModulesList = data.get('completedModulesList','')
+        try:
+            user_profile = UserProfile.objects.get(email=email)
+            
+            user_data, created = UserData.objects.get_or_create(
+            email=user_profile,
+            defaults={'university_name': universityName, 'course_name': courseName, 'completed_modules': completedModulesList}
+            )
+
+            # If the instance is not created (i.e., already exists), update the fields
+            if not created:
+                user_data.university_name = universityName
+                user_data.course_name = courseName
+                user_data.completed_modules = completedModulesList
+
+            user_data.save()
+
+            response = {
+                'message': 'Successfully Updated Completed Modules by User'
+            }
+            return JsonResponse(response, status =200)
+        except Exception as e:
+            response = {
+                "message": f"User with email: {email} does not exist"
+            }
+            return JsonResponse(response, status =404)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+@csrf_exempt
+@require_POST
+def get_completed_modules_by_user(request):
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        try: 
+            user_profile = UserProfile.objects.get(email=email)
+            try:
+                user_data = UserData.objects.get(email=email)
+
+                # Use ast.literal_eval to safely evaluate the string as a Python literal
+                completed_modules_list = ast.literal_eval(user_data.completed_modules)
+
+                user_profile_data = {  
+                    'university_name': user_data.university_name,
+                    'course_name': user_data.course_name,
+                    'completed_modules':completed_modules_list
+                }
+                response= {
+                    'message': 'Successfully returned completed module list of user',
+                    'user_profile_data' : user_profile_data
+                }
+                return JsonResponse(response, status =200)
+            except UserData.DoesNotExist:
+                # Handle the case where UserData does not exist for the given email
+                response = {
+                    'message': f'UserData not found for the given email: {email}',
+                    'user_profile_data': {}
+                }
+                return JsonResponse(response, status=404)
+        except Exception as e:
+            response = {
+                "message": f"User with email: {email} does not exist"
+            }
+            return JsonResponse(response, status =404)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_GET
+def get_universities(request):
+    try:
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+        qresponse = server.query(get_university_list())
+        universiy_list = []
+        universiy_list = [result['universityName']['value'] for result in qresponse['results']['bindings']]
+
+        # Return JSON response
+        if not universiy_list:
+            response = {
+                "message": f"No Universities found"
+            }
+            return JsonResponse(response, status =404)
+        else:
+            response = {
+                "message": "University list returned successfully",
+                "universities": universiy_list
+            }
+            return JsonResponse(response, status =200)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_POST
+def select_university_after_signup(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        selectedUniversity = data.get('selectedUniversity','')
+        
+        # Fetch User Profile from database
+        user_profile = UserProfile.objects.get(email=email)
+
+        if user_profile is None:
+            response = {
+                "message": f"User with this email {email} does not exist"
+            }
+            return JsonResponse(response, status =404)
+        else:
+            # Update University value
+            user_profile.university_name = selectedUniversity
+            user_profile.save()
+            response = {
+                    "message": "University updated successfully",
+                    "university": selectedUniversity
+                }
+            return JsonResponse(response, status =200)
+        
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+    

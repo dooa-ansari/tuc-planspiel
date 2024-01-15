@@ -6,7 +6,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10026S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Signal Processing</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10026S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -17,7 +17,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10064S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Industrial Networks</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10064S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -28,7 +28,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10057W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modern Control of Mechatronics System</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10057W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -39,7 +39,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10026W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Signal Processing</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10026W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -50,7 +50,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10006">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10006</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -62,7 +62,7 @@ Requirements:linear circuit analysis (Thevenin's theorem, superposition, loop an
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10039">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Application of Computer Science in Electrical Engineering</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10039</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -74,7 +74,7 @@ Requirements:Electrical Circuits 1, 2.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10046">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electromagnetism - engineering physics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10046</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -86,7 +86,7 @@ Requirements:Students are expected to have knowledge in the field of mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10060W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grid Integration of Renewable Energy</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10060W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -97,7 +97,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10025">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control of electrical drives 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10025</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -109,7 +109,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10065W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electric Power Transmission and Distribution</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10065W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -120,7 +120,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10023W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SQL Based Data Analysis and Reporting</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10023W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -131,7 +131,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10022W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image Processing and Recognition</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10022W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -142,7 +142,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10028W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Equipment and Installations</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10028W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -153,7 +153,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10009W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microprocessor Technique and Microcontrollers</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10009W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -164,7 +164,7 @@ Lecture:Binary arithmetic. Basic topics of the microprocessor engineering. Micro
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10024">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control engineering and systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10024</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -176,7 +176,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10052W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optoelectronics-Sources and Detectors of Optical Radiation</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10052W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -187,7 +187,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10058S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microprocessor Technique and Microcontrollers</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10058S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -198,7 +198,7 @@ Lecture:Binary arithmetic. Basic topics of the microprocessor engineering. Micro
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10072S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programmable Logic Controllers</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10072S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -209,7 +209,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10017W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radioelectronic Devices</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10017W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -220,7 +220,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10029S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Machines 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10029S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -231,7 +231,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10067W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field Programmable Gate Arrays</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10067W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -242,7 +242,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10026">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital signal processing</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10026</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -253,7 +253,7 @@ The aim of the course is to acquaint the students with the basics of the digital
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10017">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radioelectronic devices</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10017</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -264,7 +264,7 @@ The principal objective of lectures is to cover the fundamentals of main radioel
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20001">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Signal Processors (MASTER)</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20001</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -276,7 +276,7 @@ Requirements:Students are expected to have knowledge in the field of mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10042">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project in IT networks</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10042</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -288,7 +288,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10035">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security and reliability of network systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10035</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -300,7 +300,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10006W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10006W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -311,7 +311,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20005">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wireless broadcasting systems (MASTER)</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20005</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -323,7 +323,7 @@ Requirements:Students are expected to have knowledge in the field of mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10018">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radio and television devices</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10018</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -335,7 +335,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10023S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automative Lighting</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10023S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -346,7 +346,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10047S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instrumentation and Measurements</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10047S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -357,7 +357,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10002">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of lighting technology</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10002</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -368,7 +368,7 @@ Familiarizing students with basic light quantities, units and electric light sou
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10031">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field programmable gate arrays</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10031</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -380,7 +380,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10001W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of Photonics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10001W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -391,7 +391,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10067S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vector, Raster Computer Graphics and Visualization</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10067S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -402,7 +402,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10041">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automotive electronics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10041</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -414,7 +414,7 @@ Requirements:no prerequisites required
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10043">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Embedded systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10043</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -426,7 +426,7 @@ Requirements:Students are expected to have knowledge in the field of mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10048">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Programming in C</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10048</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -438,7 +438,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10004W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Circuits 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10004W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -449,7 +449,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10024S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control Engineering and Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10024S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -460,7 +460,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10014">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10014</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -472,7 +472,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10021W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Final Project</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10021W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -483,7 +483,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10042S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project in IT Networks</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10042S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -494,7 +494,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10039W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Application of Computer Science in Electrical Engineering</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10039W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -505,7 +505,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10007W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiberoptic Networks</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10007W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -516,7 +516,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10008">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of control engineering</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10008</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -527,7 +527,7 @@ Introducing students to structures, tasks and methods of analysis and synthesis 
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10083S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cryptography</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10083S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -538,7 +538,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10002W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of Lighting Technology</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10002W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -549,7 +549,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10047">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metrology</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10047</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -561,7 +561,7 @@ Requirements:Electrical Circuits 1.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10046W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electromagnetism - Engineering Physics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10046W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -572,7 +572,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20002W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-linear and Advanced Control of  Electromechanical Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20002W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -583,7 +583,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10011W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network Technologies</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10011W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -594,7 +594,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10078S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renewable Energy Technologies</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10078S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -605,7 +605,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10040W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10040W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -616,7 +616,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10018W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radio and Television Devices</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10018W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -627,7 +627,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10007">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiberoptic networks</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10007</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -639,7 +639,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10076S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of Real-Time Operating Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10076S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -650,7 +650,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10001">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of photonics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10001</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -662,7 +662,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10004">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical circuits 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10004</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -673,7 +673,7 @@ To receive the abilities to perform a simple analysis of linear DC and AC circui
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20010S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master Thesis</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20010S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -684,7 +684,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10048W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Programming in C</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10048W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -695,7 +695,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10005">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical machines 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10005</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -707,7 +707,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20004">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCP/IP Networks and Applications (MASTER)</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20004</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -719,7 +719,7 @@ Requirements:Network technologies or equivalenStudents are expected to have know
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10084S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control of Electrical Drives 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10084S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -730,7 +730,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10059W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Visualization of Industrial Processes</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10059W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -741,7 +741,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10021">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Final project</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10021</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -760,7 +760,7 @@ STUDENT IS OBLIGED TO STUDY IN BIALYSTOK UNIVERSITY OF TECHNOLOGY THE WHOLE ACAD
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10049">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coding and Transmission of Signals</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10049</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -772,7 +772,7 @@ Requirements:Circuits and signals, Principles of telecommunication
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10044W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project of Electrical Installations in Industrial Building</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10044W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -783,7 +783,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10063W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Networks</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10063W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -794,7 +794,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10009">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microprocessor technique and microcontroller</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10009</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -806,7 +806,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10019">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wireless transmission systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10019</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -817,7 +817,7 @@ Understanding of design of radio channels with different frequency band, underst
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10064W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intelligent Technical Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10064W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -828,7 +828,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20003">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Special Optical Fibers 2 (MASTER)</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20003</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -840,7 +840,7 @@ Requirements:Students are expected to have knowledge in the field of mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10003W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control of Electrical Drives 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10003W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -851,7 +851,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10058W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer - Based Measurement Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10058W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -862,7 +862,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10022S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Final Project</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10022S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -873,7 +873,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20007S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electromagnetic Compability</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20007S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -884,7 +884,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10020W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microcontrollers in Applications</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10020W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -895,7 +895,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10008W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of Control Engineering</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10008W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -906,7 +906,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10059S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field Programmable Gate Arrays</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10059S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -917,7 +917,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10010W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modern Wireless Networks Technologies</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10010W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -928,7 +928,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10062S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object - Oriented Programming</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10062S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -939,7 +939,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20008">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Photonics (MASTER)</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20008</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -951,7 +951,7 @@ Requirements:Students are expected to have knowledge in the field of mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10043S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Embedded Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10043S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -962,7 +962,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20006">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antennas and propagation (MASTER)</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20006</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -974,7 +974,7 @@ Requirements:High frequency techniques or equivalent
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10068S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3D-Modeling and Computer Animation</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10068S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -985,7 +985,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10015W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programmable Logic Controllers</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10015W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -996,7 +996,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10014W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10014W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1007,7 +1007,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10085S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Circuits 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10085S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1018,7 +1018,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20013W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control Theory</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20013W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1029,7 +1029,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10045">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computational electromagnetics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10045</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1040,7 +1040,7 @@ Description of widely used CAD methods for engineering problems dealing with the
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10009S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microprocessor Technique and Microcontrollers</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10009S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1051,7 +1051,7 @@ Lecture:Binary arithmetic. Basic topics of the microprocessor engineering. Micro
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10031W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field Programmable Gate Arrays</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10031W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1062,7 +1062,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10040">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10040</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1074,7 +1074,7 @@ Requirements:No prerequisites required.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10011">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network technologies</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10011</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1086,7 +1086,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10034S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High Voltage Technique</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10034S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1097,7 +1097,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10050W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automatics in Telecommunication</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10050W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1108,7 +1108,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10051">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet of Things</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10051</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1120,7 +1120,7 @@ Requirements:Fundamentals of Digital Technique.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10030">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10030</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1132,7 +1132,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20007">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electromagnetic Compatibility (MASTER)</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20007</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1144,7 +1144,7 @@ Requirements:Students are expected to have knowledge in the field of mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10065S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Methods in Automatics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10065S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1155,7 +1155,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10066W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electricity Market</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10066W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1166,7 +1166,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10045S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computational Electromagnetics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10045S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1177,7 +1177,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10013W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power Electronics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10013W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1188,7 +1188,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20002">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-linear and advanced control of electromechanical systems (MASTER)</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20002</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1200,7 +1200,7 @@ Requirements:Students are expected to have knowledge in the field of mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10037S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Telecommunication Devices</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10037S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1211,7 +1211,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10066S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modern Control of Mechatronics System</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10066S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1222,7 +1222,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10050">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automatics in Telecommunication</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10050</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1234,7 +1234,7 @@ Requirements:Circuits and signals, Principles of telecommunication.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20014W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master Thesis</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20014W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1245,7 +1245,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20010">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master thesis</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20010</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1258,7 +1258,7 @@ BEFORE adding this module to the learning agreement student is obliged to contac
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20006S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antennas and Propagation</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20006S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1269,7 +1269,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20012W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerical Methods in Electrical Engineering: Selected Issues</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20012W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1280,7 +1280,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10044">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project of electrical installations in industrial building</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10044</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1292,7 +1292,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10070S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Visualization on Industrial Processes</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10070S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1303,7 +1303,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10038S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Workshop on Programmable Logic Device</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10038S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1314,7 +1314,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10079S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electric Power Transmission and Distribution</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10079S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1325,7 +1325,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10010">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modern wireless network technologies</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10010</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1337,7 +1337,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10070W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Circuits 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10070W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1348,7 +1348,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10024W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10024W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1359,7 +1359,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10029">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical machines 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10029</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1371,7 +1371,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10061S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Programming in C</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10061S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1382,7 +1382,7 @@ Structured programming in C language: data types, variables and constants, expre
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10038">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Workshop on programmable logic devices</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10038</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1393,7 +1393,7 @@ Use of programmable logic device in real life example. Preparation of technical 
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10012">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optical fibers</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10012</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1405,7 +1405,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20001W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Signal Processors</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20001W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1416,7 +1416,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10075S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Databases Systems and Security</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10075S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1427,7 +1427,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10034">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High voltage technique</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10034</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1439,7 +1439,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20014S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerical Design and Analysis of Metamaterials</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20014S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1450,7 +1450,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10003">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control of electrical drives 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10003</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1462,7 +1462,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10015">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programmable logic controllers</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10015</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1474,7 +1474,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10006S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10006S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1485,7 +1485,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20004W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCP/IP Networks and Applications</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20004W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1496,7 +1496,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20005W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wireless Broadcasting Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20005W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1507,7 +1507,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10035S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security and Reliability of Network Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10035S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1518,7 +1518,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10069S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer-Based Measurement Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10069S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1529,7 +1529,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10019W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wireless Transmission Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10019W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1540,7 +1540,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10082S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Networks</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10082S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1551,7 +1551,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20003W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Special Optical Fibres 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20003W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1562,7 +1562,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20012">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerical methods in electrical engineering: selected issues</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20012</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1574,7 +1574,7 @@ Requirements:Students are expected to have knowledge in the field of mathematics
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10012W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optical Fibers</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10012W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1585,7 +1585,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10063S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Process Automation</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10063S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1596,7 +1596,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10030S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10030S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1607,7 +1607,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10005W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Machines 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10005W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1618,7 +1618,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10073S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introductory Physics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10073S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1629,7 +1629,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10071S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of Electrical Problem Oriented Programming</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10071S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1640,7 +1640,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10077S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grid Integration of Renewable Energy</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10077S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1651,7 +1651,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10081S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power System Stability</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10081S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1662,7 +1662,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10028">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical equipment and installations</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10028</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1674,7 +1674,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10071W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cryptography</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10071W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1685,7 +1685,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10056W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Methods in Automatics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10056W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1696,7 +1696,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10031S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field Programmable Gate Arrays</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10031S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1707,7 +1707,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10060S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project of Electrical Installations in Industrial Building</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10060S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1718,7 +1718,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10016">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protection against interference</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10016</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1730,7 +1730,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10032S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamental of Telecommunication</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10032S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1741,7 +1741,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10041S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automotive Electronics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10041S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1752,7 +1752,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10025S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control of Electrical Drives 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10025S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1763,7 +1763,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10051S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet of Things</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10051S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1774,7 +1774,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10054W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Process Automation</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10054W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1785,7 +1785,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10023">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automotive lighting</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10023</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1797,7 +1797,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10036S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Techniques of Presentation</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10036S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1808,7 +1808,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10013">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power electronics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10013</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1820,7 +1820,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10080S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electricity Market</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10080S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1831,7 +1831,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10033S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High Frequency Techniques 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10033S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1842,7 +1842,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10033">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High frequency techniques 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10033</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1854,7 +1854,7 @@ Requirements:Circuits and Signals, Electromagnetic Field Theory.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10061W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power System Analysis</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10061W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1865,7 +1865,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10053W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Object - Oriented Programming</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10053W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1876,7 +1876,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10068W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electric Power Systems</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10068W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1887,7 +1887,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10027S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Circuits 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10027S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1898,7 +1898,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10074S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local Communication Interfaces</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10074S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1909,7 +1909,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10032">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of telecommunication</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10032</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1921,7 +1921,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10016W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protection Against Interference</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10016W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1932,7 +1932,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10036">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Techniques of presentation</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10036</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1944,7 +1944,7 @@ Requirements:
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10062W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renewable Energy Technologies</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10062W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1955,7 +1955,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10027">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical circuits 2</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10027</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1967,7 +1967,7 @@ Requirements:Electrical Circuits 1 or relevant.
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20008S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Photonics</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-20008S</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1978,7 +1978,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10055W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Industrial Networks</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10055W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -1989,7 +1989,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10069W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control of Electrical Drives 1</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10069W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -2000,7 +2000,7 @@ This course has not yet been described...
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10037">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Telecommunication devices</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10037</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
@@ -2012,7 +2012,7 @@ Requirements:Students should have basic knowledge in the field of mathematics, e
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10049W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coding and Transmission of Signals</ns2:hasName>
     <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FEE-10049W</ns2:hasModuleNumber>
     <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
