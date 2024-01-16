@@ -178,6 +178,7 @@ const TransferCredits = () => {
       <MainLayout>
         <h1>Transfer Credits</h1>
         <AwesomeSlider
+          className="sliderParent"
           onTransitionEnd={(event) => {
             onPressNextTransition(event);
           }}
@@ -186,9 +187,11 @@ const TransferCredits = () => {
           buttonContentRight={
             <button style={selectedUniversity && buttonStyle}>Next</button>
           }
-          buttonContentLeft={<p style={{ color: "black" }}>Right</p>}
+          buttonContentLeft={
+            <button style={selectedUniversity && buttonStyle}>Back</button>
+          }
         >
-          <div style={{ background: "white" }}>
+          <div style={{  background: "blue", width: "70%", alignContent: "center"}}>
             <p>
               Please choose university you want to transfer your credits to :{" "}
             </p>
@@ -196,7 +199,7 @@ const TransferCredits = () => {
             {univerisitiesLoading ? (
               <Lottie options={defaultOptions} height={200} width={200} />
             ) : (
-              <div>
+              <div style={{backgroundColor: "blue"}}>
                 {universities.map((university) => {
                   return (
                     <div
@@ -224,7 +227,7 @@ const TransferCredits = () => {
               </div>
             )}
           </div>
-          <div style={{ background: "white" }}>
+          <div style={{ background: "blue", width: "70%", alignContent: "center" }}>
             <p>
               We will help choose what credits can be possibly transfer to
               Bialystok University of Technology From Technische Universität

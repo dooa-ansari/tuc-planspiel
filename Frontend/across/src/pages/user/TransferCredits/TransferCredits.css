@@ -126,3 +126,12 @@
     height: 500px;
     overflow-x: scroll;
 }
+
+.sliderParent{
+    background-color: #007991;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    display: flex;
+    align-content: center;
+}
