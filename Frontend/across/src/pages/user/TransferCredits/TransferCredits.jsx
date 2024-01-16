@@ -19,6 +19,7 @@ const TransferCredits = () => {
   const [similarModulesLoading, setsimilarModulesLoading] = useState(false);
   const [similarModules, setSimilarModules] = useState([]); //
   const [selectedUniversity, setSelectedUniverity] = useState(null);
+  const [total, setTotal] = useState(0);
   const [lastSelectedModule, setLastSelectedModule] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [details, showDetails] = useState(null)
@@ -88,13 +89,19 @@ const TransferCredits = () => {
         .then((response) => {
           if (response.status == 200) {
             list.push(response.data.modules);
+            setsimilarModulesLoading(false);
+            const calculateTotal = list
+            calculateTotal.forEach((item) => {
+              console.log(item)
+              console.log(parseInt(item.similarModuleCreditPoints))
+              setTotal(total + parseInt(item.similarModuleCreditPoints))
+    })
             setSimilarModules([...similarModules, ...list]);
           }
         })
         .catch((error) => {});
     });
-    setsimilarModulesLoading(false);
-    console.log(list);
+     
   };
 
   const defaultOptionsArrow = {
@@ -270,7 +277,7 @@ const TransferCredits = () => {
           </div>
           <div className="sliderParent">
           <div className="center">
-            <p>Possible Transferable Credits</p>
+            <p>Total Possible Transferable Credits : {total}</p>
             {similarModulesLoading ? (
               <Lottie options={defaultOptions2} height={200} width={200} />
             ) : (
