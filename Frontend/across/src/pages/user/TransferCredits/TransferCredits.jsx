@@ -4,6 +4,7 @@ import axios from "axios";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import Lottie from "react-lottie";
 import loadingData from "../../../assets/lotties/loading_transfer_v0.json";
+import loadingDataV1 from "../../../assets/lotties/loading_transfer_v1.json";
 import germany from "../../../assets/lotties/germany_flag.json";
 import poland from "../../../assets/lotties/poland_flag.json";
 import arrow from "../../../assets/lotties/arrow_down.json";
@@ -131,7 +132,7 @@ const TransferCredits = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: loadingData,
+    animationData: loadingDataV1,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -356,7 +357,9 @@ const TransferCredits = () => {
           </div>
           </div>
           
-          <div>4</div>
+          <div>
+          <Lottie options={defaultOptions} height={300} width={300} />
+          </div>
         </AwesomeSlider>
       </MainLayout>
     </>
