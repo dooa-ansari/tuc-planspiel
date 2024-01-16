@@ -627,3 +627,4 @@ def save_transferred_credits_by_user(request):
             "message": f"An unexpected error occurred: {e}"
         }
         return JsonResponse(response, status =500)
+    
