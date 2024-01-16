@@ -9,7 +9,7 @@ import poland from "../../../assets/lotties/poland_flag.json";
 import arrow from "../../../assets/lotties/arrow_down.json";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import Modal from "react-modal";
+
 
 const TransferCredits = () => {
   const [universities, setUniversities] = useState([]);
@@ -191,7 +191,8 @@ const TransferCredits = () => {
             <button style={selectedUniversity && buttonStyle}>Back</button>
           }
         >
-          <div style={{  background: "blue", width: "70%", alignContent: "center"}}>
+          <div className="sliderParent">
+          <div className="center">
             <p>
               Please choose university you want to transfer your credits to :{" "}
             </p>
@@ -199,7 +200,7 @@ const TransferCredits = () => {
             {univerisitiesLoading ? (
               <Lottie options={defaultOptions} height={200} width={200} />
             ) : (
-              <div style={{backgroundColor: "blue"}}>
+              <div>
                 {universities.map((university) => {
                   return (
                     <div
@@ -227,7 +228,9 @@ const TransferCredits = () => {
               </div>
             )}
           </div>
-          <div style={{ background: "blue", width: "70%", alignContent: "center" }}>
+          </div>
+          <div className="sliderParent">
+          <div className="center">
             <p>
               We will help choose what credits can be possibly transfer to
               Bialystok University of Technology From Technische Universität
@@ -264,8 +267,9 @@ const TransferCredits = () => {
               </div>
             )}
           </div>
-          <div style={{ background: "white" }} id="app">
-            <div>{}</div>
+          </div>
+          <div className="sliderParent">
+          <div className="center">
             <p>Possible Transferable Credits</p>
             {similarModulesLoading ? (
               <Lottie options={defaultOptions2} height={200} width={200} />
@@ -324,6 +328,8 @@ const TransferCredits = () => {
               </div>
             )}
           </div>
+          </div>
+          
           <div>4</div>
         </AwesomeSlider>
       </MainLayout>
