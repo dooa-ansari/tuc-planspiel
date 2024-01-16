@@ -134,8 +134,36 @@
   height: 100%;
 }
 
-.center{
+
+.sliderParentSlide2{
+    display: flex;
+    flex: 1;
+    height: 100%;
+    flex-direction: row;
+  }
+
+.centerSlide2{
+    display: flex;
+    flex: 1;
+    flex: 0.5;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    flex-direction: column;
+  }
+
+  .centerSlide2Image{
+    display: flex;
+    flex: 1;
+    flex: 0.2;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 100px;
+  }
+
+  .center{
     width: 70%;
     padding: 10px;
     margin: auto;
-  }
+  }  

@@ -7,6 +7,7 @@ import loadingData from "../../../assets/lotties/loading_transfer_v0.json";
 import germany from "../../../assets/lotties/germany_flag.json";
 import poland from "../../../assets/lotties/poland_flag.json";
 import arrow from "../../../assets/lotties/arrow_down.json";
+import women from "../../../assets/lotties/women.json";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 
@@ -68,7 +69,10 @@ const TransferCredits = () => {
           console.log(returnedData);
           setUsersCompletedModules(returnedData);
         }
-        setusersModulesLoading(false);
+        setTimeout(()=> {
+          setusersModulesLoading(false);
+        }, 3000)
+      
       })
       .catch((error) => {
         setusersModulesLoading(false);
@@ -89,7 +93,6 @@ const TransferCredits = () => {
         .then((response) => {
           if (response.status == 200) {
             list.push(response.data.modules);
-            setsimilarModulesLoading(false);
             const calculateTotal = list
             calculateTotal.forEach((item) => {
               console.log(item)
@@ -102,12 +105,24 @@ const TransferCredits = () => {
         .catch((error) => {});
     });
      
+    setTimeout(()=> {
+      setsimilarModulesLoading(false);
+    }, 5000)
   };
 
   const defaultOptionsArrow = {
     loop: true,
     autoplay: true,
     animationData: arrow,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const defaultOptionsWomen = {
+    loop: true,
+    autoplay: true,
+    animationData: women,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -236,8 +251,12 @@ const TransferCredits = () => {
             )}
           </div>
           </div>
-          <div className="sliderParent">
-          <div className="center">
+          <div className="sliderParentSlide2">
+          <div className="centerSlide2Image">
+          <Lottie options={defaultOptionsWomen} height={200} width={200} />  
+         
+            </div>  
+          <div className="centerSlide2">
             <p>
               We will help choose what credits can be possibly transfer to
               Bialystok University of Technology From Technische Universität
