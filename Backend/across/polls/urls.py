@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import views
-from .views import google_logout, user_profile, authenticate_user_login, get_courses_from_university, get_modules_from_course_and_university, get_similar_module_against_given_module_uri, save_completed_modules_by_user, get_completed_modules_by_user, select_university_after_signup, get_universities
+from .views import google_logout, user_profile, authenticate_user_login, get_courses_from_university, get_modules_from_course_and_university, get_similar_module_against_given_module_uri, save_completed_modules_by_user, get_completed_modules_by_user, select_university_after_signup, get_universities, save_transferred_credits_by_user
 
 urlpatterns = [
     path("", views.index, name="index"),
@@ -19,5 +19,6 @@ urlpatterns = [
     path('getcompletedModulesofUser', get_completed_modules_by_user, name="get-completed-modules-by-user"),
     path('selectUniversity', select_university_after_signup, name="select-university"),
     path('getUniversities', get_universities, name="get-universities"),
+    path('transferCreditsofUser', save_transferred_credits_by_user, name="save-transferred-credits"),
 
 ]

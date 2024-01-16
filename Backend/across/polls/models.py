@@ -21,7 +21,8 @@ class UserData(models.Model):
     # Other Fields
     university_name =  models.TextField()
     course_name = models.TextField()
-    completed_modules = models.TextField()
+    completed_modules = models.JSONField(null=True)
+    transfer_credits_requests = models.JSONField(null=True)
 
     def __str__(self):
         return f"{self.email} - University: {self.university_name}, Course: {self.course_name}, Completed Modules: {self.completed_modules}"

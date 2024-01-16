@@ -429,7 +429,8 @@ def save_completed_modules_by_user(request):
         courseName = data.get('courseName','')
         # It will consists the list of module URI and module Name
         completedModulesList = data.get('completedModulesList','')
-        try:
+
+        try:    
             user_profile = UserProfile.objects.get(email=email)
             
             user_data, created = UserData.objects.get_or_create(
@@ -449,11 +450,17 @@ def save_completed_modules_by_user(request):
                 'message': 'Successfully Updated Completed Modules by User'
             }
             return JsonResponse(response, status =200)
-        except Exception as e:
-            response = {
-                "message": f"User with email: {email} does not exist"
-            }
-            return JsonResponse(response, status =404)
+    
+        except UserProfile.DoesNotExist:
+                response = {
+                    'message': f'User profile not found for the specified email:- {email}.'
+                }
+                return JsonResponse(response, status=404)
+        except UserData.DoesNotExist:
+                response = {
+                    'message': f'User data not found for the specified email:- {email}.'
+                }
+                return JsonResponse(response, status=404)
     except Exception as e:
         response = {
             "message": f"An unexpected error occurred: {e}"
@@ -469,36 +476,31 @@ def get_completed_modules_by_user(request):
         # Parse JSON data from the request body
         data = json.loads(body)
         email = data.get('email','')
-        try: 
-            user_profile = UserProfile.objects.get(email=email)
-            try:
-                user_data = UserData.objects.get(email=email)
 
-                # Use ast.literal_eval to safely evaluate the string as a Python literal
-                completed_modules_list = ast.literal_eval(user_data.completed_modules)
+        try:
+            user_data = UserData.objects.get(email=email)
 
-                user_profile_data = {  
-                    'university_name': user_data.university_name,
-                    'course_name': user_data.course_name,
-                    'completed_modules':completed_modules_list
-                }
-                response= {
-                    'message': 'Successfully returned completed module list of user',
-                    'user_profile_data' : user_profile_data
-                }
-                return JsonResponse(response, status =200)
-            except UserData.DoesNotExist:
-                # Handle the case where UserData does not exist for the given email
-                response = {
-                    'message': f'UserData not found for the given email: {email}',
-                    'user_profile_data': {}
-                }
-                return JsonResponse(response, status=404)
-        except Exception as e:
-            response = {
-                "message": f"User with email: {email} does not exist"
+            # Use ast.literal_eval to safely evaluate the string as a Python literal
+            completed_modules_list = user_data.completed_modules
+
+            user_profile_data = {  
+                'university_name': user_data.university_name,
+                'course_name': user_data.course_name,
+                'completed_modules':completed_modules_list
             }
-            return JsonResponse(response, status =404)
+            response= {
+                'message': 'Successfully returned completed module list of user',
+                'user_profile_data' : user_profile_data
+            }
+            return JsonResponse(response, status =200)
+        
+        except UserData.DoesNotExist:
+            # Handle the case where UserData does not exist for the given email
+            response = {
+                'message': f'UserData not found for the given email: {email}',
+                'user_profile_data': {}
+            }
+            return JsonResponse(response, status=404)
     except Exception as e:
         response = {
             "message": f"An unexpected error occurred: {e}"
@@ -569,3 +571,59 @@ def select_university_after_signup(request):
         }
         return JsonResponse(response, status =500)
     
+
+@csrf_exempt
+@require_POST
+def save_transferred_credits_by_user(request):
+     # Get the raw request body
+    body = request.body.decode('utf-8')
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        transferCreditsRequest = data.get('transferCreditsRequest','')
+
+        try:
+            user_data = UserData.objects.get(email=email)
+
+            # Check for existing transfer_credits_requests
+            existing_transfer_requests = user_data.transfer_credits_requests or []
+
+            # Condition to repeatative data not get added
+            # (From->To both data checked if any one does not matches it will get added in db)
+            if existing_transfer_requests != []:
+            
+                # Get unique moduleUri values already present in the database
+                existing_module_uris = set()
+                for existing_request in existing_transfer_requests:
+                    existing_module_uris.add(existing_request['fromModule'][0]['moduleUri'])
+                    existing_module_uris.add(existing_request['toModule'][0]['moduleUri'])
+
+                # Add only new transfer_credits_requests with previously unseen moduleUri values
+                new_requests = []
+                for new_request in transferCreditsRequest:
+                    if (new_request['fromModule'][0]['moduleUri'] not in existing_module_uris) \
+                            or (new_request['toModule'][0]['moduleUri'] not in existing_module_uris):
+                        new_requests.append(new_request)
+                        
+                # Update the transfer_credits_requests field
+                user_data.transfer_credits_requests = existing_transfer_requests + new_requests
+            else:
+                user_data.transfer_credits_requests = transferCreditsRequest
+
+            user_data.save()
+
+            response = {
+                'message': 'Successfully Requested for Transferring of your Credits'
+            }
+            return JsonResponse(response, status =200)
+        except UserData.DoesNotExist:
+            response = {
+                'message': f'User data not found for the specified email:- {email}.'
+            }
+            return JsonResponse(response, status=404)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
