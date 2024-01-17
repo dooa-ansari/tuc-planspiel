@@ -19,12 +19,12 @@ const TransferCredits = () => {
   const [univerisitiesLoading, setUniversitiesLoading] = useState(true);
   const [usersModulesLoading, setusersModulesLoading] = useState(false);
   const [similarModulesLoading, setsimilarModulesLoading] = useState(false);
+  const [saveLoading, setSaveLoading] = useState(false);
   const [similarModules, setSimilarModules] = useState([]); //
   const [selectedUniversity, setSelectedUniverity] = useState(null);
   const [total, setTotal] = useState(0);
   const [lastSelectedModule, setLastSelectedModule] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [details, showDetails] = useState(null)
   
   const buttonStyle = {
     background: "#439a86",
@@ -33,10 +33,6 @@ const TransferCredits = () => {
     width: "60px",
   };
 
-  const onPressShowDetails = (item) => {
-    showDetails(item)
-
-  }
   useEffect(() => {
     axios
       .get("http://localhost:8000/adminapp/universitieslist/")
@@ -85,6 +81,7 @@ const TransferCredits = () => {
       (item) => item.selected
     );
     const list = [];
+    let numberTotal = 0
     selectedModules?.forEach((selected) => {
       axios
         .get(
@@ -94,21 +91,45 @@ const TransferCredits = () => {
         .then((response) => {
           if (response.status == 200) {
             list.push(response.data.modules);
-            const calculateTotal = list
+            const calculateTotal = response.data.modules
             calculateTotal.forEach((item) => {
-              console.log(item)
-              console.log(parseInt(item.similarModuleCreditPoints))
-              setTotal(total + parseInt(item.similarModuleCreditPoints))
+              numberTotal = numberTotal + parseInt(item.similarModuleCreditPoints)
+             
     })
             setSimilarModules([...similarModules, ...list]);
+          
           }
         })
         .catch((error) => {});
     });
      
     setTimeout(()=> {
+      setTotal(total + numberTotal)
       setsimilarModulesLoading(false);
-    }, 5000)
+    }, 8000)
+  };
+
+
+  const saveData = () => {
+    // axios
+    //     .post(
+    //       "http://localhost:8000/api/similarModules?moduleUri=" +
+    //         encodeURIComponent("http://tuc.web.engineering/module#CWEA")
+    //     )
+    //     .then((response) => {
+    //       if (response.status == 200) {
+    //         list.push(response.data.modules);
+    //         const calculateTotal = list
+    //         calculateTotal.forEach((item) => {
+    //           console.log(item)
+    //           console.log(parseInt(item.similarModuleCreditPoints))
+    //           setTotal(total + parseInt(item.similarModuleCreditPoints))
+    // })
+    //         setSimilarModules([...similarModules, ...list]);
+    //       }
+    //     })
+    //     .catch((error) => {}); 
+   
   };
 
   const defaultOptionsArrow = {
@@ -194,6 +215,9 @@ const TransferCredits = () => {
     } else if (event.currentIndex == 2) {
       setsimilarModulesLoading(true);
       getSimilarAgainst();
+    }else if(event.currentIndex == 3){
+       setSaveLoading(true)
+       saveData()
     }
   };
   return (
