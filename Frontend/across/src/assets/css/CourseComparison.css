@@ -46,3 +46,29 @@ background: #007991;
 .courseComparison__button:hover {
   filter: drop-shadow(0 0 30px #e9d985);
 }
+
+@media screen and (max-width: 979px) {
+    .courseComparison {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .courseComparison__image{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+     
+    }
+  
+    .courseComparison__contents {
+      width: 100%;
+      padding: 0;
+      padding-top: 1rem;
+    }
+  
+    .courseComparison__contents .courseComparison__title, .courseComparison__contents .courseComparison__description {
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+  }

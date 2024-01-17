@@ -5,10 +5,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
 }
 
 .feature {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-weight: 600;
 }
@@ -34,3 +37,4 @@ width: 140px;
 height: 130px;
 flex-shrink: 0;
 }
+

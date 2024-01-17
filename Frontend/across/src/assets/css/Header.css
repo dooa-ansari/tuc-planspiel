@@ -79,3 +79,21 @@
 .register__link {
   color: #fff;
 }
+
+.header__menu-icons {
+  display: none;
+}
+
+@media screen and (max-width: 979px) {
+  .header__links {
+    display: none;
+  }
+  
+  .header__right {
+    display: none;
+  }
+  
+  .header__menu-icons {
+    display: block;
+  }
+}

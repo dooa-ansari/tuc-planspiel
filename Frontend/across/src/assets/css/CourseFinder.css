@@ -45,3 +45,29 @@
 .courseFinder__button:hover {
   filter: drop-shadow(0 0 30px #439a86);
 }
+
+@media screen and (max-width: 979px) {
+  .courseFinder {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .courseFinder__image{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+   
+  }
+
+  .courseFinder__details {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+
+  .courseFinder__details .courseFinder__title, .courseFinder__details .courseFinder__description {
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
