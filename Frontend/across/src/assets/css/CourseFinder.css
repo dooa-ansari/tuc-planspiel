@@ -47,7 +47,42 @@
   filter: drop-shadow(0 0 30px #439a86);
 }
 
-@media screen and (max-width: 979px) {
+
+@media screen and (max-width: 480px) {
+  .courseFinder {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .courseFinder__image{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+   
+  }
+
+  .courseFinder__details {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+
+  .courseFinder__details .courseFinder__title, .courseFinder__details .courseFinder__description {
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+
+  .courseFinder__details .courseFinder__title {
+    font-size: 1rem;
+  }
+
+  .courseFinder__details .courseFinder__description {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 979px) {
   .courseFinder {
     flex-direction: column;
     justify-content: space-between;

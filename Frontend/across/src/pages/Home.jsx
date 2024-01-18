@@ -13,7 +13,7 @@ const Home = () => {
       <div className="home">
         <Header brandName="Across" />
         <div className="siteContents">
-          <LandingImage source={blogBanner} title="Student Service" />
+          <LandingImage source={blogBanner} />
           <About />
           <CourseFinder />
           <CourseComparison />
