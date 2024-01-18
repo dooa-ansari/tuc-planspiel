@@ -17,6 +17,7 @@ import Courses from "./pages/user/Courses/Courses";
 import Applications from "./pages/user/Applications/Applications";
 import PageNotFound from "./pages/PageNotFound";
 import { gapi } from "gapi-script";
+import UserPage from "./pages/UserPage";
 
 // import UserPage from "./pages/UserPage";
 
