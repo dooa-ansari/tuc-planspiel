@@ -22,7 +22,6 @@ import AdminPanel from "./admin/AdminPanel";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import UserPage from "./pages/UserPage";
-import AdminPanel from "./admin/AdminPanel";
 import CompareModules from "./pages/user/CompareModules/CompareModules";
 import Protected from "./components/Protected/Protected";
 
