@@ -51,8 +51,7 @@
 }
 
 .sidebar__top__link svg, .sidebar__bottom__link svg {
-  font-size: 18px;
-  transition: all 0.5s ease-in-out;
+  font-size: 30px;
 }
 
 .sidebar__top__link, .sidebar__bottom__link {
@@ -61,7 +60,7 @@
   align-items: center;
   font-size: 16px;
   padding: 16px;
-
+  transition: display 0.3s ease;
 }
 
 .sidebar__top__link:hover .sidebar__bottom__link:hover {
@@ -71,7 +70,7 @@
 
 .sidebar__top__link span, .sidebar__bottom__link span {
   padding-left: 10px;
-
+  transition: display 0.3s ease;
 }
 
 .sidebar__top__link.active {
@@ -84,12 +83,7 @@
     display: none;
   }
 
-  .sidebar__top__link svg, .sidebar__bottom__link svg {
-    font-size: 30px;
-  }
-
   .sidebar {
     width: 70px;
   }
 }
-

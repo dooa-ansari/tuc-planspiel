@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -19,10 +19,7 @@ import PageNotFound from "./pages/PageNotFound";
 import { gapi } from "gapi-script";
 import UserPage from "./pages/UserPage";
 import AdminPanel from "./admin/AdminPanel";
-
-// import UserPage from "./pages/UserPage";
-
-// import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import UserPage from "./pages/UserPage";
 import AdminPanel from "./admin/AdminPanel";

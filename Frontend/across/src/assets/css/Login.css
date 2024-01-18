@@ -5,8 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
+}
 
 .login__wrapper {
   width: 70%;
@@ -109,6 +109,7 @@ input::placeholder {
 }
 
 
+
 .login__image{
   margin-bottom: 30px;
   width: 50px;
@@ -139,13 +140,10 @@ input::placeholder {
 .eyeIcon, .mailIcon {
   position: absolute;
   right: 10px;
+  cursor: pointer;
   font-size: 30px;
   color: rgba(0,0,0,0.6);
   bottom: 40px;
-}
-
-.eyeIcon {
-  cursor: pointer;
 }
 
 
@@ -226,7 +224,6 @@ input::placeholder {
     font-size: 1rem;
   }
 }
-
 
 @media screen and (min-width: 769px) and (max-width: 1251px) {
   .login__wrapper {

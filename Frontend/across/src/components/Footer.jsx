@@ -3,7 +3,7 @@ import "../assets/css/Footer.css";
 import facebookIcon from "../assets/social_media_icons/facebook.png";
 import linkedinIcon from "../assets/social_media_icons/linkedin.png";
 import xIcon from "../assets/social_media_icons/x.png";
-import companyLogo from "../assets/images/brandLogo.png";
+import companyLogo from "../assets/brandLogo.png";
 import phoneIcon from "../assets/contact_icons/phone.png";
 import messageIcon from "../assets/contact_icons/message.png";
 import locationIcon from "../assets/contact_icons/location.png";

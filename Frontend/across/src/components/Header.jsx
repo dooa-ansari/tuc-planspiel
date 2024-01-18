@@ -2,7 +2,7 @@ import React from "react";
 import "../assets/css/Header.css";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router-dom";
-import brandLogo from "../assets/images/brandLogo.png";
+import brandLogo from "../assets/brandLogo.png";
 
 const duration = 500;
 const Header = ({ brandName }) => {
