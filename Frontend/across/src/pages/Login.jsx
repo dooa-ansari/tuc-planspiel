@@ -1,21 +1,51 @@
 import "../assets/css/Login.css";
-import googleSvg from "../assets/google_icon.svg";
-import loginSvg from "../assets/loginPage_characterSet.svg";
+import loginSvg from "../assets/images/loginPage_characterSet.svg";
 import GoogleLogin from "react-google-login";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
+import { useNavigate } from "react-router-dom";
+
+import { ToastContainer, Zoom, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+
 import Button from "../components/Button/Button";
-import { login, storeUserInLocalStorage } from "../api/userApi";
+import { googleSignIn, login, storeUserInLocalStorage } from "../api/userApi";
 import { useAuth } from "../context/AuthContext";
+import Loader from "../components/Loader/Loader";
 
 const Login = () => {
   const navigate = useNavigate();
   const [auth, setAuth] = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordViewChange = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleFormSubmit = async evt => {
     evt.preventDefault();
+
+    if (!email) {
+      toast.error("Email is required", {
+        position: "top-right",
+        autoClose: 2000,
+        theme: "dark",
+      });
+      return;
+    }
+
+    if (!password) {
+      toast.error("Password is required", {
+        position: "top-right",
+        autoClose: 2000,
+        theme: "dark",
+      });
+      return;
+    }
 
     const data = { email, password };
 
@@ -27,50 +57,45 @@ const Login = () => {
           user: response.data.user,
           token: response.data.token,
         });
-        storeUserInLocalStorage(response.data);
 
         const roleAssigned = response.data.user.role;
 
         if (roleAssigned === "ADMIN") {
-          navigate("/admin/home");
+          navigate("/campus-flow/admin/home");
         } else {
           navigate("/campus-flow/user/home");
         }
-      } else if (response.code === "ERR_BAD_REQUEST") {
-        console.log(response.data.message);
+      } else if (response.response.status === 401) {
+        toast.error(response.response.data.message);
       }
     } catch (error) {
       console.error("Error during login:", error);
     }
+  };
 
-    // const handleGoogleLogin = async googleUser => {
-    //   try {
-    //     const response = await axios.post(
-    //       "http://127.0.0.1:8000/polls/google/signin",
-    //       {
-    //         access_token: googleUser.getAuthResponse().id_token,
-    //         email,
-    //         password,
-    //       }
-    //     );
-    //     const role = response.data.data.role;
+  const handleGoogleLogin = async googleUser => {
+    try {
+      const response = await googleSignIn({
+        access_token: googleUser.getAuthResponse().id_token,
+      });
 
-    //     if (role === "ADMIN") {
-    //       // If the role is ADMIN, navigate to /admin/home
-    //       navigate("/admin/home");
-    //     } else {
-    //       // If the role is not ADMIN, navigate to /user
-    //       navigate("/user");
-    //     }
+      setAuth({
+        ...auth,
+        user: response.data.data,
+        token: response.data.token,
+      });
 
-    //     const authToken = response.data.token;
-    //     localStorage.setItem("authToken", authToken);
+      const dedicatedRole = response.data.data.role;
+      console.log(dedicatedRole);
 
-    //     console.log(response);
-    //   } catch (error) {
-    //     console.error("Error during Google login:", error);
-    //   }
-    // };
+      if (dedicatedRole === "USER") {
+        navigate("/campus-flow/user/home");
+      } else {
+        navigate("/campus-flow/admin/home");
+      }
+    } catch (error) {
+      console.error("Error during Google login:", error);
+    }
   };
 
   return (
@@ -82,48 +107,60 @@ const Login = () => {
         <div className="login__right">
           <h2 className="login__title">Log in</h2>
           <form onSubmit={handleFormSubmit} className="login__form">
-            <input
-              type="email"
-              className="login__email"
-              placeholder="Email"
-              value={email}
-              onChange={evt => setEmail(evt.target.value)}
-              required
-            />
-            <input
-              type="password"
-              className="login__password"
-              placeholder="Password"
-              value={password}
-              onChange={evt => setPassword(evt.target.value)}
-              required
-            />
+            <div className="login__inputGroup">
+              <input
+                type="email"
+                className="login__email"
+                placeholder="Email"
+                value={email}
+                onChange={evt => setEmail(evt.target.value)}
+              />
+              <MdEmail className="mailIcon" />
+            </div>
+            <div className="login__inputGroup">
+              <input
+                type={showPassword ? "text" : "password"}
+                className="login__password"
+                placeholder="Password"
+                value={password}
+                onChange={evt => setPassword(evt.target.value)}
+              />
+              {showPassword ? (
+                <FaEye className="eyeIcon" onClick={togglePasswordViewChange} />
+              ) : (
+                <FaEyeSlash
+                  className="eyeIcon"
+                  onClick={togglePasswordViewChange}
+                />
+              )}
+            </div>
             <Button primary rounded={true}>
               Let's Start
             </Button>
           </form>
 
-          {/* snapple separator with or text in the middle */}
-          {/* start */}
           <div className="login__alternate-signin-container">
+            {/* snapple separator with or text in the middle */}
+            {/* start */}
             <div className="login__or-separator snapple-seperator">
               <span className="login__or-text">or</span>
             </div>
+
+            {/* end */}
+
             <GoogleLogin
+              style={{ paddingLeft: "20px" }}
               clientId="939129256680-qe0149eq0b5g9oc14cj3lc78inbue6rq.apps.googleusercontent.com"
-              buttonText={
-                <img className="login__image" src={googleSvg} alt="" />
-              }
-              // onSuccess={handleGoogleLogin}
+              buttonText="Continue with Google"
+              className="google__loginButton"
+              onSuccess={handleGoogleLogin}
               onFailure={error =>
                 console.error("Google Sign-In failed:", error)
               }
               cookiePolicy="single_host_origin"
             />
           </div>
-          {/* end */}
 
-          {/*  */}
           <p className="login__register-redirect">
             Don’t have an account?{" "}
             <span
@@ -137,6 +174,19 @@ const Login = () => {
               <a onClick={() => navigate("/campus-flow/register")}>Sign up</a>
             </span>
           </p>
+          <ToastContainer
+            position="top-right"
+            autoClose={2000}
+            transition={Zoom}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
         </div>
       </div>
     </div>

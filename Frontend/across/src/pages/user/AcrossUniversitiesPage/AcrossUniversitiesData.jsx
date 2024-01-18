@@ -1,4 +1,3 @@
-import React from "react";
 import bialystokImg from "../../../assets/universities_images/bialystok.png";
 import chemnitzImg from "../../../assets/universities_images/chemnitz.png";
 import craiovaImg from "../../../assets/universities_images/craiova.png";

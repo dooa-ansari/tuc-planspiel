@@ -9,7 +9,7 @@ import { PiPhoneCallFill } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
 
-import companylogo from "../../../assets/userpage-company-logo.svg";
+import companylogo from "../../../assets/images/userpage-company-logo.svg";
 
 const linkedUrl = "https://www.linkedin.com/in/web-wizards-team/";
 const fbUrl = "https://www.facebook.com/profile.php?id=61552264606950/";

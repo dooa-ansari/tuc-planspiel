@@ -232,3 +232,16 @@ def update_individual_module_by_admin(module_uri, updated_module_name, updated_m
     """
 
     return query
+
+
+def get_university_list():
+    query = """
+    SELECT ?universityName 
+        WHERE {
+            ?university rdf:type <http://across/university#> .
+            ?university <http://across/university#hasUniversityName> ?universityName .        
+        }
+    """
+
+    return query
+

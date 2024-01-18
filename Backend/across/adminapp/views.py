@@ -1,8 +1,9 @@
+import csv
 from django.shortcuts import render
 
 import os, json , os.path
 from pymantic import sparql
-from polls.sparql import *
+from .sparql import *
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
@@ -12,9 +13,56 @@ from .add_module import add_module_in_blaze
 from django.http import HttpResponse
 
 from polls.models import UserProfile
+from polls.csvTordf import University,CsvToRDF, UpdateModules, InsertModules
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
 import requests
+import uuid
+
+uploadLoaction =""
+def saveFiles(request):
+    uploaded_files = request.FILES.getlist('files')
+    # Specify the directory where you want to save the files
+    upload_directory = 'uploads/'
+
+    # Create a FileSystemStorage instance with the upload directory
+    fs = FileSystemStorage(location=upload_directory)
+    uploadLoaction= fs.location
+    print(fs.location)
+    # Process and save the uploaded files
+    saved_files = []
+    for file in uploaded_files:
+        saved_file = fs.save(file.name, file)
+        saved_files.append(saved_file)
+    return saved_files
+
+@csrf_exempt
+@require_POST
+def csv_rdf(request):
+    try:
+       saved_files= saveFiles(request)  
+       uni = University()
+       unis = uni.get_all_university()
+       csv_rdf= CsvToRDF(uni)
+       csv_readers=[]
+
+       for csvFile in saved_files:
+                print(uploadLoaction)
+                #replace the file path from csvfile
+                file_path = r'C:\Users\User\Desktop\Source\web-wizards-11\uploads\Data2.csv'
+                with open(file_path, 'r', newline='', encoding='utf-8') as file:
+                    csv_reader = csv.reader(file)
+                    for row in csv_reader:
+                        csv_readers.append(row)
+                csvModels=csv_rdf.get_all_csv_models(csv_readers, unis)
+                csv_rdf.csvModules= csvModels
+                upModule = UpdateModules()
+                upModule.getUpdateModels(csv_rdf)
+                inModule = InsertModules()
+                inModule.insertModul(csv_rdf)
+                return JsonResponse({'message': 'csv Files successfully converted to RDF file'}, status=200)
+    except Exception as e:
+            return JsonResponse({'message': f'Error converting csv to RDF file: {str(e)}'}, status=500)
 
 
 
@@ -36,22 +84,12 @@ def clean_up_upload_folder(request):
 def upload_file(request):
     try:
             uploaded_files = request.FILES.getlist('files')
-
-            # Specify the directory where you want to save the files
-            upload_directory = 'uploads/'
-
-            # Create a FileSystemStorage instance with the upload directory
-            fs = FileSystemStorage(location=upload_directory)
-
-            # Process and save the uploaded files
-            saved_files = []
-            for file in uploaded_files:
-                saved_file = fs.save(file.name, file)
-                saved_files.append(saved_file)
-
+            saved_files=saveFiles(uploaded_files)
+        
             return JsonResponse({'message': 'Files uploaded and saved successfully', 'saved_files': saved_files}, status=200)
     except Exception as e:
             return JsonResponse({'message': f'Error uploading and saving files: {str(e)}'}, status=500)
+
     
 @csrf_exempt
 def get_universities(request):
@@ -79,7 +117,11 @@ def insert_module(request):
     module_content = data.get('module_content','').strip()
     module_credit_points = data.get('module_credit_points','').strip()
 
-    formatted_module_name = module_name.replace(' ', '_')
+    # Generate a UUID based on the current timestamp and node (hardware address)
+    module_uuid = uuid.uuid1()
+
+    # Convert the UUID to a string
+    module_uuid_str = str(module_uuid)
 
     try:
         existing_user_profile = UserProfile.objects.filter(email=email).first()
@@ -109,7 +151,7 @@ def insert_module(request):
                     return JsonResponse(response_data, status=200)
                 else:
                     try:
-                        payload = {'update': add_individual_module_by_admin(formatted_module_name, module_name, module_number, module_content, module_credit_points, university_uri, course_uri)}
+                        payload = {'update': add_individual_module_by_admin(module_uuid_str, module_name, module_number, module_content, module_credit_points, university_uri, course_uri)}
         
                         result = requests.post("http://54.242.11.117/blazegraph/namespace/kb/sparql", data=payload)
 
@@ -117,7 +159,8 @@ def insert_module(request):
                         if result.status_code == 200:
                             response_data = {
                                 'message': "Module Insertion successful.",
-                                'module_name': module_name 
+                                'module_name': module_name ,
+                                'module_uri': f"http://tuc.web.engineering/module#{module_uuid_str}"
                             }
                             return JsonResponse(response_data, status=200)
                         

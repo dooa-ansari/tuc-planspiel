@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -19,10 +19,13 @@ import PageNotFound from "./pages/PageNotFound";
 import { gapi } from "gapi-script";
 import UserPage from "./pages/UserPage";
 import AdminPanel from "./admin/AdminPanel";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import UserPage from "./pages/UserPage";
-// import AdminPanel from "./admin/AdminPanel";
+
+// import "bootstrap/dist/css/bootstrap.min.css";
+
+// import UserPage from "./pages/UserPage";
+import AdminPanel from "./admin/AdminPanel";
 import CompareModules from "./pages/user/CompareModules/CompareModules";
 import TransferCredits from "./pages/user/TransferCredits/TransferCredits";
 import Protected from "./components/Protected/Protected";
@@ -152,9 +155,16 @@ const App = () => {
               history("/"); // Update this to the actual path of your homepage
             }}
           /> */}
-          {/* <Route path="/user" exact element={<UserPage />} /> */}
+          {/* <Route path="/user" exact element={<UserPage />} />*/}
 
-         <Route path="/admin/*" element={<AdminPanel />} />
+          <Route
+            path="/admin/*"
+            element={
+              <Protected>
+                <AdminPanel />
+              </Protected>
+            }
+          />
           {/* Other routes */}
 
           <Route path="*" element={<PageNotFound />} />
