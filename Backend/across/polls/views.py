@@ -20,8 +20,6 @@ from datetime import datetime, timedelta
 from pymantic import sparql
 from .sparql import *
 import json
-import os
-import ast
 import requests
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request as GoogleAuthRequest
@@ -627,4 +625,45 @@ def save_transferred_credits_by_user(request):
             "message": f"An unexpected error occurred: {e}"
         }
         return JsonResponse(response, status =500)
-    
+
+
+@csrf_exempt
+@require_POST
+def get_transfer_credits_requests_by_user(request):
+
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+
+        try:
+            user_data = UserData.objects.get(email=email)
+
+            # Use ast.literal_eval to safely evaluate the string as a Python literal
+            transfer_credits_requests = user_data.transfer_credits_requests
+
+            user_data = {  
+                "transferCreditsRequests" : transfer_credits_requests
+            }
+            response= {
+                'message': 'Successfully returned transfer credit requests of user',
+                'user_data' : user_data
+            }
+            return JsonResponse(response, status =200)
+        
+        except UserData.DoesNotExist:
+            # Handle the case where UserData does not exist for the given email
+            response = {
+                'message': f'UserData not found for the given email: {email}',
+                'user_data': {}
+            }
+            return JsonResponse(response, status=404)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+ 
