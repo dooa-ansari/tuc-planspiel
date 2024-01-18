@@ -40,11 +40,12 @@ background: #007991;
   color: #000;
   font-weight: 600;
   font-size: 1rem;
-  border-radius: 15px 0;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .courseComparison__button:hover {
-  filter: drop-shadow(0 0 30px #e9d985);
+  filter: drop-shadow(0 0 20px #e9d985);
 }
 
 @media screen and (max-width: 979px) {

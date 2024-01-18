@@ -6,6 +6,9 @@
   width: 100%;
   padding: 0 2%;
   z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__contents {
@@ -13,7 +16,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 
 
 .header__brandImage {
@@ -50,11 +52,11 @@
   font-weight: 500;
   padding: 0.5rem 1.5rem;
   background: #347986;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 5px;
   color: white;
   font-weight: 500;
   margin-left: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   
 }
 
@@ -81,19 +83,64 @@
 }
 
 .header__menu-icons {
+  list-style-type: none;
   display: none;
 }
 
+
 @media screen and (max-width: 979px) {
-  .header__links {
-    display: none;
-  }
   
-  .header__right {
-    display: none;
-  }
   
-  .header__menu-icons {
+  .header__menu-open-icon {
     display: block;
   }
+
+ .header__contents {
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  height: 100%;
+  width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+	transition: 1s;
+  background: #fff;
+	}
+
+  .header__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .header__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .header__signup-btn {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .responsive-nav {
+		transform: translateY(100vh);
+	}
+
+	.header__menu-close-icon {
+    display: block;
+		position: absolute;
+		top: 1rem;
+		right: 2rem;
+	}  
 }
