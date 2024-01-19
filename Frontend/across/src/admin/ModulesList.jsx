@@ -176,30 +176,11 @@ const ModulesList = () => {
     setShowAddModal(true);
   };
 
-//   const postAddData = () => {
-//     fetch("http://127.0.0.1:8000/adminapp/api/insert/", {
-//       method: "POST",
-//       headers: {
-//         Accept: "application/json",
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         email: "dansari@gmail.com",
-//         university: addUniversityUri,
-//         course: addCourseUri,
-//         module_name: moduleName,
-//         module_number: moduleId,
-//         module_content: moduleContent,
-//         module_credit_points: modulePoints
-//       }),
-//     })
-//       .then((response) => response.json())
-//       .then((json) => {
-//          console.log(json)
-//          handleCloseAddModal()
-//       })
-//       .catch((error) => console.error(error));
-//   }
+  const handleClose = () => setShow(false);
+  const handleShow = (module) => {
+    setCurrentModule(module);
+    setShow(true);
+  };
 
   const handleShowUpdate = (module) => {
     console.log(JSON.stringify(module))
@@ -224,9 +205,9 @@ const ModulesList = () => {
       .catch((error) => console.error(error));
   }, []);
 
-//       })
-//       .catch((error) => console.error(error));
-//   }
+  const onClickUniversity = (item) => {
+    getCoursesList(item.uri, item.name, false);
+  };
 
   const onClickCourse = (item) => {
     setSelectedCourse(item.courseName)
@@ -235,11 +216,10 @@ const ModulesList = () => {
     getModuleList(item.courseUri, item.courseName);
   };
 
-//   const handleClose = () => setShow(false);
-//   const handleShow = (module) => {
-//     setCurrentModule(module);
-//     setShow(true);
-//   };
+  const onClickUniversityAdd = (item) => {
+    getCoursesList(item.uri, item.name, true);
+    setAddUniversityUri(item.name)
+  };
 
   const onClickCourseAdd = (item) => {
     setSelectedCourse(item.courseName)
@@ -325,23 +305,61 @@ const ModulesList = () => {
                 {selectedCourse ? selectedCourse : "Select Course"}
                 </Dropdown.Toggle>
 
-//   const getCoursesList = (uri, name, isAdd) => {
-//     fetch("http://localhost:8000/polls/courses/", {
-//       method: "POST",
-//       headers: {
-//         Accept: "application/json",
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         universityUri: uri,
-//         universityName: name,
-//       }),
-//     })
-//       .then((response) => response.json())
-//       .then((json) => {
-//           if(!isAdd){
+                <Dropdown.Menu>
+                  {coursesAdd?.map((item) => (
+                    <Dropdown.Item
+                      key={item.courseNumber}
+                      onClick={() => onClickCourseAdd(item)}
+                    >
+                      {item.courseName}
+                    </Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            )}
+          </div>
+          <Form noValidate validated={validated} name="addForm">
+            <Row className="mb-3">
+              <Form.Group as={Col} md="5" controlId="addForm.id">
+                <Form.Label>Id/Number</Form.Label>
+                <Form.Control  onChange={(event) => setModuleId(event.target.value)}  name="id" required type="text" placeholder="Module Id" />
+                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group as={Col} md="5" controlId="addForm.name">
+                <Form.Label>Name</Form.Label>
+                <Form.Control  onChange={(event) => setModuleName(event.target.value)}  name="name" required type="text" placeholder="Module Name" />
+                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              </Form.Group>
+            </Row>
+            <Row className="mb-3">
+              <Form.Group as={Col} md="6" controlId="addForm.points">
+                <Form.Label>Credit Points</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Credit Points"
+                  required
+                  name="points"
+                  onChange={(event) => setModulePoints(event.target.value)} 
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please provide Credit Points
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Row>
 
-//             setCourses(json.courses);
+            <Form.Group
+              className="mb-3"
+              controlId="addForm.content"
+            >
+              <Form.Label>Content</Form.Label>
+              <Form.Control  onChange={(event) => setModuleContent(event.target.value)}  name="content" as="textarea" rows={3} />
+            </Form.Group>
+            <Button onClick={handleSubmit} type="submit">Submit</Button>
+          </Form>
+        </Modal.Body>
+      </Modal>
+    );
+  };
 
 
   const getUpdateModuleFormModal = () => {
@@ -465,13 +483,29 @@ const ModulesList = () => {
       {getAddModuleFormModal()}
       {getUpdateModuleFormModal()}
 
-//                 setSelectedUniversityUri(uri);
-//                 setSelectedUniversityName(name);
-//           }
+      <p id="moduleHeading">Modules Table</p>
+      <div className="dropdowns">
+        <Dropdown>
+          <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+            Select Univeristy
+          </Dropdown.Toggle>
 
-//       })
-//       .catch((error) => console.error(error));
-//   };
+          <Dropdown.Menu>
+            {universities?.map((item) => (
+              <Dropdown.Item
+                onClick={() => onClickUniversity(item)}
+                key={item.id}
+              >
+                {item.name}
+              </Dropdown.Item>
+            ))}
+          </Dropdown.Menu>
+        </Dropdown>
+        {universities.length > 0 && selectedUniversityUri && (
+          <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Select Course
+            </Dropdown.Toggle>
 
             <Dropdown.Menu>
               {courses?.map((item) => (
@@ -535,194 +569,4 @@ const ModulesList = () => {
   );
 };
 
-//               <Dropdown.Menu>
-//                 {universitiesForAdd?.map((item) => (
-//                   <Dropdown.Item
-//                     onClick={() => onClickUniversityAdd(item)}
-//                     key={item.id}
-//                   >
-//                     {item.name}
-//                   </Dropdown.Item>
-//                 ))}
-//               </Dropdown.Menu>
-//             </Dropdown>
-//             {universitiesForAdd.length > 0 && selectedUniversityUri && (
-//               <Dropdown>
-//                 <Dropdown.Toggle variant="success" id="dropdown-basic">
-//                   Select Course
-//                 </Dropdown.Toggle>
-
-//                 <Dropdown.Menu>
-//                   {coursesAdd?.map((item) => (
-//                     <Dropdown.Item
-//                       key={item.courseNumber}
-//                       onClick={() => onClickCourseAdd(item)}
-//                     >
-//                       {item.courseName}
-//                     </Dropdown.Item>
-//                   ))}
-//                 </Dropdown.Menu>
-//               </Dropdown>
-//             )}
-//           </div>
-//           <Form noValidate validated={validated} name="addForm">
-//             <Row className="mb-3">
-//               <Form.Group as={Col} md="5" controlId="addForm.id">
-//                 <Form.Label>Id/Number</Form.Label>
-//                 <Form.Control  onChange={(event) => setModuleId(event.target.value)}  name="id" required type="text" placeholder="Module Id" />
-//                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-//               </Form.Group>
-//               <Form.Group as={Col} md="5" controlId="addForm.name">
-//                 <Form.Label>Name</Form.Label>
-//                 <Form.Control  onChange={(event) => setModuleName(event.target.value)}  name="name" required type="text" placeholder="Module Name" />
-//                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-//               </Form.Group>
-//             </Row>
-//             <Row className="mb-3">
-//               <Form.Group as={Col} md="6" controlId="addForm.points">
-//                 <Form.Label>Credit Points</Form.Label>
-//                 <Form.Control
-//                   type="text"
-//                   placeholder="Credit Points"
-//                   required
-//                   name="points"
-//                   onChange={(event) => setModulePoints(event.target.value)}
-//                 />
-//                 <Form.Control.Feedback type="invalid">
-//                   Please provide Credit Points
-//                 </Form.Control.Feedback>
-//               </Form.Group>
-//             </Row>
-
-//             <Form.Group
-//               className="mb-3"
-//               controlId="addForm.content"
-//             >
-//               <Form.Label>Content</Form.Label>
-//               <Form.Control  onChange={(event) => setModuleContent(event.target.value)}  name="content" as="textarea" rows={3} />
-//             </Form.Group>
-//             <Button onClick={handleSubmit} type="submit">Submit</Button>
-//           </Form>
-//         </Modal.Body>
-//       </Modal>
-//     );
-//   };
-
-//   const getModuleDetailsModal = () => {
-//     return (
-//       <Modal show={show} onHide={handleClose}>
-//         <Modal.Header closeButton>
-//           <Modal.Title>Module Details</Modal.Title>
-//         </Modal.Header>
-//         <Modal.Body>
-//           <p>
-//             {" "}
-//             <Badge bg="secondary">Number</Badge> {currentModule?.moduleNumber}
-//           </p>
-//           <p>
-//             <Badge bg="secondary">Name</Badge> {currentModule?.moduleName}
-//           </p>
-//           <p>
-//             <Badge bg="secondary">Uri</Badge> {currentModule?.moduleUri}
-//           </p>
-//           <p>
-//             <Badge bg="secondary">Credit Points</Badge>{" "}
-//             {currentModule?.moduleCreditPoints}
-//           </p>
-//           <p>{currentModule?.moduleContent}</p>
-//         </Modal.Body>
-//       </Modal>
-//     );
-//   };
-//   return (
-//     <div style={{ flex: 1 }}>
-//       {getModuleDetailsModal()}
-//       {getAddModuleFormModal()}
-
-//       <p id="moduleHeading">Modules Table</p>
-//       <div className="dropdowns">
-//         <Dropdown>
-//           <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-//             Select Univeristy
-//           </Dropdown.Toggle>
-
-//           <Dropdown.Menu>
-//             {universities?.map((item) => (
-//               <Dropdown.Item
-//                 onClick={() => onClickUniversity(item)}
-//                 key={item.id}
-//               >
-//                 {item.name}
-//               </Dropdown.Item>
-//             ))}
-//           </Dropdown.Menu>
-//         </Dropdown>
-//         {universities.length > 0 && selectedUniversityUri && (
-//           <Dropdown>
-//             <Dropdown.Toggle variant="success" id="dropdown-basic">
-//               Select Course
-//             </Dropdown.Toggle>
-
-//             <Dropdown.Menu>
-//               {courses?.map((item) => (
-//                 <Dropdown.Item
-//                   key={item.courseNumber}
-//                   onClick={() => onClickCourse(item)}
-//                 >
-//                   {item.courseName}
-//                 </Dropdown.Item>
-//               ))}
-//             </Dropdown.Menu>
-//           </Dropdown>
-//         )}
-//         <Button variant="primary" onClick={() => handleShowAddModal()}>
-//           Add New Module
-//         </Button>
-//       </div>
-//       {loadingModule == 0 && modules?.length > 0 && (
-//         <div>
-//           <Table striped bordered hover>
-//             <thead>
-//               <tr>
-//                 <th>#</th>
-//                 <th>Module Name</th>
-//                 <th>Module Uri</th>
-//                 <th>Actions</th>
-//               </tr>
-//             </thead>
-//             <tbody>
-//               {modules.map((module) => {
-//                 return (
-//                   <tr key={module.moduleNumber}>
-//                     <td>{module.moduleNumber}</td>
-//                     <td>{module.moduleName}</td>
-//                     <td>{module.moduleUri}</td>
-//                     <td>
-//                       <ButtonGroup size="sm">
-//                         <Button
-//                           onClick={() => handleShow(module)}
-//                           variant="info"
-//                         >
-//                           Details
-//                         </Button>
-//                         <Button variant="warning">Update</Button>
-//                         <Button onClick={() => deleteModule(module.moduleUri)} variant="danger">Delete</Button>
-//                       </ButtonGroup>
-//                     </td>
-//                   </tr>
-//                 );
-//               })}
-//             </tbody>
-//           </Table>
-//         </div>
-//       )}
-//       {loadingModule == 0 && loadingModule != -1 && (
-//         <div className="spinner">
-//           <Spinner animation="grow" variant="success" />
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default ModulesList;
+export default ModulesList;

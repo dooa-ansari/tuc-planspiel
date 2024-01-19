@@ -1,5 +1,5 @@
 import React from "react";
-import blogBanner from "../assets/images/BlogBanner.png";
+import blogBanner from "../assets/BlogBanner.png";
 import Header from "../components/Header";
 import LandingContent from "../components/LandingContent";
 import LandingImage from "../components/LandingImage";
