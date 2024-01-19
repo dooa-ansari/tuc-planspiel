@@ -25,6 +25,7 @@ const TransferCredits = () => {
   const [total, setTotal] = useState(0);
   const [lastSelectedModule, setLastSelectedModule] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [userData , setUserData] = useState(null)
   
   const buttonStyle = {
     background: "#439a86",
@@ -53,8 +54,14 @@ const TransferCredits = () => {
       });
   }, []);
 
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("auth"));
+    setUserData(data?.user)
+    
+    
+  }, [])
   const getUsersCompletedModules = () => {
-    const data = {email: "dooa@student.com"}
+    const data = {email: userData?.email}
     axios
       .post("http://localhost:8000/api/getcompletedModulesofUser", 
        data
