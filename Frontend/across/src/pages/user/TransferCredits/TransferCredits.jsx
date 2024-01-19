@@ -90,13 +90,14 @@ const TransferCredits = () => {
     const selectedModules = usersCompleteModules.filter(
       (item) => item.selected
     );
+    //"http://tuc.web.engineering/module#CWEA"
     const list = [];
     let numberTotal = 0
     selectedModules?.forEach((selected) => {
       axios
         .get(
-          "http://localhost:8000/api/similarModules?moduleUri=" +
-            encodeURIComponent("http://tuc.web.engineering/module#CWEA")
+          "http://localhost:8000/api/similarModules/?moduleUri=" +
+            encodeURIComponent(selected.moduleUri)
         )
         .then((response) => {
           if (response.status == 200) {
@@ -110,7 +111,17 @@ const TransferCredits = () => {
           
           }
         })
-        .catch((error) => {});
+        .catch((error) => {
+          console.log(error)
+          if(error.response.status == 404){
+            console.log("no content")
+            const noContent = {
+              nothing: true,
+              module: selected.moduleName
+             }
+           setSimilarModules(...similarModules, ...noContent)
+          }
+        });
     });
      
     setTimeout(()=> {
@@ -189,7 +200,7 @@ const TransferCredits = () => {
   const onPressCompletedModuleItem = (item) => {
     const updateList = [];
     usersCompleteModules.forEach((module) => {
-      module.selected = item.id == module.id ? !module.selected : module.selected;
+      module.selected = item.moduleUri == module.moduleUri ? !module.selected : module.selected;
       updateList.push(module);
     });
     setUsersCompletedModules(updateList);
@@ -337,54 +348,63 @@ const TransferCredits = () => {
             ) : (
               <div className="scrollView">
                 {similarModules.map((similarModule) => {
-                  return similarModule.map((item) => {
-                    return (
-                      <div id="module" key={item.id}>
-                        <div className="moduleInner">
-                          <div id="moduleid">
-                            {item.id} - {item.name}
+                  console.log(similarModule)
+                  if(similarModule.nothing){
+                     return  (<div id="module" key={1}>
+                         No Similar modules found for : {similarModule.module}
+
+                      </div>)
+                  }else{
+                    return similarModule.map((item) => {
+                      return (
+                        <div id="module" key={item.id}>
+                          <div className="moduleInner">
+                            <div id="moduleid">
+                              {item.id} - {item.name}
+                            </div>
+                            <div id="creditPoints">
+                              Credit Points : {item.creditPoints}
+                            </div>
+                            <div id="creditPoints">
+                              University : {item.university}
+                            </div>
+                            <div id="creditPoints">
+                              Course : {item.courseName}
+                            </div>
+                            <details id="creditPoints">
+                              <summary>Show Details</summary>
+                              <p>{item.content}</p>
+                            </details>
                           </div>
-                          <div id="creditPoints">
-                            Credit Points : {item.creditPoints}
-                          </div>
-                          <div id="creditPoints">
-                            University : {item.university}
-                          </div>
-                          <div id="creditPoints">
-                            Course : {item.courseName}
-                          </div>
-                          <details id="creditPoints">
-                            <summary>Show Details</summary>
-                            <p>{item.content}</p>
-                          </details>
+                          <Lottie
+                            options={defaultOptionsArrow}
+                            height={70}
+                            width={100}
+                          />
+                          <div className="moduleInner">
+                            <div id="moduleid">
+                              {item.similarModuleId} - {item.similarModuleName}
+                            </div>
+                            <div id="creditPoints">
+                              Credit Points : {item.similarModuleCreditPoints}
+                            </div>
+                            <div id="creditPoints">
+                              University : {item.similarUniversity}
+                            </div>
+                            <div id="creditPoints">
+                              Course : {item.courseNameSimilar}
+                            </div>
+                            <details id="creditPoints">
+                              <summary>Show Details</summary>
+                              <p>{item.similarModuleContent}</p>
+                            </details>
+        
+                           </div>
                         </div>
-                        <Lottie
-                          options={defaultOptionsArrow}
-                          height={70}
-                          width={100}
-                        />
-                        <div className="moduleInner">
-                          <div id="moduleid">
-                            {item.similarModuleId} - {item.similarModuleName}
-                          </div>
-                          <div id="creditPoints">
-                            Credit Points : {item.similarModuleCreditPoints}
-                          </div>
-                          <div id="creditPoints">
-                            University : {item.similarUniversity}
-                          </div>
-                          <div id="creditPoints">
-                            Course : {item.courseNameSimilar}
-                          </div>
-                          <details id="creditPoints">
-                            <summary>Show Details</summary>
-                            <p>{item.similarModuleContent}</p>
-                          </details>
-      
-                         </div>
-                      </div>
-                    );
-                  });
+                      );
+                    });
+                  }
+                  
                 })}
               </div>
             )}
