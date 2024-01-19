@@ -54,12 +54,15 @@ const TransferCredits = () => {
   }, []);
 
   const getUsersCompletedModules = () => {
+    const data = {email: "dooa@student.com"}
     axios
-      .get("http://localhost:8000/adminapp/universitieslist/")
+      .post("http://localhost:8000/api/getcompletedModulesofUser", 
+       data
+      )
       .then((response) => {
         if (response.status == 200) {
-          console.log(response.data);
-          const returnedData = response.data;
+          const returnedData = response.data.user_profile_data.completed_modules;
+          console.log(returnedData)
           returnedData.forEach((item) => {
             item.selected = false;
           });
@@ -178,9 +181,9 @@ const TransferCredits = () => {
   };
   const onPressCompletedModuleItem = (item) => {
     const updateList = [];
-    usersCompleteModules.forEach((unis) => {
-      unis.selected = item.id == unis.id ? !unis.selected : unis.selected;
-      updateList.push(unis);
+    usersCompleteModules.forEach((module) => {
+      module.selected = item.id == module.id ? !module.selected : module.selected;
+      updateList.push(module);
     });
     setUsersCompletedModules(updateList);
     setLastSelectedModule(item);
@@ -307,10 +310,10 @@ const TransferCredits = () => {
                         (completedModule.selected &&
                           "courseItemSelectedBorder universityItemSelected")
                       }
-                      key={completedModule.id}
+                      key={completedModule.moduleUri}
                     >
                       <div className="courseItemText">
-                        <p>{completedModule.name}</p>
+                        <p>{completedModule.moduleName}</p>
                       </div>
                     </div>
                   );
