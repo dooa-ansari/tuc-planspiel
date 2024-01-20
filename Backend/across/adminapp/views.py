@@ -12,7 +12,7 @@ from .universitiy_list import get_all_universities
 from .add_module import add_module_in_blaze
 from django.http import HttpResponse
 
-from polls.models import UserProfile
+from user.models import UserProfile
 from polls.csvTordf import University,CsvToRDF, UpdateModules, InsertModules
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD

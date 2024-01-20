@@ -15,6 +15,3 @@ fileOneContent = graph.serialize(format='xml')
 file1 = open('tuc_Web_Engineering.rdf', 'w')
 file1.write(fileOneContent)
 file1.close()
-    
-
- 

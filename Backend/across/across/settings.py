@@ -48,7 +48,13 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    
+    'authentication',
+    'compare_modules',
+    'courses',
+    'modules',
+    'transfer_credits',
+    'universities',
+    'user'
 ]
 
 ASGI_APPLICATION = 'across.asgi.application'
@@ -112,7 +118,7 @@ CHANNEL_LAYERS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sample1',
+        'NAME': 'across',
         'USER': 'root',
         'PASSWORD': 'root@123',
         'HOST': '127.0.0.1',  # or the hostname where your MySQL server is running
