@@ -45,6 +45,10 @@
 
 }
 
+.sidebar__top__links, .sidebar__bottom__links {
+  padding-left: 0;
+}
+
 .sidebar__top__links a, .sidebar__bottom__links a {
   text-decoration: none;
   color: #000;
