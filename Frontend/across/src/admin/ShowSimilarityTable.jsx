@@ -6,7 +6,7 @@ const ShowSimilarityTable = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/polls/listsimilarmodules/')
+    fetch('http://localhost:8000/modules/listSimilarModules')
       .then(response => response.json())
       .then(json => setData(json))
       .catch(error => console.error(error));
