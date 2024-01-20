@@ -1,6 +1,5 @@
 import csv
 from django.shortcuts import render
-
 import os, json
 from pymantic import sparql
 from .sparql import *
@@ -11,9 +10,8 @@ from django.core.files.storage import FileSystemStorage
 from .universitiy_list import get_all_universities
 from .add_module import add_module_in_blaze
 from django.http import HttpResponse
-
 from user.models import UserProfile
-from polls.csvTordf import University,CsvToRDF, UpdateModules, InsertModules
+from csv_to_rdf.csvTordf import University,CsvToRDF, UpdateModules, InsertModules
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
 import requests

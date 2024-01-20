@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'polls',
     'adminapp',
     'django.contrib.sites',
     'allauth',
@@ -54,7 +53,8 @@ INSTALLED_APPS = [
     'modules',
     'transfer_credits',
     'universities',
-    'user'
+    'user',
+    'csv_to_rdf'
 ]
 
 ASGI_APPLICATION = 'across.asgi.application'

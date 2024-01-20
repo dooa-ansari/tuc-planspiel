@@ -1,5 +1,5 @@
 {
     "python.analysis.extraPaths": [
-        "./Backend/across/polls"
+        "./Backend/across/compare_modules/automation_tool"
     ]
 }
