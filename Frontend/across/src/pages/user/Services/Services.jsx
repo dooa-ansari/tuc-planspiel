@@ -1,5 +1,6 @@
 import React from "react";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
+import "./Services.css";
 
 const Services = () => {
   return (

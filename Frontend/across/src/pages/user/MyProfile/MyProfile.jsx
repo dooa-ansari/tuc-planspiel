@@ -1,7 +1,7 @@
 import React from "react";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import { useAuth } from "../../../context/AuthContext";
-import Button from "../../../components/Button/Button";
+import "./MyProfile.css";
 
 const MyProfile = () => {
   const [auth] = useAuth();
@@ -9,7 +9,7 @@ const MyProfile = () => {
   return (
     <>
       <MainLayout>
-        <div className="myprofile">
+        <div className="myProfile">
           <h1>this is the profile page...</h1>
 
           <h2>Name: {auth.user.full_name}</h2>

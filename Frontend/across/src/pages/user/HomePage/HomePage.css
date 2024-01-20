@@ -98,7 +98,7 @@
 }
 
 .homePage__notifications > p {
-  font-size: 15px;
+  font-size: calc(0.875rem + 0.1vw);
 }
 
 .notification__button {

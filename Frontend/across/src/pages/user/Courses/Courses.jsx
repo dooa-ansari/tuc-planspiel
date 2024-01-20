@@ -1,5 +1,6 @@
 import React from "react";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
+import "./Courses.css";
 
 const Courses = () => {
   return (

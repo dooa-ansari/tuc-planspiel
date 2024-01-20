@@ -153,17 +153,9 @@ const CompareModules = () => {
     <>
       <MainLayout>
         <SearchBox />
-        <h1 className="text-center">Compare Modules Page</h1>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-            marginBottom: "40px",
-            paddingTop: "70px",
-          }}
-        >
-          <h4 style={{ width: "10%" }}>Universities</h4>
+        <h1 className="compareModules__heading">Compare Modules Page</h1>
+        <div className="compareModulesWrapper">
+          <h4>Universities</h4>
           <Dropdown
             options={dropdownOptionsForUniversities}
             value={selectedUniversity}
@@ -171,15 +163,8 @@ const CompareModules = () => {
             placeholderText="Select your university..."
           />
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-            marginBottom: "40px",
-          }}
-        >
-          <h4 style={{ width: "10%" }}>Courses</h4>
+        <div className="compareModulesWrapper">
+          <h4>Courses</h4>
           <Dropdown
             options={dropdownOptionsForCourses}
             value={selectedCourse}
@@ -187,15 +172,8 @@ const CompareModules = () => {
             placeholderText="Select your course..."
           />
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-            marginBottom: "40px",
-          }}
-        >
-          <h4 style={{ width: "10%" }}>Modules</h4>
+        <div className="compareModulesWrapper">
+          <h4>Modules</h4>
           <Dropdown
             options={dropdownOptionsForModules}
             value={selectedModule}
@@ -204,7 +182,7 @@ const CompareModules = () => {
           />
         </div>
         <div className="similarModuleCards">{renderedSimilarModules}</div>
-        <div style={{ marginTop: "200px" }}></div>
+        <div style={{ marginTop: "190px" }}></div>
       </MainLayout>
     </>
   );

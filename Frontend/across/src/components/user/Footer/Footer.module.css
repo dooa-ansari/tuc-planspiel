@@ -10,7 +10,8 @@
 }
 
 .footer__left h4, .footer__middle h4, .footer__right h4 {
-  color: #000;
+  font-size: calc(1rem + 0.3vw);
+  text-align: center;
 }
 
 
@@ -46,7 +47,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1200px) {
   .footer__contents {
     display: flex;
     flex-direction: column;
