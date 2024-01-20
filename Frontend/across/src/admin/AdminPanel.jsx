@@ -5,7 +5,7 @@ import Home from "./Home";
 import FileUpload from "./FileUpload";
 import Converter from "./Converter";
 import ShowSimilarityTable from "./ShowSimilarityTable";
-// import ModulesList from "./ModulesList";
+import ModulesList from "./ModulesList";
 
 const AdminPanel = () => {
   return (
@@ -18,7 +18,7 @@ const AdminPanel = () => {
         <Route path="upload" element={<FileUpload />} />
         <Route path="automation" element={<Converter />} />
         <Route path="similaritytable" element={<ShowSimilarityTable />} />
-        {/* <Route path="modulelist" element={<ModulesList />} /> */}
+        <Route path="modulelist" element={<ModulesList />} />
       </Routes>
     </div>
   );
