@@ -39,7 +39,6 @@ const TransferCredits = () => {
       .get("http://localhost:8000/adminapp/universitieslist/")
       .then((response) => {
         if (response.status == 200) {
-          console.log(response.data);
           const returnedData = response.data;
           returnedData.forEach((item) => {
             item.selected = false;
@@ -49,7 +48,6 @@ const TransferCredits = () => {
         setUniversitiesLoading(false);
       })
       .catch((error) => {
-        console.log(error);
         setUniversitiesLoading(false);
       });
   }, []);
@@ -69,11 +67,9 @@ const TransferCredits = () => {
       .then((response) => {
         if (response.status == 200) {
           const returnedData = response.data.user_profile_data.completed_modules;
-          console.log(returnedData)
           returnedData.forEach((item) => {
             item.selected = false;
           });
-          console.log(returnedData);
           setUsersCompletedModules(returnedData);
         }
         setTimeout(()=> {
@@ -112,9 +108,7 @@ const TransferCredits = () => {
           }
         })
         .catch((error) => {
-          console.log(error)
           if(error.response.status == 404){
-            console.log("no content")
             const noContent = {
               nothing: true,
               module: selected.moduleName
@@ -132,24 +126,47 @@ const TransferCredits = () => {
 
 
   const saveData = () => {
-    // axios
-    //     .post(
-    //       "http://localhost:8000/api/similarModules?moduleUri=" +
-    //         encodeURIComponent("http://tuc.web.engineering/module#CWEA")
-    //     )
-    //     .then((response) => {
-    //       if (response.status == 200) {
-    //         list.push(response.data.modules);
-    //         const calculateTotal = list
-    //         calculateTotal.forEach((item) => {
-    //           console.log(item)
-    //           console.log(parseInt(item.similarModuleCreditPoints))
-    //           setTotal(total + parseInt(item.similarModuleCreditPoints))
-    // })
-    //         setSimilarModules([...similarModules, ...list]);
-    //       }
-    //     })
-    //     .catch((error) => {}); 
+    const transferCreditsRequestList = []
+    similarModules.forEach((item) => {
+       item.forEach((value) => {
+         const innerObject = {
+          fromModule: [
+            {
+              moduleUri: "https://example.com/module/4",
+              moduleName: value.name,
+              moduleId: value.id,
+              credits: value.creditPoints
+            }
+          ],
+          toModule: [
+            {
+              moduleUri: "https://example.com/module/4",
+              moduleName: value.similarModuleName,
+              moduleId: value.similarModuleId,
+              credits: value.similarModuleCreditPoints
+            }
+          ],
+          status: "PENDING"
+         }
+         transferCreditsRequestList.push(innerObject)
+       })
+    })
+    const data = {
+      email: userData?.email,
+      transferCreditsRequest: transferCreditsRequestList
+    }
+    
+    axios
+        .post(
+          "http://localhost:8000/api/transferCreditsofUser",
+          data
+        )
+        .then((response) => {
+          if (response.status == 200) {
+            
+          }
+        })
+        .catch((error) => {}); 
    
   };
 
@@ -228,7 +245,6 @@ const TransferCredits = () => {
     }
   };
   const onPressNextTransition = (event) => {
-    console.log(event);
     setCurrentIndex(event.currentIndex);
     if (event.currentIndex == 1) {
       setusersModulesLoading(true);
@@ -348,7 +364,6 @@ const TransferCredits = () => {
             ) : (
               <div className="scrollView">
                 {similarModules.map((similarModule) => {
-                  console.log(similarModule)
                   if(similarModule.nothing){
                      return  (<div id="module" key={1}>
                          No Similar modules found for : {similarModule.module}
