@@ -1,9 +1,7 @@
 from rdflib import Graph, URIRef
-from .sparql import *
+from compare_modules.sparql import *
 
 def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second, consumer):
-
-
     modulesTUC = Graph()
     modulesBialstok = Graph()
     modulesTUC.parse(universityOneModulesFile)

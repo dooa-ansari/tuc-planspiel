@@ -1,5 +1,5 @@
 import rdflib
-from .sparql import *
+from compare_modules.sparql import *
 from .live_updates import send_updates
 def readRDFFile(file):
  graph = rdflib.Graph()
