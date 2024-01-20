@@ -6,6 +6,18 @@ from rdflib import Graph, URIRef, Literal
 from rdflib.namespace import RDF, XSD
 import re
 
+added_module_names = set()
+
+def is_module_name_in_graph(graph, module_name_g):
+    # Convert module name to lowercase for case-sensitive check
+    normalized_module_name_g = module_name_g.lower()
+
+    # Query the graph for modules with the same name
+    for triple in graph.triples((None, URIRef("http://tuc.web.engineering/module#hasName"), None)):
+        if normalized_module_name_g == str(triple[2]).lower():
+            return True
+    return False
+
 graph = Graph()
 
 NAME_SPACE = Namespace("http://tuc.web.engineering/")
@@ -61,11 +73,11 @@ for page in pages:
      
      uri_end = ''.join(e for e in module_id if e.isalnum())
      print(uri_end)
-     if(uri_end!="None" and uri_end!="inPolish" and department == DEPARTMENT_ELECTRICAL_ENGINEERING):
+     if(uri_end!="None" and uri_end!="inPolish" and department == DEPARTMENT_CIVIL_ENGINEERING):
         print(f"{base_url}{id_url}")
         module_uri_g = URIRef(f"{uri_main}{uri_end}")
         uriUniversity = URIRef("http://across/university#BU")
-        uriCourse = URIRef("http://tuc/course#Electrical")
+        uriCourse = URIRef("http://tuc/course#Civil_Engineering_and_Environmental_Sciences")
         module_name_g = Literal(module_name_value, datatype=XSD.string)
         module_content_g = Literal(module_content, datatype=XSD.string)
         module_id_g = Literal(module_id, datatype=XSD.string)
@@ -73,20 +85,19 @@ for page in pages:
         department_g = Literal(department, datatype=XSD.string)
         university_g = Literal("", datatype=XSD.string)
         
-        graph.add((module_uri_g, RDF.type, NAME_SPACE.module))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasName"), module_name_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasModuleNumber"), module_id_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasContent"), module_content_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasCreditPoints"), credit_points_g))
-        graph.add((module_uri_g, URIRef("http://tuc/course#hasCourse"), uriCourse))
-        graph.add((module_uri_g, URIRef("http://across/university#hasUniversity"), uriUniversity))
+        if module_name_g not in added_module_names and not is_module_name_in_graph(graph, module_name_g):
+            graph.add((module_uri_g, RDF.type, NAME_SPACE.module))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasName"), module_name_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasModuleNumber"), module_id_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasContent"), module_content_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasCreditPoints"), credit_points_g))
+            graph.add((module_uri_g, URIRef("http://tuc/course#hasCourse"), uriCourse))
+            graph.add((module_uri_g, URIRef("http://across/university#hasUniversity"), uriUniversity))
         
-
-
-
 bialystok_modules_data = graph.serialize(format='xml')
-bialystok_modules_file = open('bu_Engineering_electrical.rdf', 'w')
-bialystok_modules_file.write(bialystok_modules_data)
+with open('bu_Civil_Engineering_and_Environmental_Sciences.rdf', 'w', encoding='utf-8') as bialystok_modules_file:
+    bialystok_modules_file.write(bialystok_modules_data)
 bialystok_modules_file.close()
     
 html.close()
+
