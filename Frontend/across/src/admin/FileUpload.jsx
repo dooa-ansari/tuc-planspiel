@@ -22,7 +22,7 @@ const FileUpload = () => {
                 formData.append('files', file);
             });
 
-            const response = await axios.post('http://127.0.0.1:8000/adminapp/api/upload', formData);
+            const response = await axios.post('http://127.0.0.1:8000/adminapp/upload', formData);
 
             console.log('Upload response:', response.data);
 
@@ -72,9 +72,9 @@ const FileUpload = () => {
                 </div>
             )}
             <div className="start-button-parent">
-            <button onClick={onPressStartProcess} className='start-button'>Start Processing Files</button>
+                <button onClick={onPressStartProcess} className='start-button'>Start Processing Files</button>
             </div>
-           
+
         </div>
     );
 };
