@@ -3,10 +3,10 @@ from .views import csv_rdf, upload_file, update_module, delete_module, insert_mo
 
 
 urlpatterns= [
-    path('api/csvToRdf', csv_rdf, name='csv-rdf'),
-    path('api/upload', upload_file, name='upload-file'),
-    path('api/universitieslist', get_universities, name="get-universities"),
-    path('api/insert', insert_module, name='insert-module'),
-    path('api/delete', delete_module, name='delete-module'),
-    path('api/update', update_module, name='update-module'),
+    path('csvToRdf', csv_rdf, name='csv-rdf'),
+    path('upload', upload_file, name='upload-file'),
+    path('universitieslist', get_universities, name="get-universities"),
+    path('insertModule', insert_module, name='insert-module'),
+    path('deleteModule', delete_module, name='delete-module'),
+    path('updateModule', update_module, name='update-module'),
 ]
