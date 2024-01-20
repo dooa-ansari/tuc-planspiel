@@ -14,14 +14,14 @@
   height: 40px;
 }
 
-.footer__middle{
+.footer__middle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.company__logo > img {
+.company__logo>img {
   width: 150px;
   height: 80px;
   margin-top: 15px;
@@ -49,6 +49,7 @@
   font-weight: 500;
   line-height: 1.2;
   color: #121212;
+  text-align: center;
 }
 
 .company__initiative {
@@ -66,6 +67,7 @@
     padding: 0;
     gap: 1.5rem;
   }
+
   .footer__left {
     padding-top: 1rem;
   }
@@ -74,23 +76,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
   }
 
   .footer__right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 
-.footer__middle h4{
-  text-align: center;
-}
+  .footer__middle h4 {
+    text-align: center;
+  }
 
-.footer__right {
-  padding-bottom: 1rem;
-}
+  .footer__right {
+    padding-bottom: 1rem;
+  }
 
 }
