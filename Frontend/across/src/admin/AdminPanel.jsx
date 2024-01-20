@@ -1,4 +1,3 @@
-// AdminPanel.jsx
 import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./Home";

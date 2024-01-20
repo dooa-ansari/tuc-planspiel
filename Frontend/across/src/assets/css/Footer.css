@@ -43,6 +43,18 @@
   align-items: center;
 }
 
+.footer__subHeading {
+  font-size: 1.025rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #121212;
+}
+
+.company__initiative {
+  margin-bottom: 0.875rem;
+}
+
 
 
 @media screen and (max-width: 979px) {
