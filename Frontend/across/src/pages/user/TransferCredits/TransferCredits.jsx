@@ -61,7 +61,7 @@ const TransferCredits = () => {
   const getUsersCompletedModules = () => {
     const data = {email: userData?.email}
     axios
-      .post("http://localhost:8000/api/getcompletedModulesofUser", 
+      .post("http://localhost:8000/user/fetchCompletedModulesofUser", 
        data
       )
       .then((response) => {
