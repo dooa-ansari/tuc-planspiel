@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../assets/css/Register.css";
 
-import resigterSvg from "../assets/images/registerPage_highschool.svg";
+import resigterSvg from "../assets/registerPage_highschool.svg";
 
 import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";

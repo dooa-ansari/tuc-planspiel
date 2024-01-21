@@ -17,14 +17,10 @@ import Courses from "./pages/user/Courses/Courses";
 import Applications from "./pages/user/Applications/Applications";
 import PageNotFound from "./pages/PageNotFound";
 import { gapi } from "gapi-script";
-import UserPage from "./pages/UserPage";
 
-// import UserPage from "./pages/UserPage";
-
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-// import UserPage from "./pages/UserPage";
 import AdminPanel from "./admin/AdminPanel";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import CompareModules from "./pages/user/CompareModules/CompareModules";
 import Protected from "./components/Protected/Protected";
 
@@ -137,14 +133,6 @@ const App = () => {
               </Protected>
             }
           />
-          {/* <Route  path="/register"
-            element={<Register />}
-            onClick={() => {
-              const history = useNavigate();
-              history("/"); // Update this to the actual path of your homepage
-            }}
-          /> */}
-          {/* <Route path="/user" exact element={<UserPage />} />*/}
 
           <Route
             path="/admin/*"

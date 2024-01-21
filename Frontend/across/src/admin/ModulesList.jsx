@@ -11,7 +11,8 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ModulesList = () => {
   const [universities, setUniversities] = useState([]);
@@ -21,11 +22,13 @@ const ModulesList = () => {
   const [selectedUniversityUri, setSelectedUniversityUri] = useState(null);
   const [selectedUniversityName, setSelectedUniversityName] = useState(null);
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const [selectedCourseUri, setSelectedCourseUri] = useState(null);
   const [modules, setModules] = useState(null);
   const [loadingModule, setLoadingModules] = useState(-1);
   const [currentModule, setCurrentModule] = useState(null);
   const [show, setShow] = useState(false);
   const [showAddModal, setShowAddModal] = useState(false);
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [validated, setValidated] = useState(false);
   const [addUniversityUri, setAddUniversityUri] = useState("");
   const [addCourseUri, setAddCourseUri] = useState("");
@@ -33,23 +36,33 @@ const ModulesList = () => {
   const [moduleName, setModuleName] = useState("");
   const [modulePoints, setModulePoints] = useState("");
   const [moduleContent, setModuleContent] = useState("");
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    const authToken = localStorage.getItem("token");
+    setToken(authToken);
+  }, []);
 
   const handleSubmit = event => {
     const form = event.currentTarget;
     event.preventDefault();
-    console.log(moduleId);
-    console.log(moduleName);
-    console.log(modulePoints);
-    console.log(moduleContent);
-    postAddData();
-    setValidated(true);
-    if (form.checkValidity() === false) {
-    } else {
+    if (form.checkValidity() == true) {
+      setValidated(true);
+      postAddData();
+    }
+  };
+
+  const handleSubmitUpdate = event => {
+    const form = event.currentTarget;
+    event.preventDefault();
+    if (form.checkValidity() == true) {
+      postUpdateData();
+      setValidated(true);
     }
   };
 
   const postAddData = () => {
-    fetch("http://127.0.0.1:8000/adminapp/api/insert/", {
+    fetch("http://127.0.0.1:8000/adminapp/insertModule", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -67,14 +80,68 @@ const ModulesList = () => {
     })
       .then(response => response.json())
       .then(json => {
-        console.log(json);
+        if (json.message == "Module Insertion successful.") {
+          getModuleList(selectedCourseUri, selectedCourse);
+          toast("Module Added Successfully");
+        } else {
+          toast("Failed to add module");
+        }
         handleCloseAddModal();
       })
       .catch(error => console.error(error));
   };
 
+  const postUpdateData = () => {
+    console.log({
+      email: "dansari@gmail.com",
+      university: selectedUniversityName,
+      course: selectedCourse,
+      module_name: currentModule.moduleName,
+      module_number: currentModule.moduleNumber,
+      module_content: currentModule.moduleContent,
+      module_credit_points: currentModule.moduleCreditPoints,
+      module_uri: currentModule.moduleUri,
+    });
+    fetch("http://127.0.0.1:8000/adminapp/updateModule", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: "dansari@gmail.com",
+        university: selectedUniversityName,
+        course: selectedCourse,
+        module_name:
+          moduleName.length == 0 ? currentModule.moduleName : moduleName,
+        module_number:
+          moduleId.length == 0 ? currentModule.moduleNumber : moduleId,
+        module_content:
+          moduleContent.length == 0
+            ? currentModule.moduleContent.replace("\n", "\\n")
+            : moduleContent,
+        module_credit_points:
+          modulePoints.length == 0
+            ? currentModule.moduleCreditPoints
+            : modulePoints,
+        module_uri: currentModule.moduleUri,
+      }),
+    })
+      .then(response => response.json())
+      .then(json => {
+        if (json.message == "Module Updation successful.") {
+          getModuleList(selectedCourseUri, selectedCourse);
+          toast("Module Updated Successfully");
+        } else {
+          toast("Failed to update module");
+        }
+        handleCloseUpdateModal();
+      })
+      .catch(error => console.error(error));
+  };
+
   const deleteModule = uri => {
-    fetch("http://127.0.0.1:8000/adminapp/api/delete/", {
+    fetch("http://127.0.0.1:8000/adminapp/deleteModule", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -86,11 +153,24 @@ const ModulesList = () => {
       }),
     })
       .then(response => response.json())
-      .then(json => {})
+      .then(json => {
+        console.log(json);
+        if (json.message == "Module deletion successful.") {
+          setModules(modules =>
+            modules.filter(item => {
+              return item.moduleUri !== uri;
+            })
+          );
+          toast("Module Deleted Successfully");
+        } else {
+          toast("Failed to delete module");
+        }
+      })
       .catch(error => console.error(error));
   };
 
   const handleCloseAddModal = () => setShowAddModal(false);
+  const handleCloseUpdateModal = () => setShowUpdateModal(false);
   const handleShowAddModal = () => {
     setShowAddModal(true);
   };
@@ -101,8 +181,21 @@ const ModulesList = () => {
     setShow(true);
   };
 
+  const handleShowUpdate = module => {
+    console.log(JSON.stringify(module));
+    setCurrentModule(module);
+    setShowUpdateModal(true);
+  };
+
   useEffect(() => {
-    fetch("http://localhost:8000/adminapp/universitieslist")
+    fetch("http://localhost:8000/adminapp/universitieslist", {
+      // method: "GET",
+      // headers: {
+      //   Accept: "application/json",
+      //   "Content-Type": "application/json",
+      //   token: token
+      // },
+    })
       .then(response => response.json())
       .then(json => {
         setUniversities(json);
@@ -116,6 +209,8 @@ const ModulesList = () => {
   };
 
   const onClickCourse = item => {
+    setSelectedCourse(item.courseName);
+    setSelectedCourseUri(item.courseUri);
     setLoadingModules(1);
     getModuleList(item.courseUri, item.courseName);
   };
@@ -126,11 +221,12 @@ const ModulesList = () => {
   };
 
   const onClickCourseAdd = item => {
+    setSelectedCourse(item.courseName);
     setAddCourseUri(item.courseName);
   };
 
   const getModuleList = (uri, name) => {
-    fetch("http://localhost:8000/polls/modules/", {
+    fetch("http://localhost:8000/modules/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -151,7 +247,7 @@ const ModulesList = () => {
   };
 
   const getCoursesList = (uri, name, isAdd) => {
-    fetch("http://localhost:8000/polls/courses/", {
+    fetch("http://localhost:8000/courses/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -166,15 +262,11 @@ const ModulesList = () => {
       .then(json => {
         if (!isAdd) {
           setCourses(json.courses);
-
-          setSelectedUniversityUri(uri);
-          setSelectedUniversityName(name);
         } else {
           setCoursesAdd(json.courses);
-
-          setSelectedUniversityUri(uri);
-          setSelectedUniversityName(name);
         }
+        setSelectedUniversityUri(uri);
+        setSelectedUniversityName(name);
       })
       .catch(error => console.error(error));
   };
@@ -189,7 +281,9 @@ const ModulesList = () => {
           <div className="dropdowns">
             <Dropdown>
               <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                Select Univeristy
+                {selectedUniversityName
+                  ? selectedUniversityName
+                  : "Select Univeristy"}
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
@@ -206,7 +300,7 @@ const ModulesList = () => {
             {universitiesForAdd.length > 0 && selectedUniversityUri && (
               <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
-                  Select Course
+                  {selectedCourse ? selectedCourse : "Select Course"}
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
@@ -281,6 +375,114 @@ const ModulesList = () => {
     );
   };
 
+  const getUpdateModuleFormModal = () => {
+    return (
+      <Modal show={showUpdateModal} onHide={handleCloseUpdateModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Update Module</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="dropdowns">
+            <Dropdown>
+              <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                {selectedUniversityName
+                  ? selectedUniversityName
+                  : "Select Univeristy"}
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                {universitiesForAdd?.map(item => (
+                  <Dropdown.Item
+                    onClick={() => onClickUniversityAdd(item)}
+                    key={item.id}
+                  >
+                    {item.name}
+                  </Dropdown.Item>
+                ))}
+              </Dropdown.Menu>
+            </Dropdown>
+            {universitiesForAdd.length > 0 && selectedUniversityUri && (
+              <Dropdown>
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                  {selectedCourse ? selectedCourse : "Select Course"}
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  {coursesAdd?.map(item => (
+                    <Dropdown.Item
+                      key={item.courseNumber}
+                      onClick={() => onClickCourseAdd(item)}
+                    >
+                      {item.courseName}
+                    </Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            )}
+          </div>
+          <Form noValidate validated={validated} name="updateForm">
+            <Row className="mb-3">
+              <Form.Group as={Col} md="5" controlId="updateForm.id">
+                <Form.Label>Id/Number</Form.Label>
+                <Form.Control
+                  defaultValue={currentModule?.moduleNumber}
+                  onChange={event => setModuleId(event.target.value)}
+                  name="id"
+                  required
+                  type="text"
+                  placeholder="Module Id"
+                />
+                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group as={Col} md="5" controlId="updateForm.name">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  defaultValue={currentModule?.moduleName}
+                  onChange={event => setModuleName(event.target.value)}
+                  name="name"
+                  required
+                  type="text"
+                  placeholder="Module Name"
+                />
+                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              </Form.Group>
+            </Row>
+            <Row className="mb-3">
+              <Form.Group as={Col} md="6" controlId="updateForm.points">
+                <Form.Label>Credit Points</Form.Label>
+                <Form.Control
+                  defaultValue={currentModule?.moduleCreditPoints}
+                  type="text"
+                  placeholder="Credit Points"
+                  required
+                  name="points"
+                  onChange={event => setModulePoints(event.target.value)}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please provide Credit Points
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Row>
+
+            <Form.Group className="mb-3" controlId="updateForm.content">
+              <Form.Label>Content</Form.Label>
+              <Form.Control
+                defaultValue={currentModule?.moduleContent}
+                onChange={event => setModuleContent(event.target.value)}
+                name="content"
+                as="textarea"
+                rows={3}
+              />
+            </Form.Group>
+            <Button onClick={handleSubmitUpdate} type="submit">
+              Update Module
+            </Button>
+          </Form>
+        </Modal.Body>
+      </Modal>
+    );
+  };
+
   const getModuleDetailsModal = () => {
     return (
       <Modal show={show} onHide={handleClose}>
@@ -309,8 +511,10 @@ const ModulesList = () => {
   };
   return (
     <div style={{ flex: 1 }}>
+      <ToastContainer />
       {getModuleDetailsModal()}
       {getAddModuleFormModal()}
+      {getUpdateModuleFormModal()}
 
       <p id="moduleHeading">Modules Table</p>
       <div className="dropdowns">
@@ -378,7 +582,12 @@ const ModulesList = () => {
                         >
                           Details
                         </Button>
-                        <Button variant="warning">Update</Button>
+                        <Button
+                          onClick={() => handleShowUpdate(module)}
+                          variant="warning"
+                        >
+                          Update
+                        </Button>
                         <Button
                           onClick={() => deleteModule(module.moduleUri)}
                           variant="danger"

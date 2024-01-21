@@ -33,12 +33,12 @@
 
 .navbar__links {
   list-style: none;
-	padding-right: 15px;
-	margin: 0;
-	display: flex;
+  padding-right: 15px;
+  margin: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
-	gap: 1.5rem;
+  gap: 1.5rem;
 }
 
 .navbar__link {
@@ -46,7 +46,7 @@
   font-weight: 700;
   font-family: "Figtree", sans-serif;
   font-size: 1rem;
-  color: rgba(0,0,0,0.75);
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .userName span {
@@ -56,7 +56,6 @@
   line-height: 1;
   font-weight: 600;
 }
-
 
 .menu-open-button {
   display: none;
@@ -71,4 +70,4 @@
   .menu-open-button {
     display: block;
   }
-} 
+}

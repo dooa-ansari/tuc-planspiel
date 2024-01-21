@@ -16,10 +16,10 @@
   align-items: center;
   margin-bottom: 35px;
   padding-top: 35px;
- 
+
 }
 
-.compareModulesWrapper > h4 {
+.compareModulesWrapper>h4 {
   width: 5%;
   font-size: calc(1rem + 0.3vw);
 }
