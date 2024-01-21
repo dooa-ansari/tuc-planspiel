@@ -30,6 +30,7 @@
   border-bottom: 2px solid lightgray;
   font-size: calc(1.25rem + 0.5vw);
 }
+
 .quicklinksWrapper {
   width: 100%;
   display: flex;
@@ -87,17 +88,18 @@
   padding: 1.5rem;
   margin-bottom: 2rem;
 }
-.homePage__notifications > h2 {
+
+.homePage__notifications>h2 {
   font-size: calc(1.25rem + 0.5vw);
 }
 
-.homePage__notifications > h4 {
+.homePage__notifications>h4 {
   font-size: calc(1rem + 0.3vw);
   border-top: 2px solid lightgray;
   padding: 12px 0;
 }
 
-.homePage__notifications > p {
+.homePage__notifications>p {
   font-size: calc(0.875rem + 0.1vw);
 }
 
@@ -106,7 +108,7 @@
   outline: none;
   padding: 0.8rem 1.75rem;
   background: #bcd8c1;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   font-size: 0.9rem;
   font-weight: 600;
   border-radius: 5px;
