@@ -5,9 +5,10 @@ import { FaUserGraduate } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { RiLogoutBoxRFill } from "react-icons/ri";
 
-import enLanSvg from "../../../assets/en.svg";
+import enLanSvg from "../../../assets/images/en.svg";
 
 import { useAuth } from "../../../context/AuthContext";
+import MenuOpenButton from "../../MenuOpenButton/MenuOpenButton";
 
 const Navbar = () => {
   const [auth, setAuth] = useAuth();
@@ -51,6 +52,10 @@ const Navbar = () => {
                 </Link>
                 <Link className="navbar__link">
                   <img src={enLanSvg} alt="great britain flag" />
+                </Link>
+
+                <Link className="menu-open-button">
+                  <MenuOpenButton />
                 </Link>
               </ul>
             </nav>

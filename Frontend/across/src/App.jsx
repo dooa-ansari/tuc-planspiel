@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -17,11 +17,10 @@ import Courses from "./pages/user/Courses/Courses";
 import Applications from "./pages/user/Applications/Applications";
 import PageNotFound from "./pages/PageNotFound";
 import { gapi } from "gapi-script";
-import UserPage from "./pages/UserPage";
-import AdminPanel from "./admin/AdminPanel";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-// import UserPage from "./pages/UserPage";
+import AdminPanel from "./admin/AdminPanel";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import CompareModules from "./pages/user/CompareModules/CompareModules";
 import TransferCredits from "./pages/user/TransferCredits/TransferCredits";
 import Protected from "./components/Protected/Protected";
@@ -144,14 +143,6 @@ const App = () => {
               </Protected>
             }
           />
-          {/* <Route  path="/register"
-            element={<Register />}
-            onClick={() => {
-              const history = useNavigate();
-              history("/"); // Update this to the actual path of your homepage
-            }}
-          /> */}
-          {/* <Route path="/user" exact element={<UserPage />} />*/}
 
           <Route
             path="/admin/*"

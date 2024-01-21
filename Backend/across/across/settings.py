@@ -41,14 +41,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'polls',
     'adminapp',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    
+    'authentication',
+    'compare_modules',
+    'courses',
+    'modules',
+    'transfer_credits',
+    'universities',
+    'user',
+    'csv_to_rdf'
 ]
 
 ASGI_APPLICATION = 'across.asgi.application'
@@ -112,9 +118,9 @@ CHANNEL_LAYERS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sample2',
+        'NAME': 'across',
         'USER': 'root',
-        'PASSWORD': 'root@123',
+        'PASSWORD': 'sarose3532@SAH',
         'HOST': '127.0.0.1',  # or the hostname where your MySQL server is running
         'PORT': '3306',      # or the port on which your MySQL server is listening
     }

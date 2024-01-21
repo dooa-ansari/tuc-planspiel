@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL:  "http://127.0.0.1:8000", //import.meta.env.VITE_BACKEND_API,
+  baseURL: import.meta.env.VITE_BACKEND_API,
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",
@@ -11,7 +11,7 @@ const api = axios.create({
 export const login = async data => {
   let response;
   try {
-    response = await api.post("/api/login", data);
+    response = await api.post("/auth/login", data);
     storeUserInLocalStorage(response.data);
   } catch (error) {
     return error;
@@ -22,7 +22,7 @@ export const login = async data => {
 export const register = async data => {
   let response;
   try {
-    response = await api.post("/api/register", data);
+    response = await api.post("/auth/register", data);
     storeUserInLocalStorage(response.data);
   } catch (error) {
     return error;
@@ -34,7 +34,7 @@ export const register = async data => {
 export const googleSignIn = async data => {
   let response;
   try {
-    response = await api.post("/api/google/signin", data);
+    response = await api.post("/auth/google/signin", data);
   } catch (error) {
     return error;
   }
