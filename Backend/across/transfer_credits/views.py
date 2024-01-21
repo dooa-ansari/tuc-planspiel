@@ -64,7 +64,7 @@ def save_transferred_credits_by_user(request):
 
 @csrf_exempt
 @require_POST
-def get_transfer_credits_requests_by_user(request):
+def fetch_transfer_credits_requests_by_user(request):
 
     body = request.body.decode('utf-8')
 

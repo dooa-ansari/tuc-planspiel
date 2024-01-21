@@ -106,6 +106,15 @@ def is_module_already_present(module_name, module_number, university_uri, course
 
     return query
 
+def is_module_already_present_by_module_uri(module_uri):
+    query = f"""
+    ASK {{
+    <{module_uri}> rdf:type <http://tuc.web.engineering/module#> .
+    }}
+    """
+
+    return query
+
 def delete_individual_module(module_uri):
     query = f"""
     DELETE WHERE {{
