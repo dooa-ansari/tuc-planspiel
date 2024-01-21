@@ -56,7 +56,7 @@
   </rdf:Description>
 
       <!-- Course: Computer Science Faculty -->
-  <rdf:Description rdf:about="http://tuc/course#BCS">
+  <rdf:Description rdf:about="http://tuc/course#Computer_Science">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Computer Science</course:hasCourseName>
@@ -64,7 +64,7 @@
   </rdf:Description>
   
       <!-- Course: Foreign Language Center -->
-  <rdf:Description rdf:about="http://tuc/course#FLC">
+  <rdf:Description rdf:about="http://tuc/course#Foreign_Language_Centre">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foreign Language Centre</course:hasCourseName>
@@ -72,7 +72,7 @@
   </rdf:Description>
 
       <!-- Course: Engineering Management -->
-  <rdf:Description rdf:about="http://tuc/course#EM">
+  <rdf:Description rdf:about="http://tuc/course#Engineering_Management">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Engineering Management</course:hasCourseName>
@@ -80,7 +80,7 @@
   </rdf:Description>
 
       <!-- Course: Mechinical Engineering -->
-  <rdf:Description rdf:about="http://tuc/course#ME">
+  <rdf:Description rdf:about="http://tuc/course#Mechanical_Engineering">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Mechanical Engineering</course:hasCourseName>
@@ -88,7 +88,7 @@
   </rdf:Description>
 
         <!-- Course: Civil Engineering -->
-  <rdf:Description rdf:about="http://tuc/course#Civil">
+  <rdf:Description rdf:about="http://tuc/course#Civil_Engineering_and_Environmental_Sciences">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Civil Engineering and Environmental Sciences</course:hasCourseName>
