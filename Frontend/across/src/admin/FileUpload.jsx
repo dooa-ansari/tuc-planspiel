@@ -16,7 +16,7 @@ const FileUpload = () => {
     cleanUpAndPrepare();
   }, []);
   const cleanUpAndPrepare = () => {
-    fetch("http://127.0.0.1:8000/adminapp/api/deleteclean/", {
+    fetch("http://127.0.0.1:8000/adminapp/deleteclean", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -46,7 +46,7 @@ const FileUpload = () => {
       });
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/adminapp/api/upload/",
+        "http://127.0.0.1:8000/adminapp/upload",
         formData
       );
 

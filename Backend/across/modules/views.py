@@ -35,7 +35,7 @@ def list_similar_modules(request):
 
 
 @csrf_exempt
-def get_similar_module_against_module_uri(request):
+def get_similar_module_against_given_module_uri(request):
     try:
         moduleUri = request.GET.get('moduleUri', '')
         print(moduleUri)
