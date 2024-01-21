@@ -6,10 +6,12 @@
 
 .app__features h2 {
   border-bottom: 2px solid lightgray;
+  font-size: calc(1.25rem + 0.5vw);
 }
 
 .app__features h4 {
   padding: 10px 0;
+  font-size: calc(1rem + 0.3vw);
 }
 
 .highlighted__features {
@@ -26,7 +28,9 @@
 
 .homePage__quick__links h2 {
   border-bottom: 2px solid lightgray;
+  font-size: calc(1.25rem + 0.5vw);
 }
+
 .quicklinksWrapper {
   width: 100%;
   display: flex;
@@ -64,14 +68,19 @@
   background: rgba(187, 213, 207, 1);
 }
 
+.quicklink:nth-of-type(2n + 1) {
+  color: rgba(255, 255, 255, 0.95);
+}
 
 .quicklink h4 {
   padding-bottom: 12px;
+  font-size: calc(1rem + 0.3vw);
+  text-align: center;
 }
 
 .quicklink p {
   text-align: center;
-  font-size: 0.9rem;
+  font-size: calc(0.875rem + 0.1vw);
 }
 
 .homePage__notifications {
@@ -80,13 +89,18 @@
   margin-bottom: 2rem;
 }
 
-.homePage__notifications > h4 {
+.homePage__notifications>h2 {
+  font-size: calc(1.25rem + 0.5vw);
+}
+
+.homePage__notifications>h4 {
+  font-size: calc(1rem + 0.3vw);
   border-top: 2px solid lightgray;
   padding: 12px 0;
 }
 
-.homePage__notifications > p {
-  font-size: 15px;
+.homePage__notifications>p {
+  font-size: calc(0.875rem + 0.1vw);
 }
 
 .notification__button {
@@ -94,7 +108,7 @@
   outline: none;
   padding: 0.8rem 1.75rem;
   background: #bcd8c1;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   font-size: 0.9rem;
   font-weight: 600;
   border-radius: 5px;

@@ -76,8 +76,6 @@ function PageBody() {
   return (
     <Container style={{ backgroundColor: "#EDEDED" }}>
       <h1 className="my-4 text-left">Hi John, Welcome to the ADMIN panel</h1>
-
-      {/* Introductory Section */}
       <div
         className="intro-container mb-4 p-4 border rounded bg-light"
         style={{
@@ -101,7 +99,6 @@ function PageBody() {
         </p>
       </div>
 
-      {/* Cards Section */}
       <div
         className="mb-4 bg-light"
         style={{
@@ -167,7 +164,12 @@ function NavScrollExample() {
   return (
     <Navbar
       expand="lg"
-      style={{ backgroundColor: "#007991", width: "100%", margin: "auto" }}
+      style={{
+        backgroundColor: "#007991",
+        width: "100%",
+        margin: "auto",
+        padding: "0 20px",
+      }}
     >
       <Navbar.Brand href="#" style={{ fontSize: "30px", color: "#fff" }}>
         campus<b>flow</b>
@@ -181,7 +183,7 @@ function NavScrollExample() {
             textAlign: "center",
             backgroundColor: "#007991",
           }}
-          navbarScroll
+          // navbarScroll
         >
           <Nav.Link href="#action1" style={{ color: "#fff" }}>
             Home

@@ -6,7 +6,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  height: 100%; 
+  height: 100%;
   border-right: 1px solid rgba(0, 0, 0, .1);
   z-index: 100;
 }
@@ -26,7 +26,7 @@
 .sidebar__top__links {
   list-style-type: none;
   width: 100%;
-  padding-top:20px ;
+  padding-top: 20px;
   position: absolute;
   top: 0;
   display: flex;
@@ -45,22 +45,31 @@
 
 }
 
-.sidebar__top__links a, .sidebar__bottom__links a {
+.sidebar__top__links,
+.sidebar__bottom__links {
+  padding-left: 0;
+}
+
+.sidebar__top__links a,
+.sidebar__bottom__links a {
   text-decoration: none;
   color: #000;
 }
 
-.sidebar__top__link svg, .sidebar__bottom__link svg {
-  font-size: 30px;
+.sidebar__top__link svg,
+.sidebar__bottom__link svg {
+  font-size: 18px;
+  transition: all 0.5s ease-in-out;
 }
 
-.sidebar__top__link, .sidebar__bottom__link {
+.sidebar__top__link,
+.sidebar__bottom__link {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-size: 16px;
   padding: 16px;
-  transition: display 0.3s ease;
+
 }
 
 .sidebar__top__link:hover .sidebar__bottom__link:hover {
@@ -68,9 +77,10 @@
   color: white;
 }
 
-.sidebar__top__link span, .sidebar__bottom__link span {
+.sidebar__top__link span,
+.sidebar__bottom__link span {
   padding-left: 10px;
-  transition: display 0.3s ease;
+
 }
 
 .sidebar__top__link.active {
@@ -79,8 +89,15 @@
 }
 
 @media screen and (max-width: 515px) {
-  .sidebar__top__link span, .sidebar__bottom__link span {
+
+  .sidebar__top__link span,
+  .sidebar__bottom__link span {
     display: none;
+  }
+
+  .sidebar__top__link svg,
+  .sidebar__bottom__link svg {
+    font-size: 30px;
   }
 
   .sidebar {
