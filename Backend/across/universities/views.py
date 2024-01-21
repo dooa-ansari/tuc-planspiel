@@ -11,25 +11,21 @@ from django.views.decorators.http import require_GET
 def get_universities(request):
     try:
         server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
-        qresponse = server.query(get_university_list())
-        universiy_list = []
-        universiy_list = [result['universityName']['value'] for result in qresponse['results']['bindings']]
 
-        # Return JSON response
-        if not universiy_list:
-            response = {
-                "message": f"No Universities found"
+        qresponse = server.query(university_list_query)
+        data = []
+        data_list = qresponse['results']['bindings']
+        
+        for row in data_list:
+            data_dict = {
+                'id': str(row['hasUniversityId']['value']),
+                'name': str(row['universityName']['value']),
+                'uri': str(row['university']['value']),
             }
-            return JsonResponse(response, status =404)
-        else:
-            response = {
-                "message": "University list returned successfully",
-                "universities": universiy_list
-            }
-            return JsonResponse(response, status =200)
+            data.append(data_dict)
+        return JsonResponse(data , safe=False)
     except Exception as e:
         response = {
             "message": f"An unexpected error occurred: {e}"
         }
         return JsonResponse(response, status =500)
-
