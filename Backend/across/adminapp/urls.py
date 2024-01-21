@@ -10,6 +10,6 @@ urlpatterns= [
     path('api/insert/', insert_module, name='insert_module'),
     path('api/delete/', delete_module, name='delete_module'),
     path('api/update/', update_module, name='update_module'),
-    path('api/delete/', clean_up_upload_folder, name='clean_directory'),
+    path('api/deleteclean/', clean_up_upload_folder, name='clean_directory'),
 
 ]
