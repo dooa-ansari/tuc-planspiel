@@ -11,7 +11,7 @@ const api = axios.create({
 export const getUniversities = async () => {
   let response;
   try {
-    response = await api.get("/adminapp/universitieslist");
+    response = await api.get("/universities/");
   } catch (error) {
     return error;
   }
