@@ -30,9 +30,20 @@ def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoM
     file1 = open(new_file_name_1, 'w')
     file2 = open(new_file_name_2, 'w')
     
-    consumer.send_message({"progress": 60 ,"type": 12 ,"message": "Almost Finished"})    
-    file1.write(fileOneContent)
-    file2.write(fileTwoContent)
+    # Encode content to bytes using UTF-8
+    fileOneContentBytes = fileOneContent.encode('utf-8')
+    fileTwoContentBytes = fileTwoContent.encode('utf-8')
+
+    consumer.send_message({"progress": 60 ,"type": 12 ,"message": "Almost Finished"})   
+
+    with open(new_file_name_1, 'wb') as file1:
+        file1.write(fileOneContentBytes)
+
+    with open(new_file_name_2, 'wb') as file2:
+        file2.write(fileTwoContentBytes)
+
+    # file1.write(fileOneContent)
+    # file2.write(fileTwoContent)
     consumer.send_message({"progress": 100 ,"type": 12 ,"message": f"Updating RDF files process finished successfully"})
     file1.close()
     file2.close()
