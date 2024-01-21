@@ -1,7 +1,7 @@
 import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_POST, require_http_methods
 from .models import UserData, UserProfile
 
 @csrf_exempt
@@ -88,7 +88,7 @@ def save_completed_modules_by_user(request):
 
 @csrf_exempt
 @require_POST
-def get_completed_modules_by_user(request):
+def fetch_completed_modules_by_user(request):
     body = request.body.decode('utf-8')
 
     try:
@@ -128,7 +128,7 @@ def get_completed_modules_by_user(request):
 
 
 @csrf_exempt
-@require_POST
+@require_http_methods(["PATCH"])
 def select_university_after_signup(request):
     # Get the raw request body
     body = request.body.decode('utf-8')
@@ -147,15 +147,20 @@ def select_university_after_signup(request):
             }
             return JsonResponse(response, status =404)
         else:
-            # Update University value
-            user_profile.university_name = selectedUniversity
-            user_profile.save()
-            response = {
+            # Update University value if provided
+            if selectedUniversity:
+                user_profile.university_name = selectedUniversity
+                user_profile.save()
+                response = {
                     "message": "University updated successfully",
                     "university": selectedUniversity
                 }
-            return JsonResponse(response, status =200)
-        
+                return JsonResponse(response, status=200)
+            else:
+                response = {
+                    "message": "No updates provided"
+                }
+                return JsonResponse(response, status=400)
     except Exception as e:
         response = {
             "message": f"An unexpected error occurred: {e}"

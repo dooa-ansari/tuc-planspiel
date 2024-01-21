@@ -5,7 +5,7 @@ from pymantic import sparql
 from .sparql import *
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_POST, require_http_methods
 from django.core.files.storage import FileSystemStorage
 from .universitiy_list import get_all_universities
 from .add_module import add_module_in_blaze
@@ -172,7 +172,7 @@ def insert_module(request):
         return JsonResponse(response_data, status =500)
 
 @csrf_exempt
-@require_POST
+@require_http_methods(["DELETE"])
 def delete_module(request):
     data = json.loads(request.body.decode('utf-8'))
     
@@ -185,6 +185,17 @@ def delete_module(request):
         if existing_user_profile:
             if existing_user_profile.role == 'ADMIN':
                 try:
+                    server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+                    qresponse = server.query(is_module_already_present_by_module_uri(module_uri))
+                
+                    # Module already exists, return a message
+                    if qresponse.get('boolean') is False:                    
+                        response_data = {
+                            'message': "Module doesn't exist",
+                            'module_uri': module_uri 
+                        }
+                        return JsonResponse(response_data, status=404)
+
                     payload = {'update': delete_individual_module(module_uri)}
 
                     result = requests.post("http://54.242.11.117/blazegraph/namespace/kb/sparql", data=payload)
@@ -221,7 +232,7 @@ def delete_module(request):
     
 
 @csrf_exempt
-@require_POST
+@require_http_methods(["PUT"])
 def update_module(request):
 
     data = json.loads(request.body.decode('utf-8'))
@@ -241,6 +252,16 @@ def update_module(request):
         if existing_user_profile:
             if existing_user_profile.role == 'ADMIN':
                 server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+
+                qresponse = server.query(is_module_already_present_by_module_uri(module_uri))
+            
+                # Module already exists, return a message
+                if qresponse.get('boolean') is False:                    
+                    response_data = {
+                        'message': "Module doesn't exist, Please create module before updating",
+                        'module_uri': module_uri 
+                    }
+                    return JsonResponse(response_data, status=404)
 
                 qresponse = server.query(get_university_uri_by_university_name(university_name))
                 data_for_unviersity_uri = qresponse['results']['bindings'] 
