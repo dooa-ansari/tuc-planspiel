@@ -90,8 +90,16 @@ const MyProfile = () => {
                 </div>
               </div>
             </Tab>
-            <Tab eventKey="profile" title="Profile">
-              Tab content for Profile
+            <Tab eventKey="profile" title="Academic Data">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                suscipit quae voluptate magnam esse quibusdam repellendus
+                aspernatur nisi necessitatibus accusantium commodi saepe,
+                officiis, nam iste porro laboriosam ratione. Obcaecati
+                voluptatum voluptas dolore iusto. Mollitia architecto cupiditate
+                eum quasi ipsa obcaecati necessitatibus, delectus rerum labore,
+                sint ea adipisci quia eaque possimus.#
+              </p>
             </Tab>
           </Tabs>
         </div>

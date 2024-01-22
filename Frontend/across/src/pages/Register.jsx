@@ -69,6 +69,7 @@ const Register = () => {
 
     try {
       const response = await register(data);
+      console.log(response);
 
       if (response.status === 200 && response.statusText === "OK") {
         setAuth({
@@ -84,7 +85,10 @@ const Register = () => {
         } else {
           navigate("/campus-flow/admin/home");
         }
-      } else if (response.response.status === 400) {
+      } else if (
+        response.response.status === 400 ||
+        response.response.status === 409
+      ) {
         const errorMessage = response.response.data.message;
 
         const errMsg = errorMessage.replace(/^\['(.*)'\]$/, "$1");
@@ -115,7 +119,7 @@ const Register = () => {
       const dedicatedRole = response.data.data.role;
 
       if (dedicatedRole === "USER") {
-        navigate("/campus-flow/user/home");
+        navigate("/campus-flow/user/selectUniversity");
       } else {
         navigate("/campus-flow/admin/home");
       }

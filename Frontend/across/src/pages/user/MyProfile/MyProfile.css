@@ -100,7 +100,7 @@ tr:nth-child(even) {
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1215px) {
   .myProfile__contents {
     border: 2px solid lightgray;
     display: flex;
