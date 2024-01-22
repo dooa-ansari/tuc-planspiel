@@ -12,6 +12,8 @@ import {
   getUniversities,
 } from "../../../api/compareModuleApi";
 
+import { Alert } from "react-bootstrap";
+
 const CompareModules = () => {
   const [universities, setUniversities] = useState([]);
   const [courses, setCourses] = useState([]);
@@ -20,6 +22,7 @@ const CompareModules = () => {
   const [selectedModule, setSelectedModule] = useState(null);
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [similarModules, setSimilarModules] = useState([]);
+  const [error, setError] = useState(undefined);
 
   const handleUniversityChange = university => {
     setSelectedUniversity(university);
@@ -31,6 +34,7 @@ const CompareModules = () => {
   const handleCourseChange = course => {
     setSelectedCourse(course);
     setSelectedModule(null);
+    setError(undefined);
   };
 
   const handleModuleChange = module => {
@@ -67,12 +71,6 @@ const CompareModules = () => {
     }
   }, [selectedUniversity, selectedCourse, selectedModule]);
 
-  const dropdownOptionsForUniversities = universities.map(university => ({
-    id: university.id,
-    value: university.uri,
-    label: university.name,
-  }));
-
   const fetchCoursesOfUniversity = async () => {
     try {
       const universityName = selectedUniversity.label;
@@ -87,10 +85,22 @@ const CompareModules = () => {
     }
   };
 
+  const dropdownOptionsForUniversities = universities.map(university => ({
+    id: university.id,
+    value: university.uri,
+    label: university.name,
+  }));
+
   const dropdownOptionsForCourses = courses.map(course => ({
     id: course.courseNumber,
     value: course.courseUri,
     label: course.courseName,
+  }));
+
+  const dropdownOptionsForModules = modules.map(module => ({
+    id: module.moduleNumber,
+    label: module.moduleName,
+    value: module.moduleUri,
   }));
 
   const fetchModulesOfCourse = async () => {
@@ -108,23 +118,32 @@ const CompareModules = () => {
     }
   };
 
-  const dropdownOptionsForModules = modules.map(module => ({
-    id: module.moduleNumber,
-    label: module.moduleName,
-    value: module.moduleUri,
-  }));
-
   const fetchSimilarModules = async () => {
     try {
       const moduleUri = selectedModule.value;
 
       const retrievedSimilarModules = await getSimilarModules(moduleUri);
+      console.log(retrievedSimilarModules);
 
-      console.log(retrievedSimilarModules.data.modules);
-
-      setSimilarModules(retrievedSimilarModules.data.modules);
+      if (
+        retrievedSimilarModules.status === 200 &&
+        retrievedSimilarModules.statusText === "OK"
+      ) {
+        if (retrievedSimilarModules.data.modules.length > 0) {
+          setSimilarModules(retrievedSimilarModules.data.modules);
+          setError(undefined);
+        }
+      } else if (
+        retrievedSimilarModules.response.status === 404 &&
+        retrievedSimilarModules.response.statusText === "Not Found"
+      ) {
+        const errMsg = retrievedSimilarModules.response.data.message;
+        const displayedError = errMsg.replace(",", " ");
+        setSimilarModules([]);
+        setError(displayedError);
+      }
     } catch (error) {
-      console.log("error fetching similar modules");
+      console.error("Error fetching similar modules", error);
     }
   };
 
@@ -181,7 +200,18 @@ const CompareModules = () => {
             placeholderText="Select your module..."
           />
         </div>
-        <div className="similarModuleCards">{renderedSimilarModules}</div>
+        {error === undefined ? (
+          <>
+            <div className="similarModuleCards">{renderedSimilarModules}</div>
+          </>
+        ) : (
+          <>
+            <Alert variant="danger">
+              <Alert.Heading>Modules Not Found</Alert.Heading>
+              <p>{error}</p>
+            </Alert>
+          </>
+        )}
         <div style={{ marginTop: "190px" }}></div>
       </MainLayout>
     </>

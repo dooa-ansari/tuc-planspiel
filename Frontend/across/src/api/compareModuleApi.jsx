@@ -50,6 +50,5 @@ export const getSimilarModules = async data => {
   } catch (error) {
     return error;
   }
-
   return response;
 };
