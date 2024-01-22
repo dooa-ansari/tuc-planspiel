@@ -140,6 +140,7 @@
     flex: 1;
     height: 100%;
     flex-direction: row;
+    background-color: white;    
   }
 
 .centerSlide2{

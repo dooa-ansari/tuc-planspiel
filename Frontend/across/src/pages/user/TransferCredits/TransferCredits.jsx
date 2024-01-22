@@ -92,7 +92,7 @@ const TransferCredits = () => {
     selectedModules?.forEach((selected) => {
       axios
         .get(
-          "http://localhost:8000/api/similarModules/?moduleUri=" +
+          "http://localhost:8000/modules/similarModules?moduleUri=" +
             encodeURIComponent(selected.moduleUri)
         )
         .then((response) => {
@@ -158,7 +158,7 @@ const TransferCredits = () => {
     
     axios
         .post(
-          "http://localhost:8000/api/transferCreditsofUser",
+          "http://localhost:8000/user/transferCreditsofUser",
           data
         )
         .then((response) => {
@@ -427,6 +427,7 @@ const TransferCredits = () => {
           </div>
           
           <div>
+          <p>We have send an email with PDF attached with all details</p>
           <Lottie options={defaultOptions} height={300} width={300} />
           </div>
         </AwesomeSlider>
