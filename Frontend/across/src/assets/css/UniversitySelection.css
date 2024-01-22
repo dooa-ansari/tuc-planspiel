@@ -26,8 +26,15 @@
 }
 
 .universitySelection__title {
-  font-size: 2rem;
-  letter-spacing: 1px;
+  font-size: calc(1.125rem + 0.7vw);
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin-bottom: 2rem !important;
 }
 
 .universitySelection__select {
@@ -38,20 +45,19 @@
   border: none;
   outline: none;
   color: #8f8f8f;
-  border-bottom: 1px solid #8F8F8F ;
+  border-bottom: 1px solid #8F8F8F;
   background: transparent;
   margin: 10px 0;
 }
 
-
 .universitySelection__button {
   display: block;
-    width: 380px;
-    height: 50px;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    border-radius: 50px;
-    background: var(--primary-color);
-    border: none;
-    margin-bottom: 58px;
+  width: 380px;
+  height: 50px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  border: none;
+  margin-bottom: 58px;
 }

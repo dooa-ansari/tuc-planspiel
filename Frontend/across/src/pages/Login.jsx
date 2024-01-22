@@ -60,7 +60,7 @@ const Login = () => {
         const roleAssigned = response.data.user.role;
 
         if (roleAssigned === "ADMIN") {
-          navigate("/campus-flow/admin/home");
+          navigate("/admin/home");
         } else {
           navigate("/campus-flow/user/home");
         }
@@ -89,10 +89,14 @@ const Login = () => {
       const dedicatedRole = response.data.data.role;
       console.log(dedicatedRole);
 
-      if (dedicatedRole === "USER") {
-        navigate("/campus-flow/user/home");
+      if (response.data.data.university_name) {
+        if (dedicatedRole === "USER") {
+          navigate("/campus-flow/user/home");
+        } else {
+          navigate("/admin/home");
+        }
       } else {
-        navigate("/campus-flow/admin/home");
+        navigate("/campus-flow/user/selectUniversity");
       }
     } catch (error) {
       console.error("Error during Google login:", error);

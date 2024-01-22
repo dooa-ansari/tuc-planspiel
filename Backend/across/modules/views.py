@@ -4,34 +4,42 @@ from .sparql import *
 import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_POST, require_GET
 
-
+@csrf_exempt
+@require_GET
 def list_similar_modules(request):
-    server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+    try:
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
 
-    qresponse = server.query(list_with_similar_modules_query)
-    data_list = []
-    data = qresponse['results']['bindings']
-    
-    for row in data:
-        data_dict = {
-            'id': str(row['moduleId']['value']),
-            'name': str(row['moduleName']['value']),
-            'content': str(row['moduleContent']['value']),
-            'creditPoints': str(row['moduleCreditPoints']['value']),
-            'university': str(row['universityName']['value']),
-            'courseName': str(row['courseName']['value']),
-            'similarModuleId': str(row['similarModuleId']['value']),
-            'similarModuleName': str(row['similarModuleName']['value']),
-            'similarModuleContent': str(row['similarModuleContent']['value']),
-            'similarModuleCreditPoints': str(row['similarModuleCreditPoints']['value']),
-            'similarUniversity': str(row['universityNameSimilar']['value']),
-            'courseNameSimilar': str(row['courseNameSimilar']['value']),
+        qresponse = server.query(list_with_similar_modules_query)
+        data_list = []
+        
+        # Assuming 'data' is a list of dictionaries
+        for row in qresponse['results']['bindings']:
+            data_dict = {
+                'id': row['moduleId']['value'],
+                'name': row['moduleName']['value'],
+                'content': row['moduleContent']['value'],
+                'creditPoints': row['moduleCreditPoints']['value'],
+                'university': row['universityName']['value'],
+                'courseName': row['courseName']['value'],
+                'similarModuleId': row['similarModuleId']['value'],
+                'similarModuleName': row['similarModuleName']['value'],
+                'similarModuleContent': row['similarModuleContent']['value'],
+                'similarModuleCreditPoints': row['similarModuleCreditPoints']['value'],
+                'similarUniversity': row['universityNameSimilar']['value'],
+                'courseNameSimilar': row['courseNameSimilar']['value'],
+            }
+            data_list.append(data_dict)
+
+        return JsonResponse(data_list, safe=False, json_dumps_params={'indent': 2})
+
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
         }
-        data_list.append(data_dict)
-    json_data = json.dumps(data_list, indent=2)
-    return json_data
+        return JsonResponse(response, status=500)
 
 
 @csrf_exempt
@@ -121,8 +129,8 @@ def get_modules_from_course_and_university(request):
         # Process the results
         for result in data:
             module_list_temp = {
-                'moduleUri' :  str(result['sampleModuleUri']['value']),
-                'moduleName' : str(result['moduleName']['value']),
+                'moduleUri' :  str(result['moduleUri']['value']),
+                'moduleName' : str(result['sampleModuleName']['value']),
                 'moduleNumber' : str(result['sampleModuleNumber']['value']),
                 'moduleContent' : str(result['sampleModuleContent']['value']),
                 'moduleCreditPoints' : str(result['sampleModuleCreditPoints']['value'])
@@ -154,6 +162,35 @@ def get_modules_from_course_and_university(request):
             "message": f"RDF parsing error: {rdf_error}"
         }
         return JsonResponse(response, status =500)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+@csrf_exempt
+@require_GET
+def get_all_modules(request):
+    try:
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+
+        qresponse = server.query(get_all_modules_query())
+        data_list = []
+        
+        # Assuming 'data' is a list of dictionaries
+        for row in qresponse['results']['bindings']:
+            data_dict = {
+                'module_uri': row['moduleUri']['value'],
+                'module_number': row['sampleModuleNumber']['value'],
+                'module_name': row['sampleModuleName']['value'],
+                'module_content': row['sampleModuleContent']['value'],
+                'module_credit_points': row['sampleModuleCreditPoints']['value'],
+                'belongs_to_university': row['sampleUniversityName']['value'],
+                'belongs_to_course': row['sampleCourseName']['value'],
+            }
+            data_list.append(data_dict)
+
+        return JsonResponse(data_list, safe=False, json_dumps_params={'indent': 2})
     except Exception as e:
         response = {
             "message": f"An unexpected error occurred: {e}"

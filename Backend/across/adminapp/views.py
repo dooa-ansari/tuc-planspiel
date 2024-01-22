@@ -129,8 +129,8 @@ def insert_module(request):
                 server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
 
                 qresponse = server.query(get_university_uri_by_university_name(university_name))
-                data_for_unviersity_uri = qresponse['results']['bindings'] 
-                for result in data_for_unviersity_uri:
+                data_for_university_uri = qresponse['results']['bindings'] 
+                for result in data_for_university_uri:
                     university_uri = str(result['universityUri']['value'])
                 
                 query = get_course_uri_by_course_and_university_name(course_name, university_name)
