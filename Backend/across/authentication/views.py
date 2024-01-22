@@ -32,7 +32,7 @@ def register_user(request):
         try:
             existing_profiles = UserProfile.objects.filter(email=email)
             if existing_profiles.exists():
-                return JsonResponse({'message': 'User already exists, go to login page'})  
+                return JsonResponse({'message': 'User already exists, go to login page'}, status=409)  
 
             validate_email(email)
             validate_password(password)

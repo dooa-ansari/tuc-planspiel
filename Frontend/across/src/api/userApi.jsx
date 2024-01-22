@@ -42,6 +42,16 @@ export const googleSignIn = async data => {
   return response;
 };
 
+export const storeUniversityName = async data => {
+  let response;
+  try {
+    response = await api.patch("/user/selectUniversity", data);
+  } catch (error) {
+    return error;
+  }
+  return response;
+};
+
 export const storeUserInLocalStorage = data => {
   localStorage.setItem("token", data.token);
   localStorage.setItem("user", JSON.stringify(data.user));

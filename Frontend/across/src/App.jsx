@@ -43,7 +43,7 @@ const App = () => {
           <Route path="/campus-flow/register" exact element={<Register />} />
           <Route path="/modules" exact element={<ShowModules />} />
           <Route
-            path="/select-university"
+            path="/campus-flow/user/selectUniversity"
             exact
             element={
               <Protected>
