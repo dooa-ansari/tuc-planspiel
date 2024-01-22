@@ -190,8 +190,10 @@ def fetch_university_uri(request):
         if university_uri:
                 response = {
                     "message": "University uri returned successfully",
+                    "universityDetails" : {
                     "university_uri": university_uri,
                     "university_name": university_name
+                    }
                 }
                 return JsonResponse(response, status=200)
         else:
