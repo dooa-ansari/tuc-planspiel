@@ -60,7 +60,7 @@ const Login = () => {
         const roleAssigned = response.data.user.role;
 
         if (roleAssigned === "ADMIN") {
-          navigate("/campus-flow/admin/home");
+          navigate("/admin/home");
         } else {
           navigate("/campus-flow/user/home");
         }
@@ -92,7 +92,7 @@ const Login = () => {
       if (dedicatedRole === "USER") {
         navigate("/campus-flow/user/home");
       } else {
-        navigate("/campus-flow/admin/home");
+        navigate("/admin/home");
       }
     } catch (error) {
       console.error("Error during Google login:", error);

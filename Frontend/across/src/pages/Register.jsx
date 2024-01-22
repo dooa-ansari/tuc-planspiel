@@ -80,7 +80,7 @@ const Register = () => {
         const givenRole = response.data.user.role;
 
         if (givenRole === "USER") {
-          navigate("/campus-flow/user/home");
+          navigate("/campus-flow/user/selectUniversity");
         } else {
           navigate("/campus-flow/admin/home");
         }
