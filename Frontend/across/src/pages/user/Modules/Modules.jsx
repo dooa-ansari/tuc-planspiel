@@ -59,9 +59,10 @@ const Modules = () => {
               style={{
                 paddingLeft: "1.5rem",
                 background: "#439a86",
-                width: "20%",
+                width: "50%",
                 margin: "0 auto",
                 color: "#fff",
+                textAlign: "center",
               }}
             >
               Total number of modules: {modules.length}

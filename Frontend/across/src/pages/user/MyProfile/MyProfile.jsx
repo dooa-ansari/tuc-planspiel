@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import { useAuth } from "../../../context/AuthContext";
 import "./MyProfile.css";
@@ -6,9 +6,30 @@ import Gravatar from "../../../components/Gravatar/Gravatar";
 import { Tab } from "react-bootstrap";
 import { Tabs } from "react-bootstrap";
 import { FaTrash } from "react-icons/fa6";
+import { getUniversityUri } from "../../../api/externalApi";
+import Dropdown from "../../../components/Dropdown/Dropdown";
 
 const MyProfile = () => {
   const [auth] = useAuth();
+  const [university, setUniversity] = useState(null);
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    async function fetchUniversity() {
+      try {
+        const response = await getUniversityUri({
+          university_name: auth.user.university_name,
+        });
+        if (response.status === 200 && response.statusText === "OK") {
+          setUniversity(response.data.universityDetails);
+        } else console.log("Error retrieving university");
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchUniversity();
+  }, []);
 
   return (
     <>
@@ -91,15 +112,9 @@ const MyProfile = () => {
               </div>
             </Tab>
             <Tab eventKey="profile" title="Academic Data">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                suscipit quae voluptate magnam esse quibusdam repellendus
-                aspernatur nisi necessitatibus accusantium commodi saepe,
-                officiis, nam iste porro laboriosam ratione. Obcaecati
-                voluptatum voluptas dolore iusto. Mollitia architecto cupiditate
-                eum quasi ipsa obcaecati necessitatibus, delectus rerum labore,
-                sint ea adipisci quia eaque possimus.#
-              </p>
+              <div className="myProfile__dropdownWrapper">
+                <h4>Select one of the Courses Offered by your university</h4>
+              </div>
             </Tab>
           </Tabs>
         </div>

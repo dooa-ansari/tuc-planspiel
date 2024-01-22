@@ -17,3 +17,13 @@ export const getAllModules = async () => {
   }
   return response;
 };
+
+export const getUniversityUri = async data => {
+  let response;
+  try {
+    response = await api.post("/user/fetchUniversityUri", data);
+  } catch (error) {
+    return error;
+  }
+  return response;
+};
