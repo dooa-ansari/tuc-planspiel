@@ -73,7 +73,7 @@ const HomePage = () => {
                     descriptions
                   </p>
                 </NavLink>
-                <NavLink className="quicklink quicklinkThree">
+                <NavLink  to="/campus-flow/user/transfer-credits" className="quicklink quicklinkThree">
                   <h4>Transferring the Credits</h4>
                   <p>
                     Transferring the selected credits from one university to
