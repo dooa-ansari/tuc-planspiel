@@ -126,8 +126,8 @@ def get_modules_from_course_and_university(request):
         # Process the results
         for result in data:
             module_list_temp = {
-                'moduleUri' :  str(result['sampleModuleUri']['value']),
-                'moduleName' : str(result['moduleName']['value']),
+                'moduleUri' :  str(result['moduleUri']['value']),
+                'moduleName' : str(result['sampleModuleName']['value']),
                 'moduleNumber' : str(result['sampleModuleNumber']['value']),
                 'moduleContent' : str(result['sampleModuleContent']['value']),
                 'moduleCreditPoints' : str(result['sampleModuleCreditPoints']['value'])
@@ -159,6 +159,35 @@ def get_modules_from_course_and_university(request):
             "message": f"RDF parsing error: {rdf_error}"
         }
         return JsonResponse(response, status =500)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+@csrf_exempt
+@require_GET
+def get_all_modules(request):
+    try:
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+
+        qresponse = server.query(get_all_modules_query())
+        data_list = []
+        
+        # Assuming 'data' is a list of dictionaries
+        for row in qresponse['results']['bindings']:
+            data_dict = {
+                'module_uri': row['moduleUri']['value'],
+                'module_number': row['sampleModuleNumber']['value'],
+                'module_name': row['sampleModuleName']['value'],
+                'module_content': row['sampleModuleContent']['value'],
+                'module_credit_points': row['sampleModuleCreditPoints']['value'],
+                'belongs_to_university': row['sampleUniversityName']['value'],
+                'belongs_to_course': row['sampleCourseName']['value'],
+            }
+            data_list.append(data_dict)
+
+        return JsonResponse(data_list, safe=False, json_dumps_params={'indent': 2})
     except Exception as e:
         response = {
             "message": f"An unexpected error occurred: {e}"
