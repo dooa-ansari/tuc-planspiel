@@ -3,6 +3,8 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST, require_http_methods
 from .models import UserData, UserProfile
+from pymantic import sparql
+from .sparql import *
 
 @csrf_exempt
 @require_POST
@@ -167,3 +169,38 @@ def select_university_after_signup(request):
         }
         return JsonResponse(response, status =500)
     
+@csrf_exempt
+@require_POST
+def fetch_university_uri(request):
+    # Get the raw request body
+    body = request.body.decode('utf-8')
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        university_name = data.get('university_name','')
+        university_uri = ''
+
+        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+
+        qresponse = server.query(get_university_uri_by_university_name(university_name))
+        data_for_university_uri = qresponse['results']['bindings'] 
+        for result in data_for_university_uri:
+            university_uri = str(result['universityUri']['value'])
+
+        if university_uri:
+                response = {
+                    "message": "University uri returned successfully",
+                    "university_uri": university_uri,
+                    "university_name": university_name
+                }
+                return JsonResponse(response, status=200)
+        else:
+            response = {
+                "message": "No related university uri available"
+            }
+            return JsonResponse(response, status=400)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+    return JsonResponse(response, status =500)
