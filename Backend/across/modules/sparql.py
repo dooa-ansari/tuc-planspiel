@@ -54,7 +54,7 @@ def get_similar_module_against_module_uri_query(moduleUri):
 
 def get_modules_from_course_and_university_query(courseUri, courseName, universityUri):
     query = f"""
-        SELECT ?moduleName (SAMPLE (?moduleUri) as ?sampleModuleUri) (SAMPLE(?moduleNumber) as ?sampleModuleNumber) (SAMPLE(?moduleContent) as ?sampleModuleContent) (SAMPLE(?moduleCreditPoints) as ?sampleModuleCreditPoints)
+        SELECT ?moduleUri (SAMPLE (?moduleName) as ?sampleModuleName) (SAMPLE(?moduleNumber) as ?sampleModuleNumber) (SAMPLE(?moduleContent) as ?sampleModuleContent) (SAMPLE(?moduleCreditPoints) as ?sampleModuleCreditPoints)
         WHERE {{       
             ?module rdf:type <http://tuc.web.engineering/module#> .
             ?module <http://tuc.web.engineering/module#hasName> ?moduleName .
@@ -76,6 +76,28 @@ def get_modules_from_course_and_university_query(courseUri, courseName, universi
               ?universityUri = "{universityUri}"
             )
         }}
-        GROUP BY ?moduleName
+        GROUP BY ?moduleUri
         """
+    return query
+
+def get_all_modules_query():
+    query = f"""
+        SELECT ?moduleUri (SAMPLE(?moduleNumber) as ?sampleModuleNumber) (SAMPLE(?moduleName) as ?sampleModuleName) (SAMPLE(?moduleContent) as ?sampleModuleContent) (SAMPLE(?moduleCreditPoints) as ?sampleModuleCreditPoints) (SAMPLE(?universityName) as ?sampleUniversityName) (SAMPLE(?courseName) as ?sampleCourseName)
+        WHERE {{       
+                    ?module rdf:type <http://tuc.web.engineering/module#> .
+                    ?module <http://tuc.web.engineering/module#hasName> ?moduleName .
+                    ?module <http://tuc.web.engineering/module#hasModuleNumber> ?moduleNumber .
+                    ?module <http://tuc.web.engineering/module#hasContent> ?moduleContent .
+                    ?module <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints .
+                    ?course rdf:type <http://tuc/course#> .
+                    ?module <http://tuc/course#hasCourse> ?course .
+                    ?course <http://tuc/course#hasCourseName> ?courseName .
+                    ?university rdf:type <http://across/university#> .
+                    ?course <http://across/university#belongsToUniversity> ?university .  
+                    ?university <http://across/university#hasUniversityName> ?universityName .
+
+                    BIND(str(?module) AS ?moduleUri)
+        }}
+        GROUP BY ?moduleUri
+    """
     return query
