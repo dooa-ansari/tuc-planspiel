@@ -1,6 +1,7 @@
 import csv
 from django.shortcuts import render
-import os, json
+
+import os, json , os.path
 from pymantic import sparql
 from .sparql import *
 from django.http import JsonResponse
@@ -61,6 +62,20 @@ def csv_rdf(request):
                 return JsonResponse({'message': 'csv Files successfully converted to RDF file'}, status=200)
     except Exception as e:
             return JsonResponse({'message': f'Error converting csv to RDF file: {str(e)}'}, status=500)
+
+
+
+@csrf_exempt
+@require_POST
+def clean_up_upload_folder(request):
+    try:
+        filelist = [ f for f in os.listdir("uploads/") if f.endswith(".rdf") ]
+        for f in filelist:
+         os.remove(os.path.join("uploads/", f))
+
+        return JsonResponse({'message': 'Files deleted successfully'}, status=200)
+    except Exception as e:
+         return JsonResponse({'message': f'Error deleting files: {str(e)}'}, status=500)
 
 
 @csrf_exempt

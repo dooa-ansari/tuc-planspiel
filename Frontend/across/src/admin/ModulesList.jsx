@@ -62,6 +62,15 @@ const ModulesList = () => {
   };
 
   const postAddData = () => {
+    console.log(JSON.stringify({
+      email: "dansari@gmail.com",
+      university: addUniversityUri,
+      course: addCourseUri,
+      module_name: moduleName,
+      module_number: moduleId,
+      module_content: moduleContent,
+      module_credit_points: modulePoints,
+    }))
     fetch("http://127.0.0.1:8000/adminapp/insertModule", {
       method: "POST",
       headers: {
@@ -188,7 +197,7 @@ const ModulesList = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8000/adminapp/universitieslist", {
+    fetch("http://localhost:8000/adminapp/universitieslist/", {
       // method: "GET",
       // headers: {
       //   Accept: "application/json",

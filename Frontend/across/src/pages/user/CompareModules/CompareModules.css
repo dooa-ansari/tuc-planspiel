@@ -36,7 +36,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   background: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 1.5rem;
@@ -58,4 +58,9 @@
 
 .similarModuleContent {
   padding: 0.5rem;
+}
+
+.alert {
+  width: 78%;
+  margin: 0 auto;
 }
