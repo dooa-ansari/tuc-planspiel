@@ -8,28 +8,65 @@ import { Tabs } from "react-bootstrap";
 import { FaTrash } from "react-icons/fa6";
 import { getUniversityUri } from "../../../api/externalApi";
 import Dropdown from "../../../components/Dropdown/Dropdown";
+import { getCoursesOfParticularUniversity } from "../../../api/compareModuleApi";
 
 const MyProfile = () => {
   const [auth] = useAuth();
   const [university, setUniversity] = useState(null);
   const [courses, setCourses] = useState([]);
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  const handleCourseChange = course => {
+    setSelectedCourse(course);
+  };
 
   useEffect(() => {
-    async function fetchUniversity() {
+    const fetchData = async () => {
       try {
-        const response = await getUniversityUri({
+        const universityResponse = await getUniversityUri({
           university_name: auth.user.university_name,
         });
-        if (response.status === 200 && response.statusText === "OK") {
-          setUniversity(response.data.universityDetails);
-        } else console.log("Error retrieving university");
-        console.log(response);
+
+        if (
+          universityResponse.status === 200 &&
+          universityResponse.statusText === "OK"
+        ) {
+          setUniversity(universityResponse.data.universityDetails);
+
+          const universityName =
+            universityResponse.data.universityDetails.university_name;
+          const universityUri =
+            universityResponse.data.universityDetails.university_uri;
+
+          const coursesResponse = await getCoursesOfParticularUniversity({
+            universityName,
+            universityUri,
+          });
+
+          if (
+            coursesResponse.status === 200 &&
+            coursesResponse.statusText === "OK"
+          ) {
+            setCourses(coursesResponse.data.courses);
+          } else {
+            console.error("Error fetching courses");
+          }
+        } else {
+          console.error("Error retrieving university");
+        }
       } catch (error) {
-        console.log(error);
+        console.error("Error fetching data", error);
       }
-    }
-    fetchUniversity();
-  }, []);
+    };
+
+    fetchData();
+  }, [auth.user.university_name]);
+
+  const dropdownOptionsForCourses = courses.map(course => ({
+    id: course.courseNumber,
+    value: course.courseUri,
+    label: course.courseName,
+  }));
 
   return (
     <>
@@ -113,7 +150,14 @@ const MyProfile = () => {
             </Tab>
             <Tab eventKey="profile" title="Academic Data">
               <div className="myProfile__dropdownWrapper">
+                <h2>Your University: {auth.user.university_name}</h2>
                 <h4>Select one of the Courses Offered by your university</h4>
+                <Dropdown
+                  options={dropdownOptionsForCourses}
+                  value={selectedCourse}
+                  onChange={handleCourseChange}
+                  placeholderText="Select your course..."
+                />
               </div>
             </Tab>
           </Tabs>

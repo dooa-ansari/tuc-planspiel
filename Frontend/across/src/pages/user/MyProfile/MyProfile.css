@@ -99,6 +99,21 @@ tr:nth-child(even) {
   cursor: pointer;
 }
 
+.myProfile__dropdownWrapper {
+  border: 1px solid lightgray;
+  padding: 2rem;
+}
+
+.myProfile__dropdownWrapper h2 {
+  font-size: calc(1.125rem + 0.7vw);
+  margin: 1rem 0;
+}
+
+.myProfile__dropdownWrapper h4 {
+  font-size: calc(1rem + 0.3vw);
+  margin: 1rem 0;
+}
+
 
 @media screen and (max-width: 1215px) {
   .myProfile__contents {

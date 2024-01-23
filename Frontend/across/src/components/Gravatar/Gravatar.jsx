@@ -2,7 +2,6 @@ import React from "react";
 
 const Gravatar = ({ fullName, size }) => {
   const userName = fullName.toLowerCase();
-  console.log(userName);
 
   const gravatarURL = `https://www.gravatar.com/avatar/${userName}?s=${size}&d=retro`;
 
