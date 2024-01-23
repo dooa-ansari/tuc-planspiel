@@ -51,8 +51,8 @@ const Modules = () => {
   return (
     <>
       {loading && <Loader text="Modules" />}
-      {!loading && (
-        <MainLayout>
+      <MainLayout>
+        {!loading && (
           <div className="modules">
             <h1>Modules</h1>
             <p
@@ -69,8 +69,8 @@ const Modules = () => {
             </p>
             <div className="moduleCards">{renderedModules}</div>
           </div>
-        </MainLayout>
-      )}
+        )}
+      </MainLayout>
     </>
   );
 };
