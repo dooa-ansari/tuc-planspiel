@@ -6,12 +6,12 @@ from pymantic import sparql
 from .sparql import *
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST, require_http_methods
+from django.views.decorators.http import require_POST, require_http_methods, require_GET
 from django.core.files.storage import FileSystemStorage
 from .universitiy_list import get_all_universities
 from .add_module import add_module_in_blaze
 from django.http import HttpResponse
-from user.models import UserProfile
+from user.models import UserProfile, UserData
 from csv_to_rdf.csvTordf import University,CsvToRDF, UpdateModules, InsertModules
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
@@ -323,3 +323,87 @@ def update_module(request):
         }
         return JsonResponse(response_data, status =500)
     
+@csrf_exempt
+@require_POST
+def fetch_transfer_credit_requests(request):
+    data = json.loads(request.body.decode('utf-8'))
+    
+    # Extract data fields
+    email=data.get('email', '').strip()
+
+    try:
+        user_data = UserData.objects.get(email=email)        
+        
+        if user_data is not None and user_data.transfer_credits_requests is not None:
+            response_data = {
+                    'message': "Transfer Credit Requests exists",
+                    'transfer_credit_requests': user_data.transfer_credits_requests
+            }
+            return JsonResponse(response_data, status =200)
+        else:
+            response_data = {
+                "message": "Transfer Credit Requests not exists for this user"
+            }
+            return JsonResponse(response_data, status =404)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+@csrf_exempt
+@require_http_methods("PUT")
+def update_transfer_credit_request(request):
+    data = json.loads(request.body.decode('utf-8'))
+
+    try:
+        # Extract data fields
+        email=data.get('email', '').strip()
+        updated_request=data.get('updatedRequest')
+
+        user_data = UserData.objects.get(email=email)
+
+        # Iterate through existing_transfer_requests to find the specific request
+        for i, transfer_request in enumerate(user_data.transfer_credits_requests):
+            if (
+                transfer_request['toModule'] == updated_request['toModule']
+                and transfer_request['fromModule'] == updated_request['fromModule']
+            ):
+                user_data.transfer_credits_requests[i]['status'] = updated_request['status']
+                break
+
+        # Save the updated user_data object
+        user_data.save()
+        response_data = {
+                'message': "Transfer Credit Requests Updated Successfully"
+        }
+        return JsonResponse(response_data, status =200) 
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+
+@csrf_exempt
+@require_GET
+def fetch_user_data(request):
+    try:
+        # Retrieve all entries of UserData
+        user_data = UserData.objects.all()
+        all_user_data = []
+        # Convert the queryset to a list of dictionaries
+        for entry in user_data:
+            user_profile = UserProfile.objects.get(email=entry.email.email)        
+            
+            user_data_list = {'email': user_profile.email,
+                               'full_name': user_profile.full_name,
+                               'university': user_profile.university_name,
+                               'role': user_profile.role}
+            all_user_data.append(user_data_list)
+        # Return the data as JSON response
+        return JsonResponse({'user_data': all_user_data}, safe=False)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
