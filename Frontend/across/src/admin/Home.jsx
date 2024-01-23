@@ -11,17 +11,22 @@ import "../assets/css/Footer.css";
 import Footer from "../components/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import AdminNavbar from "./components/Navbar/AdminNavbar";
+import { useAuth } from "../context/AuthContext";
 
 const Home = () => {
+  const [auth, setAuth] = useAuth();
+
   return (
     <div style={{ backgroundColor: "#EDEDED", minHeight: "100vh" }}>
-      <NavScrollExample />
-      <PageBody />
+      <AdminNavbar />
+      <PageBody auth={auth} />
       <Footer />
     </div>
   );
 };
-function PageBody() {
+
+function PageBody({ auth }) {
   const cardData = [
     {
       title: "Users",
@@ -72,10 +77,17 @@ function PageBody() {
       buttonText: "Show Similarity Table",
       link: "/manage-universities",
     },
+    {
+      title: "Transfer Credit Requests",
+      description:
+        "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
+      buttonText: "Show Transfer Credit Requests",
+      link: "/admin/users/transferCreditRequests",
+    },
   ];
   return (
     <Container style={{ backgroundColor: "#EDEDED" }}>
-      <h1 className="my-4 text-left">Hi John, Welcome to the ADMIN panel</h1>
+      <h1 className="my-4 text-left">Hi {auth.user.full_name}, Welcome to the ADMIN panel</h1>
       <div
         className="intro-container mb-4 p-4 border rounded bg-light"
         style={{
@@ -160,80 +172,5 @@ function PageBody() {
   );
 }
 
-function NavScrollExample() {
-  return (
-    <Navbar
-      expand="lg"
-      style={{
-        backgroundColor: "#007991",
-        width: "100%",
-        margin: "auto",
-        padding: "0 20px",
-      }}
-    >
-      <Navbar.Brand href="#" style={{ fontSize: "30px", color: "#fff" }}>
-        campus<b>flow</b>
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="navbarScroll" />
-      <Navbar.Collapse id="navbarScroll" style={{ backgroundColor: "#007991" }}>
-        <Nav
-          className="mx-auto"
-          style={{
-            maxHeight: "100px",
-            textAlign: "center",
-            backgroundColor: "#007991",
-          }}
-          // navbarScroll
-        >
-          <Nav.Link href="#action1" style={{ color: "#fff" }}>
-            Home
-          </Nav.Link>
-          <Nav.Link href="#action2" style={{ color: "#fff" }}>
-            About
-          </Nav.Link>
-          <Nav.Link href="#action3" style={{ color: "#fff" }}>
-            Universities
-          </Nav.Link>
-          <Nav.Link href="#action4" style={{ color: "#fff" }}>
-            ACROSS
-          </Nav.Link>
-          <Nav.Link href="#action5" style={{ color: "#fff" }}>
-            Reach Us
-          </Nav.Link>
-        </Nav>
-        <Nav.Link className="text-black d-flex flex-column align-items-left">
-          <span className="ms-0 mb-0" style={{ color: "#fff", margin: "1px" }}>
-            <b>John Doe</b>
-          </span>
-          <span style={{ color: "#fff" }}>Admin</span>
-        </Nav.Link>
-        <a
-          href="/profile"
-          className="avatar-emoji"
-          style={{
-            backgroundColor: "#007991",
-            textDecoration: "none",
-            cursor: "pointer",
-            color: "black",
-          }}
-        >
-          <CgProfile />
-        </a>
-        <a
-          href="/logout"
-          className="logout-icon"
-          style={{
-            backgroundColor: "#007991",
-            textDecoration: "none",
-            cursor: "pointer",
-            color: "black",
-          }}
-        >
-          <IoIosLogOut />
-        </a>
-      </Navbar.Collapse>
-    </Navbar>
-  );
-}
 
 export default Home;
