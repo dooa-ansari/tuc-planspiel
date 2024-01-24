@@ -38,3 +38,14 @@ export const saveCompletedModules = async data => {
 
   return response;
 };
+
+export const getCompletedModules = async data => {
+  let response;
+  try {
+    response = await api.post("/user/fetchCompletedModulesofUser", data);
+  } catch (error) {
+    return error;
+  }
+
+  return response;
+};
