@@ -27,3 +27,14 @@ export const getUniversityUri = async data => {
   }
   return response;
 };
+
+export const saveCompletedModules = async data => {
+  let response;
+  try {
+    response = await api.post("/user/saveCompletedModulesofUser", data);
+  } catch (error) {
+    return error;
+  }
+
+  return response;
+};
