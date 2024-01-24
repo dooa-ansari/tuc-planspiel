@@ -77,7 +77,7 @@
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -102,6 +102,7 @@ tr:nth-child(even) {
 .myProfile__dropdownWrapper {
   border: 1px solid lightgray;
   padding: 2rem;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -116,6 +117,10 @@ tr:nth-child(even) {
 .myProfile__dropdownWrapper h4 {
   font-size: calc(1rem + 0.3vw);
   margin: 1rem 0;
+}
+
+.cmoduleList__table {
+  width: 100% !important;
 }
 
 .moduleSubmissionBtn {

@@ -171,6 +171,7 @@ const MyProfile = () => {
 
   console.log(modules);
   console.log(selectedCourse);
+  console.log(completedModules);
 
   return (
     <>
@@ -219,36 +220,20 @@ const MyProfile = () => {
                         <th>Options</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>Advance Management of Data</td>
-                        <td>5</td>
-                        <td className="tdTrashIcon">
-                          <FaTrash />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Seminar Web Engineering</td>
-                        <td>5</td>
-                        <td className="tdTrashIcon">
-                          <FaTrash />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Module 3</td>
-                        <td>2</td>
-                        <td className="tdTrashIcon">
-                          <FaTrash />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Module 4</td>
-                        <td>4</td>
-                        <td className="tdTrashIcon">
-                          <FaTrash />
-                        </td>
-                      </tr>
-                    </tbody>
+                    {completedModules.length > 0 &&
+                      completedModules.map((cmodule, idx) => {
+                        return (
+                          <tbody key={idx}>
+                            <tr>
+                              <td>{cmodule.moduleName}</td>
+                              <td>5</td>
+                              <td className="tdTrashIcon">
+                                <FaTrash />
+                              </td>
+                            </tr>
+                          </tbody>
+                        );
+                      })}
                   </table>
                 </div>
               </div>
@@ -276,7 +261,7 @@ const MyProfile = () => {
                     >
                       Choose the modules you have completed in your course.
                     </small>
-                    <table>
+                    <table className="cmoduleList__table">
                       <thead>
                         <tr>
                           <th>Module Number</th>
