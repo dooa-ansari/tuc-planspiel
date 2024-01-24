@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import { useAuth } from "../../../context/AuthContext";
 import "./MyProfile.css";
@@ -8,6 +7,7 @@ import { Tab, Tabs, Form } from "react-bootstrap";
 
 import { FaTrash } from "react-icons/fa6";
 import {
+  getCompletedModules,
   getUniversityUri,
   saveCompletedModules,
 } from "../../../api/externalApi";
@@ -18,13 +18,13 @@ import {
 } from "../../../api/compareModuleApi";
 
 const MyProfile = () => {
-  const navigate = useNavigate();
   const [auth] = useAuth();
   const [university, setUniversity] = useState(null);
   const [courses, setCourses] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [modules, setModules] = useState([]);
   const [selectedModules, setSelectedModules] = useState([]);
+  const [completedModules, setCompletedModules] = useState([]);
   const [activeTab, setActiveTab] = useState("profileDetails");
 
   const handleCourseChange = course => {
@@ -82,6 +82,25 @@ const MyProfile = () => {
       alert("An error occurred while submitting modules. Please try again.");
     }
   };
+
+  useEffect(() => {
+    async function fetchCompletedModules() {
+      try {
+        const response = await getCompletedModules({ email: auth.user.email });
+        if (response.status === 200 && response.statusText === "OK") {
+          setCompletedModules(
+            response.data.user_profile_data.completed_modules
+          );
+        } else {
+          console.log("error retrieving completed modules");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchCompletedModules();
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
