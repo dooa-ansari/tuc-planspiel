@@ -3,18 +3,23 @@ import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import { useAuth } from "../../../context/AuthContext";
 import "./MyProfile.css";
 import Gravatar from "../../../components/Gravatar/Gravatar";
-import { Tab } from "react-bootstrap";
-import { Tabs } from "react-bootstrap";
+import { Tab, Tabs, Form } from "react-bootstrap";
+
 import { FaTrash } from "react-icons/fa6";
 import { getUniversityUri } from "../../../api/externalApi";
 import Dropdown from "../../../components/Dropdown/Dropdown";
-import { getCoursesOfParticularUniversity } from "../../../api/compareModuleApi";
+import {
+  getCoursesOfParticularUniversity,
+  getModulesOfCourse,
+} from "../../../api/compareModuleApi";
 
 const MyProfile = () => {
   const [auth] = useAuth();
   const [university, setUniversity] = useState(null);
   const [courses, setCourses] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const [modules, setModules] = useState([]);
+  const [selectedModules, setSelectedModules] = useState([]);
 
   const handleCourseChange = course => {
     setSelectedCourse(course);
@@ -60,13 +65,35 @@ const MyProfile = () => {
     };
 
     fetchData();
-  }, [auth.user.university_name]);
+
+    if (university !== null && selectedCourse !== null) {
+      fetchModulesOfCourse();
+    }
+  }, [auth.user.university_name, selectedCourse]);
 
   const dropdownOptionsForCourses = courses.map(course => ({
     id: course.courseNumber,
     value: course.courseUri,
     label: course.courseName,
   }));
+
+  const fetchModulesOfCourse = async () => {
+    try {
+      const courseUri = selectedCourse.value;
+      const universityUri = university.university_uri;
+      const courseName = selectedCourse.label;
+
+      const data = { courseUri, universityUri, courseName };
+
+      const retrievedModules = await getModulesOfCourse(data);
+      setModules(retrievedModules.data.modules);
+    } catch (error) {
+      console.log("error fetching modules");
+    }
+  };
+
+  console.log(modules);
+  console.log(selectedCourse);
 
   return (
     <>
@@ -159,6 +186,42 @@ const MyProfile = () => {
                   placeholderText="Select your course..."
                 />
               </div>
+              {selectedCourse && (
+                <>
+                  <h2 className="text-center m-3">
+                    List of modules offered in the {selectedCourse.label}{" "}
+                    department
+                  </h2>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Module Number</th>
+                        <th>Module Name</th>
+                        <th>Credits Points</th>
+                        <th>Options</th>
+                      </tr>
+                    </thead>
+
+                    {modules &&
+                      modules.map((module, idx) => {
+                        return (
+                          <tbody>
+                            <tr>
+                              <td>{module.moduleNumber}</td>
+                              <td>{module.moduleName}</td>
+                              <td>{module.moduleCreditPoints}</td>
+                              <td>
+                                <Form.Check>
+                                  <Form.Check.Input type="checkbox" isValid />
+                                </Form.Check>
+                              </td>
+                            </tr>
+                          </tbody>
+                        );
+                      })}
+                  </table>
+                </>
+              )}
             </Tab>
           </Tabs>
         </div>
