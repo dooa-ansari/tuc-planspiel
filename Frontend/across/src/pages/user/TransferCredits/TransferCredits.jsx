@@ -129,10 +129,11 @@ const TransferCredits = () => {
     const transferCreditsRequestList = []
     similarModules.forEach((item) => {
        item.forEach((value) => {
+        console.log(value)
          const innerObject = {
           fromModule: [
             {
-              moduleUri: "https://example.com/module/4",
+              moduleUri: value.moduleUri,
               moduleName: value.name,
               moduleId: value.id,
               credits: value.creditPoints
@@ -140,7 +141,7 @@ const TransferCredits = () => {
           ],
           toModule: [
             {
-              moduleUri: "https://example.com/module/4",
+              moduleUri: value.similarModuleUri,
               moduleName: value.similarModuleName,
               moduleId: value.similarModuleId,
               credits: value.similarModuleCreditPoints
@@ -153,12 +154,13 @@ const TransferCredits = () => {
     })
     const data = {
       email: userData?.email,
-      transferCreditsRequest: transferCreditsRequestList
+      transferCreditsRequest: transferCreditsRequestList,
+      possibleTransferrableCredits: total,
     }
-    
+    console.log(data)
     axios
         .post(
-          "http://localhost:8000/user/transferCreditsofUser",
+          "http://localhost:8000/transferCredits/saveTransferCreditsofUser",
           data
         )
         .then((response) => {
