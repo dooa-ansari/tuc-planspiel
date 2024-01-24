@@ -67,7 +67,8 @@ def save_completed_modules_by_user(request):
             user_data.save()
 
             response = {
-                'message': 'Successfully Updated Completed Modules by User'
+                'message': 'Successfully Updated Completed Modules by User',
+                "data": completedModulesList
             }
             return JsonResponse(response, status =200)
     

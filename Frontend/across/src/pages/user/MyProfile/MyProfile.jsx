@@ -5,7 +5,6 @@ import "./MyProfile.css";
 import Gravatar from "../../../components/Gravatar/Gravatar";
 import { Tab, Tabs, Form } from "react-bootstrap";
 
-import { FaTrash } from "react-icons/fa6";
 import {
   getCompletedModules,
   getUniversityUri,
@@ -61,6 +60,7 @@ const MyProfile = () => {
       const completedModulesList = selectedModules.map(module => ({
         moduleUri: module.moduleUri,
         moduleName: module.moduleName,
+        moduleCreditPoints: module.moduleCreditPoints,
       }));
 
       const requestData = {
@@ -71,8 +71,10 @@ const MyProfile = () => {
       };
 
       const response = await saveCompletedModules(requestData);
+      console.log(response);
       if (response.status === 200 && response.statusText === "OK") {
         alert("Modules submitted successfully!");
+        setCompletedModules(response.data.data);
         setActiveTab("profileDetails");
       } else {
         alert("Failed to submit modules. Please try again.");
@@ -169,9 +171,10 @@ const MyProfile = () => {
     }
   };
 
-  console.log(modules);
-  console.log(selectedCourse);
-  console.log(completedModules);
+  const totalCreditsEarned = completedModules.reduce((sum, cm) => {
+    const creditPoints = Number(cm.moduleCreditPoints);
+    return sum + creditPoints;
+  }, 0);
 
   return (
     <>
@@ -217,7 +220,6 @@ const MyProfile = () => {
                       <tr>
                         <th>Modules</th>
                         <th>Credits Earned</th>
-                        <th>Options</th>
                       </tr>
                     </thead>
                     {completedModules.length > 0 &&
@@ -226,14 +228,22 @@ const MyProfile = () => {
                           <tbody key={idx}>
                             <tr>
                               <td>{cmodule.moduleName}</td>
-                              <td>5</td>
-                              <td className="tdTrashIcon">
-                                <FaTrash />
-                              </td>
+                              <td>{cmodule.moduleCreditPoints}</td>
                             </tr>
                           </tbody>
                         );
                       })}
+                    <tbody>
+                      <tr>
+                        <td>
+                          <strong>Total Credits Earned</strong>
+                        </td>
+
+                        <td>
+                          <strong>{totalCreditsEarned}</strong>
+                        </td>
+                      </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
@@ -267,7 +277,7 @@ const MyProfile = () => {
                           <th>Module Number</th>
                           <th>Module Name</th>
                           <th>Credits Points</th>
-                          <th>Options</th>
+                          <th>Selection</th>
                         </tr>
                       </thead>
 
