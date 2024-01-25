@@ -36,7 +36,7 @@ const TransferCredits = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/adminapp/universitieslist/")
+      .get("http://127.0.0.1:8000/adminapp/universitieslist")
       .then((response) => {
         if (response.status == 200) {
           const returnedData = response.data;
