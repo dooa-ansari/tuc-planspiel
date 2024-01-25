@@ -70,6 +70,8 @@ def get_similar_module_against_given_module_uri(request):
                 'similarModuleCreditPoints': str(row['similarModuleCreditPoints']['value']),
                 'similarUniversity': str(row['universityNameSimilar']['value']),
                 'courseNameSimilar': str(row['courseNameSimilar']['value']),
+                'moduleUri': str(row['module']['value']),
+                'similarModuleUri': str(row['similarModule']['value']),
                 }
                 similar_module_list.append(data_dict)
 

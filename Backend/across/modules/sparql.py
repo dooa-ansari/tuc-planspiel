@@ -1,5 +1,5 @@
 list_with_similar_modules_query = """
-SELECT ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityName ?universityNameSimilar ?courseName ?courseNameSimilar
+SELECT ?name ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityName ?universityNameSimilar ?courseName ?courseNameSimilar
 WHERE {
     ?name <http://tuc.web.engineering/module#hasName> ?moduleName ;
           <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
@@ -23,7 +23,7 @@ WHERE {
 
 def get_similar_module_against_module_uri_query(moduleUri):
     list_all_against_uri_with_similar_modules_query = f"""
-        SELECT ?moduleId ?moduleName ?moduleContent ?moduleCreditPoints ?universityName ?courseName ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityNameSimilar ?courseNameSimilar
+        SELECT ?module ?moduleId ?moduleName ?moduleContent ?moduleCreditPoints ?universityName ?courseName ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityNameSimilar ?courseNameSimilar
         WHERE {{
             ?module <http://tuc.web.engineering/module#hasName> ?moduleName ;
                 <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;

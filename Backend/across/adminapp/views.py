@@ -91,6 +91,7 @@ def upload_file(request):
 
     
 @csrf_exempt
+@require_GET
 def get_universities(request):
     data = get_all_universities(request)
     return JsonResponse(data , safe=False)
