@@ -172,7 +172,7 @@ const CompareModules = () => {
     <>
       <MainLayout>
         <SearchBox />
-        <h1 className="compareModules__heading">Compare Modules Page</h1>
+        <h1 className="compareModules__heading">Compare Modules</h1>
         <div className="compareModulesWrapper">
           <h4>Universities</h4>
           <Dropdown

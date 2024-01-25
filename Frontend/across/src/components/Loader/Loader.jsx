@@ -1,5 +1,6 @@
 import React from "react";
 import { RotatingLines, ProgressBar } from "react-loader-spinner";
+import { PulseLoader } from "react-spinners";
 import "./Loader.css";
 
 const Loader = ({ text }) => {
@@ -18,7 +19,7 @@ const Loader = ({ text }) => {
         wrapperClass=""
       /> */}
 
-      <ProgressBar
+      {/* <ProgressBar
         visible={true}
         height="80px"
         width="200px"
@@ -27,7 +28,9 @@ const Loader = ({ text }) => {
         ariaLabel="progress-bar-loading"
         wrapperStyle={{}}
         wrapperClass=""
-      />
+      /> */}
+
+      <PulseLoader color="#439a86" />
     </div>
   );
 };
