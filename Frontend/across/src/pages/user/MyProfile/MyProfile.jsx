@@ -75,6 +75,7 @@ const MyProfile = () => {
       if (response.status === 200 && response.statusText === "OK") {
         alert("Modules submitted successfully!");
         setCompletedModules(response.data.data);
+        setSelectedCourse(null);
         setActiveTab("profileDetails");
       } else {
         alert("Failed to submit modules. Please try again.");
@@ -126,6 +127,8 @@ const MyProfile = () => {
             universityName,
             universityUri,
           });
+
+          console.log(coursesResponse);
 
           if (
             coursesResponse.status === 200 &&
