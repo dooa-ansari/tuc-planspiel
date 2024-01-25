@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const UniversitySelection = () => {
   const navigate = useNavigate();
-  const [auth] = useAuth();
+  const [auth, setAuth] = useAuth();
   const userEmail = auth.user.email;
 
   const [universities, setUniversities] = useState([]);
@@ -76,7 +76,16 @@ const UniversitySelection = () => {
 
     try {
       const response = await storeUniversityName(data);
+
       if (response.status === 200 && response.statusText === "OK") {
+        setAuth({
+          ...auth,
+          user: {
+            ...auth.user,
+            university_name: response.data.user.university_name,
+          },
+        });
+
         if (auth.user.role === "USER") {
           navigate("/campus-flow/user/home");
         } else {
