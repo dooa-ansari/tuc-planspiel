@@ -53,7 +53,8 @@ def register_user(request):
                 'email': user_profile.email,
                 'full_name': user_profile.full_name,
                 'signup_using': user_profile.signup_using,
-                'role':user_profile.role
+                'role':user_profile.role,
+                "university_name": "",
             }  
             jwt_token = jwt.encode(payload,settings.SECRET_KEY , algorithm='HS256')
             return JsonResponse({'message': 'User registered successfully', 'token': jwt_token, "user": user_profile_data})
