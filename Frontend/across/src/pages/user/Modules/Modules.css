@@ -8,7 +8,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -50,4 +50,36 @@
   color: #121212;
   font-weight: 500;
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 706px) and (max-width: 1218px) {
+  .moduleCards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .moduleCard {
+    width: 40%;
+
+  }
+
+}
+
+@media screen and (max-width: 705px) {
+  .moduleCards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .moduleCard {
+    width: 100%;
+
+  }
+
 }
