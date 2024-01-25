@@ -11,6 +11,7 @@ import "../assets/css/Footer.css";
 import Footer from "../components/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useAuth } from "../context/AuthContext";
 
 const Home = () => {
   return (
@@ -161,6 +162,7 @@ function PageBody() {
 }
 
 function NavScrollExample() {
+  const [auth] = useAuth();
   return (
     <Navbar
       expand="lg"
@@ -203,9 +205,9 @@ function NavScrollExample() {
         </Nav>
         <Nav.Link className="text-black d-flex flex-column align-items-left">
           <span className="ms-0 mb-0" style={{ color: "#fff", margin: "1px" }}>
-            <b>John Doe</b>
+            <b>{auth.user.full_name}</b>
           </span>
-          <span style={{ color: "#fff" }}>Admin</span>
+          <small style={{ color: "#fff" }}>Admin</small>
         </Nav.Link>
         <a
           href="/profile"
