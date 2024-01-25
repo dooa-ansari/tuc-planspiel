@@ -5,6 +5,8 @@ import FileUpload from "./FileUpload";
 import Converter from "./Converter";
 import ShowSimilarityTable from "./ShowSimilarityTable";
 import ModulesList from "./ModulesList";
+import TransferCredits from "./TransferCredits";
+import UsersofTransferCredits from "./UsersofTransferCredits";
 
 const AdminPanel = () => {
   return (
@@ -18,6 +20,8 @@ const AdminPanel = () => {
         <Route path="automation" element={<Converter />} />
         <Route path="similaritytable" element={<ShowSimilarityTable />} />
         <Route path="modulelist" element={<ModulesList />} />
+        <Route path="transferCredits" element={<TransferCredits />} />
+        <Route path="users/transferCreditRequests" element={<UsersofTransferCredits />} />
       </Routes>
     </div>
   );
