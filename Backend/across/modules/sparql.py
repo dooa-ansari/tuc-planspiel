@@ -77,6 +77,7 @@ def get_modules_from_course_and_university_query(courseUri, courseName, universi
             )
         }}
         GROUP BY ?moduleUri
+        ORDER BY ?sampleModuleName
         """
     return query
 
