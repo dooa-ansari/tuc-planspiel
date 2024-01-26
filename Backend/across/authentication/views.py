@@ -264,7 +264,7 @@ def update_user_role(request):
             # Save the changes to the database
             user_profile.save()
 
-            return JsonResponse({'message': 'User updated successfully.'}, status=200)
+            return JsonResponse({'message': f'Update successful. {user_profile.full_name} is an admin.'}, status=200)
 
         except ObjectDoesNotExist:
             return JsonResponse({'message': "Email is incorrect"}, status=401)
