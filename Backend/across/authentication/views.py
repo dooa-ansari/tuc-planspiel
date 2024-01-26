@@ -243,3 +243,26 @@ def authenticate_user_login(request):
         except jwt.InvalidIssuerError as e:
             return JsonResponse({'message': 'Invalid issuer: ' + str(e)})
     return JsonResponse({'message':'Method not allowed'}, status = 405)
+
+@csrf_exempt
+def update_user_role(request):
+    if request.method == 'POST':
+        try:
+            # Parse JSON data from the request body
+            data = json.loads(request.body.decode('utf-8'))
+            # Extract email and password from the data
+            email = data.get('email', '')
+
+            user_profile = UserProfile.objects.get(email=email)
+            if user_profile is not None:
+                # Update the user role to "admin"
+                user_profile.role = "admin"
+                # Save the changes to the database
+                user_profile.save()
+        except ObjectDoesNotExist:
+            return JsonResponse({'message': "Email is incorrect"}, status = 401)
+    return JsonResponse({'message':'User updated successfully.'}, status = 200)
+
+      
+             
+         
