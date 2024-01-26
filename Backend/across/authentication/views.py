@@ -256,11 +256,11 @@ def update_user_role(request):
             user_profile = UserProfile.objects.get(email=email)
             
             # Check if the user is already an admin
-            if user_profile.role == "admin":
+            if user_profile.role == "ADMIN":
                 return JsonResponse({'message': f'{user_profile.full_name} is already an admin.'}, status=200)
             
             # Update the user role to "admin"
-            user_profile.role = "admin"
+            user_profile.role = "ADMIN"
             # Save the changes to the database
             user_profile.save()
 
