@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import data_static from "../components/data";
 import "../assets/css/ShowModules.css";
+import AdminNavbar from "./components/Navbar/AdminNavbar";
 
 const ShowSimilarityTable = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/modules/listSimilarModules')
+    fetch('http://127.0.0.1:8000/modules/listSimilarModules')
       .then(response => response.json())
       .then(json => setData(json))
       .catch(error => console.error(error));
@@ -14,6 +15,7 @@ const ShowSimilarityTable = () => {
 
   return (
     <div style={{ flex: 1 }}>
+      <AdminNavbar />
       <p id="moduleHeading">Similarity Table</p>
       {data?.map((item) => {
         return (

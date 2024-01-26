@@ -13,6 +13,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AdminNavbar from "./components/Navbar/AdminNavbar";
 
 const ModulesList = () => {
   const [universities, setUniversities] = useState([]);
@@ -520,6 +521,7 @@ const ModulesList = () => {
   };
   return (
     <div style={{ flex: 1 }}>
+      <AdminNavbar />
       <ToastContainer />
       {getModuleDetailsModal()}
       {getAddModuleFormModal()}
