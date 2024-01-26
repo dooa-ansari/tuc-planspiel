@@ -6,5 +6,5 @@ urlpatterns = [
     path('google/signin', google_login, name='google-login'),
     path('logout', google_logout, name='google-logout'),
     path('login', authenticate_user_login, name="user-login"),
-    path('updateUser', update_user_role, name="update-user"),
+    path('updateUserRole', update_user_role, name="update_user_role"),
 ]
