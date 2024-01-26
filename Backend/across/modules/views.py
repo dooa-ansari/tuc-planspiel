@@ -18,18 +18,18 @@ def list_similar_modules(request):
         # Assuming 'data' is a list of dictionaries
         for row in qresponse['results']['bindings']:
             data_dict = {
-                'id': row['moduleId']['value'],
-                'name': row['moduleName']['value'],
-                'content': row['moduleContent']['value'],
-                'creditPoints': row['moduleCreditPoints']['value'],
-                'university': row['universityName']['value'],
-                'courseName': row['courseName']['value'],
-                'similarModuleId': row['similarModuleId']['value'],
-                'similarModuleName': row['similarModuleName']['value'],
-                'similarModuleContent': row['similarModuleContent']['value'],
-                'similarModuleCreditPoints': row['similarModuleCreditPoints']['value'],
-                'similarUniversity': row['universityNameSimilar']['value'],
-                'courseNameSimilar': row['courseNameSimilar']['value'],
+                'id': row['sampleModuleId']['value'],
+                'name': row['sampleModuleName']['value'],
+                'content': row['sampleModuleContent']['value'],
+                'creditPoints': row['sampleModuleCreditPoints']['value'],
+                'university': row['sampleUniversity']['value'],
+                'courseName': row['sampleCourse']['value'],
+                'similarModuleId': row['sampleSimilarModuleId']['value'],
+                'similarModuleName': row['sampleSimilarModuleName']['value'],
+                'similarModuleContent': row['sampleSimilarModuleContent']['value'],
+                'similarModuleCreditPoints': row['sampleSimilarModuleCreditPoints']['value'],
+                'similarUniversity': row['sampleSimilarUnivserity']['value'],
+                'courseNameSimilar': row['sampleSimilarCourse']['value'],
             }
             data_list.append(data_dict)
 

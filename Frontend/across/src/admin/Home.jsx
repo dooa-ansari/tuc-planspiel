@@ -40,7 +40,7 @@ function PageBody({ auth }) {
       description:
         "Take control of the courses and learning modules, ensuring a seamless and organized educational experience for students.",
       buttonText: "Show Modules",
-      link: "/manage-modules",
+      link: "/admin/modulelist",
     },
     {
       title: "Universities",
@@ -50,32 +50,25 @@ function PageBody({ auth }) {
       link: "/manage-universities",
     },
     {
-      title: "Show Similar Modules",
-      description:
-        "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
-      buttonText: "Check Similarity",
-      link: "/manage-universities",
-    },
-    {
       title: "Automation Tool",
       description:
         "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
       buttonText: "Run Automation",
-      link: "/manage-universities",
+      link: "/admin/upload",
+    },
+    {
+      title: "Similar Modules",
+      description:
+        "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
+      buttonText: "Show Similar Modules",
+      link: "/admin/similaritytable",
     },
     {
       title: "CSV to RDF",
       description:
         "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
       buttonText: "Convert to RDF",
-      link: "/manage-universities",
-    },
-    {
-      title: "Similarity Table",
-      description:
-        "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
-      buttonText: "Show Similarity Table",
-      link: "/manage-universities",
+      link: "/manage-CSV",
     },
     {
       title: "Transfer Credit Requests",
