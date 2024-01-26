@@ -250,18 +250,27 @@ def update_user_role(request):
         try:
             # Parse JSON data from the request body
             data = json.loads(request.body.decode('utf-8'))
-            # Extract email and password from the data
+            # Extract email from the data
             email = data.get('email', '')
 
             user_profile = UserProfile.objects.get(email=email)
-            if user_profile is not None:
-                # Update the user role to "admin"
-                user_profile.role = "admin"
-                # Save the changes to the database
-                user_profile.save()
+            
+            # Check if the user is already an admin
+            if user_profile.role == "admin":
+                return JsonResponse({'message': f'{user_profile.full_name} is already an admin.'}, status=200)
+            
+            # Update the user role to "admin"
+            user_profile.role = "admin"
+            # Save the changes to the database
+            user_profile.save()
+
+            return JsonResponse({'message': 'User updated successfully.'}, status=200)
+
         except ObjectDoesNotExist:
-            return JsonResponse({'message': "Email is incorrect"}, status = 401)
-    return JsonResponse({'message':'User updated successfully.'}, status = 200)
+            return JsonResponse({'message': "Email is incorrect"}, status=401)
+    else:
+        return JsonResponse({'message': 'Invalid request method.'}, status=400)
+
 
       
              
