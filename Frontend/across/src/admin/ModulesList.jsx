@@ -197,7 +197,7 @@ const ModulesList = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8000/adminapp/universitieslist/", {
+    fetch("http://127.0.0.1:8000/adminapp/universitieslist", {
       // method: "GET",
       // headers: {
       //   Accept: "application/json",
@@ -235,7 +235,7 @@ const ModulesList = () => {
   };
 
   const getModuleList = (uri, name) => {
-    fetch("http://localhost:8000/modules/", {
+    fetch("http://127.0.0.1:8000/modules/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -256,7 +256,7 @@ const ModulesList = () => {
   };
 
   const getCoursesList = (uri, name, isAdd) => {
-    fetch("http://localhost:8000/courses/", {
+    fetch("http://127.0.0.1:8000/courses/", {
       method: "POST",
       headers: {
         Accept: "application/json",
