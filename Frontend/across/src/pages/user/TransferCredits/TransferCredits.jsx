@@ -164,8 +164,9 @@ const TransferCredits = () => {
         data
       )
       .then((response) => {
+        console.log(response)
         if (response.status == 200) {
-
+          setSaveLoading(false)
         }
       })
       .catch((error) => { });
@@ -428,7 +429,7 @@ const TransferCredits = () => {
             </div>
           </div>
 
-          <div>
+          <div className="sliderParent">
             <p>We have send an email with PDF attached with all details</p>
             <Lottie options={defaultOptions} height={300} width={300} />
           </div>

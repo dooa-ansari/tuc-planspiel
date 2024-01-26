@@ -243,3 +243,73 @@ def authenticate_user_login(request):
         except jwt.InvalidIssuerError as e:
             return JsonResponse({'message': 'Invalid issuer: ' + str(e)})
     return JsonResponse({'message':'Method not allowed'}, status = 405)
+
+@csrf_exempt
+def update_user_role(request):
+    if request.method == 'POST':
+        try:
+            # Parse JSON data from the request body
+            data = json.loads(request.body.decode('utf-8'))
+            # Extract email from the data
+            email = data.get('email', '')
+
+            user_profile = UserProfile.objects.get(email=email)
+            
+            # Check if the user is already an admin
+            if user_profile.role == "admin":
+                return JsonResponse({'message': f'{user_profile.full_name} is already an admin.'}, status=200)
+            
+            # Update the user role to "admin"
+            user_profile.role = "admin"
+            # Save the changes to the database
+            user_profile.save()
+
+            return JsonResponse({'message': f'Update successful. {user_profile.full_name} is an admin.'}, status=200)
+
+        except ObjectDoesNotExist:
+            return JsonResponse({'message': "Email is incorrect"}, status=401)
+    else:
+        return JsonResponse({'message': 'Invalid request method.'}, status=400)
+
+@csrf_exempt
+def update_user(request):
+    if request.method == 'POST':
+        try:
+            # Parse JSON data from the request body
+            data = json.loads(request.body.decode('utf-8'))
+            # Extract email from the data
+            email = data.get('email', '')
+            full_name = data.get('full_name', '')
+            university_name =  data.get('university_name', '')
+
+            user_profile = UserProfile.objects.get(email=email)
+            # Update the user role to "admin"
+            user_profile.full_name = full_name
+            user_profile.university_name = university_name
+
+            # Save the changes to the database
+            user_profile.save()
+            return JsonResponse({'message': f'Update successful.'}, status=200)   
+        except ObjectDoesNotExist:
+            return JsonResponse({'message': "Email is incorrect"}, status=401)
+    else:
+        return JsonResponse({'message': 'Invalid request method.'}, status=400)
+
+@csrf_exempt
+def delete_user(request):
+    if request.method == 'DELETE':
+        try:
+            # Parse JSON data from the request body
+            data = json.loads(request.body.decode('utf-8'))
+            # Extract email from the data
+            email = data.get('email', '')
+            user_profile = UserProfile.objects.get(email=email)
+            userFullName = user_profile.full_name
+            # Delete the user
+            user_profile.delete()
+            return JsonResponse({'message': f'Delete successful. {userFullName} has been deleted.'}, status=200)     
+        except ObjectDoesNotExist:
+            return JsonResponse({'message': "Email is incorrect"}, status=401)
+    else:
+        return JsonResponse({'message': 'Invalid request method.'}, status=400)
+

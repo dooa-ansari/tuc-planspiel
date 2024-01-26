@@ -18,18 +18,18 @@ def list_similar_modules(request):
         # Assuming 'data' is a list of dictionaries
         for row in qresponse['results']['bindings']:
             data_dict = {
-                'id': row['moduleId']['value'],
-                'name': row['moduleName']['value'],
-                'content': row['moduleContent']['value'],
-                'creditPoints': row['moduleCreditPoints']['value'],
-                'university': row['universityName']['value'],
-                'courseName': row['courseName']['value'],
-                'similarModuleId': row['similarModuleId']['value'],
-                'similarModuleName': row['similarModuleName']['value'],
-                'similarModuleContent': row['similarModuleContent']['value'],
-                'similarModuleCreditPoints': row['similarModuleCreditPoints']['value'],
-                'similarUniversity': row['universityNameSimilar']['value'],
-                'courseNameSimilar': row['courseNameSimilar']['value'],
+                'id': row['sampleModuleId']['value'],
+                'name': row['sampleModuleName']['value'],
+                'content': row['sampleModuleContent']['value'],
+                'creditPoints': row['sampleModuleCreditPoints']['value'],
+                'university': row['sampleUniversity']['value'],
+                'courseName': row['sampleCourse']['value'],
+                'similarModuleId': row['sampleSimilarModuleId']['value'],
+                'similarModuleName': row['sampleSimilarModuleName']['value'],
+                'similarModuleContent': row['sampleSimilarModuleContent']['value'],
+                'similarModuleCreditPoints': row['sampleSimilarModuleCreditPoints']['value'],
+                'similarUniversity': row['sampleSimilarUnivserity']['value'],
+                'courseNameSimilar': row['sampleSimilarCourse']['value'],
             }
             data_list.append(data_dict)
 
@@ -46,10 +46,16 @@ def list_similar_modules(request):
 def get_similar_module_against_given_module_uri(request):
     try:
         moduleUri = request.GET.get('moduleUri', '')
-        print(moduleUri)
-        
+        moduleName = ''
         server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
         uniqueResults = set()
+        # Fetch Module Name from Module Details
+        module_details = server.query(get_module_details_from_module_uri(moduleUri))
+        data = module_details['results']['bindings']
+        for row in data:
+            moduleName = str(row['moduleName']['value'])
+            break
+
         qresponse = server.query(get_similar_module_against_module_uri_query(moduleUri))
         similar_module_list = []
         data = qresponse['results']['bindings']
@@ -78,8 +84,9 @@ def get_similar_module_against_given_module_uri(request):
         # Return JSON response
         if not similar_module_list:
             response = {
-                "message": f"No similar modules found for module named as {moduleUri}, please check module uri",
-                "moduleUri": moduleUri
+                "message": f"No similar modules found for module named as <strong>{moduleName}</strong>.",
+                "moduleUri": moduleUri,
+                "moduleName": moduleName
             }
             return JsonResponse(response, status =404)
         else:

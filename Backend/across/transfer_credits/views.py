@@ -24,7 +24,6 @@ def save_transferred_credits_by_user(request):
     try:
         # Parse JSON data from the request body
         data = json.loads(body)
-        print(data)
         email = data.get('email','')
         transferCreditsRequest = data.get('transferCreditsRequest','')
 

@@ -140,7 +140,7 @@ const CompareModules = () => {
         const errMsg = retrievedSimilarModules.response.data.message;
         const displayedError = errMsg.replace(",", " ");
         setSimilarModules([]);
-        setError(displayedError);
+        setError(<div dangerouslySetInnerHTML={{ __html: errMsg }} />);
       }
     } catch (error) {
       console.error("Error fetching similar modules", error);
