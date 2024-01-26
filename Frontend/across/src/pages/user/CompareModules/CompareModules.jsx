@@ -140,7 +140,7 @@ const CompareModules = () => {
         const errMsg = retrievedSimilarModules.response.data.message;
         const displayedError = errMsg.replace(",", " ");
         setSimilarModules([]);
-        setError(displayedError);
+        setError(<div dangerouslySetInnerHTML={{ __html: errMsg }} />);
       }
     } catch (error) {
       console.error("Error fetching similar modules", error);
@@ -172,7 +172,7 @@ const CompareModules = () => {
     <>
       <MainLayout>
         <SearchBox />
-        <h1 className="compareModules__heading">Compare Modules Page</h1>
+        <h1 className="compareModules__heading">Compare Modules</h1>
         <div className="compareModulesWrapper">
           <h4>Universities</h4>
           <Dropdown

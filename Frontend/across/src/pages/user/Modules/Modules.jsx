@@ -51,25 +51,26 @@ const Modules = () => {
   return (
     <>
       {loading && <Loader text="Modules" />}
-      {!loading && (
-        <MainLayout>
+      <MainLayout>
+        {!loading && (
           <div className="modules">
             <h1>Modules</h1>
             <p
               style={{
                 paddingLeft: "1.5rem",
                 background: "#439a86",
-                width: "20%",
+                width: "50%",
                 margin: "0 auto",
                 color: "#fff",
+                textAlign: "center",
               }}
             >
               Total number of modules: {modules.length}
             </p>
             <div className="moduleCards">{renderedModules}</div>
           </div>
-        </MainLayout>
-      )}
+        )}
+      </MainLayout>
     </>
   );
 };

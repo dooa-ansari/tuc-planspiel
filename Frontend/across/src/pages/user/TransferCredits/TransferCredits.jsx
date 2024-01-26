@@ -25,8 +25,8 @@ const TransferCredits = () => {
   const [total, setTotal] = useState(0);
   const [lastSelectedModule, setLastSelectedModule] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [userData , setUserData] = useState(null)
-  
+  const [userData, setUserData] = useState(null)
+
   const buttonStyle = {
     background: "#439a86",
     borderRadius: "10px",
@@ -36,7 +36,7 @@ const TransferCredits = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/adminapp/universitieslist/")
+      .get("http://127.0.0.1:8000/adminapp/universitieslist")
       .then((response) => {
         if (response.status == 200) {
           const returnedData = response.data;
@@ -55,14 +55,14 @@ const TransferCredits = () => {
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("auth"));
     setUserData(data?.user)
-    
-    
+
+
   }, [])
   const getUsersCompletedModules = () => {
-    const data = {email: userData?.email}
+    const data = { email: userData?.email }
     axios
-      .post("http://localhost:8000/user/fetchCompletedModulesofUser", 
-       data
+      .post("http://127.0.0.1:8000/user/fetchCompletedModulesofUser",
+        data
       )
       .then((response) => {
         if (response.status == 200) {
@@ -72,10 +72,10 @@ const TransferCredits = () => {
           });
           setUsersCompletedModules(returnedData);
         }
-        setTimeout(()=> {
+        setTimeout(() => {
           setusersModulesLoading(false);
         }, 3000)
-      
+
       })
       .catch((error) => {
         setusersModulesLoading(false);
@@ -92,8 +92,8 @@ const TransferCredits = () => {
     selectedModules?.forEach((selected) => {
       axios
         .get(
-          "http://localhost:8000/modules/similarModules?moduleUri=" +
-            encodeURIComponent(selected.moduleUri)
+          "http://127.0.0.1:8000/modules/similarModules?moduleUri=" +
+          encodeURIComponent(selected.moduleUri)
         )
         .then((response) => {
           if (response.status == 200) {
@@ -101,24 +101,24 @@ const TransferCredits = () => {
             const calculateTotal = response.data.modules
             calculateTotal.forEach((item) => {
               numberTotal = numberTotal + parseInt(item.similarModuleCreditPoints)
-             
-    })
+
+            })
             setSimilarModules([...similarModules, ...list]);
-          
+
           }
         })
         .catch((error) => {
-          if(error.response.status == 404){
+          if (error.response.status == 404) {
             const noContent = {
               nothing: true,
               module: selected.moduleName
-             }
-           setSimilarModules(...similarModules, ...noContent)
+            }
+            setSimilarModules(...similarModules, ...noContent)
           }
         });
     });
-     
-    setTimeout(()=> {
+
+    setTimeout(() => {
       setTotal(total + numberTotal)
       setsimilarModulesLoading(false);
     }, 8000)
@@ -128,11 +128,12 @@ const TransferCredits = () => {
   const saveData = () => {
     const transferCreditsRequestList = []
     similarModules.forEach((item) => {
-       item.forEach((value) => {
-         const innerObject = {
+      item.forEach((value) => {
+        console.log(value)
+        const innerObject = {
           fromModule: [
             {
-              moduleUri: "https://example.com/module/4",
+              moduleUri: value.moduleUri,
               moduleName: value.name,
               moduleId: value.id,
               credits: value.creditPoints
@@ -140,34 +141,36 @@ const TransferCredits = () => {
           ],
           toModule: [
             {
-              moduleUri: "https://example.com/module/4",
+              moduleUri: value.similarModuleUri,
               moduleName: value.similarModuleName,
               moduleId: value.similarModuleId,
               credits: value.similarModuleCreditPoints
             }
           ],
           status: "PENDING"
-         }
-         transferCreditsRequestList.push(innerObject)
-       })
+        }
+        transferCreditsRequestList.push(innerObject)
+      })
     })
     const data = {
       email: userData?.email,
-      transferCreditsRequest: transferCreditsRequestList
+      transferCreditsRequest: transferCreditsRequestList,
+      possibleTransferrableCredits: total,
     }
-    
+    console.log(data)
     axios
-        .post(
-          "http://localhost:8000/user/transferCreditsofUser",
-          data
-        )
-        .then((response) => {
-          if (response.status == 200) {
-            
-          }
-        })
-        .catch((error) => {}); 
-   
+      .post(
+        "http://127.0.0.1:8000/transferCredits/saveTransferCreditsofUser",
+        data
+      )
+      .then((response) => {
+        console.log(response)
+        if (response.status == 200) {
+          setSaveLoading(false)
+        }
+      })
+      .catch((error) => { });
+
   };
 
   const defaultOptionsArrow = {
@@ -252,9 +255,9 @@ const TransferCredits = () => {
     } else if (event.currentIndex == 2) {
       setsimilarModulesLoading(true);
       getSimilarAgainst();
-    }else if(event.currentIndex == 3){
-       setSaveLoading(true)
-       saveData()
+    } else if (event.currentIndex == 3) {
+      setSaveLoading(true)
+      saveData()
     }
   };
   return (
@@ -276,159 +279,159 @@ const TransferCredits = () => {
           }
         >
           <div className="sliderParent">
-          <div className="center">
-            <p>
-              Please choose university you want to transfer your credits to :{" "}
-            </p>
+            <div className="center">
+              <p>
+                Please choose university you want to transfer your credits to :{" "}
+              </p>
 
-            {univerisitiesLoading ? (
-              <Lottie options={defaultOptions} height={200} width={200} />
-            ) : (
-              <div>
-                {universities.map((university) => {
-                  return (
-                    <div
-                      onClick={() => onPressUniversityItem(university)}
-                      className={
-                        "universityItem " +
-                        (university.selected &&
-                          "universityItemSelectedBorder universityItemSelected")
-                      }
-                      key={university.id}
-                    >
-                      <div className="universityItemFlag">
-                        <Lottie
-                          options={getFlagOptions(university.id)}
-                          height={30}
-                          width={30}
-                        />
+              {univerisitiesLoading ? (
+                <Lottie options={defaultOptions} height={200} width={200} />
+              ) : (
+                <div>
+                  {universities.map((university) => {
+                    return (
+                      <div
+                        onClick={() => onPressUniversityItem(university)}
+                        className={
+                          "universityItem " +
+                          (university.selected &&
+                            "universityItemSelectedBorder universityItemSelected")
+                        }
+                        key={university.id}
+                      >
+                        <div className="universityItemFlag">
+                          <Lottie
+                            options={getFlagOptions(university.id)}
+                            height={30}
+                            width={30}
+                          />
+                        </div>
+                        <div className="universityItemText">
+                          <p>{university.name}</p>
+                        </div>
                       </div>
-                      <div className="universityItemText">
-                        <p>{university.name}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
           <div className="sliderParentSlide2">
-          <div className="centerSlide2Image">
-          <Lottie options={defaultOptionsWomen} height={200} width={200} />  
-         
-            </div>  
-          <div className="centerSlide2">
-            <p>
-              We will help choose what credits can be possibly transfer to
-              Bialystok University of Technology From Technische Universität
-              Chemnitz
-            </p>
-            <p>
-              Please choose the modules you have already finished at Technische
-              Universität Chemnitz
-            </p>
+            <div className="centerSlide2Image">
+              <Lottie options={defaultOptionsWomen} height={200} width={200} />
 
-            {usersModulesLoading ? (
-              <Lottie options={defaultOptions2} height={200} width={200} />
-            ) : (
-              <div>
-                {usersCompleteModules.map((completedModule, index) => {
-                  return (
-                    <div
-                      onClick={() =>
-                        onPressCompletedModuleItem(completedModule)
-                      }
-                      className={
-                        "completedCourseItem " +
-                        (completedModule.selected &&
-                          "courseItemSelectedBorder universityItemSelected")
-                      }
-                      key={completedModule.moduleUri}
-                    >
-                      <div className="courseItemText">
-                        <p>{completedModule.moduleName}</p>
+            </div>
+            <div className="centerSlide2">
+              <p>
+                We will help choose what credits can be possibly transfer to
+                Bialystok University of Technology From Technische Universität
+                Chemnitz
+              </p>
+              <p>
+                Please choose the modules you have already finished at Technische
+                Universität Chemnitz
+              </p>
+
+              {usersModulesLoading ? (
+                <Lottie options={defaultOptions2} height={200} width={200} />
+              ) : (
+                <div>
+                  {usersCompleteModules.map((completedModule, index) => {
+                    return (
+                      <div
+                        onClick={() =>
+                          onPressCompletedModuleItem(completedModule)
+                        }
+                        className={
+                          "completedCourseItem " +
+                          (completedModule.selected &&
+                            "courseItemSelectedBorder universityItemSelected")
+                        }
+                        key={completedModule.moduleUri}
+                      >
+                        <div className="courseItemText">
+                          <p>{completedModule.moduleName}</p>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
           <div className="sliderParent">
-          <div className="center">
-            <p>Total Possible Transferable Credits : {total}</p>
-            {similarModulesLoading ? (
-              <Lottie options={defaultOptions2} height={200} width={200} />
-            ) : (
-              <div className="scrollView">
-                {similarModules.map((similarModule) => {
-                  if(similarModule.nothing){
-                     return  (<div id="module" key={1}>
-                         No Similar modules found for : {similarModule.module}
+            <div className="center">
+              <p>Total Possible Transferable Credits : {total}</p>
+              {similarModulesLoading ? (
+                <Lottie options={defaultOptions2} height={200} width={200} />
+              ) : (
+                <div className="scrollView">
+                  {similarModules.map((similarModule) => {
+                    if (similarModule.nothing) {
+                      return (<div id="module" key={1}>
+                        No Similar modules found for : {similarModule.module}
 
                       </div>)
-                  }else{
-                    return similarModule.map((item) => {
-                      return (
-                        <div id="module" key={item.id}>
-                          <div className="moduleInner">
-                            <div id="moduleid">
-                              {item.id} - {item.name}
+                    } else {
+                      return similarModule.map((item) => {
+                        return (
+                          <div id="module" key={item.id}>
+                            <div className="moduleInner">
+                              <div id="moduleid">
+                                {item.id} - {item.name}
+                              </div>
+                              <div id="creditPoints">
+                                Credit Points : {item.creditPoints}
+                              </div>
+                              <div id="creditPoints">
+                                University : {item.university}
+                              </div>
+                              <div id="creditPoints">
+                                Course : {item.courseName}
+                              </div>
+                              <details id="creditPoints">
+                                <summary>Show Details</summary>
+                                <p>{item.content}</p>
+                              </details>
                             </div>
-                            <div id="creditPoints">
-                              Credit Points : {item.creditPoints}
+                            <Lottie
+                              options={defaultOptionsArrow}
+                              height={70}
+                              width={100}
+                            />
+                            <div className="moduleInner">
+                              <div id="moduleid">
+                                {item.similarModuleId} - {item.similarModuleName}
+                              </div>
+                              <div id="creditPoints">
+                                Credit Points : {item.similarModuleCreditPoints}
+                              </div>
+                              <div id="creditPoints">
+                                University : {item.similarUniversity}
+                              </div>
+                              <div id="creditPoints">
+                                Course : {item.courseNameSimilar}
+                              </div>
+                              <details id="creditPoints">
+                                <summary>Show Details</summary>
+                                <p>{item.similarModuleContent}</p>
+                              </details>
+
                             </div>
-                            <div id="creditPoints">
-                              University : {item.university}
-                            </div>
-                            <div id="creditPoints">
-                              Course : {item.courseName}
-                            </div>
-                            <details id="creditPoints">
-                              <summary>Show Details</summary>
-                              <p>{item.content}</p>
-                            </details>
                           </div>
-                          <Lottie
-                            options={defaultOptionsArrow}
-                            height={70}
-                            width={100}
-                          />
-                          <div className="moduleInner">
-                            <div id="moduleid">
-                              {item.similarModuleId} - {item.similarModuleName}
-                            </div>
-                            <div id="creditPoints">
-                              Credit Points : {item.similarModuleCreditPoints}
-                            </div>
-                            <div id="creditPoints">
-                              University : {item.similarUniversity}
-                            </div>
-                            <div id="creditPoints">
-                              Course : {item.courseNameSimilar}
-                            </div>
-                            <details id="creditPoints">
-                              <summary>Show Details</summary>
-                              <p>{item.similarModuleContent}</p>
-                            </details>
-        
-                           </div>
-                        </div>
-                      );
-                    });
-                  }
-                  
-                })}
-              </div>
-            )}
+                        );
+                      });
+                    }
+
+                  })}
+                </div>
+              )}
+            </div>
           </div>
-          </div>
-          
-          <div>
-          <p>We have send an email with PDF attached with all details</p>
-          <Lottie options={defaultOptions} height={300} width={300} />
+
+          <div className="sliderParent">
+            <p>We have send an email with PDF attached with all details</p>
+            <Lottie options={defaultOptions} height={300} width={300} />
           </div>
         </AwesomeSlider>
       </MainLayout>

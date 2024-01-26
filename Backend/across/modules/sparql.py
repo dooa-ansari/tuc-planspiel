@@ -1,5 +1,5 @@
 list_with_similar_modules_query = """
-SELECT ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityName ?universityNameSimilar ?courseName ?courseNameSimilar
+SELECT ?name ?moduleName ?moduleId ?moduleContent ?moduleCreditPoints ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityName ?universityNameSimilar ?courseName ?courseNameSimilar
 WHERE {
     ?name <http://tuc.web.engineering/module#hasName> ?moduleName ;
           <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
@@ -23,7 +23,7 @@ WHERE {
 
 def get_similar_module_against_module_uri_query(moduleUri):
     list_all_against_uri_with_similar_modules_query = f"""
-        SELECT ?moduleId ?moduleName ?moduleContent ?moduleCreditPoints ?universityName ?courseName ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityNameSimilar ?courseNameSimilar
+        SELECT ?module ?moduleId ?moduleName ?moduleContent ?moduleCreditPoints ?universityName ?courseName ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityNameSimilar ?courseNameSimilar
         WHERE {{
             ?module <http://tuc.web.engineering/module#hasName> ?moduleName ;
                 <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
@@ -77,6 +77,7 @@ def get_modules_from_course_and_university_query(courseUri, courseName, universi
             )
         }}
         GROUP BY ?moduleUri
+        ORDER BY ?sampleModuleName
         """
     return query
 
@@ -99,5 +100,30 @@ def get_all_modules_query():
                     BIND(str(?module) AS ?moduleUri)
         }}
         GROUP BY ?moduleUri
+    """
+    return query
+
+
+def get_module_details_from_module_uri(moduleUri):
+    query = f"""
+        SELECT ?module ?moduleId ?moduleName ?moduleContent ?moduleCreditPoints ?universityName ?courseName ?similarModule
+        WHERE {{
+            ?module <http://tuc.web.engineering/module#hasName> ?moduleName ;
+                <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
+                <http://tuc.web.engineering/module#hasContent> ?moduleContent ;
+                <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints ;
+                <http://across/university#hasUniversity> ?university ;
+                <http://tuc/course#hasCourse> ?course .
+
+            BIND(str(?module) AS ?moduleUri)
+            
+            OPTIONAL {{
+        		?module <http://tuc.web.engineering/module#hasSimilarModule> ?similarModule .
+    		}}
+            
+            FILTER (
+                    ?moduleUri = "{moduleUri}"
+            )
+        }}
     """
     return query

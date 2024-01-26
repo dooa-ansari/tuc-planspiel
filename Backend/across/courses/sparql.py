@@ -17,5 +17,6 @@ def get_course_from_university_query(universityUri, universityName):
                 ?universityName = "{universityName}"^^<http://www.w3.org/2001/XMLSchema#string>
             )
         }}
+        ORDER BY ?courseName
         """
     return query

@@ -2,6 +2,7 @@ import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST, require_http_methods
+from django.forms.models import model_to_dict
 from .models import UserData, UserProfile
 from pymantic import sparql
 from .sparql import *
@@ -67,7 +68,8 @@ def save_completed_modules_by_user(request):
             user_data.save()
 
             response = {
-                'message': 'Successfully Updated Completed Modules by User'
+                'message': 'Successfully Updated Completed Modules by User',
+                "data": completedModulesList
             }
             return JsonResponse(response, status =200)
     
@@ -153,9 +155,15 @@ def select_university_after_signup(request):
             if selectedUniversity:
                 user_profile.university_name = selectedUniversity
                 user_profile.save()
+
+                updated_user_profile = UserProfile.objects.get(email=email)
+
+                user_profile_dict = model_to_dict(updated_user_profile, exclude=['password'])
+               
+
                 response = {
                     "message": "University updated successfully",
-                    "university": selectedUniversity
+                    "user": user_profile_dict
                 }
                 return JsonResponse(response, status=200)
             else:
@@ -190,8 +198,10 @@ def fetch_university_uri(request):
         if university_uri:
                 response = {
                     "message": "University uri returned successfully",
+                    "universityDetails" : {
                     "university_uri": university_uri,
                     "university_name": university_name
+                    }
                 }
                 return JsonResponse(response, status=200)
         else:

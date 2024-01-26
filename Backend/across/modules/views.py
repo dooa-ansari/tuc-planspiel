@@ -46,10 +46,16 @@ def list_similar_modules(request):
 def get_similar_module_against_given_module_uri(request):
     try:
         moduleUri = request.GET.get('moduleUri', '')
-        print(moduleUri)
-        
+        moduleName = ''
         server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
         uniqueResults = set()
+        # Fetch Module Name from Module Details
+        module_details = server.query(get_module_details_from_module_uri(moduleUri))
+        data = module_details['results']['bindings']
+        for row in data:
+            moduleName = str(row['moduleName']['value'])
+            break
+
         qresponse = server.query(get_similar_module_against_module_uri_query(moduleUri))
         similar_module_list = []
         data = qresponse['results']['bindings']
@@ -70,14 +76,17 @@ def get_similar_module_against_given_module_uri(request):
                 'similarModuleCreditPoints': str(row['similarModuleCreditPoints']['value']),
                 'similarUniversity': str(row['universityNameSimilar']['value']),
                 'courseNameSimilar': str(row['courseNameSimilar']['value']),
+                'moduleUri': str(row['module']['value']),
+                'similarModuleUri': str(row['similarModule']['value']),
                 }
                 similar_module_list.append(data_dict)
 
         # Return JSON response
         if not similar_module_list:
             response = {
-                "message": f"No similar modules found for module named as {moduleUri}, please check module uri",
-                "moduleUri": moduleUri
+                "message": f"No similar modules found for module named as <strong>{moduleName}</strong>.",
+                "moduleUri": moduleUri,
+                "moduleName": moduleName
             }
             return JsonResponse(response, status =404)
         else:
