@@ -121,7 +121,7 @@ const TransferCredits = () => {
     setTimeout(() => {
       setTotal(total + numberTotal)
       setsimilarModulesLoading(false);
-    }, 8000)
+    }, 3000)
   };
 
 
