@@ -2,10 +2,6 @@ import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { CgProfile } from "react-icons/cg";
-import { IoIosLogOut } from "react-icons/io";
 import "../assets/css/AdminHome.css";
 import "../assets/css/Footer.css";
 import Footer from "../components/Footer";
@@ -80,7 +76,9 @@ function PageBody({ auth }) {
   ];
   return (
     <Container style={{ backgroundColor: "#EDEDED" }}>
-      <h1 className="my-4 text-left">Hi {auth.user.full_name}, Welcome to the ADMIN panel</h1>
+      <h1 className="my-4 text-left">
+        Hi {auth.user.full_name}, Welcome to the ADMIN panel
+      </h1>
       <div
         className="intro-container mb-4 p-4 border rounded bg-light"
         style={{
@@ -164,6 +162,5 @@ function PageBody({ auth }) {
     </Container>
   );
 }
-
 
 export default Home;
