@@ -22,7 +22,7 @@ def get_courses_from_university(request):
         # SPARQL query to retrieve university names and course names
         sparql_query = get_course_from_university_query(universityUri, universityName)
 
-        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+        server = sparql.SPARQLServer('http://3.85.134.206:80/bigdata/sparql')
 
         qresponse = server.query(sparql_query)
         course_list = []
