@@ -4,18 +4,24 @@ import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import SearchBox from "../../../components/user/SearchBox/SearchBox";
 
 import { AcrossUniversitiesData } from "./AcrossUniversitiesData";
+import { NavLink } from "react-router-dom";
 
 const AcrossUniversitiesPage = () => {
   return (
     <>
       <MainLayout>
-        <SearchBox />
+        {/* <SearchBox /> */}
         <div className="across-universities">
-          <h1>List of Universities - Across Universities</h1>
+          <h1>Across Universities</h1>
           <div className="universitiesWrapper">
             {AcrossUniversitiesData.map((val, key) => {
               return (
-                <div className="university" key={key}>
+                <NavLink
+                  to={val.universityUrl}
+                  target="_blank"
+                  className="university"
+                  key={key}
+                >
                   <h4 className="university-name">{val.universityName}</h4>
                   <div className="university-photo">
                     <img src={val.universityImage} alt="university in europe" />
@@ -23,7 +29,7 @@ const AcrossUniversitiesPage = () => {
                   <smalll className="university-location">
                     {val.universityLocation}
                   </smalll>
-                </div>
+                </NavLink>
               );
             })}
           </div>
