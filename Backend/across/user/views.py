@@ -188,7 +188,7 @@ def fetch_university_uri(request):
         university_name = data.get('university_name','')
         university_uri = ''
 
-        server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+        server = sparql.SPARQLServer('http://3.85.134.206:80/bigdata/sparql')
 
         qresponse = server.query(get_university_uri_by_university_name(university_name))
         data_for_university_uri = qresponse['results']['bindings'] 

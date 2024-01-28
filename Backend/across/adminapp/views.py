@@ -127,7 +127,7 @@ def insert_module(request):
         existing_user_profile = UserProfile.objects.filter(email=email).first()
         if existing_user_profile:
             if existing_user_profile.role == 'ADMIN':
-                server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+                server = sparql.SPARQLServer('http://3.85.134.206:80/bigdata/sparql')
 
                 qresponse = server.query(get_university_uri_by_university_name(university_name))
                 data_for_university_uri = qresponse['results']['bindings'] 
@@ -153,7 +153,7 @@ def insert_module(request):
                     try:
                         payload = {'update': add_individual_module_by_admin(module_uuid_str, module_name, module_number, module_content, module_credit_points, university_uri, course_uri)}
         
-                        result = requests.post("http://54.242.11.117/blazegraph/namespace/kb/sparql", data=payload)
+                        result = requests.post("http://3.85.134.206/blazegraph/namespace/kb/sparql", data=payload)
 
                         # Check the response status
                         if result.status_code == 200:
@@ -201,7 +201,7 @@ def delete_module(request):
         if existing_user_profile:
             if existing_user_profile.role == 'ADMIN':
                 try:
-                    server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+                    server = sparql.SPARQLServer('http://3.85.134.206:80/bigdata/sparql')
                     qresponse = server.query(is_module_already_present_by_module_uri(module_uri))
                 
                     # Module already exists, return a message
@@ -214,7 +214,7 @@ def delete_module(request):
 
                     payload = {'update': delete_individual_module(module_uri)}
 
-                    result = requests.post("http://54.242.11.117/blazegraph/namespace/kb/sparql", data=payload)
+                    result = requests.post("http://3.85.134.206/blazegraph/namespace/kb/sparql", data=payload)
 
                     # Check the response status
                     if result.status_code == 200:
@@ -267,7 +267,7 @@ def update_module(request):
         existing_user_profile = UserProfile.objects.filter(email=email).first()
         if existing_user_profile:
             if existing_user_profile.role == 'ADMIN':
-                server = sparql.SPARQLServer('http://54.242.11.117:80/bigdata/sparql')
+                server = sparql.SPARQLServer('http://3.85.134.206:80/bigdata/sparql')
 
                 qresponse = server.query(is_module_already_present_by_module_uri(module_uri))
             
@@ -292,7 +292,7 @@ def update_module(request):
                 try:
                     payload = {'update': update_individual_module_by_admin(module_uri, updated_module_name, updated_module_number, updated_module_content, updated_module_credit_points, university_uri, course_uri)}
 
-                    result = requests.post("http://54.242.11.117/blazegraph/namespace/kb/sparql", data=payload)
+                    result = requests.post("http://3.85.134.206/blazegraph/namespace/kb/sparql", data=payload)
 
                     # Check the response status
                     if result.status_code == 200:
