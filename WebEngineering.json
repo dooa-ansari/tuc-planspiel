@@ -1,0 +1,303 @@
+[
+  {
+    "Modulnummer": "553010",
+    "Modulname": "Current Trends in Web Engineering",
+    "Inhalte und Qualifikationsziele": "Social Media und Social Networks im Sinne von übergreifenden Netzwerken",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "553050",
+    "Modulname": "Cloud & Web Anwendungen",
+    "Inhalte und Qualifikationsziele": "Das Modul führt in das „Phänomen Web und Cloud“ sowie die Entwicklung verteilter",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "553090",
+    "Modulname": "Software Service Engineering",
+    "Inhalte und Qualifikationsziele": "Service-orientierte Architekturen (SOA) stellen eine wichtige standard-basierte und",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "563050",
+    "Modulname": "Datenbanken und Web-Techniken",
+    "Inhalte und Qualifikationsziele": "Basistechniken der Internetprogrammierung zum Zugriff auf Datenbanken,",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "563090",
+    "Modulname": "Datenbanken und Objektorientierung",
+    "Inhalte und Qualifikationsziele": "Erweiterungen des relationalen Datenmodells mit Hinführung zum",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "577020",
+    "Modulname": "Model-Driven Software Development",
+    "Inhalte und Qualifikationsziele": "Die Vorlesung gibt eine Einführung in Model-Driven Software Development und",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "577040",
+    "Modulname": "Quantitative Analysis of Software Designs",
+    "Inhalte und Qualifikationsziele": "Neben der Erfüllung der funktionalen Anforderungen muss Software auch eine",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "500310",
+    "Modulname": "Themenschwerpunkte Informatik I",
+    "Inhalte und Qualifikationsziele": "Die Informatik ist eine lebende Wissenschaft und bringt schnell neue",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "500330",
+    "Modulname": "Themenschwerpunkte Informatik II",
+    "Inhalte und Qualifikationsziele": "Die Informatik ist eine lebende Wissenschaft und bringt schnell neue",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "543110",
+    "Modulname": "Datensicherheit und Kryptographie II",
+    "Inhalte und Qualifikationsziele": "Es werden aktuelle kryptographische Verfahren aus folgenden Themengebieten",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "551070",
+    "Modulname": "Parallelrechner",
+    "Inhalte und Qualifikationsziele": "Immer dann, wenn die Leistung einzelner Rechner nicht ausreichend ist, werden",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "553030",
+    "Modulname": "Entwurf Verteilter Systeme",
+    "Inhalte und Qualifikationsziele": "Rechner- und Kommunikationsnetze und das Web haben sich in den letzten zwei",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "553130",
+    "Modulname": "Sicherheit Verteilter Software",
+    "Inhalte und Qualifikationsziele": "Das Angebot fokussiert das Problem der Sicherheit im Internet und Web, den daran",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "553150",
+    "Modulname": "XML",
+    "Inhalte und Qualifikationsziele": "Die eXtensible Markup Language (XML) ist die Basis für eine Vielzahl von",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "561070",
+    "Modulname": "Parallele Programmierung",
+    "Inhalte und Qualifikationsziele": "Die Inhalte der Vorlesung umfassen: Architektur und Verbindungsnetzwerke",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "565010",
+    "Modulname": "Betriebssysteme für verteilte Systeme",
+    "Inhalte und Qualifikationsziele": "Spezielle Probleme von Betriebssystemen in verteilten Systemen; Algorithmen für",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "565030",
+    "Modulname": "Echtzeitsysteme",
+    "Inhalte und Qualifikationsziele": "Theorie und Praxis von Rechensystemen, die zur Lösung zeitkritischer Probleme",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "573030",
+    "Modulname": "Einführung in die Künstliche Intelligenz",
+    "Inhalte und Qualifikationsziele": "Einführung in das Gebiet der Künstlichen Intelligenz unter Bearbeitung folgender",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "573050",
+    "Modulname": "Maschinelles Lernen",
+    "Inhalte und Qualifikationsziele": "Dieses Modul stellt ein Teilgebiet der Künstlichen Intelligenz (KI) vor. Eswerden die Möglichkeiten der Übertragung der Lernfähigkeit auf den Computerdiskutiert.Schwerpunkte sind: Einführung, Einordnung, historischer Überblick Lernen aus Beispielen Unüberwachte Lernverfahren Neuronale Netze Reinforcement Learning",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "578050",
+    "Modulname": "Mediencodierung",
+    "Inhalte und Qualifikationsziele": "Es werden zentrale Aspekte der Codierung medialer Daten besprochen.Kompressionstechniken, Dateiformate, Streamingverfahren stehen im Mittelpunkt.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "578070",
+    "Modulname": "Mensch-Computer-Interaktion II",
+    "Inhalte und Qualifikationsziele": "Die Medienergonomie behandelt Interaktionsmöglichkeiten zwischen Mensch",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "578170",
+    "Modulname": "Medienretrieval",
+    "Inhalte und Qualifikationsziele": "Medienretrieval beschäftigt sich mit der Suche in multimedialen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "578130",
+    "Modulname": "Medienmanagement",
+    "Inhalte und Qualifikationsziele": "Das Modul führt ein in die unternehmerische Realität des Medieneinsatzes.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "565130",
+    "Modulname": "Verlässliche Systeme",
+    "Inhalte und Qualifikationsziele": "Grundlegende Ansätze und Maße der Fehlertoleranz; Störungsmodelle;",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "435760",
+    "Modulname": "Next Generation Internet",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einführung Ausgewählte Internet-AnwendungenEmailoFile TransferoWeb BrowsingoVoice/Multimedia over IPo Dienste-Plattformen und -ArchitekturenIP-based Multimedia Subsystem (IMS)oWeb Services Architecture / Service-oriented Architecture (SOA)o Overlay NetzePeer-to-Peer NetworksoContent Delivery Networks (CDNs)oVirtual Private Networks (VPNs)o Ausgewählte NetzmechanismenFluss- und StauregelungoGruppenkommunikation / MulticastoDienstgüte-Mechanismen (QoS)oRedundanz-MechanismenoEnkapsulierungsverfahreno Neue TechnologienCarrier-grade Etherneto Future Internet ThemenInformation and Service centric NetworkingoNetzvirtualisierungo",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "435767",
+    "Modulname": "Network Planning",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Netzplanung EinführungDefinition, Zielsetzungen, Planungsprozesso Verkehrsmodellierung und BedarfsanalyseVerkehrsklassifizierungoVerkehrsmodellierungoBedarfsabschätzung und -prognoseoVerkehrsmatrizenerzeugungo Netztopologie-Entwurfausgewählte Verfahren: optimale Standortauswahl, Baum- und Maschen-oNetzdesign NetzdimensionierungFormulierung als OptimierungsproblemoVorgehensweise bei durchschalte- und paketvermittelten NetzenoKapazitätsberechnung auf Leitungs- und Netzebeneoausgewählte Dimensionierungsverfahreno Weitere PlanungsaspekteRedundanz/AusfallsicherheitoMehrstunden- und MehrperiodenplanungoKostenmodellierungo Netzplanungstools (Beispiele)",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "435759",
+    "Modulname": "IP Networking Lab",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele Folgende Themenschwerpunkte werden in Theorie und Praxis behandelt: Grundlagenkapitel zu IP- und Ethernet-Netzen, um die theoretischen Voraussetzungenfür die Versuche zu legen Einweisung in die Laboraufbauten (Linux-PC, Cisco-Router/Switches und Cisco IOSArbeitsumgebung) sowie der verwendeten Netzwerkanalysesoftware Aufbau und Konfiguration eines lokalen Netzes (Interface- und ARP-Analyse) Aufbau und Konfiguration eines statisch vermittelten Netzes (Router-Konfiguration,ICMP- und Proxy-ARP-Analyse) Aufbau und Konfiguration eines dynamisch vermittelten Netzes (Router-Konfiguration,RIP-, OSPF- und BGP-Analyse) Analyse von Transport-Protokollen (UDP und TCP) einschließlich IP-Fragmentierung, TCPRetransmission und TCP Congestion Control Aufbau und Konfiguration eines Ethernet-LANs (Bridge-Konfiguration in Linux-PCs undCisco-Geräten sowie Spanning Tree Protokoll-Analyse) Betrachtung der Protokolle im IP-Umfeld bspw. NAT, DHCP, DNS und SNMP Aufbau und Konfiguration eines IP-Multicast-Netzes (Router-Konfiguration, IGMP- undMulticast-Routing-Analyse)",
+    "Leistungspunkte und Noten": "2",
+    "Arbeitsaufwand": "60"
+  },
+  {
+    "Modulnummer": "435480",
+    "Modulname": "Network Security",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einführung und Grundlagen: Begriffe, Bedrohungsszenarien, Sicherheitsmechanismen,mathematische Grundlagen der Verschlüsselung Verschlüsselungsverfahren, Schlüsselmanagement und Zertifikate, PKI-Infrastruktur Gesicherte Datenübertragung: Übersicht Sicherungsprotokolle auf Sicherungs-(L2),Netz- (L3) und Transportschicht (L4) (z.B.: L2TP, IPsec, SSL, TLS, SSH) Angriffe im Internet: Überblick und Klassifizierung von Angriffen, Praxisbeispiele (DoS-Attacken, Angriffe auf Routing und DNS), Abwehr und Vermeidung von Angriffen Firewalls: Übersicht, Ziele und Aufgaben einer Firewall, Filtertechniken, Einsatz im Netz,Beispiele, Probleme Kontrolle des Netzzugangs: Übersicht, Konzepte, AAA-Mechanismen, Praxisbeispiele,Probleme",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "435763",
+    "Modulname": "Mobile Networks",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einführung (z. B. Arten der Mobilität, Klassifikation) Technische Grundlagen: Mobilfunkkanal, Übertragungstechnik (Vielfachzugriff,Duplex), Zellularprinzip öffentliche zellulare Netze (GSM, UMTS): Einführung, Systemarchitektur,Funkschnittstelle, Protokolle, Anruf- und Mobilitätsmanagement,Sicherheitskonzept, Dienste, Ausblick Drahtlose LANs (WLAN): Einführung, IEEE 802.11 Standardisierung und WiFi Allianz, System- und Protokollarchitektur, Funkschnittstelle (Schwerpunkt MACSchicht), Verfahren zur Mobilitätsunterstützung, Sicherheitskonzepte, Ausblick Drahtlose MANs (WiMAX) Drahtlose PANs (Bluetooth, ZigBee)",
+    "Leistungspunkte und Noten": "4",
+    "Arbeitsaufwand": "120"
+  },
+  {
+    "Modulnummer": "435660",
+    "Modulname": "Self-Organizing Networks",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einführung Drahtlose Netze nach IEEE 802ÜbersichtoIEEE 802.11 (Wireless Local Area Networks): System- und Protokollarchitektur,oLuftschnittstelle, SicherheitskonzeptIEEE 802.15 (Wireless Personal Area Networks): Bluetooth, ZigBee, UWBo MobilitätsmechanismenEinführungoMobilität auf Netz-, Transport- und Anwendungsschichto Mobile Ad-Hoc Netze (MANETs)Einführung: Definition, Klassifikation, AnwendungsszenarienoRoutingverfahren für MANETsoMedium Access Control (MAC)oTopologie-Kontrolle und ClusterbildungoSicherheitsaspekteo Spezielle Ausprägungen von MANETsDrahtlose Mesh-Netze (WMNs) nach IEEE 802.11soDrahtlose Sensor und Actuator Netze (WSANs)o",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "652110",
+    "Modulname": "Informationsmanagement",
+    "Inhalte und Qualifikationsziele": "Information ist die zentrale Ressource der Wirtschaft. Die Vorlesung",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "652120",
+    "Modulname": "Strategic IT Management",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele Die Veranstaltung behandelt die Aufgaben des strategischen IT-Managements. Im Einzelnenwerden folgende Themenfelder adressiert: IT-Strategie; Business/IT-Alignment IT-Governance; COBIT Prozessorientiertes IT-Management; ITIL Qualitätsmanagement; EFQM; Six Sigma Reifegradmodelle IT-Risikomanagement",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "500410",
+    "Modulname": "Seminar Web Engineering",
+    "Inhalte und Qualifikationsziele": "Übersichtsartige Auseinandersetzung mit vorgegebenen Themen aus dem Bereich",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "500420",
+    "Modulname": "Vorbereitungsseminar Planspiel Web Engineering",
+    "Inhalte und Qualifikationsziele": "Übersichtsartige Auseinandersetzung mit vorgegebenen Themen aus dem Bereich",
+    "Leistungspunkte und Noten": "2",
+    "Arbeitsaufwand": "60"
+  },
+  {
+    "Modulnummer": "613002",
+    "Modulname": "Businessplanung und Management von Gründungen",
+    "Inhalte und Qualifikationsziele": "Die Studenten setzen sich mit allen Aspekten der Selbständigkeit und der Gründung",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "613230",
+    "Modulname": "Gründungsfinanzierung",
+    "Inhalte und Qualifikationsziele": "Die Vorlesung vermittelt neben finanztechnischen und –analytischen",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "613004",
+    "Modulname": "Technischer Vertrieb",
+    "Inhalte und Qualifikationsziele": "Besonders bei technologieorientierten Gründungen und KMUs kommt dem",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "136135",
+    "Modulname": "Deutsch als Fremdsprache II (Niveau A2)",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Erweiterung und Festigung der Lexik u.a. zu Themen wie Ausbildung, Tätigkeiten,Hobbys, Freizeit und Beruf Entdeckung und Übung neuer grammatischer Strukturen, z.B. trennbare unduntrennbare Verben, reflexive Verben, Festigung der Zeitformen, Übungen zurWortstellung in verschiedenen Satzkonstruktionen Übungen zur deutschen PhonetikDie Ausbildung orientiert sich an der Sprachkompetenzstufe A2 des GemeinsamenEuropäischen Referenzrahmens für Sprachen (GER).",
+    "Leistungspunkte und Noten": "4",
+    "Arbeitsaufwand": "120"
+  },
+  {
+    "Modulnummer": "613001",
+    "Modulname": "Business to Business Marketing",
+    "Inhalte und Qualifikationsziele": "Die Vorlesung thematisiert die theoretischen und praktischen Aspekte des Business",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "824005",
+    "Modulname": "Kommunikation und Führung",
+    "Inhalte und Qualifikationsziele": "Das Modul beschäftigt sich mit der Kommunikation im Führungskontext. Behandelt",
+    "Leistungspunkte und Noten": "4",
+    "Arbeitsaufwand": "120"
+  },
+  {
+    "Modulnummer": "136250",
+    "Modulname": "Englisch in Studien- und Fachkommunikation II (Niveau B2)",
+    "Inhalte und Qualifikationsziele": "Ausbau der sprachlichen Kenntnisse und Fertigkeiten mit Bezug auf studien- und",
+    "Leistungspunkte und Noten": "8",
+    "Arbeitsaufwand": "240"
+  },
+  {
+    "Modulnummer": "500430",
+    "Modulname": "Planspiel Web Engineering",
+    "Inhalte und Qualifikationsziele": "Im Modul Planspiel Web Engineering werden Kenntnisse über moderne",
+    "Leistungspunkte und Noten": "30",
+    "Arbeitsaufwand": "900"
+  },
+  {
+    "Modulnummer": "9100",
+    "Modulname": "Master-Arbeit",
+    "Inhalte und Qualifikationsziele": "Im Rahmen des Moduls wird eine Masterarbeit erstellt und öffentlich verteidigt. Das",
+    "Leistungspunkte und Noten": "30",
+    "Arbeitsaufwand": "900"
+  }
+]

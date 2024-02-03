@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://tuc/web/engineering/module#"
+   xmlns:ns2="http://tuc.web.engineering/module#"
+   xmlns:ns3="http://tuc/course#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4614d9ad-c42e-11ee-8802-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.7</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gestaltung der Arbeitsumwelt</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Im Lehrmodul werden Kenntnisse zu physikalischen Grundlagen,Wirkungen, Berechnung und Messung der klassischenArbeitsumweltfaktoren vermittelt. Die Bewertung und Gestaltung bzw.Bekämpfung der für den Menschen schädigenden Arbeitsumgebung wird inpraktischen Übungen unter Laborbedingungen durchgeführt. Im Mittelpunktder Lehrveranstaltungen des Moduls steht die Analyse und Gestaltungfolgender Arbeitsumweltfaktoren: Lärm am Arbeitsplatz (Schallausbreitung, Überlagerung von Schall,Frequenzanalyse, Schalldämmung) Mechanische Schwingungen am Arbeitsplatz (Hand-Arm-Schwingungen,Ganzkörperschwingungen) Gefahrstoffe (Luftverunreinigungen am Arbeitsplatz) Klima am Arbeitsplatz (Klimafaktoren, Klimasummenmaße) Industrielle Beleuchtung (Planung nach Wirkungsgradmethode) Farbgestaltung im Büro und in Produktionsstätten</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4614644b-c42e-11ee-8263-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.3</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabrikbetrieb im Automobilbau</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Das Modul vermittelt Wissen über wertschöpfende undnichtwertschöpfende Systemeinheiten im Automobilbau und derenkomplexes Zusammenwirken. Untersetzt mit Beiträgen aus Forschung undPraxis werden schwerpunktmäßig die folgenden Themenbereichebearbeitet:- Hauptprozesse im Automobilbau und Informationsprozesse- Produktentstehungsprozess und Anlaufmanagement- Best Practices- Wertschöpfungsnetzwerke und Cluster- Lieferantenmanagement- Geschäftsprozesse im Automobilbau- Ressourceneffiziente Produktionsprozesse</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46159cfa-c42e-11ee-a2bb-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.2</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elektromotorische Antriebe</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Das Modul Elektromotorische Antriebe beinhaltet das Kennenlernen derwichtigsten elektrischen Antriebe, wie Asynchron-, Synchron- undGleichstromantriebe, deren Steuerung, Regelung und Betriebsverhaltensowie die Erlangung der Grundbefähigung zur Lösung antriebstechnischerAufgaben.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46187fff-c42e-11ee-bd6b-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.2</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soft Skills</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Das Modul umfasst folgende Angebote: Zeitmanagement und Arbeitsorganisationkurz- und langfristige Zielsetzung, Techniken für Übersichtlichkeit,Setzen von Prioritäten, Planung, Arbeitstechniken und Methoden derStressbewältigung Präsentation und GesprächsführungEs werden Grundlagen der Kommunikation sowieSelbstdarstellungstechniken und ihre Wirkung vermittelt. Kommunikation und FührungEs werden Grundlagen der Kommunikation und Gesprächsführungvermittelt, wobei die Inhalte auf die Funktion einer Führungskraft (z. B.Motivation, Zielvereinbarungen, Leistungsbewertung,Aufgabenverteilung) ausgerichtet sind. Themen sind dabei:Kommunikationsmodelle, Gesprächsplanung und -steuerung, aktivesZuhören und Fragetechniken sowie Stile der Selbstpräsentation. GesprächsführungEs werden Grundlagen der Kommunikation sowie Basisfertigkeiten derGesprächsführung und das Geben und Nehmen von Feedbackvermittelt. PräsentationstechnikenEs werden Selbstdarstellungstechniken und ihre Wirkung vermittelt. Zeitmanagementkurz- und langfristige Zielsetzung, Setzen von Prioritäten, Planung undMethoden der StressbewältigungDie Vermittlung der Inhalte erfolgt jeweils über Theorieblöcke,Diskussionen, Einzel- und Gruppenarbeit sowie Übungen. In denWorkshops zu Präsentation(stechniken) und Gesprächsführung werdenzudem Rollenspiele und (z. T. Video-)Feedback eingesetzt.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4614337c-c42e-11ee-82f2-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.2,1.2.3</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prozessorientiertes Qualitätsmanagement</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Die Steigerung von Prozessqualität und Produktivität im Unternehmendurch ständige Verbesserung der Prozesse ist ein entscheidenderWettbewerbsfaktor. Aus diesem Grund müssen Prozesse effektiv, effizient,steuerbar und anpassungsfähig sein.Nach einer Einführung zum prozessorientierten Qualitätsmanagementwerden in Gruppenarbeit Prozesse entlang des Produktlebenszyklusidentifiziert, analysiert, beschrieben und bewertet. Zur Unterstützung derGruppenarbeit werden Kenntnisse zur Moderation, Teamarbeit,Qualitätszirkel und Kreativitätstechniken vermittelt. Abschließend wird dieDarstellung eines prozessorientierten Qualitätsmanagements mittelsSoftware vorgestellt.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4616a790-c42e-11ee-9110-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.10</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundlagen der mobilen Robotik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Kinematiken mobiler Roboter Steuerungsarchitekturen Umgebungsrepräsentation, Kartenerstellung, Navigation undLokalisierung (Kalman-Filter) Sensorik mobiler Roboter (GPS, Kompass, mechanische und optischeKreisel, optische und Ultraschallentfernungssensoren, Kameras) Grundlagen der Bildverarbeitung (geometrische Aspekte,Kamerakalibrierung, Kameramodell, Bildvorverarbeitung,Kantendetektion) speziell für mobile Roboter</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4617b8b6-c42e-11ee-856b-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1.7</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polnisch III (Niveau B1)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Vermittlung grundlegender Sprachkenntnisse und -fertigkeiten,Übersicht über den gesamten Formenbestand der Zielsprache Vermittlung landeskundlicher Grundkenntnisse, Gebrauch derwichtigsten Wörterbücher und NachschlagewerkeDie Ausbildung orientiert sich an der Sprachkompetenzstufe B1 desGemeinsamen Europäischen Referenzrahmens für Sprachen (GER).</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4616ce4c-c42e-11ee-a687-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.11</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robotersteuerungen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Regelung von Robotern im Gelenkraum und im operationellen Raum Kraft-/ Momentregelung (Hybride Regelung, Impedanzregelung usw.) Steuerungsarchitekturen stationärer Roboter Sensoren stationärer Roboter (Kraft-/Momentsensoren,Entfernungssensoren, taktile Sensoren, usw.) Parallele und redundante Manipulatoren</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46148b8e-c42e-11ee-b8ad-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.5</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabrikökologie</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Im Modul werden Grundkenntnisse über ökologische Zusammenhängebeim Planen und Betreiben von Fabrikanlagen erworben. Die ökologische,wirtschaftliche und soziale Verantwortung des Ingenieurs wird im Rahmender Gestaltung nachhaltiger Produktionsprozesse herausgestellt. AnBeispielen werden typische betriebliche Umweltschutzmaßnahmenaufgezeigt und deren planerische Umsetzung behandelt. Einzelthemen sindu.a.: Umweltproblemfelder im Industrieunternehmen Energieeffizienz und Ressourceneffizienz Umweltmanagementsystem (ISO bzw. EMAS) Prozess- und produktintegrierter Umweltschutz.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46140c2e-c42e-11ee-9086-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.1</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unternehmenslogistik - Logistiksysteme in Anwendung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Das Modul vermittelt erweiterte und vertiefte Kenntnisse zu logistischenAbläufen, ihren Prozessen und organisatorischen Lösungen in undzwischen Unternehmen und Unternehmensnetzen.Die Unternehmenslogistik mit der Produktions-, Beschaffungs-,Distributions- und Entsorgungslogistik wird insbesondere aus der Sicht vonLogistikmanagern namhafter internationaler Unternehmen denStudierenden nahe gebracht. Dabei erhalten die Studierenden einenEinblick in die strategische Unternehmensführung. Im Rahmen vonExkursionen besteht die Möglichkeit, Logistikkonzepte und Detaillösungenzu erleben und zu diskutieren. Mit dem Fortschreiten derUnternehmensvernetzung und des logistischen Outsourcing erhält diesesLehrmodul eine besondere Wertung für die Planung und den Betriebmoderner Unternehmensstrukturen und -verbünde. Das Lehrmodul umfasstdie folgenden Schwerpunkte: Ziele, Funktionsbereiche und Strukturen der Unternehmenslogistik undihre Organisationslösungen Entscheidungsfelder der Unternehmenslogistik Entscheidungshilfen für Planung, Steuerung und Betrieb logistischerAbläufe im Produktionsunternehmen Logistische Umsetzung neuer Produktionskonzepte.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46160fc2-c42e-11ee-95e9-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.6</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faserverbundkonstruktion</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele In den Vorlesungen werden die Grundlagen zur Anwendung derfaserverstärkten Kunststoffe vermittelt. Aufbauend auf den Grundprinzipiender Faserverbunde werden die einzelnen Komponenten Faser, Matrix undInterface näher erläutert. Über Halbzeugformen, Faserverbundbauweisenund einer werkstoffmechanischen Charakterisierung werden dieGrundlagen zur Strukturanalyse von anisotropen Verbunden sowie dieAuslegung von Schichtverbunden erklärt. Dem schließen sichAusführungen zu Entwurf und Auslegung, Verbindungs- undKrafteinleitungstechniken sowie die grundlegenden Fertigungstechnologienvon Faserverbunden an. Die Lehrveranstaltung wird abgerundet mit demThema Naturfaserverbunde und Recycling. Ein Praktikum ergänzt dieLehrinhalte.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46168014-c42e-11ee-95b3-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.9</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pneumatische und Schwingfördertechnik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Gegenstand der Vorlesung Pneumatische und Schwingfördertechnik sindinsbesondere spezielle Aspekte und Techniken der Förderung von Schütt-gütern. Inhaltliche Schwerpunkte der Vorlesung sind Vakuumtheorie, Prinzi-pien der Vakuumförderung, Komponenten der Vakuumförderer, Anforde-rungen an das Fördergut, Vakuumerzeuger, Dimensionierung von Vakuum-pumpen sowie Zubehör und Ausrüstungen, Optimierung des Energiebedar-fes, Gestaltung von Anwendungsbeispielen und Bestimmung von Anwen-dungsgrenzen unter Nutzung von Laborgeräten.Des Weiteren werden die mechanischen Grundlagen der Schwingförder-technik vermittelt. Schwerpunkte bilden unterschiedliche Bauformen,Antriebssysteme und Lagerungen für die jeweiligen Einsatzgebiete. Eswerden optimale Bewegungsgesetze abgeleitet und vertieftemaschinendynamische Kenntnisse vermittelt.In die Vorlesung fließen neueste Methoden der Simulation mit ein. Auf dieAnwendungen für Schütt- und Stückgüter unterschiedlicher Masseströmewird eingegangen.In den Übungen wird anhand von Beispielen der Vorlesungsstoff vertieft. Inkonkreten Berechnungsbeispielen werden die theoretischen Grundlagenangewendet.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4616f56d-c42e-11ee-b4d0-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1.1</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Englisch in Studien- und Fachkommunikation V (Niveau C1)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Vermittlung erweiterter Kenntnisse und Fertigkeiten in der wissenschaftlich-fachsprachlichen Anwendung der englischen Sprache mit Fokus auf denlinguistisch-stilistischen Anforderungen einer fachsprachlichenArbeitsumgebung;Die Ausbildung orientiert sich an der Sprachkompetenzstufe C1 desGemeinsamen Europäischen Referenzrahmens für Sprachen (GER) undbeinhaltet eine fachsprachliche Komponente.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4615c40a-c42e-11ee-83ec-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.5</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theoretische Prozessanalyse</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einleitung (Begriffsbestimmungen und Klassifizierungen, Arten derModellbildung, Methodik der theoretischen Modellbildung) Beispiele zur Modellbildung (technische, ökologische, ökonomischeSysteme) Übersicht über Methoden der Modellierung, Modelle mit konzentriertenParametern (Operatorimpedanzen, Analyse der Gesamtwirkungen,Bilanzmethode), Modelle mit verteilten Parametern Übersicht über die verschiedenen Arten von Modellen (analytischeModelle, numerische Modelle, graphische Modelle) Konkrete Beispiele aus Elektrotechnik, Mechanik, Thermodynamik mitComputerdemonstrationen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#461791a5-c42e-11ee-98b2-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1.5</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Französisch III (Niveau A2/B1)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inhalte und Erweiterung der Lexik und grammatischen Kenntnisse.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4617dfc5-c42e-11ee-ba35-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1.8</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russisch III (Niveau B1)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Vermittlung grundlegender Sprachkenntnisse und -fertigkeiten,Übersicht über den gesamten Formenbestand der Zielsprache Vermittlung landeskundlicher Grundkenntnisse, Gebrauch derwichtigsten Wörterbücher und NachschlagewerkeDie Ausbildung orientiert sich an der Sprachkompetenzstufe B1 desGemeinsamen Europäischen Referenzrahmens für Sprachen (GER).</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46154f33-c42e-11ee-9cb5-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.10</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supply Chain Management</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Das Supply Chain Management befasst sich mit der ganzheitlichenBetrachtung von miteinander vernetzten Unternehmen. Hier spielen nebenManagement-Ansätzen quantitative Methoden zur Generierung vonNetzwerken und die Einbeziehung von Soft Facts eine wesentliche Rolle.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4618ce1f-c42e-11ee-b066-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projekt-Arbeit</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Die Projektarbeit hat die selbstständige Bearbeitung einer Aufgabenstellungaus dem Bereich des Systems Engineering zum Gegenstand. DieStudierenden sollen dabei selbstständig und systematisch sowie unterAnwendung des bisher erworbenen Wissens eine Aufgabenstellung mitpraktischem oder Forschungs-Bezug bearbeiten und die Ergebnisse klarund verständlich darlegen. Die Projektarbeit soll die Studierenden dazuanhalten, sich selbstständig mit einer Problemstellungauseinanderzusetzen, sich erforderliches Wissen und Methodenanzueignen und die Ergebnisse klar und verständlich zu präsentieren.Damit dient die Projektarbeit auch der Vorbereitung auf die Erstellung derAbschlussarbeit (Masterarbeit).</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4618f52c-c42e-11ee-a8cb-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master-Arbeit</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Mit der Masterarbeit sollen die Studierenden das angeeignete Wissen beider Bearbeitung von einer dem Zeitrahmen angepasstenwissenschaftlichen Aufgabenstellung anwenden und dadurch ihreForschungskompetenz unter Beweis stellen. Die Masterarbeit kann sowohlan der Universität als auch in der Industrie durchgeführt werden. Letzteresist jedoch nur möglich, wenn im Vorfeld die Zusage der Betreuung durcheinen Hochschullehrer der Fakultät für Maschinenbau eingeholt wurde.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4615c409-c42e-11ee-85d8-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.4</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spezialgebiete und Antriebssysteme in der Fördertechnik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Ausgehend von einem systematischen Überblick zu verfügbaren Förder-mitteln sowie zur Lagertechnik stellt die Vorlesung komplexeFördersysteme für die Produktionstechnik vor. Es werden die Grundlagenfür die Schaffung energieeffizienter Anlagen abgeleitet. Schwerpunkte sindweiterhin Flurfördermittel, Anschlagmittel und Hebezeuge, Fördereinrichtun-gen in der Montage- und Verpackungstechnik, Schüttgutlagerung, Kommis-sioniertechnik, Fördern von bahn- und bogenförmigen Materialien, Identi-fikationssysteme, Gestaltung von Zug- und Tragmitteln aus Kunststoffensowie Dimensionierungsbeispiele.Ein Vergleich der verschiedenen Antriebssysteme in der Fördertechnik(Antriebsarten und Antriebskonzepte) erfolgt und es gibt Hinweise auf einegezielte Auswahl sowie die vorteilhafte Antriebskonzeption. Neben denDimensionierungsgrundlagen werden auch dynamische Aspekte behandelt.Dazu zählen Schwingungsproblematiken in fördertechnischen Anlagen undderen Analyseverfahren sowie Grundlagen der Akustik. Anhand vonBeispielen werden messtechnische Verfahren erläutert und dieInterpretation von Messdaten erörtert. Einen wesentlichen Gesichtspunktbilden auch die konstruktive Gestaltung von Antriebsmitteln sowie Hinweisezu deren Wartung, Pflege und Instandhaltung.Das Praktikum dient der Vertiefung des Vorlesungsstoffes. Hierbei werdenu.a. verschiedene Antriebssysteme analysiert und entsprechende Kenn-werte erfasst.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#461575ea-c42e-11ee-828c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.1</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prozess- und Verkettungstechnik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Durch die Einbeziehung aller wesentlichen Elemente desVerarbeitungsprozesses wie Verarbeitungsgut, Arbeitsorgan, Maschinesowie der Automatisierungseinrichtungen wird die Grundlage für dessenoptimale seriennahe Umsetzung gelegt. Einen wesentlichen Punkt machendie Verarbeitungseigenschaften auf die Auslegung der jeweiligenWirkpaarungen aus. Weiterhin werden Hinweise zur Dimensionierung undAuslegung von geschlossenen Prozessketten zur Bauteilherstellung imStrukturleichtbau vermittelt. Besonderen Einblick erhalten die Studierendenin die Verarbeitung biegeschlaffer Verstärkungsstrukturen wie auchkunststoffbasierter Halbzeuge sowie deren prozesstechnischer Vernetzungzur Herstellung von Hochleistungsbauteilen.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46176a93-c42e-11ee-a363-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1.4</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deutsch als Fremdsprache V (Niveau C1)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Kommunikative Situationen und Aufgaben zu interkulturellen Themenund zu studien- und berufsorientierten Sachverhalten und Situationen Vermittlung von Unterschieden mündlicher und schriftlicherKommunikation Festigung der grammatikalischen Formen von Konjunktiv I undKonjunktiv II, Funktionsverbgefügen, Angabesätzen und nominalenAngaben der deutschen Sprache, von Varianten des subjektivenGebrauchs der ModalverbenDie Ausbildung orientiert sich an der Sprachkompetenzstufe C1 desGemeinsamen Europäischen Referenzrahmens für Sprachen (GER).</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4614b29c-c42e-11ee-9708-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.6</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simulation von Produktions- und Logistiksystemen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Im Modul Simulation von Produktions- und Logistiksystemen werdenKenntnisse zur Durchführung von Simulationsstudien und zum Einsatz vonSimulationssoftware erworben. Im theoretischen Teil werden folgendeThemen behandelt: Erläuterungen zur Simulation und ihrenAnwendungsgebieten, Einsatz von Simulationssystemen, Modellierungtechnischer Systeme, prinzipielle Vorgehensweise bei der Simulation,Ablauf einer Simulationsstudie. Im praktischen Teil erfolgt die Vermittlungvon Kenntnissen insbesondere in der Anwendung des SimulationssystemsPlant Simulation anhand von Übungsbeispielen aus dem Gebiet derProduktion und Logistik.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46148b8d-c42e-11ee-819c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.4</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projektmanagement (MB)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Projekte und Projektmanagement Zieldefinition Problemlösezyklus Projekteinrichtung, Projektorganisation Projektstrukturierung Projektplanung: Abläufe, Zeiten, Ressourcen, Kosten Risikomanagement in Projekten Projektkontrolle Information und Kommunikation SoftwareunterstützungDie Veranstaltung baut auf einem international anerkannten Standard zumProjektmanagement, der International Competence Baseline (ICB3) derIPMA/ GPM, auf.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#461858bb-c42e-11ee-8187-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1.10</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tschechisch III (Niveau B1)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Vermittlung grundlegender Sprachkenntnisse und -fertigkeiten,Übersicht über den gesamten Formenbestand der Zielsprache Vermittlung landeskundlicher Grundkenntnisse, Gebrauch derwichtigsten Wörterbücher und NachschlagewerkeDie Ausbildung orientiert sich an der Sprachkompetenzstufe B1 desGemeinsamen Europäischen Referenzrahmens für Sprachen (GER).</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#461658f4-c42e-11ee-b07a-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.8</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAD in der Fördertechnik/CATIA</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Vermittlung folgender Lehrinhalte in Form von Demonstrationsübungen: Systemüberblick, Benutzeroberfläche CATIA Arbeiten im Mechanical Design mit folgenden Workbenches:- Erzeugen von 2D-Profilen (Sketcher)- Modellierung von Bauteilen (Part Design)- Zusammenbau von Bauteilen (Assembly Design)- DIN-gerechte Zeichnungserstellung (Drafting)</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46171c73-c42e-11ee-aff7-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1.2</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Englisch in Studien- und Fachkommunikation III (Niveau C1)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Vertiefung des Fachwortschatzes in ausgewählten Teilgebieten undsystematische Erweiterung des allgemeinen Wortschatzes mit Bezug aufstudien- und berufsorientierte sowie interkulturelle Sachverhalte, Leitenvon Beratungen und Diskussionen, Halten von Vorträgen;Die Ausbildung orientiert sich an der Sprachkompetenzstufe C1 desGemeinsamen Europäischen Referenzrahmens für Sprachen (GER) undbeinhaltet eine fachsprachliche Komponente.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46182d2a-c42e-11ee-b883-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1.9</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanisch III (Niveau A2/B1)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Erweiterung der Lexik und der grammatischen Kenntnisse Landeskundliche/kulturelle Besonderheiten Lexik: Reisen, Essgewohnheiten, Krankheiten und Symptome,Studium. Grammatische Strukturen: Gegenüberstellung von pretérito,indefinido/perfecto und imperfecto, futuro, imperativo, direkte undindirekte Personalpronommen, Demonstrativpronomen,Komparationsformen Kommunikationsstrukturen: in kodifizierten Situationenzurechtkommen, Anweisungen/Befehle erteilen, Ratschläge/Empfehlungen geben, über Handlungen in der Zukunft sprechen, überVergangenes berichtenDie Ausbildung orientiert sich an der Sprachkompetenzstufe A2/B1 desGemeinsamen Europäischen Referenzrahmens für Sprachen (GER).</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#461791a6-c42e-11ee-a036-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1.6</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italienisch III (Niveau A2/B1)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Erweiterung der Lexik und der grammatischen Kenntnisse Landeskundliche/kulturelle Besonderheiten Lexik: Reisen, Essgewohnheiten, Krankheiten und Symptome,Studium Grammatische Strukturen: Gegenüberstellung von passato prossimound imperfetto, futuro, imperativo, direkte und indirektePersonalpronommen, Demonstrativpronomen, Komparationsformen Kommunikationsstrukturen: in kodifizierten Situationen zu Rechtkommen, Anweisungen/Befehle erteilen, Ratschläge/Empfehlungengeben, über Handlungen in der Zukunft sprechen, über VergangenesberichtenDie Ausbildung orientiert sich an der Sprachkompetenzstufe A2/B1 desGemeinsamen Europäischen Referenzrahmens für Sprachen (GER).</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#461500bb-c42e-11ee-b518-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.8</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sicherheitstechnik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Analyse typischer Fehlerquellen auf Basis von Schadensanalysen systematische Betrachtung und Beurteilung einzelner Effekte und derenAuswirkungen Diskussion ausgewählter technischer Schutzmaßnahmen Auswirkungen von Havarien auf die Umwelt (benachbarte Anlagen,Boden, Wasser, Luft) Fallstudien für komplexe technische Anlagen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#46174384-c42e-11ee-b594-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1.3</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deutsch als Fremdsprache IV (Niveau B2)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Übung aller Sprachkompetenzen wie Hören, Sprechen, Lesen,Schreiben anhand zahlreicher allgemeinsprachlicher Themen, z.B.Reisen, Urlaub, Leben im Ausland, Schulbildung, Themen überinterkulturelle Beziehungen, aber auch studien- und berufsorientierteSachverhalte und Situationen Festigung und Erweiterung der grammatikalischen Strukturen durchÜbungen zu nominalen Angaben und Angabesätzen,Passivkonstruktionen, Konjunktiv I und Konjunktiv II Schreiben von BewerbungsdokumentenDie Ausbildung orientiert sich an der Sprachkompetenzstufe B2 desGemeinsamen Europäischen Referenzrahmens für Sprachen (GER).</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#4618a70f-c42e-11ee-b73a-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.3</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betriebswirtschaftliche Inhalte</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Das Modul umfasst folgende Angebote: InvestitionsrechnungInhalte der Veranstaltung Investitionsrechnung sind Investitionen alsGegenstand der Unternehmensführung, Modelle zur Vorteilhaftigkeits-beurteilung, Modelle für Vorteilhaftigkeitsentscheidungen bei mehrerenZielgrößen, Modelle für Nutzungsdauer-, Ersatzzeitpunkt- undInvestitionszeitpunktentscheidungen, Modelle fürProgrammentscheidungen bei Sicherheit sowie Modelle fürEinzelentscheidungen bei Unsicherheit. ProzesscontrollingInhalte der Veranstaltung sind die Wesensmerkmale und Ebenen desProzessmanagements, die Konzeptionen des Prozessscontrollingsowie die (Prozess-)Kostenrechnung, prozessbezogene Kennzahlen(-systeme), das prozessbezogene Target Costing und weitereInstrumente des Prozesscontrolling. Informationssysteme in Industrie, Handel und DienstleistungÜberblick über ERP-Systeme sowie IT-Strukturen in verschiedenenWirtschaftszweigen; praktisches Aufzeigen informationstechnischumgesetzter betriebswirtschaftlicher Konzepte, insbesondereProduktionswirtschaft/ Rechnungswesen Management in OrganisationenDer Basiskurs behandelt die wichtigsten Themen einer sozial- undverhaltenswissenschaftlichen Organisationslehre. Recht des geistigen Eigentumsdie gewerblichen Schutzrechte (Patente, Gebrauchsmuster,Geschmacksmuster, Marken) und deren wirtschaftlicher Nutzen;nationales und europäisches Recht, Besonderheiten beiArbeitnehmererfindungen, Unlauterkeitsrecht, Urheberrecht undverwandte Schutzrechte, Verletzung von gewerblichen Schutzrechten Bau- und PlanungsrechtGrundzüge des öffentlichen Baurechts (Bauplanungs- undBauordnungsrecht) samt Verzahnung mit privatem Baurecht im Lichteder Baupraxis - primär fallorientierte Darstellung; Einführung in dasallgemeine Recht staatlicher Raumplanungen, insbesondere in ihrerBedeutung für Bauvorhaben Recht und Technik- Produkthaftung (Zivilrecht, Strafrecht, Ausland, insbesondere USA)- Umwelthaftung- Normung und Zertifizierung (TGL, DIN, VDE, VDI, EN, ISO, GS-und CE-Zeichen)- Sachverständigenwesen Investitionsgütermarketing im MaschinenbauSchwerpunkt der Lehrveranstaltung sind Querschnittsthemen ausWirtschaft und Politik, welche das ingenieurtechnische Handeln inBezug auf Investitionsgüter wesentlich prägen. So sind die wirksamenMarkt- und Handelsstrukturen von Investitionsgütern wie z.B.Werkzeugmaschinen andere als bei Produkten des täglichen Bedarfsund auch die Zusammenarbeit zwischen Anbieter und Kunde ist hierbeideutlich intensiver. Es werden in diesem Sinne aus Sicht globalagierender Unternehmen u.a. Fragen beantwortet wie ein Markt aktivbeeinflusst werden kann, welche Marketinginstrumente wirksamAnlage 2: Modulbeschreibung zum Studiengang Systems Engineering mit dem AbschlussMaster of Sciencewerden, wie die Preisgestaltung bei Investitionsgütern funktioniert undschließlich wie Pflichtenhefte definiert werden. Neben derwirtschaftlichen Betrachtung wird auch die politische Dimensionbeleuchtet und erläutert wie politische Entscheidungen undRahmenbedingungen das ingenieurtechnische Handeln beeinflussenund wie ein Ingenieur die Gesellschaft aktiv mitgestalten kann. Referiertwird dabei von hochrangigen Vertretern aus Wirtschaft und Politik. Rechtliche Grundlagen der IngenieurstätigkeitDie Lehrveranstaltung befasst sich mit den vielfältigen wesentlichenrechtlichen Beziehungen, denen ein Ingenieur in seinem späterenBerufsleben ausgesetzt ist. Das betrifft die Berufstätigkeit insgesamt,und zwar sowohl für den selbständigen als auch den angestelltenIngenieur. Es stellen sich Fragen aus nahezu sämtlichen Rechtsgebie-ten, insbesondere dem Arbeitsrecht, dem Gesellschaftsrecht, dem Pa-tentrecht, dem Wettbewerbsrecht und aus dem Strafrecht. Schwer-punkte sind:- Industrieproduktion und Strafrecht in Deutschland- Produkthaftung und Verletzung fremder Rechte- Aktuelle Fallbeispiele – wie schütze ich mich vor dem Scheitern- Rechtliche Rahmenbedingungen und sonstige Umstände alsStandortfaktoren am Beispiel Tschechiens</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#461527cb-c42e-11ee-81d3-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.9</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Mining</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Vermittlung grundlegender Kenntnisse in den Themenfeldern BusinessIntelligence und Business Analytics Überblick über die wesentlichen Methoden und Technologien zurAuswertung und Mustererkennung in Daten mit statistischen Verfahren</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#461636ea-c42e-11ee-8d5f-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2.7</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technische Textilien</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Textile Werkstoffe gehören heute zu den High-Tech-Materialien, die inwachsendem Maße bei Produktinnovationen zum Einsatz kommen. Die An-wendungspalette reicht vom Airbag für das Auto, über textile Dichtungenund Filter in der Industrie, Faserverbundwerkstoffe z. B. für Sportgeräte undFlugzeuge bis zu Textilbeton, Geotextilien und auch textilen Implantaten inder Medizin sowie hochbelastbaren Zugträgern für Zugmittel in derAntriebs- und Fördertechnik. In dieser Lehrveranstaltung werden dieHerstellungsverfahren in Abhängigkeit der gewünschten Funktionalitätsowie Anwendungsbeispiele vorgestellt.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#SystemEngineering"/>
+  </rdf:Description>
+</rdf:RDF>

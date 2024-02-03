@@ -1,0 +1,814 @@
+[
+  {
+    "Modulnummer": "M-Ma01",
+    "Modulname": "Funktionalanalysis und PDE",
+    "Inhalte und Qualifikationsziele": "Neben funktionalanalytischen Grundlagen und Methoden sowie den",
+    "Leistungspunkte und Noten": "16",
+    "Arbeitsaufwand": "480"
+  },
+  {
+    "Modulnummer": "M-Ma02",
+    "Modulname": "Algebra und Diskrete Mathematik",
+    "Inhalte und Qualifikationsziele": "In diesem Modul werden sowohl abstrakte algebraische Strukturen",
+    "Leistungspunkte und Noten": "16",
+    "Arbeitsaufwand": "480"
+  },
+  {
+    "Modulnummer": "M-Ma03",
+    "Modulname": "Geometrie und Analysis",
+    "Inhalte und Qualifikationsziele": "Gegenstand dieses Moduls ist das Studium fundamentaler",
+    "Leistungspunkte und Noten": "16",
+    "Arbeitsaufwand": "480"
+  },
+  {
+    "Modulnummer": "M-Ma04",
+    "Modulname": "Angewandte Analysis",
+    "Inhalte und Qualifikationsziele": "Die angewandte Analysis verbindet rigorose mathematische",
+    "Leistungspunkte und Noten": "16",
+    "Arbeitsaufwand": "480"
+  },
+  {
+    "Modulnummer": "M-Ma05",
+    "Modulname": "Numerik und Wissenschaftliches Rechnen",
+    "Inhalte und Qualifikationsziele": "Die Disziplin Numerik und Wissenschaftliches Rechnen beschäftigt",
+    "Leistungspunkte und Noten": "16",
+    "Arbeitsaufwand": "480"
+  },
+  {
+    "Modulnummer": "M-Ma06",
+    "Modulname": "Stochastik",
+    "Inhalte und Qualifikationsziele": "Neben den mathematischen Grundlagen und Methoden sowie den",
+    "Leistungspunkte und Noten": "16",
+    "Arbeitsaufwand": "480"
+  },
+  {
+    "Modulnummer": "M-Ma07",
+    "Modulname": "Optimierung",
+    "Inhalte und Qualifikationsziele": "Es wird die Theorie des Findens der besten verfügbaren Werte einer",
+    "Leistungspunkte und Noten": "16",
+    "Arbeitsaufwand": "480"
+  },
+  {
+    "Modulnummer": "M-Ma08",
+    "Modulname": "Data Science",
+    "Inhalte und Qualifikationsziele": "Gegenstand dieses Moduls ist das Studium mathematischer",
+    "Leistungspunkte und Noten": "16",
+    "Arbeitsaufwand": "480"
+  },
+  {
+    "Modulnummer": "M-Ma09",
+    "Modulname": "Finanz- und Wirtschaftsmathematik",
+    "Inhalte und Qualifikationsziele": "Qualitative und quantitative Analyse der finanz- und",
+    "Leistungspunkte und Noten": "16",
+    "Arbeitsaufwand": "480"
+  },
+  {
+    "Modulnummer": "M-Ma10",
+    "Modulname": "Hauptseminar Reine Mathematik",
+    "Inhalte und Qualifikationsziele": "Es werden mathematische Themengebiete aus der reinen",
+    "Leistungspunkte und Noten": "6",
+    "Arbeitsaufwand": "180"
+  },
+  {
+    "Modulnummer": "M-Ma11",
+    "Modulname": "Hauptseminar Angewandte Mathematik",
+    "Inhalte und Qualifikationsziele": "Es werden mathematische Themengebiete aus der angewandten",
+    "Leistungspunkte und Noten": "6",
+    "Arbeitsaufwand": "180"
+  },
+  {
+    "Modulnummer": "M-Ma12",
+    "Modulname": "Modellierungsseminar",
+    "Inhalte und Qualifikationsziele": "In diesem einjährigen Seminar wird einzeln oder in kleinen Teams",
+    "Leistungspunkte und Noten": "8",
+    "Arbeitsaufwand": "240"
+  },
+  {
+    "Modulnummer": "M-Ma13",
+    "Modulname": "Master-Arbeit",
+    "Inhalte und Qualifikationsziele": "Im Rahmen des Moduls wird eine Masterarbeit - eine schriftliche",
+    "Leistungspunkte und Noten": "30",
+    "Arbeitsaufwand": "900"
+  },
+  {
+    "Modulnummer": "M-Ma-C01",
+    "Modulname": "Organische Chemie 2",
+    "Inhalte und Qualifikationsziele": "Aufbauend auf den Inhalten des Moduls B-Ma-C02 Organische",
+    "Leistungspunkte und Noten": "7",
+    "Arbeitsaufwand": "210"
+  },
+  {
+    "Modulnummer": "M-Ma-C02",
+    "Modulname": "Physikalische Chemie 1: Thermodynamik",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele Vorlesung und Seminar \"PC1 Thermodynamik\" Temperaturmessung Ideale und reale Gase Zustandsgrößen und -funktionen Hauptsätze der Thermodynamik Definition und Bedeutung von: Arbeit und Wärmeübertragung sowieTemperatur, innerer Energie, Enthalpie, Entropie, freier Energie und freierEnthalpie Wärmekraftmaschinen, Wärmepumpen, Wirkungsgrad, Carnot-Prozess Statistische Definition der Entropie (Boltzmann-Gleichung) Boltzmann-Verteilung Phasengleichgewichte, Clausius-Clapeyron-Gleichung, Gibbs'schePhasenregel Kalorimetrie, Reaktionswärme, Hess’scher Satz Freie Reaktionsenthalpie Mischungsentropie, Mischungsenergie Gleichgewichte zwischen koexistierenden Mischphasen Phasendiagramme von Mischphasen Raoult'sches und Henry'sches Gesetz, Destillation, Extraktion das chemische Gleichgewicht, Massenwirkungsgesetz Herleiten physikalisch-chemischer Gesetzmäßigkeiten partielle molare Größen, chemisches Potential",
+    "Leistungspunkte und Noten": "8",
+    "Arbeitsaufwand": "240"
+  },
+  {
+    "Modulnummer": "M-Ma-C03",
+    "Modulname": "Physikalische Chemie 3: Kinetik und Elektrochemie",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele Vorlesung und Seminar \"Kinetik\" Grundzüge der Chemischen Thermodynamik Kinetische Gastheorie Maxwellsche Geschwindigkeitsverteilung, Transportvorgänge, Diffusion,Viskosität, Wärmeleitung Definition der Geschwindigkeit chemischer Reaktionen und ihreexperimentelle Erfassung Reaktionsgeschwindigkeitsgesetze, Reaktionsordnung und ihreDeutung, Elementarreaktionen, konsekutive Reaktionen,geschwindigkeitsbestimmender Schritt Experimentelle Bestimmung von Reaktionsordnungen Katalysezyklen, nicht ganzzahlige Reaktionsordnungen, chemischeOszillationen Arrhenius-Gesetz, Eyring-Beziehung Experimentelle Bestimmung von Aktivierungsenergien Adiabatisch geführte Reaktionen, davonlaufende Reaktionen,Explosionen Wärmeleitung, Diffusion, Viskosität 1. und 2. Ficksches Gesetz Diffusionskontrollierte Reaktionen Herleiten physikalischer GesetzmäßigkeitenVorlesung \"Elektrochemie\" Phasengrenzen und geladene Teilchen Elektroden und Elektrolyte Elektrochemische Kinetik Methoden der experimentellen Elektrochemie",
+    "Leistungspunkte und Noten": "7",
+    "Arbeitsaufwand": "210"
+  },
+  {
+    "Modulnummer": "B-Ma-C03",
+    "Modulname": "Physikalische Chemie 4: Quantenmechanik",
+    "Inhalte und Qualifikationsziele": "Grenzen der klassischen Mechanik, Axiome der Quantenmechanik,",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-C05",
+    "Modulname": "Metallorganische Chemie und Koordinationschemie",
+    "Inhalte und Qualifikationsziele": "Vorlesung und Seminar: Das Modul vermittelt grundlegende",
+    "Leistungspunkte und Noten": "7",
+    "Arbeitsaufwand": "210"
+  },
+  {
+    "Modulnummer": "M-Ma-C06",
+    "Modulname": "Grundlagen der Makromolekularen Chemie",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Wichtige Gemeinsamkeiten und Unterschiede zwischen nieder- undhochmolekularen Verbindungen unter Berücksichtigung vonKonstitution, Konfiguration und Konformation von Makromolekülen Strukturen und Bezeichnungen der wichtigsten Elastomere,Thermoplaste und Thermosets Wichtige Begriffe und Methoden zur Charakterisierung vonMakromolekülen: Molmassenverteilung, Gewichtsmittel, Zahlenmittel,Molmassenbestimmung, Polymerisationsgrad, Viskosität,Lichtstreuung, Glasübergangspunkt, Elastizität Synthese von Polymeren, kinetische und thermodynamischeGrundlagen der Stufenpolymerisation und Kettenpolymerisation Technische Polymerisationsverfahren: Lösungspolymerisation, Emulsi-onspolymerisation, Fällungspolymerisation, Dispersionspolymerisation Reaktivität von Monomeren, elektronische und sterische Faktoren Chemie der wichtigsten radikalischen, ionischen undÜbergangsmetallkomplex-initiierten Polymerisationen Copolymerisation, Typen von Copolymeren, Copolymerisations-diagramm und Copolymerisationsparameter Polymeranaloge Reaktionen zur Funktionalisierung von Polymeren,native Polymere, Pfropfreaktionen an Polymeren Thermodynamik von Polymermischungen Charakterisierung von Polymeren",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-P01",
+    "Modulname": "Experimentalphysik II",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele Umfassende und logisch zusammenhängende Darstellung der Grundlagender modernen Physik im Rahmen experimenteller Vorlesungen zu denGebieten: Atom- und Molekülphysik Kondensierte MaterieAusgehend von der experimentellen Erfahrung soll die Struktur der Materievon den Atomen bis zur kondensierten Materie, von der qualitativenBeobachtung über die quantitative Messung bis hin zur verallgemeinerndenmathematischen Beschreibung exemplarisch und nachvollziehbardemonstriert werden.Im Physikalischen Grundpraktikum II erfolgt die Vermittlung einfacher undgrundlegender Techniken des experimentellen physikalischen Arbeitens: Versuchsvorbereitung und -planung Versuchsdurchführung Versuchsauswertung Fehlerbetrachtung Protokollführung",
+    "Leistungspunkte und Noten": "20",
+    "Arbeitsaufwand": "600"
+  },
+  {
+    "Modulnummer": "M-Ma-P02",
+    "Modulname": "Theoretische Physik II – Theoretische Mechanik, Quantentheorie",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele Theoretische Mechanik: Kinematik des Massenpunktes Newtonsche Mechanik (Axiome, Transformation zwischenBezugssystemen, Erhaltungssätze, Anwendungen) Starrer Körper, Trägheitstensor, Kreiselgleichungen Analytische Mechanik (d’Alembertsches Prinzip, Lagrangesche undHamiltonsche Mechanik, Noether-Theorem) kanonische Transformationen, Hamilton-Jacobi-GleichungQuantentheorie: experimentelle Basis, Schrödinger-Gleichung, einfache Lösungen mathematischer Apparat (Hilbertraum, Operatoren, Observable,Unschärferelationen) Drehimpuls, Wasserstoffatom, Spin, Pauli-Gleichung Näherungsverfahren Mehrdimensionale Probleme (Symmetrien, Wasserstoffmolekül)",
+    "Leistungspunkte und Noten": "20",
+    "Arbeitsaufwand": "600"
+  },
+  {
+    "Modulnummer": "M-Ma-P03",
+    "Modulname": "Theoretische Physik III – Thermodynamik/Statistische Physik,",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele Thermodynamik/Statistische Physik: konzeptionelle Basis der Thermodynamik (Gleichgewicht, reversible undirreversible Vorgänge) Zustandsgleichungen idealer und realer Gase Hauptsätze, Kreisprozesse, thermodynamische Potentiale Phasenübergänge Klassische Statistik im Phasenraum, Ergodentheorie statistische Ensemble, Anschluss an die Thermodynamik diskrete klassische und Quantensysteme (Maxwell-Boltzmann-, Bose-Einstein- und Fermi-Dirac-Statistik, Anwendungen)Elektrodynamik: Elektrostatik und Magnetostatik im Vakuum und in Medien Maxwell-Gleichungen (Induktion, Verschiebungsstrom, Potentiale) Lösungen des vollständigen Systems (Erzeugung und Ausbreitungelektromagnetischer Wellen) kovariante Formulierung der Maxwell-Gleichungen",
+    "Leistungspunkte und Noten": "20",
+    "Arbeitsaufwand": "600"
+  },
+  {
+    "Modulnummer": "M-Ma-P04",
+    "Modulname": "Computational Science I",
+    "Inhalte und Qualifikationsziele": "Wissenschaftliches Rechnen (Computational Science) ist",
+    "Leistungspunkte und Noten": "10",
+    "Arbeitsaufwand": "300"
+  },
+  {
+    "Modulnummer": "M-Ma-P05",
+    "Modulname": "Computational Science II",
+    "Inhalte und Qualifikationsziele": "Wissenschaftliches Rechnen (Computational Science) ist",
+    "Leistungspunkte und Noten": "10",
+    "Arbeitsaufwand": "300"
+  },
+  {
+    "Modulnummer": "M-Ma-I01",
+    "Modulname": "Rechnernetze",
+    "Inhalte und Qualifikationsziele": "Der Einsatz moderner Informationstechnologie und global",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I02",
+    "Modulname": "Theoretische Informatik II",
+    "Inhalte und Qualifikationsziele": "Automaten, Grammatiken, Chomsky Hierarchie, Turing Maschinen,",
+    "Leistungspunkte und Noten": "10",
+    "Arbeitsaufwand": "300"
+  },
+  {
+    "Modulnummer": "M-Ma-I03",
+    "Modulname": "Effiziente Algorithmen",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einführung in randomisierte Algorithmen Analyse der mittleren Laufzeit von Algorithmen Kompliziertere Datenstrukturen und ihre Analyse Kombinatorische Suchprobleme",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I04",
+    "Modulname": "Datenbanken Grundlagen",
+    "Inhalte und Qualifikationsziele": "Datenmodelle; Operationen; SQL; Datenmodellierung; Physische",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I05",
+    "Modulname": "Entwurf Verteilter Systeme",
+    "Inhalte und Qualifikationsziele": "Rechner- und Kommunikationsnetze und das Web haben sich in den",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I06",
+    "Modulname": "Computergraphik I",
+    "Inhalte und Qualifikationsziele": "Einführung in das Gebiet der generativen Computergraphik unter",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I07",
+    "Modulname": "Computer Aided Geometric Design",
+    "Inhalte und Qualifikationsziele": "Zur Erzeugung von Computergraphiken werden geometrische",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I08",
+    "Modulname": "Compilerbau",
+    "Inhalte und Qualifikationsziele": "Die Vorlesung stellt Konzepte und Techniken des Compilerbaus vor,",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I10",
+    "Modulname": "Quantencomputing",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Ausgehend vom klassischen Rechnen wird das Quantencomputing alsVerallgemeinerung des randominiserten Rechnens eingeführt. Anwendungen wie schnelle Faktorisierungsalgorithmen (Faktorisierungnatürlicher Zahlen in polynomial vielen Schritten) oder das schnelleSuchen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I11",
+    "Modulname": "Verteilte Algorithmik",
+    "Inhalte und Qualifikationsziele": "Es werden die klassischen Probleme der verteilten Algorithmik",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I12",
+    "Modulname": "Parallele Programmierung",
+    "Inhalte und Qualifikationsziele": "Die Inhalte der Vorlesung umfassen eine Übersicht über die",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I13",
+    "Modulname": "Wahrscheinlichkeitsrechnung und Algorithmik",
+    "Inhalte und Qualifikationsziele": "Es wird gezeigt, wie die Konzepte der Wahrscheinlichkeitsrechnung",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I14",
+    "Modulname": "Einführung in die Künstliche Intelligenz",
+    "Inhalte und Qualifikationsziele": "Einführung in das Gebiet der Künstlichen Intelligenz unter",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I15",
+    "Modulname": "Neurocomputing",
+    "Inhalte und Qualifikationsziele": "Neurocomputing behandelt Grundlagen bis hin zu anspruchsvollen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I17",
+    "Modulname": "Neurokognition I",
+    "Inhalte und Qualifikationsziele": "Die Neurokognition ist ein neuer Zweig der Kognitionswissenschaft,",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I18",
+    "Modulname": "Neurokognition II",
+    "Inhalte und Qualifikationsziele": "Die Neurokognition II beleuchtet komplexere Modelle von",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I19",
+    "Modulname": "Deep Reinforcement Learning",
+    "Inhalte und Qualifikationsziele": "Reinforcement Learning (RL) ist ein wichtiger Teil des maschinellen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-I20",
+    "Modulname": "Logik-Programmierung",
+    "Inhalte und Qualifikationsziele": "Grundkonzepte und Anwendung der Logik-Programmierung",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "231432-001(Version03)",
+    "Modulname": "Technische Mechanik III",
+    "Inhalte und Qualifikationsziele": "In diesem Modul werden fundamentale theoretische",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "231431-008(Version04)",
+    "Modulname": "Kontinuumsmechanik I",
+    "Inhalte und Qualifikationsziele": "In diesem Modul werden Kenntnisse zur linearen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "231431-009(Version05)",
+    "Modulname": "Kontinuumsmechanik II",
+    "Inhalte und Qualifikationsziele": "In diesem Modul werden vertiefte Kenntnisse zur nichtlinearen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "231432-006(Version04)",
+    "Modulname": "Numerische Dynamik flexibler Strukturen",
+    "Inhalte und Qualifikationsziele": "In diesem Modul geht es um die Modellierung und numerische",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "231432-005(Version01)",
+    "Modulname": "Numerische Dynamik thermomechanisch-gekoppelter Strukturen",
+    "Inhalte und Qualifikationsziele": "Neben flexiblen Strukturen mit rein mechanischen Eigenschaften",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "231435-003(Version05)",
+    "Modulname": "Wärmeübertragung",
+    "Inhalte und Qualifikationsziele": "Das Modul ist in acht Kapitel gegliedert. Nach einer Einleitung mit",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "231435-012(Version02)",
+    "Modulname": "Prozessthermodynamik",
+    "Inhalte und Qualifikationsziele": "Die Lehrveranstaltung baut auf den im Modul Technische",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "231733-001(Version07)",
+    "Modulname": "Antriebs-, Mechanismen- und Bewegungstechnik",
+    "Inhalte und Qualifikationsziele": "Ausgehend von der Getriebesystematik und den Antriebskonzepten",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "231733-008(Version02)",
+    "Modulname": "Bewegungsdesign, Kurven-, Schritt- und Planetengetriebe",
+    "Inhalte und Qualifikationsziele": "Durch die zunehmende Leistungsfähigkeit der heutigen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "231431-010(Version03)",
+    "Modulname": "Materialmodellierung",
+    "Inhalte und Qualifikationsziele": "In diesem Modul werden Kenntnisse vermittelt, um ein",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "241031-102(Version01)",
+    "Modulname": "Regelungstechnik 1",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Systemanalyse im Zeitbereich Reglerentwurf im Zeitbereich Systemanalyse im Frequenzbereich Analyse von Regelkreisen, Anforderungen an Regelkreise Reglerentwurf im Frequenzbereich",
+    "Leistungspunkte und Noten": "6",
+    "Arbeitsaufwand": "180"
+  },
+  {
+    "Modulnummer": "241031-103(Version01)",
+    "Modulname": "Regelungstechnik 2",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Lineare Mehrgrößensysteme und -regelungen Beobachterentwurf erweiterte Konzepte der Regelung linearer Systeme Modellreduktion",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "241031-006(Version01)",
+    "Modulname": "Nichtlineare Regelung / Nonlinear Control",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einführung und Allgemeine Eigenschaften nichtlinearer Systeme Lyapunov-Theorie basierter Reglerentwurf Singuläre Störtheorie Dissipativität und Passivität Differentialgeometrische Methoden Moderne Verfahren der nichtlinearen Regelung",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "241031-007(Version01)",
+    "Modulname": "Optimale Regelung / Optimal Control",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Endlich dimensionale Optimierung Statische Optimierung Dynamische Optimierung Variationsprobleme mit endlichem Zeithorizont, LQ-Regelung Modelprädiktive Regelung Numerische Verfahren Anwendungen aus verschiedenen Bereichen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "244033-005(Version01)",
+    "Modulname": "Numerische Methoden für Elektrotechnik",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Grundlagen der Modellierung technischer Systeme Modellierung und Simulation mit dem FEM-Programm ANSYS Modellierung diskreter Systeme mit Matrixmethoden Numerische Methoden für statische, harmonische und transienteBerechnungen, Modalanalysen, nichtlineare Systeme, gekoppelte Felder Methode zur Beschreibung technischer Feldprobleme (FDM, FEM, BEM) Praktikum mit dem CAD-System Creo und dem Finite ElementeProgramm ANSYS",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "244033-007(Version01)",
+    "Modulname": "Medizingerätetechnik",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Grundlagen und Begriffe Klassifizierung und Konformitätsbewertung Aspekte der Hygiene Biomaterialien und Kompatibilitätsprüfung Elektrische Sicherheit von Medizingeräten Schutz von Gerät und Umwelt: Schutz gegen thermische,elektromagnetische und mechanische Beanspruchung (u.a. IP-Schutzklassen, EMV), Lärmminderung Übungen zu ausgewählten Kapiteln Projektarbeit in Teams",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "241031-004(Version01)",
+    "Modulname": "Modellbildung und Identifikation dynamischer Systeme 1",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Modellbegriff Methoden der Modellbildung Blackbox- und Whitebox-Modelle Modellvalidierung Konkrete Beispiele aus Elektrotechnik, Mechanik, Thermodynamik,Biologie, Chemie",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "241031-005(Version01)",
+    "Modulname": "Modellbildung und Identifikation dynamischer Systeme 2",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einführung in die Systemidentifikation Parametrische dynamische Modelle Schätzverfahren (Bezeichnungen, Bias, Konsistenz, Ausgleichs-rechnung, mengenbasierte Verfahren, Zustandsschätzverfahren, u.a.) Optimierungsverfahren und -algorithmen erweiterte Konzepte",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261031-100(Version01)",
+    "Modulname": "Buchführung und Grundlagen der Unternehmensbesteuerung",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele Buchführung: Aufgabe und Technik der kaufmännischen Buchführung (Doppik) Buchungstechnik unter Verwendung eines Beispielkontenplans Anwendung von KI-Methoden in der Buchführung E-Learning-Modul Ordnungsmäßigkeit der Buchführung Inventur und Inventar Bilanz Buchungen auf Bestands- und Erfolgskonten Von der Eröffnungsbilanz bis zur Schlussbilanz Organisation der Buchführung Buchungen mit Umsatzsteuer Warenkonten Besonderheiten des Warenverkehrs Sachliche Abgrenzung Buchungen im anlagenwirtschaftlichen Bereich Personalwirtschaftlicher Bereich Produktionswirtschaftlicher Bereich: Erfassung vonProduktionsschritten Buchungen im finanzwirtschaftlichen Bereich Zeitliche Abgrenzung Betriebliche Steuern und Einkommensteuer Vorbereitung des JahresabschlussesGrundlagen der Unternehmensbesteuerung: Gewinn als Grundlage der Ertragsbesteuerung von Einzelunternehmen,Personen- und Kapitalgesellschaften Überblick über die Besteuerung von Unternehmen in den Rechtsformendes Einzelunternehmensoder Personengesellschaftoder Kapitalgesellschafto Grundzügeder Einkommen- und KörperschaftsteueroGewerbesteueroGrundsteueroGrunderwerb- und Umsatzsteuer sowieoErbschaft- und Schenkungsteuero Einkünfte aus Gewerbebetrieb in der Einkommensteuer Prinzip der Jahressteuer und progressiver Einkommensteuertarif Anrechnung der Gewerbesteuer auf die Einkommensteuer Verluste in den Ertragsteuern Abgeltungsteuer auf Dividenden und Veräußerungsgewinnen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261031-200(Version01)",
+    "Modulname": "Ertragsteuern",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  EinkommensteuerGewinneinkunftsartenoÜberschusseinkunftsartenoVerlustverrechnungoPersönliche Abzüge und FamilienleistungsausgleichoTarif und TarifermäßigungenoSteuerermäßigungeno Besteuerung der GesellschaftenMitunternehmerschaften, insbesondere Infektionstheorie undogewerbliche PrägungKörperschaftsteuer, insbesondere verdeckte Gewinnausschüttungound OrganschaftGewerbesteuero",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261031-201(Version01)",
+    "Modulname": "Betriebswirtschaftliche Steuerlehre",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Gegenstand und Aufgaben der Betriebswirtschaftlichen Steuerlehre Besteuerung nach der finanziellen Leistungsfähigkeit als Maßstabgerechter Lastenverteilung Messung von Steuerbelastungen Methoden der Steuerwirkungsanalyse Methoden der Steuerplanung Wirkung von Ertragsteuern auf die Vorteilhaftigkeit von Investitions- undFinanzierungsentscheidungen Wirkung von Steuern auf den periodischen Gewinnausweis Ausgewählte Anwendungsfälle, z.B.Nachhaltige Sachvergütungen von MitarbeiternoImmobilienwirtschaftoMitarbeiterbeteiligungoKryptowährungoLeasingo",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261032-200(Version01)",
+    "Modulname": "Marketinginstrumente",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Ausgewählte Marketinginstrumente im Marketingmix Kommunikation managen und ausgewählte Kommunikations-instrumente Distributionsentscheidungen fällen Preise wählen, Preisfunktionen und Preismanagement Zahlungsbereitschaften ermitteln Online- und Social Media Marketing Moderne Online-Schulungen im Online-Marketing Ausgewählte Methoden der Datengewinnung und Auswertung",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261032-201(Version01)",
+    "Modulname": "Marketingmanagement",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Marketing als Managementaufgabe Paradigmenwechsel im Marketing hin zum Beziehungsmarketing Messmethoden im Marketingmanagement Quantitative Auswertungsmethoden im Marketingmanagement Management von Kundenbeziehungen Marketingperspektive auf Kundenzufriedenheit und -loyalität Kundenwert und Bewertung von Kunden (insbesondere CustomerLiftetime Value) Branding (insbesondere Bedeutung von Marketingaktivitäten imResource-based Management) Bedeutung Markenstärke und Markenwert Messung und Management von Markenstärke und -Wert Ausgewählte Management-Tools im Marketingmanagement (z.B.Conjoint Analysen und Data Envelopment Analysis (DEA))",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261033-205(Version01)",
+    "Modulname": "Businessplanung und Management von Gründungen",
+    "Inhalte und Qualifikationsziele": "Die Studenten setzen sich mit allen Aspekten der Selbständigkeit",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261033-100(Version01)",
+    "Modulname": "Kosten- und Erlösrechnung",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Grundlegende Begriffe der Kosten- und Erlösrechnung Aufgaben und Verfahren der Kosten- und Erlösrechnung in denBereichen Kostenartenrechnung, Kostenstellenrechnung undKostenträgerrechnung Einführung in die Systeme der Kosten- und Erlösrechnung (Teil- undVollkostenrechnung, Ist- und Plankostenrechnung)",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261033-200(Version01)",
+    "Modulname": "Controlling und Interne Unternehmensrechnung",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Konzeptionen und Aufgaben des Controlling Instrumente des Controlling, insbesondere Kennzahlen(-systeme) undBudgetierung, Systeme der Kostenrechnung: Teilkosten-, Plankosten-,Prozesskostenrechnung Kostenmanagement, Target Costing, Life Cycle Costing Investitionsrechnung: Dynamische Modelle für Vorteilhaftigkeits-entscheidungen, Modelle für Nutzungsdauer- und Ersatzzeitpunkt-entscheidungen, Verfahren zur Einbeziehung von Unsicherheit",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261033-201(Version01)",
+    "Modulname": "Strategisches Management",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einführung in das strategische Management Phasen und Instrumente der strategischen Planung Strategien für das Gesamtunternehmen Strategien für Geschäftseinheiten Strategien für Funktionsbereiche Strategieimplementierung Strategische Kontrolle",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261034-200(Version01)",
+    "Modulname": "Finanzmanagement",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Investitionstheorie für Fortgeschrittene Cash Management und Liquiditätssteuerung Management der Passivseite: Kapitalkostenoptimierung Management der Aktivseite: Portfoliooptimierung, CAPM",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261034-201(Version01)",
+    "Modulname": "Finanzinstitutionen",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Grundlagen des Bankbetriebs Kapitalmarktmodelle Theorie der Finanzintermediation Teilzahlungsbanken, nachhaltige Banken, Immobilienfinanzierung Leasing, Factoring, Transaction Banking Investmentwesen Rechtliche Grundlagen für Finanzinstitutionen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261034-202(Version01)",
+    "Modulname": "Finanzbewertung",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Arbitrage und Spekulation Theorie der Information und effiziente Märkte Bewertung von festverzinslichen Wertpapieren Bewertung von Aktien (CAPM, APT) Bewertung von Optionen und Futures",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261034-300(Version01)",
+    "Modulname": "Banksteuerung",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Grundlagen der Bankleistungserbringung Erfolgsrechnung im Stück- und im Wertbereich Risikosteuerung, Value-at-Risk Kredittheorie, -würdigkeitsprüfung, Scoring, Rating Liquiditäts- und Zinsrisikosteuerung Regulatorische Anforderungen z.B. SolvV, EU 575/2013, MaRisk",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261034-301(Version01)",
+    "Modulname": "Asset Management",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Grundlagen des Asset Management Assetklassen Ausgewählte Strategien des Asset Management Anbieter und Nachfrager von Asset-Management-Leistungen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261034-302(Version01)",
+    "Modulname": "Instrumente des Kapitalmarkts",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Öffentlicher Markt, Sekundärmarkt, Privater Markt und Grauer Markt Außenhandel, Projektfinanzierung und Commodities Kreditderivate, Marktindizies und Währungsmanagement",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261034-303(Version01)",
+    "Modulname": "Risikosteuerung in Banken",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Treasury-Management, Bankbetriebliches Risikomanagement Management von Zins-, Kredit und Liquiditätsrisiken Quantitative Methoden",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261034-304(Version01)",
+    "Modulname": "Finanzvertrieb",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Recht des Vertriebs, Vertriebssteuerung Produkt-, Preispolitik, Qualitätsmanagement Vertriebskalkulation und -controlling Neuromarketing",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261034-305(Version01)",
+    "Modulname": "Praxis des Investmentbanking",
+    "Inhalte und Qualifikationsziele": "Grundlegende und spezielle Kenntnisse zum Investmentbanking",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261034-306(Version01)",
+    "Modulname": "Corporate Finance",
+    "Inhalte und Qualifikationsziele": "Das Modul beschäftigt sich primär mit den",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261035-201(Version01)",
+    "Modulname": "International Business Strategy",
+    "Inhalte und Qualifikationsziele": "Im Modul werden zentrale Konzepte und Theorien der globalen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261035-202(Version01)",
+    "Modulname": "Management in Organisationen",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Organisationen als Institutionen Grundlagen des Managements von Organisationen Organisation und Selbstorganisation Möglichkeiten und Grenzen der Führung und Steuerung Managementfunktionen, -aufgaben und -prozesse wie Zielbestimmungund Entscheidung Organisatorische Strukturgestaltung Machtstrukturen Führung und Mikropolitik Management des Wandels",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261036-200(Version01)",
+    "Modulname": "Grundlagen des Personalmanagements und der Personalführung",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Historische Entwicklung der Disziplin und deren aktuelleHerausforderungen Akteure und Handlungsfelder des Personalmanagements Verhaltenswissenschaftliche Grundlagen und Instrumente derPersonalführung Träger und Adressaten der Personalarbeit sowie Akteure im Systemindustrieller Beziehungen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261037-200(Version01)",
+    "Modulname": "Operatives Produktionsmanagement",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Advanced Planning Systeme Prognoseverfahren Modelle und Verfahren der Produktionsprogrammplanung Bestandsmanagement und Losgrößenplanung Ablaufplanung Ausgewählte Modelle und Methoden in der Produktionssteuerung",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261037-201(Version01)",
+    "Modulname": "Operations Research",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einführung in die mathematische Modellbildung Grundlagen der Entscheidungstheorie Lineare und ganzzahlige Optimierung Produktionsprogrammplanung Rundreise- und Reihenfolgeplanung Transportplanung Zuordnungsprobleme Netzplantechniken Simulation und Heuristiken",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261037-300(Version01)",
+    "Modulname": "Supply Chain Management",
+    "Inhalte und Qualifikationsziele": "Das Modul befasst sich mit dem Supply Chain Management. Im",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261037-301",
+    "Modulname": "Energie- und ressourcenorientiertes Produktionsmanagement",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Aufbau und Vertiefung von Kenntnissen zur betriebswirtschaftlichenPerspektive auf die Begriffe „Energie“, „Ressource“ und „Effizienz“ Data Envelopment Analyse als Methode der Effizienzbewertung Modellierung von Stoff- und Energieströmen durch die Material FlowAnalysis Energie- und ressourcenorientierte Fokussierung ausgewählterEntscheidungsprobleme des Produktionsmanagement wie z. B.: Nachhaltigkeitsorientierte Technologiebewertung mittels Life CycleAssessment Unit Commitment in der Energieerzeugung Recyclingorientierte Produktionsprogrammplanung Losgrößenplanung Feinplanung Einführung in Konzepte der Industrie 4.0",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261038-200(Version01)",
+    "Modulname": "Grundlagen des Technologie- und Innovationsmanagements",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Betrachtung primär technologisch geprägter Innovationsprozesse inverschiedenen Anwendungsfeldern und Kontexten von derIdeenentstehung bis zur Markteinführung bzw. -verwendung Darstellung theoretischer Modelle, konzeptionellerManagementprozesse und -methoden sowie der Ergebnisseempirischer Forschung Vorlesungen zu theoretischen Grundlagen sowie Gastvorträge zuspezifischen Themen sowie der Praxis des Technologie- undInnovationsmanagements Übung zur Anwendung und Vertiefung der theoretischen Modelle,konzeptioneller Managementprozesse und -methoden",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261040-100(Version01)",
+    "Modulname": "Jahresabschluss",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einordnung und Aufgaben der externen Rechnungslegung Grundlegende Zwecke der externen Rechnungslegung Normengerüst des periodischen Jahresabschlusses Bedeutung und Relevanz der Grundsätze ordnungsmäßigerBuchführung sowie daraus resultierender Konsequenzen fürBilanzierung und Bewertung Bilanzinhalte, Bilanzausweis und Bilanzbewertung, weitere Bestandteileder Rechnungslegung (Gewinn- und Verlust-Rechnung, Anhang,Lagebericht, Kapitalflussrechnung), Sonderfragen einzelnerBilanzpositionen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261040-300(Version01)",
+    "Modulname": "Jahresabschlusspolitik und -analyse",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Ziele und Instrumentarium der Abschlusspolitik Zwecke und Methoden der Abschlussanalyse Möglichkeiten und Grenzen der Gestaltung und Analyse von Einzel- undKonzernabschlüssen nach nationalen und internationalenRechnungslegungsregimen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261040-301(Version01)",
+    "Modulname": "Unternehmensbewertung",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Konzeptionelle Grundlagen Bewertungsanlässe Vorbereitende Maßnahmen Bewertungsverfahren Zwecke der Bewertung von Unternehmen und Unternehmensteilen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261042-200(Version01)",
+    "Modulname": "Betriebliche Umweltökonomie und Nachhaltigkeitsmanagement",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Essentielle Begrifflichkeiten des Nachhaltigkeitsmanagements sowiekonzeptionelle und strategische Grundlagen einer nachhaltigenUnternehmensführung Beiträge der primären Akteure im Feld der Nachhaltigkeit Ganzheitliche Betrachtungen, z.B. Wertschöpfungsketten undLebenszyklusansätze Instrumente einer betrieblichen Umweltökonomie und nachhaltigenUnternehmensführung in verschiedenen unternehmerischenFunktionsbereichen Praxisangewendete Methoden der empirischen Sozialforschung undderen Reflexion",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "261042-201(Version01)",
+    "Modulname": "Nachhaltigkeitsmanagement von Innovationen",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Vorstellung und Diskussion verschiedener Innovationsarten und-prozesse Besonderheiten von Nachhaltigkeitsinnovationen sowie Innovations-strategien und -modelle zur Generierung von Nachhaltigkeits-innovationen Erfassen von Nachhaltigkeitseffekten in Innovationsprozessen Analyse von Bewertungstools und systemischer Prozessgestaltung Erfolgsfaktoren für einen erfolgreichen Entwicklungsprozess vonNachhaltigkeitsinnovationen Praxisangewendete Methoden der empirischen Sozialforschung undderen Reflexion",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "262031-100(Version01)",
+    "Modulname": "Wirtschaftspolitik",
+    "Inhalte und Qualifikationsziele": "Die Veranstaltung knüpft an den Stoff der vorhergehenden",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "262035-200(Version01)",
+    "Modulname": "Internationale Wirtschaftsbeziehungen",
+    "Inhalte und Qualifikationsziele": "Das Modul Internationale Wirtschaftsbeziehungen beschäftigt sich",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "262036-200(Version01)",
+    "Modulname": "Grundlagen der empirischen Wirtschaftsforschung",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Einblick in die Anwendung wichtiger empirischer Methoden (lineareRegressionsanalyse, Hypothesentests, etc.) Unterstützung mit geeigneter Statistik/Ökonometrie-Software",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "263031-200(Version01)",
+    "Modulname": "Informationsmanagement",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Modelle, Aufgaben und Nutzen des Informationsmanagements Management der Informationswirtschaft Aufgaben des Datenmanagements, insbesondere Datenqualitäts-management Anwendungslebenszyklus Architekturmanagement Führungsaufgaben des Informationsmanagements",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "263031-202(Version01)",
+    "Modulname": "Geschäftsprozessmodellierung und -management",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Wesen und Ziele einer prozessorientierten Organisation Rolle des Architekturkonzeptes für das Geschäftsprozessmanagement Prinzipien für die Modellierung von Geschäftsprozessen Weitere Aufgabenfelder des Geschäftsprozessmanagements wieProzesssimulation, -controlling und -optimierung ARIS und Ereignisgesteuerte Prozessketten (EPK) Business Process Model and Notation (BPMN) UML-Diagrammtypen zur Prozessmodellierung Aktuelle Themen des Geschäftsprozessmanagements wie ProcessMining und Robotic Process Automation Strategisches Prozessmanagement",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "264031-100(Version01)",
+    "Modulname": "Öffentliches Wirtschaftsrecht",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Grundlagen Einführung in das BinnenmarktrechtAllgemeine LehrenoGrundfreiheiteno Einführung in das nationale WirtschaftsverfassungsrechtKompetenzverteilungoStaatsstrukturprinzipienoWirtschaftsgrundrechteo Einführung in das WirtschaftsverwaltungsrechtEinführung in das Gewerbe(neben-)rechtoRecht der öffentlichen AufträgeoSubventionsrechtoHandlungsformeno Rechtsschutz",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "264032-100(Version01)",
+    "Modulname": "Wirtschaftsprivatrecht",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Wirtschaftsprivatrecht I (Schuldverhältnisse)Recht der SchuldverhältnisseoGrundzüge des Sachenrechtso Wirtschaftsprivatrecht II (Handels- und Gesellschaftsrecht)Handelsrecht (Kaufmann, Firma und Handelsregister, Hilfspersonenodes Kaufmanns)Recht der Personen- und Kapitalgesellschaften, EuropäischeoGesellschaftsformen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-S01",
+    "Modulname": "Wahrnehmung, Psychophysik und Kognition",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Naturwissenschaftliche Prinzipien der Kognitionswissenschaften Naturwissenschaftliche Prinzipien der auditiven und visuellenInformationsverarbeitung Psychologisch-kognitionswissenschaftliche und physikalisch-technische Grundlagen von Wahrnehmung und Kognition Kritische Auseinandersetzung mit Fachliteratur im Bereich derWahrnehmungsforschung und Kognitionswissenschaften Programmierung psychophysischer und kognitionswissenschaftlicherStudien mit Echtzeitanforderungen",
+    "Leistungspunkte und Noten": "10",
+    "Arbeitsaufwand": "300"
+  },
+  {
+    "Modulnummer": "M-Ma-S02",
+    "Modulname": "Forschungsprojekt Wahrnehmung, Psychophysik und Kognition",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Fortgeschrittene Themen im Bereich Design und Durchführung vonpsychophysischen Experimenten Durchführung von Kleingruppenprojekten zu dieser Thematik",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-S03",
+    "Modulname": "Physik und Sensorik",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Fortgeschrittene Themen der Physik und Sensorik Analoge und digitale Signalverarbeitung (analoge Filter, digitale Filter,Fourier-Analyse von Signalen) Praktische Übungen zur sensorischen Erfassung physikalischerMessgrößen Sensoren im Internet der Dinge Durchführung eines Kleingruppenprojektes zu dieser Thematik",
+    "Leistungspunkte und Noten": "10",
+    "Arbeitsaufwand": "300"
+  },
+  {
+    "Modulnummer": "M-Ma-S04",
+    "Modulname": "Simulation naturwissenschaftlicher Prozesse",
+    "Inhalte und Qualifikationsziele": "Das Modul vermittelt eine Einführung in die Modellierung und",
+    "Leistungspunkte und Noten": "10",
+    "Arbeitsaufwand": "300"
+  },
+  {
+    "Modulnummer": "M-Ma-S05",
+    "Modulname": "Kognitive Psychophysiologie",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Methoden und Konzepte der kognitiven Psychophysiologie mitSchwerpunkt Elektroenzephalographie (EEG) Design geeigneter Paradigmen für die EEG-basierte Erfassung vonInformationsverarbeitungsprozessen des Menschen methodenkritische Interpretation von EEG-Daten praktische Übungen zur Aufzeichnung von EEG-Daten Grundkonzepte der Auswertung von EEG-Daten beispielhafte Kenntnis einer Analysesoftware für EEG-Daten",
+    "Leistungspunkte und Noten": "10",
+    "Arbeitsaufwand": "300"
+  },
+  {
+    "Modulnummer": "M-Ma-S06",
+    "Modulname": "Aufmerksamkeit und Augenbewegungen",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Methoden der Aufmerksamkeitsmessung Modelle von Aufmerksamkeitsprozessen Methoden der Augenbewegungsmessung Anwendungen der Augenbewegungsmessung",
+    "Leistungspunkte und Noten": "10",
+    "Arbeitsaufwand": "300"
+  },
+  {
+    "Modulnummer": "M-Ma-S07",
+    "Modulname": "Leuchtdioden, Laserdioden und optische Sensoren",
+    "Inhalte und Qualifikationsziele": "Die Vorlesung vermittelt die physikalischen Grundlagen",
+    "Leistungspunkte und Noten": "10",
+    "Arbeitsaufwand": "300"
+  },
+  {
+    "Modulnummer": "M-Ma-S08",
+    "Modulname": "Neurophysik",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Biophysikalische Grundlagen neuronaler Verarbeitung Schaltkreismodelle neuronaler Verarbeitung Signalübertragung in neuronalen Systemen Neuronale Kodierung Neuronale Netzwerke Synaptische Übertragung Lernprozesse",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-PS01",
+    "Modulname": "Arbeits- und Organisationspsychologie",
+    "Inhalte und Qualifikationsziele": "Theoretische Grundlagen und wissenschaftliche Methoden arbeits-",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-PS02",
+    "Modulname": "Diversität und Intergruppenbeziehungen",
+    "Inhalte und Qualifikationsziele": "Herausforderungen und Chancen von Vielfalt in Gesellschaft und in",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-PS03",
+    "Modulname": "Grundlagen der Gerontopsychologie",
+    "Inhalte und Qualifikationsziele": "Einführung in grundlegende Theorien der Gerontologie und",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-PS04",
+    "Modulname": "Angewandte Gerontopsychologie",
+    "Inhalte und Qualifikationsziele": "Theorien, Methoden und Befunde der Gerontopsychologie,",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-PS05",
+    "Modulname": "Human Factors",
+    "Inhalte und Qualifikationsziele": "Qualifikationsziele  Kognitive Ergonomie Arbeitsplatz- und Arbeitsmittelgestaltung Produktdesign Mensch-Maschine-Systeme Automatisierung",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-PS06",
+    "Modulname": "Gesundheits- und Qualitätsmanagement",
+    "Inhalte und Qualifikationsziele": "Das Modul beinhaltet ökonomische und betriebswirtschaftliche",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-PS07",
+    "Modulname": "Vertiefende Aspekte des Gesundheitsmanagements",
+    "Inhalte und Qualifikationsziele": "Das Modul beinhaltet Themen des betrieblichen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-PS08",
+    "Modulname": "Gesundheitssoziologie",
+    "Inhalte und Qualifikationsziele": "In der Vorlesung zur Gesundheitssoziologie werden die zentralen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "M-Ma-PS09",
+    "Modulname": "Pädagogische und psychologische Aspekte in der Gesundheitsförderung",
+    "Inhalte und Qualifikationsziele": "Das Modul behandelt die pädagogische und psychologische",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  }
+]

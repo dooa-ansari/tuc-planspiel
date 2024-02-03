@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://tuc/web/engineering/module#"
+   xmlns:ns2="http://tuc.web.engineering/module#"
+   xmlns:ns3="http://tuc/course#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da9f25f-c42f-11ee-bbbd-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261034-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finanzmanagement</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Investitionstheorie für Fortgeschrittene Cash Management und Liquiditätssteuerung Management der Passivseite: Kapitalkostenoptimierung Management der Aktivseite: Portfoliooptimierung, CAPM</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dafab5f-c42f-11ee-b517-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-S02</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forschungsprojekt Wahrnehmung, Psychophysik und Kognition</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Fortgeschrittene Themen im Bereich Design und Durchführung vonpsychophysischen Experimenten Durchführung von Kleingruppenprojekten zu dieser Thematik</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dab949e-c42f-11ee-8e6f-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261034-304(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finanzvertrieb</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Recht des Vertriebs, Vertriebssteuerung Produkt-, Preispolitik, Qualitätsmanagement Vertriebskalkulation und -controlling Neuromarketing</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dabc12a-c42f-11ee-a0b9-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261034-305(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Praxis des Investmentbanking</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundlegende und spezielle Kenntnisse zum Investmentbanking</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daedeae-c42f-11ee-883f-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">263031-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informationsmanagement</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Modelle, Aufgaben und Nutzen des Informationsmanagements Management der Informationswirtschaft Aufgaben des Datenmanagements, insbesondere Datenqualitäts-management Anwendungslebenszyklus Architekturmanagement Führungsaufgaben des Informationsmanagements</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da35e3d-c42f-11ee-b919-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I17</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurokognition I</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Neurokognition ist ein neuer Zweig der Kognitionswissenschaft,</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9d38e8-c42f-11ee-8eb4-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma07</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optimierung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es wird die Theorie des Findens der besten verfügbaren Werte einer</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da94f14-c42f-11ee-95e9-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261033-100(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kosten- und Erlösrechnung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Grundlegende Begriffe der Kosten- und Erlösrechnung Aufgaben und Verfahren der Kosten- und Erlösrechnung in denBereichen Kostenartenrechnung, Kostenstellenrechnung undKostenträgerrechnung Einführung in die Systeme der Kosten- und Erlösrechnung (Teil- undVollkostenrechnung, Ist- und Plankostenrechnung)</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da4353c-c42f-11ee-9354-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I20</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logik-Programmierung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundkonzepte und Anwendung der Logik-Programmierung</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da5db64-c42f-11ee-b3df-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231733-001(Version07)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antriebs-, Mechanismen- und Bewegungstechnik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ausgehend von der Getriebesystematik und den Antriebskonzepten</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db1cbfb-c42f-11ee-88d5-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-PS08</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gesundheitssoziologie</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In der Vorlesung zur Gesundheitssoziologie werden die zentralen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dab2c2b-c42f-11ee-8a02-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261034-302(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instrumente des Kapitalmarkts</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Öffentlicher Markt, Sekundärmarkt, Privater Markt und Grauer Markt Außenhandel, Projektfinanzierung und Commodities Kreditderivate, Marktindizies und Währungsmanagement</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da2e910-c42f-11ee-b8d5-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I14</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Einführung in die Künstliche Intelligenz</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Einführung in das Gebiet der Künstlichen Intelligenz unter</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da69ed5-c42f-11ee-a17d-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-006(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nichtlineare Regelung / Nonlinear Control</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einführung und Allgemeine Eigenschaften nichtlinearer Systeme Lyapunov-Theorie basierter Reglerentwurf Singuläre Störtheorie Dissipativität und Passivität Differentialgeometrische Methoden Moderne Verfahren der nichtlinearen Regelung</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daf7c1e-c42f-11ee-aa13-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-S01</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wahrnehmung, Psychophysik und Kognition</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Naturwissenschaftliche Prinzipien der Kognitionswissenschaften Naturwissenschaftliche Prinzipien der auditiven und visuellenInformationsverarbeitung Psychologisch-kognitionswissenschaftliche und physikalisch-technische Grundlagen von Wahrnehmung und Kognition Kritische Auseinandersetzung mit Fachliteratur im Bereich derWahrnehmungsforschung und Kognitionswissenschaften Programmierung psychophysischer und kognitionswissenschaftlicherStudien mit Echtzeitanforderungen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da13b4c-c42f-11ee-b639-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I08</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compilerbau</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Vorlesung stellt Konzepte und Techniken des Compilerbaus vor,</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da225b6-c42f-11ee-bd8c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I11</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verteilte Algorithmik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es werden die klassischen Probleme der verteilten Algorithmik</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da677c5-c42f-11ee-8891-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-103(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regelungstechnik 2</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Lineare Mehrgrößensysteme und -regelungen Beobachterentwurf erweiterte Konzepte der Regelung linearer Systeme Modellreduktion</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da9b599-c42f-11ee-b4fc-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261033-201(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategisches Management</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einführung in das strategische Management Phasen und Instrumente der strategischen Planung Strategien für das Gesamtunternehmen Strategien für Geschäftseinheiten Strategien für Funktionsbereiche Strategieimplementierung Strategische Kontrolle</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da8ad57-c42f-11ee-977f-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261032-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketinginstrumente</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Ausgewählte Marketinginstrumente im Marketingmix Kommunikation managen und ausgewählte Kommunikations-instrumente Distributionsentscheidungen fällen Preise wählen, Preisfunktionen und Preismanagement Zahlungsbereitschaften ermitteln Online- und Social Media Marketing Moderne Online-Schulungen im Online-Marketing Ausgewählte Methoden der Datengewinnung und Auswertung</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da87e0f-c42f-11ee-8f4e-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261031-201(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betriebswirtschaftliche Steuerlehre</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Gegenstand und Aufgaben der Betriebswirtschaftlichen Steuerlehre Besteuerung nach der finanziellen Leistungsfähigkeit als Maßstabgerechter Lastenverteilung Messung von Steuerbelastungen Methoden der Steuerwirkungsanalyse Methoden der Steuerplanung Wirkung von Ertragsteuern auf die Vorteilhaftigkeit von Investitions- undFinanzierungsentscheidungen Wirkung von Steuern auf den periodischen Gewinnausweis Ausgewählte Anwendungsfälle, z.B.Nachhaltige Sachvergütungen von MitarbeiternoImmobilienwirtschaftoMitarbeiterbeteiligungoKryptowährungoLeasingo</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db17dda-c42f-11ee-b0b8-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-PS06</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gesundheits- und Qualitätsmanagement</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul beinhaltet ökonomische und betriebswirtschaftliche</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dac9814-c42f-11ee-8d79-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261037-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operatives Produktionsmanagement</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Advanced Planning Systeme Prognoseverfahren Modelle und Verfahren der Produktionsprogrammplanung Bestandsmanagement und Losgrößenplanung Ablaufplanung Ausgewählte Modelle und Methoden in der Produktionssteuerung</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dac1cc2-c42f-11ee-ba8b-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261035-201(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International Business Strategy</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Im Modul werden zentrale Konzepte und Theorien der globalen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da0781d-c42f-11ee-99f2-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I04</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datenbanken Grundlagen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datenmodelle; Operationen; SQL; Datenmodellierung; Physische</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dad267d-c42f-11ee-9a1d-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261037-301</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energie- und ressourcenorientiertes Produktionsmanagement</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Aufbau und Vertiefung von Kenntnissen zur betriebswirtschaftlichenPerspektive auf die Begriffe „Energie“, „Ressource“ und „Effizienz“ Data Envelopment Analyse als Methode der Effizienzbewertung Modellierung von Stoff- und Energieströmen durch die Material FlowAnalysis Energie- und ressourcenorientierte Fokussierung ausgewählterEntscheidungsprobleme des Produktionsmanagement wie z. B.: Nachhaltigkeitsorientierte Technologiebewertung mittels Life CycleAssessment Unit Commitment in der Energieerzeugung Recyclingorientierte Produktionsprogrammplanung Losgrößenplanung Feinplanung Einführung in Konzepte der Industrie 4.0</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daffe3f-c42f-11ee-9d8f-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-S04</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simulation naturwissenschaftlicher Prozesse</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul vermittelt eine Einführung in die Modellierung und</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da7b030-c42f-11ee-ba7b-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261031-100(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buchführung und Grundlagen der Unternehmensbesteuerung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Buchführung: Aufgabe und Technik der kaufmännischen Buchführung (Doppik) Buchungstechnik unter Verwendung eines Beispielkontenplans Anwendung von KI-Methoden in der Buchführung E-Learning-Modul Ordnungsmäßigkeit der Buchführung Inventur und Inventar Bilanz Buchungen auf Bestands- und Erfolgskonten Von der Eröffnungsbilanz bis zur Schlussbilanz Organisation der Buchführung Buchungen mit Umsatzsteuer Warenkonten Besonderheiten des Warenverkehrs Sachliche Abgrenzung Buchungen im anlagenwirtschaftlichen Bereich Personalwirtschaftlicher Bereich Produktionswirtschaftlicher Bereich: Erfassung vonProduktionsschritten Buchungen im finanzwirtschaftlichen Bereich Zeitliche Abgrenzung Betriebliche Steuern und Einkommensteuer Vorbereitung des JahresabschlussesGrundlagen der Unternehmensbesteuerung: Gewinn als Grundlage der Ertragsbesteuerung von Einzelunternehmen,Personen- und Kapitalgesellschaften Überblick über die Besteuerung von Unternehmen in den Rechtsformendes Einzelunternehmensoder Personengesellschaftoder Kapitalgesellschafto Grundzügeder Einkommen- und KörperschaftsteueroGewerbesteueroGrundsteueroGrunderwerb- und Umsatzsteuer sowieoErbschaft- und Schenkungsteuero Einkünfte aus Gewerbebetrieb in der Einkommensteuer Prinzip der Jahressteuer und progressiver Einkommensteuertarif Anrechnung der Gewerbesteuer auf die Einkommensteuer Verluste in den Ertragsteuern Abgeltungsteuer auf Dividenden und Veräußerungsgewinnen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daaeeed-c42f-11ee-bcf5-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261034-301(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asset Management</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Grundlagen des Asset Management Assetklassen Ausgewählte Strategien des Asset Management Anbieter und Nachfrager von Asset-Management-Leistungen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9f8d9b-c42f-11ee-a531-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-P03</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theoretische Physik III – Thermodynamik/Statistische Physik,</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Thermodynamik/Statistische Physik: konzeptionelle Basis der Thermodynamik (Gleichgewicht, reversible undirreversible Vorgänge) Zustandsgleichungen idealer und realer Gase Hauptsätze, Kreisprozesse, thermodynamische Potentiale Phasenübergänge Klassische Statistik im Phasenraum, Ergodentheorie statistische Ensemble, Anschluss an die Thermodynamik diskrete klassische und Quantensysteme (Maxwell-Boltzmann-, Bose-Einstein- und Fermi-Dirac-Statistik, Anwendungen)Elektrodynamik: Elektrostatik und Magnetostatik im Vakuum und in Medien Maxwell-Gleichungen (Induktion, Verschiebungsstrom, Potentiale) Lösungen des vollständigen Systems (Erzeugung und Ausbreitungelektromagnetischer Wellen) kovariante Formulierung der Maxwell-Gleichungen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9dd528-c42f-11ee-bf01-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma11</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hauptseminar Angewandte Mathematik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es werden mathematische Themengebiete aus der angewandten</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daa65fe-c42f-11ee-a471-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261034-202(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finanzbewertung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Arbitrage und Spekulation Theorie der Information und effiziente Märkte Bewertung von festverzinslichen Wertpapieren Bewertung von Aktien (CAPM, APT) Bewertung von Optionen und Futures</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dacc0a4-c42f-11ee-926e-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261037-201(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operations Research</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einführung in die mathematische Modellbildung Grundlagen der Entscheidungstheorie Lineare und ganzzahlige Optimierung Produktionsprogrammplanung Rundreise- und Reihenfolgeplanung Transportplanung Zuordnungsprobleme Netzplantechniken Simulation und Heuristiken</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da002ca-c42f-11ee-bb03-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I01</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rechnernetze</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Der Einsatz moderner Informationstechnologie und global</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dae28cf-c42f-11ee-b09c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261042-201(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nachhaltigkeitsmanagement von Innovationen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Vorstellung und Diskussion verschiedener Innovationsarten und-prozesse Besonderheiten von Nachhaltigkeitsinnovationen sowie Innovations-strategien und -modelle zur Generierung von Nachhaltigkeits-innovationen Erfassen von Nachhaltigkeitseffekten in Innovationsprozessen Analyse von Bewertungstools und systemischer Prozessgestaltung Erfolgsfaktoren für einen erfolgreichen Entwicklungsprozess vonNachhaltigkeitsinnovationen Praxisangewendete Methoden der empirischen Sozialforschung undderen Reflexion</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da11444-c42f-11ee-9b8a-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I07</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Aided Geometric Design</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zur Erzeugung von Computergraphiken werden geometrische</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daeb67c-c42f-11ee-8836-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">262036-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundlagen der empirischen Wirtschaftsforschung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einblick in die Anwendung wichtiger empirischer Methoden (lineareRegressionsanalyse, Hypothesentests, etc.) Unterstützung mit geeigneter Statistik/Ökonometrie-Software</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9fdbba-c42f-11ee-8eab-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-P05</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computational Science II</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wissenschaftliches Rechnen (Computational Science) ist</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dabf36a-c42f-11ee-96e5-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261034-306(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate Finance</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul beschäftigt sich primär mit den</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da78919-c42f-11ee-9931-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-005(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modellbildung und Identifikation dynamischer Systeme 2</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einführung in die Systemidentifikation Parametrische dynamische Modelle Schätzverfahren (Bezeichnungen, Bias, Konsistenz, Ausgleichs-rechnung, mengenbasierte Verfahren, Zustandsschätzverfahren, u.a.) Optimierungsverfahren und -algorithmen erweiterte Konzepte</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daac1a3-c42f-11ee-9476-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261034-300(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banksteuerung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Grundlagen der Bankleistungserbringung Erfolgsrechnung im Stück- und im Wertbereich Risikosteuerung, Value-at-Risk Kredittheorie, -würdigkeitsprüfung, Scoring, Rating Liquiditäts- und Zinsrisikosteuerung Regulatorische Anforderungen z.B. SolvV, EU 575/2013, MaRisk</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da546bc-c42f-11ee-a0f7-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231435-003(Version05)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wärmeübertragung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul ist in acht Kapitel gegliedert. Nach einer Einleitung mit</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dadffd4-c42f-11ee-b294-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261042-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betriebliche Umweltökonomie und Nachhaltigkeitsmanagement</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Essentielle Begrifflichkeiten des Nachhaltigkeitsmanagements sowiekonzeptionelle und strategische Grundlagen einer nachhaltigenUnternehmensführung Beiträge der primären Akteure im Feld der Nachhaltigkeit Ganzheitliche Betrachtungen, z.B. Wertschöpfungsketten undLebenszyklusansätze Instrumente einer betrieblichen Umweltökonomie und nachhaltigenUnternehmensführung in verschiedenen unternehmerischenFunktionsbereichen Praxisangewendete Methoden der empirischen Sozialforschung undderen Reflexion</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da3c009-c42f-11ee-be47-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I18</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurokognition II</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Neurokognition II beleuchtet komplexere Modelle von</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db156ce-c42f-11ee-b019-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-PS05</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Factors</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Kognitive Ergonomie Arbeitsplatz- und Arbeitsmittelgestaltung Produktdesign Mensch-Maschine-Systeme Automatisierung</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da6c5d1-c42f-11ee-8776-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-007(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optimale Regelung / Optimal Control</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Endlich dimensionale Optimierung Statische Optimierung Dynamische Optimierung Variationsprobleme mit endlichem Zeithorizont, LQ-Regelung Modelprädiktive Regelung Numerische Verfahren Anwendungen aus verschiedenen Bereichen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da273c8-c42f-11ee-8533-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I12</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parallele Programmierung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Inhalte der Vorlesung umfassen eine Übersicht über die</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da0c62e-c42f-11ee-8d9c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I05</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entwurf Verteilter Systeme</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rechner- und Kommunikationsnetze und das Web haben sich in den</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9d5ff7-c42f-11ee-9a51-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma08</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Science</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gegenstand dieses Moduls ist das Studium mathematischer</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dafd598-c42f-11ee-8378-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-S03</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physik und Sensorik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Fortgeschrittene Themen der Physik und Sensorik Analoge und digitale Signalverarbeitung (analoge Filter, digitale Filter,Fourier-Analyse von Signalen) Praktische Übungen zur sensorischen Erfassung physikalischerMessgrößen Sensoren im Internet der Dinge Durchführung eines Kleingruppenprojektes zu dieser Thematik</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da713f1-c42f-11ee-a329-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">244033-007(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medizingerätetechnik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Grundlagen und Begriffe Klassifizierung und Konformitätsbewertung Aspekte der Hygiene Biomaterialien und Kompatibilitätsprüfung Elektrische Sicherheit von Medizingeräten Schutz von Gerät und Umwelt: Schutz gegen thermische,elektromagnetische und mechanische Beanspruchung (u.a. IP-Schutzklassen, EMV), Lärmminderung Übungen zu ausgewählten Kapiteln Projektarbeit in Teams</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db0cd9e-c42f-11ee-9746-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-PS01</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arbeits- und Organisationspsychologie</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theoretische Grundlagen und wissenschaftliche Methoden arbeits-</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dadbc53-c42f-11ee-bc02-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261040-300(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jahresabschlusspolitik und -analyse</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Ziele und Instrumentarium der Abschlusspolitik Zwecke und Methoden der Abschlussanalyse Möglichkeiten und Grenzen der Gestaltung und Analyse von Einzel- undKonzernabschlüssen nach nationalen und internationalenRechnungslegungsregimen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9ce29f-c42f-11ee-b638-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma04</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angewandte Analysis</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die angewandte Analysis verbindet rigorose mathematische</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db12fb5-c42f-11ee-b3b9-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-PS04</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angewandte Gerontopsychologie</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theorien, Methoden und Befunde der Gerontopsychologie,</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9f1895-c42f-11ee-8cca-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-C06</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundlagen der Makromolekularen Chemie</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Wichtige Gemeinsamkeiten und Unterschiede zwischen nieder- undhochmolekularen Verbindungen unter Berücksichtigung vonKonstitution, Konfiguration und Konformation von Makromolekülen Strukturen und Bezeichnungen der wichtigsten Elastomere,Thermoplaste und Thermosets Wichtige Begriffe und Methoden zur Charakterisierung vonMakromolekülen: Molmassenverteilung, Gewichtsmittel, Zahlenmittel,Molmassenbestimmung, Polymerisationsgrad, Viskosität,Lichtstreuung, Glasübergangspunkt, Elastizität Synthese von Polymeren, kinetische und thermodynamischeGrundlagen der Stufenpolymerisation und Kettenpolymerisation Technische Polymerisationsverfahren: Lösungspolymerisation, Emulsi-onspolymerisation, Fällungspolymerisation, Dispersionspolymerisation Reaktivität von Monomeren, elektronische und sterische Faktoren Chemie der wichtigsten radikalischen, ionischen undÜbergangsmetallkomplex-initiierten Polymerisationen Copolymerisation, Typen von Copolymeren, Copolymerisations-diagramm und Copolymerisationsparameter Polymeranaloge Reaktionen zur Funktionalisierung von Polymeren,native Polymere, Pfropfreaktionen an Polymeren Thermodynamik von Polymermischungen Charakterisierung von Polymeren</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daa27ed-c42f-11ee-88c2-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261034-201(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finanzinstitutionen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Grundlagen des Bankbetriebs Kapitalmarktmodelle Theorie der Finanzintermediation Teilzahlungsbanken, nachhaltige Banken, Immobilienfinanzierung Leasing, Factoring, Transaction Banking Investmentwesen Rechtliche Grundlagen für Finanzinstitutionen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9eca69-c42f-11ee-afb3-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B-Ma-C03</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physikalische Chemie 4: Quantenmechanik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grenzen der klassischen Mechanik, Axiome der Quantenmechanik,</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9d11a9-c42f-11ee-b096-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma06</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stochastik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neben den mathematischen Grundlagen und Methoden sowie den</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da602a2-c42f-11ee-a0ee-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231733-008(Version02)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bewegungsdesign, Kurven-, Schritt- und Planetengetriebe</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Durch die zunehmende Leistungsfähigkeit der heutigen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dac46a3-c42f-11ee-96ef-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261035-202(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management in Organisationen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Organisationen als Institutionen Grundlagen des Managements von Organisationen Organisation und Selbstorganisation Möglichkeiten und Grenzen der Führung und Steuerung Managementfunktionen, -aufgaben und -prozesse wie Zielbestimmungund Entscheidung Organisatorische Strukturgestaltung Machtstrukturen Führung und Mikropolitik Management des Wandels</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da650b4-c42f-11ee-88b6-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-102(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regelungstechnik 1</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Systemanalyse im Zeitbereich Reglerentwurf im Zeitbereich Systemanalyse im Frequenzbereich Analyse von Regelkreisen, Anforderungen an Regelkreise Reglerentwurf im Frequenzbereich</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9f6695-c42f-11ee-8697-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-P02</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theoretische Physik II – Theoretische Mechanik, Quantentheorie</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Theoretische Mechanik: Kinematik des Massenpunktes Newtonsche Mechanik (Axiome, Transformation zwischenBezugssystemen, Erhaltungssätze, Anwendungen) Starrer Körper, Trägheitstensor, Kreiselgleichungen Analytische Mechanik (d’Alembertsches Prinzip, Lagrangesche undHamiltonsche Mechanik, Noether-Theorem) kanonische Transformationen, Hamilton-Jacobi-GleichungQuantentheorie: experimentelle Basis, Schrödinger-Gleichung, einfache Lösungen mathematischer Apparat (Hilbertraum, Operatoren, Observable,Unschärferelationen) Drehimpuls, Wasserstoffatom, Spin, Pauli-Gleichung Näherungsverfahren Mehrdimensionale Probleme (Symmetrien, Wasserstoffmolekül)</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da40e32-c42f-11ee-9f3e-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I19</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deep Reinforcement Learning</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reinforcement Learning (RL) ist ein wichtiger Teil des maschinellen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daf3001-c42f-11ee-9cb8-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">264031-100(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Öffentliches Wirtschaftsrecht</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Grundlagen Einführung in das BinnenmarktrechtAllgemeine LehrenoGrundfreiheiteno Einführung in das nationale WirtschaftsverfassungsrechtKompetenzverteilungoStaatsstrukturprinzipienoWirtschaftsgrundrechteo Einführung in das WirtschaftsverwaltungsrechtEinführung in das Gewerbe(neben-)rechtoRecht der öffentlichen AufträgeoSubventionsrechtoHandlungsformeno Rechtsschutz</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daf5866-c42f-11ee-b8f6-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">264032-100(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wirtschaftsprivatrecht</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Wirtschaftsprivatrecht I (Schuldverhältnisse)Recht der SchuldverhältnisseoGrundzüge des Sachenrechtso Wirtschaftsprivatrecht II (Handels- und Gesellschaftsrecht)Handelsrecht (Kaufmann, Firma und Handelsregister, Hilfspersonenodes Kaufmanns)Recht der Personen- und Kapitalgesellschaften, EuropäischeoGesellschaftsformen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9cbb8e-c42f-11ee-87ae-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma03</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geometrie und Analysis</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gegenstand dieses Moduls ist das Studium fundamentaler</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9dfc38-c42f-11ee-b29c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma12</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modellierungsseminar</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In diesem einjährigen Seminar wird einzeln oder in kleinen Teams</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db05707-c42f-11ee-b9a4-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-S06</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aufmerksamkeit und Augenbewegungen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Methoden der Aufmerksamkeitsmessung Modelle von Aufmerksamkeitsprozessen Methoden der Augenbewegungsmessung Anwendungen der Augenbewegungsmessung</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da1b080-c42f-11ee-be61-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I10</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quantencomputing</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Ausgehend vom klassischen Rechnen wird das Quantencomputing alsVerallgemeinerung des randominiserten Rechnens eingeführt. Anwendungen wie schnelle Faktorisierungsalgorithmen (Faktorisierungnatürlicher Zahlen in polynomial vielen Schritten) oder das schnelleSuchen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da31026-c42f-11ee-a6fd-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I15</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurocomputing</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurocomputing behandelt Grundlagen bis hin zu anspruchsvollen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dac6f2d-c42f-11ee-9ec1-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261036-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundlagen des Personalmanagements und der Personalführung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Historische Entwicklung der Disziplin und deren aktuelleHerausforderungen Akteure und Handlungsfelder des Personalmanagements Verhaltenswissenschaftliche Grundlagen und Instrumente derPersonalführung Träger und Adressaten der Personalarbeit sowie Akteure im Systemindustrieller Beziehungen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da594df-c42f-11ee-9540-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231435-012(Version02)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prozessthermodynamik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Lehrveranstaltung baut auf den im Modul Technische</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dacea0f-c42f-11ee-a848-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261037-300(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supply Chain Management</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul befasst sich mit dem Supply Chain Management. Im</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da51f9e-c42f-11ee-9278-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231432-005(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerische Dynamik thermomechanisch-gekoppelter Strukturen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neben flexiblen Strukturen mit rein mechanischen Eigenschaften</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db0a695-c42f-11ee-b473-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-S08</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurophysik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Biophysikalische Grundlagen neuronaler Verarbeitung Schaltkreismodelle neuronaler Verarbeitung Signalübertragung in neuronalen Systemen Neuronale Kodierung Neuronale Netzwerke Synaptische Übertragung Lernprozesse</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da629b5-c42f-11ee-808a-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231431-010(Version03)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Materialmodellierung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In diesem Modul werden Kenntnisse vermittelt, um ein</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2daf0781-c42f-11ee-bbf8-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">263031-202(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geschäftsprozessmodellierung und -management</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Wesen und Ziele einer prozessorientierten Organisation Rolle des Architekturkonzeptes für das Geschäftsprozessmanagement Prinzipien für die Modellierung von Geschäftsprozessen Weitere Aufgabenfelder des Geschäftsprozessmanagements wieProzesssimulation, -controlling und -optimierung ARIS und Ereignisgesteuerte Prozessketten (EPK) Business Process Model and Notation (BPMN) UML-Diagrammtypen zur Prozessmodellierung Aktuelle Themen des Geschäftsprozessmanagements wie ProcessMining und Robotic Process Automation Strategisches Prozessmanagement</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da45c4a-c42f-11ee-ae7c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231432-001(Version03)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technische Mechanik III</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In diesem Modul werden fundamentale theoretische</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9c6d7d-c42f-11ee-82c6-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma01</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funktionalanalysis und PDE</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neben funktionalanalytischen Grundlagen und Methoden sowie den</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dab54ee-c42f-11ee-93ed-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261034-303(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Risikosteuerung in Banken</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Treasury-Management, Bankbetriebliches Risikomanagement Management von Zins-, Kredit und Liquiditätsrisiken Quantitative Methoden</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da7d701-c42f-11ee-bfd8-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261031-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ertragsteuern</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  EinkommensteuerGewinneinkunftsartenoÜberschusseinkunftsartenoVerlustverrechnungoPersönliche Abzüge und FamilienleistungsausgleichoTarif und TarifermäßigungenoSteuerermäßigungeno Besteuerung der GesellschaftenMitunternehmerschaften, insbesondere Infektionstheorie undogewerbliche PrägungKörperschaftsteuer, insbesondere verdeckte Gewinnausschüttungound OrganschaftGewerbesteuero</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9d11a8-c42f-11ee-a0e3-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma05</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerik und Wissenschaftliches Rechnen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Disziplin Numerik und Wissenschaftliches Rechnen beschäftigt</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da2c24f-c42f-11ee-85f7-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I13</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wahrscheinlichkeitsrechnung und Algorithmik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es wird gezeigt, wie die Konzepte der Wahrscheinlichkeitsrechnung</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dadd613-c42f-11ee-8510-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261040-301(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unternehmensbewertung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Konzeptionelle Grundlagen Bewertungsanlässe Vorbereitende Maßnahmen Bewertungsverfahren Zwecke der Bewertung von Unternehmen und Unternehmensteilen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9dae18-c42f-11ee-ae96-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma10</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hauptseminar Reine Mathematik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es werden mathematische Themengebiete aus der reinen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9d8706-c42f-11ee-b0a3-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma09</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finanz- und Wirtschaftsmathematik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualitative und quantitative Analyse der finanz- und</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9c948b-c42f-11ee-9237-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma02</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algebra und Diskrete Mathematik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In diesem Modul werden sowohl abstrakte algebraische Strukturen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da029db-c42f-11ee-bd80-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I02</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theoretische Informatik II</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automaten, Grammatiken, Chomsky Hierarchie, Turing Maschinen,</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db0e1a8-c42f-11ee-9f5d-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-PS02</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diversität und Intergruppenbeziehungen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herausforderungen und Chancen von Vielfalt in Gesellschaft und in</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db1a4e5-c42f-11ee-9e54-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-PS07</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vertiefende Aspekte des Gesundheitsmanagements</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul beinhaltet Themen des betrieblichen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9ea358-c42f-11ee-bdcf-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-C03</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physikalische Chemie 3: Kinetik und Elektrochemie</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Vorlesung und Seminar "Kinetik" Grundzüge der Chemischen Thermodynamik Kinetische Gastheorie Maxwellsche Geschwindigkeitsverteilung, Transportvorgänge, Diffusion,Viskosität, Wärmeleitung Definition der Geschwindigkeit chemischer Reaktionen und ihreexperimentelle Erfassung Reaktionsgeschwindigkeitsgesetze, Reaktionsordnung und ihreDeutung, Elementarreaktionen, konsekutive Reaktionen,geschwindigkeitsbestimmender Schritt Experimentelle Bestimmung von Reaktionsordnungen Katalysezyklen, nicht ganzzahlige Reaktionsordnungen, chemischeOszillationen Arrhenius-Gesetz, Eyring-Beziehung Experimentelle Bestimmung von Aktivierungsenergien Adiabatisch geführte Reaktionen, davonlaufende Reaktionen,Explosionen Wärmeleitung, Diffusion, Viskosität 1. und 2. Ficksches Gesetz Diffusionskontrollierte Reaktionen Herleiten physikalischer GesetzmäßigkeitenVorlesung "Elektrochemie" Phasengrenzen und geladene Teilchen Elektroden und Elektrolyte Elektrochemische Kinetik Methoden der experimentellen Elektrochemie</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9ef172-c42f-11ee-97c0-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-C05</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metallorganische Chemie und Koordinationschemie</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorlesung und Seminar: Das Modul vermittelt grundlegende</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dad7f35-c42f-11ee-a50a-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261040-100(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jahresabschluss</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einordnung und Aufgaben der externen Rechnungslegung Grundlegende Zwecke der externen Rechnungslegung Normengerüst des periodischen Jahresabschlusses Bedeutung und Relevanz der Grundsätze ordnungsmäßigerBuchführung sowie daraus resultierender Konsequenzen fürBilanzierung und Bewertung Bilanzinhalte, Bilanzausweis und Bilanzbewertung, weitere Bestandteileder Rechnungslegung (Gewinn- und Verlust-Rechnung, Anhang,Lagebericht, Kapitalflussrechnung), Sonderfragen einzelnerBilanzpositionen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da8e97e-c42f-11ee-8ccb-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261032-201(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketingmanagement</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Marketing als Managementaufgabe Paradigmenwechsel im Marketing hin zum Beziehungsmarketing Messmethoden im Marketingmanagement Quantitative Auswertungsmethoden im Marketingmanagement Management von Kundenbeziehungen Marketingperspektive auf Kundenzufriedenheit und -loyalität Kundenwert und Bewertung von Kunden (insbesondere CustomerLiftetime Value) Branding (insbesondere Bedeutung von Marketingaktivitäten imResource-based Management) Bedeutung Markenstärke und Markenwert Messung und Management von Markenstärke und -Wert Ausgewählte Management-Tools im Marketingmanagement (z.B.Conjoint Analysen und Data Envelopment Analysis (DEA))</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9f3fa9-c42f-11ee-b193-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-P01</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experimentalphysik II</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Umfassende und logisch zusammenhängende Darstellung der Grundlagender modernen Physik im Rahmen experimenteller Vorlesungen zu denGebieten: Atom- und Molekülphysik Kondensierte MaterieAusgehend von der experimentellen Erfahrung soll die Struktur der Materievon den Atomen bis zur kondensierten Materie, von der qualitativenBeobachtung über die quantitative Messung bis hin zur verallgemeinerndenmathematischen Beschreibung exemplarisch und nachvollziehbardemonstriert werden.Im Physikalischen Grundpraktikum II erfolgt die Vermittlung einfacher undgrundlegender Techniken des experimentellen physikalischen Arbeitens: Versuchsvorbereitung und -planung Versuchsdurchführung Versuchsauswertung Fehlerbetrachtung Protokollführung</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da050fb-c42f-11ee-945e-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I03</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Effiziente Algorithmen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einführung in randomisierte Algorithmen Analyse der mittleren Laufzeit von Algorithmen Kompliziertere Datenstrukturen und ihre Analyse Kombinatorische Suchprobleme</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da76201-c42f-11ee-a48d-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-004(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modellbildung und Identifikation dynamischer Systeme 1</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Modellbegriff Methoden der Modellbildung Blackbox- und Whitebox-Modelle Modellvalidierung Konkrete Beispiele aus Elektrotechnik, Mechanik, Thermodynamik,Biologie, Chemie</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9e7c39-c42f-11ee-bfef-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-C02</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physikalische Chemie 1: Thermodynamik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Vorlesung und Seminar "PC1 Thermodynamik" Temperaturmessung Ideale und reale Gase Zustandsgrößen und -funktionen Hauptsätze der Thermodynamik Definition und Bedeutung von: Arbeit und Wärmeübertragung sowieTemperatur, innerer Energie, Enthalpie, Entropie, freier Energie und freierEnthalpie Wärmekraftmaschinen, Wärmepumpen, Wirkungsgrad, Carnot-Prozess Statistische Definition der Entropie (Boltzmann-Gleichung) Boltzmann-Verteilung Phasengleichgewichte, Clausius-Clapeyron-Gleichung, Gibbs'schePhasenregel Kalorimetrie, Reaktionswärme, Hess’scher Satz Freie Reaktionsenthalpie Mischungsentropie, Mischungsenergie Gleichgewichte zwischen koexistierenden Mischphasen Phasendiagramme von Mischphasen Raoult'sches und Henry'sches Gesetz, Destillation, Extraktion das chemische Gleichgewicht, Massenwirkungsgesetz Herleiten physikalisch-chemischer Gesetzmäßigkeiten partielle molare Größen, chemisches Potential</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9e2347-c42f-11ee-af00-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma13</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master-Arbeit</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Im Rahmen des Moduls wird eine Masterarbeit - eine schriftliche</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da6ed9e-c42f-11ee-8a7e-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">244033-005(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerische Methoden für Elektrotechnik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Grundlagen der Modellierung technischer Systeme Modellierung und Simulation mit dem FEM-Programm ANSYS Modellierung diskreter Systeme mit Matrixmethoden Numerische Methoden für statische, harmonische und transienteBerechnungen, Modalanalysen, nichtlineare Systeme, gekoppelte Felder Methode zur Beschreibung technischer Feldprobleme (FDM, FEM, BEM) Praktikum mit dem CAD-System Creo und dem Finite ElementeProgramm ANSYS</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dad5687-c42f-11ee-bf59-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261038-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundlagen des Technologie- und Innovationsmanagements</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Betrachtung primär technologisch geprägter Innovationsprozesse inverschiedenen Anwendungsfeldern und Kontexten von derIdeenentstehung bis zur Markteinführung bzw. -verwendung Darstellung theoretischer Modelle, konzeptionellerManagementprozesse und -methoden sowie der Ergebnisseempirischer Forschung Vorlesungen zu theoretischen Grundlagen sowie Gastvorträge zuspezifischen Themen sowie der Praxis des Technologie- undInnovationsmanagements Übung zur Anwendung und Vertiefung der theoretischen Modelle,konzeptioneller Managementprozesse und -methoden</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da4f8a3-c42f-11ee-a6a9-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231432-006(Version04)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerische Dynamik flexibler Strukturen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In diesem Modul geht es um die Modellierung und numerische</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da98d43-c42f-11ee-84b3-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261033-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Controlling und Interne Unternehmensrechnung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Konzeptionen und Aufgaben des Controlling Instrumente des Controlling, insbesondere Kennzahlen(-systeme) undBudgetierung, Systeme der Kostenrechnung: Teilkosten-, Plankosten-,Prozesskostenrechnung Kostenmanagement, Target Costing, Life Cycle Costing Investitionsrechnung: Dynamische Modelle für Vorteilhaftigkeits-entscheidungen, Modelle für Nutzungsdauer- und Ersatzzeitpunkt-entscheidungen, Verfahren zur Einbeziehung von Unsicherheit</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db108a9-c42f-11ee-afd1-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-PS03</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundlagen der Gerontopsychologie</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Einführung in grundlegende Theorien der Gerontologie und</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da48376-c42f-11ee-99ad-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231431-008(Version04)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kontinuumsmechanik I</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In diesem Modul werden Kenntnisse zur linearen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da4aa89-c42f-11ee-8a42-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231431-009(Version05)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kontinuumsmechanik II</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In diesem Modul werden vertiefte Kenntnisse zur nichtlinearen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da0ed2d-c42f-11ee-b935-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-I06</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computergraphik I</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Einführung in das Gebiet der generativen Computergraphik unter</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9e2348-c42f-11ee-ae14-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-C01</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organische Chemie 2</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aufbauend auf den Inhalten des Moduls B-Ma-C02 Organische</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db026d8-c42f-11ee-a333-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-S05</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kognitive Psychophysiologie</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Methoden und Konzepte der kognitiven Psychophysiologie mitSchwerpunkt Elektroenzephalographie (EEG) Design geeigneter Paradigmen für die EEG-basierte Erfassung vonInformationsverarbeitungsprozessen des Menschen methodenkritische Interpretation von EEG-Daten praktische Übungen zur Aufzeichnung von EEG-Daten Grundkonzepte der Auswertung von EEG-Daten beispielhafte Kenntnis einer Analysesoftware für EEG-Daten</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dae655b-c42f-11ee-af01-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">262031-100(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wirtschaftspolitik</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Veranstaltung knüpft an den Stoff der vorhergehenden</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db07ff0-c42f-11ee-9f27-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-S07</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leuchtdioden, Laserdioden und optische Sensoren</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Vorlesung vermittelt die physikalischen Grundlagen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2db1f30c-c42f-11ee-afc8-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-PS09</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pädagogische und psychologische Aspekte in der Gesundheitsförderung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul behandelt die pädagogische und psychologische</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2d9fb4ab-c42f-11ee-9c5c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-Ma-P04</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computational Science I</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wissenschaftliches Rechnen (Computational Science) ist</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2da910e6-c42f-11ee-81d9-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">261033-205(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Businessplanung und Management von Gründungen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Studenten setzen sich mit allen Aspekten der Selbständigkeit</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2dae8dc9-c42f-11ee-957b-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">262035-200(Version01)</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internationale Wirtschaftsbeziehungen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul Internationale Wirtschaftsbeziehungen beschäftigt sich</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#Mathematik"/>
+  </rdf:Description>
+</rdf:RDF>

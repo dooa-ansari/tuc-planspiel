@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://tuc/web/engineering/module#"
+   xmlns:ns2="http://tuc.web.engineering/module#"
+   xmlns:ns3="http://tuc/course#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21720264-c42e-11ee-a4e4-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">578070</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mensch-Computer-Interaktion II</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Medienergonomie behandelt Interaktionsmöglichkeiten zwischen Mensch</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#216f98a9-c42e-11ee-bbe8-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">563090</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datenbanken und Objektorientierung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erweiterungen des relationalen Datenmodells mit Hinführung zum</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21727796-c42e-11ee-86fc-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">565130</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verlässliche Systeme</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundlegende Ansätze und Maße der Fehlertoleranz; Störungsmodelle;</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21729d0b-c42e-11ee-8d7c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">435760</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Next Generation Internet</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einführung Ausgewählte Internet-AnwendungenEmailoFile TransferoWeb BrowsingoVoice/Multimedia over IPo Dienste-Plattformen und -ArchitekturenIP-based Multimedia Subsystem (IMS)oWeb Services Architecture / Service-oriented Architecture (SOA)o Overlay NetzePeer-to-Peer NetworksoContent Delivery Networks (CDNs)oVirtual Private Networks (VPNs)o Ausgewählte NetzmechanismenFluss- und StauregelungoGruppenkommunikation / MulticastoDienstgüte-Mechanismen (QoS)oRedundanz-MechanismenoEnkapsulierungsverfahreno Neue TechnologienCarrier-grade Etherneto Future Internet ThemenInformation and Service centric NetworkingoNetzvirtualisierungo</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21733960-c42e-11ee-a689-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">435763</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mobile Networks</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einführung (z. B. Arten der Mobilität, Klassifikation) Technische Grundlagen: Mobilfunkkanal, Übertragungstechnik (Vielfachzugriff,Duplex), Zellularprinzip öffentliche zellulare Netze (GSM, UMTS): Einführung, Systemarchitektur,Funkschnittstelle, Protokolle, Anruf- und Mobilitätsmanagement,Sicherheitskonzept, Dienste, Ausblick Drahtlose LANs (WLAN): Einführung, IEEE 802.11 Standardisierung und WiFi Allianz, System- und Protokollarchitektur, Funkschnittstelle (Schwerpunkt MACSchicht), Verfahren zur Mobilitätsunterstützung, Sicherheitskonzepte, Ausblick Drahtlose MANs (WiMAX) Drahtlose PANs (Bluetooth, ZigBee)</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2170f0f2-c42e-11ee-b1bb-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553130</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sicherheit Verteilter Software</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Angebot fokussiert das Problem der Sicherheit im Internet und Web, den daran</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2170067d-c42e-11ee-ad06-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">577040</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quantitative Analysis of Software Designs</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neben der Erfüllung der funktionalen Anforderungen muss Software auch eine</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2172eb48-c42e-11ee-aefa-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">435759</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IP Networking Lab</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Folgende Themenschwerpunkte werden in Theorie und Praxis behandelt: Grundlagenkapitel zu IP- und Ethernet-Netzen, um die theoretischen Voraussetzungenfür die Versuche zu legen Einweisung in die Laboraufbauten (Linux-PC, Cisco-Router/Switches und Cisco IOSArbeitsumgebung) sowie der verwendeten Netzwerkanalysesoftware Aufbau und Konfiguration eines lokalen Netzes (Interface- und ARP-Analyse) Aufbau und Konfiguration eines statisch vermittelten Netzes (Router-Konfiguration,ICMP- und Proxy-ARP-Analyse) Aufbau und Konfiguration eines dynamisch vermittelten Netzes (Router-Konfiguration,RIP-, OSPF- und BGP-Analyse) Analyse von Transport-Protokollen (UDP und TCP) einschließlich IP-Fragmentierung, TCPRetransmission und TCP Congestion Control Aufbau und Konfiguration eines Ethernet-LANs (Bridge-Konfiguration in Linux-PCs undCisco-Geräten sowie Spanning Tree Protokoll-Analyse) Betrachtung der Protokolle im IP-Umfeld bspw. NAT, DHCP, DNS und SNMP Aufbau und Konfiguration eines IP-Multicast-Netzes (Router-Konfiguration, IGMP- undMulticast-Routing-Analyse)</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2173d5c8-c42e-11ee-87ff-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500420</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorbereitungsseminar Planspiel Web Engineering</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Übersichtsartige Auseinandersetzung mit vorgegebenen Themen aus dem Bereich</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#216f4594-c42e-11ee-af24-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553090</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Service Engineering</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Service-orientierte Architekturen (SOA) stellen eine wichtige standard-basierte und</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#216ef723-c42e-11ee-bc01-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553010</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current Trends in Web Engineering</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Social Media und Social Networks im Sinne von übergreifenden Netzwerken</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21716621-c42e-11ee-a8ca-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">565010</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betriebssysteme für verteilte Systeme</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spezielle Probleme von Betriebssystemen in verteilten Systemen; Algorithmen für</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2173aeb7-c42e-11ee-b999-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">652120</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategic IT Management</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele Die Veranstaltung behandelt die Aufgaben des strategischen IT-Managements. Im Einzelnenwerden folgende Themenfelder adressiert: IT-Strategie; Business/IT-Alignment IT-Governance; COBIT Prozessorientiertes IT-Management; ITIL Qualitätsmanagement; EFQM; Six Sigma Reifegradmodelle IT-Risikomanagement</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21707bca-c42e-11ee-9125-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">543110</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datensicherheit und Kryptographie II</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es werden aktuelle kryptographische Verfahren aus folgenden Themengebieten</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21750e13-c42e-11ee-b6d0-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500430</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Planspiel Web Engineering</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Im Modul Planspiel Web Engineering werden Kenntnisse über moderne</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2171db57-c42e-11ee-9e13-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">578050</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mediencodierung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es werden zentrale Aspekte der Codierung medialer Daten besprochen.Kompressionstechniken, Dateiformate, Streamingverfahren stehen im Mittelpunkt.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21702ddd-c42e-11ee-853c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500310</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Themenschwerpunkte Informatik I</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Informatik ist eine lebende Wissenschaft und bringt schnell neue</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2170c9e7-c42e-11ee-9865-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553030</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entwurf Verteilter Systeme</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rechner- und Kommunikationsnetze und das Web haben sich in den letzten zwei</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#217498e2-c42e-11ee-8f8e-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">613001</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business to Business Marketing</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Vorlesung thematisiert die theoretischen und praktischen Aspekte des Business</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21725055-c42e-11ee-8bde-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">578130</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medienmanagement</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul führt ein in die unternehmerische Realität des Medieneinsatzes.</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#216f98a8-c42e-11ee-9c6c-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">563050</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datenbanken und Web-Techniken</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basistechniken der Internetprogrammierung zum Zugriff auf Datenbanken,</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#217054ba-c42e-11ee-ac76-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500330</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Themenschwerpunkte Informatik II</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Informatik ist eine lebende Wissenschaft und bringt schnell neue</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21753527-c42e-11ee-9a8e-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9100</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master-Arbeit</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Im Rahmen des Moduls wird eine Masterarbeit erstellt und öffentlich verteidigt. Das</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21722976-c42e-11ee-941f-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">578170</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medienretrieval</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medienretrieval beschäftigt sich mit der Suche in multimedialen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21744adf-c42e-11ee-9df9-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">613230</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gründungsfinanzierung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Vorlesung vermittelt neben finanztechnischen und –analytischen</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2171b440-c42e-11ee-a3dc-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">573050</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maschinelles Lernen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dieses Modul stellt ein Teilgebiet der Künstlichen Intelligenz (KI) vor. Eswerden die Möglichkeiten der Übertragung der Lernfähigkeit auf den Computerdiskutiert.Schwerpunkte sind: Einführung, Einordnung, historischer Überblick Lernen aus Beispielen Unüberwachte Lernverfahren Neuronale Netze Reinforcement Learning</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#216f1e32-c42e-11ee-ad50-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553050</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cloud &amp; Web Anwendungen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul führt in das „Phänomen Web und Cloud“ sowie die Entwicklung verteilter</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21713f11-c42e-11ee-b188-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">561070</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parallele Programmierung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Inhalte der Vorlesung umfassen: Architektur und Verbindungsnetzwerke</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21716622-c42e-11ee-8395-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">565030</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Echtzeitsysteme</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theorie und Praxis von Rechensystemen, die zur Lösung zeitkritischer Probleme</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#217471d6-c42e-11ee-ba86-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">613004</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technischer Vertrieb</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Besonders bei technologieorientierten Gründungen und KMUs kommt dem</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21718d30-c42e-11ee-8115-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">573030</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Einführung in die Künstliche Intelligenz</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Einführung in das Gebiet der Künstlichen Intelligenz unter Bearbeitung folgender</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#217387aa-c42e-11ee-a5c1-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">652110</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informationsmanagement</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information ist die zentrale Ressource der Wirtschaft. Die Vorlesung</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2173fcd7-c42e-11ee-9246-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">613002</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Businessplanung und Management von Gründungen</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Studenten setzen sich mit allen Aspekten der Selbständigkeit und der Gründung</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2173d5c7-c42e-11ee-b4b7-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500410</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seminar Web Engineering</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Übersichtsartige Auseinandersetzung mit vorgegebenen Themen aus dem Bereich</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21731251-c42e-11ee-9856-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">435480</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network Security</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einführung und Grundlagen: Begriffe, Bedrohungsszenarien, Sicherheitsmechanismen,mathematische Grundlagen der Verschlüsselung Verschlüsselungsverfahren, Schlüsselmanagement und Zertifikate, PKI-Infrastruktur Gesicherte Datenübertragung: Übersicht Sicherungsprotokolle auf Sicherungs-(L2),Netz- (L3) und Transportschicht (L4) (z.B.: L2TP, IPsec, SSL, TLS, SSH) Angriffe im Internet: Überblick und Klassifizierung von Angriffen, Praxisbeispiele (DoS-Attacken, Angriffe auf Routing und DNS), Abwehr und Vermeidung von Angriffen Firewalls: Übersicht, Ziele und Aufgaben einer Firewall, Filtertechniken, Einsatz im Netz,Beispiele, Probleme Kontrolle des Netzzugangs: Übersicht, Konzepte, AAA-Mechanismen, Praxisbeispiele,Probleme</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2170a2d6-c42e-11ee-9de9-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">551070</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parallelrechner</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immer dann, wenn die Leistung einzelner Rechner nicht ausreichend ist, werden</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2174bff2-c42e-11ee-b0ff-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">824005</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kommunikation und Führung</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul beschäftigt sich mit der Kommunikation im Führungskontext. Behandelt</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2174e706-c42e-11ee-a3d4-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">136250</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Englisch in Studien- und Fachkommunikation II (Niveau B2)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ausbau der sprachlichen Kenntnisse und Fertigkeiten mit Bezug auf studien- und</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2173606e-c42e-11ee-8d6f-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">435660</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Self-Organizing Networks</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Einführung Drahtlose Netze nach IEEE 802ÜbersichtoIEEE 802.11 (Wireless Local Area Networks): System- und Protokollarchitektur,oLuftschnittstelle, SicherheitskonzeptIEEE 802.15 (Wireless Personal Area Networks): Bluetooth, ZigBee, UWBo MobilitätsmechanismenEinführungoMobilität auf Netz-, Transport- und Anwendungsschichto Mobile Ad-Hoc Netze (MANETs)Einführung: Definition, Klassifikation, AnwendungsszenarienoRoutingverfahren für MANETsoMedium Access Control (MAC)oTopologie-Kontrolle und ClusterbildungoSicherheitsaspekteo Spezielle Ausprägungen von MANETsDrahtlose Mesh-Netze (WMNs) nach IEEE 802.11soDrahtlose Sensor und Actuator Netze (WSANs)o</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#2172c432-c42e-11ee-b449-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">435767</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Network Planning</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Netzplanung EinführungDefinition, Zielsetzungen, Planungsprozesso Verkehrsmodellierung und BedarfsanalyseVerkehrsklassifizierungoVerkehrsmodellierungoBedarfsabschätzung und -prognoseoVerkehrsmatrizenerzeugungo Netztopologie-Entwurfausgewählte Verfahren: optimale Standortauswahl, Baum- und Maschen-oNetzdesign NetzdimensionierungFormulierung als OptimierungsproblemoVorgehensweise bei durchschalte- und paketvermittelten NetzenoKapazitätsberechnung auf Leitungs- und Netzebeneoausgewählte Dimensionierungsverfahreno Weitere PlanungsaspekteRedundanz/AusfallsicherheitoMehrstunden- und MehrperiodenplanungoKostenmodellierungo Netzplanungstools (Beispiele)</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#217471d7-c42e-11ee-83be-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">136135</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deutsch als Fremdsprache II (Niveau A2)</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualifikationsziele  Erweiterung und Festigung der Lexik u.a. zu Themen wie Ausbildung, Tätigkeiten,Hobbys, Freizeit und Beruf Entdeckung und Übung neuer grammatischer Strukturen, z.B. trennbare unduntrennbare Verben, reflexive Verben, Festigung der Zeitformen, Übungen zurWortstellung in verschiedenen Satzkonstruktionen Übungen zur deutschen PhonetikDie Ausbildung orientiert sich an der Sprachkompetenzstufe A2 des GemeinsamenEuropäischen Referenzrahmens für Sprachen (GER).</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#216fdf4e-c42e-11ee-bc60-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">577020</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Model-Driven Software Development</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Vorlesung gibt eine Einführung in Model-Driven Software Development und</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#21711801-c42e-11ee-983b-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns2:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553150</ns2:hasModuleNumber>
+    <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XML</ns2:hasName>
+    <ns2:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die eXtensible Markup Language (XML) ist die Basis für eine Vielzahl von</ns2:hasContent>
+    <ns2:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns2:hasCreditPoints>
+    <ns2:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns2:hasWorkLoad>
+    <ns1:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+</rdf:RDF>
