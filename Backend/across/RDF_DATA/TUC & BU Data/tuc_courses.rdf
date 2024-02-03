@@ -11,7 +11,8 @@
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automotive Software Engineering</course:hasCourseName>
     <course:belongsToProgram rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</course:belongsToProgram>
-    <course:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German, English</course:hasLanguage>
+    <course:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German</course:hasLanguage>
+    <course:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</course:hasLanguage>
     <course:belongsToDepartment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Computer Science</course:belongsToDepartment>
     <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
   </rdf:Description>
@@ -68,7 +69,8 @@
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematik</course:hasCourseName>
     <course:belongsToProgram rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</course:belongsToProgram>
-    <course:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German, English</course:hasLanguage>
+    <course:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German</course:hasLanguage>
+    <course:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</course:hasLanguage>
     <course:belongsToDepartment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty of Mathematics</course:belongsToDepartment>
     <university:belongsToUniversity rdf:resource="http://across/university#TUC"/>
   </rdf:Description>
