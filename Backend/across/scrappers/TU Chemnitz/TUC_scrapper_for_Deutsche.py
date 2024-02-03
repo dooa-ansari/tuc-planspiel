@@ -5,9 +5,10 @@ from docx import Document
 import json
 import json
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
+import uuid
 
 ## This code will convert pdf data to output.docx file format
-def extract_text_from_pdf(pdf_path, start_page=12, end_page=None):
+def extract_text_from_pdf(pdf_path, start_page=13, end_page=None):
     text = ""
     with open(pdf_path, "rb") as pdf_file:
         pdf_reader = PyPDF2.PdfReader(pdf_file)
@@ -30,7 +31,7 @@ def write_text_to_word(text, output_word_path):
 
 
 # Example PDF file path (replace this with your actual PDF file path)
-pdf_path = "C://Users//aksha//Downloads//Courses PDF's//ASE//AB_2022_46_2.pdf"
+pdf_path = "C://Users//aksha//Downloads//Courses PDF's//Web/AB_31_2015Teil1 (1).pdf"
 
 # Extract text from the PDF
 pdf_text = extract_text_from_pdf(pdf_path)
@@ -49,7 +50,7 @@ module_number_pattern = re.compile(r"  (\S+ [-\S]*)")
 module_name_pattern = re.compile(r"Modulname\s*(.+)")
 contents_pattern = re.compile(r"Inhalte\s*:\s*(.+?)\s*Qualifikationsziele\s*:", re.DOTALL)
 credit_points_pattern = re.compile(r"Leistungspunkte\s*u?nd\s*Noten\D*(\d+)")
-work_load_pattern = re.compile(r"Arbeitsaufwand\D*(\d+)\s*AS")
+work_load_pattern = re.compile(r"Arbeitsaufwand\D*(\d+)\s*(?:\n\s*)*AS")
 
 # Function to extract information from a page
 def extract_information(page_text):
@@ -135,8 +136,13 @@ for module in data:
     credit_points = module.get("Leistungspunkte und Noten", "")
     work_load = module.get("Arbeitsaufwand", "")
 
+    # Generate a UUID based on the current timestamp and node (hardware address)
+    module_uuid = uuid.uuid1()
+
+    # Convert the UUID to a string
+    module_uuid_str = str(module_uuid)
     # RDF URI for the module
-    module_uri = URIRef(f"http://tuc.web.engineering/module#{module_name.replace(' ', '_')}")
+    module_uri = URIRef(f"http://tuc.web.engineering/module#{module_uuid_str}")
 
     # Add RDF triples for the module
     g.add((module_uri, RDF.type, module_ns))
@@ -159,6 +165,10 @@ for module in data:
             g.add((module_uri, URIRef("http://tuc.web.engineering/module#hasWorkLoad"), Literal(work_load_value, datatype="http://www.w3.org/2001/XMLSchema#integer")))
         except ValueError as ve:
             print(f"Error converting work_load to integer for module {module_name}: {ve}")
+
+    # Add additional RDF triples for each module
+    g.add((module_uri, URIRef("http://tuc/web/engineering/module#hasUniversity"), URIRef("http://across/university#TUC")))
+    g.add((module_uri, URIRef("http://tuc/course#hasCourse"), URIRef("http://tuc/course#WebEngineering")))
 
 # Serialize RDF graph to RDF/XML format
 rdf_outputBytes = (g.serialize(format="xml")).encode('utf-8')
