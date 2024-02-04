@@ -7,6 +7,8 @@ from rdflib.namespace import RDF, XSD
 import re
 import PyPDF2
 import wget
+import pandas as pd
+import tabula
 
 added_module_names = set()
 
@@ -44,22 +46,99 @@ else:
      ssl._create_default_https_context = _create_unverified_https_context
     
 
-html = urllib.request.urlopen("https://pb.edu.pl/erasmus-course-catalogue/?sem&f=faculty-of-computer-science&ects")
-data = html.read()
-parser = BeautifulSoup(data, 'html.parser')
-all_thbody_tr = parser.find_all("tr")
-for module in all_thbody_tr:
-   all_list_a = module.find_all("a" ,limit=1)
-   for a in all_list_a:
-     pdf_url = a.get("href")
-     print(pdf_url)
-    #  pdf = urllib.request.urlopen(pdf_url)
-     count = 0
-     wget.download(pdf_url)
+# Read pdf into list of DataFrame
+# dfs = tabula.read_pdf("Advanced-course-of-programming-in-Python.pdf", pages='all')
+# print(dfs)
+# Read remote pdf into list of DataFrame
+# dfs2 = tabula.read_pdf("https://github.com/tabulapdf/tabula-java/raw/master/src/test/resources/technology/tabula/arabic.pdf")
+
+# convert PDF into CSV file
+# tabula.convert_into("Advanced-course-of-programming-in-Python.pdf", "output.csv", output_format="csv", pages='all')
+
+# convert all PDFs in a directory
+# tabula.convert_into_by_batch("input_directory", output_format='csv', pages='all')
+# html = urllib.request.urlopen("https://pb.edu.pl/erasmus-course-catalogue/?sem&f=faculty-of-computer-science&ects")
+# data = html.read()
+# parser = BeautifulSoup(data, 'html.parser')
+# all_thbody_tr = parser.find_all("tr")
+# for module in all_thbody_tr:
+#    all_list_a = module.find_all("a" ,limit=1)
+#    for a in all_list_a:
+#      pdf_url = a.get("href")
+#      print(pdf_url)
+#     #  pdf = urllib.request.urlopen(pdf_url)
+#      count = 0
+#      wget.download(pdf_url)
 #    break 
     #  print(pdf.read())
-    #  pdf_reader = PyPDF2.PdfReader(pdf.read())
-    #  page = pdf_reader.getPage(0)
+inputFile = "Advanced-course-of-programming-in-Python.pdf"
+pdf = open(inputFile, "rb")  
+# pageContent = urllib.urlopen(inputFile)
+# pdfToObject = scraperwiki.pdftoxml(pdf.read())   
+pdf_reader = PyPDF2.PdfReader(pdf)
+noOfPages = len(pdf_reader.pages)
+text = ""
+for page in pdf_reader.pages:
+   text = text + page.extract_text()
+
+
+text = " ".join(text.split())
+# print(text)
+
+pattern = re.compile(r'(?<=Faculty of )(.*?)(?= Field of study)')
+pattern2 = re.compile(r'(?<=and programme type)(.*?)(?= Specialization/)')
+pattern3 = re.compile(r'(?<=Course name)(.*?)(?= Course code)')
+pattern4 = re.compile(r'(?<=Course code)(.*?)(?= Course type)')
+pattern6 = re.compile(r'(?<=No. of ECTS credits)(.*?)(?= Entry)')
+
+match6 = pattern6.search(text)
+match3 = pattern3.search(text)
+match4 = pattern4.search(text)
+match2 = pattern2.search(text)
+
+match = pattern.search(text)
+
+if match:
+    substring = match6.group(1)
+    print(substring)
+else:
+    print("No match found.")
+
+if match:
+    substring = match3.group(1)
+    print(substring)
+else:
+    print("No match found.")
+
+if match:
+    substring = match4.group(1)
+    print(substring)
+else:
+    print("No match found.")
+
+
+if match:
+    substring = match2.group(1)
+    print(substring)
+else:
+    print("No match found.")
+
+if match:
+    substring = match.group()
+    print(substring)
+else:
+    print("String 'Faculty of' not found in the text.")
+
+# module_name_pattern = re.compile(r"Degree level and programme type\s*(.+)")
+# pattern = re.compile(r'Degree level and programme type(.*?)Specialization/diploma path', re.DOTALL)
+# found_text = pattern.search(text)
+# print(found_text)
+# if found_text:
+#         print(found_text)
+
+# print(text)
+
+# page = pdf_reader.getPage(0)
     #  print(page.extractText())  
    
   
