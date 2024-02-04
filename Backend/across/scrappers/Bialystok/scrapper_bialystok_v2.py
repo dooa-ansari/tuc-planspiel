@@ -42,12 +42,6 @@ NAME_SPACE.module
 namespace_manager = graph.namespace_manager
 uri_main = "http://tuc.web.engineering/module#"
 ns_module = Namespace(uri_main)
-DEPARTMENT_CS = "Faculty of Computer Science"
-# DEPARTMENT_FOREIGN_LC = "Foreign Language Centre"
-# DEPARTMENT_ENGINEERING_MANAGEMENT = "Faculty of Engineering Management"
-# DEPARTMENT_MECHINICAL_ENGINEERING = "Faculty of Mechanical Engineering"
-# DEPARTMENT_CIVIL_ENGINEERING = "Faculty of Civil Engineering and Environmental Sciences"
-# DEPARTMENT_ELECTRICAL_ENGINEERING = "Faculty of Electrical Engineering"
 
 base_url = "https://usos-ects.uci.pb.edu.pl/"
 try:
@@ -58,17 +52,8 @@ else:
      ssl._create_default_https_context = _create_unverified_https_context
     
 
-# Read pdf into list of DataFrame
-# dfs = tabula.read_pdf("Advanced-course-of-programming-in-Python.pdf", pages='all')
-# print(dfs)
-# Read remote pdf into list of DataFrame
-# dfs2 = tabula.read_pdf("https://github.com/tabulapdf/tabula-java/raw/master/src/test/resources/technology/tabula/arabic.pdf")
-
-# convert PDF into CSV file
-# tabula.convert_into("Advanced-course-of-programming-in-Python.pdf", "output.csv", output_format="csv", pages='all')
-
-# convert all PDFs in a directory
-# tabula.convert_into_by_batch("input_directory", output_format='csv', pages='all')
+# Download all pdfs of modules only once to be called
+     
 # html = urllib.request.urlopen("https://pb.edu.pl/erasmus-course-catalogue/?sem&f=faculty-of-computer-science&ects")
 # data = html.read()
 # parser = BeautifulSoup(data, 'html.parser')
@@ -85,6 +70,7 @@ else:
     #  print(pdf.read())
 
 field_of_study_pattern = re.compile(r'(?<=Faculty of )(.*?)(?= Field of study)')
+field_of_study_pattern_v2 = re.compile(r'(?<=Field of study )(.*?)(?= Degree level)')
 programme_type_pattern = re.compile(r'(?<=and programme type)(.*?)(?= Specialization/)')
 course_name_pattern = re.compile(r'(?<=Course name)(.*?)(?= Course code)')
 course_code_pattern = re.compile(r'(?<=Course code)(.*?)(?= Course type)')
@@ -95,7 +81,6 @@ content_pattern = re.compile(r'(?<=Course content)(.*?)(?=Teaching methods)')
 
 BASE_URL = "modules_pds_bialystok/pdf_type_1"
 pdf_type_1 = [f for f in listdir(BASE_URL)]
-count = 0
 departments = set()
 for pdf_url in pdf_type_1:
     print(pdf_url)
@@ -108,8 +93,9 @@ for pdf_url in pdf_type_1:
      text = text + page.extract_text()
     
     text = " ".join(text.split())
-    # print(text)
+    print(text)
     field_of_study = field_of_study_pattern.search(text)
+    field_of_study_v2 = field_of_study_pattern_v2.search(text)
     programme_type = programme_type_pattern.search(text)
     course_name = course_name_pattern.search(text)
     course_code = course_code_pattern.search(text)
@@ -127,26 +113,34 @@ for pdf_url in pdf_type_1:
     
     if field_of_study:
         field_of_study_v = field_of_study.group(1).strip()
-        if field_of_study_v == CIVIL_EARTH_SCIENCES_V1 or field_of_study_v == CIVIL_EARTH_SCIENCES_V2 or field_of_study_v == CIVIL_EARTH_SCIENCES_V3 or field_of_study_v == CIVIL_EARTH_SCIENCES_V4 or field_of_study_v == CIVIL_EARTH_SCIENCES_V5:
-         departments.add(CIVIL_EARTH_SCIENCES_V1)
-        elif field_of_study_v == ENGINEERING_MANAGEMENT_V1 or field_of_study_v == ENGINEERING_MANAGEMENT_V2 or field_of_study_v == ENGINEERING_MANAGEMENT_V3:
-         departments.add(ENGINEERING_MANAGEMENT_V1) 
-        elif field_of_study_v == MECHINICAL_ENGINEERING_V1 or field_of_study_v == MECHINICAL_ENGINEERING_V2:
-         departments.add(MECHINICAL_ENGINEERING_V1)  
-        else:
-         departments.add(field_of_study_v)
+        print(field_of_study)
+        if field_of_study_v:
+            if field_of_study_v == CIVIL_EARTH_SCIENCES_V1 or field_of_study_v == CIVIL_EARTH_SCIENCES_V2 or field_of_study_v == CIVIL_EARTH_SCIENCES_V3 or field_of_study_v == CIVIL_EARTH_SCIENCES_V4 or field_of_study_v == CIVIL_EARTH_SCIENCES_V5:
+             departments.add(CIVIL_EARTH_SCIENCES_V1)
+            elif field_of_study_v == ENGINEERING_MANAGEMENT_V1 or field_of_study_v == ENGINEERING_MANAGEMENT_V2 or field_of_study_v == ENGINEERING_MANAGEMENT_V3:
+             departments.add(ENGINEERING_MANAGEMENT_V1) 
+            elif field_of_study_v == MECHINICAL_ENGINEERING_V1 or field_of_study_v == MECHINICAL_ENGINEERING_V2:
+             departments.add(MECHINICAL_ENGINEERING_V1)  
+            else:
+             departments.add(field_of_study_v)
+        else :
+           field_of_study_v = field_of_study_v2.group(1).strip()
+
     else:
-        print("No match found.")
+        if field_of_study_v2:
+           field_of_study_v = field_of_study_v2.group(1).strip()
+           departments.add(field_of_study_v)
+           print(field_of_study_v)
 
     if programme_type:
         programme_type_v = programme_type.group(1).strip()
     else:
-        print("No match found.")
+        print("No match found for programme.")
 
     if course_name:
         course_name_v = course_name.group(1).strip()
     else:
-        print("No match found.")
+        print("No match found for course name.")
 
     if course_code:
         course_code_v = course_code.group(1).strip()
@@ -156,13 +150,11 @@ for pdf_url in pdf_type_1:
             if value:
              course_code_v = value
             print(course_code_v)
-    else:
-        print("looking for another")
 
     if ects:
         ects_v = ects.group(1).strip()
     else:
-        print("No match found.")
+        print("No match found for ects")
 
 
     if hours:
@@ -174,7 +166,6 @@ for pdf_url in pdf_type_1:
                     hours_v = to_int * 28; 
 
     else:
-        print("No match found.")
         if ects_v:
                 to_int = int(ects_v)
                 if(to_int):
@@ -183,7 +174,7 @@ for pdf_url in pdf_type_1:
     if content:
         content_v = content.group().strip()
     else:
-        print("String 'Faculty of' not found in the text.")
+        print("No match found for content")
 
 
     module_uri_g = URIRef(f"{uri_main}{''.join(e for e in course_code_v if e.isalnum())}")
@@ -209,6 +200,7 @@ for pdf_url in pdf_type_1:
         graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasContent"), module_content_g))
         graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasCreditPoints"), credit_points_g))
         graph.add((module_uri_g, URIRef("http://tuc/course#hasCourse"), uriCourse))
+        graph.add((module_uri_g, URIRef("http://tuc/dept#hasDept"), department_g))
         graph.add((module_uri_g, URIRef("http://across/university#hasUniversity"), uriUniversity))
     # if(count > 0): 
     #     break
