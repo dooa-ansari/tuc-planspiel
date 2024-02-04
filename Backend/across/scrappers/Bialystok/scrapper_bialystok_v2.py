@@ -7,8 +7,9 @@ from rdflib.namespace import RDF, XSD
 import re
 import PyPDF2
 import wget
-import pandas as pd
-import tabula
+from os import listdir
+from os.path import isfile, join
+
 
 added_module_names = set()
 
@@ -71,63 +72,117 @@ else:
 #      wget.download(pdf_url)
 #    break 
     #  print(pdf.read())
-inputFile = "Advanced-course-of-programming-in-Python.pdf"
-pdf = open(inputFile, "rb")  
-# pageContent = urllib.urlopen(inputFile)
-# pdfToObject = scraperwiki.pdftoxml(pdf.read())   
-pdf_reader = PyPDF2.PdfReader(pdf)
-noOfPages = len(pdf_reader.pages)
-text = ""
-for page in pdf_reader.pages:
-   text = text + page.extract_text()
+
+field_of_study_pattern = re.compile(r'(?<=Faculty of )(.*?)(?= Field of study)')
+programme_type_pattern = re.compile(r'(?<=and programme type)(.*?)(?= Specialization/)')
+course_name_pattern = re.compile(r'(?<=Course name)(.*?)(?= Course code)')
+course_code_pattern = re.compile(r'(?<=Course code)(.*?)(?= Course type)')
+ects_pattern = re.compile(r'(?<=No. of ECTS credits)(.*?)(?= Entry)')
+credit_hours_pattern = re.compile(r'(?<=TOTAL:)(.*?)(?= Quantitative)')
+content_pattern = re.compile(r'(?<=Course content)(.*?)(?=Teaching methods)')
+
+BASE_URL = "modules_pds_bialystok/pdf_type_1"
+pdf_type_1 = [f for f in listdir(BASE_URL)]
+count = 0
+departments = set()
+for pdf_url in pdf_type_1:
+    print(pdf_url)
+    print("\n")
+    pdf_file = open(f"{BASE_URL}/{pdf_url}", "rb")  
+    pdf_reader = PyPDF2.PdfReader(pdf_file)
+    noOfPages = len(pdf_reader.pages)
+    text = ""
+    for page in pdf_reader.pages:
+     text = text + page.extract_text()
+    
+    text = " ".join(text.split())
+    field_of_study = field_of_study_pattern.search(text)
+    programme_type = programme_type_pattern.search(text)
+    course_name = course_name_pattern.search(text)
+    course_code = course_code_pattern.search(text)
+    ects = ects_pattern.search(text)
+    hours = credit_hours_pattern.search(text)
+    content = content_pattern.search(text)
+    
+    field_of_study_v = ""
+    programme_type_v = ""
+    course_name_v = ""
+    course_code_v = ""
+    ects_v = ""
+    hours_v = ""
+    content_v = ""
+    
+    if field_of_study:
+        field_of_study_v = field_of_study.group(1)
+        departments.add(field_of_study_v)
+    else:
+        print("No match found.")
+
+    if programme_type:
+        programme_type_v = programme_type.group(1)
+    else:
+        print("No match found.")
+
+    if course_name:
+        course_name_v = course_name.group(1)
+    else:
+        print("No match found.")
+
+    if course_code:
+        course_code_v = course_code.group(1)
+    else:
+        print("No match found.")
+
+    if ects:
+        ects_v = ects.group(1)
+    else:
+        print("No match found.")
 
 
-text = " ".join(text.split())
-# print(text)
+    if hours:
+        hours_v = hours.group(1)
+    else:
+        print("No match found.")
 
-pattern = re.compile(r'(?<=Faculty of )(.*?)(?= Field of study)')
-pattern2 = re.compile(r'(?<=and programme type)(.*?)(?= Specialization/)')
-pattern3 = re.compile(r'(?<=Course name)(.*?)(?= Course code)')
-pattern4 = re.compile(r'(?<=Course code)(.*?)(?= Course type)')
-pattern6 = re.compile(r'(?<=No. of ECTS credits)(.*?)(?= Entry)')
-
-match6 = pattern6.search(text)
-match3 = pattern3.search(text)
-match4 = pattern4.search(text)
-match2 = pattern2.search(text)
-
-match = pattern.search(text)
-
-if match:
-    substring = match6.group(1)
-    print(substring)
-else:
-    print("No match found.")
-
-if match:
-    substring = match3.group(1)
-    print(substring)
-else:
-    print("No match found.")
-
-if match:
-    substring = match4.group(1)
-    print(substring)
-else:
-    print("No match found.")
+    if content:
+        content_v = content.group()
+    else:
+        print("String 'Faculty of' not found in the text.")
 
 
-if match:
-    substring = match2.group(1)
-    print(substring)
-else:
-    print("No match found.")
+    count = count + 1
+    module_uri_g = URIRef(f"{uri_main}{''.join(e for e in course_code_v if e.isalnum())}")
+    uriUniversity = URIRef("http://across/university#BU")
+    uriCourse = URIRef("http://tuc/course#Civil_Engineering_and_Environmental_Sciences")
+    module_name_g = Literal(course_name_v, datatype=XSD.string)
+    module_content_g = Literal(content_v, datatype=XSD.string)
+    module_id_g = Literal(course_code_v, datatype=XSD.string)
+    credit_points_g = Literal(ects_v, datatype=XSD.string)
+    hours_g = Literal(hours_v, datatype=XSD.string)
+    programme_type_g = Literal(programme_type_v, datatype=XSD.string)
+    department_g = Literal(field_of_study_v, datatype=XSD.string)
+    university_g = Literal("", datatype=XSD.string)
+        
+    if module_name_g not in added_module_names and not is_module_name_in_graph(graph, module_name_g):
+        graph.add((module_uri_g, RDF.type, NAME_SPACE.module))
+        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasName"), module_name_g))
+        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasProgrammeType"), programme_type_g))
+        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasHours"), hours_g))
+        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasModuleNumber"), module_id_g))
+        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasContent"), module_content_g))
+        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasCreditPoints"), credit_points_g))
+        graph.add((module_uri_g, URIRef("http://tuc/course#hasCourse"), uriCourse))
+        graph.add((module_uri_g, URIRef("http://across/university#hasUniversity"), uriUniversity))
+    # if(count > 5): 
+    #     break
+    
 
-if match:
-    substring = match.group()
-    print(substring)
-else:
-    print("String 'Faculty of' not found in the text.")
+bialystok_modules_data = graph.serialize(format='xml')
+with open('data.rdf', 'w', encoding='utf-8') as bialystok_modules_file:
+    bialystok_modules_file.write(bialystok_modules_data)
+bialystok_modules_file.close()
+
+print(departments)
 
 # module_name_pattern = re.compile(r"Degree level and programme type\s*(.+)")
 # pattern = re.compile(r'Degree level and programme type(.*?)Specialization/diploma path', re.DOTALL)
