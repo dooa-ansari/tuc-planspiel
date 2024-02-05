@@ -191,7 +191,7 @@ for pageNo in range(noOfPages):
     department_g = Literal(field_of_study_v, datatype=XSD.string)
     university_g = Literal("", datatype=XSD.string)
         
-    if module_name_g not in added_module_names and not is_module_name_in_graph(graph, module_name_g):
+    if course_name_v!="" and module_name_g not in added_module_names and not is_module_name_in_graph(graph, module_name_g):
         graph.add((module_uri_g, RDF.type, NAME_SPACE.module))
         graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasName"), module_name_g))
         graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasLanguage"), language_g))
