@@ -6,6 +6,7 @@ import Converter from "./Converter";
 import ShowSimilarityTable from "./ShowSimilarityTable";
 import ModulesList from "./ModulesList";
 import TransferCredits from "./TransferCredits";
+import CompareModules from "./CompareModules";
 import UsersofTransferCredits from "./UsersofTransferCredits";
 import { useAuth } from "../context/AuthContext";
 
@@ -30,6 +31,7 @@ const AdminPanel = () => {
         <Route path="modulelist" element={<ModulesList />} />
         <Route path="transferCredits" element={<TransferCredits />} />
         <Route path="users/transferCreditRequests" element={<UsersofTransferCredits />} />
+        <Route path="comparemodules" element={<CompareModules />} />
       </Routes>
     </div>
   );

@@ -50,7 +50,7 @@ function PageBody({ auth }) {
       description:
         "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
       buttonText: "Run Automation",
-      link: "/admin/upload",
+      link: "/admin/comparemodules",
     },
     {
       title: "Similar Modules",
