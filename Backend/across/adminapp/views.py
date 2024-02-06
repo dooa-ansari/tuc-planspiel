@@ -19,10 +19,9 @@ import requests
 import uuid
 
 uploadLoaction =""
-def saveFiles(request):
-    uploaded_files = request.FILES.getlist('files')
+def saveFiles(uploaded_files):
     # Specify the directory where you want to save the files
-    upload_directory = 'uploads/'
+    upload_directory = 'Backend/across/uploads/'
 
     # Create a FileSystemStorage instance with the upload directory
     fs = FileSystemStorage(location=upload_directory)
