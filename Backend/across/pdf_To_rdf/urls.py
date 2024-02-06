@@ -1,8 +1,8 @@
 from django.urls import path
 
 from . import views
-from .views import extract_text_from_pdf
+from .views import pdfToRdf
 
 urlpatterns = [
-    path('', extract_text_from_pdf, name="exportPDFToRDF"),
+    path('api/pdfToRdf', pdfToRdf, name='pdfToRdf'),
 ]

@@ -28,7 +28,7 @@ const AdminPanel = () => {
         <Route path="upload" element={<FileUpload />} />
         <Route path="automation" element={<Converter />} />
         <Route path="similaritytable" element={<ShowSimilarityTable />} />
-        <Route path="PdfToRdf" element={<PdfToRdf />} />
+        <Route path="pdfToRdf" element={<PdfToRdf />} />
         <Route path="modulelist" element={<ModulesList />} />
         <Route path="transferCredits" element={<TransferCredits />} />
         <Route path="users/transferCreditRequests" element={<UsersofTransferCredits />} />

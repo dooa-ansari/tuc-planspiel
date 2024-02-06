@@ -17,7 +17,7 @@ const PdfToRdf = () => {
                 formData.append('files', file);
             });
 
-            const response = await axios.post('http://127.0.0.1:8000/adminapp/pdfToRdf', formData);
+            const response = await axios.post('http://127.0.0.1:8000/pdf_To_rdf/pdfToRdf', formData);
 
             console.log('Upload response:', response.data);
 
