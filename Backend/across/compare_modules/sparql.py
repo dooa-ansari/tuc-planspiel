@@ -17,7 +17,13 @@ WHERE {
 LIMIT 1
 """
 
-insert_module_similarity = "INSERT DATA { <%s>  <http://tuc.web.engineering/module#hasModules>  <%s> }"
+insert_module_similarity = """INSERT {
+    ?subject <http://tuc.web.engineering/module#hasModules> ?resource
+}
+WHERE {
+  BIND(<%s> AS ?subject)
+  BIND(<%s> AS ?resource)
+}"""
 
 insert_module_univeristy = "INSERT DATA { <%s>  <http://across/university#hasUniversity>  <%s> }"
 
