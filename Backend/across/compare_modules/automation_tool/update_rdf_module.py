@@ -34,7 +34,7 @@ def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoM
 
     file1 = open(new_file_name_1, 'w')
     # Define the folder name
-    folder_name = "D://Web Engineering/SEM-III//Planspiel//ACROSS//ACROSS_MAIN//web-wizards//Backend//across//RDF//Similarity Data"
+    folder_name = "RDF//Similarity Data//"
 
     # Ensure the folder exists, create it if it doesn't
     if not os.path.exists(folder_name):

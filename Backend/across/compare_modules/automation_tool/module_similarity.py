@@ -6,8 +6,6 @@ from os import listdir
 from os.path import isfile, join
 import os
 import shutil
-# from transformers import BertTokenizer, BertModel
-# from sklearn.metrics.pairwise import cosine_similarity
 
 def read_modules_and_compare(universityOneModulesFile, folder_path, consumer):
     try:
@@ -17,9 +15,7 @@ def read_modules_and_compare(universityOneModulesFile, folder_path, consumer):
     else:
      ssl._create_default_https_context = _create_unverified_https_context
     nlp = spacy.load('en_core_web_lg')
-     
-    # tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-    # model = BertModel.from_pretrained('bert-base-uncased')
+
     only_files_in_folder = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
 
     for file_name in only_files_in_folder:
@@ -55,12 +51,17 @@ def read_modules_and_compare(universityOneModulesFile, folder_path, consumer):
             
         add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second, consumer)
     
-    # Moving all hasModules adamin uploaded file to Similarity Folder
-    source_path = universityOneModulesFile 
-    destination_path = "D://Web Engineering/SEM-III//Planspiel//ACROSS//ACROSS_MAIN//web-wizards//Backend//across//RDF//Similarity Data"
+    # Moving New hasModules file to Similarity Folder
+    source_path = universityOneModulesFile
+    filename_without_extension = os.path.splitext(os.path.basename(source_path))[0]
+    new_filename = filename_without_extension + '_similar.rdf'
+    new_file_path_existing_folder = os.path.join(os.path.dirname(source_path), new_filename)
+    os.rename(source_path, new_file_path_existing_folder)
+    ## NEED TO CHANGE THIS ACCORDING TO REQUIREMENT
+    destination_folder = 'RDF//Similarity Data//'
+    new_file_path_destination_folder = os.path.join(destination_folder, new_filename)
 
-    # Move the file
-    shutil.move(source_path, destination_path)
+    shutil.move(new_file_path_existing_folder, new_file_path_destination_folder)
 
     return {}
     
@@ -84,26 +85,3 @@ def find_text_similarity_spacy(module1Content, module2Content, nlp):
     
     is_similar = True if(verbs_similarity >= 0.8 and adj_similarity >= 0.8 and noun_similarity >= 0.9) else False
     return is_similar
-   
-# def find_text_similarity_BERT(module1Content, module2Content, tokenizer, model):
-    
-#     inputs1 = tokenizer(module1Content, return_tensors="pt")
-#     outputs1 = model(**inputs1)
-
-#     inputs2 = tokenizer(module2Content, return_tensors="pt")
-#     outputs2 = model(**inputs2)
-    
-#     # Assuming `outputs1` and `outputs2` are PyTorch tensors
-#     embeddings1 = outputs1.last_hidden_state.mean(dim=1).detach().cpu().numpy()
-#     embeddings2 = outputs2.last_hidden_state.mean(dim=1).detach().cpu().numpy()
-
-#     # Reshape to 1D arrays
-#     embeddings1_flat = embeddings1.flatten()
-#     embeddings2_flat = embeddings2.flatten()
-
-#     # Calculate cosine similarity
-#     similarity_score = cosine_similarity([embeddings1_flat], [embeddings2_flat])[0][0]
-    
-#     is_similar = True if(similarity_score>=0.8) else False
-#     return is_similar
-   
