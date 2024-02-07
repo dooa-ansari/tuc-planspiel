@@ -6,7 +6,6 @@ import uuid
 import tempfile
 from rdflib import Graph, Literal, RDF, URIRef
 from rdflib.plugins.sparql import prepareQuery
-from django.core.files.uploadedfile import TemporaryUploadedFile
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
@@ -18,6 +17,7 @@ MODULE_NAME = 'Modulname'
 MODULE_CONTENT='Inhalte und Qualifikationsziele'
 GRADES = 'Leistungspunkte und Noten'
 WORKLOAD = 'Arbeitsaufwand'
+LANGUAGE = 'Sprache'
 URI_MODULE = 'http://tuc.web.engineering/module#'
 URI_COURSE = 'http://tuc/course#'
 URI_UNI ='http://across/university#TUC'
@@ -30,8 +30,11 @@ DATA_PATH = os.path.join(settings.BASE_DIR, 'RDF_DATA')
 module_number_pattern = re.compile(r'\nModulnummer\s+(.*?)\n', re.IGNORECASE | re.DOTALL)
 module_name_pattern = re.compile(r"Modulname\s*(.+)")
 contents_pattern = re.compile(r'Inhalte:(.*?)(?=\nQualifikationsziele:|$)', re.DOTALL)
+teaching_language_pattern = re.compile(r'\nLehrformen\s+(.*?)\nVoraussetzungen für', re.IGNORECASE | re.DOTALL)
 credit_points_pattern = re.compile(r'\nLeistungspunkte und.*?(\d+)', re.DOTALL)
 work_load_pattern = re.compile(r'\nArbeitsaufwand.*?(\d+)(?=\s*AS|\s*\()', re.DOTALL)
+
+langDict = {'German': 'deutscher', 'English': 'englischer'}
 
 courses = []
 g = Graph()
@@ -55,7 +58,6 @@ for row in g.query(query):
 courses.append('Systems Engineering')   # Add Systems Engineering as a special case
 courses.append('Psychologie') # Add Psychology as another special case
 courses.append('Automobilinformatik') # Add Psychology as another special case
-
 
 ## This code will convert pdf data to dictionary
 def extract_text_from_pdf(pdf_path, end_page=None):
@@ -103,9 +105,27 @@ def extract_information(key, values):
     if match_contents:
         contents = match_contents.group(1)
         # Remove unwanted characters
-        contents = contents.replace('Qualifikationsziele', '').replace('tionsziele', '').strip().replace('\n', ' ')
+        contents = contents.replace('Qualifikationsziele', '').replace('tionsziele', '').replace('ziele', '').strip().replace('\n', ' ')
         result[MODULE_CONTENT] =' '.join(contents.split())
 
+    #Extract Languages
+    match_lang =teaching_language_pattern.search(values)
+    if match_lang:
+        contents = match_lang.group(1)
+        if 'auch in englischer' in contents or 'deutscher oder in englischer' in contents:
+             result[LANGUAGE] = ['German', 'English']
+        elif 'Sprache' in contents:
+                pattern = r'(\S+)\s+Sprache'
+                # Find all matches of the pattern in the input text
+                matches = re.findall(pattern, contents)
+                if matches:
+                     for key, value in langDict.items():
+                         if value in matches[0]:
+                             result[LANGUAGE] = [key]
+
+    if LANGUAGE not in result:
+         result[LANGUAGE] = ['German'] # take German as default langugae
+        
     # Extract Credit Points
     match_credit_points = credit_points_pattern.search(values)
     if match_credit_points:
@@ -160,6 +180,7 @@ def write_rdf(data, course_Name):
         module_number = module.get(MODULE_NUMBER, "")
         module_name = module.get(MODULE_NAME, "")
         content = module.get(MODULE_CONTENT, "")
+        langs = module.get(LANGUAGE, "")
         credit_points = module.get(GRADES, "")
         work_load = module.get(WORKLOAD, "")
         # Generate a UUID based on the current timestamp and node (hardware address)
@@ -175,7 +196,10 @@ def write_rdf(data, course_Name):
         g.add((module_uri, URIRef(f'{URI_MODULE}hasModuleNumber'), Literal(module_number, datatype=DATATYPE_STRING)))
         g.add((module_uri, URIRef(f'{URI_MODULE}hasName'), Literal(module_name, datatype=DATATYPE_STRING)))
         g.add((module_uri, URIRef(f'{URI_MODULE}hasContent'), Literal(content, datatype=DATATYPE_STRING)))
-    
+        
+        for lang in langs:
+            g.add((module_uri, URIRef(f'{URI_MODULE}hasLanguage'), Literal(lang, datatype=DATATYPE_STRING)))
+   
         # Check if credit_points is non-empty before converting to integer
         if credit_points:
             try:
@@ -210,6 +234,7 @@ def write_rdf(data, course_Name):
 @require_POST
 def pdfToRdf(request):
     try:
+        print('Start')
         uploaded_files = request.FILES.getlist('files')
         # Create a temporary directory to save the files
         temp_dir = tempfile.mkdtemp()
@@ -218,11 +243,10 @@ def pdfToRdf(request):
         saved_file_paths = []
         # Iterate over the uploaded files
         for uploaded_file in uploaded_files:
-        # Get the filename
-            filename = uploaded_file.name
+            print(uploaded_file.name)
 
             # Construct the file path where the file will be saved in the temporary directory
-            file_path = os.path.join(temp_dir, filename)
+            file_path = os.path.join(temp_dir, uploaded_file.name)
             
             # If the file is stored in memory, read its content and write it to a file
             with open(file_path, 'wb') as f:
@@ -236,6 +260,7 @@ def pdfToRdf(request):
         for file_path in saved_file_paths:
                 os.remove(file_path)
         os.rmdir(temp_dir)
+        print('End')
 
  
 
