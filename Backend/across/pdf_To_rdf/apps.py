@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class PdfToRdfConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'pdf_to_rdf'
+    name = 'pdf_To_rdf'

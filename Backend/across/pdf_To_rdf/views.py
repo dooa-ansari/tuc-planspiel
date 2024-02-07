@@ -1,3 +1,4 @@
+import os
 import pdfplumber
 import re
 import json
@@ -8,6 +9,7 @@ from django.core.files.storage import FileSystemStorage
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
+from django.conf import settings
 
 START_TEXT = 'Anlage 2:'
 MODULE_NUMBER = 'Modulnummer'
@@ -31,7 +33,8 @@ work_load_pattern = re.compile(r'\nArbeitsaufwand.*?(\d+)(?=\s*AS|\s*\()', re.DO
 
 courses = []
 g = Graph()
-course_path = r'Backend\across\RDF_DATA\tuc_courses.rdf'
+#course_path = r'C:\Users\User\Desktop\Source\web-wizards-13\Backend\across\RDF_DATA\tuc_courses.rdf'
+course_path = os.path.join(settings.BASE_DIR, 'RDF_DATA', 'tuc_courses.rdf')
 g.parse(course_path)
 # Define the SPARQL query
 query = prepareQuery(
@@ -48,7 +51,8 @@ query = prepareQuery(
 # Execute the query and print the results
 for row in g.query(query):
     courses.append(row['hasCourseName'].value)
-courses.append('Systems Engineering')
+courses.append('Systems Engineering')   # Add Systems Engineering as a special case
+courses.append('Psychologie') # Add Psychology as another special case
 
 ## This code will convert pdf data to dictionary
 def extract_text_from_pdf(pdf_path, end_page=None):
@@ -124,7 +128,8 @@ def get_course_name(moduleDict):
             index = firstPage.find(courseName)
             if index != -1:
                 return courseName
-
+        if courseName:
+            print("Course name could not be found.")
 
 # Convert the list of dictionaries to JSON
 def write_json_rdf(pdf_path):
@@ -135,7 +140,7 @@ def write_json_rdf(pdf_path):
     result_list = get_results(moduleDict)
     json_data = json.dumps(result_list, indent=2, ensure_ascii=False)
     # Write JSON data to a separate file
-    output_json_path = f'{course_Name}.json'
+    output_json_path = os.path.join(settings.BASE_DIR, 'RDF', 'ModulesRDF',  f'{course_Name}.json')
     with open(output_json_path, "w", encoding="utf-8") as json_file:
         json_file.write(json_data)
         print(f"JSON data has been written to {output_json_path}")
@@ -192,44 +197,29 @@ def write_rdf(data, course_Name):
     rdf_outputBytes = (g.serialize(format="xml")).encode('utf-8')
     
     # Save RDF data to a file with proper encoding
-    output_rdf_path = f'{course_Name}.rdf'
+    output_rdf_path = os.path.join(settings.BASE_DIR, 'RDF', 'ModulesRDF',  f'{course_Name}.rdf')
+
     with open(output_rdf_path, "wb") as rdf_file:
         rdf_file.write(rdf_outputBytes)
         print(f"RDF data has been saved to {output_rdf_path}")
-
-'''
-for pdfName in ['WebEngineering', 'SystemEngineering', 'DataScience', 'Informatik', 'Mathematik']:  #'WebEngineering', 'SystemEngineering', 'DataScience', 'Informatik', 'Mathematik'
-    # Example PDF file path (replace this with your actual PDF file path
-    pdf_path = f'C://Users//User//Desktop//Source//{pdfName}.pdf'
-    write_json_rdf(pdf_path)
-'''
-
 
 @csrf_exempt
 @require_POST
 def pdfToRdf(request):
     try:
         uploaded_files = request.FILES.getlist('files')
-         # Specify the directory where you want to save the files
-        upload_directory = 'uploads/'
+        # Specify the directory where you want to save the files
+        upload_directory = os.path.join(settings.BASE_DIR, 'uploads')
+
         # Create a FileSystemStorage instance with the upload directory
         fs = FileSystemStorage(location=upload_directory)
-        print(fs.location)
-        saved_files = []
         for file in uploaded_files:
-            saved_file = fs.save(file.name, file)
-            saved_files.append(saved_file)
-        
-        for sFile in saved_files:
-            pdf_path = f'C://Users//User//Desktop//Source//WebEngineering.pdf'
+            fs.save(file.name, file)
+            pdf_path = os.path.join(upload_directory, file.name)
             write_json_rdf(pdf_path)
     except Exception as e:
         return JsonResponse({'message': f'Error uploading and saving files: {str(e)}'}, status=500)
 
-        
-   
-
-    
  
 
 
