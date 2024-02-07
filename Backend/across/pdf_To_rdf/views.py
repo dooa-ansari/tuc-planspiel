@@ -3,9 +3,10 @@ import pdfplumber
 import re
 import json
 import uuid
+import tempfile
 from rdflib import Graph, Literal, RDF, URIRef
 from rdflib.plugins.sparql import prepareQuery
-from django.core.files.storage import FileSystemStorage
+from django.core.files.uploadedfile import TemporaryUploadedFile
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
@@ -23,6 +24,7 @@ URI_UNI ='http://across/university#TUC'
 URI_TUC_MODULE = 'http://tuc/web/engineering/module#'
 DATATYPE_STRING = 'http://www.w3.org/2001/XMLSchema#string'
 DATATYPE_INTEGER = 'http://www.w3.org/2001/XMLSchema#integer'
+DATA_PATH = os.path.join(settings.BASE_DIR, 'RDF_DATA')
 
 # Regular expressions to extract information
 module_number_pattern = re.compile(r'\nModulnummer\s+(.*?)\n', re.IGNORECASE | re.DOTALL)
@@ -33,8 +35,7 @@ work_load_pattern = re.compile(r'\nArbeitsaufwand.*?(\d+)(?=\s*AS|\s*\()', re.DO
 
 courses = []
 g = Graph()
-#course_path = r'C:\Users\User\Desktop\Source\web-wizards-13\Backend\across\RDF_DATA\tuc_courses.rdf'
-course_path = os.path.join(settings.BASE_DIR, 'RDF_DATA', 'tuc_courses.rdf')
+course_path = os.path.join(DATA_PATH, 'tuc_courses.rdf')
 g.parse(course_path)
 # Define the SPARQL query
 query = prepareQuery(
@@ -53,6 +54,8 @@ for row in g.query(query):
     courses.append(row['hasCourseName'].value)
 courses.append('Systems Engineering')   # Add Systems Engineering as a special case
 courses.append('Psychologie') # Add Psychology as another special case
+courses.append('Automobilinformatik') # Add Psychology as another special case
+
 
 ## This code will convert pdf data to dictionary
 def extract_text_from_pdf(pdf_path, end_page=None):
@@ -140,7 +143,7 @@ def write_json_rdf(pdf_path):
     result_list = get_results(moduleDict)
     json_data = json.dumps(result_list, indent=2, ensure_ascii=False)
     # Write JSON data to a separate file
-    output_json_path = os.path.join(settings.BASE_DIR, 'RDF', 'ModulesRDF',  f'{course_Name}.json')
+    output_json_path = os.path.join(DATA_PATH, 'ModulesRDF',  f'{course_Name}.json')
     with open(output_json_path, "w", encoding="utf-8") as json_file:
         json_file.write(json_data)
         print(f"JSON data has been written to {output_json_path}")
@@ -197,7 +200,7 @@ def write_rdf(data, course_Name):
     rdf_outputBytes = (g.serialize(format="xml")).encode('utf-8')
     
     # Save RDF data to a file with proper encoding
-    output_rdf_path = os.path.join(settings.BASE_DIR, 'RDF', 'ModulesRDF',  f'{course_Name}.rdf')
+    output_rdf_path = os.path.join(DATA_PATH, 'ModulesRDF',  f'{course_Name}.rdf')
 
     with open(output_rdf_path, "wb") as rdf_file:
         rdf_file.write(rdf_outputBytes)
@@ -208,17 +211,31 @@ def write_rdf(data, course_Name):
 def pdfToRdf(request):
     try:
         uploaded_files = request.FILES.getlist('files')
-        # Specify the directory where you want to save the files
-        upload_directory = os.path.join(settings.BASE_DIR, 'uploads')
+        # Create a temporary directory to save the files
+        temp_dir = tempfile.mkdtemp()
 
-        # Create a FileSystemStorage instance with the upload directory
-        fs = FileSystemStorage(location=upload_directory)
-        for file in uploaded_files:
-            fs.save(file.name, file)
-            pdf_path = os.path.join(upload_directory, file.name)
-            write_json_rdf(pdf_path)
+        # List to store the paths of saved files
+        saved_file_paths = []
+        # Iterate over the uploaded files
+        for uploaded_file in uploaded_files:
+        # Get the filename
+            filename = uploaded_file.name
+
+            # Construct the file path where the file will be saved in the temporary directory
+            file_path = os.path.join(temp_dir, filename)
+            
+            # If the file is stored in memory, read its content and write it to a file
+            with open(file_path, 'wb') as f:
+             f.write(uploaded_file.read())
+             saved_file_paths.append(file_path)
+             write_json_rdf(file_path)
+        return JsonResponse({'message': f'PDF file(s) is sucessfully converted to RDF file(s).'}, status=200)
     except Exception as e:
         return JsonResponse({'message': f'Error uploading and saving files: {str(e)}'}, status=500)
+    finally:
+        for file_path in saved_file_paths:
+                os.remove(file_path)
+        os.rmdir(temp_dir)
 
  
 

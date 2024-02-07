@@ -1,0 +1,303 @@
+[
+  {
+    "Modulnummer": "553010",
+    "Modulname": "Current Trends in Web Engineering",
+    "Inhalte und Qualifikationsziele": "Social Media und Social Networks im Sinne von übergreifenden Netzwerken verändern unsere Wahrnehmung von kommunikativen Strukturen und bewirken Veränderungen in gesellschaftlicher, wirtschaftlicher und politischer Hinsicht. Die kommunikative Infrastruktur hat sich in den letzten beiden Jahrzehnten mit zunehmender Dynamik regional, national und global dramatisch verändert. Schon geschichtlich gesehen hat die ICT-Infrastruktur immer in ihren jeweiligen Emergenzen und mit den damit verbundenen Entfaltungen der Medien gravierende Veränderungen hervorgerufen. Und heute? Stellen Social Media und Networks in diesem Sinne eine Chance für alle kommunikativen Prozesse dar? Wie können aus den Massendaten und ihren Verknüpfungen, die bereits jetzt durch das Web zur Verfügung gestellt werden und sich durch Social Media ständig vergrößern, neue Anwendungen abgeleitet werden? Welches Potenzial steckt in der Beobachtung dieser Entwicklungen und wie kann man sie beherrschen? Das Modul führt zunächst in grundlegende Aspekte Sozialer Netzwerke und Social Media sowie Web Science ein. Dabei spielen die angesprochenen Fragen eine wichtige Rolle. Es werden Aspekte der Architektur, Systemtheorie und emergenzverwandte Phänomene wie Selbstorganisation vermittelt. Ferner werden Technologien, Frameworks und Standards, etwa Protokolle und relevante Ontologien, vermittelt. Darüber hinaus werden aktuelle Trends und Problemstellungen in den Themenbereichen durch forschungsnahe Literatur und Diskussion vertieft.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "553050",
+    "Modulname": "Cloud & Web Anwendungen",
+    "Inhalte und Qualifikationsziele": "Das Modul führt in das „Phänomen Web und Cloud“ sowie die Entwicklung verteilter Anwendungen und Systeme ein. Der ständige und schnelle Wandel der Anforderungen durch den globalen Wettbewerb an Softwarelösungen stellt neue Herausforderungen an Technologie, Software-Entwicklung, und -Betrieb dar. Um organisatorische Ziele zu erreichen, müssen IT-Systeme nicht nur anpassungsfähig, flexibel und integrativ sein, sondern sich möglichst auch elastisch und selbstorganisierend verhalten. Moderne Softwareentwicklung nutzt daher flexible Entwicklungsprozesse und setzt zur Entwicklung der Softwarelösungen einen Mix aus Service-orientierten Architekturen, Web-Anwendungen und Cloud-Infrastrukturen ein. Die Softwareentwicklung solcher Lösungen muss eine Vielzahl unterschiedlicher Aspekte verteilter Software berücksichtigen, um den Anforderungen und grundlegenden Qualitätskriterien gerecht zu werden. Der erste der drei Schwerpunkte des Moduls fokussiert daher grundlegende und moderne Software-Entwicklungsprozesse aus dem Web Engineering. Neben dem Entwicklungsprozess stehen als weiterer Schwerpunkt Architekturen, Modelle, Prinzipien, Protokolle, Technologien und Werkzeuge sowie die Evolution der Web-Anwendung im Fokus. Ein besonderes Augenmerk liegt hierbei auf flexiblen und elastischen Softwarelösungen. Hierzu werden sowohl technische Lösungen als auch entsprechende elastische Konzepte betrachtet. Im Zentrum stehen dabei die verschiedenen Ausprägungen und Möglichkeiten der Public- und Private Cloud, die den dritten Schwerpunkt des Moduls darstellen. Darüber hinaus werden relevante, aktuelle Aspekte und Trends thematisiert.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "553090",
+    "Modulname": "Software Service Engineering",
+    "Inhalte und Qualifikationsziele": "Service-orientierte Architekturen (SOA) stellen eine wichtige standard-basierte und technologie-unabhängige Komponente im Lösungsbaukasten für die moderne Softwareentwicklung im Web und der Cloud dar. Die Vorteile von SOA als Paradigma für das Distributed Computing und als Basis moderner, verteilter Software sind vielfältig. So existieren zahlreiche Architekturstile für Ermittlung, Nutzung, Verknüpfung, Realisierung und Verbreitung von lose-gekoppelten und über das Internet bzw. Web erreichbaren Softwarediensten. Das Modul stellt grundlegende Ansätze, Konzepte, Technologien, Protokolle und Prinzipien moderner Software Services dar und vertieft deren systematischen Einsatz im Umfeld von Web Engineering sowie von SOA und Verteilter Software. Es werden unter anderem folgende Aspekte vertieft: • XML-basierte Web Services • REST Architekturstil • SOA Komponenten • Prinzipien und Muster, z.B. Business Process Choreography, Enterprise Service Bus (ESB) • Herausforderungen für Software Services im Geschäftsumfeld • Modellierung und Lebenszyklus Die Ansätze und Konzepte werden durch viele Fallbeispiele aus der Praxis verdeutlicht.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "563050",
+    "Modulname": "Datenbanken und Web-Techniken",
+    "Inhalte und Qualifikationsziele": "Basistechniken der Internetprogrammierung zum Zugriff auf Datenbanken, ODBC, JDBC, DCE, CORBA, COM/DCOM, Portaltechnik, XML, Web-Services",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "563090",
+    "Modulname": "Datenbanken und Objektorientierung",
+    "Inhalte und Qualifikationsziele": "Erweiterungen des relationalen Datenmodells mit Hinführung zum objektorientierten Datenmodell in Datenbanken; abschließend mit dem objektrelationalen Ansatz heutiger Datenbanksysteme",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "577020",
+    "Modulname": "Model-Driven Software Development",
+    "Inhalte und Qualifikationsziele": "Die Vorlesung gibt eine Einführung in Model-Driven Software Development und bettet sie ein in Softwaremodellierung und –entwicklung. Der Schwerpunkt liegt auf der OMG Sicht von modellgetriebener Softwareentwicklung. Dies beinhaltet OMG Standards wie MDA, QVT oder MOF. Nichtsdestotrotz führt die Vorlesung auch in die zu Grunde liegenden Konzepte dieser Standards ein und zeigt Querbezüge zu anderen Gebieten der Softwareentwicklung auf. Insbesondere werden die folgenden Fragen behandelt: • Welche Techniken machen MDSD aus? • Wie kann man aus existierender Software Plattformen extrahieren? • Wie wird mittels MOF metamodelliert? • Wie werden Modelle transformiert? Zu letzterem gibt die Vorlesung einen intensiven Einblick in Modell-zu-Modell und Modell- zu-Text Transformationsansätze und –sprachen.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "577040",
+    "Modulname": "Quantitative Analysis of Software Designs",
+    "Inhalte und Qualifikationsziele": "Neben der Erfüllung der funktionalen Anforderungen muss Software auch eine Reihe nichtfunktionaler Eigenschaften wie Performance, Skalierbarkeit und Zuverlässigkeit erfüllen. Letztere sind oftmals ausschlaggebend für den eigentlichen Erfolg des Softwareeinsatzes. Trotz dieser Wichtigkeit werden nichtfunktionale Anforderungen jedoch oft im Entwicklungsprozess vernachlässigt. Daraus resultierende Probleme werden daher oftmals erst beim Testen oder noch schlimmer zur Ausführungszeit der Software entdeckt. Die Beseitigung dieser Probleme zu diesem Zeitpunkt ist dann sehr teuer (falls sie überhaupt möglich ist). Daher versuchen Softwarearchitekten bereits in frühen Entwurfsphasen nichtfunktionale Anforderungen zu evaluieren und gegebenenfalls gegenzusteuern. Dabei kommen die Softwarearchitektur oder high-level Designdokumente als Basis zum Einsatz. Solche quantitativen Analysen nichtfunktionaler Eigenschaften wie Performance, Zuverlässigkeit, Kosten, Wartbarkeit, etc. benötigen jedoch besondere Kenntnisse. Ziel der Veranstaltung ist daher, eine Einführung in diese Thematik zu geben. Dabei werden der Stand der Technik vorgestellt und die unterliegenden Analysetechniken wie Warteschlangennetzwerke, Markovketten oder auch Queued Petri-Netze erläutert und an praktischen Beispielen eingeübt.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "500310",
+    "Modulname": "Themenschwerpunkte Informatik I",
+    "Inhalte und Qualifikationsziele": "Die Informatik ist eine lebende Wissenschaft und bringt schnell neue Erkenntnisse hervor. Im Modul Themenschwerpunkte Informatik I werden solche Ergebnisse aufgenommen.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "500330",
+    "Modulname": "Themenschwerpunkte Informatik II",
+    "Inhalte und Qualifikationsziele": "Die Informatik ist eine lebende Wissenschaft und bringt schnell neue Erkenntnisse hervor. Im Modul Themenschwerpunkte Informatik II werden spezielle Themen vertiefend behandelt.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "543110",
+    "Modulname": "Datensicherheit und Kryptographie II",
+    "Inhalte und Qualifikationsziele": "Es werden aktuelle kryptographische Verfahren aus folgenden Themengebieten betrachtet: • Visuelle Kryptographie • Secret Sharing Schemata • Kryptographische Protokolle",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "551070",
+    "Modulname": "Parallelrechner",
+    "Inhalte und Qualifikationsziele": "Immer dann, wenn die Leistung einzelner Rechner nicht ausreichend ist, werden Parallelrechner gebaut. Dabei erhebt sich die Frage, ob man die für Einzelrechner bekannten Programmiermodelle übernehmen kann. Welche Herausforderungen stellen bestimmte Programmiermodelle an die Hardware bzw. welche Architekturkonzepte muss der Programmierer kennen, um bestimmte Softwarekonzepte umsetzen zu können? In diesem Modul werden Konzepte moderner Parallelrechner-Architekturen auf Multicore- Basis besprochen und im Zusammenhang mit verschiedenen Programmiermodellen betrachtet. Folgende Themen werden behandelt: • Multiprozessorsysteme mit gemeinsamem Speicher • Virtuell gemeinsamer Speicher und Globaler Adressraum • Verteilter Speicher und nachrichtenbasierte Kommunikation • Kommunikationsnetzwerke, Architekturen und Leistungsparameter • Cache-Kohärenz und Speicherkonsistenz • Skalierbarkeit und Exascale Computing",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "553030",
+    "Modulname": "Entwurf Verteilter Systeme",
+    "Inhalte und Qualifikationsziele": "Rechner- und Kommunikationsnetze und das Web haben sich in den letzten zwei Jahrzehnten zu einem effizienten Arbeitswerkzeug, einer universellen Informationsquelle und einem fast allgegenwärtigen Kommunikationsmedium entwickelt. Sie sind aus unserem Alltag nicht mehr wegzudenken. Sie entstehen durch den Zusammenschluss verschiedener Systeme, die über Netzwerke miteinander kommunizieren und so den Informationsaustausch untereinander ermöglichen. Austausch und Weiterleitung der Daten erfolgen durch geeignete Verfahren und Algorithmen, die als Protokolle bezeichnet werden. In dem Modul werden grundlegende Ansätze, Konzepte und Prinzipien solcher verteilten Systeme vertieft. Darüber hinaus stehen die Technologien von Internet und World Wide Web im Mittelpunkt der Betrachtungen. Einen weiteren Schwerpunkt bildet die Einführung in die Entwicklung von Web Services und Service-orientierte Architekturen (SOA). Das Modul vermittelt hierzu verschiedene Ansätze Verteilter Systeme und vertieft zentrale Aspekte im Entwurf Verteilter Systeme.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "553130",
+    "Modulname": "Sicherheit Verteilter Software",
+    "Inhalte und Qualifikationsziele": "Das Angebot fokussiert das Problem der Sicherheit im Internet und Web, den daran angeschlossenen Anwendungssystemen sowie Verteilter Software im Allgemeinen. Das Modul vertieft vier Bereiche: 1. Bereich - Angriffe auf Verteilte Software und Verteilte Systeme • Klassische Angriffstechniken • Web-basierte Angriffe • Social Engineering und andere Angriffsverfahren 2. Bereich - Sicherheit • Einführung in Methoden und Ansätze der Kryptographie • Ansätze, Dienste und Werkzeuge zur Rechnernetz-Sicherheit, z. B. IPSec, Kerberos, Zertifikate, LDAP, RADIUS, Firewalls, IDS, Sniffer, Scanner • Management und Sicherheitsaspekte von drahtlosen lokalen Netzen 3. Bereich - Identität • Einführung in Identität, Gefahren, Risiken, Heilung und Sicherheit • Identity & Access Management, z. B. Provisioning, Policies, Single Sign On (SSO), Directory Services, RBAC, 802.1X • Föderation von Benutzerrechten, z. B. Shibboleth, WS-Federation, Liberty Alliance Project 4. Bereich - Anwendungsorientierte Sicherheit • Anwendungsorientierte Sicherheit, z. B. bei Datenaustausch, Mail- und Web- Anwendungen • Maßnahmen zur systematischen Planung, Ausführung und Überwachung der Sicherheit • Trends, z. B. Selbstmanagement, Selbstheilung",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "553150",
+    "Modulname": "XML",
+    "Inhalte und Qualifikationsziele": "Die eXtensible Markup Language (XML) ist die Basis für eine Vielzahl von Entwicklungen im Bereich des World Wide Web. XML spielt eine zentrale Rolle für Transport und Integration von Daten sowie für viele moderne Softwareanwendungen. Das Angebot bietet eine grundlegende Einführung in die XML und ihre Verwendung in unterschiedlichen Kontexten Verteilter Systeme, Verteilter Software und des Webs. Es werden diverse aktuelle Anwendungsszenarien und praxisrelevante Werkzeuge vorgestellt. Die Themen behandeln: • Einführung in Markupsprachen und XML • Grundlegende Ansätze, z.B. DTD, XML-Schemas, XML-Editoren, XML- Anwendungen, Linking, XPath, XSL/XSLT • Formate und Werkzeuge im Bereich Daten, z.B. SVG, RSS • Formate und Werkzeuge im Bereich Semantik, z.B. RDF, OWL, digitale Rechte mit Creative Commons • Formate und Werkzeuge im Bereich Benutzerschnittstellen, z.B. XHTML, XForms, MicroFormats • Formate und Werkzeuge im Bereich Anwendungslogik, z.B. Web Services, Blogs, Collaboration, Content Analysis, E-Commerce, Maps, Social Bookmarking, Search, Sight/Sound/Motion, Storage, Tagging",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "561070",
+    "Modulname": "Parallele Programmierung",
+    "Inhalte und Qualifikationsziele": "Die Inhalte der Vorlesung umfassen: Architektur und Verbindungsnetzwerke paralleler Systeme; Leistung, Laufzeitanalyse und Skalierbarkeit paralleler Programme; Message-Passing Programmierung und Realisierung typischer Kommunikationsmuster; Programmier- und Synchronisationstechniken für gemeinsamen Adressraum mit Multi- Threading; Koordination paralleler Programme. In den Übungen werden Programmiermodelle und -techniken praktisch auf verschiedene Applikationen angewendet.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "565010",
+    "Modulname": "Betriebssysteme für verteilte Systeme",
+    "Inhalte und Qualifikationsziele": "Spezielle Probleme von Betriebssystemen in verteilten Systemen; Algorithmen für Basisprobleme (Mutex, Terminierung, Auswahl, etc.); Uhren in verteilten Systemen; Gruppenkommunikation; Zuordnung und Lastbalancierung; Namen; verteilte Betriebssysteme; verteilte Transaktionen; Fallbeispiele (z.B. Mach, Plan9/Inferno, Amoeba)",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "565030",
+    "Modulname": "Echtzeitsysteme",
+    "Inhalte und Qualifikationsziele": "Theorie und Praxis von Rechensystemen, die zur Lösung zeitkritischer Probleme eingesetzt werden. Folgende Themenkreise werden angesprochen: Zeitverwaltung, - standards, Uhren; Schedulingverfahren periodischer und aperiodischer Anforderungen; Ressourcenverwaltung, (priority inversion, ~ inheritance, ~ ceiling); Verwaltung von Massenspeichern; Caching und Hauptspeicherverwaltung; Fehlertoleranz in Echtzeit- Systemen; echtzeitgeeignete Kommunikationsmechanismen und –protokolle; Prozessorarchitekturen für Echtzeitsysteme; Echtzeit-Betriebssysteme",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "573030",
+    "Modulname": "Einführung in die Künstliche Intelligenz",
+    "Inhalte und Qualifikationsziele": "Einführung in das Gebiet der Künstlichen Intelligenz unter Bearbeitung folgender Themen: • Intelligente Agenten • Problemformulierung und Problemtypen • Problemlösen durch Suchen • Problemlösen durch Optimieren • Logik erster Ordnung, Inferenzen und Planen • Probabilistische Methoden • Neuronale Netze • Informationstheorie • Lernen von Entscheidungsbäumen",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "573050",
+    "Modulname": "Maschinelles Lernen",
+    "Inhalte und Qualifikationsziele": "Dieses Modul stellt ein Teilgebiet der Künstlichen Intelligenz (KI) vor. Es werden die Möglichkeiten der Übertragung der Lernfähigkeit auf den Computer diskutiert. Schwerpunkte sind: • Einführung, Einordnung, historischer Überblick • Lernen aus Beispielen • Unüberwachte Lernverfahren • Neuronale Netze • Reinforcement Learning",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "578050",
+    "Modulname": "Mediencodierung",
+    "Inhalte und Qualifikationsziele": "Es werden zentrale Aspekte der Codierung medialer Daten besprochen. Kompressionstechniken, Dateiformate, Streamingverfahren stehen im Mittelpunkt.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "578070",
+    "Modulname": "Mensch-Computer-Interaktion II",
+    "Inhalte und Qualifikationsziele": "Die Medienergonomie behandelt Interaktionsmöglichkeiten zwischen Mensch und Computer insbesondere bei multimedialen Inhalten. Ziel ist eine benutzergerechte Gestaltung von Benutzungsoberflächen.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "578170",
+    "Modulname": "Medienretrieval",
+    "Inhalte und Qualifikationsziele": "Medienretrieval beschäftigt sich mit der Suche in multimedialen Datenbeständen. Der vorhergehende Besuch der Veranstaltung Information Retrieval I wird empfohlen, ist aber nicht notwendig.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "578130",
+    "Modulname": "Medienmanagement",
+    "Inhalte und Qualifikationsziele": "Das Modul führt ein in die unternehmerische Realität des Medieneinsatzes. Themen sind elektronische Märkte, Medienrecht, Open Access und Intellectual Property.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "565130",
+    "Modulname": "Verlässliche Systeme",
+    "Inhalte und Qualifikationsziele": "Grundlegende Ansätze und Maße der Fehlertoleranz; Störungsmodelle; Techniken der Fehlerdiagnose; Fehlertoleranz auf Systemebene; Fehler in Software; Modellierung",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "435760",
+    "Modulname": "Next Generation Internet",
+    "Inhalte und Qualifikationsziele": "• Einführung • Ausgewählte Internet-Anwendungen Email o File Transfer o Web Browsing o Voice/Multimedia over IP o • Dienste-Plattformen und -Architekturen IP-based Multimedia Subsystem (IMS) o Web Services Architecture / Service-oriented Architecture (SOA) o • Overlay Netze Peer-to-Peer Networks o Content Delivery Networks (CDNs) o Virtual Private Networks (VPNs) o • Ausgewählte Netzmechanismen Fluss- und Stauregelung o Gruppenkommunikation / Multicast o Dienstgüte-Mechanismen (QoS) o Redundanz-Mechanismen o Enkapsulierungsverfahren o • Neue Technologien Carrier-grade Ethernet o • Future Internet Themen Information and Service centric Networking o Netzvirtualisierung o",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "435767",
+    "Modulname": "Network Planning",
+    "Inhalte und Qualifikationsziele": "• Netzplanung Einführung Definition, Zielsetzungen, Planungsprozess o • Verkehrsmodellierung und Bedarfsanalyse Verkehrsklassifizierung o Verkehrsmodellierung o Bedarfsabschätzung und -prognose o Verkehrsmatrizenerzeugung o • Netztopologie-Entwurf ausgewählte Verfahren: optimale Standortauswahl, Baum- und Maschen- o Netzdesign • Netzdimensionierung Formulierung als Optimierungsproblem o Vorgehensweise bei durchschalte- und paketvermittelten Netzen o Kapazitätsberechnung auf Leitungs- und Netzebene o ausgewählte Dimensionierungsverfahren o • Weitere Planungsaspekte Redundanz/Ausfallsicherheit o Mehrstunden- und Mehrperiodenplanung o Kostenmodellierung o • Netzplanungstools (Beispiele)",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "435759",
+    "Modulname": "IP Networking Lab",
+    "Inhalte und Qualifikationsziele": "Folgende Themenschwerpunkte werden in Theorie und Praxis behandelt: • Grundlagenkapitel zu IP- und Ethernet-Netzen, um die theoretischen Voraussetzungen für die Versuche zu legen • Einweisung in die Laboraufbauten (Linux-PC, Cisco-Router/Switches und Cisco IOS Arbeitsumgebung) sowie der verwendeten Netzwerkanalysesoftware • Aufbau und Konfiguration eines lokalen Netzes (Interface- und ARP-Analyse) • Aufbau und Konfiguration eines statisch vermittelten Netzes (Router-Konfiguration, ICMP- und Proxy-ARP-Analyse) • Aufbau und Konfiguration eines dynamisch vermittelten Netzes (Router-Konfiguration, RIP-, OSPF- und BGP-Analyse) • Analyse von Transport-Protokollen (UDP und TCP) einschließlich IP-Fragmentierung, TCP Retransmission und TCP Congestion Control • Aufbau und Konfiguration eines Ethernet-LANs (Bridge-Konfiguration in Linux-PCs und Cisco-Geräten sowie Spanning Tree Protokoll-Analyse) • Betrachtung der Protokolle im IP-Umfeld bspw. NAT, DHCP, DNS und SNMP • Aufbau und Konfiguration eines IP-Multicast-Netzes (Router-Konfiguration, IGMP- und Multicast-Routing-Analyse)",
+    "Leistungspunkte und Noten": "2",
+    "Arbeitsaufwand": "60"
+  },
+  {
+    "Modulnummer": "435480",
+    "Modulname": "Network Security",
+    "Inhalte und Qualifikationsziele": "• Einführung und Grundlagen: Begriffe, Bedrohungsszenarien, Sicherheitsmechanismen, mathematische Grundlagen der Verschlüsselung • Verschlüsselungsverfahren, Schlüsselmanagement und Zertifikate, PKI-Infrastruktur • Gesicherte Datenübertragung: Übersicht Sicherungsprotokolle auf Sicherungs-(L2), Netz- (L3) und Transportschicht (L4) (z.B.: L2TP, IPsec, SSL, TLS, SSH) • Angriffe im Internet: Überblick und Klassifizierung von Angriffen, Praxisbeispiele (DoS- Attacken, Angriffe auf Routing und DNS), Abwehr und Vermeidung von Angriffen • Firewalls: Übersicht, Ziele und Aufgaben einer Firewall, Filtertechniken, Einsatz im Netz, Beispiele, Probleme • Kontrolle des Netzzugangs: Übersicht, Konzepte, AAA-Mechanismen, Praxisbeispiele, Probleme",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "435763",
+    "Modulname": "Mobile Networks",
+    "Inhalte und Qualifikationsziele": "• Einführung (z. B. Arten der Mobilität, Klassifikation) • Technische Grundlagen: Mobilfunkkanal, Übertragungstechnik (Vielfachzugriff, Duplex), Zellularprinzip • öffentliche zellulare Netze (GSM, UMTS): Einführung, Systemarchitektur, Funkschnittstelle, Protokolle, Anruf- und Mobilitätsmanagement, Sicherheitskonzept, Dienste, Ausblick • Drahtlose LANs (WLAN): Einführung, IEEE 802.11 Standardisierung und WiFi • Allianz, System- und Protokollarchitektur, Funkschnittstelle (Schwerpunkt MAC Schicht), Verfahren zur Mobilitätsunterstützung, Sicherheitskonzepte, Ausblick • Drahtlose MANs (WiMAX) • Drahtlose PANs (Bluetooth, ZigBee)",
+    "Leistungspunkte und Noten": "4",
+    "Arbeitsaufwand": "120"
+  },
+  {
+    "Modulnummer": "435660",
+    "Modulname": "Self-Organizing Networks",
+    "Inhalte und Qualifikationsziele": "• Einführung • Drahtlose Netze nach IEEE 802 Übersicht o IEEE 802.11 (Wireless Local Area Networks): System- und Protokollarchitektur, o Luftschnittstelle, Sicherheitskonzept IEEE 802.15 (Wireless Personal Area Networks): Bluetooth, ZigBee, UWB o • Mobilitätsmechanismen Einführung o Mobilität auf Netz-, Transport- und Anwendungsschicht o • Mobile Ad-Hoc Netze (MANETs) Einführung: Definition, Klassifikation, Anwendungsszenarien o Routingverfahren für MANETs o Medium Access Control (MAC) o Topologie-Kontrolle und Clusterbildung o Sicherheitsaspekte o • Spezielle Ausprägungen von MANETs Drahtlose Mesh-Netze (WMNs) nach IEEE 802.11s o Drahtlose Sensor und Actuator Netze (WSANs) o",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "652110",
+    "Modulname": "Informationsmanagement",
+    "Inhalte und Qualifikationsziele": "Information ist die zentrale Ressource der Wirtschaft. Die Vorlesung Informationsmanagement vermittelt Kenntnisse und Fähigkeiten zum Umgang mit dieser Ressource. Dies umfasst insbesondere die Planung, Steuerung und Überwachung der Informationsinfrastruktur eines Unternehmens.",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "652120",
+    "Modulname": "Strategic IT Management",
+    "Inhalte und Qualifikationsziele": "Die Veranstaltung behandelt die Aufgaben des strategischen IT-Managements. Im Einzelnen werden folgende Themenfelder adressiert: • IT-Strategie; Business/IT-Alignment • IT-Governance; COBIT • Prozessorientiertes IT-Management; ITIL • Qualitätsmanagement; EFQM; Six Sigma • Reifegradmodelle • IT-Risikomanagement",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "500410",
+    "Modulname": "Seminar Web Engineering",
+    "Inhalte und Qualifikationsziele": "Übersichtsartige Auseinandersetzung mit vorgegebenen Themen aus dem Bereich Web Engineering, insbesondere aus den Bereichen Software Engineering und Web Technologien.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "500420",
+    "Modulname": "Vorbereitungsseminar Planspiel Web Engineering",
+    "Inhalte und Qualifikationsziele": "Übersichtsartige Auseinandersetzung mit vorgegebenen Themen aus dem Bereich Web Engineering, insbesondere aus den Bereichen moderne Entwicklungsansätze für Web- Anwendungen, strategische Planung, Ansätze aus dem Umfeld von Agile, Lean und Design Thinking sowie User Interface Experience, Service Design und Cloud Computing.",
+    "Leistungspunkte und Noten": "2",
+    "Arbeitsaufwand": "60"
+  },
+  {
+    "Modulnummer": "613002",
+    "Modulname": "Businessplanung und Management von Gründungen",
+    "Inhalte und Qualifikationsziele": "Die Studenten setzen sich mit allen Aspekten der Selbständigkeit und der Gründung eines Unternehmens auseinander. Dazu zählen u.a. Ideenfindung und -bewertung, die Erstellung eines Businessplans, die Finanzierung einer Gründung und das Management von Start-Ups und KMUs.",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "613230",
+    "Modulname": "Gründungsfinanzierung",
+    "Inhalte und Qualifikationsziele": "Die Vorlesung vermittelt neben finanztechnischen und –analytischen Grundkenntnissen auch Wissen über Liquiditätsplanung und Finanzierungsquellen, Verständnis für die Rolle von Fremdkapitalgebern und Investoren und Grundkenntnisse über die Bewertung von Wachstumsunternehmen. Das erlernte Wissen wird in Fallstudien vertieft und praktisch angewendet.",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "613004",
+    "Modulname": "Technischer Vertrieb",
+    "Inhalte und Qualifikationsziele": "Besonders bei technologieorientierten Gründungen und KMUs kommt dem technischen Vertrieb an Firmenkunden eine Schlüsselfunktion zu. Die Vorlesung vermittelt daher umfangreiche Kenntnisse über den Ablauf von Business-to-Business-Geschäften. Neben der Vermittlung fundierter theoretischer Grundlagen ist ein Tagesworkshop verpflichtender Bestandteil der Vorlesung. In diesem erproben die Teilnehmer ihr erlerntes Wissen zum persönlichen Verkauf in realitätsnahen Rollenspielen. Durch den Einsatz von Videotechnik und strukturiertes Feedback wird die realistische Reflexion der eigenen Fertigkeiten ermöglicht.",
+    "Leistungspunkte und Noten": "5",
+    "Arbeitsaufwand": "150"
+  },
+  {
+    "Modulnummer": "136135",
+    "Modulname": "Deutsch als Fremdsprache II (Niveau A2)",
+    "Inhalte und Qualifikationsziele": "• Erweiterung und Festigung der Lexik u.a. zu Themen wie Ausbildung, Tätigkeiten, Hobbys, Freizeit und Beruf • Entdeckung und Übung neuer grammatischer Strukturen, z.B. trennbare und untrennbare Verben, reflexive Verben, Festigung der Zeitformen, Übungen zur Wortstellung in verschiedenen Satzkonstruktionen • Übungen zur deutschen Phonetik Die Ausbildung orientiert sich an der Sprachkompetenzstufe A2 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER).",
+    "Leistungspunkte und Noten": "4",
+    "Arbeitsaufwand": "120"
+  },
+  {
+    "Modulnummer": "613001",
+    "Modulname": "Business to Business Marketing",
+    "Inhalte und Qualifikationsziele": "Die Vorlesung thematisiert die theoretischen und praktischen Aspekte des Business to Business Marketing bezogen auf die Besonderheiten der Marktbearbeitung von Unternehmen aus Technologiesektoren. Hierzu werden in der Vorlesung die theoretischen Modelle und Methoden intensiv behandelt.",
+    "Leistungspunkte und Noten": "3",
+    "Arbeitsaufwand": "90"
+  },
+  {
+    "Modulnummer": "824005",
+    "Modulname": "Kommunikation und Führung",
+    "Inhalte und Qualifikationsziele": "Das Modul beschäftigt sich mit der Kommunikation im Führungskontext. Behandelt werden Verhandlungsgespräche mit Geschäftspartnern sowie Mitarbeitergespräche (Zielvereinbarungen, Leistungsrückmeldungen, Konfliktklärung etc.). Themen sind dabei: Kommunikationsmodelle, Gesprächsplanung und -steuerung, aktives Zuhören und Fragetechniken sowie Stile der Selbstpräsentation. Theoretische Hintergrundinformationen werden durch praktische Übungen ergänzt.",
+    "Leistungspunkte und Noten": "4",
+    "Arbeitsaufwand": "120"
+  },
+  {
+    "Modulnummer": "136250",
+    "Modulname": "Englisch in Studien- und Fachkommunikation II (Niveau B2)",
+    "Inhalte und Qualifikationsziele": "Ausbau der sprachlichen Kenntnisse und Fertigkeiten mit Bezug auf studien- und berufsorientierte Sachverhalte, selbstständige Recherche, Lesen und sprachliche Auswertung fachspezifischer Texte sowie Anwendung in der fachlichen Diskussion, Textanalyse und –produktion (Bewerbungsdokumente, Fachaufsätze), Vertiefung des akademischen/berufsspezifischen Fachwortschatzes in ausgewählten Teilgebieten, Leiten von Beratungen und Diskussionen; Die Ausbildung orientiert sich an der Sprachkompetenzstufe B2 des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER) und beinhaltet eine fachsprachliche Komponente.",
+    "Leistungspunkte und Noten": "8",
+    "Arbeitsaufwand": "240"
+  },
+  {
+    "Modulnummer": "500430",
+    "Modulname": "Planspiel Web Engineering",
+    "Inhalte und Qualifikationsziele": "Im Modul Planspiel Web Engineering werden Kenntnisse über moderne Entwicklungsansätze für Web-Anwendungen in realitätsnahen Szenarien erlernt und umgesetzt. Dabei wird der gesamte Lebenszyklus der Anwendungsentwicklung unter Berücksichtigung wirtschaftlicher Aspekte berücksichtigt. Neben strategischer Planung, Ansätzen aus dem Umfeld von Agile, Lean und Design Thinking sowie User Interface Experience, Service Design und Cloud Computing stehen Arbeit und Koordination in der Gruppe im Mittelpunkt des Planspiels.",
+    "Leistungspunkte und Noten": "30",
+    "Arbeitsaufwand": "900"
+  },
+  {
+    "Modulnummer": "9100",
+    "Modulname": "Master-Arbeit",
+    "Inhalte und Qualifikationsziele": "Im Rahmen des Moduls wird eine Masterarbeit erstellt und öffentlich verteidigt. Das Thema der Arbeit steht in inhaltlichem Zusammenhang zu einem der Anwendungsschwerpunkte. In der Masterarbeit und der abschließenden Verteidigung der Abschlussarbeit weisen die Studierenden nach, dass sie innerhalb einer bestimmten Frist ein begrenztes aber anspruchsvolles Problem wissenschaftlich bearbeiten können.",
+    "Leistungspunkte und Noten": "30",
+    "Arbeitsaufwand": "900"
+  }
+]
