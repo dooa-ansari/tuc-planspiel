@@ -67,6 +67,13 @@ function PageBody({ auth }) {
       link: "/manage-CSV",
     },
     {
+      title: "PDF to RDF",
+      description:
+        "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
+      buttonText: "Convert to RDF",
+      link: "/manage-PDF",
+    },
+    {
       title: "Transfer Credit Requests",
       description:
         "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
