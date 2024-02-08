@@ -10,6 +10,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
 from django.conf import settings
+from compare_modules.views import create_course_entry_in_rdf
 
 START_TEXT = 'Anlage 2:'
 MODULE_NUMBER = 'Modulnummer'
@@ -34,7 +35,7 @@ teaching_language_pattern = re.compile(r'\nLehrformen\s+(.*?)\nVoraussetzungen f
 credit_points_pattern = re.compile(r'\nLeistungspunkte und.*?(\d+)', re.DOTALL)
 work_load_pattern = re.compile(r'\nArbeitsaufwand.*?(\d+)(?=\s*AS|\s*\()', re.DOTALL)
 
-langDict = {'German': 'deutscher', 'English': 'englischer'}
+# langDict = {'German': 'deutscher', 'English': 'englischer'}
 
 courses = []
 g = Graph()
@@ -55,9 +56,6 @@ query = prepareQuery(
 # Execute the query and print the results
 for row in g.query(query):
     courses.append(row['hasCourseName'].value)
-courses.append('Systems Engineering')   # Add Systems Engineering as a special case
-courses.append('Psychologie') # Add Psychology as another special case
-courses.append('Automobilinformatik') # Add Psychology as another special case
 
 ## This code will convert pdf data to dictionary
 def extract_text_from_pdf(pdf_path, end_page=None):
@@ -108,23 +106,23 @@ def extract_information(key, values):
         contents = contents.replace('Qualifikationsziele', '').replace('tionsziele', '').replace('ziele', '').strip().replace('\n', ' ')
         result[MODULE_CONTENT] =' '.join(contents.split())
 
-    #Extract Languages
-    match_lang =teaching_language_pattern.search(values)
-    if match_lang:
-        contents = match_lang.group(1)
-        if 'auch in englischer' in contents or 'deutscher oder in englischer' in contents:
-             result[LANGUAGE] = ['German', 'English']
-        elif 'Sprache' in contents:
-                pattern = r'(\S+)\s+Sprache'
-                # Find all matches of the pattern in the input text
-                matches = re.findall(pattern, contents)
-                if matches:
-                     for key, value in langDict.items():
-                         if value in matches[0]:
-                             result[LANGUAGE] = [key]
+    # #Extract Languages
+    # match_lang =teaching_language_pattern.search(values)
+    # if match_lang:
+    #     contents = match_lang.group(1)
+    #     if 'auch in englischer' in contents or 'deutscher oder in englischer' in contents:
+    #          result[LANGUAGE] = ['German', 'English']
+    #     elif 'Sprache' in contents:
+    #             pattern = r'(\S+)\s+Sprache'
+    #             # Find all matches of the pattern in the input text
+    #             matches = re.findall(pattern, contents)
+    #             if matches:
+    #                  for key, value in langDict.items():
+    #                      if value in matches[0]:
+    #                          result[LANGUAGE] = [key]
 
-    if LANGUAGE not in result:
-         result[LANGUAGE] = ['German'] # take German as default langugae
+    # if LANGUAGE not in result:
+    #      result[LANGUAGE] = ['German'] # take German as default langugae
         
     # Extract Credit Points
     match_credit_points = credit_points_pattern.search(values)
@@ -197,8 +195,8 @@ def write_rdf(data, course_Name):
         g.add((module_uri, URIRef(f'{URI_MODULE}hasName'), Literal(module_name, datatype=DATATYPE_STRING)))
         g.add((module_uri, URIRef(f'{URI_MODULE}hasContent'), Literal(content, datatype=DATATYPE_STRING)))
         
-        for lang in langs:
-            g.add((module_uri, URIRef(f'{URI_MODULE}hasLanguage'), Literal(lang, datatype=DATATYPE_STRING)))
+        # for lang in langs:
+        #     g.add((module_uri, URIRef(f'{URI_MODULE}hasLanguage'), Literal(lang, datatype=DATATYPE_STRING)))
    
         # Check if credit_points is non-empty before converting to integer
         if credit_points:
@@ -236,6 +234,14 @@ def pdfToRdf(request):
     try:
         print('Start')
         uploaded_files = request.FILES.getlist('files')
+             # Get the raw request body
+        body = request.body.decode('utf-8')
+        # Parse JSON data from the request body
+        data = json.loads(body)
+
+        # This will Make New Entry of Course in RDF of courses.rdf
+        course_status = create_course_entry_in_rdf(data)
+
         # Create a temporary directory to save the files
         temp_dir = tempfile.mkdtemp()
 
@@ -250,9 +256,11 @@ def pdfToRdf(request):
             
             # If the file is stored in memory, read its content and write it to a file
             with open(file_path, 'wb') as f:
-             f.write(uploaded_file.read())
-             saved_file_paths.append(file_path)
-             write_json_rdf(file_path)
+                f.write(uploaded_file.read())
+                saved_file_paths.append(file_path)
+                write_json_rdf(file_path)
+
+                # start_automation_tool()
         return JsonResponse({'message': f'PDF file(s) is sucessfully converted to RDF file(s).'}, status=200)
     except Exception as e:
         return JsonResponse({'message': f'Error uploading and saving files: {str(e)}'}, status=500)
