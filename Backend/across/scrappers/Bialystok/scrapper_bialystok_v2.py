@@ -21,6 +21,10 @@ ENGINEERING_MANAGEMENT_V4 = "Management"
 ENGINEERING_MANAGEMENT_V3 = "Faculty of Engineering Management"
 MECHINICAL_ENGINEERING_V1 = "Mechanical Engineering"
 MECHINICAL_ENGINEERING_V2 = "Faculty of Mechanical Engineering"
+COMPUTER_SCIENCE = "Computer Science"
+ARCHITECTURE = "Architecture"
+BIOMEDICAL_ENGINEERING = "Biomedical Engineering"
+CIVIL_ENGINEERING = "Civil and Earth Sciences"
 
 courses_list = {'Computer Science': 'http://tuc/course#BUMSCS', 'Architecture': 'http://tuc/course#BUMA', 'Electrical Engineering': 'http://tuc/course#BUME', 'Mechanical Engineering': 'http://tuc/course#BUMM', 'Civil Engineering and Environmental Sciences': 'http://tuc/course#BUCE', 'Engineering Management': 'http://tuc/course#BUEM', 'Civil and Earth Sciences': 'http://tuc/course#BUCES', 'Biomedical Engineering': 'http://tuc/course#BUCBE'}
 
@@ -189,7 +193,7 @@ for pdf_url in pdf_type_1:
     else:
         print("No match found for content")
     
-    if field_of_study_v:
+    if field_of_study_v and field_of_study_v == CIVIL_ENGINEERING:
         print("value of field of study:"+field_of_study_v)
         module_uri_g = URIRef(f"{uri_main}{''.join(e for e in course_code_v if e.isalnum())}")
         uriUniversity = URIRef("http://across/university#BU")
@@ -220,7 +224,7 @@ for pdf_url in pdf_type_1:
         
 
 bialystok_modules_data = graph.serialize(format='xml')
-with open('data.rdf', 'w', encoding='utf-8') as bialystok_modules_file:
+with open('data_civil_earth_sciences.rdf', 'w', encoding='utf-8') as bialystok_modules_file:
     bialystok_modules_file.write(bialystok_modules_data)
 bialystok_modules_file.close()
 
