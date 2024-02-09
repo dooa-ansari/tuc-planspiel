@@ -8,16 +8,43 @@ import '../assets/css/FileUpload.css';
 const PdfToRdf = () => {
     const [uploadedFiles, setUploadedFiles] = useState([]);
     const [uploadStatus, setUploadStatus] = useState(null);
+    const [formData, setFormData] = useState({
+        courseName: '',
+        belongsToUniversity: '',
+        belongsToProgram: '',
+        belongsToDepartment: '',
+        hasLanguage: '',
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
 
     const onDrop = useCallback(async (acceptedFiles) => {
         try {
-            const formData = new FormData();
+            const filesFormData = new FormData();
+
             acceptedFiles.forEach((file) => {
-                console.log(JSON.stringify(file))
-                formData.append('files', file);
+                filesFormData.append('files', file);
             });
 
-            const response = await axios.post('http://127.0.0.1:8000/pdf_To_rdf/api/pdfToRdf', formData);
+            // Create a JSON object with the required data
+            const jsonData = {
+                courseName: formData.courseName,
+                belongsToUniversity: formData.belongsToUniversity,
+                belongsToProgram: formData.belongsToProgram,
+                belongsToDepartment: formData.belongsToDepartment,
+                hasLanguage: formData.hasLanguage,
+            };
+
+            // Append JSON data to FormData
+            filesFormData.append('jsonData', JSON.stringify(jsonData));
+
+            const response = await axios.post('http://127.0.0.1:8000/pdf_To_rdf/api/pdfToRdf', filesFormData);
 
             console.log('Upload response:', response.data);
 
@@ -27,7 +54,8 @@ const PdfToRdf = () => {
             console.error('Error uploading files:', error);
             setUploadStatus('Error uploading files. Please try again.');
         }
-    }, []);
+    }, [formData]);
+
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
@@ -40,6 +68,56 @@ const PdfToRdf = () => {
                     <li>Upload PDF files with modules you want to update or insert in RDF file.</li>
                 </ul>
             </div>
+
+            <form>
+                <label>
+                    Course Name:
+                    <input
+                        type="text"
+                        name="courseName"
+                        value={formData.courseName}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Belongs To University:
+                    <input
+                        type="text"
+                        name="belongsToUniversity"
+                        value={formData.belongsToUniversity}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Belongs To Program:
+                    <input
+                        type="text"
+                        name="belongsToProgram"
+                        value={formData.belongsToProgram}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Belongs To Department:
+                    <input
+                        type="text"
+                        name="belongsToDepartment"
+                        value={formData.belongsToDepartment}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    Has Language:
+                    <input
+                        type="text"
+                        name="hasLanguage"
+                        value={formData.hasLanguage}
+                        onChange={handleChange}
+                    />
+                </label>
+            </form>
+
+
             <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
                 <input {...getInputProps()} />
                 {isDragActive ? (

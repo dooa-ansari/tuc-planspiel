@@ -13,6 +13,7 @@ def create_course_entry_in_rdf(data):
     has_language = data.get('hasLanguage','')
 
     course_uri = ''
+    university_uri=''
     server = sparql.SPARQLServer('http://192.168.0.173:9999/blazegraph/sparql')
     query = sparqlquery.get_course_uri_by_course_and_university_name(course_name, belongs_to_university)
     qresponse = server.query(query)

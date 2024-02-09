@@ -153,22 +153,22 @@ def get_course_name(moduleDict):
             print("Course name could not be found.")
 
 # Convert the list of dictionaries to JSON
-def write_json_rdf(pdf_path):
+def write_json_rdf(pdf_path, course_status):
     # Extract text from the PDF
     moduleDict = extract_text_from_pdf(pdf_path)
-    course_Name =  get_course_name(moduleDict)
-    course_Name= course_Name.replace(' ', '')
+    # course_Name =  get_course_name(moduleDict)
+    # course_Name= course_Name.replace(' ', '')
     result_list = get_results(moduleDict)
     json_data = json.dumps(result_list, indent=2, ensure_ascii=False)
     # Write JSON data to a separate file
-    output_json_path = os.path.join(DATA_PATH, 'ModulesRDF',  f'{course_Name}.json')
+    output_json_path = os.path.join(DATA_PATH, 'ModulesRDF',  f'{course_status['course_code']}.json')
     with open(output_json_path, "w", encoding="utf-8") as json_file:
         json_file.write(json_data)
         print(f"JSON data has been written to {output_json_path}")
         # Load JSON data
-        write_rdf(json.loads(json_data), course_Name)
+        write_rdf(json.loads(json_data), course_status['course_code'])
 
-def write_rdf(data, course_Name):
+def write_rdf(data, course_code):
     # RDF Namespace
     module_ns = URIRef(URI_MODULE)
     # Create RDF graph
@@ -177,7 +177,7 @@ def write_rdf(data, course_Name):
     for module in data:
         module_number = module.get(MODULE_NUMBER, "")
         module_name = module.get(MODULE_NAME, "")
-        content = module.get(MODULE_CONTENT, "")
+        content = module.get(MODULE_CONTENT, "").replace("•","")
         langs = module.get(LANGUAGE, "")
         credit_points = module.get(GRADES, "")
         work_load = module.get(WORKLOAD, "")
@@ -216,13 +216,13 @@ def write_rdf(data, course_Name):
 
         # Add additional RDF triples for each module
         g.add((module_uri, URIRef(f'{URI_TUC_MODULE}hasUniversity'), URIRef(URI_UNI)))
-        g.add((module_uri, URIRef(f'{URI_COURSE}hasCourse'), URIRef(f'{URI_COURSE}{course_Name}')))
+        g.add((module_uri, URIRef(f'{URI_COURSE}hasCourse'), URIRef(f'{URI_COURSE}{course_code}')))
 
     # Serialize RDF graph to RDF/XML format
     rdf_outputBytes = (g.serialize(format="xml")).encode('utf-8')
     
     # Save RDF data to a file with proper encoding
-    output_rdf_path = os.path.join(DATA_PATH, 'ModulesRDF',  f'{course_Name}.rdf')
+    output_rdf_path = os.path.join(DATA_PATH, 'ModulesRDF',  f'{course_code}.rdf')
 
     with open(output_rdf_path, "wb") as rdf_file:
         rdf_file.write(rdf_outputBytes)
@@ -232,35 +232,26 @@ def write_rdf(data, course_Name):
 @require_POST
 def pdfToRdf(request):
     try:
-        print('Start')
-        uploaded_files = request.FILES.getlist('files')
-             # Get the raw request body
-        body = request.body.decode('utf-8')
         # Parse JSON data from the request body
-        data = json.loads(body)
-
+        data = json.loads(request.POST.get('jsonData'))
+        uploaded_files = request.FILES.getlist('files')
         # This will Make New Entry of Course in RDF of courses.rdf
         course_status = create_course_entry_in_rdf(data)
-
+        rdf_file_name = course_status["university_code"]+'_'+course_status["course_code"]
+        
         # Create a temporary directory to save the files
         temp_dir = tempfile.mkdtemp()
-
         # List to store the paths of saved files
         saved_file_paths = []
-        # Iterate over the uploaded files
         for uploaded_file in uploaded_files:
-            print(uploaded_file.name)
-
             # Construct the file path where the file will be saved in the temporary directory
-            file_path = os.path.join(temp_dir, uploaded_file.name)
-            
+            file_path = os.path.join(temp_dir, rdf_file_name)
             # If the file is stored in memory, read its content and write it to a file
             with open(file_path, 'wb') as f:
                 f.write(uploaded_file.read())
                 saved_file_paths.append(file_path)
-                write_json_rdf(file_path)
+                write_json_rdf(file_path, course_status)
 
-                # start_automation_tool()
         return JsonResponse({'message': f'PDF file(s) is sucessfully converted to RDF file(s).'}, status=200)
     except Exception as e:
         return JsonResponse({'message': f'Error uploading and saving files: {str(e)}'}, status=500)
