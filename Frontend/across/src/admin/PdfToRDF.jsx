@@ -60,7 +60,7 @@ const PdfToRdf = () => {
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
     return (
-        <div className="file-upload-container">
+        <Container className="file-upload-container">
             <div className='instructions'>
                 <p className='instructions-font'>This is utility to update or insert modules in RDF file using PDF files</p>
                 <p className='instructions-font-subtext'>How to use this utility</p>
@@ -69,79 +69,100 @@ const PdfToRdf = () => {
                 </ul>
             </div>
 
-            <form>
-                <label>
-                    Course Name:
-                    <input
-                        type="text"
-                        name="courseName"
-                        value={formData.courseName}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    Belongs To University:
-                    <input
-                        type="text"
-                        name="belongsToUniversity"
-                        value={formData.belongsToUniversity}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    Belongs To Program:
-                    <input
-                        type="text"
-                        name="belongsToProgram"
-                        value={formData.belongsToProgram}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    Belongs To Department:
-                    <input
-                        type="text"
-                        name="belongsToDepartment"
-                        value={formData.belongsToDepartment}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    Has Language:
-                    <input
-                        type="text"
-                        name="hasLanguage"
-                        value={formData.hasLanguage}
-                        onChange={handleChange}
-                    />
-                </label>
-            </form>
+            <Form>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="courseName">
+                            <Form.Label>Course Name:</Form.Label>
+                            <Form.Control
+                                type="text"
+                                name="courseName"
+                                value={formData.courseName}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="belongsToUniversity">
+                            <Form.Label>Belongs To University:</Form.Label>
+                            <Form.Control
+                                type="text"
+                                name="belongsToUniversity"
+                                value={formData.belongsToUniversity}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                    </Col>
+                </Row>
 
+                <Row>
+                    <Col>
+                        <Form.Group controlId="belongsToProgram">
+                            <Form.Label>Belongs To Program:</Form.Label>
+                            <Form.Control
+                                type="text"
+                                name="belongsToProgram"
+                                value={formData.belongsToProgram}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group controlId="belongsToDepartment">
+                            <Form.Label>Belongs To Department:</Form.Label>
+                            <Form.Control
+                                type="text"
+                                name="belongsToDepartment"
+                                value={formData.belongsToDepartment}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                    </Col>
+                </Row>
 
-            <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
-                <input {...getInputProps()} />
-                {isDragActive ? (
-                    <p>Drop the files here ...</p>
-                ) : (
-                    <p>Drag 'n' drop University module files here, or click to select files</p>
-                )}
-            </div>
+                <Row>
+                    <Col>
+                        <Form.Group controlId="hasLanguage">
+                            <Form.Label>Has Language:</Form.Label>
+                            <Form.Control
+                                type="text"
+                                name="hasLanguage"
+                                value={formData.hasLanguage}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                    </Col>
+                </Row>
 
-            {uploadedFiles.length > 0 && (
-                <div className="upload-info">
-                    <h3>Uploaded Files:</h3>
-                    <ul>
-                        {uploadedFiles.map((file) => (
-                            <li key={file.name}>{file.name}</li>
-                        ))}
-                    </ul>
-                    <div className="upload-status">
-                        <FiCheckCircle size={24} color="#4CAF50" />
-                        <p>{uploadStatus}</p>
-                    </div>
+                <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
+                    <input {...getInputProps()} />
+                    {isDragActive ? (
+                        <p>Drop the files here ...</p>
+                    ) : (
+                        <p>Drag 'n' drop University module files here, or click to select files</p>
+                    )}
                 </div>
-            )}
-        </div>
+
+                {uploadedFiles.length > 0 && (
+                    <div className="upload-info">
+                        <h3>Uploaded Files:</h3>
+                        <ul>
+                            {uploadedFiles.map((file) => (
+                                <li key={file.name}>{file.name}</li>
+                            ))}
+                        </ul>
+                        <div className="upload-status">
+                            <FiCheckCircle size={24} color="#4CAF50" />
+                            <p>{uploadStatus}</p>
+                        </div>
+                    </div>
+                )}
+
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
+            </Form>
+        </Container>
     );
 };
 
