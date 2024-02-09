@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 import { FiCheckCircle } from 'react-icons/fi';
-import { Form, Col, Row, Container, Button } from 'react-bootstrap';
+import { Form, Col, Row, Container, Button, Modal } from 'react-bootstrap';
 import '../assets/css/FileUpload.css';
 
 const PdfToRdf = () => {
@@ -15,6 +15,18 @@ const PdfToRdf = () => {
         belongsToDepartment: '',
         hasLanguage: '',
     });
+
+    const [showModal, setShowModal] = useState(true);
+
+    const handleCloseModal = () => {
+        // Check if all required data is filled before closing modal
+        if (formData.courseName && formData.belongsToUniversity && formData.belongsToProgram && formData.belongsToDepartment && formData.hasLanguage) {
+            setShowModal(false);
+        } else {
+            // Optionally, display a message to the user about the missing data
+            alert('Please fill in all required fields before submitting.');
+        }
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -69,99 +81,106 @@ const PdfToRdf = () => {
                 </ul>
             </div>
 
-            <Form>
-                <Row>
-                    <Col>
-                        <Form.Group controlId="courseName">
-                            <Form.Label>Course Name:</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="courseName"
-                                value={formData.courseName}
-                                onChange={handleChange}
-                            />
-                        </Form.Group>
-                    </Col>
-                    <Col>
-                        <Form.Group controlId="belongsToUniversity">
-                            <Form.Label>Belongs To University:</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="belongsToUniversity"
-                                value={formData.belongsToUniversity}
-                                onChange={handleChange}
-                            />
-                        </Form.Group>
-                    </Col>
-                </Row>
+            <Modal show={showModal} onHide={handleCloseModal} backdrop="static" keyboard={false}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Fill in the required data</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Row>
+                            <Col>
+                                <Form.Group controlId="courseName">
+                                    <Form.Label>Course Name:</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        name="courseName"
+                                        value={formData.courseName}
+                                        onChange={handleChange}
+                                    />
+                                </Form.Group>
+                            </Col>
+                            <Col>
+                                <Form.Group controlId="belongsToUniversity">
+                                    <Form.Label>Belongs To University:</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        name="belongsToUniversity"
+                                        value={formData.belongsToUniversity}
+                                        onChange={handleChange}
+                                    />
+                                </Form.Group>
+                            </Col>
+                        </Row>
 
-                <Row>
-                    <Col>
-                        <Form.Group controlId="belongsToProgram">
-                            <Form.Label>Belongs To Program:</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="belongsToProgram"
-                                value={formData.belongsToProgram}
-                                onChange={handleChange}
-                            />
-                        </Form.Group>
-                    </Col>
-                    <Col>
-                        <Form.Group controlId="belongsToDepartment">
-                            <Form.Label>Belongs To Department:</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="belongsToDepartment"
-                                value={formData.belongsToDepartment}
-                                onChange={handleChange}
-                            />
-                        </Form.Group>
-                    </Col>
-                </Row>
+                        <Row>
+                            <Col>
+                                <Form.Group controlId="belongsToProgram">
+                                    <Form.Label>Belongs To Program:</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        name="belongsToProgram"
+                                        value={formData.belongsToProgram}
+                                        onChange={handleChange}
+                                    />
+                                </Form.Group>
+                            </Col>
+                            <Col>
+                                <Form.Group controlId="belongsToDepartment">
+                                    <Form.Label>Belongs To Department:</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        name="belongsToDepartment"
+                                        value={formData.belongsToDepartment}
+                                        onChange={handleChange}
+                                    />
+                                </Form.Group>
+                            </Col>
+                        </Row>
 
-                <Row>
-                    <Col>
-                        <Form.Group controlId="hasLanguage">
-                            <Form.Label>Has Language:</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="hasLanguage"
-                                value={formData.hasLanguage}
-                                onChange={handleChange}
-                            />
-                        </Form.Group>
-                    </Col>
-                </Row>
-
-                <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
-                    <input {...getInputProps()} />
-                    {isDragActive ? (
-                        <p>Drop the files here ...</p>
-                    ) : (
-                        <p>Drag 'n' drop University module files here, or click to select files</p>
-                    )}
-                </div>
-
-                {uploadedFiles.length > 0 && (
-                    <div className="upload-info">
-                        <h3>Uploaded Files:</h3>
-                        <ul>
-                            {uploadedFiles.map((file) => (
-                                <li key={file.name}>{file.name}</li>
-                            ))}
-                        </ul>
-                        <div className="upload-status">
-                            <FiCheckCircle size={24} color="#4CAF50" />
-                            <p>{uploadStatus}</p>
-                        </div>
-                    </div>
+                        <Row>
+                            <Col>
+                                <Form.Group controlId="hasLanguage">
+                                    <Form.Label>Has Language:</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        name="hasLanguage"
+                                        value={formData.hasLanguage}
+                                        onChange={handleChange}
+                                    />
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={handleCloseModal}>
+                        Submit
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
+                <input {...getInputProps()} />
+                {isDragActive ? (
+                    <p>Drop the files here ...</p>
+                ) : (
+                    <p>Drag 'n' drop University module files here, or click to select files</p>
                 )}
+            </div>
 
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-            </Form>
+            {uploadedFiles.length > 0 && (
+                <div className="upload-info">
+                    <h3>Uploaded Files:</h3>
+                    <ul>
+                        {uploadedFiles.map((file) => (
+                            <li key={file.name}>{file.name}</li>
+                        ))}
+                    </ul>
+                    <div className="upload-status">
+                        <FiCheckCircle size={24} color="#4CAF50" />
+                        <p>{uploadStatus}</p>
+                    </div>
+                </div>
+            )}
         </Container>
     );
 };
