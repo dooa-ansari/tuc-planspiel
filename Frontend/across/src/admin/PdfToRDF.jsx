@@ -2,8 +2,8 @@ import React, { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 import { FiCheckCircle } from 'react-icons/fi';
+import { Form, Col, Row, Container, Button } from 'react-bootstrap';
 import '../assets/css/FileUpload.css';
-
 
 const PdfToRdf = () => {
     const [uploadedFiles, setUploadedFiles] = useState([]);
