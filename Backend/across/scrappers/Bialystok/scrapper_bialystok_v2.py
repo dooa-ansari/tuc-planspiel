@@ -17,9 +17,12 @@ CIVIL_EARTH_SCIENCES_V4 = "Civil Engineering and Environmental Science"
 CIVIL_EARTH_SCIENCES_V5 = "Civil and Environmental Sciences"
 ENGINEERING_MANAGEMENT_V2 = "Engineering Managment"
 ENGINEERING_MANAGEMENT_V1 = "Engineering Management"
+ENGINEERING_MANAGEMENT_V4 = "Management"
 ENGINEERING_MANAGEMENT_V3 = "Faculty of Engineering Management"
 MECHINICAL_ENGINEERING_V1 = "Mechanical Engineering"
 MECHINICAL_ENGINEERING_V2 = "Faculty of Mechanical Engineering"
+
+courses_list = {'Computer Science': 'http://tuc/course#BUMSCS', 'Architecture': 'http://tuc/course#BUMA', 'Electrical Engineering': 'http://tuc/course#BUME', 'Mechanical Engineering': 'http://tuc/course#BUMM', 'Civil Engineering and Environmental Sciences': 'http://tuc/course#BUCE', 'Engineering Management': 'http://tuc/course#BUEM', 'Civil and Earth Sciences': 'http://tuc/course#BUCES', 'Biomedical Engineering': 'http://tuc/course#BUCBE'}
 
 added_module_names = set()
 special_case_modules = {'Forest pathology': "IS-FF-00036S",'Computer modeling of water supply and sewage systems': "IS-FCEE-00133W", 'Forest hydrology': "IS-FF-00011W", 'Chemistry': "IS-FF-00001W", 'Invasive species in forest areas': "S-FF-00042W/S", 'Forest mushrooms in medicine': "IS-FF-00043S", 'Heating systems': "FCEE-00077W", 'Water management and water protection': "IS-FCEE-00134W", 'Forest protection': "IS-FF-00037S", 'Air conditioning and ventilation systems 2': "FCEE-00108W", 'Forest management in valuable natural areas': "IS-FF-00041W/S", 'Natural medicinal substances m forest materialsfro': "IS-FF-00044S", 'Air conditioning and Ventilation systems 1': "FCEE-00107W", 'Technology and organization of sanitary works': "IS-FCEE-00213W", 'Biodiversity conservation of forest areas': "IS-FF-00038-1W/S", 'Forest botany: Dendrology': "IS-FF-00032W/S", 'Forest applied botany': "IS-FF-00025W/S" , 'Heat centers': "FCEE-00143W"}
@@ -120,10 +123,13 @@ for pdf_url in pdf_type_1:
         if field_of_study_v:
             if field_of_study_v == CIVIL_EARTH_SCIENCES_V1 or field_of_study_v == CIVIL_EARTH_SCIENCES_V2 or field_of_study_v == CIVIL_EARTH_SCIENCES_V3 or field_of_study_v == CIVIL_EARTH_SCIENCES_V4 or field_of_study_v == CIVIL_EARTH_SCIENCES_V5:
              departments.add(CIVIL_EARTH_SCIENCES_V1)
-            elif field_of_study_v == ENGINEERING_MANAGEMENT_V1 or field_of_study_v == ENGINEERING_MANAGEMENT_V2 or field_of_study_v == ENGINEERING_MANAGEMENT_V3:
+             field_of_study_v = CIVIL_EARTH_SCIENCES_V1
+            elif field_of_study_v == ENGINEERING_MANAGEMENT_V1 or field_of_study_v == ENGINEERING_MANAGEMENT_V2 or field_of_study_v == ENGINEERING_MANAGEMENT_V3 or field_of_study_v == ENGINEERING_MANAGEMENT_V4:
              departments.add(ENGINEERING_MANAGEMENT_V1) 
+             field_of_study_v = ENGINEERING_MANAGEMENT_V1
             elif field_of_study_v == MECHINICAL_ENGINEERING_V1 or field_of_study_v == MECHINICAL_ENGINEERING_V2:
-             departments.add(MECHINICAL_ENGINEERING_V1)  
+             departments.add(MECHINICAL_ENGINEERING_V1)
+             field_of_study_v = MECHINICAL_ENGINEERING_V1  
             else:
              departments.add(field_of_study_v)
         else :
@@ -133,6 +139,10 @@ for pdf_url in pdf_type_1:
         if field_of_study_v2:
            field_of_study_v = field_of_study_v2.group(1).strip()
            departments.add(field_of_study_v)
+           
+           if field_of_study_v == ENGINEERING_MANAGEMENT_V4:
+             field_of_study_v = ENGINEERING_MANAGEMENT_V1
+             departments.add(ENGINEERING_MANAGEMENT_V1)   
            print(field_of_study_v)
 
     if programme_type:
@@ -178,36 +188,36 @@ for pdf_url in pdf_type_1:
         content_v = content.group().strip()
     else:
         print("No match found for content")
-
-
-    module_uri_g = URIRef(f"{uri_main}{''.join(e for e in course_code_v if e.isalnum())}")
-    uriUniversity = URIRef("http://across/university#BU")
-    uriCourse = URIRef("http://tuc/course#Civil_Engineering_and_Environmental_Sciences")
-    module_name_g = Literal(course_name_v, datatype=XSD.string)
-    module_content_g = Literal(content_v, datatype=XSD.string)
-    module_id_g = Literal(course_code_v, datatype=XSD.string)
-    credit_points_g = Literal(ects_v, datatype=XSD.string)
-    hours_g = Literal(hours_v, datatype=XSD.string)
-    language_g = Literal("English", datatype=XSD.string)
-    programme_type_g = Literal(programme_type_v, datatype=XSD.string)
-    department_g = Literal(field_of_study_v, datatype=XSD.string)
-    university_g = Literal("", datatype=XSD.string)
-        
-    if module_name_g not in added_module_names and not is_module_name_in_graph(graph, module_name_g):
-        graph.add((module_uri_g, RDF.type, NAME_SPACE.module))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasName"), module_name_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasLanguage"), language_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasProgrammeType"), programme_type_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasHours"), hours_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasModuleNumber"), module_id_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasContent"), module_content_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasCreditPoints"), credit_points_g))
-        graph.add((module_uri_g, URIRef("http://tuc/course#hasCourse"), uriCourse))
-        graph.add((module_uri_g, URIRef("http://tuc/dept#hasDept"), department_g))
-        graph.add((module_uri_g, URIRef("http://across/university#hasUniversity"), uriUniversity))
-    # if(count > 0): 
-    #     break
     
+    if field_of_study_v:
+        print("value of field of study:"+field_of_study_v)
+        module_uri_g = URIRef(f"{uri_main}{''.join(e for e in course_code_v if e.isalnum())}")
+        uriUniversity = URIRef("http://across/university#BU")
+        uriCourse = URIRef(courses_list.get(field_of_study_v))
+        module_name_g = Literal(course_name_v, datatype=XSD.string)
+        module_content_g = Literal(content_v, datatype=XSD.string)
+        module_id_g = Literal(course_code_v, datatype=XSD.string)
+        credit_points_g = Literal(ects_v, datatype=XSD.string)
+        hours_g = Literal(hours_v, datatype=XSD.string)
+        language_g = Literal("English", datatype=XSD.string)
+        programme_type_g = Literal(programme_type_v, datatype=XSD.string)
+        department_g = Literal(field_of_study_v, datatype=XSD.string)
+            
+        if module_name_g not in added_module_names and not is_module_name_in_graph(graph, module_name_g):
+            graph.add((module_uri_g, RDF.type, NAME_SPACE.module))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasName"), module_name_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasLanguage"), language_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasProgrammeType"), programme_type_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasWorkLoad"), hours_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasModuleNumber"), module_id_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasContent"), module_content_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasCreditPoints"), credit_points_g))
+            graph.add((module_uri_g, URIRef("http://tuc/course#hasCourse"), uriCourse))
+            graph.add((module_uri_g, URIRef("http://tuc/dept#hasDept"), department_g))
+            graph.add((module_uri_g, URIRef("http://across/university#hasUniversity"), uriUniversity))
+        # if(count > 0): 
+        #     break
+        
 
 bialystok_modules_data = graph.serialize(format='xml')
 with open('data.rdf', 'w', encoding='utf-8') as bialystok_modules_file:

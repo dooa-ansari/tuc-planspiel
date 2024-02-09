@@ -10,6 +10,8 @@ import wget
 from os import listdir
 from os.path import isfile, join
 
+courses_list = {'Computer Science': 'http://tuc/course#BUMSCS', 'Architecture': 'http://tuc/course#BUMA', 'Electrical Engineering': 'http://tuc/course#BUME', 'Mechanical Engineering': 'http://tuc/course#BUMM', 'Civil Engineering and Environmental Sciences': 'http://tuc/course#BUCE', 'Engineering Management': 'http://tuc/course#BUEM', 'Civil and Earth Sciences': 'http://tuc/course#BUCES', 'Biomedical Engineering': 'http://tuc/course#BUCBE'}
+
 CIVIL_EARTH_SCIENCES_V1 = "Civil Engineering and Environmental Sciences"
 CIVIL_EARTH_SCIENCES_V2 = "Civil Engineering and Envir onmental Sciences"
 CIVIL_EARTH_SCIENCES_V3 = "Civil and Environmental Science"
@@ -177,34 +179,34 @@ for pageNo in range(noOfPages):
     else:
         print("No match found for content")
 
-
-    module_uri_g = URIRef(f"{uri_main}{''.join(e for e in course_code_v if e.isalnum())}")
-    uriUniversity = URIRef("http://across/university#BU")
-    uriCourse = URIRef("http://tuc/course#Civil_Engineering_and_Environmental_Sciences")
-    module_name_g = Literal(course_name_v, datatype=XSD.string)
-    module_content_g = Literal(content_v, datatype=XSD.string)
-    module_id_g = Literal(course_code_v, datatype=XSD.string)
-    credit_points_g = Literal(ects_v, datatype=XSD.string)
-    hours_g = Literal(hours_v, datatype=XSD.string)
-    language_g = Literal("English", datatype=XSD.string)
-    programme_type_g = Literal(programme_type_v, datatype=XSD.string)
-    department_g = Literal(field_of_study_v, datatype=XSD.string)
-    university_g = Literal("", datatype=XSD.string)
-        
-    if course_name_v!="" and module_name_g not in added_module_names and not is_module_name_in_graph(graph, module_name_g):
-        graph.add((module_uri_g, RDF.type, NAME_SPACE.module))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasName"), module_name_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasLanguage"), language_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasProgrammeType"), programme_type_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasHours"), hours_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasModuleNumber"), module_id_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasContent"), module_content_g))
-        graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasCreditPoints"), credit_points_g))
-        graph.add((module_uri_g, URIRef("http://tuc/course#hasCourse"), uriCourse))
-        graph.add((module_uri_g, URIRef("http://tuc/dept#hasDept"), department_g))
-        graph.add((module_uri_g, URIRef("http://across/university#hasUniversity"), uriUniversity))
-    # if(count > 0): 
-    #     break
+    if field_of_study_v:
+        print("value of field of study:"+field_of_study_v)
+        module_uri_g = URIRef(f"{uri_main}{''.join(e for e in course_code_v if e.isalnum())}")
+        uriUniversity = URIRef("http://across/university#BU")
+        uriCourse = URIRef(courses_list.get(field_of_study_v))
+        module_name_g = Literal(course_name_v, datatype=XSD.string)
+        module_content_g = Literal(content_v, datatype=XSD.string)
+        module_id_g = Literal(course_code_v, datatype=XSD.string)
+        credit_points_g = Literal(ects_v, datatype=XSD.string)
+        hours_g = Literal(hours_v, datatype=XSD.string)
+        language_g = Literal("English", datatype=XSD.string)
+        programme_type_g = Literal(programme_type_v, datatype=XSD.string)
+        department_g = Literal(field_of_study_v, datatype=XSD.string)
+            
+        if course_name_v!="" and module_name_g not in added_module_names and not is_module_name_in_graph(graph, module_name_g):
+            graph.add((module_uri_g, RDF.type, NAME_SPACE.module))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasName"), module_name_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasLanguage"), language_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasProgrammeType"), programme_type_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasWorkLoad"), hours_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasModuleNumber"), module_id_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasContent"), module_content_g))
+            graph.add((module_uri_g, URIRef("http://tuc.web.engineering/module#hasCreditPoints"), credit_points_g))
+            graph.add((module_uri_g, URIRef("http://tuc/course#hasCourse"), uriCourse))
+            graph.add((module_uri_g, URIRef("http://tuc/dept#hasDept"), department_g))
+            graph.add((module_uri_g, URIRef("http://across/university#hasUniversity"), uriUniversity))
+        # if(count > 0): 
+        #     break
     
 
 bialystok_modules_data = graph.serialize(format='xml')
