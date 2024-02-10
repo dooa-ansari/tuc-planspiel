@@ -161,7 +161,7 @@ def write_json_rdf(pdf_path, course_status, rdf_file_name):
     result_list = get_results(moduleDict)
     json_data = json.dumps(result_list, indent=2, ensure_ascii=False)
     # Write JSON data to a separate file
-    output_json_path = os.path.join(DATA_PATH, f'{course_status['university_name']}',  f'{rdf_file_name}.json')
+    output_json_path = os.path.join(DATA_PATH, f'{course_status["university_name"]}',  f'{rdf_file_name}.json')
     with open(output_json_path, "w", encoding="utf-8") as json_file:
         json_file.write(json_data)
         print(f"JSON data has been written to {output_json_path}")
@@ -216,13 +216,14 @@ def write_rdf(data, course_status, rdf_file_name):
 
         # Add additional RDF triples for each module
         g.add((module_uri, URIRef(f'{URI_TUC_MODULE}hasUniversity'), URIRef(URI_UNI)))
-        g.add((module_uri, URIRef(f'{URI_COURSE}hasCourse'), URIRef(f'{URI_COURSE}{course_status['course_code']}')))
+        # single quotes are giving an error in 3.12 python
+        g.add((module_uri, URIRef(f'{URI_COURSE}hasCourse'), URIRef(f'{URI_COURSE}{course_status["course_code"]}')))
 
     # Serialize RDF graph to RDF/XML format
     rdf_outputBytes = (g.serialize(format="xml")).encode('utf-8')
     
     # Save RDF data to a file with proper encoding
-    output_rdf_path = os.path.join(DATA_PATH, f'{course_status['university_name']}',  f'{rdf_file_name}.rdf')
+    output_rdf_path = os.path.join(DATA_PATH, f'{course_status["university_name"]}',  f'{rdf_file_name}.rdf')
 
     with open(output_rdf_path, "wb") as rdf_file:
         rdf_file.write(rdf_outputBytes)
