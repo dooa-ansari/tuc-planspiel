@@ -3,6 +3,8 @@ from pymantic import sparql
 from .sparql import *
 import requests
 from django.http import JsonResponse
+import shortuuid
+import re
 
 def create_course_entry_in_rdf(data):
     
@@ -16,6 +18,10 @@ def create_course_entry_in_rdf(data):
     university_uri=''
     server = sparql.SPARQLServer('http://192.168.0.173:9999/blazegraph/sparql')
 
+    # Generate a short UUID
+    short_uuid = shortuuid.uuid()
+    # Remove alphabets from the short UUID
+    uuid_numeric_only = re.sub(r'[^0-9]', '', short_uuid)
     # Getting University URI
     qresponse = server.query(sparqlquery.get_university_uri_by_university_name(belongs_to_university))
     data_for_unviersity_uri = qresponse['results']['bindings'] 
@@ -44,7 +50,7 @@ def create_course_entry_in_rdf(data):
         course_code = course_name.replace(' ','')
         course_uri = "http://tuc/course#"+course_code
 
-    payload = {'update': add_course(course_uri, course_name, belongs_to_program, belongs_to_department, university_uri,has_language)}
+    payload = {'update': add_course(uuid_numeric_only, course_uri, course_name, belongs_to_program, belongs_to_department, university_uri,has_language)}
         
     result = requests.post("http://192.168.0.173:9999/blazegraph/namespace/kb/sparql", data=payload)
     
