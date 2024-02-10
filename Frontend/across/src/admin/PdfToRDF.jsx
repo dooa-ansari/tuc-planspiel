@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 import { FiCheckCircle } from 'react-icons/fi';
@@ -17,6 +17,62 @@ const PdfToRdf = () => {
     });
 
     const [showModal, setShowModal] = useState(true);
+    const [universityOptions, setUniversityOptions] = useState([]);
+
+
+    useEffect(() => {
+        // Call your first API here based on the value of belongsToUniversity
+        axios.get('http://127.0.0.1:8000/universities/')
+            .then((response) => {
+                // Handle API response as needed
+                console.log(response.data);
+
+                // Assuming the API response is an array of options
+                setUniversityOptions(response.data);
+            })
+            .catch((error) => {
+                console.error('Error calling first API:', error);
+            });
+    }, []);
+
+    const handleUniversityChange = (selectedUniversity) => {
+        // Find the selected university object based on its id
+        const selectedUniversityObject = universityOptions.find(option => option.id === selectedUniversity);
+
+        // Update formData with the selected university
+        setFormData((prevData) => ({
+            ...prevData,
+            belongsToUniversity: selectedUniversityObject['name'],
+        }));
+    };
+
+    // GET COURSES FROM UNIVERSITIES IMPLEMENTED FUNCTION (FOR FUTURE USE)
+    // const handleUniversityChange = async (selectedUniversityId) => {
+    //     try {
+    //         // Find the selected university object based on the id
+    //         const selectedUniversity = universityOptions.find((option) => option.id === selectedUniversityId);
+    //         // Create a new object with renamed keys
+    //         const updatedSelectedUniversity = {
+    //             universityId: selectedUniversity.id,
+    //             universityName: selectedUniversity.name,
+    //             universityUri: selectedUniversity.uri
+    //         };
+    //         // Update the state with the selected university
+    //         setFormData((prevData) => ({
+    //             ...prevData,
+    //             belongsToUniversity: selectedUniversity,
+    //             courseName: '',  // Reset courseName when university changes
+    //         }));
+
+    //         // Call your second API here based on the selected university
+    //         const courseApiResponse = await axios.post('http://127.0.0.1:8000/courses/', updatedSelectedUniversity);
+
+    //         // Handle the second API response as needed
+    //         console.log(courseApiResponse.data);
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //     }
+    // };
 
     const handleCloseModal = () => {
         // Check if all required data is filled before closing modal
@@ -81,14 +137,31 @@ const PdfToRdf = () => {
                 </ul>
             </div>
 
-            <Modal show={showModal} onHide={handleCloseModal} backdrop="static" keyboard={false}>
+            <Modal show={showModal} onHide={handleCloseModal} backdrop="static" keyboard={false} size="lg">
                 <Modal.Header closeButton>
-                    <Modal.Title>Fill in the required data</Modal.Title>
+                    <Modal.Title>Mandatory Data</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
                         <Row>
                             <Col>
+                                <Form.Group controlId="belongsToUniversity">
+                                    <Form.Label>Belongs To University:</Form.Label>
+                                    <Form.Control
+                                        as="select"
+                                        name="belongsToUniversity"
+                                        value={formData.belongsToUniversity ? formData.belongsToUniversity.id : ''}
+                                        onChange={(e) => handleUniversityChange(e.target.value)}
+                                    >
+                                        <option value="" disabled>Select University</option>
+                                        {universityOptions.map((option) => (
+                                            <option key={option.id} value={option.id}>
+                                                {option.name}
+                                            </option>
+                                        ))}
+                                    </Form.Control>
+                                </Form.Group>
+
                                 <Form.Group controlId="courseName">
                                     <Form.Label>Course Name:</Form.Label>
                                     <Form.Control
@@ -96,26 +169,24 @@ const PdfToRdf = () => {
                                         name="courseName"
                                         value={formData.courseName}
                                         onChange={handleChange}
-                                    />
+                                    >
+                                        {/* <option value="" disabled>Select Course</option>
+                                        {universityOptions.map((option) => (
+                                            <option key={option.id} value={option.id}>
+                                                {option.name}
+                                            </option>
+                                        ))} */}
+                                    </Form.Control>
+
                                 </Form.Group>
-                            </Col>
-                            <Col>
-                                <Form.Group controlId="belongsToUniversity">
-                                    <Form.Label>Belongs To University:</Form.Label>
-                                    <Form.Control
-                                        type="text"
-                                        name="belongsToUniversity"
-                                        value={formData.belongsToUniversity}
-                                        onChange={handleChange}
-                                    />
-                                </Form.Group>
+
                             </Col>
                         </Row>
 
                         <Row>
                             <Col>
                                 <Form.Group controlId="belongsToProgram">
-                                    <Form.Label>Belongs To Program:</Form.Label>
+                                    <Form.Label>Course Belongs To Program:</Form.Label>
                                     <Form.Control
                                         type="text"
                                         name="belongsToProgram"
@@ -126,7 +197,7 @@ const PdfToRdf = () => {
                             </Col>
                             <Col>
                                 <Form.Group controlId="belongsToDepartment">
-                                    <Form.Label>Belongs To Department:</Form.Label>
+                                    <Form.Label>Course Belongs To Department:</Form.Label>
                                     <Form.Control
                                         type="text"
                                         name="belongsToDepartment"
