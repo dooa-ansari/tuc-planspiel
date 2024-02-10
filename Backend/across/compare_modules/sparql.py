@@ -42,3 +42,18 @@ def add_course(course_uri, course_name, belongs_to_program, belongs_to_departmen
                }}
     """
     return query
+
+def get_other_universities_except_given(university_name):
+    query = f"""
+        SELECT ?universityId ?universityName ?city ?country
+        WHERE {{
+        ?university rdf:type <http://across/university#> .
+        ?university <http://across/university#hasUniversityId> ?universityId .
+        ?university <http://across/university#hasUniversityName> ?universityName .
+        ?university <http://across/university#isLocatedInCity> ?city .
+        ?university <http://across/university#isLocatedInCountry> ?country .
+
+        FILTER (?universityName != "{university_name}")
+        }}
+    """
+    return query

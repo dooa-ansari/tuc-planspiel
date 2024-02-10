@@ -161,14 +161,14 @@ def write_json_rdf(pdf_path, course_status, rdf_file_name):
     result_list = get_results(moduleDict)
     json_data = json.dumps(result_list, indent=2, ensure_ascii=False)
     # Write JSON data to a separate file
-    output_json_path = os.path.join(DATA_PATH, 'ModulesRDF',  f'{rdf_file_name}.json')
+    output_json_path = os.path.join(DATA_PATH, f'{course_status['university_name']}',  f'{rdf_file_name}.json')
     with open(output_json_path, "w", encoding="utf-8") as json_file:
         json_file.write(json_data)
         print(f"JSON data has been written to {output_json_path}")
         # Load JSON data
-        write_rdf(json.loads(json_data), course_status['course_code'], rdf_file_name)
+        write_rdf(json.loads(json_data), course_status, rdf_file_name)
 
-def write_rdf(data, course_code, rdf_file_name):
+def write_rdf(data, course_status, rdf_file_name):
     # RDF Namespace
     module_ns = URIRef(URI_MODULE)
     # Create RDF graph
@@ -216,13 +216,13 @@ def write_rdf(data, course_code, rdf_file_name):
 
         # Add additional RDF triples for each module
         g.add((module_uri, URIRef(f'{URI_TUC_MODULE}hasUniversity'), URIRef(URI_UNI)))
-        g.add((module_uri, URIRef(f'{URI_COURSE}hasCourse'), URIRef(f'{URI_COURSE}{course_code}')))
+        g.add((module_uri, URIRef(f'{URI_COURSE}hasCourse'), URIRef(f'{URI_COURSE}{course_status['course_code']}')))
 
     # Serialize RDF graph to RDF/XML format
     rdf_outputBytes = (g.serialize(format="xml")).encode('utf-8')
     
     # Save RDF data to a file with proper encoding
-    output_rdf_path = os.path.join(DATA_PATH, 'ModulesRDF',  f'{rdf_file_name}.rdf')
+    output_rdf_path = os.path.join(DATA_PATH, f'{course_status['university_name']}',  f'{rdf_file_name}.rdf')
 
     with open(output_rdf_path, "wb") as rdf_file:
         rdf_file.write(rdf_outputBytes)
@@ -240,6 +240,9 @@ def pdfToRdf(request):
         
         rdf_file_name = course_status["university_code"]+'_'+course_status["course_code"]
         
+        # Create a temporary directory to save the files
+        temp_dir = tempfile.mkdtemp()
+        
         # List to store the paths of saved files
         saved_file_paths = []        
         # This conditions states that course already exist and it will take existing course for comaparison
@@ -251,11 +254,9 @@ def pdfToRdf(request):
                     }
             return JsonResponse(response_data, status=200)
         else: # This follows that course doesn't exist and it will create new course in courses.rdf
-            # Create a temporary directory to save the files
-            temp_dir = tempfile.mkdtemp()
             for uploaded_file in uploaded_files:
                 # Construct the file path where the file will be saved in the temporary directory
-                file_path = os.path.join(temp_dir, rdf_file_name)
+                file_path = os.path.join(temp_dir, uploaded_file.name)
                 # If the file is stored in memory, read its content and write it to a file
                 with open(file_path, 'wb') as f:
                     f.write(uploaded_file.read())
@@ -265,3 +266,8 @@ def pdfToRdf(request):
             return JsonResponse({'message': f'PDF file(s) is sucessfully converted to RDF file(s).'}, status=200)
     except Exception as e:
         return JsonResponse({'message': f'Error uploading and saving files: {str(e)}'}, status=500)
+    finally:
+        for file_path in saved_file_paths:
+            os.remove(file_path)
+        os.rmdir(temp_dir)
+        print('End')
