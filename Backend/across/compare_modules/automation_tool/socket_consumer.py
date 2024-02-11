@@ -23,21 +23,21 @@ class Consumer(WebsocketConsumer):
 
     def receive(self, text_data):
         print(text_data)
-        text_data_json = json.loads(text_data)
-        print(text_data_json)
-        if text_data_json['message'] == "start" :
+        response_data = json.loads(text_data)
+        print(response_data)
+        if response_data['message'] == "start" :
             print("starting message")
             # Assuming your desired directory is two levels up from the current working directory
             
-            # Sample Data
-            response_data = {
-            'message': "Data is Here",
-            'university_name': "Bialystok University",
-            'rdf_File_Path': "BU_Let'sseecourse2"
-            }
+            # # Sample Data
+            # response_data = {
+            # 'message': "Data is Here",
+            # 'university_name': "Bialystok University",
+            # 'rdf_File_Path': "BU_Let'sseecourse2"
+            # }
 
             # Construct the absolute path
-            server = sparql.SPARQLServer('http://192.168.0.173:9999/blazegraph/sparql')
+            server = sparql.SPARQLServer('http://10.58.5.239:9999/blazegraph/sparql')
 
             # # Getting University URI
             qresponse = server.query(get_other_universities_except_given(response_data['university_name']))
