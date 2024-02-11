@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'transfer_credits',
     'universities',
     'user',
-    'csv_to_rdf'
+    'csv_to_rdf',
+    'pdf_To_rdf'
 ]
 
 ASGI_APPLICATION = 'across.asgi.application'
@@ -118,9 +119,9 @@ CHANNEL_LAYERS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'across',
+        'NAME': 'sample2',
         'USER': 'root',
-        'PASSWORD': 'sarose3532@SAH',
+        'PASSWORD': 'root@123',
         'HOST': '127.0.0.1',  # or the hostname where your MySQL server is running
         'PORT': '3306',      # or the port on which your MySQL server is listening
     }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "../assets/css/ShowModules.css";
 import useWebSocket from 'react-use-websocket';
 import { useNavigate } from 'react-router-dom';
@@ -10,9 +10,22 @@ const Converter = () => {
   const [messages, setMessages] = useState([]);
   const [styleType, setStyleType] = useState(0);
   const navigate = useNavigate();
-//   const socket = React.useRef(new WebSocket('ws://localhost:8000/ws/updates')).current; 
+  const [filePath, setFilePath] = useState("") 
+  const [universityName, setUniversityName] = useState("") 
   const socketUrl = 'ws://localhost:8000/ws/updates';
 
+
+  useEffect(() => {
+    const getData = async () => {
+      const path = await localStorage.getItem("filePath");
+      const university = await localStorage.getItem("universityName");
+      setUniversityName(university)
+      setFilePath(path)
+    }
+    getData()
+  }, [])
+
+ 
 const {
   sendMessage,
   sendJsonMessage,
@@ -21,7 +34,9 @@ const {
   readyState,
   getWebSocket,
 } = useWebSocket(socketUrl, {
-  onOpen: () => console.log('opened'),
+  onOpen: () => {
+    sendDataToServer()
+  },
   onMessage: (event) => {
     const jsonData = JSON.parse(event.data)
     setData(jsonData.message)
@@ -31,6 +46,14 @@ const {
   //Will attempt to reconnect on all close events, such as server shutting down
   shouldReconnect: (closeEvent) => false,
 });
+
+const sendDataToServer = useCallback(() => setTimeout(() => {
+  sendJsonMessage({
+    'message': "start",
+    'university_name': universityName,
+    'rdf_File_Path': filePath
+    })
+}, 1000), []);  
 
 const getStyleValue = (index, message , type) => {
   if(type == 0){

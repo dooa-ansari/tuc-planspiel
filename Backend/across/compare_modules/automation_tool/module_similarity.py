@@ -2,50 +2,69 @@ from .translator import translateModules
 from .update_rdf_module import add_predicate_for_module_similarity
 import ssl
 import spacy
+from os import listdir
+from os.path import isfile, join
+import os
+import shutil
 
-def read_modules_and_compare(universityOneModulesFile, univeristyTwoModulesFile, consumer):
+def read_modules_and_compare(universityOneModulesFile, folder_path, consumer):
     try:
      _create_unverified_https_context = ssl._create_unverified_context
     except AttributeError:
      pass
     else:
      ssl._create_default_https_context = _create_unverified_https_context
-    
-    # nltk.download('all')
-    consumer.send_message({"progress": 2 , "type": 0 , "message": "Starting module conversions"})
-    firstUniversityModules = translateModules(universityOneModulesFile, consumer)
-    consumer.send_message({"progress": 3 , "type": 10, "message": "First modules file translated to english successfully"})
-    secondUniversityModules = translateModules(univeristyTwoModulesFile , consumer)
-    consumer.send_message({"progress": 4 , "type": 10, "message": "Second modules file translated to english successfully"})
-    data_list_first = []
-    data_list_second = []
-    consumer.send_message( {"progress": 6 , "type": 10, "message": "Starting to find similarities between modules"})
     nlp = spacy.load('en_core_web_lg')
-    count = 2
-    for module in firstUniversityModules:
-        for module2 in secondUniversityModules:
-            text1 = module.name if(module.moduleContent == "This course has not yet been described...") else module.moduleContent
-            text2 = module2.name if(module2.moduleContent == "This course has not yet been described...") else module2.moduleContent
-            similarity = find_text_similarity_spacy(text1, text2, nlp)
-            consumer.send_message({"progress": 5 * count , "type": 2 if similarity else 3, "message": f"{module.name} - {module2.name} are similar : {similarity}"})
-            if(similarity):
-               similar_modules_m1 = []
-               similar_modules_m2 = []
-               similar_modules_m1.append(module2.uri)
-               similar_modules_m2.append(module.uri)
-               module['similar_modules'] = similar_modules_m1
-               module2['similar_modules'] = similar_modules_m2
-               data_list_first.append(module)
-               data_list_second.append(module2)
-               consumer.send_message({"progress": 50 , "type": 10, "message": "Starting to find similarities between modules"})
-        count = count + 0.1    
-               
-          
-    add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second, consumer)
+
+    only_files_in_folder = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
+
+    for file_name in only_files_in_folder:
+        univeristyTwoModulesFile = join(folder_path, file_name)
+        # nltk.download('all')
+        consumer.send_message({"progress": 2 , "type": 0 , "message": "Starting module conversions"})
+        firstUniversityModules = translateModules(universityOneModulesFile, consumer)
+        consumer.send_message({"progress": 3 , "type": 10, "message": "First modules file translated to english successfully"})
+        secondUniversityModules = translateModules(univeristyTwoModulesFile , consumer)
+        consumer.send_message({"progress": 4 , "type": 10, "message": "Second modules file translated to english successfully"})
+        data_list_first = []
+        data_list_second = []
+        consumer.send_message( {"progress": 6 , "type": 10, "message": "Starting to find similarities between modules"})
+        
+        count = 2
+        for module in firstUniversityModules:
+            for module2 in secondUniversityModules:
+                text1 = module.name if(module.moduleContent == "This course has not yet been described...") else module.moduleContent
+                text2 = module2.name if(module2.moduleContent == "This course has not yet been described...") else module2.moduleContent
+                similarity = find_text_similarity_spacy(text1, text2, nlp)
+                consumer.send_message({"progress": 5 * count , "type": 2 if similarity else 3, "message": f"{module.name} - {module2.name} are similar : {similarity}"})
+                if(similarity):
+                    similar_modules_m1 = []
+                    similar_modules_m2 = []
+                    similar_modules_m1.append(module2.uri)
+                    similar_modules_m2.append(module.uri)
+                    module['similar_modules'] = similar_modules_m1
+                    module2['similar_modules'] = similar_modules_m2
+                    data_list_first.append(module)
+                    data_list_second.append(module2)
+                    consumer.send_message({"progress": 50 , "type": 10, "message": "Starting to find similarities between modules"})
+            count = count + 0.1    
+            
+        add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second, consumer)
+    
+    # Moving New hasModules file to Similarity Folder
+    source_path = universityOneModulesFile
+    filename_without_extension = os.path.splitext(os.path.basename(source_path))[0]
+    new_filename = filename_without_extension + '_similar.rdf'
+    new_file_path_existing_folder = os.path.join(os.path.dirname(source_path), new_filename)
+    os.rename(source_path, new_file_path_existing_folder)
+    ## NEED TO CHANGE THIS ACCORDING TO REQUIREMENT
+    destination_folder = 'RDF//Similarity Data//'
+    new_file_path_destination_folder = os.path.join(destination_folder, new_filename)
+
+    shutil.move(new_file_path_existing_folder, new_file_path_destination_folder)
+
     return {}
     
-
-
 
 def find_text_similarity_spacy(module1Content, module2Content, nlp):
     
@@ -66,4 +85,3 @@ def find_text_similarity_spacy(module1Content, module2Content, nlp):
     
     is_similar = True if(verbs_similarity >= 0.8 and adj_similarity >= 0.8 and noun_similarity >= 0.9) else False
     return is_similar
-   
