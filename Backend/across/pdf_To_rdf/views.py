@@ -263,8 +263,12 @@ def pdfToRdf(request):
                     f.write(uploaded_file.read())
                     saved_file_paths.append(file_path)
                     write_json_rdf(file_path, course_status, rdf_file_name)
-
-            return JsonResponse({'message': f'PDF file(s) is sucessfully converted to RDF file(s).'}, status=200)
+            response_data = {
+                        'message': course_status['message'],
+                        'university_name': course_status['university_name'],
+                        'rdf_File_Path': rdf_file_name
+                    }
+            return JsonResponse(response_data, status=200)
     except Exception as e:
         return JsonResponse({'message': f'Error uploading and saving files: {str(e)}'}, status=500)
     finally:

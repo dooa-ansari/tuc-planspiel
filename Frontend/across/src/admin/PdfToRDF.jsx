@@ -115,13 +115,14 @@ const PdfToRdf = () => {
             filesFormData.append('jsonData', JSON.stringify(jsonData));
 
             const response = await axios.post('http://127.0.0.1:8000/pdf_To_rdf/api/pdfToRdf', filesFormData);
-            if(response.status == 200){
+            if (response.status == 200) {
                 const filePath = response.data.rdf_File_Path
                 const universityName = response.data.university_name
                 setTimeout(async () => {
                     await localStorage.setItem("filePath", filePath);
                     await localStorage.setItem("universityName", universityName);
-                    navigate("/admin/automation");
+                    console.log("filePath", filePath, "universityName", universityName)
+                    navigate("/admin/automation", { state: { filePath, universityName } });
                 }, 2000)
             }
             console.log('Upload response:', response.data);
