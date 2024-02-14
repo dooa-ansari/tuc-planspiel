@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
 from compare_modules.views import create_course_entry_in_rdf
-from pdf_To_rdf.tests import get_uniData, write_json_rdf
+from pdf_To_rdf.tests import get_uniData, write_json_rdf, extract_text_from_pdf_bu, write_json, write_rdf
 
 @csrf_exempt
 @require_POST
@@ -32,7 +32,8 @@ def pdfToRdf(request):
             # Create a temporary directory to save the files
             temp_dir = tempfile.mkdtemp()
             uniData =  get_uniData(course_status['university_name'])
-
+            
+            results = {}
             for uploaded_file in uploaded_files:
                 # Construct the file path where the file will be saved in the temporary directory
                 file_path = os.path.join(temp_dir, uploaded_file.name)
@@ -40,7 +41,21 @@ def pdfToRdf(request):
                 with open(file_path, 'wb') as f:
                     f.write(uploaded_file.read())
                     saved_file_paths.append(file_path)
-                    write_json_rdf(file_path, course_status, rdf_file_name, uniData)
+                    if course_status['university_name'] =='TUC':
+                        write_json_rdf(file_path, course_status, rdf_file_name, uniData)
+                    else:
+                        textDict = extract_text_from_pdf_bu(file_path, None)
+                        for key, value in textDict.items():
+                            if key in results:
+                                results[key].extend(value)
+                            else:
+                                results[key] = value
+                
+                if results:
+                    for key, value in results.items():
+                        print("Key:", key, "Value:", value)
+                        json_data = write_json(course_status, rdf_file_name, value)
+                        write_rdf(json.loads(json_data), course_status, rdf_file_name, uniData)
             response_data = {
                         'message': course_status['message'],
                         'university_name': course_status['university_name'],
@@ -54,6 +69,3 @@ def pdfToRdf(request):
             os.remove(file_path)
         os.rmdir(temp_dir)
         print('End')
-
-
-
