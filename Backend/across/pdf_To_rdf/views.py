@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
 from compare_modules.views import create_course_entry_in_rdf
-from pdf_To_rdf.tests import get_uniData, write_json_rdf, extract_text_from_pdf_bu, write_json, write_rdf
+from pdf_To_rdf.tests import get_uniData, extract_text_from_pdf_bu,extract_text_from_pdf_tuc, write_json, write_rdf
 
 @csrf_exempt
 @require_POST
@@ -31,31 +31,37 @@ def pdfToRdf(request):
         else: # This follows that course doesn't exist and it will create new course in courses.rdf
             # Create a temporary directory to save the files
             temp_dir = tempfile.mkdtemp()
-            uniData =  get_uniData(course_status['university_name'])
+            uniData =  get_uniData(course_status)
             
             results = {}
             for uploaded_file in uploaded_files:
                 # Construct the file path where the file will be saved in the temporary directory
                 file_path = os.path.join(temp_dir, uploaded_file.name)
+                print(file_path)
                 # If the file is stored in memory, read its content and write it to a file
                 with open(file_path, 'wb') as f:
                     f.write(uploaded_file.read())
                     saved_file_paths.append(file_path)
-                    if course_status['university_name'] =='TUC':
-                        write_json_rdf(file_path, course_status, rdf_file_name, uniData)
+                    if course_status['university_code'] =='TUC':
+                        result_list = extract_text_from_pdf_tuc(file_path, uniData)
+                        if file_path not in results:
+                            results[uploaded_file.name] = result_list
+                        else:
+                            value1 = results[uploaded_file.name]
+                            value1.append(result_list)
                     else:
-                        textDict = extract_text_from_pdf_bu(file_path, None)
+                        textDict = extract_text_from_pdf_bu(file_path, course_status, uniData)
                         for key, value in textDict.items():
                             if key in results:
-                                results[key].extend(value)
+                               value1 = results[key]
+                               value1.append(value)
                             else:
-                                results[key] = value
-                
-                if results:
-                    for key, value in results.items():
-                        print("Key:", key, "Value:", value)
-                        json_data = write_json(course_status, rdf_file_name, value)
-                        write_rdf(json.loads(json_data), course_status, rdf_file_name, uniData)
+                                results[key] = [value]
+            if results:
+                for key, value in results.items():
+                    print("Key:", key, "Value:", value)
+                    json_data = write_json(f'{rdf_file_name}{key}', value)
+                    write_rdf(json.loads(json_data), course_status, f'{rdf_file_name}{key}', uniData)
             response_data = {
                         'message': course_status['message'],
                         'university_name': course_status['university_name'],

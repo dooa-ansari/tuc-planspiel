@@ -5,7 +5,7 @@ import FileUpload from "./FileUpload";
 import Converter from "./Converter";
 import ShowSimilarityTable from "./ShowSimilarityTable";
 import ModulesList from "./ModulesList";
-import PdfToRdf from "./PdfToRdf";
+import PdfToRdf from "./PdfToRDF";
 import TransferCredits from "./TransferCredits";
 import CompareModules from "./CompareModules";
 import UsersofTransferCredits from "./UsersofTransferCredits";
