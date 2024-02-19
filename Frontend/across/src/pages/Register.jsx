@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../assets/css/Register.css";
+import "../assets/css/register.css";
 
 import resigterSvg from "../assets/images/registerPage_highschool.svg";
 
