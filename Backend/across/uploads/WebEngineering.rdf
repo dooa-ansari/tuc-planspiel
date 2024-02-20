@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://tuc.web.engineering/module#"
+   xmlns:ns2="http://tuc/web/engineering/module#"
+   xmlns:ns3="http://tuc/course#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#555689a4-c5e4-11ee-9adf-d43d7e41305b">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553150</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XML</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die eXtensible Markup Language (XML) ist die Basis für eine Vielzahl von Entwicklungen im Bereich des World Wide Web. XML spielt eine zentrale Rolle für Transport und Integration von Daten sowie für viele moderne Softwareanwendungen. Das Angebot bietet eine grundlegende Einführung in die XML und ihre Verwendung in unterschiedlichen Kontexten Verteilter Systeme, Verteilter Software und des Webs. Es werden diverse aktuelle Anwendungsszenarien und praxisrelevante Werkzeuge vorgestellt. Die Themen behandeln: • Einführung in Markupsprachen und XML • Grundlegende Ansätze, z.B. DTD, XML-Schemas, XML-Editoren, XML- Anwendungen, Linking, XPath, XSL/XSLT • Formate und Werkzeuge im Bereich Daten, z.B. SVG, RSS • Formate und Werkzeuge im Bereich Semantik, z.B. RDF, OWL, digitale Rechte mit Creative Commons • Formate und Werkzeuge im Bereich Benutzerschnittstellen, z.B. XHTML, XForms, MicroFormats • Formate und Werkzeuge im Bereich Anwendungslogik, z.B. Web Services, Blogs, Collaboration, Content Analysis, E-Commerce, Maps, Social Bookmarking, Search, Sight/Sound/Motion, Storage, Tagging</ns1:hasContent>
+    <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German</ns1:hasLanguage>
+    <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#WebEngineering"/>
+  </rdf:Description>
+</rdf:RDF>
