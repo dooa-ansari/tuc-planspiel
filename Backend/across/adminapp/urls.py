@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import csv_rdf, upload_file, update_module, delete_module, insert_module, get_universities, fetch_transfer_credit_requests, update_transfer_credit_request, fetch_user_data, clean_up_upload_folder
+from .views import csv_rdf, upload_file, update_module, delete_module, insert_module, get_universities, fetch_transfer_credit_requests, update_transfer_credit_request, fetch_user_data, clean_up_upload_folder, fetch_departments
 
 
 urlpatterns= [
@@ -13,4 +13,6 @@ urlpatterns= [
     path('updateTransferRequest', update_transfer_credit_request, name='update-transfer-credit-request'),
     path('fetchUserData', fetch_user_data, name='fetch-user-data'),
     path('deleteclean', clean_up_upload_folder, name='clean_directory'),
+    path('fetchDepartments', fetch_departments, name='fetch_departments'),
+
 ]

@@ -407,3 +407,19 @@ def fetch_user_data(request):
             "message": f"An unexpected error occurred: {e}"
         }
         return JsonResponse(response, status =500)
+    
+@csrf_exempt
+@require_GET
+def fetch_departments(request):
+    server = sparql.SPARQLServer('http://13.51.109.79/bigdata/sparql')
+
+    qresponse = server.query(get_all_departments())
+    data_list = []
+    data = qresponse['results']['bindings']
+    
+    for row in data:
+        data_dict = {
+            'department': str(row['department']['value'])
+        }
+        data_list.append(data_dict)
+    return JsonResponse(data_list , safe=False)
