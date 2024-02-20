@@ -2,7 +2,8 @@ import requests
 from rdflib import Graph
 import os
 from pymantic import sparql
-
+import urllib.request as urllib2
+import urllib.parse as parse
 
 def upload_file_to_blazegraph(directory, file, isFile):
     if not isFile:
@@ -12,16 +13,23 @@ def upload_file_to_blazegraph(directory, file, isFile):
         for root, dirs, files in os.walk(os.path.abspath(directory)):
          for file in files:
           data1 = open(os.path.join(root, file),'r', encoding='utf-8').read()
+          graph.parse(os.path.join(root, file),'r', encoding='utf-8')
           print(data1)
-        #   result = requests.post("http://13.51.109.79/blazegraph/namespace/kb/sparql", data=data1)
+        #   datae = parse.urlencode(data1).encode("utf-8")
+        #   req = urllib2.Request(url="http://13.51.109.79/blazegraph/namespace/kb/sparql", 
+        #               data=datae, 
+        #               headers={'Content-Type': 'application/xml'})
+        #   urllib2.urlopen(req)
+        #   result = requests.post("http://13.51.109.79/blazegraph/namespace/kb/sparql", files=data1)
         #   print(result)
-          server = sparql.SPARQLServer('http://13.51.109.79/blazegraph/bigdata/sparql')
-          server.update('load <http://bioimages.vanderbilt.edu/baskauf/12255>')
+        #   server = sparql.SPARQLServer('http://13.51.109.79/blazegraph/bigdata/sparql')
+        #   server.update('load <http://bioimages.vanderbilt.edu/baskauf/12255>')
         # xml = """<?xml version='1.0' encoding='utf-8'?>
         #       <a>б</a>"""
-        # data_xml = graph.serialize(format='xml')
+        data_xml = graph.serialize(format='xml')
         # print(data_xml)
-        # headers = {'Content-Type': 'application/rdf+xml'}
+        result = requests.post("http://13.51.109.79/blazegraph/namespace/kb/sparql", data=data_xml, headers={'Content-Type': 'application/xml'})
+        print(result.content)
         
     else:
        graph = Graph()
