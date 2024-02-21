@@ -7,7 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00009S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project management</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -20,7 +20,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00094W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International trade</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first degree/ second degree</ns1:hasProgrammeType>
@@ -33,7 +33,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00078S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New information technologies and multimedia tools</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -46,7 +46,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00103S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Savoir -vivre in business</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -59,7 +59,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00031W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entrepreneurship</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -72,7 +72,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00016S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quality management and control</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -85,7 +85,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00074W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketing research</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -98,7 +98,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00091W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategic modelling and business dynamics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -111,7 +111,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00089S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate foresight</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -124,7 +124,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00076W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Financial management</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first degree / second degree</ns1:hasProgrammeType>
@@ -137,7 +137,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00093W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology Innovation</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -150,7 +150,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00044W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business simulation</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -163,7 +163,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00088S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coaching</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -176,7 +176,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00082W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statistics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -189,7 +189,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00077W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Forecasting</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -202,7 +202,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00092S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benchmarking for competitive advantage</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first degree/second degree</ns1:hasProgrammeType>
@@ -215,7 +215,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00069W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -228,7 +228,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00073W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Productivity analysis</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -241,7 +241,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00111S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robotic Process Automation</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -254,7 +254,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00110W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet marketing</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -267,7 +267,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00072W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management of innovation</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -280,7 +280,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00109S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circular Economy</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -293,7 +293,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00081W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human resource management</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first degree/ second degree</ns1:hasProgrammeType>
@@ -306,7 +306,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00002S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tourism Management</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -319,7 +319,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00075W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Production and service management</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -332,7 +332,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00086S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer tools in financial planning</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -345,7 +345,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00098W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optimization for transport planning</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -358,7 +358,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00100W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International law</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -371,7 +371,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00112S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International transport</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -384,7 +384,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00099W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International taxation and accountancy</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -397,7 +397,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00080W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sport animation</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -410,7 +410,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00101W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International Marketing</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first degree/ second degree</ns1:hasProgrammeType>
@@ -423,7 +423,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00095W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic management concepts</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -436,7 +436,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00071W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innovation economics and policy</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -449,7 +449,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00106W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology management</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -462,7 +462,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00087W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Process management</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -475,7 +475,7 @@
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFM00070W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strategic management</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first degree/ second degree</ns1:hasProgrammeType>
