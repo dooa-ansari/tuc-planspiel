@@ -10,7 +10,6 @@ def upload_file_to_blazegraph(directory, file, isFile):
     if not isFile:
         # filelist = [ f for f in os.listdir(directory) if f.endswith(".rdf") ]
         graph = Graph()
-        headers = {'Content-Type': 'application/rdf+xml'}
         for root, dirs, files in os.walk(os.path.abspath(directory)):
          for file in files:
             with open(os.path.join(root, file), 'rb') as rdf_file:

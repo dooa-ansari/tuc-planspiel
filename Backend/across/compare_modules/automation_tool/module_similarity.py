@@ -66,7 +66,7 @@ def read_modules_and_compare(universityOneModulesFile, folder_path, consumer):
     print("path")
     print(new_file_path_destination_folder)
     shutil.move(new_file_path_existing_folder, new_file_path_destination_folder)
-    upload_file_to_blazegraph("", new_filename, True)
+    upload_file_to_blazegraph(destination_folder, "", False)
     
     return {}
     
