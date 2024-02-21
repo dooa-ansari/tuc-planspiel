@@ -125,7 +125,6 @@ def extract_text_from_pdf_bu(pdf_path, course_status, uniData, end_page=None):
                         filtered_list = [item for item in row if item is not None]       
                         filtered_list1 = [item for item in filtered_list if item != '']
                         rowStr = str(filtered_list1)
-                        print(rowStr)
                         if MODULE_NAME not in result and rowCount > 0:
                             result[MODULE_NAME] = rowStr[2:-2]
                         number_match = re.search(uniData.rePattern.module_number_pattern, rowStr)
@@ -140,6 +139,14 @@ def extract_text_from_pdf_bu(pdf_path, course_status, uniData, end_page=None):
                         if contents_match:
                             contents = contents_match.group(1).strip().replace('\\n', ' ')
                             result[MODULE_CONTENT] = ' '.join(contents.split())
+
+                        if 'Course content' in rowStr and MODULE_CONTENT not in result:
+                            pattern = r"\'Course content\', \"(.*)\"\]"
+                            # Extracting content after "\'Course content\',"
+                            match = re.search(pattern, rowStr)
+                            if match:
+                             contents = match.group(1).strip().replace('\\n', ' ')
+                             result[MODULE_CONTENT] = ' '.join(contents.split())
 
                         if GRADES not in  rowStr and 'No. of ECTS' in rowStr:
                             split_string = rowStr.split(",")
@@ -266,7 +273,6 @@ def write_rdf(data, course_status, rdf_file_name, uniData):
     
         # Save RDF data to a file with proper encoding
         output_rdf_path = os.path.join(DATA_PATH, f'{course_status["university_name"]}',  f'{rdf_file_name}.rdf')
-
         with open(output_rdf_path, "wb") as rdf_file:
             rdf_file.write(rdf_outputBytes)
             print(f"RDF data has been saved to {output_rdf_path}")
