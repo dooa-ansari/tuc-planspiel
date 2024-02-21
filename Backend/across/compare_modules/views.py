@@ -52,14 +52,17 @@ def create_course_entry_in_rdf(data):
 
     payload = {'update': add_course(uuid_numeric_only, course_uri, course_name, belongs_to_program, belongs_to_department, university_uri,has_language)}
         
-    result = requests.post("http://13.51.109.79/bigdata/namespace/kb/sparql", data=payload)
+    # result = requests.post("http://13.51.109.79/bigdata/namespace/kb/sparql", data=payload)
     
-    if result.status_code == 200:
+    if 1:
         response_data = {
                         'message': "New Course Entry Created in RDF",
                         'university_name': belongs_to_university,
                         'university_code': university_code,
                         'course_code': course_code,
+                        'belongs_to_department': belongs_to_department,
+                        'course_name': course_name,
+                        'course_uri': course_uri,
                         'status': False
                     }
         return response_data

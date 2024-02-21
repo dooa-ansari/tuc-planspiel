@@ -6,6 +6,7 @@ from django.views.decorators.http import require_POST
 from django.http import JsonResponse
 from compare_modules.views import create_course_entry_in_rdf
 from pdf_To_rdf.tests import get_uniData, extract_text_from_pdf_bu,extract_text_from_pdf_tuc, write_json, write_rdf
+from pdf_To_rdf import course_similarity
 
 @csrf_exempt
 @require_POST
@@ -18,6 +19,14 @@ def pdfToRdf(request):
         course_status = create_course_entry_in_rdf(data)  
         rdf_file_name = course_status["university_code"]+'_'+course_status["course_code"]
         
+       
+        # This will created for finding Course Similarity 
+        # # if course does not exist
+        course_similarity.find_similarity_between_courses(course_status, rdf_file_name)
+
+
+
+
         # List to store the paths of saved files
         saved_file_paths = []        
         # This conditions states that course already exist and it will take existing course for comaparison

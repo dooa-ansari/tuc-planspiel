@@ -8,6 +8,7 @@ from os.path import isfile, join
 import os
 from compare_modules.sparql import * 
 from pymantic import sparql
+from django.conf import settings
 
 class Consumer(WebsocketConsumer):
     def connect(self):
@@ -37,7 +38,7 @@ class Consumer(WebsocketConsumer):
             # }
 
             # Construct the absolute path
-            server = sparql.SPARQLServer('http://10.58.5.239:9999/blazegraph/sparql')
+            server = sparql.SPARQLServer('http://13.51.109.79/blazegraph/sparql')
 
             # # Getting University URI
             qresponse = server.query(get_other_universities_except_given(response_data['university_name']))
@@ -56,7 +57,8 @@ class Consumer(WebsocketConsumer):
             # # Iterate through the list
             for university_name in university_names_list:
                 absolute_path = os.path.abspath(f'RDF_DATA//{university_name}')
-
+                absolute_path  =os.path.join(settings.BASE_DIR, 'RDF_DATA')
+                            
                 folder_path = absolute_path
                 # only_files_in_folder = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
 
