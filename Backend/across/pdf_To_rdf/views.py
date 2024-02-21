@@ -6,7 +6,6 @@ from django.views.decorators.http import require_POST
 from django.http import JsonResponse
 from compare_modules.views import create_course_entry_in_rdf
 from pdf_To_rdf.tests import get_uniData, extract_text_from_pdf_bu,extract_text_from_pdf_tuc, write_json, write_rdf
-from pdf_To_rdf import course_similarity
 
 @csrf_exempt
 @require_POST
