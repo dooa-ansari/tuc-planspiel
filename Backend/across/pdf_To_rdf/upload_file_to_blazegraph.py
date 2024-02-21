@@ -12,9 +12,9 @@ def upload_file_to_blazegraph(directory, file, isFile):
         headers = {'Content-Type': 'application/rdf+xml'}
         for root, dirs, files in os.walk(os.path.abspath(directory)):
          for file in files:
-          data1 = open(os.path.join(root, file),'r', encoding='utf-8').read()
+        #   data1 = open(os.path.join(root, file),'r', encoding='utf-8').read()
           graph.parse(os.path.join(root, file),'r', encoding='utf-8')
-          print(data1)
+        #   print(data1)
         #   datae = parse.urlencode(data1).encode("utf-8")
         #   req = urllib2.Request(url="http://13.51.109.79/blazegraph/namespace/kb/sparql", 
         #               data=datae, 
