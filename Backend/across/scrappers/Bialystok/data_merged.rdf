@@ -7,7 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10015W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programmable Logic Controllers</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -20,7 +20,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10006S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics 1</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor ’s degree</ns1:hasProgrammeType>
@@ -33,7 +33,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10017W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radioelectronic Devices</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -46,7 +46,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10010W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modern Wireless Networks Technologies</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -59,7 +59,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10021W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Final Project</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -72,7 +72,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10009S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microprocessor Technique and Microcontrollers</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor's degree</ns1:hasProgrammeType>
@@ -85,7 +85,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10024W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor's degree</ns1:hasProgrammeType>
@@ -98,7 +98,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10030S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics 2</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor ’s degree, full time programme</ns1:hasProgrammeType>
@@ -111,7 +111,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10019W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wireless Transmission Systems</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor ’s degree, full time programme</ns1:hasProgrammeType>
@@ -124,7 +124,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10001W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of photonics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -137,7 +137,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE100028">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Equipment and Installations</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor's degree</ns1:hasProgrammeType>
@@ -150,7 +150,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10023S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automotive lighting</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -163,7 +163,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10022W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image Processing and Recognition</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor ’s degree, full time programme</ns1:hasProgrammeType>
@@ -176,7 +176,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10002W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of lighting technology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -189,7 +189,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10032S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamental of Telecommunication</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -202,7 +202,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFA00043W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Architectural Design - Housing design I</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -215,7 +215,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10023W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SQL Based Data Analysis and Reporting</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor's degree</ns1:hasProgrammeType>
@@ -228,7 +228,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10029S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Machines 2</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -241,7 +241,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10013W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power Electronics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -254,7 +254,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10031S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field Programmable Gate Arrays</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor's degree</ns1:hasProgrammeType>
@@ -267,7 +267,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10024S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control Engineering and Systems</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree</ns1:hasProgrammeType>
@@ -280,7 +280,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10026W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital signal processing</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -293,7 +293,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10020W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microcontrollers in Applications</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor ’s degree , full time programme</ns1:hasProgrammeType>
@@ -306,7 +306,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10005W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electri cal M achines 1</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree</ns1:hasProgrammeType>
@@ -319,7 +319,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10012W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optical Fibers</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>
@@ -332,7 +332,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE20013W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control Theory</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master's degree</ns1:hasProgrammeType>
@@ -345,7 +345,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFEE10008W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of Control Engineering</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bachelor's degree, full time programme</ns1:hasProgrammeType>

@@ -7,7 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000721WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biotechnology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -20,7 +20,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00039S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Municipal and industrial wastewater treatment</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -33,7 +33,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00032WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forest botany: Dendrology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -46,7 +46,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00019W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Building physics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -59,7 +59,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000431S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foundation</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -72,7 +72,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00229S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Urban design 1</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -85,7 +85,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCEE00143W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heat centers</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -98,7 +98,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00167S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydraulics and hydrology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -111,7 +111,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00201S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanical equipment in Environmental Engineering</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -124,7 +124,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCEE00077W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heating systems</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -137,7 +137,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000691W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low energy buildings and rational use of energy in buildings</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -150,7 +150,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00101W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental Impact Assessment</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -163,7 +163,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00030W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water and wastewater technology II</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -176,7 +176,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00075W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Landscape ecology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -189,7 +189,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00221W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Industrial water technology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -202,7 +202,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00007W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Designing of steel structures according to Eurocode 3</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -215,7 +215,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00073S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natura 2000 European ecological network</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -228,7 +228,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00226WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General chemistry for engineers</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -241,7 +241,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00233S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History of Urban Planning (HES)</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -254,7 +254,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00025W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Air Protection</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -267,7 +267,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000681S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental chemistry</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -280,7 +280,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00023W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -293,7 +293,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00059S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concrete structures II</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -306,7 +306,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE002621W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of Water Supply Systems</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -319,7 +319,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00020W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concrete technology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -332,7 +332,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00261S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of Sewerage Systems</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -345,7 +345,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00044S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural medicinal substances m forest materialsfro</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -358,7 +358,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00269S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrology for Environmental Engineers</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -371,7 +371,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00266S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pumps and Pumping Systems</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -384,7 +384,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00005S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Road Building Engineering</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -397,7 +397,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00011W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forest hydrology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -410,7 +410,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000371S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waste management</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -423,7 +423,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00235S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light gauge framing in steel buildings according to Eurocode 3</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -436,7 +436,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF000381WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biodiversity conservation of forest areas</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -449,7 +449,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00240W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masonry and timber structures</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -462,7 +462,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00216W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General building engineering</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -475,7 +475,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00070S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of traffic engineering</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -488,7 +488,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00264WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Material science of HVAC installations</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -501,7 +501,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00135W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochemistry of proteins</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -514,7 +514,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00265WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HVAC units and installations in reliability theory</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -527,7 +527,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00037S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forest protection</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -540,7 +540,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE001461W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heat and mass transfer</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -553,7 +553,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00117S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vegetation</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -566,7 +566,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00044W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Underground structures</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -579,7 +579,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00268W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sanitary chemistry</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -592,7 +592,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE001091W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Economy of Energy Consumption</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -605,7 +605,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00043S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forest mushrooms in medicine</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -618,7 +618,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00237W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of modelling in BIM technology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -631,7 +631,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00026S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Land rehabilitation</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -644,7 +644,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000241S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature conservation</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -657,7 +657,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00228S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strengthening of building structures</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -670,7 +670,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE001051WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alternative Energy Sources</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -683,7 +683,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00238W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public space arrangement</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -696,7 +696,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00148W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Botany and plant physiology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -709,7 +709,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00134W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water management and water protection</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -722,7 +722,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00021W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochemistry</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -735,7 +735,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00272W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-3. Mapping and 3D modelling</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -748,7 +748,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00090S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology of building products</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -761,7 +761,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE001151W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermal diagnostics of buildings and thermomodernization</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -774,7 +774,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00227SW">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytical chemistry</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -787,7 +787,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00218W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced technologies of building materials and prefabricated elements</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -800,7 +800,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000321W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soil science</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -813,7 +813,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00274W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-5. Project of small architecture object</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -826,7 +826,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCEE00108W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Air conditioning and ventilation systems 2</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -839,7 +839,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00178W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protection of building objects against moisture and corrosion</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -852,7 +852,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00150S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineering geology and petrography</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -865,7 +865,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00052S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computational and statistical methods</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -878,7 +878,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00138W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biogas</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -891,7 +891,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00210W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modelling of biotechnological processes</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -904,7 +904,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00147S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Civil engineering materials</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -917,7 +917,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00203S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular biology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -930,7 +930,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE001491S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thematic cartography</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -943,7 +943,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000451W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soil mechanics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -956,7 +956,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00231S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History of Architecture (HES)</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -969,7 +969,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00259W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plant tissue culture</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -982,7 +982,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00202S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microbiology and mycology in food industry</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -995,7 +995,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00258SW">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microbiology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1008,7 +1008,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00045SW">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management of Natura 2000 habitats in forest areas</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1021,7 +1021,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00273W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-4. Systems related to sustainable development</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1034,7 +1034,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00040W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Facilities for water and wastewater treatment II</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1047,7 +1047,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000341W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GIS in environmental engineering</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1060,7 +1060,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00046S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental protection with elements of toxicology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1073,7 +1073,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00239W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Design Principles IV (universal design)</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1086,7 +1086,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00160W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Special concretes and recycling of concrete structures</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1099,7 +1099,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00041WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forest management in valuable natural areas</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1112,7 +1112,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00106W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental Monitoring</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1125,7 +1125,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00011S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prestressed concrete structures</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1138,7 +1138,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00224WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energetic use of biomass</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1151,7 +1151,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00029W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Facilities for water and wastewater treatment I</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1164,7 +1164,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00236S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audit of public space accessibility</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1177,7 +1177,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00172W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Road earthworks and drainage</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1190,7 +1190,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00234W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conservation and restoration</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1203,7 +1203,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00211S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reliability of environmental engineering systems</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1216,7 +1216,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE001441SW">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gas installations and networks</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1229,7 +1229,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000061W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concrete structures</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1242,7 +1242,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00041W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water and wastewater technology I</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1255,7 +1255,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00036S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forest pathology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1268,7 +1268,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00133W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer modeling of water supply and sewage systems</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1281,7 +1281,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00232W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Workshop techniques</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1294,7 +1294,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00214S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waste recycling solutions</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1307,7 +1307,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00111S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monolithic construction</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master's degree</ns1:hasProgrammeType>
@@ -1320,7 +1320,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCEE00107W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Air conditioning and Ventilation systems 1</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1333,7 +1333,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00182S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computational methods</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1346,7 +1346,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00270W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-1. Architecture and theory of design</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1359,7 +1359,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00031W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ecology</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1372,7 +1372,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00003S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structural mechanics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1385,7 +1385,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00230S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Revitalization of urban areas</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1398,7 +1398,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE001761W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of road engineering</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1411,7 +1411,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00096W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Composite Structures</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1424,7 +1424,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00271W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-2. Structures and building materials</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1437,7 +1437,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000271WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fluid Mechanic s</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1450,7 +1450,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00118WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Earth Science</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1463,7 +1463,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00025WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forest applied botany</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1476,7 +1476,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000011W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strength of materials</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1489,7 +1489,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE001741W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Urban structures</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1502,7 +1502,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#SFF00042WS">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invasive species in forest areas</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1515,7 +1515,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCEE00078W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heating systems 2</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1528,7 +1528,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00119S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flood hazard in small urban catchment - hydrological calculations</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1541,7 +1541,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00141S">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theoretical mechanics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1554,7 +1554,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFF00001W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemistry</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1567,7 +1567,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00263W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental management system in the organisation</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1580,7 +1580,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00122W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human cell and tissue culture</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1593,7 +1593,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE00222W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental administration and management</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1606,7 +1606,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000161W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Descriptive geometry</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>
@@ -1619,7 +1619,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFCEE000991W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basics of building structure mechanics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns1:hasProgrammeType>

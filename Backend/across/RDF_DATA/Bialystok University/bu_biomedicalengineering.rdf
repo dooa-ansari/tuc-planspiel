@@ -7,7 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="http://tuc.web.engineering/module#ISFME00149W">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biomechanics</ns1:hasName>
     <ns1:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns1:hasLanguage>
     <ns1:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor's degree/Master's degree/Doctoral degree</ns1:hasProgrammeType>

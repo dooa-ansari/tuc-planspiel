@@ -7,7 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00092">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Visualization and Communication</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -20,7 +20,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00071">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Development Tools</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -33,7 +33,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00097">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wireless Networks</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -46,7 +46,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00028">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Database Systems and Data Warehouses</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -59,7 +59,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00019">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open Source Frameworks for Rapid Application Dvelopment</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -72,7 +72,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00086">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommender Systems</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -85,7 +85,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00030">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear Algebra</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -98,7 +98,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00036">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronic Circuits and Measurements</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -111,7 +111,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#INF2ICM">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human-Machine Interaction</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master's degree full-time programme</ns2:hasProgrammeType>
@@ -124,7 +124,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00010">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Graphics</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -137,7 +137,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00039">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linux Administration</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -150,7 +150,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00061">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Technologies</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -163,7 +163,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00011">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Organization and Architecture</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -176,7 +176,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00026">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Networks</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -189,7 +189,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00020">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithms and Data Structures</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -202,7 +202,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00003">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Applications Development in .NET technology</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -215,7 +215,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00069">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear Control Theory</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -228,7 +228,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00064">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Differential and Difference Equations</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -241,7 +241,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00008">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informatics in Robotics</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -254,7 +254,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00017">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operating Systems</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -267,7 +267,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00022">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods of Optimization</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -280,7 +280,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00055">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Probabilistic Methods and Statistics</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -293,7 +293,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00014">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software Engineering</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -306,7 +306,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00065">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematical Statistics</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -319,7 +319,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#INF1LDI">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logic for Computer Scientists</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -332,7 +332,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00058">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logic and Set Theory</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -345,7 +345,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00005">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artificial Intelligence</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -358,7 +358,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00002">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -371,7 +371,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00070">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus 2</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -384,7 +384,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00091">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Exploration</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -397,7 +397,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00102">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerical Methods</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -410,7 +410,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00046">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Applications Development in Java</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -423,7 +423,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00098">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algorithmics - Selected Issues</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -436,7 +436,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00095">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet of Things</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -449,7 +449,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00056">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Circuit Engineering</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -462,7 +462,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00060">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear Algebra and Analytic Geometry 2</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -475,7 +475,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00062">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculus 3</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -488,7 +488,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00072">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Embedded Systems</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -501,7 +501,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00038">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human-Computer Interaction</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -514,7 +514,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00090">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Object-Oriented Programming Techniques</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -527,7 +527,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00042">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Security</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -540,7 +540,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00085">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geographic Information System</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -553,7 +553,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00082">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Human-Computer Interaction and Application Usability</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -566,7 +566,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00096">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Machine Audition</ns2:hasName>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Databases</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
@@ -581,7 +581,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00037">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mobile Systems</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -594,7 +594,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00054">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete Mathematics</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -607,7 +607,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00031">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programming Basics</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -620,7 +620,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00045">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bussiness Application Programming in Java</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
@@ -633,7 +633,7 @@
     <ns3:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://tuc.web.engineering/module#FCS00057">
-    <rdf:type rdf:resource="http://tuc.web.engineering/module"/>
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
     <ns2:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction to Linux</ns2:hasName>
     <ns2:hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</ns2:hasLanguage>
     <ns2:hasProgrammeType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer's degree full-time programme</ns2:hasProgrammeType>
