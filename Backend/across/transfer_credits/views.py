@@ -188,6 +188,7 @@ def generate_pdf_for_user_email(data, user, signature, pdfBody):
         # Add a table for the data
         table_data = [["Status", "From Module", "To Module"]]
 
+
         if "transferCreditsRequest" in data:
             for item in data.get("transferCreditsRequest"):
                 status = item.get("status", "")
@@ -200,6 +201,12 @@ def generate_pdf_for_user_email(data, user, signature, pdfBody):
             from_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in updatedRequest.get("fromModule", [])])
             to_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in updatedRequest.get("toModule", [])])
             table_data.append([status, from_module, to_module])
+        elif "sendEmailRequest" in data:
+            for key, item in data.get("sendEmailRequest").items():
+                    status = item['status']
+                    from_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("fromModule", [])])
+                    to_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("toModule", [])])
+                    table_data.append([status, from_module, to_module])                    
 
         # Define table style
         table_style = TableStyle([
