@@ -1,3 +1,4 @@
+from .upload_file_to_blazegraph import upload_file_to_blazegraph
 from .translator import translateModules
 from .update_rdf_module import add_predicate_for_module_similarity
 import ssl
@@ -55,14 +56,18 @@ def read_modules_and_compare(universityOneModulesFile, folder_path, consumer):
     source_path = universityOneModulesFile
     filename_without_extension = os.path.splitext(os.path.basename(source_path))[0]
     new_filename = filename_without_extension + '_similar.rdf'
+    print(new_filename)
     new_file_path_existing_folder = os.path.join(os.path.dirname(source_path), new_filename)
+    print(new_file_path_existing_folder)
     os.rename(source_path, new_file_path_existing_folder)
     ## NEED TO CHANGE THIS ACCORDING TO REQUIREMENT
     destination_folder = 'RDF//Similarity Data//'
     new_file_path_destination_folder = os.path.join(destination_folder, new_filename)
-
+    print("path")
+    print(new_file_path_destination_folder)
     shutil.move(new_file_path_existing_folder, new_file_path_destination_folder)
-
+    upload_file_to_blazegraph("", new_filename, True)
+    
     return {}
     
 

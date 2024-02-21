@@ -1,4 +1,5 @@
 import requests
+from django.conf import settings
 from rdflib import Graph
 import os
 from pymantic import sparql
@@ -35,12 +36,15 @@ def upload_file_to_blazegraph(directory, file, isFile):
         
     else:
        graph = Graph()
-       graph.parse(file) 
+       pathValue = os.path.join(settings.BASE_DIR, "RDF","Similarity Data" , file) 
+       print(pathValue)
+       with open(pathValue, 'rb') as rdf_file:
+              graph.parse(rdf_file, format='xml')
        data_xml = graph.serialize(format='xml')
-       payload = data_xml
-       result = requests.post("http://13.51.109.79/blazegraph/namespace/kb/sparql", payload)
+       result = requests.post("http://13.51.109.79/blazegraph/namespace/kb/sparql", data=data_xml.encode('utf-8'), headers={'Content-Type': 'application/xml'})
+       print(result) 
 
 
-upload_file_to_blazegraph("/Users/dooaansari/Desktop/Across/web-wizards/Backend/across/uploads", "", False)
+# upload_file_to_blazegraph("/Users/dooaansari/Desktop/Across/web-wizards/Backend/across/uploads", "", False)
 
     

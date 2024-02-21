@@ -17,7 +17,7 @@ def pdfToRdf(request):
         # This will Make New Entry of Course in RDF of courses.rdf
         course_status = create_course_entry_in_rdf(data)  
         rdf_file_name = course_status["university_code"]+'_'+course_status["course_code"]
-        
+        print("FileNameDooa"+rdf_file_name)
         # List to store the paths of saved files
         saved_file_paths = []        
         # This conditions states that course already exist and it will take existing course for comaparison
@@ -60,8 +60,8 @@ def pdfToRdf(request):
             if results:
                 for key, value in results.items():
                     print("Key:", key, "Value:", value)
-                    json_data = write_json(f'{rdf_file_name}{key}', value)
-                    write_rdf(json.loads(json_data), course_status, f'{rdf_file_name}{key}', uniData)
+                    json_data = write_json(f'{rdf_file_name}', value)
+                    write_rdf(json.loads(json_data), course_status, f'{rdf_file_name}', uniData)
             response_data = {
                         'message': course_status['message'],
                         'university_name': course_status['university_name'],
