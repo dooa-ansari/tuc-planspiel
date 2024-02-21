@@ -48,7 +48,7 @@ def create_course_entry_in_rdf(data):
         return response_data
     else:
         course_code = course_name.replace(' ','')
-        course_uri = "http://tuc/course#"+course_code
+        course_uri = "http://tuc/course#"+university_code+course_code
 
     payload = {'update': add_course(uuid_numeric_only, course_uri, course_name, belongs_to_program, belongs_to_department, university_uri,has_language)}
         
