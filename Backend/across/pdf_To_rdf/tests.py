@@ -141,6 +141,14 @@ def extract_text_from_pdf_bu(pdf_path, course_status, uniData, end_page=None):
                             contents = contents_match.group(1).strip().replace('\\n', ' ')
                             result[MODULE_CONTENT] = ' '.join(contents.split())
 
+                        if 'Course content' in rowStr and MODULE_CONTENT not in result:
+                            pattern = r"\'Course content\', \"(.*)\"\]"
+                            # Extracting content after "\'Course content\',"
+                            match = re.search(pattern, rowStr)
+                            if match:
+                             contents = match.group(1).strip().replace('\\n', ' ')
+                             result[MODULE_CONTENT] = ' '.join(contents.split())
+
                         if GRADES not in  rowStr and 'No. of ECTS' in rowStr:
                             split_string = rowStr.split(",")
                             last_element = split_string[-1].strip().strip("']")
