@@ -44,65 +44,55 @@ const TransferCredits = () => {
     };
     fetchData();
   }, []);
+    return (
+        <div style={{ flex: 1 }}>
+            <AdminNavbar />
+            <p id="transferHeading">Transfer Credit Request Management</p>
+            <div id="user_details">
+                <h5> Full Name: <b>{full_name}</b> </h5>
+                <h5> Email: <b>{email}</b></h5>
+            </div>
+            <ToastContainer position="top-end" className="p-3" style={{ marginTop: "50px" }}>
+                <CSSTransition
+                    in={showToast}
+                    timeout={300}
+                    classNames="toast-slide"
+                    unmountOnExit
+                    onExited={handleCloseToast}
+                >
+                    <Toast className="bg-primary text-white" show={showToast} onClose={handleCloseToast} delay={3000} autohide>
+                        <Toast.Body>{toastMessage}</Toast.Body>
+                    </Toast>
+                </CSSTransition>
+            </ToastContainer>
+            <RequestsTable transferRequests={transferRequests} email={email} setTransferRequests={setTransferRequests} setShowToast={setShowToast} setToastMessage={setToastMessage} />
+            <div style={{display: "flex", justifyContent:"end", gap:"1rem"}} className="cta-btns">
+                <Button variant="primary" style={{ fontSize: '14px' }} onClick={() => handleNotification(transferRequests, email)}>
+                    Notify student
+                </Button>
+                <BackToUserPage navigate={navigate} />
+            </div>
 
-  return (
-    <div style={{ flex: 1 }}>
-      <AdminNavbar />
-      <p id="transferHeading">Transfer Credit Request Management</p>
-      <div id="user_details">
-        <h5>
-          {" "}
-          Full Name: <b>{full_name}</b>{" "}
-        </h5>
-        <h5>
-          {" "}
-          Email: <b>{email}</b>
-        </h5>
-      </div>
-      <ToastContainer
-        position="top-end"
-        className="p-3"
-        style={{ marginTop: "50px" }}
-      >
-        <CSSTransition
-          in={showToast}
-          timeout={300}
-          classNames="toast-slide"
-          unmountOnExit
-          onExited={handleCloseToast}
-        >
-          <Toast
-            className="bg-primary text-white"
-            show={showToast}
-            onClose={handleCloseToast}
-            delay={3000}
-            autohide
-          >
-            <Toast.Body>{toastMessage}</Toast.Body>
-          </Toast>
-        </CSSTransition>
-      </ToastContainer>
-      <RequestsTable
-        transferRequests={transferRequests}
-        email={email}
-        setTransferRequests={setTransferRequests}
-        setShowToast={setShowToast}
-        setToastMessage={setToastMessage}
-      />
-      <BackToUserPage navigate={navigate} />
-    </div>
-  );
+        </div >
+    );
 };
 
-const handleApprove = async (
-  request,
-  email,
-  setTransferRequests,
-  setShowToast,
-  setToastMessage
-) => {
-  const updatedRequest = { ...request, status: "ACCEPTED" };
+const handleNotification = async (request, email) => {
 
+    const sendEmailRequest = { ...request};
+
+    try {
+        const response = await axios.put('http://127.0.0.1:8000/adminapp/sendEmailTransferRequest', {
+            email: email,
+            sendEmailRequest: sendEmailRequest
+        });
+    } catch (error) {
+        console.error('Error sending credit transfer request', error);
+    }
+};
+
+const handleApprove = async (request, email, setTransferRequests, setShowToast, setToastMessage) => {
+  const updatedRequest = { ...request, status: "ACCEPTED" };
   try {
     const response = await updateTransferCreditRequests({
       email: email,
