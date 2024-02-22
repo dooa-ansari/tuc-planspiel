@@ -8,6 +8,8 @@ from os.path import isfile, join
 import os
 import shutil
 from django.conf import settings
+from .read_rdf_module_file import readRDFFile
+from django.http import JsonResponse
 
 
 def read_modules_and_compare(universityOneModulesFile, only_files_in_folder, consumer):
@@ -19,23 +21,20 @@ def read_modules_and_compare(universityOneModulesFile, only_files_in_folder, con
      ssl._create_default_https_context = _create_unverified_https_context
     nlp = spacy.load('en_core_web_lg')
 
-    # only_files_in_folder = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
-
+    firstUniversityModules = translateModules(universityOneModulesFile, consumer)
     for file_name in only_files_in_folder:
         univeristyTwoModulesFile = file_name
-        # nltk.download('all')
         consumer.send_message({"progress": 2 , "type": 0 , "message": "Starting module conversions"})
-        firstUniversityModules = translateModules(universityOneModulesFile, consumer)
         consumer.send_message({"progress": 3 , "type": 10, "message": "First modules file translated to english successfully"})
         secondUniversityModules = translateModules(univeristyTwoModulesFile , consumer)
         consumer.send_message({"progress": 4 , "type": 10, "message": "Second modules file translated to english successfully"})
         data_list_first = []
         data_list_second = []
         consumer.send_message( {"progress": 6 , "type": 10, "message": "Starting to find similarities between modules"})
-        
+        filteredFirstUniversityModules , filteredSecondUniversityModules = filter_modules_by_workload(firstUniversityModules, secondUniversityModules)
         count = 2
-        for module in firstUniversityModules:
-            for module2 in secondUniversityModules:
+        for module in filteredFirstUniversityModules:
+            for module2 in filteredSecondUniversityModules:
                 text1 = module.name if(module.moduleContent == "This course has not yet been described...") else module.moduleContent
                 text2 = module2.name if(module2.moduleContent == "This course has not yet been described...") else module2.moduleContent
                 similarity = find_text_similarity_spacy(text1, text2, nlp)
@@ -86,3 +85,39 @@ def find_text_similarity_spacy(module1Content, module2Content, nlp):
     
     is_similar = True if(verbs_similarity >= 0.8 and adj_similarity >= 0.8 and noun_similarity >= 0.9) else False
     return is_similar
+
+def filter_modules_by_workload(firstUniversityModules, secondUniversityModules):
+    try:
+        secondUniModulesSet = set()
+        secondUniModules = []
+        firstUniModules = []
+        for firstModule in firstUniversityModules:
+            flag = False  
+            for secondModule in secondUniversityModules:
+                # Taking out difference between module credit points as a last alternative of comparison
+                difference_between_credits = abs(int(firstModule.moduleCreditPoints) - int(secondModule.moduleCreditPoints))
+                # EUROPEAN UNION FIGURES CALCULATION
+                minWorkLoad = 25 * int(secondModule.moduleCreditPoints)
+                maxWorkLoad = 30 * int(secondModule.moduleCreditPoints)
+                # Here we are checking if given module workload is already more or equal than
+                # other university module workload then add that module directly
+                if(int(firstModule.moduleWorkLoad) >= int(secondModule.moduleWorkLoad)):
+                    secondUniModules.append(secondModule)
+                    flag = True
+                elif((int(firstModule.moduleWorkLoad) < int(secondModule.moduleWorkLoad)) and difference_between_credits <= 2):
+                   # Here we are checking if given module workload is less than 
+                   # other university module workload then check according  
+                   # to european union is it under conditions if yes then add that module
+                   # else leave that module(it might have certain different requirements)
+                   if (minWorkLoad <= int(secondModule.moduleWorkLoad) <= maxWorkLoad): 
+                        secondUniModules.append(secondModule)
+                        flag = True
+
+            # If secondModule adding then respective firstModule should get added
+            if(flag == True):
+                firstUniModules.append(firstModule)
+        secondUniModulesSet = set(secondUniModules)
+        filteredSecondModulesList = list(secondUniModulesSet)
+        return firstUniModules, filteredSecondModulesList
+    except Exception as e:
+        return JsonResponse({'message': f'Error during finding similarities between courses: {str(e)}'}, status=500)    
