@@ -11,14 +11,3 @@ def get_all_courses():
     }}   
     """
     return query
-
-def get_course_uri_from_departments(department):
-    query= f"""
-    SELECT ?course
-    WHERE {{
-    ?course rdf:type <http://tuc/course#> .
-    ?course <http://tuc/course#belongsToDepartment> "{department}" .
-    }}
-    GROUP BY ?course
-    """
-    return query

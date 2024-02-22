@@ -25,7 +25,12 @@ def pdfToRdf(request):
             response_data = {
                         'message': course_status['message'],
                         'university_name': course_status['university_name'],
-                        'rdf_File_Path': rdf_file_name
+                        'rdf_File_Path': rdf_file_name,
+                        'belongs_to_department': course_status['belongs_to_department'],
+                        'course_name': course_status["course_name"],
+                        'course_uri': course_status["course_uri"],
+                        'belongs_to_program': course_status["belongs_to_program"],
+                        'has_language': course_status['has_language']
                     }
             return JsonResponse(response_data, status=200)
         else: # This follows that course doesn't exist and it will create new course in courses.rdf
@@ -65,7 +70,12 @@ def pdfToRdf(request):
             response_data = {
                         'message': course_status['message'],
                         'university_name': course_status['university_name'],
-                        'rdf_File_Path': rdf_file_name
+                        'rdf_File_Path': rdf_file_name,
+                        'belongs_to_department': course_status['belongs_to_department'],
+                        'course_name': course_status["course_name"],
+                        'course_uri': course_status["course_uri"],
+                        'belongs_to_program': course_status["belongs_to_program"],
+                        'has_language': course_status['has_language']
                     }
             return JsonResponse(response_data, status=200)
     except Exception as e:

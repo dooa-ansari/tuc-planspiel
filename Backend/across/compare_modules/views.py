@@ -43,6 +43,11 @@ def create_course_entry_in_rdf(data):
                         'university_name': belongs_to_university,
                         'university_code': university_code,
                         'course_code': course_code,
+                        'belongs_to_department': belongs_to_department,
+                        'course_name': course_name,
+                        'course_uri': course_uri,
+                        'belongs_to_program': belongs_to_program,
+                        'has_language': has_language,
                         'status': True
                     }
         return response_data
@@ -63,6 +68,8 @@ def create_course_entry_in_rdf(data):
                         'belongs_to_department': belongs_to_department,
                         'course_name': course_name,
                         'course_uri': course_uri,
+                        'belongs_to_program': belongs_to_program,
+                        'has_language': has_language,
                         'status': False
                     }
         return response_data

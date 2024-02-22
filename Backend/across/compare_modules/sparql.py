@@ -58,3 +58,21 @@ def get_other_universities_except_given(university_name):
         }}
     """
     return query
+
+
+def get_course_uri_from_departments_and_university(department, university):
+    query= f"""
+    SELECT ?course ?universityName ?university
+    WHERE {{
+    ?course rdf:type <http://tuc/course#> .
+    ?course <http://tuc/course#belongsToDepartment> "{department}" .
+    ?course <http://across/university#belongsToUniversity> ?university .
+    ?university rdf:type <http://across/university#> .
+    ?university <http://across/university#hasUniversityName> ?universityName .
+      FILTER (
+                ?universityName = "{university}"^^<http://www.w3.org/2001/XMLSchema#string>
+            )
+    }}
+
+    """
+    return query

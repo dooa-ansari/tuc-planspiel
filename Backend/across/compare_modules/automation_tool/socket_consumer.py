@@ -9,7 +9,7 @@ import os
 from compare_modules.sparql import * 
 from pymantic import sparql
 from django.conf import settings
-
+from .course_similarity import find_similarity_between_courses
 class Consumer(WebsocketConsumer):
     def connect(self):
         try:
@@ -60,9 +60,7 @@ class Consumer(WebsocketConsumer):
                 absolute_path  =os.path.join(settings.BASE_DIR, 'RDF_DATA')
                             
                 folder_path = absolute_path
-                # only_files_in_folder = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
-
-                # file2 = join(folder_path, only_files_in_folder[0])
+                find_similarity_between_courses(response_data, university_name)
                 
                 read_modules_and_compare(file1, folder_path, self)
     
