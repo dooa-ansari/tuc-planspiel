@@ -50,7 +50,6 @@ def get_uniData(course_status):
         rdfUri = RdfUri('http://tuc.web.engineering/module#', 
                         'http://tuc/course#', 
                         'http://across/university#TUC', 
-                        'http://tuc/web/engineering/module#',
                         'http://www.w3.org/2001/XMLSchema#string', 
                         'http://www.w3.org/2001/XMLSchema#integer')
         return UniData(rePattern, rdfUri, course_status)
@@ -58,7 +57,6 @@ def get_uniData(course_status):
         rdfUri = RdfUri('http://tuc.web.engineering/module#', 
                         'http://tuc/course#', 
                         'http://across/university#BU', 
-                        'http://tuc/web/engineering/module#',
                         'http://www.w3.org/2001/XMLSchema#string', 
                         'http://www.w3.org/2001/XMLSchema#integer')
         rePattern = RePattern(re.compile(r"'Course code',\s*'([^']*)'"),
