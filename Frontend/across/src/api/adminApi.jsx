@@ -68,3 +68,13 @@ export const fetchUserData = async () => {
   }
   return response;
 };
+
+export const fetchDepartmentsData = async () => {
+  let response;
+  try {
+    response = await api.get("/adminapp/fetchDepartments");
+  } catch (error) {
+    return error;
+  }
+  return response;
+};
