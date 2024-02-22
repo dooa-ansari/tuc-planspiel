@@ -6,10 +6,12 @@ import { Form, Col, Row, Container, Button, Modal } from "react-bootstrap";
 import "../assets/css/FileUpload.css";
 import { useNavigate } from "react-router-dom";
 import { fetchDepartmentsData } from "../api/adminApi";
+import { getUniversities } from "../api/compareModuleApi";
 
 const PdfToRdf = () => {
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [uploadStatus, setUploadStatus] = useState(null);
+
   const [formData, setFormData] = useState({
     courseName: "",
     belongsToUniversity: "",
@@ -25,19 +27,16 @@ const PdfToRdf = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Call your first API here based on the value of belongsToUniversity
-    axios
-      .get("http://127.0.0.1:8000/universities/")
-      .then(response => {
-        // Handle API response as needed
-        console.log(response.data);
-
-        // Assuming the API response is an array of options
+    async function getUniversitiesData() {
+      try {
+        const response = await getUniversities();
         setUniversityOptions(response.data);
-      })
-      .catch(error => {
-        console.error("Error calling first API:", error);
-      });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getUniversitiesData();
   }, []);
 
   useEffect(() => {
@@ -59,8 +58,6 @@ const PdfToRdf = () => {
     }
     getAllDepartments();
   }, []);
-
-  console.log(departments);
 
   const handleUniversityChange = selectedUniversity => {
     // Find the selected university object based on its id
@@ -121,6 +118,7 @@ const PdfToRdf = () => {
 
   const handleChange = e => {
     const { name, value } = e.target;
+
     setFormData(prevData => ({
       ...prevData,
       [name]: value,
@@ -251,14 +249,7 @@ const PdfToRdf = () => {
                     name="courseName"
                     value={formData.courseName}
                     onChange={handleChange}
-                  >
-                    {/* <option value="" disabled>Select Course</option>
-                                        {universityOptions.map((option) => (
-                                            <option key={option.id} value={option.id}>
-                                                {option.name}
-                                            </option>
-                                        ))} */}
-                  </Form.Control>
+                  ></Form.Control>
                 </Form.Group>
               </Col>
             </Row>
@@ -278,15 +269,34 @@ const PdfToRdf = () => {
               <Col>
                 <Form.Group controlId="belongsToDepartment">
                   <Form.Label>Course Belongs To Department:</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="belongsToDepartment"
-                    value={formData.belongsToDepartment}
+                  <Form.Select
+                    aria-label="Default select example"
                     onChange={handleChange}
-                  />
+                    name="belongsToDepartment"
+                  >
+                    <option>Select Department</option>
+                    {departments.map((dept, idx) => {
+                      return (
+                        <option key={idx} value={dept.department}>
+                          {dept.department}
+                        </option>
+                      );
+                    })}
+                  </Form.Select>
                 </Form.Group>
               </Col>
             </Row>
+
+            {formData.belongsToDepartment === "Other" && (
+              <Row>
+                <Col>
+                  <Form.Group controlId="specifyDepartment">
+                    <Form.Label>Specify your Department:</Form.Label>
+                    <Form.Control type="text" />
+                  </Form.Group>
+                </Col>
+              </Row>
+            )}
 
             <Row>
               <Col>
