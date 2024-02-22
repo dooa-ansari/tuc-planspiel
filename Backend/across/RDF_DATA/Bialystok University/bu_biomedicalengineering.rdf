@@ -15,7 +15,7 @@
     <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IS-FME -00149W</ns1:hasModuleNumber>
     <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biomechanics of the musculoskeletal system. Muscle forces. Human locomotion.</ns1:hasContent>
     <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ns1:hasCreditPoints>
-    <ns4:hasCourse rdf:resource="http://tuc/course#BUCBE"/>
+    <ns4:hasCourse rdf:resource="http://tuc/course#BUBiomedicalEngineering"/>
     <ns3:hasDept rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biomedical Engineering</ns3:hasDept>
     <ns2:hasUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
