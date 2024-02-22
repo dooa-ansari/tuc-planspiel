@@ -16,7 +16,7 @@ const Converter = () => {
   // Access the state object from location
   const { state } = location;
   // Destructure email and full_name from the state object
-  const { filePath, universityName, belongs_to_department, course_name, course_uri } = state || {};
+  const { filePath, universityName, belongs_to_department, course_name, course_uri, belongs_to_program, has_language } = state || {};
 
 
 
@@ -48,7 +48,9 @@ const Converter = () => {
       'rdf_File_Path': filePath,
       'belongs_to_department': belongs_to_department,
       'course_name': course_name,
-      'course_uri': course_uri
+      'course_uri': course_uri,
+      'belongs_to_program': belongs_to_program,
+      'has_language': has_language
     })
   }, 1000), []);
 
