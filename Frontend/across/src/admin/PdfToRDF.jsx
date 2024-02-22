@@ -118,11 +118,16 @@ const PdfToRdf = () => {
             if (response.status == 200) {
                 const filePath = response.data.rdf_File_Path
                 const universityName = response.data.university_name
+                const belongs_to_department = response.data.belongs_to_department
+                const course_name = response.data.course_name
+                const course_uri = response.data.course_uri
+                const belongs_to_program = response.data.belongs_to_program
+                const has_language = response.data.has_language
                 setTimeout(async () => {
                     await localStorage.setItem("filePath", filePath);
                     await localStorage.setItem("universityName", universityName);
                     console.log("filePath", filePath, "universityName", universityName)
-                    navigate("/admin/automation", { state: { filePath, universityName } });
+                    navigate("/admin/automation", { state: { filePath, universityName, belongs_to_department, course_name, course_uri, belongs_to_program, has_language } });
                 }, 2000)
             }
             console.log('Upload response:', response.data);

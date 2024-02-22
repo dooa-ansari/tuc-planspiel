@@ -7,8 +7,10 @@ from os import listdir
 from os.path import isfile, join
 import os
 import shutil
+from django.conf import settings
 
-def read_modules_and_compare(universityOneModulesFile, folder_path, consumer):
+
+def read_modules_and_compare(universityOneModulesFile, only_files_in_folder, consumer):
     try:
      _create_unverified_https_context = ssl._create_unverified_context
     except AttributeError:
@@ -17,10 +19,10 @@ def read_modules_and_compare(universityOneModulesFile, folder_path, consumer):
      ssl._create_default_https_context = _create_unverified_https_context
     nlp = spacy.load('en_core_web_lg')
 
-    only_files_in_folder = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
+    # only_files_in_folder = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
 
     for file_name in only_files_in_folder:
-        univeristyTwoModulesFile = join(folder_path, file_name)
+        univeristyTwoModulesFile = file_name
         # nltk.download('all')
         consumer.send_message({"progress": 2 , "type": 0 , "message": "Starting module conversions"})
         firstUniversityModules = translateModules(universityOneModulesFile, consumer)
@@ -55,17 +57,11 @@ def read_modules_and_compare(universityOneModulesFile, folder_path, consumer):
     # Moving New hasModules file to Similarity Folder
     source_path = universityOneModulesFile
     filename_without_extension = os.path.splitext(os.path.basename(source_path))[0]
-    new_filename = filename_without_extension + '_similar.rdf'
-    print(new_filename)
-    new_file_path_existing_folder = os.path.join(os.path.dirname(source_path), new_filename)
-    print(new_file_path_existing_folder)
-    os.rename(source_path, new_file_path_existing_folder)
+    new_filename = filename_without_extension
     ## NEED TO CHANGE THIS ACCORDING TO REQUIREMENT
-    destination_folder = 'RDF//Similarity Data//'
-    new_file_path_destination_folder = os.path.join(destination_folder, new_filename)
-    print("path")
-    print(new_file_path_destination_folder)
-    shutil.move(new_file_path_existing_folder, new_file_path_destination_folder)
+    destination_folder =os.path.join(settings.BASE_DIR, f'RDF//Similarity Data//')
+    new_file_path_destination_file = os.path.join(settings.BASE_DIR, f'RDF//Similarity Data//{new_filename}_similar.rdf')
+    shutil.copy(source_path, new_file_path_destination_file)
     upload_file_to_blazegraph(destination_folder, "", False)
     
     return {}

@@ -272,7 +272,7 @@ def write_rdf(data, course_status, rdf_file_name, uniData):
         rdf_outputBytes = (g.serialize(format="xml")).encode('utf-8')
     
         # Save RDF data to a file with proper encoding
-        output_rdf_path = os.path.join(DATA_PATH, f'{course_status["university_name"]}',  f'{rdf_file_name}.rdf')
+        output_rdf_path = os.path.join(DATA_PATH, f'{course_status["university_name"].lower()}',  f'{rdf_file_name.lower()}.rdf')
         with open(output_rdf_path, "wb") as rdf_file:
             rdf_file.write(rdf_outputBytes)
             print(f"RDF data has been saved to {output_rdf_path}")
