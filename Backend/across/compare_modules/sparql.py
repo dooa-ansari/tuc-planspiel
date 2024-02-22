@@ -1,9 +1,11 @@
 module_list_query = """
-SELECT ?moduleName ?moduleId ?moduleContent ?moduleURI ?module
+SELECT ?moduleName ?moduleId ?moduleContent ?moduleURI ?module ?moduleCreditPoints ?moduleWorkLoad
 WHERE {
     ?module <http://tuc.web.engineering/module#hasName> ?moduleName ;
             <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
-            <http://tuc.web.engineering/module#hasContent> ?moduleContent .
+            <http://tuc.web.engineering/module#hasContent> ?moduleContent ;
+            <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints ;
+            <http://tuc.web.engineering/module#hasWorkLoad> ?moduleWorkLoad
 }
 """
 
