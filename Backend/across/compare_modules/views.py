@@ -37,6 +37,17 @@ def create_course_entry_in_rdf(data):
         course_uri = str(result['courseUri']['value'])
     
     if course_uri:                              # It means rdf entry for course already exist
+         # Extract course name from the course URI
+        course_name = course_uri.split('#')[1].rstrip('>')
+
+        # Extract university name from the university URI
+        university_name = university_uri.split('#')[1].rstrip('>')
+
+        # Find the index where the university name ends
+        index = course_name.find(university_name) + len(university_name)
+
+        # Insert an underscore between university name and the rest of the course name
+        rdf_file_path = f"{university_name}_{course_name[index:]}"
         course_code = course_uri.split('#')[1]
         response_data = {
                         'message': "Given Course already exist, starting comparing with existing course",
@@ -48,6 +59,7 @@ def create_course_entry_in_rdf(data):
                         'course_uri': course_uri,
                         'belongs_to_program': belongs_to_program,
                         'has_language': has_language,
+                        'rdf_file_path': rdf_file_path,
                         'status': True
                     }
         return response_data

@@ -25,7 +25,7 @@ def pdfToRdf(request):
             response_data = {
                         'message': course_status['message'],
                         'university_name': course_status['university_name'],
-                        'rdf_File_Path': rdf_file_name,
+                        'rdf_File_Path': course_status['rdf_file_path'],
                         'belongs_to_department': course_status['belongs_to_department'],
                         'course_name': course_status["course_name"],
                         'course_uri': course_status["course_uri"],
@@ -83,5 +83,6 @@ def pdfToRdf(request):
     finally:
         for file_path in saved_file_paths:
             os.remove(file_path)
-        os.rmdir(temp_dir)
+        if course_status['status'] == False: 
+            os.rmdir(temp_dir)
         print('End')

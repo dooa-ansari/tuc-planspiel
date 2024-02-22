@@ -6,8 +6,13 @@ from compare_modules.sparql import get_course_uri_from_departments_and_universit
 def find_similarity_between_courses(data, other_university):
     try:
         department_name = data['belongs_to_department']
+        course_language = data['has_language']
+        program_type = data['belongs_to_program']
         server = sparql.SPARQLServer('http://13.51.109.79/bigdata/sparql')
-        qresponse = server.query(get_course_uri_from_departments_and_university(department_name, other_university))
+
+        # This query will return the results after filtering out courses with department, course language and program type university-wise
+        qresponse = server.query(get_course_uri_from_departments_and_university(department_name, other_university,course_language, program_type))
+        
         courses = qresponse['results']['bindings']
         course_data = {}
 
@@ -33,12 +38,7 @@ def find_similarity_between_courses(data, other_university):
             compare_course_file_name = f"{university_name}_{course_name[index:]}"+".rdf"
             compare_course_list.append(compare_course_file_name)
 
-            ## MORE COMPARISONS NEEDS TO ADDED
-
-
-
-        print(compare_course_list)
-
+        return compare_course_list
     except Exception as e:
         return JsonResponse({'message': f'Error during finding similarities between courses: {str(e)}'}, status=500)    
     
