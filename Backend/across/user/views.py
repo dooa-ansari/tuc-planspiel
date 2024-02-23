@@ -6,6 +6,16 @@ from django.forms.models import model_to_dict
 from .models import UserData, UserProfile
 from pymantic import sparql
 from .sparql import *
+from django.core.files.storage import FileSystemStorage
+import os
+import json
+import tempfile
+import re
+import PyPDF2
+import wget
+from os import listdir
+from os.path import isfile, join
+
 
 @csrf_exempt
 @require_POST
@@ -214,3 +224,48 @@ def fetch_university_uri(request):
             "message": f"An unexpected error occurred: {e}"
         }
     return JsonResponse(response, status =500)
+
+
+
+@csrf_exempt
+@require_POST
+def upload_transcript(request):
+    try:
+            uploaded_files = request.FILES.getlist('files')
+            # temp_dir = tempfile.mkdtemp()
+            saved_files=saveFiles(uploaded_files)
+            print(saved_files[0])
+            # file_path = os.path.join(temp_dir, uploaded_files[0].name)
+            pdf_file = open(f"Backend/across/uploads/{saved_files}", "rb")  
+            pdf_reader = PyPDF2.PdfReader(pdf_file)
+            noOfPages = len(pdf_reader.pages)
+            text = ""
+            for page in pdf_reader.pages:
+              text = text + page.extract_text()
+    
+            print(text)
+                
+            print("i am here")
+        
+            return JsonResponse({'message': 'Transcript uploaded successfully', 'saved_files': saved_files}, status=200)
+    except Exception as e:
+            return JsonResponse({'message': f'Transcript upload failed: {str(e)}'}, status=500)
+
+
+
+
+uploadLoaction =""
+def saveFiles(uploaded_files):
+    # Specify the directory where you want to save the files
+    upload_directory = 'Backend/across/uploads/'
+
+    # Create a FileSystemStorage instance with the upload directory
+    fs = FileSystemStorage(location=upload_directory)
+    uploadLoaction= fs.location
+    print(fs.location)
+    # Process and save the uploaded files
+    saved_files = []
+    for file in uploaded_files:
+        saved_file = fs.save(file.name, file)
+        saved_files.append(saved_file)
+    return saved_files[0]
