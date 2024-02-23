@@ -12,7 +12,6 @@ import women from "../../../assets/lotties/women.json";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 
-
 const TransferCredits = () => {
   const [universities, setUniversities] = useState([]);
   const [usersCompleteModules, setUsersCompletedModules] = useState([]);
@@ -25,7 +24,7 @@ const TransferCredits = () => {
   const [total, setTotal] = useState(0);
   const [lastSelectedModule, setLastSelectedModule] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [userData, setUserData] = useState(null)
+  const [userData, setUserData] = useState(null);
 
   const buttonStyle = {
     background: "#439a86",
@@ -54,19 +53,16 @@ const TransferCredits = () => {
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("auth"));
-    setUserData(data?.user)
-
-
-  }, [])
+    setUserData(data?.user);
+  }, []);
   const getUsersCompletedModules = () => {
-    const data = { email: userData?.email }
+    const data = { email: userData?.email };
     axios
-      .post("http://127.0.0.1:8000/user/fetchCompletedModulesofUser",
-        data
-      )
+      .post("http://127.0.0.1:8000/user/fetchCompletedModulesofUser", data)
       .then((response) => {
         if (response.status == 200) {
-          const returnedData = response.data.user_profile_data.completed_modules;
+          const returnedData =
+            response.data.user_profile_data.completed_modules;
           returnedData.forEach((item) => {
             item.selected = false;
           });
@@ -74,8 +70,7 @@ const TransferCredits = () => {
         }
         setTimeout(() => {
           setusersModulesLoading(false);
-        }, 3000)
-
+        }, 3000);
       })
       .catch((error) => {
         setusersModulesLoading(false);
@@ -88,89 +83,86 @@ const TransferCredits = () => {
     );
     //"http://tuc.web.engineering/module#CWEA"
     const list = [];
-    let numberTotal = 0
+    let numberTotal = 0;
     selectedModules?.forEach((selected) => {
       axios
         .get(
           "http://127.0.0.1:8000/modules/similarModules?moduleUri=" +
-          encodeURIComponent(selected.moduleUri)
+            encodeURIComponent(selected.moduleUri)
         )
         .then((response) => {
           if (response.status == 200) {
             list.push(response.data.modules);
-            const calculateTotal = response.data.modules
+            const calculateTotal = response.data.modules;
             calculateTotal.forEach((item) => {
-              numberTotal = numberTotal + parseInt(item.similarModuleCreditPoints)
-
-            })
+              numberTotal =
+                numberTotal + parseInt(item.similarModuleCreditPoints);
+            });
             setSimilarModules([...similarModules, ...list]);
-
           }
         })
         .catch((error) => {
           if (error.response.status == 404) {
             const noContent = {
               nothing: true,
-              module: selected.moduleName
-            }
-            setSimilarModules(...similarModules, ...noContent)
+              module: selected.moduleName,
+            };
+            setSimilarModules(...similarModules, ...noContent);
           }
         });
     });
 
     setTimeout(() => {
-      setTotal(total + numberTotal)
+      setTotal(total + numberTotal);
       setsimilarModulesLoading(false);
-    }, 3000)
+    }, 3000);
   };
 
-
   const saveData = () => {
-    const transferCreditsRequestList = []
+    const transferCreditsRequestList = [];
     similarModules.forEach((item) => {
       item.forEach((value) => {
-        console.log(value)
+        console.log(value);
         const innerObject = {
           fromModule: [
             {
               moduleUri: value.moduleUri,
               moduleName: value.name,
               moduleId: value.id,
-              credits: value.creditPoints
-            }
+              credits: value.creditPoints,
+            },
           ],
           toModule: [
             {
               moduleUri: value.similarModuleUri,
               moduleName: value.similarModuleName,
               moduleId: value.similarModuleId,
-              credits: value.similarModuleCreditPoints
-            }
+              credits: value.similarModuleCreditPoints,
+            },
           ],
-          status: "PENDING"
-        }
-        transferCreditsRequestList.push(innerObject)
-      })
-    })
+          status: "PENDING",
+        };
+        transferCreditsRequestList.push(innerObject);
+      });
+    });
     const data = {
       email: userData?.email,
       transferCreditsRequest: transferCreditsRequestList,
       possibleTransferrableCredits: total,
-    }
-    console.log(data)
+    };
+    console.log(data);
     axios
       .post(
         "http://127.0.0.1:8000/transferCredits/saveTransferCreditsofUser",
         data
       )
       .then((response) => {
-        console.log(response)
+        console.log(response);
         if (response.status == 200) {
-          setSaveLoading(false)
+          setSaveLoading(false);
         }
       })
-      .catch((error) => { });
-
+      .catch((error) => {});
   };
 
   const defaultOptionsArrow = {
@@ -220,7 +212,8 @@ const TransferCredits = () => {
   const onPressCompletedModuleItem = (item) => {
     const updateList = [];
     usersCompleteModules.forEach((module) => {
-      module.selected = item.moduleUri == module.moduleUri ? !module.selected : module.selected;
+      module.selected =
+        item.moduleUri == module.moduleUri ? !module.selected : module.selected;
       updateList.push(module);
     });
     setUsersCompletedModules(updateList);
@@ -256,8 +249,8 @@ const TransferCredits = () => {
       setsimilarModulesLoading(true);
       getSimilarAgainst();
     } else if (event.currentIndex == 3) {
-      setSaveLoading(true)
-      saveData()
+      setSaveLoading(true);
+      saveData();
     }
   };
   return (
@@ -278,6 +271,44 @@ const TransferCredits = () => {
             <button style={selectedUniversity && buttonStyle}>Back</button>
           }
         >
+          <div className="sliderParent">
+            <div className="center">
+              <h2>Disclaimer</h2>
+              <p>
+                Please note: Decisions on whether it is possible to convert
+                grades gained abroad into grades under the German system are the
+                responsibility of the relevant examination board. The following
+                information is provided by the International Office purely
+                intended as guidance and is not legally binding. (1) Study
+                times, course achievements and examination achievements from
+                other study programs will be taken into account at the student's
+                request, unless there are significant differences in the skills
+                acquired. Included There is no need to make a schematic
+                comparison, but rather an overall consideration and overall
+                assessment. The credit can be refused if more than 80 credit
+                points or the master's thesis are to be taken into account. The
+                examination committee decides on the crediting. When recognizing
+                and crediting study periods and academic achievements and
+                examination achievements that were completed outside the Federal
+                Republic of Germany, the equivalence agreements approved by the
+                Conference of Ministers of Education (KMK) and the Conference of
+                Rectors of the University (HRK) as well as agreements within the
+                framework of university cooperation agreements must be observed.
+                (2) The examination board can credit relevant practical work
+                activities upon application by the student. (3) Applicants with
+                university entrance qualifications will be placed in a higher
+                semester if they pass have demonstrated the required knowledge
+                and skills through a special university examination (placement
+                test). (4) If study and examination achievements are taken into
+                account, the credit points and the grades - as long as the
+                grading systems are comparable - must be taken over. In the case
+                of incomparable grading systems, the note “passed” is included.
+                (5) Students must submit the documents required for the
+                crediting of study periods, course achievements and examination
+                achievements.
+              </p>
+            </div>
+          </div>
           <div className="sliderParent">
             <div className="center">
               <p>
@@ -319,7 +350,6 @@ const TransferCredits = () => {
           <div className="sliderParentSlide2">
             <div className="centerSlide2Image">
               <Lottie options={defaultOptionsWomen} height={200} width={200} />
-
             </div>
             <div className="centerSlide2">
               <p>
@@ -328,8 +358,8 @@ const TransferCredits = () => {
                 Chemnitz
               </p>
               <p>
-                Please choose the modules you have already finished at Technische
-                Universität Chemnitz
+                Please choose the modules you have already finished at
+                Technische Universität Chemnitz
               </p>
 
               {usersModulesLoading ? (
@@ -368,10 +398,11 @@ const TransferCredits = () => {
                 <div className="scrollView">
                   {similarModules.map((similarModule) => {
                     if (similarModule.nothing) {
-                      return (<div id="module" key={1}>
-                        No Similar modules found for : {similarModule.module}
-
-                      </div>)
+                      return (
+                        <div id="module" key={1}>
+                          No Similar modules found for : {similarModule.module}
+                        </div>
+                      );
                     } else {
                       return similarModule.map((item) => {
                         return (
@@ -401,7 +432,8 @@ const TransferCredits = () => {
                             />
                             <div className="moduleInner">
                               <div id="moduleid">
-                                {item.similarModuleId} - {item.similarModuleName}
+                                {item.similarModuleId} -{" "}
+                                {item.similarModuleName}
                               </div>
                               <div id="creditPoints">
                                 Credit Points : {item.similarModuleCreditPoints}
@@ -416,13 +448,11 @@ const TransferCredits = () => {
                                 <summary>Show Details</summary>
                                 <p>{item.similarModuleContent}</p>
                               </details>
-
                             </div>
                           </div>
                         );
                       });
                     }
-
                   })}
                 </div>
               )}
