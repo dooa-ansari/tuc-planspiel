@@ -1,6 +1,8 @@
 from rdflib import Graph, URIRef, Literal, RDF, RDFS, XSD
 from compare_modules.sparql import *
 import os
+from django.conf import settings
+
 
 def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoModulesFile, data_list_first, data_list_second, consumer):
     modulesTUC = Graph()
@@ -34,7 +36,7 @@ def add_predicate_for_module_similarity(universityOneModulesFile, univeristyTwoM
 
     file1 = open(new_file_name_1, 'w')
     # Define the folder name
-    folder_name = "RDF//Similarity Data//"
+    folder_name = os.path.join(settings.BASE_DIR, f'RDF//Similarity Data//')
 
     # Ensure the folder exists, create it if it doesn't
     if not os.path.exists(folder_name):
