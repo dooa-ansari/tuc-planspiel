@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./TransferCredits.css";
 import axios from "axios";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
@@ -11,6 +11,7 @@ import arrow from "../../../assets/lotties/arrow_down.json";
 import women from "../../../assets/lotties/women.json";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
+import { useDropzone } from "react-dropzone";
 
 const TransferCredits = () => {
   const [universities, setUniversities] = useState([]);
@@ -25,7 +26,9 @@ const TransferCredits = () => {
   const [lastSelectedModule, setLastSelectedModule] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userData, setUserData] = useState(null);
-
+  const [uploadedFiles, setUploadedFiles] = useState([]);
+  const [uploadStatus, setUploadStatus] = useState(null);
+ 
   const buttonStyle = {
     background: "#439a86",
     borderRadius: "10px",
@@ -55,6 +58,32 @@ const TransferCredits = () => {
     const data = JSON.parse(localStorage.getItem("auth"));
     setUserData(data?.user);
   }, []);
+
+  const onDrop = useCallback(async (acceptedFiles) => {
+    try {
+      const formData = new FormData();
+      acceptedFiles.forEach((file) => {
+        console.log(JSON.stringify(file));
+        formData.append("files", file);
+      });
+
+      const response = await axios.post(
+        "http://127.0.0.1:8000/user/verifyTranscript",
+        formData
+      );
+
+      console.log("Upload response:", response.data);
+
+      setUploadedFiles(acceptedFiles);
+      setUploadStatus("Files uploaded successfully!");
+    } catch (error) {
+      console.error("Error uploading files:", error);
+      setUploadStatus("Error uploading files. Please try again.");
+    }
+  }, []);
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+
   const getUsersCompletedModules = () => {
     const data = { email: userData?.email };
     axios
@@ -242,13 +271,13 @@ const TransferCredits = () => {
   };
   const onPressNextTransition = (event) => {
     setCurrentIndex(event.currentIndex);
-    if (event.currentIndex == 1) {
+    if (event.currentIndex == 2) {
       setusersModulesLoading(true);
       getUsersCompletedModules();
-    } else if (event.currentIndex == 2) {
+    } else if (event.currentIndex == 3) {
       setsimilarModulesLoading(true);
       getSimilarAgainst();
-    } else if (event.currentIndex == 3) {
+    } else if (event.currentIndex == 4) {
       setSaveLoading(true);
       saveData();
     }
@@ -264,12 +293,8 @@ const TransferCredits = () => {
           }}
           infinite={false}
           organicArrows={false}
-          buttonContentRight={
-            <button style={selectedUniversity && buttonStyle}>Next</button>
-          }
-          buttonContentLeft={
-            <button style={selectedUniversity && buttonStyle}>Back</button>
-          }
+          buttonContentRight={<button style={buttonStyle}>Next</button>}
+          buttonContentLeft={<button style={buttonStyle}>Back</button>}
         >
           <div className="sliderParent">
             <div className="center">
@@ -387,6 +412,28 @@ const TransferCredits = () => {
                   })}
                 </div>
               )}
+            </div>
+          </div>
+          <div className="sliderParentSlide2">
+            <div className="centerSlide2Image">
+              <Lottie options={defaultOptionsWomen} height={200} width={200} />
+            </div>
+            <div className="centerSlide2">
+              <p>In order to verify your grades we need your transcript</p>
+              <div
+                {...getRootProps()}
+                className={`dropzone ${isDragActive ? "active" : ""}`}
+              >
+                <input {...getInputProps()} />
+                {isDragActive ? (
+                  <p>Drop your transcript here ...</p>
+                ) : (
+                  <p>
+                    Drag 'n' drop or click to
+                    select transcript
+                  </p>
+                )}
+              </div>
             </div>
           </div>
           <div className="sliderParent">

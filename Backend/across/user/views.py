@@ -15,7 +15,8 @@ import PyPDF2
 import wget
 from os import listdir
 from os.path import isfile, join
-
+import tabula
+import pdfplumber
 
 @csrf_exempt
 @require_POST
@@ -232,27 +233,41 @@ def fetch_university_uri(request):
 def upload_transcript(request):
     try:
             uploaded_files = request.FILES.getlist('files')
+            marked_modules = json.loads(request.body.decode('utf-8'))
             # temp_dir = tempfile.mkdtemp()
             saved_files=saveFiles(uploaded_files)
-            print(saved_files[0])
-            # file_path = os.path.join(temp_dir, uploaded_files[0].name)
+            # print(saved_files[0])
+            # transcript_data = extract_transcript(f"Backend/across/uploads/{saved_files}")
+            # dfs = tabula.read_pdf(f"Backend/across/uploads/{saved_files}",output_format="json", pages='all')
+            # print(dfs)
             pdf_file = open(f"Backend/across/uploads/{saved_files}", "rb")  
             pdf_reader = PyPDF2.PdfReader(pdf_file)
             noOfPages = len(pdf_reader.pages)
             text = ""
+            toFind = "Current Trends in Web Engineering"
             for page in pdf_reader.pages:
-              text = text + page.extract_text()
+              text = page.extract_text()
+              matches = re.findall(r'\b\d+.*?\n', text)
+              for match in matches:
+               moduleToLookFor = match.strip()
+               if(toFind in moduleToLookFor):
+                   matches_subject = re.findall(r'%s.*?M.*?\n'%toFind, text)
+                   for innermatch in matches_subject:
+                       print(innermatch)
+                       matches_grade = re.findall(r'%s M(\d+\.\d+)'%toFind, text)
+                       for grade in matches_grade:
+                           print(grade)
+                #    matches = re.findall(r'\b\w+ M.*?\n', moduleToLookFor)
+                #    for match in matches:
+                #     print(match.strip())
+                   
+               
     
-            print(text)
                 
-            print("i am here")
-        
+            
             return JsonResponse({'message': 'Transcript uploaded successfully', 'saved_files': saved_files}, status=200)
     except Exception as e:
             return JsonResponse({'message': f'Transcript upload failed: {str(e)}'}, status=500)
-
-
-
 
 uploadLoaction =""
 def saveFiles(uploaded_files):
