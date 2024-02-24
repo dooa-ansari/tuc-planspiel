@@ -28,6 +28,7 @@ const TransferCredits = () => {
   const [userData, setUserData] = useState(null);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [uploadStatus, setUploadStatus] = useState(null);
+  const [transcript, setTranscript] = useState();
  
   const buttonStyle = {
     background: "#439a86",
@@ -59,6 +60,42 @@ const TransferCredits = () => {
     setUserData(data?.user);
   }, []);
 
+
+  const handleChange = async (event) => {
+    setTranscript(event.target.files[0])
+    console.log(event.target.files[0])
+    try {
+      const formData = new FormData();
+      // acceptedFiles.forEach((file) => {
+      //   console.log(JSON.stringify(file));
+      //   formData.append("files", file);
+      // });
+      formData.append("files", event.target.files[0]);
+      const selectedModules = usersCompleteModules.filter(
+        (item) => item.selected
+      );
+      const moduleNameArray = []
+      selectedModules.forEach((module) => {
+        console.log(module)  
+        moduleNameArray.push(module.moduleName)
+      })
+      formData.append('data',JSON.stringify({modules: moduleNameArray}));
+      const response = await axios.post(
+        "http://127.0.0.1:8000/user/verifyTranscript",
+        formData
+      );
+
+      // console.log("Upload response:", response.data);
+
+      // setUploadedFiles(acceptedFiles);
+      setUploadStatus("Files uploaded successfully!");
+    } catch (error) {
+      console.error("Error uploading files:", error);
+      setUploadStatus("Error uploading files. Please try again.");
+    }
+  }
+
+
   const onDrop = useCallback(async (acceptedFiles) => {
     try {
       const formData = new FormData();
@@ -66,13 +103,22 @@ const TransferCredits = () => {
         console.log(JSON.stringify(file));
         formData.append("files", file);
       });
-
-      const response = await axios.post(
-        "http://127.0.0.1:8000/user/verifyTranscript",
-        formData
+      const selectedModules = usersCompleteModules.filter(
+        (item) => item.selected
       );
+      console.log("university list"+universities)
+      console.log(usersCompleteModules)
+      selectedModules.forEach((module) => {
+        console.log("printing module")
+        console.log(module)  
+      })
+      formData.append('markedModules', "");
+      // const response = await axios.post(
+      //   "http://127.0.0.1:8000/user/verifyTranscript",
+      //   formData
+      // );
 
-      console.log("Upload response:", response.data);
+      // console.log("Upload response:", response.data);
 
       setUploadedFiles(acceptedFiles);
       setUploadStatus("Files uploaded successfully!");
@@ -420,19 +466,8 @@ const TransferCredits = () => {
             </div>
             <div className="centerSlide2">
               <p>In order to verify your grades we need your transcript</p>
-              <div
-                {...getRootProps()}
-                className={`dropzone ${isDragActive ? "active" : ""}`}
-              >
-                <input {...getInputProps()} />
-                {isDragActive ? (
-                  <p>Drop your transcript here ...</p>
-                ) : (
-                  <p>
-                    Drag 'n' drop or click to
-                    select transcript
-                  </p>
-                )}
+              <div>
+              <input type="file" onChange={handleChange}/> 
               </div>
             </div>
           </div>
