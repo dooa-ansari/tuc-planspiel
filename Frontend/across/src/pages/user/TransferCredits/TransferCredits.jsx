@@ -40,12 +40,13 @@ const TransferCredits = () => {
   const [grades, setGrades] = useState();
   const [verification, setVerification] = useState(-1);
   const [newGrades, setNewGrads] = useState([])
+  const [accept, setAccepted] = React.useState(false);
 
   const buttonStyle = {
     background: "#439a86",
     borderRadius: "10px",
     color: "white",
-    width: "60px",
+    width: "70px",
   };
 
   useEffect(() => {
@@ -80,6 +81,10 @@ const TransferCredits = () => {
      }
      return newGrade
   }
+  const handleAccept = () => {
+    setAccepted(!accept);
+  };
+
   const handleChange = async (event) => {
     setTranscript(event.target.files[0]);
     setUploadStatus(1);
@@ -363,6 +368,20 @@ const TransferCredits = () => {
       //saveData();
     }
   };
+   
+  const getNextButtonText = () => {
+    if(currentIndex == 0){
+      return "Proceed"
+    }else{
+      return "Next"
+    }
+  }
+
+  const getNextButton = () => {
+    return accept? <button style={buttonStyle}>{getNextButtonText()}</button> : null
+  }
+
+
   return (
     <>
       <MainLayout>
@@ -374,45 +393,23 @@ const TransferCredits = () => {
           }}
           infinite={false}
           organicArrows={false}
-          buttonContentRight={<button style={buttonStyle}>Next</button>}
+          buttonContentRight={getNextButton()}
           buttonContentLeft={<button style={buttonStyle}>Back</button>}
         >
           <div className="sliderParent">
             <div className="center">
-              <h2>Disclaimer</h2>
-              <p>
-                Please note: Decisions on whether it is possible to convert
-                grades gained abroad into grades under the German system are the
-                responsibility of the relevant examination board. The following
-                information is provided by the International Office purely
-                intended as guidance and is not legally binding. (1) Study
-                times, course achievements and examination achievements from
-                other study programs will be taken into account at the student's
-                request, unless there are significant differences in the skills
-                acquired. Included There is no need to make a schematic
-                comparison, but rather an overall consideration and overall
-                assessment. The credit can be refused if more than 80 credit
-                points or the master's thesis are to be taken into account. The
-                examination committee decides on the crediting. When recognizing
-                and crediting study periods and academic achievements and
-                examination achievements that were completed outside the Federal
-                Republic of Germany, the equivalence agreements approved by the
-                Conference of Ministers of Education (KMK) and the Conference of
-                Rectors of the University (HRK) as well as agreements within the
-                framework of university cooperation agreements must be observed.
-                (2) The examination board can credit relevant practical work
-                activities upon application by the student. (3) Applicants with
-                university entrance qualifications will be placed in a higher
-                semester if they pass have demonstrated the required knowledge
-                and skills through a special university examination (placement
-                test). (4) If study and examination achievements are taken into
-                account, the credit points and the grades - as long as the
-                grading systems are comparable - must be taken over. In the case
-                of incomparable grading systems, the note “passed” is included.
-                (5) Students must submit the documents required for the
-                crediting of study periods, course achievements and examination
-                achievements.
-              </p>
+              <h4>Disclaimer</h4>
+              <p><b>
+              Please note that decision on whether it is possible to transfer
+                your credits achieved abroad or locally depends on decision of relevant examination board.
+              </b>
+               </p>
+               <p>For further information on TUC credit transfer system , please refer to the section 15 of your relevant programmes <a href="https://www.tu-chemnitz.de/zpa/index.php.en">Examination regulation</a> </p>   
+               <p>For further information on Bialystok University credit transfer system , please refer to the section 13 this  <a href="https://pb.edu.pl/iros/wp-content/uploads/sites/24/2023/12/Regulations-for-studies-at-Bialystok-University-of-Technology.pdf">Document</a> </p>
+
+               <p>By pressing accept you give us a consent that any information required in this digital transfer process can be used and stored by CampusFlow system</p> 
+               <p><input type="checkbox" checked={accept} onChange={handleAccept}/> I have read all the information and I accept terms and conditions </p> 
+    
             </div>
           </div>
           <div className="sliderParent">
