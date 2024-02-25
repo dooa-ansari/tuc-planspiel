@@ -37,22 +37,13 @@ const TransferCredits = () => {
         const response = await retrieveTransferCreditRequests({
           email: email,
         });
-        setTransferRequests(response.data.transfer_credit_requests);
+        setTransferRequests(response.data.user_data.transferCreditsRequests);
       } catch (error) {
         console.error("Error fetching transfer requests:", error);
       }
     };
-
-        const fetchData = async () => {
-            try {
-                const response = await axios.post('http://127.0.0.1:8000/adminapp/fetchTransferCreditRequests', {
-                    email: email
-                });
-                setTransferRequests(response.data.user_data.transferCreditsRequests);
-            } catch (error) {
-                console.error('Error fetching transfer requests:', error);
-            }
-        };
+    fetchData();
+  }, []);
 
   return (
     <div style={{ flex: 1 }}>
@@ -187,69 +178,69 @@ const handleNavigation = async navigate => {
 };
 
 function RequestsTable({ transferRequests, email, setTransferRequests, setShowToast, setToastMessage }) {
-    return (
-        <div style={{ padding: "10px 30px 10px 30px" }}>
-            <Table responsive="lg" borderless>
-                <thead>
-                    <tr>
-                        <th>Transfer initiated from module</th>
-                        <th>Transfer initiated to module</th>
-                        <th>Status</th>
-                        <th>Manage Request</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {transferRequests.length === 0 ? (
-                        <tr>
-                            <td colSpan="4">No transfer credit requests available.</td>
-                        </tr>
-                    ) : (
-                        transferRequests.map((request, index) => (
-                            <tr key={index}>
-                                <td>
-                                    {request.fromModules.map((module, index) => (
-                                        <div key={index}>
-                                            {module.moduleName} - {module.credits} credits
-                                        </div>
-                                    ))}
-                                </td>
-                                <td>
-                                    {request.toModules.map((module, index) => (
-                                        <div key={index}>
-                                            {module.moduleName} - {module.credits} credits
-                                        </div>
-                                    ))}
-                                </td>
-                                <td>
-                                    {request.status === 'PENDING' ? (
-                                        <Badge variant="primary">{request.status}</Badge>
-                                    ) : request.status === 'ACCEPTED' ? (
-                                        <Badge variant="success" className="bg-success">{request.status}</Badge>
-                                    ) : (
-                                        <Badge variant="danger" className="bg-danger">{request.status}</Badge>
-                                    )}
-                                </td>
-                                <td>
-                                    {request.status === 'PENDING' ? (
-                                        <div>
-                                            <Button variant="success" style={{ fontSize: '14px' }} onClick={() => handleApprove(request, email, setTransferRequests, setShowToast, setToastMessage)}>
-                                                Approve
-                                            </Button>{' '}
-                                            <Button variant="danger" style={{ fontSize: '14px' }} onClick={() => handleCancel(request, email, setTransferRequests, setShowToast, setToastMessage)}>
-                                                Cancel
-                                            </Button>
-                                        </div>
-                                    ) : (
-                                        <Badge variant="info" className="bg-dark">Request Executed Already</Badge>
-                                    )}
-                                </td>
-                            </tr>
-                        ))
-                    )}
-                </tbody>
-            </Table>
-        </div>
-    );
+  return (
+    <div style={{ padding: "10px 30px 10px 30px" }}>
+      <Table responsive="lg" borderless>
+        <thead>
+          <tr>
+            <th>Transfer initiated from module</th>
+            <th>Transfer initiated to module</th>
+            <th>Status</th>
+            <th>Manage Request</th>
+          </tr>
+        </thead>
+        <tbody>
+          {transferRequests.length === 0 ? (
+            <tr>
+              <td colSpan="4">No transfer credit requests available.</td>
+            </tr>
+          ) : (
+            transferRequests.map((request, index) => (
+              <tr key={index}>
+                <td>
+                  {request.fromModules.map((module, index) => (
+                    <div key={index}>
+                      {module.moduleName} - {module.credits} credits
+                    </div>
+                  ))}
+                </td>
+                <td>
+                  {request.toModules.map((module, index) => (
+                    <div key={index}>
+                      {module.moduleName} - {module.credits} credits
+                    </div>
+                  ))}
+                </td>
+                <td>
+                  {request.status === 'PENDING' ? (
+                    <Badge variant="primary">{request.status}</Badge>
+                  ) : request.status === 'ACCEPTED' ? (
+                    <Badge variant="success" className="bg-success">{request.status}</Badge>
+                  ) : (
+                    <Badge variant="danger" className="bg-danger">{request.status}</Badge>
+                  )}
+                </td>
+                <td>
+                  {request.status === 'PENDING' ? (
+                    <div>
+                      <Button variant="success" style={{ fontSize: '14px' }} onClick={() => handleApprove(request, email, setTransferRequests, setShowToast, setToastMessage)}>
+                        Approve
+                      </Button>{' '}
+                      <Button variant="danger" style={{ fontSize: '14px' }} onClick={() => handleCancel(request, email, setTransferRequests, setShowToast, setToastMessage)}>
+                        Cancel
+                      </Button>
+                    </div>
+                  ) : (
+                    <Badge variant="info" className="bg-dark">Request Executed Already</Badge>
+                  )}
+                </td>
+              </tr>
+            ))
+          )}
+        </tbody>
+      </Table>
+    </div>
+  );
 }
 
 function BackToUserPage({ navigate }) {
