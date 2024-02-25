@@ -378,7 +378,23 @@ const TransferCredits = () => {
   }
 
   const getNextButton = () => {
-    return accept? <button style={buttonStyle}>{getNextButtonText()}</button> : null
+    if(currentIndex == 0 && accept){
+      return <button style={buttonStyle}>{getNextButtonText()}</button> 
+    }else if(currentIndex == 1 && selectedUniversity){
+      return <button style={buttonStyle}>{getNextButtonText()}</button> 
+    }else if(currentIndex == 2){
+      return <button style={buttonStyle}>{getNextButtonText()}</button> 
+    }else if(currentIndex == 3 && uploadStatus == 2){
+      return <button style={buttonStyle}>{getNextButtonText()}</button> 
+    }else if(currentIndex == 4 && verification == 1){
+      return <button style={buttonStyle}>{getNextButtonText()}</button> 
+    }else if(currentIndex == 5){
+      return <button style={buttonStyle}>{getNextButtonText()}</button> 
+    }else{
+      return null
+    }
+    
+   
   }
 
 
@@ -394,7 +410,7 @@ const TransferCredits = () => {
           infinite={false}
           organicArrows={false}
           buttonContentRight={getNextButton()}
-          buttonContentLeft={<button style={buttonStyle}>Back</button>}
+          buttonContentLeft={currentIndex!= 6 && <button style={buttonStyle}>Back</button>}
         >
           <div className="sliderParent">
             <div className="center">
@@ -510,9 +526,7 @@ const TransferCredits = () => {
             </div>
             </div>}
             {uploadStatus == 2 && <div className="centerFile">
-            <div className="centerSlide2Image">
-               <p>Upload and Scan successfull, you can proceed to next</p>
-            </div>
+            <p>Upload and Scan successfull, you can proceed to next</p>
             </div>}
           </div>
           <div className="sliderParentSlide2">
@@ -523,27 +537,27 @@ const TransferCredits = () => {
                     ? defaultOptionsVerified
                     : defaultOptionsUnVerified
                 }
-                height={200}
-                width={200}
+                height={150}
+                width={150}
               />
             </div>
             <div className="centerSlide2">
-              <p>Your Grades Verification Results</p>
+              <h4>Your Grades Verification Results</h4>
               <div>
                 {grades?.map((grade, index) => {
                   return (
                     <div className={"universityItem"} key={index}>
                       <div className="universityItemText">
                         <p>
-                          {grade.name} - {grade.grade}
+                          {grade.name} - <b>{grade.grade}</b> 
                         </p>
                       </div>
                     </div>
                   );
                 })}
               </div>
-              {verification == 0 &&  <p><b>Unfortunetly some of the selected modules could pass the verification phase</b></p> }
-              {verification == 1 &&  <p>Congratulation! Verification passed</p> }
+              {verification == 0 &&  <p><i>Unfortunetly some of the selected modules could pass the verification phase</i></p> }
+              {verification == 1 &&  <i>Congratulation! Verification passed</i> }
             </div>
           </div>
           <div className="sliderParent">
@@ -618,8 +632,12 @@ const TransferCredits = () => {
           </div>
 
           <div className="sliderParent">
-            <p>We have send an email with PDF attached with all details</p>
+
+            <div className="centerFile">
+            <p><b>We have send an email with PDF attached with all details</b></p>
             <Lottie options={defaultOptions} height={300} width={300} />
+            
+            </div>
           </div>
         </AwesomeSlider>
       </MainLayout>
