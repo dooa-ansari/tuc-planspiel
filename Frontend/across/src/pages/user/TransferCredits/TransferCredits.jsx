@@ -18,6 +18,8 @@ import "react-awesome-slider/dist/styles.css";
 const NMAX_BU = 5
 const NMIN_BU = 2
 
+const NMAX_TU = 1
+const NMIN_TU = 5
 
 const TransferCredits = () => {
   const [universities, setUniversities] = useState([]);
@@ -70,7 +72,12 @@ const TransferCredits = () => {
   }, []);
 
   const calculateNewGrade = (value) => {
-     const newGrade = (((NMAX_BU - value) / (NMAX_BU - NMIN_BU)) * 3) + 1
+     let newGrade  = 0
+     if(selectedUniversity.id == 2){
+      newGrade = (((NMAX_BU - value) / (NMAX_BU - NMIN_BU)) * 3) + 1
+     }else{
+      newGrade = (((NMAX_TU + value) * (NMAX_TU + NMIN_TU)) / 3) - 1
+     }
      return newGrade
   }
   const handleChange = async (event) => {
@@ -356,7 +363,6 @@ const TransferCredits = () => {
       //saveData();
     }
   };
-  console.log(newGrades)
   return (
     <>
       <MainLayout>
