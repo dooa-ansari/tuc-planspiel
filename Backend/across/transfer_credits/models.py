@@ -1,11 +1,7 @@
 from django.db import models
-from user import models as userModels
 
 class TransferCredits(models.Model):
-    # Define email as a foreign key
-    email = models.ForeignKey(userModels.UserProfile, to_field='email', on_delete=models.CASCADE)
-
-    # Other Fields
+    email = models.CharField(max_length=255)
     status = models.TextField()
     fromModules = models.JSONField(null=True)
     toModules = models.JSONField(null=True)

@@ -36,7 +36,7 @@ const TransferCredits = () => {
                 const response = await axios.post('http://127.0.0.1:8000/adminapp/fetchTransferCreditRequests', {
                     email: email
                 });
-                setTransferRequests(response.data.transfer_credit_requests);
+                setTransferRequests(response.data.user_data.transferCreditsRequests);
             } catch (error) {
                 console.error('Error fetching transfer requests:', error);
             }
@@ -160,14 +160,14 @@ function RequestsTable({ transferRequests, email, setTransferRequests, setShowTo
                         transferRequests.map((request, index) => (
                             <tr key={index}>
                                 <td>
-                                    {request.fromModule.map((module, index) => (
+                                    {request.fromModules.map((module, index) => (
                                         <div key={index}>
                                             {module.moduleName} - {module.credits} credits
                                         </div>
                                     ))}
                                 </td>
                                 <td>
-                                    {request.toModule.map((module, index) => (
+                                    {request.toModules.map((module, index) => (
                                         <div key={index}>
                                             {module.moduleName} - {module.credits} credits
                                         </div>

@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from user.models import UserData, UserProfile
+from .models import TransferCredits
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -15,7 +16,6 @@ from email.mime.application import MIMEApplication
 import ssl
 import os
 
-
 @csrf_exempt
 @require_POST
 def save_transferred_credits_by_user(request):
@@ -26,36 +26,26 @@ def save_transferred_credits_by_user(request):
         data = json.loads(body)
         email = data.get('email','')
         transferCreditsRequest = data.get('transferCreditsRequest','')
-
+        user_profile = UserProfile.objects.get(email=email)
         try:
-            user_data = UserData.objects.get(email=email)
+            for item in transferCreditsRequest:
+                status = item['status']
+                from_modules = item['fromModule']
+                to_modules = item['toModule']
+                created_at = item['createdAt']
 
-            # Check for existing transfer_credits_requests
-            existing_transfer_requests = user_data.transfer_credits_requests or []
-
-            # Condition to repeatative data not get added
-            # (From->To both data checked if any one does not matches it will get added in db)
-            if existing_transfer_requests != []:
-            
-                # Get unique moduleUri values already present in the database
-                existing_module_uris = set()
-                for existing_request in existing_transfer_requests:
-                    existing_module_uris.add(existing_request['fromModule'][0]['moduleUri'])
-                    existing_module_uris.add(existing_request['toModule'][0]['moduleUri'])
-
-                # Add only new transfer_credits_requests with previously unseen moduleUri values
-                new_requests = []
-                for new_request in transferCreditsRequest:
-                    if (new_request['fromModule'][0]['moduleUri'] not in existing_module_uris) \
-                            or (new_request['toModule'][0]['moduleUri'] not in existing_module_uris):
-                        new_requests.append(new_request)
-                        
-                # Update the transfer_credits_requests field
-                user_data.transfer_credits_requests = existing_transfer_requests + new_requests
-            else:
-                user_data.transfer_credits_requests = transferCreditsRequest
-
-            user_data.save()
+                # Here it is checking does the same entry already exist or not, by checking email, fromModules and toModules
+                list_of_transfer_credits = TransferCredits.objects.filter(email=email,fromModules=from_modules,toModules=to_modules)
+                if not list_of_transfer_credits.exists():
+                    # For Create again save() not required
+                    transfer_credits = TransferCredits.objects.create(
+                        email = email,
+                        status = status,
+                        fromModules = from_modules,
+                        toModules = to_modules,
+                        created_at = created_at
+                        )
+                                
             user_profile = UserProfile.objects.get(email=email)
 
             # Here Generating pdf and sending an email
@@ -93,12 +83,23 @@ def fetch_transfer_credits_requests_by_user(request):
         # Parse JSON data from the request body
         data = json.loads(body)
         email = data.get('email','')
-
         try:
-            user_data = UserData.objects.get(email=email)
+            list_of_transfer_credits = TransferCredits.objects.filter(email=email)
+            transfer_credits_requests = []
 
-            # Use ast.literal_eval to safely evaluate the string as a Python literal
-            transfer_credits_requests = user_data.transfer_credits_requests
+            # Check if any objects are returned
+            if list_of_transfer_credits.exists():
+                # Access the objects in the queryset
+                for transfer_credit in list_of_transfer_credits:
+                    transfer_credit_data = {
+                        "fromModules": transfer_credit.fromModules,
+                        "toModules": transfer_credit.toModules,
+                        "created_at": transfer_credit.created_at,
+                        "status": transfer_credit.status,
+                        "updated_at": transfer_credit.updated_at
+                    }
+                    transfer_credits_requests.append(transfer_credit_data)
+
 
             user_data = {  
                 "transferCreditsRequests" : transfer_credits_requests
@@ -112,7 +113,7 @@ def fetch_transfer_credits_requests_by_user(request):
         except UserData.DoesNotExist:
             # Handle the case where UserData does not exist for the given email
             response = {
-                'message': f'UserData not found for the given email: {email}',
+                'message': f'Transfer Requests not found for the given email: {email}',
                 'user_data': {}
             }
             return JsonResponse(response, status=404)
