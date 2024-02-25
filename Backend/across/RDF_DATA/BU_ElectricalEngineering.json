@@ -1,0 +1,9 @@
+[
+  {
+    "Modulnummer": "IS-FEE-10062S",
+    "Modulname": "Object-Oriented Programming",
+    "Leistungspunkte und Noten": 3,
+    "Arbeitsaufwand": 84,
+    "Inhalte und Qualifikationsziele": "Pointers and functions. Overloading. An object and a class. Creation and destruction of the object. Objects and pointers. Properties and methods. Overloading of methods and operators. Encapsulation. Inheritance. Polymorphism and virtual methods. Standard Template Library."
+  }
+]
