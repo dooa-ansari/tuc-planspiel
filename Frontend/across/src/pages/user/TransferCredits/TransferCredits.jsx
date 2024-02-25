@@ -41,6 +41,7 @@ const TransferCredits = () => {
   const [verification, setVerification] = useState(-1);
   const [newGrades, setNewGrads] = useState([])
   const [accept, setAccepted] = React.useState(false);
+  const [signature, setSignature] = useState()
 
   const buttonStyle = {
     background: "#439a86",
@@ -143,6 +144,9 @@ const TransferCredits = () => {
     }
   };
 
+  const handleSignature = async (event) => {
+    setSignature(URL.createObjectURL(event.target.files[0]));
+  };
   const getUsersCompletedModules = () => {
     const data = { email: userData?.email };
     axios
@@ -388,7 +392,7 @@ const TransferCredits = () => {
       return <button style={buttonStyle}>{getNextButtonText()}</button> 
     }else if(currentIndex == 4 && verification == 1){
       return <button style={buttonStyle}>{getNextButtonText()}</button> 
-    }else if(currentIndex == 5){
+    }else if(currentIndex == 5 || currentIndex == 6){
       return <button style={buttonStyle}>{getNextButtonText()}</button> 
     }else{
       return null
@@ -410,7 +414,7 @@ const TransferCredits = () => {
           infinite={false}
           organicArrows={false}
           buttonContentRight={getNextButton()}
-          buttonContentLeft={currentIndex!= 6 && <button style={buttonStyle}>Back</button>}
+          buttonContentLeft={currentIndex!= 7 && <button style={buttonStyle}>Back</button>}
           bullets={false}
         >
           <div className="sliderParent">
@@ -631,6 +635,17 @@ const TransferCredits = () => {
               )}
             </div>
           </div>
+          <div className="sliderParentSlide2">
+          
+          <div className="centerFile">
+            <h4>Please upload your signature</h4>
+            <div style={{marginTop: "20px"}}>
+              <input type="file" onChange={handleSignature} />
+              
+            </div>
+            <img src={signature} />
+          </div>
+        </div>
 
           <div className="sliderParent">
 
