@@ -147,7 +147,8 @@ const TransferCredits = () => {
               credits: value.similarModuleCreditPoints
             }
           ],
-          status: "PENDING"
+          status: "PENDING",
+          createdAt: new Date().toISOString()
         }
         transferCreditsRequestList.push(innerObject)
       })

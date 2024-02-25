@@ -9,6 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST, require_http_methods, require_GET
 from django.core.files.storage import FileSystemStorage
 from .universitiy_list import get_all_universities
+from transfer_credits.models import TransferCredits
 from .add_module import add_module_in_blaze
 from django.http import HttpResponse
 from user.models import UserProfile, UserData
@@ -17,6 +18,7 @@ from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
 import requests
 import uuid
+from django.utils import timezone
 
 uploadLoaction =""
 def saveFiles(uploaded_files):
@@ -332,19 +334,30 @@ def fetch_transfer_credit_requests(request):
     email=data.get('email', '').strip()
 
     try:
-        user_data = UserData.objects.get(email=email)        
-        
-        if user_data is not None and user_data.transfer_credits_requests is not None:
-            response_data = {
-                    'message': "Transfer Credit Requests exists",
-                    'transfer_credit_requests': user_data.transfer_credits_requests
-            }
-            return JsonResponse(response_data, status =200)
-        else:
-            response_data = {
-                "message": "Transfer Credit Requests not exists for this user"
-            }
-            return JsonResponse(response_data, status =404)
+        list_of_transfer_credits = TransferCredits.objects.filter(email=email)
+        transfer_credits_requests = []
+
+        # Check if any objects are returned
+        if list_of_transfer_credits.exists():
+            # Access the objects in the queryset
+            for transfer_credit in list_of_transfer_credits:
+                transfer_credit_data = {
+                    "fromModules": transfer_credit.fromModules,
+                    "toModules": transfer_credit.toModules,
+                    "created_at": transfer_credit.created_at,
+                    "status": transfer_credit.status,
+                    "updated_at": transfer_credit.updated_at
+                }
+                transfer_credits_requests.append(transfer_credit_data)
+
+        user_data = {  
+            "transferCreditsRequests" : transfer_credits_requests
+        }
+        response= {
+            'message': 'Successfully returned transfer credit requests of user',
+            'user_data' : user_data
+        }
+        return JsonResponse(response, status =200)
     except Exception as e:
         response = {
             "message": f"An unexpected error occurred: {e}"
@@ -360,20 +373,22 @@ def update_transfer_credit_request(request):
         # Extract data fields
         email=data.get('email', '').strip()
         updated_request=data.get('updatedRequest')
+        list_of_transfer_credits = TransferCredits.objects.filter(email=email,fromModules=updated_request["fromModules"],toModules=updated_request["toModules"])
 
-        user_data = UserData.objects.get(email=email)
+        # Check if any objects are returned
+        if list_of_transfer_credits.exists():
+            # Access the objects in the queryset
+            transfer_credits_requests = TransferCredits.objects.get(email=email,fromModules=updated_request["fromModules"],toModules=updated_request["toModules"])
+            if transfer_credits_requests:
+                transfer_credits_requests.status = updated_request['status']
+                transfer_credits_requests.updated_at = timezone.now()
+                transfer_credits_requests.save()
+            else:
+                response_data = {
+                    'message': "Transfer Credit Requests Updation Unsuccessful"
+                }
+                return JsonResponse(response_data, status =500) 
 
-        # Iterate through existing_transfer_requests to find the specific request
-        for i, transfer_request in enumerate(user_data.transfer_credits_requests):
-            if (
-                transfer_request['toModule'] == updated_request['toModule']
-                and transfer_request['fromModule'] == updated_request['fromModule']
-            ):
-                user_data.transfer_credits_requests[i]['status'] = updated_request['status']
-                break
-
-        # Save the updated user_data object
-        user_data.save()
         response_data = {
                 'message': "Transfer Credit Requests Updated Successfully"
         }
