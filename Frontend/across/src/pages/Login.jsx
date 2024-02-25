@@ -46,7 +46,7 @@ const Login = () => {
       return;
     }
 
-    const data = { email, password };
+    const data = { email, password, last_activity: new Date().toISOString() };
 
     try {
       const response = await login(data);
@@ -55,7 +55,6 @@ const Login = () => {
           ...auth,
           user: response.data.user,
           token: response.data.token,
-          last_activity: new Date().toISOString()
         });
 
         const roleAssigned = response.data.user.role;
