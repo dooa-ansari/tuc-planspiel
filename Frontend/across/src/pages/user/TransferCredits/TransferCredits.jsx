@@ -15,6 +15,10 @@ import women from "../../../assets/lotties/women.json";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 
+const NMAX_BU = 5
+const NMIN_BU = 2
+
+
 const TransferCredits = () => {
   const [universities, setUniversities] = useState([]);
   const [usersCompleteModules, setUsersCompletedModules] = useState([]);
@@ -33,6 +37,7 @@ const TransferCredits = () => {
   const [transcript, setTranscript] = useState();
   const [grades, setGrades] = useState();
   const [verification, setVerification] = useState(-1);
+  const [newGrades, setNewGrads] = useState([])
 
   const buttonStyle = {
     background: "#439a86",
@@ -64,6 +69,10 @@ const TransferCredits = () => {
     setUserData(data?.user);
   }, []);
 
+  const calculateNewGrade = (value) => {
+     const newGrade = (((NMAX_BU - value) / (NMAX_BU - NMIN_BU)) * 3) + 1
+     return newGrade
+  }
   const handleChange = async (event) => {
     setTranscript(event.target.files[0]);
     setUploadStatus(1);
@@ -94,13 +103,21 @@ const TransferCredits = () => {
             setVerification(1);
           }
         }
+        const list = []
+        for (let i = 0; i < grades.length; i++) {
+            const newGradeValue = {
+              name: grades[i].name,
+              newGrade : calculateNewGrade(grades[i].grade)
+            }
+           list.push(newGradeValue)
+        }
+        setNewGrads(list)
         selectedModules.forEach((module) => {
            const found = grades.find((item) => item.name == module.moduleName)
            if(!found){
             setVerification(0)
            }
-          //  console.log('finiding')
-          //  console.log(found)
+         
 
         });
         setUploadStatus(2);
@@ -331,14 +348,15 @@ const TransferCredits = () => {
     if (event.currentIndex == 2) {
       setusersModulesLoading(true);
       getUsersCompletedModules();
-    } else if (event.currentIndex == 3) {
-      //setsimilarModulesLoading(true);
-      //getSimilarAgainst();
     } else if (event.currentIndex == 4) {
+      setsimilarModulesLoading(true);
+      getSimilarAgainst();
+    } else if (event.currentIndex == 5) {
       //setSaveLoading(true);
       //saveData();
     }
   };
+  console.log(newGrades)
   return (
     <>
       <MainLayout>
@@ -528,7 +546,7 @@ const TransferCredits = () => {
           <div className="sliderParent">
             <div className="center">
               <p>Total Possible Transferable Credits : {total}</p>
-              {similarModulesLoading ? (
+             {similarModulesLoading ? (
                 <Lottie options={defaultOptions2} height={200} width={200} />
               ) : (
                 <div className="scrollView">
@@ -543,6 +561,7 @@ const TransferCredits = () => {
                       return similarModule.map((item) => {
                         return (
                           <div id="module" key={item.id}>
+                            <p>New Possible Grade: {newGrades.find((itemGrade) => itemGrade.name == item.name)?.newGrade}</p>
                             <div className="moduleInner">
                               <div id="moduleid">
                                 {item.id} - {item.name}
