@@ -1,9 +1,10 @@
 from django.urls import path
 from .views import csv_rdf, upload_file, update_module, delete_module, insert_module, get_universities, fetch_transfer_credit_requests, update_transfer_credit_request, fetch_user_data, clean_up_upload_folder, fetch_departments
-
+from pdf_To_rdf.views import pdfToRdf
 
 urlpatterns= [
     path('csvToRdf', csv_rdf, name='csv-rdf'),
+    path('pdfToRdf', pdfToRdf, name='pdf-rdf'),
     path('upload', upload_file, name='upload-file'),
     path('universitieslist', get_universities, name="get-universities"),
     path('insertModule', insert_module, name='insert-module'),
