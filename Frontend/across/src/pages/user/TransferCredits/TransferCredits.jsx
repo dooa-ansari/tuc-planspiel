@@ -7,11 +7,13 @@ import loadingData from "../../../assets/lotties/loading_transfer_v0.json";
 import loadingDataV1 from "../../../assets/lotties/loading_transfer_v1.json";
 import germany from "../../../assets/lotties/germany_flag.json";
 import poland from "../../../assets/lotties/poland_flag.json";
+import verified from "../../../assets/lotties/verified.json";
+import scanning from "../../../assets/lotties/verifying.json";
+import unverified from "../../../assets/lotties/vfailed.json";
 import arrow from "../../../assets/lotties/arrow_down.json";
 import women from "../../../assets/lotties/women.json";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import { useDropzone } from "react-dropzone";
 
 const TransferCredits = () => {
   const [universities, setUniversities] = useState([]);
@@ -27,9 +29,11 @@ const TransferCredits = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userData, setUserData] = useState(null);
   const [uploadedFiles, setUploadedFiles] = useState([]);
-  const [uploadStatus, setUploadStatus] = useState(null);
+  const [uploadStatus, setUploadStatus] = useState(-1);
   const [transcript, setTranscript] = useState();
- 
+  const [grades, setGrades] = useState();
+  const [verification, setVerification] = useState(-1);
+
   const buttonStyle = {
     background: "#439a86",
     borderRadius: "10px",
@@ -60,75 +64,55 @@ const TransferCredits = () => {
     setUserData(data?.user);
   }, []);
 
-
   const handleChange = async (event) => {
-    setTranscript(event.target.files[0])
-    console.log(event.target.files[0])
+    setTranscript(event.target.files[0]);
+    setUploadStatus(1);
     try {
       const formData = new FormData();
-      // acceptedFiles.forEach((file) => {
-      //   console.log(JSON.stringify(file));
-      //   formData.append("files", file);
-      // });
       formData.append("files", event.target.files[0]);
       const selectedModules = usersCompleteModules.filter(
         (item) => item.selected
       );
-      const moduleNameArray = []
+      const moduleNameArray = [];
       selectedModules.forEach((module) => {
-        console.log(module)  
-        moduleNameArray.push(module.moduleName)
-      })
-      formData.append('data',JSON.stringify({modules: moduleNameArray}));
+        moduleNameArray.push(module.moduleName);
+      });
+      formData.append("data", JSON.stringify({ modules: moduleNameArray }));
       const response = await axios.post(
         "http://127.0.0.1:8000/user/verifyTranscript",
         formData
       );
+      if (response.status == 200) {
+        const grades = response.data.grades_modules;
 
-      // console.log("Upload response:", response.data);
+        setGrades(grades);
+        for (let i = 0; i < grades.length; i++) {
+          if (grades[i].grade >= 5) {
+            setVerification(0);
+            break;
+          } else {
+            setVerification(1);
+          }
+        }
+        selectedModules.forEach((module) => {
+           const found = grades.find((item) => item.name == module.moduleName)
+           if(!found){
+            setVerification(0)
+           }
+          //  console.log('finiding')
+          //  console.log(found)
 
-      // setUploadedFiles(acceptedFiles);
-      setUploadStatus("Files uploaded successfully!");
+        });
+        setUploadStatus(2);
+      }else{
+        setUploadStatus(0);
+      }
+      
     } catch (error) {
       console.error("Error uploading files:", error);
       setUploadStatus("Error uploading files. Please try again.");
     }
-  }
-
-
-  const onDrop = useCallback(async (acceptedFiles) => {
-    try {
-      const formData = new FormData();
-      acceptedFiles.forEach((file) => {
-        console.log(JSON.stringify(file));
-        formData.append("files", file);
-      });
-      const selectedModules = usersCompleteModules.filter(
-        (item) => item.selected
-      );
-      console.log("university list"+universities)
-      console.log(usersCompleteModules)
-      selectedModules.forEach((module) => {
-        console.log("printing module")
-        console.log(module)  
-      })
-      formData.append('markedModules', "");
-      // const response = await axios.post(
-      //   "http://127.0.0.1:8000/user/verifyTranscript",
-      //   formData
-      // );
-
-      // console.log("Upload response:", response.data);
-
-      setUploadedFiles(acceptedFiles);
-      setUploadStatus("Files uploaded successfully!");
-    } catch (error) {
-      console.error("Error uploading files:", error);
-      setUploadStatus("Error uploading files. Please try again.");
-    }
-  }, []);
-
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  };
 
   const getUsersCompletedModules = () => {
     const data = { email: userData?.email };
@@ -258,6 +242,33 @@ const TransferCredits = () => {
     },
   };
 
+  const defaultOptionsScanning = {
+    loop: true,
+    autoplay: true,
+    animationData: scanning,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const defaultOptionsVerified = {
+    loop: true,
+    autoplay: true,
+    animationData: verified,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const defaultOptionsUnVerified = {
+    loop: true,
+    autoplay: true,
+    animationData: unverified,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -321,11 +332,11 @@ const TransferCredits = () => {
       setusersModulesLoading(true);
       getUsersCompletedModules();
     } else if (event.currentIndex == 3) {
-      setsimilarModulesLoading(true);
-      getSimilarAgainst();
+      //setsimilarModulesLoading(true);
+      //getSimilarAgainst();
     } else if (event.currentIndex == 4) {
-      setSaveLoading(true);
-      saveData();
+      //setSaveLoading(true);
+      //saveData();
     }
   };
   return (
@@ -461,14 +472,57 @@ const TransferCredits = () => {
             </div>
           </div>
           <div className="sliderParentSlide2">
-            <div className="centerSlide2Image">
-              <Lottie options={defaultOptionsWomen} height={200} width={200} />
-            </div>
-            <div className="centerSlide2">
+          
+            {uploadStatus == -1 && <div className="centerFile">
               <p>In order to verify your grades we need your transcript</p>
               <div>
-              <input type="file" onChange={handleChange}/> 
+                <input type="file" onChange={handleChange} />
               </div>
+            </div>}
+            {uploadStatus == 1 && <div className="centerFile">
+            <div className="centerSlide2Image">
+              <Lottie
+                options={defaultOptionsScanning}
+                // height={100}
+                // width={100}
+              />
+            </div>
+            </div>}
+            {uploadStatus == 2 && <div className="centerFile">
+            <div className="centerSlide2Image">
+               <p>Upload and Scan successfull, you can proceed to next</p>
+            </div>
+            </div>}
+          </div>
+          <div className="sliderParentSlide2">
+            <div className="centerSlide2Image">
+              <Lottie
+                options={
+                  verification == 1
+                    ? defaultOptionsVerified
+                    : defaultOptionsUnVerified
+                }
+                height={200}
+                width={200}
+              />
+            </div>
+            <div className="centerSlide2">
+              <p>Your Grades Verification Results</p>
+              <div>
+                {grades?.map((grade, index) => {
+                  return (
+                    <div className={"universityItem"} key={index}>
+                      <div className="universityItemText">
+                        <p>
+                          {grade.name} - {grade.grade}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              {verification == 0 &&  <p><b>Unfortunetly some of the selected modules could pass the verification phase</b></p> }
+              {verification == 1 &&  <p>Congratulation! Verification passed</p> }
             </div>
           </div>
           <div className="sliderParent">

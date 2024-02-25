@@ -252,9 +252,17 @@ def upload_transcript(request):
                    if(toFind in moduleToLookFor):
                      matches_subject = re.findall(r'%s.*?M.*?\n'%toFind, text)
                      for innermatch in matches_subject:
+                        print("hello print")
                         print(innermatch)
-                        matches_grade = re.findall(r'%s M(\d+\.\d+)'%toFind, text)
-                        for grade in matches_grade:
+                        if(innermatch.strip().endswith("AB")):
+                             print("inner match")
+                             objectModule = {'name': toFind, 'grade': 5}
+                             if(toFind not in duplicates):
+                              result.append(objectModule)
+                             duplicates.add(toFind)
+                        else:     
+                         matches_grade = re.findall(r'%s M(\d+\.\d+)'%toFind, text)
+                         for grade in matches_grade:
                             print("grade prinint")
                             print(grade)
                             objectModule = {'name': toFind, 'grade': grade}
