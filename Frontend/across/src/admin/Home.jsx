@@ -60,13 +60,6 @@ function PageBody({ auth }) {
       link: "/admin/similaritytable",
     },
     {
-      title: "CSV to RDF",
-      description:
-        "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
-      buttonText: "Convert to RDF",
-      link: "/manage-CSV",
-    },
-    {
       title: "PDF to RDF",
       description:
         "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",

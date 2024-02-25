@@ -8,16 +8,6 @@ const api = axios.create({
   },
 });
 
-export const convertCsvToRdf = async data => {
-  let response;
-  try {
-    response = await api.post("/adminapp/csvToRdf", data);
-  } catch (error) {
-    return error;
-  }
-  return response;
-};
-
 export const telecastFile = async data => {
   let response;
   try {

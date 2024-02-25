@@ -3,7 +3,6 @@ from .views import csv_rdf, upload_file, update_module, delete_module, insert_mo
 from pdf_To_rdf.views import pdfToRdf
 
 urlpatterns= [
-    path('csvToRdf', csv_rdf, name='csv-rdf'),
     path('pdfToRdf', pdfToRdf, name='pdf-rdf'),
     path('upload', upload_file, name='upload-file'),
     path('universitieslist', get_universities, name="get-universities"),
