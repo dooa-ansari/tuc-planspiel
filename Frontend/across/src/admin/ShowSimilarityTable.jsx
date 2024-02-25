@@ -21,7 +21,7 @@ const ShowSimilarityTable = () => {
       <p id="moduleHeading">Similarity Table</p>
       {data?.map(item => {
         return (
-          <div id="module" key={item.id}>
+          <div id="module" key={item.id} style={{ margin: "25px", padding: "10px" }}>
             <div id="moduleid">
               {item.id} - {item.name}
             </div>
