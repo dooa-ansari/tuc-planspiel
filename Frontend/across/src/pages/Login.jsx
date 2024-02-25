@@ -55,6 +55,7 @@ const Login = () => {
           ...auth,
           user: response.data.user,
           token: response.data.token,
+          last_activity: new Date().toISOString()
         });
 
         const roleAssigned = response.data.user.role;
@@ -76,6 +77,7 @@ const Login = () => {
     try {
       const response = await googleSignIn({
         access_token: googleUser.getAuthResponse().id_token,
+        last_activity: new Date().toISOString()
       });
 
       console.log(response);
