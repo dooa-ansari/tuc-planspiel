@@ -49,3 +49,14 @@ export const getCompletedModules = async data => {
 
   return response;
 };
+
+export const retrieveNotifications = async data => {
+  let response;
+  try {
+    response = await api.post("/user/retrieveNotifications", data);
+  } catch (error) {
+    return error;
+  }
+
+  return response;
+};
