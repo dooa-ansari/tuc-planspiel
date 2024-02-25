@@ -364,8 +364,8 @@ const TransferCredits = () => {
       setsimilarModulesLoading(true);
       getSimilarAgainst();
     } else if (event.currentIndex == 5) {
-      //setSaveLoading(true);
-      //saveData();
+      setSaveLoading(true);
+      saveData();
     }
   };
    
@@ -411,6 +411,7 @@ const TransferCredits = () => {
           organicArrows={false}
           buttonContentRight={getNextButton()}
           buttonContentLeft={currentIndex!= 6 && <button style={buttonStyle}>Back</button>}
+          bullets={false}
         >
           <div className="sliderParent">
             <div className="center">
