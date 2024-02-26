@@ -42,6 +42,7 @@ const TransferCredits = () => {
   const [newGrades, setNewGrads] = useState([])
   const [accept, setAccepted] = React.useState(false);
   const [signature, setSignature] = useState()
+  const [base64Signature, setBase64Signature] = useState()
 
   const buttonStyle = {
     background: "#439a86",
@@ -82,6 +83,7 @@ const TransferCredits = () => {
      }
      return newGrade
   }
+
   const handleAccept = () => {
     setAccepted(!accept);
   };
@@ -146,6 +148,9 @@ const TransferCredits = () => {
 
   const handleSignature = async (event) => {
     setSignature(URL.createObjectURL(event.target.files[0]));
+    const base64 = await convertBase64(event.target.files[0])
+    setBase64Signature(base64)
+    
   };
   const getUsersCompletedModules = () => {
     const data = { email: userData?.email };
@@ -210,6 +215,19 @@ const TransferCredits = () => {
     }, 3000);
   };
 
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file)
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      }
+      fileReader.onerror = (error) => {
+        reject(error);
+      }
+    })
+  }
+
   const saveData = () => {
     const transferCreditsRequestList = [];
     similarModules.forEach((item) => {
@@ -242,6 +260,7 @@ const TransferCredits = () => {
       email: userData?.email,
       transferCreditsRequest: transferCreditsRequestList,
       possibleTransferrableCredits: total,
+      signature: base64Signature
     };
     console.log(data);
     axios
@@ -368,7 +387,7 @@ const TransferCredits = () => {
     } else if (event.currentIndex == 4) {
       setsimilarModulesLoading(true);
       getSimilarAgainst();
-    } else if (event.currentIndex == 5) {
+    } else if (event.currentIndex == 7) {
       setSaveLoading(true);
       saveData();
     }
