@@ -29,7 +29,7 @@ function PageBody({ auth }) {
       description:
         "Effortlessly oversee and manage user accounts, ensuring smooth access and interactions within the platform.",
       buttonText: "Show Users",
-      link: "/manage-users",
+      link: "/admin/userlist",
     },
     {
       title: "Modules",
