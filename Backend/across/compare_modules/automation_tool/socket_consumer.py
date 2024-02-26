@@ -47,7 +47,7 @@ class Consumer(WebsocketConsumer):
             university_names_list = []
 
             # file_path = f"RDF_DATA//{response_data['university_name']}//{response_data['rdf_File_Path'].lower()}.rdf"
-            file1 = os.path.join(settings.BASE_DIR, 'RDF_DATA', f'{response_data['university_name']}', f'{response_data['rdf_File_Path'].lower()}.rdf')
+            file1 = os.path.join(settings.BASE_DIR, 'RDF_DATA', f"{response_data['university_name']}", f"{response_data['rdf_File_Path'].lower()}.rdf")
 
             # # Iterate through the results and store university names in the list
             for result in data_for_university:
