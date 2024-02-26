@@ -128,7 +128,7 @@ const UserList = () => {
                   {user.role === 'USER' && (
                     <ButtonGroup size="sm">
                         <div style={{display: "flex", justifyContent:"end", gap:"1rem"}} className="cta-btns">
-                        <Button variant="warning" onClick={() => updateUser(user.email)}>Update Role</Button>
+                        <Button variant="warning" onClick={() => updateUser(user.email)}>Assign Admin</Button>
                         <Button variant="danger" onClick={() => deleteUser(user.email)}>Delete</Button>
                         </div>
                     </ButtonGroup>
