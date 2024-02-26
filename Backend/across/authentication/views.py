@@ -15,6 +15,7 @@ from google.auth.transport.requests import Request as GoogleAuthRequest
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_GET
 from django.contrib.auth.hashers import check_password
 
 @csrf_exempt
@@ -273,12 +274,32 @@ def update_user_role(request):
             # Save the changes to the database
             user_profile.save()
 
-            return JsonResponse({'message': f'Update successful. {user_profile.full_name} is an admin.'}, status=200)
+            return JsonResponse({'message': 'User update successful.', 'data' : data}, status=200)
 
         except ObjectDoesNotExist:
             return JsonResponse({'message': "Email is incorrect"}, status=401)
     else:
         return JsonResponse({'message': 'Invalid request method.'}, status=400)
+    
+@csrf_exempt
+@require_GET
+def fetch_users(request):
+    try:
+        all_users = []
+        # Convert the queryset to a list of dictionaries
+        for user_profile in UserProfile.objects.all():
+            user_data_list = {'email': user_profile.email,
+                               'full_name': user_profile.full_name,
+                               'university_name': user_profile.university_name,
+                               'role': user_profile.role}
+            all_users.append(user_data_list)
+        # Return the data as JSON response
+        return JsonResponse({'user_data': all_users}, safe=False)
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
 
 @csrf_exempt
 def update_user(request):
@@ -316,7 +337,7 @@ def delete_user(request):
             userFullName = user_profile.full_name
             # Delete the user
             user_profile.delete()
-            return JsonResponse({'message': f'Delete successful. {userFullName} has been deleted.'}, status=200)     
+            return JsonResponse({'message': f'User deletion successful.'}, status=200)     
         except ObjectDoesNotExist:
             return JsonResponse({'message': "Email is incorrect"}, status=401)
     else:

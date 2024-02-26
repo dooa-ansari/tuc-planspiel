@@ -5,6 +5,7 @@ import FileUpload from "./FileUpload";
 import Converter from "./Converter";
 import ShowSimilarityTable from "./ShowSimilarityTable";
 import ModulesList from "./ModulesList";
+import UserList from "./UserList";
 import PdfToRdf from "./PdfToRDF";
 import TransferCredits from "./TransferCredits";
 import CompareModules from "./CompareModules";
@@ -31,6 +32,7 @@ const AdminPanel = () => {
         <Route path="similaritytable" element={<ShowSimilarityTable />} />
         <Route path="pdfToRdf" element={<PdfToRdf />} />
         <Route path="modulelist" element={<ModulesList />} />
+        <Route path="userlist" element={<UserList />} />
         <Route path="transferCredits" element={<TransferCredits />} />
         <Route path="users/transferCreditRequests" element={<UsersofTransferCredits />} />
         <Route path="comparemodules" element={<CompareModules />} />
