@@ -7,7 +7,6 @@ from .models import UserData, UserProfile
 from transfer_credits.models import TransferCredits
 from pymantic import sparql
 from .sparql import *
-from datetime import datetime
 from tzlocal import get_localzone
 
 @csrf_exempt
