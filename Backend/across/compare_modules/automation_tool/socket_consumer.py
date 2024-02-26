@@ -8,7 +8,8 @@ from os.path import isfile, join
 import os
 from compare_modules.sparql import * 
 from pymantic import sparql
-
+from django.conf import settings
+from .course_similarity import find_similarity_between_courses
 class Consumer(WebsocketConsumer):
     def connect(self):
         try:
@@ -45,24 +46,29 @@ class Consumer(WebsocketConsumer):
             # # Initialize an empty list to store university names
             university_names_list = []
 
-            file_path = f"RDF_DATA//{response_data['university_name']}//{response_data['rdf_File_Path'].lower()}.rdf"
-            file1 = file_path
+            # file_path = f"RDF_DATA//{response_data['university_name']}//{response_data['rdf_File_Path'].lower()}.rdf"
+            file1 = os.path.join(settings.BASE_DIR, 'RDF_DATA', f'{response_data['university_name']}', f'{response_data['rdf_File_Path'].lower()}.rdf')
 
             # # Iterate through the results and store university names in the list
             for result in data_for_university:
                 university_name = str(result['universityName']['value'])
                 university_names_list.append(university_name)
 
+
+            folder_path = os.path.join(settings.BASE_DIR, 'RDF',  'Similarity Data')
+            # Check if the folder exists, if not, create it
+            if not os.path.exists(folder_path):
+                os.makedirs(folder_path)
+
             # # Iterate through the list
             for university_name in university_names_list:
-                absolute_path = os.path.abspath(f'RDF_DATA//{university_name}')
-
+                absolute_path =os.path.join(settings.BASE_DIR, 'RDF_DATA', f'{university_name}')                            
                 folder_path = absolute_path
-                # only_files_in_folder = [f for f in listdir(folder_path) if isfile(join(folder_path, f))]
-
-                # file2 = join(folder_path, only_files_in_folder[0])
+                similar_courses_list = find_similarity_between_courses(response_data, university_name)
                 
-                read_modules_and_compare(file1, folder_path, self)
+                # Filter out files that do not exist
+                only_files_in_folder = [os.path.join(folder_path, filename) for filename in similar_courses_list if os.path.isfile(os.path.join(folder_path, filename))]
+                read_modules_and_compare(file1, only_files_in_folder, self)
     
     def send_message(self, value):
         

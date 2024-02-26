@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'transfer_credits',
     'universities',
     'user',
-    'csv_to_rdf',
     'pdf_To_rdf'
 ]
 

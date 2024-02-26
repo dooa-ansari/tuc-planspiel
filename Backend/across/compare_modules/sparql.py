@@ -1,9 +1,11 @@
 module_list_query = """
-SELECT ?moduleName ?moduleId ?moduleContent ?moduleURI ?module
+SELECT ?moduleName ?moduleId ?moduleContent ?moduleURI ?module ?moduleCreditPoints ?moduleWorkLoad
 WHERE {
     ?module <http://tuc.web.engineering/module#hasName> ?moduleName ;
             <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
-            <http://tuc.web.engineering/module#hasContent> ?moduleContent .
+            <http://tuc.web.engineering/module#hasContent> ?moduleContent ;
+            <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints ;
+            <http://tuc.web.engineering/module#hasWorkLoad> ?moduleWorkLoad
 }
 """
 
@@ -56,5 +58,26 @@ def get_other_universities_except_given(university_name):
 
         FILTER (?universityName != "{university_name}")
         }}
+    """
+    return query
+
+
+def get_course_uri_from_departments_and_university(department, university, language, programType):
+    query= f"""
+    SELECT ?course ?universityName ?university ?hasLanguage
+    WHERE {{
+    ?course rdf:type <http://tuc/course#> .
+    ?course <http://tuc/course#belongsToDepartment> "{department}" .
+    ?course <http://tuc/course#belongsToProgram> "{programType}" .
+    ?course <http://tuc/course#hasLanguage> ?hasLanguage .
+    ?course <http://across/university#belongsToUniversity> ?university .
+    ?university rdf:type <http://across/university#> .
+    ?university <http://across/university#hasUniversityName> ?universityName .
+      FILTER (
+                ?universityName = "{university}"^^<http://www.w3.org/2001/XMLSchema#string> && 
+        		?hasLanguage = "{language}"
+            )
+    }}
+
     """
     return query

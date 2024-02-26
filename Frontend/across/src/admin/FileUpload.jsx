@@ -4,6 +4,7 @@ import axios from "axios";
 import { FiCheckCircle } from "react-icons/fi";
 import "../assets/css/FileUpload.css";
 import { useNavigate } from "react-router-dom";
+import { telecastFile } from "../api/adminApi";
 
 const FileUpload = () => {
   const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -24,34 +25,30 @@ const FileUpload = () => {
       },
       body: JSON.stringify({}),
     })
-      .then((response) => {
+      .then(response => {
         if (response.status == 200) {
           setUpCleanStatus(false);
         } else {
           setMessage("Failed to Prepare Tool!");
         }
       })
-      .catch((error) => console.error(error));
+      .catch(error => console.error(error));
   };
 
   const onPressStartProcess = () => {
     navigate("/admin/automation");
   };
-  const onDrop = useCallback(async (acceptedFiles) => {
+  const onDrop = useCallback(async acceptedFiles => {
     try {
       const formData = new FormData();
-      acceptedFiles.forEach((file) => {
+      acceptedFiles.forEach(file => {
         console.log(JSON.stringify(file));
         formData.append("files", file);
       });
 
-      const response = await axios.post(
-        "http://127.0.0.1:8000/adminapp/upload",
-        formData
-      );
+      const response = await telecastFile(formData);
 
       console.log("Upload response:", response.data);
-
       setUploadedFiles(acceptedFiles);
       setUploadStatus("Files uploaded successfully!");
     } catch (error) {
@@ -111,7 +108,7 @@ const FileUpload = () => {
         <div className="upload-info">
           <h3>Uploaded Files:</h3>
           <ul>
-            {uploadedFiles.map((file) => (
+            {uploadedFiles.map(file => (
               <li key={file.name}>{file.name}</li>
             ))}
           </ul>

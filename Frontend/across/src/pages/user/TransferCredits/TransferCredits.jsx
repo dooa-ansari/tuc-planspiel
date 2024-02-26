@@ -233,10 +233,11 @@ const TransferCredits = () => {
             },
           ],
           status: "PENDING",
-        };
-        transferCreditsRequestList.push(innerObject);
-      });
-    });
+          createdAt: new Date().toISOString()
+        }
+        transferCreditsRequestList.push(innerObject)
+      })
+    })
     const data = {
       email: userData?.email,
       transferCreditsRequest: transferCreditsRequestList,
