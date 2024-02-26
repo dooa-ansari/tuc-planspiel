@@ -368,7 +368,7 @@ const TransferCredits = () => {
     } else if (event.currentIndex == 4) {
       setsimilarModulesLoading(true);
       getSimilarAgainst();
-    } else if (event.currentIndex == 5) {
+    } else if (event.currentIndex == 7) {
       setSaveLoading(true);
       saveData();
     }
