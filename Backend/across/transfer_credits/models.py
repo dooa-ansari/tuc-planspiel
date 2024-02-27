@@ -5,6 +5,7 @@ class TransferCredits(models.Model):
     status = models.TextField()
     fromModules = models.JSONField(null=True)
     toModules = models.JSONField(null=True)
+    possibleTransferrableCredits = models.IntegerField(null=True)
     # Timestamp fields
     created_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(null=True, blank=True)
