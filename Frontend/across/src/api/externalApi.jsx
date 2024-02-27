@@ -60,3 +60,14 @@ export const retrieveNotifications = async data => {
 
   return response;
 };
+
+export const retrieveTransferCreditRequestsforUser = async data => {
+  let response;
+  try {
+    response = await api.post("/transferCredits/fetchTransferCreditsRequests", data);
+  } catch (error) {
+    return error;
+  }
+
+  return response;
+};

@@ -390,7 +390,8 @@ def fetch_transfer_credit_requests(request):
                     "toModules": transfer_credit.toModules,
                     "created_at": transfer_credit.created_at,
                     "status": transfer_credit.status,
-                    "updated_at": transfer_credit.updated_at
+                    "updated_at": transfer_credit.updated_at,
+                    "possibleTransferrableCredits": transfer_credit.possibleTransferrableCredits
                 }
                 transfer_credits_requests.append(transfer_credit_data)
 

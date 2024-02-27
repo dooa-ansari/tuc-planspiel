@@ -116,7 +116,7 @@ const HomePage = () => {
               <h4>You have {transferCreditRequests.length} new notification(s)</h4>
 
               {transferCreditRequests.map((request, index) => (
-                <Alert key={index} variant={request.status === 'ACCEPTED' ? 'success' : 'danger'} style={{ margin: "5px", width: "100%" }}>
+                <Alert key={index} variant={request.status === 'ACCEPTED' ? 'primary' : 'danger'} style={{ margin: "5px", width: "100%" }}>
                   <p>
                     <small><b>{new Date(request.updated_at).toLocaleString()}</b></small>
                     &nbsp;Your application status of transferring your credits from{' '}
@@ -125,9 +125,9 @@ const HomePage = () => {
                   </p>
                 </Alert>
               ))}
-              <Button className="notification__button" type="button">
+              <NavLink to="/campus-flow/user/notifications" className="notifications">
                 See More
-              </Button>
+              </NavLink>
             </Container>
           </div>
         </MainLayout>
