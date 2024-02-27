@@ -198,11 +198,11 @@ def generate_pdf_for_user_email(data, user, signature, pdfBody):
         elif "updatedRequest" in data:
             updatedRequest = data.get("updatedRequest")
             status = updatedRequest.get("status")
-            from_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in updatedRequest.get("fromModule", [])])
-            to_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in updatedRequest.get("toModule", [])])
+            from_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in updatedRequest.get("fromModules", [])])
+            to_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in updatedRequest.get("toModules", [])])
             table_data.append([status, from_module, to_module])
         elif "sendEmailRequest" in data:
-            for key, item in data.get("sendEmailRequest").items():
+            for item in data.get("sendEmailRequest"):
                     status = item['status']
                     from_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("fromModule", [])])
                     to_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("toModule", [])])
@@ -231,7 +231,7 @@ def generate_pdf_for_user_email(data, user, signature, pdfBody):
             CampusFlow Team
             """
 
-        if "updatedRequest" in data:
+        if "updatedRequest" in data or "sendEmailRequest" in data:
             # Text after the table
             text_data_after = f"""
 

@@ -34,7 +34,7 @@ Your credit transfer request has been approved. Below is the list of transfer cr
 
 """
 
-SUBJECT_SUCCESSFUL = """Successful Credit Transfer"""
+SUBJECT_SUCCESSFUL = """Approved Credit Transfer"""
 
 EMAIL_BODY_REJECTED = """Hi {0}, 
 

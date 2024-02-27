@@ -13,6 +13,7 @@ import AdminNavbar from "./components/Navbar/AdminNavbar";
 import {
   retrieveTransferCreditRequests,
   updateTransferCreditRequests,
+  NotifyTransferCreditRequests,
 } from "../api/adminApi";
 
 const TransferCredits = () => {
@@ -67,7 +68,7 @@ const TransferCredits = () => {
             </ToastContainer>
             <RequestsTable transferRequests={transferRequests} email={email} setTransferRequests={setTransferRequests} setShowToast={setShowToast} setToastMessage={setToastMessage} />
             <div style={{display: "flex", justifyContent:"end", gap:"1rem"}} className="cta-btns">
-                <Button variant="primary" style={{ fontSize: '14px' }} onClick={() => handleNotification(transferRequests, email)}>
+                <Button variant="primary" style={{ fontSize: '14px' }} onClick={() => handleNotification(transferRequests, email, setShowToast, setToastMessage)}>
                     Notify student
                 </Button>
                 <BackToUserPage navigate={navigate} />
@@ -77,22 +78,36 @@ const TransferCredits = () => {
     );
 };
 
-const handleNotification = async (request, email) => {
-
-    const sendEmailRequest = { ...request};
-
-    try {
-        const response = await axios.put('http://127.0.0.1:8000/adminapp/sendEmailTransferRequest', {
-            email: email,
-            sendEmailRequest: sendEmailRequest
-        });
-    } catch (error) {
-        console.error('Error sending credit transfer request', error);
-    }
+const handleNotification = async (transferRequests, email, setShowToast, setToastMessage) => {
+  const sendEmailRequest = []
+  console.log(transferRequests)
+  transferRequests.forEach ((item) => {
+    console.log(item)
+      const innerObject = {
+        fromModule: item.fromModules,
+        toModule: item.toModules,
+        status: item.status,
+      }
+      console.log(innerObject)
+      sendEmailRequest.push(innerObject)
+    })
+  try {
+    const response = await NotifyTransferCreditRequests({
+      email: email,
+      sendEmailRequest: sendEmailRequest,
+    });
+	setShowToast(true);
+  setToastMessage("Email sent successfully");
+  } catch (error) {
+   setShowToast(true);
+   setToastMessage("Error senging credit transfer request email");
+   console.error("Error senging credit transfer request email", error);
+  }
 };
 
 const handleApprove = async (request, email, setTransferRequests, setShowToast, setToastMessage) => {
-  const updatedRequest = { ...request, status: "ACCEPTED" };
+  console.log(request)
+  const updatedRequest = { fromModules:request.fromModules, toModules: request.toModules, status: "ACCEPTED" };
   try {
     const response = await updateTransferCreditRequests({
       email: email,
@@ -128,8 +143,8 @@ const handleCancel = async (
   setShowToast,
   setToastMessage
 ) => {
-  const updatedRequest = { ...request, status: "REJECTED" };
-
+  console.log(request)
+  const updatedRequest = { fromModules:request.fromModules, toModules: request.toModules, status: "REJECTED" };
   try {
     const response = await updateTransferCreditRequests({
       email: email,
