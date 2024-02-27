@@ -8,16 +8,6 @@ const api = axios.create({
   },
 });
 
-export const convertCsvToRdf = async data => {
-  let response;
-  try {
-    response = await api.post("/adminapp/csvToRdf", data);
-  } catch (error) {
-    return error;
-  }
-  return response;
-};
-
 export const telecastFile = async data => {
   let response;
   try {
@@ -53,6 +43,16 @@ export const updateTransferCreditRequests = async data => {
   let response;
   try {
     response = await api.put("/adminapp/updateTransferRequest", data);
+  } catch (error) {
+    return error;
+  }
+  return response;
+};
+
+export const NotifyTransferCreditRequests = async data => {
+  let response;
+  try {
+    response = await api.put("/adminapp/sendEmailTransferRequest", data);
   } catch (error) {
     return error;
   }

@@ -16,11 +16,10 @@ WORKLOAD = 'Arbeitsaufwand'
 LANGUAGE = 'Sprache'
 
 class RdfUri:
-    def __init__(self, module, course, uni, tuc_module, datatype_string, datatype_integer):
+    def __init__(self, module, course, uni, datatype_string, datatype_integer):
         self.module = module
         self.course = course
         self.uni=uni
-        self.tuc_module = tuc_module
         self.datatype_string = datatype_string
         self.datatype_integer = datatype_integer
 class RePattern:
@@ -45,18 +44,18 @@ def get_uniData(course_status):
                              re.compile(r"Modulname\s*(.+)"), 
                              re.compile(r'Inhalte:(.*?)(?=\nQualifikationsziele:|$)', re.DOTALL), 
                              re.compile(r'\nLehrformen\s+(.*?)\nVoraussetzungen für', re.IGNORECASE | re.DOTALL), 
-                              re.compile(r'\nLeistungspunkte und.*?(\d+)', re.DOTALL),
+                             re.compile(r'\nLeistungspunkte und.*?(\d+)', re.DOTALL),
                              re.compile(r'\nArbeitsaufwand.*?(\d+)(?=\s*AS|\s*\()', re.DOTALL))
         rdfUri = RdfUri('http://tuc.web.engineering/module#', 
                         'http://tuc/course#', 
-                        'http://across/university#TUC', 
+                        'TUC', 
                         'http://www.w3.org/2001/XMLSchema#string', 
                         'http://www.w3.org/2001/XMLSchema#integer')
         return UniData(rePattern, rdfUri, course_status)
     else:
         rdfUri = RdfUri('http://tuc.web.engineering/module#', 
                         'http://tuc/course#', 
-                        'http://across/university#BU', 
+                        'BU', 
                         'http://www.w3.org/2001/XMLSchema#string', 
                         'http://www.w3.org/2001/XMLSchema#integer')
         rePattern = RePattern(re.compile(r"'Course code',\s*'([^']*)'"),
@@ -160,7 +159,7 @@ def extract_text_from_pdf_bu(pdf_path, course_status, uniData, end_page=None):
 def extract_information_tuc(key, values, uniData):
     result ={}
 
-    result[MODULE_NAME] = key
+    result[MODULE_NUMBER] = key
     # Extract Module Name
     match_module_name = uniData.rePattern.module_name_pattern.search(values)
     if match_module_name:
@@ -235,6 +234,7 @@ def write_rdf(data, course_status, rdf_file_name, uniData):
             module_uuid_str = str(module_uuid)
             # RDF URI for the module
             module_uri = URIRef(f'{uniData.rdfUri.module}{module_uuid_str}')
+            uni_uri= URIRef('http://across/university#')
 
             # Add RDF triples for the module
             g.add((module_uri, RDF.type, module_ns))
@@ -262,9 +262,9 @@ def write_rdf(data, course_status, rdf_file_name, uniData):
                     print(f"Error converting work_load to integer for module {module_name}: {ve}")
 
                 # Add additional RDF triples for each module
-                g.add((module_uri, URIRef(f'{uniData.rdfUri.tuc_module}hasUniversity'), URIRef(uniData.rdfUri.uni)))
+                g.add((module_uri, URIRef(f'{uni_uri}hasUniversity'), URIRef(f'{uni_uri}{uniData.rdfUri.uni}')))
                 # single quotes are giving an error in 3.12 python
-                g.add((module_uri, URIRef(f'{uniData.rdfUri.course}hasCourse'), URIRef(f'{uniData.rdfUri.course}{course_status["course_code"]}')))
+                g.add((module_uri, URIRef(f'{uniData.rdfUri.course}hasCourse'), URIRef(f'{uniData.rdfUri.course}{course_status["university_code"]}{course_status["course_code"]}')))
 
         # Serialize RDF graph to RDF/XML format
         rdf_outputBytes = (g.serialize(format="xml")).encode('utf-8')

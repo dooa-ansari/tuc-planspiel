@@ -16,9 +16,55 @@ from user.models import UserProfile, UserData
 from csv_to_rdf.csvTordf import University,CsvToRDF, UpdateModules, InsertModules
 from rdflib import Graph, Literal, Namespace, RDF, URIRef
 from rdflib.namespace import XSD
+from transfer_credits.views import send_generated_pdf_on_email
 import requests
 import uuid
 from django.utils import timezone
+
+EMAIL_BODY_APPROVED = """Hi {0}, 
+
+Please find attached your transfer credit requests PDF. Your request has been approved.
+
+Best regards,
+CampusFlow Team"""
+
+PDF_BODY_APPROVED = """Dear {0},
+
+Your credit transfer request has been approved. Below is the list of transfer credit requests you made,
+
+"""
+
+SUBJECT_SUCCESSFUL = """Approved Credit Transfer"""
+
+EMAIL_BODY_REJECTED = """Hi {0}, 
+
+Please find attached your transfer credit requests PDF. Your request has been declined.
+
+Best regards,
+CampusFlow Team"""
+
+PDF_BODY_REJECTED = """Dear {0},
+
+Your credit transfer request has been declined. Below is the list of transfer credit requests you made,
+
+"""
+
+SUBJECT = """Credit Transfer"""
+
+EMAIL_BODY = """Hi {0}, 
+
+Please find attached your transfer credit requests PDF.
+
+Best regards,
+CampusFlow Team"""
+
+PDF_BODY = """Dear {0},
+
+Below is the list of transfer credit requests you made,
+
+"""
+
+SUBJECT_REJECTED = """Declined Credit Transfer"""
 
 uploadLoaction =""
 def saveFiles(uploaded_files):
@@ -63,8 +109,6 @@ def csv_rdf(request):
                 return JsonResponse({'message': 'csv Files successfully converted to RDF file'}, status=200)
     except Exception as e:
             return JsonResponse({'message': f'Error converting csv to RDF file: {str(e)}'}, status=500)
-
-
 
 @csrf_exempt
 @require_POST
@@ -329,7 +373,7 @@ def update_module(request):
 @require_POST
 def fetch_transfer_credit_requests(request):
     data = json.loads(request.body.decode('utf-8'))
-    
+
     # Extract data fields
     email=data.get('email', '').strip()
 
@@ -367,6 +411,7 @@ def fetch_transfer_credit_requests(request):
 @csrf_exempt
 @require_http_methods("PUT")
 def update_transfer_credit_request(request):
+
     data = json.loads(request.body.decode('utf-8'))
 
     try:
@@ -374,7 +419,7 @@ def update_transfer_credit_request(request):
         email=data.get('email', '').strip()
         updated_request=data.get('updatedRequest')
         list_of_transfer_credits = TransferCredits.objects.filter(email=email,fromModules=updated_request["fromModules"],toModules=updated_request["toModules"])
-
+        
         # Check if any objects are returned
         if list_of_transfer_credits.exists():
             # Access the objects in the queryset
@@ -389,8 +434,36 @@ def update_transfer_credit_request(request):
                 }
                 return JsonResponse(response_data, status =500) 
 
+        user_profile = UserProfile.objects.get(email=email)
+        if updated_request['status'] == "ACCEPTED":
+            # Here Generating pdf and sending an email
+            status_email = send_generated_pdf_on_email(data, user_profile, None,  EMAIL_BODY_APPROVED.format(user_profile.full_name), SUBJECT_SUCCESSFUL, PDF_BODY_APPROVED)
+        else:
+             status_email = send_generated_pdf_on_email(data, user_profile, None, EMAIL_BODY_REJECTED.format(user_profile.full_name), SUBJECT_REJECTED, PDF_BODY_REJECTED)
         response_data = {
                 'message': "Transfer Credit Requests Updated Successfully"
+        }
+        return JsonResponse(response_data, status =200) 
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
+    
+@csrf_exempt
+@require_http_methods("PUT")
+def send_email_transfer_credit(request):
+
+    data = json.loads(request.body.decode('utf-8'))
+
+    try:
+        # Extract data fields
+        email=data.get('email', '').strip()
+        user_profile = UserProfile.objects.get(email=email)
+        status_email = send_generated_pdf_on_email(data, user_profile, None, EMAIL_BODY.format(user_profile.full_name), SUBJECT, PDF_BODY)
+
+        response_data = {
+                'message': "Transfer Credit Requests sent Successfully"
         }
         return JsonResponse(response_data, status =200) 
     except Exception as e:

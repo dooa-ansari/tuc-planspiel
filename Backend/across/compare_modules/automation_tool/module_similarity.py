@@ -58,8 +58,8 @@ def read_modules_and_compare(universityOneModulesFile, only_files_in_folder, con
     filename_without_extension = os.path.splitext(os.path.basename(source_path))[0]
     new_filename = filename_without_extension
     ## NEED TO CHANGE THIS ACCORDING TO REQUIREMENT
-    destination_folder =os.path.join(settings.BASE_DIR, f'RDF//Similarity Data//')
-    new_file_path_destination_file = os.path.join(settings.BASE_DIR, f'RDF//Similarity Data//{new_filename}_similar.rdf')
+    destination_folder =os.path.join(settings.BASE_DIR, 'RDF', 'Similarity Data')
+    new_file_path_destination_file = os.path.join(settings.BASE_DIR, 'RDF', 'Similarity Data' , f'{new_filename}_similar.rdf')
     shutil.copy(source_path, new_file_path_destination_file)
     upload_file_to_blazegraph(destination_folder, "", False)
     

@@ -8,6 +8,17 @@ from transfer_credits.models import TransferCredits
 from pymantic import sparql
 from .sparql import *
 from tzlocal import get_localzone
+from django.core.files.storage import FileSystemStorage
+import os
+import json
+import tempfile
+import re
+import PyPDF2
+import wget
+from os import listdir
+from os.path import isfile, join
+import tabula
+import pdfplumber
 
 @csrf_exempt
 @require_POST
@@ -284,3 +295,70 @@ def retrieve_notifications(request):
             "message": f"An unexpected error occurred: {e}"
         }
         return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_POST
+def upload_transcript(request):
+    try:
+            uploaded_files = request.FILES.getlist('files')
+            other_data = json.loads(request.POST.dict().get("data"))
+            moudle_list = other_data.get("modules")
+            saved_files=saveFiles(uploaded_files)
+            pdf_file = open(f"Backend/across/uploads/{saved_files}", "rb")  
+            pdf_reader = PyPDF2.PdfReader(pdf_file)
+            noOfPages = len(pdf_reader.pages)
+            text = ""
+            result = []
+            duplicates = set()
+            for module in moudle_list:
+                toFind = module
+                for page in pdf_reader.pages:
+                 text = page.extract_text()
+                 matches = re.findall(r'\b\d+.*?\n', text)
+                 for match in matches:
+                   moduleToLookFor = match.strip()
+                   if(toFind in moduleToLookFor):
+                     matches_subject = re.findall(r'%s.*?M.*?\n'%toFind, text)
+                     for innermatch in matches_subject:
+                        print("hello print")
+                        print(innermatch)
+                        if(innermatch.strip().endswith("AB")):
+                             print("inner match")
+                             objectModule = {'name': toFind, 'grade': 5}
+                             if(toFind not in duplicates):
+                              result.append(objectModule)
+                             duplicates.add(toFind)
+                        else:     
+                         matches_grade = re.findall(r'%s M(\d+\.\d+)'%toFind, text)
+                         for grade in matches_grade:
+                            print("grade prinint")
+                            print(grade)
+                            objectModule = {'name': toFind, 'grade': grade}
+                            if(toFind not in duplicates):
+                              result.append(objectModule)
+                            
+                            duplicates.add(toFind)
+                
+             
+                   
+               
+            return JsonResponse({'message': 'Transcript uploaded successfully', 'grades_modules': result}, status=200)
+    except Exception as e:
+            return JsonResponse({'message': f'Transcript upload failed: {str(e)}'}, status=500)
+
+uploadLoaction =""
+def saveFiles(uploaded_files):
+    # Specify the directory where you want to save the files
+    upload_directory = 'Backend/across/uploads/'
+
+    # Create a FileSystemStorage instance with the upload directory
+    fs = FileSystemStorage(location=upload_directory)
+    uploadLoaction= fs.location
+    print(fs.location)
+    # Process and save the uploaded files
+    saved_files = []
+    for file in uploaded_files:
+        saved_file = fs.save(file.name, file)
+        saved_files.append(saved_file)
+    return saved_files[0]

@@ -15,6 +15,25 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 import ssl
 import os
+from reportlab.lib.units import inch, cm
+from reportlab.platypus import Image
+
+EMAIL_BODY_REQUEST = """Hi {0}, 
+
+Please find attached your transfer credit requests PDF. You'll soon get contacted by our team on further updates.
+
+Best regards,
+CampusFlow Team"""
+
+PDF_BODY_REQUEST = """Dear {0},
+
+Your credit transfer request has been received and is currently being processed. We appreciate your patience during this time.
+
+Below is the list of transfer credit requests you made, please check it once.
+
+"""
+
+SUBJECT = """Successful Credit Transfer Request"""
 
 @csrf_exempt
 @require_POST
@@ -25,6 +44,7 @@ def save_transferred_credits_by_user(request):
         # Parse JSON data from the request body
         data = json.loads(body)
         email = data.get('email','')
+        signature = data.get('signature', '')
         transferCreditsRequest = data.get('transferCreditsRequest','')
         user_profile = UserProfile.objects.get(email=email)
         try:
@@ -47,9 +67,11 @@ def save_transferred_credits_by_user(request):
                         )
                                 
             user_profile = UserProfile.objects.get(email=email)
+           
+            body = EMAIL_BODY_REQUEST.format(user_profile.full_name)
 
             # Here Generating pdf and sending an email
-            status_email = send_generated_pdf_on_email(data,user_profile)
+            status_email = send_generated_pdf_on_email(data, user_profile, signature, body, SUBJECT, PDF_BODY_REQUEST)
             
             if status_email is True:
                 response = {
@@ -122,9 +144,8 @@ def fetch_transfer_credits_requests_by_user(request):
             "message": f"An unexpected error occurred: {e}"
         }
         return JsonResponse(response, status =500)
-
  
-def generate_pdf_for_user_email(data, user):
+def generate_pdf_for_user_email(data, user, signature, pdfBody):
     
     try:
 
@@ -153,15 +174,7 @@ def generate_pdf_for_user_email(data, user):
         elements.append(heading)
 
         # Text before the table
-        text_data_before = f"""
-
-        Dear {user.full_name},
-
-        Your credit transfer request has been received and is currently being processed. We appreciate your patience during this time.
-
-        Below is the list of transfer credit requests you made, please check it once.
-
-        """
+        text_data_before = pdfBody.format(user.full_name)
 
         # Split the text into paragraphs based on line breaks
         text_paragraphs_before = text_data_before.split("\n")
@@ -170,14 +183,30 @@ def generate_pdf_for_user_email(data, user):
         new_paragraphs_before = [Paragraph(line, getSampleStyleSheet()["BodyText"]) for line in text_paragraphs_before]
 
         elements.extend(new_paragraphs_before)
-
+        # # image = open(f"Backend/across/uploads/signature.png", "rb")  
+        
         # Add a table for the data
         table_data = [["Status", "From Module", "To Module"]]
-        for item in data.get("transferCreditsRequest"):
-            status = item.get("status", "")
-            from_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("fromModule", [])])
-            to_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("toModule", [])])
+
+
+        if "transferCreditsRequest" in data:
+            for item in data.get("transferCreditsRequest"):
+                status = item.get("status", "")
+                from_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("fromModule", [])])
+                to_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("toModule", [])])
+                table_data.append([status, from_module, to_module])
+        elif "updatedRequest" in data:
+            updatedRequest = data.get("updatedRequest")
+            status = updatedRequest.get("status")
+            from_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in updatedRequest.get("fromModules", [])])
+            to_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in updatedRequest.get("toModules", [])])
             table_data.append([status, from_module, to_module])
+        elif "sendEmailRequest" in data:
+            for item in data.get("sendEmailRequest"):
+                    status = item['status']
+                    from_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("fromModule", [])])
+                    to_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("toModule", [])])
+                    table_data.append([status, from_module, to_module])                    
 
         # Define table style
         table_style = TableStyle([
@@ -193,16 +222,25 @@ def generate_pdf_for_user_email(data, user):
         table = Table(table_data)
         table.setStyle(table_style)
         elements.append(table)
-
-        # Text after the table
         text_data_after = f"""
-        <b>Total Possible Credits Transfer Requested: {data.get('possibleTransferrableCredits')} </b>
+            <b>Total Possible Credits Transfer Requested: {data.get('possibleTransferrableCredits')} </b>
 
-        If you have any further questions or concerns, please feel free to reach out to our support team.
+            If you have any further questions or concerns, please feel free to reach out to our support team.
 
-        Thank you,
-        CampusFlow Team
-        """
+            Thank you,
+            CampusFlow Team
+            """
+
+        if "updatedRequest" in data or "sendEmailRequest" in data:
+            # Text after the table
+            text_data_after = f"""
+
+            If you have any further questions or concerns, please feel free to reach out to our support team.
+
+            Thank you,
+            CampusFlow Team
+            """
+
         text_paragraphs_after = text_data_after.split("\n")
 
         # Create a list of Paragraph objects
@@ -217,20 +255,25 @@ def generate_pdf_for_user_email(data, user):
 
         # Replace the original line with the bold line
         new_paragraphs_after[0] = bold_line
-
+ 
+        
         elements.extend(new_paragraphs_after)
+        if im is not None:
+            im = Image(signature, hAlign="LEFT")
+            elements.append(im)
 
+        
         # Build the PDF document
         pdf.build(elements, onFirstPage=lambda canvas, doc: custom_footer(canvas, doc, "*This pdf is generated by CampusFlow Team, No Signature Required & All Copyrights Reserved with Web Wizards"))
 
         print(f"PDF generated successfully: {pdf_filename}")
         return pdf_filename
     except Exception as e:
+        print(e)
         response = {
         'message': f"An unexpected error occurred during pdf creation: {e}"
         }
         return JsonResponse(response, status=500)
-
 
 def custom_footer(canvas, doc, text):
     canvas.saveState()
@@ -247,7 +290,7 @@ def custom_footer(canvas, doc, text):
     canvas.restoreState()
 
 
-def send_generated_pdf_on_email(data, user):
+def send_generated_pdf_on_email(data, user, signature=None, body=None, Subject=None, pdfBody=None):
     try:
         # Sender and recipient email addresses
         sender_email = "webwizardsservices@gmail.com"
@@ -259,15 +302,8 @@ def send_generated_pdf_on_email(data, user):
         message = MIMEMultipart()
         message["From"] = sender_email
         message["To"] = recipient_email
-        message["Subject"] = "Successful Credit Transfer Request"
+        message["Subject"] = Subject
 
-        # Add body text
-        body = f"""Hi {user.full_name}, 
-
-Please find attached your transfer credit requests PDF. You'll soon get contacted by our team on further updates.
-
-Best regards,
-CampusFlow Team"""
         message.attach(MIMEText(body, "plain"))
 
         # Add the generated PDF as an attachment
@@ -275,7 +311,7 @@ CampusFlow Team"""
         file_name = f"Transfer_Requests_{formatted_user_name}.pdf"
 
         # Construct the full file path
-        with open(generate_pdf_for_user_email(data, user), "rb") as attachment:
+        with open(generate_pdf_for_user_email(data, user, signature, pdfBody), "rb") as attachment:
             part = MIMEApplication(attachment.read(), Name=file_name)
             part["Content-Disposition"] = f'attachment; filename="{file_name}"'
             message.attach(part)
@@ -298,4 +334,3 @@ CampusFlow Team"""
         'message': f"An unexpected error occurred during sending an email: {e}"
         }
         return JsonResponse(response, status=500)
-
