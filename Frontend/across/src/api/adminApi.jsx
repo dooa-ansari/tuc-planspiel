@@ -49,6 +49,16 @@ export const updateTransferCreditRequests = async data => {
   return response;
 };
 
+export const NotifyTransferCreditRequests = async data => {
+  let response;
+  try {
+    response = await api.put("/adminapp/sendEmailTransferRequest", data);
+  } catch (error) {
+    return error;
+  }
+  return response;
+};
+
 export const fetchUserData = async () => {
   let response;
   try {
