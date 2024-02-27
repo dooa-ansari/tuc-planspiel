@@ -437,9 +437,9 @@ def update_transfer_credit_request(request):
         user_profile = UserProfile.objects.get(email=email)
         if updated_request['status'] == "ACCEPTED":
             # Here Generating pdf and sending an email
-            status_email = send_generated_pdf_on_email(data, user_profile, EMAIL_BODY_APPROVED.format(user_profile.full_name), SUBJECT_SUCCESSFUL, PDF_BODY_APPROVED)
+            status_email = send_generated_pdf_on_email(data, user_profile, None,  EMAIL_BODY_APPROVED.format(user_profile.full_name), SUBJECT_SUCCESSFUL, PDF_BODY_APPROVED)
         else:
-             status_email = send_generated_pdf_on_email(data, user_profile, EMAIL_BODY_REJECTED.format(user_profile.full_name), SUBJECT_REJECTED, PDF_BODY_REJECTED)
+             status_email = send_generated_pdf_on_email(data, user_profile, None, EMAIL_BODY_REJECTED.format(user_profile.full_name), SUBJECT_REJECTED, PDF_BODY_REJECTED)
         response_data = {
                 'message': "Transfer Credit Requests Updated Successfully"
         }
@@ -460,7 +460,7 @@ def send_email_transfer_credit(request):
         # Extract data fields
         email=data.get('email', '').strip()
         user_profile = UserProfile.objects.get(email=email)
-        status_email = send_generated_pdf_on_email(data, user_profile, EMAIL_BODY.format(user_profile.full_name), SUBJECT, PDF_BODY)
+        status_email = send_generated_pdf_on_email(data, user_profile, None, EMAIL_BODY.format(user_profile.full_name), SUBJECT, PDF_BODY)
 
         response_data = {
                 'message': "Transfer Credit Requests sent Successfully"
