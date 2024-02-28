@@ -1,5 +1,3 @@
-# cron_job.py
-
 import schedule
 import time
 from django.core.management.base import BaseCommand
