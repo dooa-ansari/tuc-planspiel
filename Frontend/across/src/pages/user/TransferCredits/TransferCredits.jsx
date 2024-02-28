@@ -14,6 +14,7 @@ import arrow from "../../../assets/lotties/arrow_down.json";
 import women from "../../../assets/lotties/women.json";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
+import { api } from "../../../api/adminApi";
 
 const NMAX_BU = 5
 const NMIN_BU = 2
@@ -52,8 +53,8 @@ const TransferCredits = () => {
   };
 
   useEffect(() => {
-    axios
-      .get("http://127.0.0.1:8000/adminapp/universitieslist")
+    api
+      .get("/adminapp/universitieslist")
       .then((response) => {
         if (response.status == 200) {
           const returnedData = response.data;
@@ -75,13 +76,13 @@ const TransferCredits = () => {
   }, []);
 
   const calculateNewGrade = (value) => {
-     let newGrade  = 0
-     if(selectedUniversity.id == 2){
+    let newGrade = 0
+    if (selectedUniversity.id == 2) {
       newGrade = (((NMAX_BU - value) / (NMAX_BU - NMIN_BU)) * 3) + 1
-     }else{
+    } else {
       newGrade = (((NMAX_TU + value) * (NMAX_TU + NMIN_TU)) / 3) - 1
-     }
-     return newGrade
+    }
+    return newGrade
   }
 
   const handleAccept = () => {
@@ -102,9 +103,12 @@ const TransferCredits = () => {
         moduleNameArray.push(module.moduleName);
       });
       formData.append("data", JSON.stringify({ modules: moduleNameArray }));
-      const response = await axios.post(
-        "http://127.0.0.1:8000/user/verifyTranscript",
-        formData
+      const response = await api.post(
+        "/user/verifyTranscript", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        }
+      }
       );
       if (response.status == 200) {
         const grades = response.data.grades_modules;
@@ -120,26 +124,26 @@ const TransferCredits = () => {
         }
         const list = []
         for (let i = 0; i < grades.length; i++) {
-            const newGradeValue = {
-              name: grades[i].name,
-              newGrade : calculateNewGrade(grades[i].grade)
-            }
-           list.push(newGradeValue)
+          const newGradeValue = {
+            name: grades[i].name,
+            newGrade: calculateNewGrade(grades[i].grade)
+          }
+          list.push(newGradeValue)
         }
         setNewGrads(list)
         selectedModules.forEach((module) => {
-           const found = grades.find((item) => item.name == module.moduleName)
-           if(!found){
+          const found = grades.find((item) => item.name == module.moduleName)
+          if (!found) {
             setVerification(0)
-           }
-         
+          }
+
 
         });
         setUploadStatus(2);
-      }else{
+      } else {
         setUploadStatus(0);
       }
-      
+
     } catch (error) {
       console.error("Error uploading files:", error);
       setUploadStatus("Error uploading files. Please try again.");
@@ -150,12 +154,12 @@ const TransferCredits = () => {
     setSignature(URL.createObjectURL(event.target.files[0]));
     const base64 = await convertBase64(event.target.files[0])
     setBase64Signature(base64)
-    
+
   };
   const getUsersCompletedModules = () => {
     const data = { email: userData?.email };
-    axios
-      .post("http://127.0.0.1:8000/user/fetchCompletedModulesofUser", data)
+    api
+      .post("/user/fetchCompletedModulesofUser", data)
       .then((response) => {
         if (response.status == 200) {
           const returnedData =
@@ -182,10 +186,10 @@ const TransferCredits = () => {
     const list = [];
     let numberTotal = 0;
     selectedModules?.forEach((selected) => {
-      axios
+      api
         .get(
-          "http://127.0.0.1:8000/modules/similarModules?moduleUri=" +
-            encodeURIComponent(selected.moduleUri)
+          "/modules/similarModules?moduleUri=" +
+          encodeURIComponent(selected.moduleUri)
         )
         .then((response) => {
           if (response.status == 200) {
@@ -263,9 +267,9 @@ const TransferCredits = () => {
       signature: base64Signature
     };
     console.log(data);
-    axios
+    api
       .post(
-        "http://127.0.0.1:8000/transferCredits/saveTransferCreditsofUser",
+        "/transferCredits/saveTransferCreditsofUser",
         data
       )
       .then((response) => {
@@ -274,7 +278,7 @@ const TransferCredits = () => {
           setSaveLoading(false);
         }
       })
-      .catch((error) => {});
+      .catch((error) => { });
   };
 
   const defaultOptionsArrow = {
@@ -392,33 +396,33 @@ const TransferCredits = () => {
       saveData();
     }
   };
-   
+
   const getNextButtonText = () => {
-    if(currentIndex == 0){
+    if (currentIndex == 0) {
       return "Proceed"
-    }else{
+    } else {
       return "Next"
     }
   }
 
   const getNextButton = () => {
-    if(currentIndex == 0 && accept){
-      return <button style={buttonStyle}>{getNextButtonText()}</button> 
-    }else if(currentIndex == 1 && selectedUniversity){
-      return <button style={buttonStyle}>{getNextButtonText()}</button> 
-    }else if(currentIndex == 2){
-      return <button style={buttonStyle}>{getNextButtonText()}</button> 
-    }else if(currentIndex == 3 && uploadStatus == 2){
-      return <button style={buttonStyle}>{getNextButtonText()}</button> 
-    }else if(currentIndex == 4 && verification == 1){
-      return <button style={buttonStyle}>{getNextButtonText()}</button> 
-    }else if(currentIndex == 5 || currentIndex == 6){
-      return <button style={buttonStyle}>{getNextButtonText()}</button> 
-    }else{
+    if (currentIndex == 0 && accept) {
+      return <button style={buttonStyle}>{getNextButtonText()}</button>
+    } else if (currentIndex == 1 && selectedUniversity) {
+      return <button style={buttonStyle}>{getNextButtonText()}</button>
+    } else if (currentIndex == 2) {
+      return <button style={buttonStyle}>{getNextButtonText()}</button>
+    } else if (currentIndex == 3 && uploadStatus == 2) {
+      return <button style={buttonStyle}>{getNextButtonText()}</button>
+    } else if (currentIndex == 4 && verification == 1) {
+      return <button style={buttonStyle}>{getNextButtonText()}</button>
+    } else if (currentIndex == 5 || currentIndex == 6) {
+      return <button style={buttonStyle}>{getNextButtonText()}</button>
+    } else {
       return null
     }
-    
-   
+
+
   }
 
 
@@ -434,23 +438,23 @@ const TransferCredits = () => {
           infinite={false}
           organicArrows={false}
           buttonContentRight={getNextButton()}
-          buttonContentLeft={currentIndex!= 7 && <button style={buttonStyle}>Back</button>}
+          buttonContentLeft={currentIndex != 7 && <button style={buttonStyle}>Back</button>}
           bullets={false}
         >
           <div className="sliderParent">
             <div className="center">
               <h4>Disclaimer</h4>
               <p><b>
-              Please note that decision on whether it is possible to transfer
+                Please note that decision on whether it is possible to transfer
                 your credits achieved abroad or locally depends on decision of relevant examination board.
               </b>
-               </p>
-               <p>For further information on TUC credit transfer system , please refer to the section 15 of your relevant programmes <a href="https://www.tu-chemnitz.de/zpa/index.php.en">Examination regulation</a> </p>   
-               <p>For further information on Bialystok University credit transfer system , please refer to the section 13 this  <a href="https://pb.edu.pl/iros/wp-content/uploads/sites/24/2023/12/Regulations-for-studies-at-Bialystok-University-of-Technology.pdf">Document</a> </p>
+              </p>
+              <p>For further information on TUC credit transfer system , please refer to the section 15 of your relevant programmes <a href="https://www.tu-chemnitz.de/zpa/index.php.en">Examination regulation</a> </p>
+              <p>For further information on Bialystok University credit transfer system , please refer to the section 13 this  <a href="https://pb.edu.pl/iros/wp-content/uploads/sites/24/2023/12/Regulations-for-studies-at-Bialystok-University-of-Technology.pdf">Document</a> </p>
 
-               <p>By pressing accept you give us a consent that any information required in this digital transfer process can be used and stored by CampusFlow system</p> 
-               <p><input type="checkbox" checked={accept} onChange={handleAccept}/> I have read all the information and I accept terms and conditions </p> 
-    
+              <p>By pressing accept you give us a consent that any information required in this digital transfer process can be used and stored by CampusFlow system</p>
+              <p><input type="checkbox" checked={accept} onChange={handleAccept} /> I have read all the information and I accept terms and conditions </p>
+
             </div>
           </div>
           <div className="sliderParent">
@@ -534,7 +538,7 @@ const TransferCredits = () => {
             </div>
           </div>
           <div className="sliderParentSlide2">
-          
+
             {uploadStatus == -1 && <div className="centerFile">
               <p>In order to verify your grades we need your transcript</p>
               <div>
@@ -542,16 +546,16 @@ const TransferCredits = () => {
               </div>
             </div>}
             {uploadStatus == 1 && <div className="centerFile">
-            <div className="centerSlide2Image">
-              <Lottie
-                options={defaultOptionsScanning}
+              <div className="centerSlide2Image">
+                <Lottie
+                  options={defaultOptionsScanning}
                 // height={100}
                 // width={100}
-              />
-            </div>
+                />
+              </div>
             </div>}
             {uploadStatus == 2 && <div className="centerFile">
-            <p>Upload and Scan successfull, you can proceed to next</p>
+              <p>Upload and Scan successfull, you can proceed to next</p>
             </div>}
           </div>
           <div className="sliderParentSlide2">
@@ -574,21 +578,21 @@ const TransferCredits = () => {
                     <div className={"universityItem"} key={index}>
                       <div className="universityItemText">
                         <p>
-                          {grade.name} - <b>{grade.grade}</b> 
+                          {grade.name} - <b>{grade.grade}</b>
                         </p>
                       </div>
                     </div>
                   );
                 })}
               </div>
-              {verification == 0 &&  <p><i>Unfortunetly some of the selected modules could pass the verification phase</i></p> }
-              {verification == 1 &&  <i>Congratulation! Verification passed</i> }
+              {verification == 0 && <p><i>Unfortunetly some of the selected modules could pass the verification phase</i></p>}
+              {verification == 1 && <i>Congratulation! Verification passed</i>}
             </div>
           </div>
           <div className="sliderParent">
             <div className="center">
               <p>Total Possible Transferable Credits : {total}</p>
-             {similarModulesLoading ? (
+              {similarModulesLoading ? (
                 <Lottie options={defaultOptions2} height={200} width={200} />
               ) : (
                 <div className="scrollView">
@@ -656,23 +660,23 @@ const TransferCredits = () => {
             </div>
           </div>
           <div className="sliderParentSlide2">
-          
-          <div className="centerFile">
-            <h4>Please upload your signature</h4>
-            <div style={{marginTop: "20px"}}>
-              <input type="file" onChange={handleSignature} />
-              
+
+            <div className="centerFile">
+              <h4>Please upload your signature</h4>
+              <div style={{ marginTop: "20px" }}>
+                <input type="file" onChange={handleSignature} />
+
+              </div>
+              <img src={signature} />
             </div>
-            <img src={signature} />
           </div>
-        </div>
 
           <div className="sliderParent">
 
             <div className="centerFile">
-            <p><b>We have send an email with PDF attached with all details</b></p>
-            <Lottie options={defaultOptions} height={300} width={300} />
-            
+              <p><b>We have send an email with PDF attached with all details</b></p>
+              <Lottie options={defaultOptions} height={300} width={300} />
+
             </div>
           </div>
         </AwesomeSlider>
