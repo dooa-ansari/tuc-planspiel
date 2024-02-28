@@ -79,8 +79,12 @@ const UserList = () => {
         headers: {
           "Content-Type": "application/json"
         }})
-
-        console.log(response);
+        if (response.data.message === "User update successful.") {
+              toast("User Updated Successfully");
+                fetchUsers();
+              } else {
+                toast("Failed to update user");
+              }
       
     } catch (error) {
       console.error("Error updating user:", error);
