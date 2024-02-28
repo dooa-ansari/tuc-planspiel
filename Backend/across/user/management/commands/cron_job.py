@@ -1,5 +1,3 @@
-# cron_job.py
-
 import schedule
 import time
 from django.core.management.base import BaseCommand
@@ -132,7 +130,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         # Schedule the job every 30 seconds
-        schedule.every(10).seconds.do(check_status_job)
+        schedule.every(10).minutes.do(check_status_job)
 
         while True:
             schedule.run_pending()
