@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Container, Button, Alert } from 'react-bootstrap';
+import { Container, Button, Alert } from "react-bootstrap";
 import "./HomePage.css";
 import SearchBox from "../../../components/user/SearchBox/SearchBox";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import { NavLink } from "react-router-dom";
 import Loader from "../../../components/Loader/Loader";
 import { useAuth } from "../../../context/AuthContext";
-import {
-  retrieveNotifications
-} from "../../../api/externalApi";
+import { retrieveNotifications } from "../../../api/externalApi";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -21,10 +19,12 @@ const HomePage = () => {
         // Simulate an asynchronous operation (API call)
         await new Promise(resolve => setTimeout(resolve, 800));
 
-        const response = await retrieveNotifications({ email: auth.user.email });
+        const response = await retrieveNotifications({
+          email: auth.user.email,
+        });
         setTransferCreditRequests(response.data.updates);
       } catch (error) {
-        console.error('Error fetching transfer credit requests:', error);
+        console.error("Error fetching transfer credit requests:", error);
       } finally {
         // After the API call is completed, set loading to false
         setLoading(false);
@@ -98,7 +98,10 @@ const HomePage = () => {
                     descriptions
                   </p>
                 </NavLink>
-                <NavLink to="/campus-flow/user/transfer-credits" className="quicklink quicklinkThree">
+                <NavLink
+                  to="/campus-flow/user/transfer-credits"
+                  className="quicklink quicklinkThree"
+                >
                   <h4>Transferring the Credits</h4>
                   <p>
                     Transferring the selected credits from one university to
@@ -111,24 +114,44 @@ const HomePage = () => {
                 </NavLink>
               </div>
             </section>
-            <Container className="homePage__notifications">
+            <div className="homePage__notifications">
               <h2>Notifications</h2>
-              <h4>You have {transferCreditRequests.length} new notification(s)</h4>
+              <h4>
+                You have {transferCreditRequests.length} new notification(s)
+              </h4>
 
               {transferCreditRequests.map((request, index) => (
-                <Alert key={index} variant={request.status === 'ACCEPTED' ? 'primary' : 'danger'} style={{ margin: "5px", width: "100%" }}>
+                <Alert
+                  key={index}
+                  variant={request.status === "ACCEPTED" ? "primary" : "danger"}
+                  style={{ margin: "5px", width: "100%" }}
+                >
                   <p>
-                    <small><b>{new Date(request.updated_at).toLocaleString()}</b></small>
-                    &nbsp;Your application status of transferring your credits from{' '}
-                    <strong>{request.fromModuleName}</strong> to <strong>{request.toModuleName}</strong> has got
-                    <span style={{ fontWeight: 'bold', color: request.status === 'ACCEPTED' ? 'green' : 'red' }}> {request.status}</span>
+                    <small>
+                      <b>{new Date(request.updated_at).toLocaleString()}</b>
+                    </small>
+                    &nbsp;Your application status of transferring your credits
+                    from <strong>{request.fromModuleName}</strong> to{" "}
+                    <strong>{request.toModuleName}</strong> has got
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        color: request.status === "ACCEPTED" ? "green" : "red",
+                      }}
+                    >
+                      {" "}
+                      {request.status}
+                    </span>
                   </p>
                 </Alert>
               ))}
-              <NavLink to="/campus-flow/user/notifications" className="notifications">
+              <NavLink
+                to="/campus-flow/user/notifications"
+                className="notifications"
+              >
                 See More
               </NavLink>
-            </Container>
+            </div>
           </div>
         </MainLayout>
       )}
