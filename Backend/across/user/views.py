@@ -4,8 +4,10 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST, require_http_methods
 from django.forms.models import model_to_dict
 from .models import UserData, UserProfile
+from transfer_credits.models import TransferCredits
 from pymantic import sparql
 from .sparql import *
+from tzlocal import get_localzone
 from django.core.files.storage import FileSystemStorage
 import os
 import json
@@ -226,6 +228,73 @@ def fetch_university_uri(request):
         }
     return JsonResponse(response, status =500)
 
+@csrf_exempt
+@require_POST
+def retrieve_notifications(request):
+    body = request.body.decode('utf-8')
+
+    try:
+        # Parse JSON data from the request body
+        data = json.loads(body)
+        email = data.get('email','')
+        user_profile = UserProfile.objects.get(email=email)
+        transfer_credits_requests = []
+
+        if user_profile:
+            list_of_transfer_credits = TransferCredits.objects.filter(email=email)
+            if list_of_transfer_credits.exists():
+                # Access the objects in the queryset
+                for transfer_credit in list_of_transfer_credits:
+                    if transfer_credit.status == "ACCEPTED" or transfer_credit.status == "REJECTED":
+                        last_activity = user_profile.last_activity
+                        last_activity.strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+                        if transfer_credit.updated_at is not None:
+                            last_updated_at = transfer_credit.updated_at
+                            last_updated_at.strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+                            
+                            # Convert ISO-formatted strings to datetime objects
+                            # last_activity_converted = datetime.fromisoformat(last_activity.replace('Z', '+00:00'))
+                            # last_updated_converted = datetime.fromisoformat(last_updated_at.replace('Z', '+00:00'))
+
+                            # Check which occurred before the other
+                            # Automatically get the local timezone
+                            local_timezone = get_localzone()
+
+                            # Convert datetime objects to the local timezone
+                            last_activity_converted = last_activity.astimezone(local_timezone)
+                            last_updated_converted = last_updated_at.astimezone(local_timezone)
+                            transfer_credit_data = {
+                                "fromModuleName": transfer_credit.fromModules[0]['moduleName'],
+                                "toModuleName": transfer_credit.toModules[0]['moduleName'],
+                                "status": transfer_credit.status,
+                                "updated_at": last_updated_converted
+                            }
+                        transfer_credits_requests.append(transfer_credit_data)
+                if len(transfer_credits_requests) == 0:
+                    response_data = {
+                        "updates": [],
+                        "message": "No Update Available"
+                    }
+                else:
+                    response_data = {
+                        "updates": transfer_credits_requests
+                    }
+                return JsonResponse(response_data, status =200)
+            else:
+                response = {
+                "message": "No requested data available for transfer of credits"
+                }
+                return JsonResponse(response, status =500)
+        else:
+            response = {
+            "message": "User Profile not found"
+            }
+            return JsonResponse(response, status =500) 
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status =500)
 
 
 @csrf_exempt

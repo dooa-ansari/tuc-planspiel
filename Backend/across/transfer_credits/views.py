@@ -46,6 +46,7 @@ def save_transferred_credits_by_user(request):
         email = data.get('email','')
         signature = data.get('signature', '')
         transferCreditsRequest = data.get('transferCreditsRequest','')
+        possibleTransferrableCredits = data.get('possibleTransferrableCredits','')
         user_profile = UserProfile.objects.get(email=email)
         try:
             for item in transferCreditsRequest:
@@ -65,7 +66,14 @@ def save_transferred_credits_by_user(request):
                         toModules = to_modules,
                         created_at = created_at
                         )
-                                
+            
+            # Retrieve all TransferCredit objects that match the filter criteria
+            transfer_credits_list = TransferCredits.objects.filter(email = email)
+            # Iterate through the queryset and update the 'possibleTransferrableCredits' field
+            for updated_transfer_credits in transfer_credits_list:
+                updated_transfer_credits.possibleTransferrableCredits = possibleTransferrableCredits 
+                updated_transfer_credits.save()
+
             user_profile = UserProfile.objects.get(email=email)
            
             body = EMAIL_BODY_REQUEST.format(user_profile.full_name)
@@ -118,7 +126,8 @@ def fetch_transfer_credits_requests_by_user(request):
                         "toModules": transfer_credit.toModules,
                         "created_at": transfer_credit.created_at,
                         "status": transfer_credit.status,
-                        "updated_at": transfer_credit.updated_at
+                        "updated_at": transfer_credit.updated_at,
+                        "possibleTransferrableCredits": transfer_credit.possibleTransferrableCredits
                     }
                     transfer_credits_requests.append(transfer_credit_data)
 
@@ -150,7 +159,7 @@ def generate_pdf_for_user_email(data, user, signature, pdfBody):
     try:
 
         formatted_user_name = user.full_name.replace(' ','_')
-
+        print("USER IS ",formatted_user_name)
         pdf_filename = f"Transfer_Requests_{formatted_user_name}.pdf"
 
         # Folder path to store the PDF file
@@ -192,6 +201,7 @@ def generate_pdf_for_user_email(data, user, signature, pdfBody):
         if "transferCreditsRequest" in data:
             for item in data.get("transferCreditsRequest"):
                 status = item.get("status", "")
+                print("Status is : ", status)
                 from_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("fromModule", [])])
                 to_module = ", ".join([f"{module['moduleName']} ({module['credits']} credits)" for module in item.get("toModule", [])])
                 table_data.append([status, from_module, to_module])
@@ -258,7 +268,7 @@ def generate_pdf_for_user_email(data, user, signature, pdfBody):
  
         
         elements.extend(new_paragraphs_after)
-        if im is not None:
+        if signature is not None:
             im = Image(signature, hAlign="LEFT")
             elements.append(im)
 

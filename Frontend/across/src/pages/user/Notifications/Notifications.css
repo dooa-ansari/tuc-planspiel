@@ -1,0 +1,8 @@
+/* Alternate background colors for even and odd rows */
+tr:nth-child(even) {
+    background-color: #bbd5cf !important;
+}
+
+tr:nth-child(odd) {
+    background-color: #439a86 !important;
+}

@@ -390,7 +390,8 @@ def fetch_transfer_credit_requests(request):
                     "toModules": transfer_credit.toModules,
                     "created_at": transfer_credit.created_at,
                     "status": transfer_credit.status,
-                    "updated_at": transfer_credit.updated_at
+                    "updated_at": transfer_credit.updated_at,
+                    "possibleTransferrableCredits": transfer_credit.possibleTransferrableCredits
                 }
                 transfer_credits_requests.append(transfer_credit_data)
 
@@ -419,13 +420,17 @@ def update_transfer_credit_request(request):
         email=data.get('email', '').strip()
         updated_request=data.get('updatedRequest')
         list_of_transfer_credits = TransferCredits.objects.filter(email=email,fromModules=updated_request["fromModules"],toModules=updated_request["toModules"])
-        
+        updated_possibleTransferrableCredits = 0
         # Check if any objects are returned
         if list_of_transfer_credits.exists():
             # Access the objects in the queryset
             transfer_credits_requests = TransferCredits.objects.get(email=email,fromModules=updated_request["fromModules"],toModules=updated_request["toModules"])
             if transfer_credits_requests:
+                current_credits = transfer_credits_requests.possibleTransferrableCredits
+                subtracted_credits = int(transfer_credits_requests.toModules[0]['credits'])
+                updated_possibleTransferrableCredits = current_credits - subtracted_credits       
                 transfer_credits_requests.status = updated_request['status']
+                transfer_credits_requests.possibleTransferrableCredits = updated_possibleTransferrableCredits
                 transfer_credits_requests.updated_at = timezone.now()
                 transfer_credits_requests.save()
             else:
@@ -434,6 +439,13 @@ def update_transfer_credit_request(request):
                 }
                 return JsonResponse(response_data, status =500) 
 
+        # Retrieve all TransferCredit objects that match the filter criteria
+        transfer_credits_list = TransferCredits.objects.filter(email = email)
+        # Iterate through the queryset and update the 'possibleTransferrableCredits' field
+        for updated_transfer_credits in transfer_credits_list:
+            updated_transfer_credits.possibleTransferrableCredits = updated_possibleTransferrableCredits 
+            updated_transfer_credits.save()
+            
         user_profile = UserProfile.objects.get(email=email)
         if updated_request['status'] == "ACCEPTED":
             # Here Generating pdf and sending an email
