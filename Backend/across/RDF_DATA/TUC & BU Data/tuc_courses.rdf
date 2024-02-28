@@ -6,7 +6,7 @@
          >
 
   <!-- Course: ASE (Automotive Software Engineering) -->
-  <rdf:Description rdf:about="http://tuc/course#ASE">
+  <rdf:Description rdf:about="http://tuc/course#TUCAutomotiveSoftwareEngineering">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automotive Software Engineering</course:hasCourseName>
@@ -18,7 +18,7 @@
   </rdf:Description>
 
   <!-- Course: Web Engineering -->
-  <rdf:Description rdf:about="http://tuc/course#WebEngineering">
+  <rdf:Description rdf:about="http://tuc/course#TUCWebEngineering">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Engineering</course:hasCourseName>
@@ -30,7 +30,7 @@
 
   
   <!-- Course: Data Science -->
-  <rdf:Description rdf:about="http://tuc/course#DataScience">
+  <rdf:Description rdf:about="http://tuc/course#TUCDataScience">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Science</course:hasCourseName>
@@ -42,7 +42,7 @@
 
   
   <!-- Course: Informatik -->
-  <rdf:Description rdf:about="http://tuc/course#Informatik">
+  <rdf:Description rdf:about="http://tuc/course#TUCInformatik">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Informatik</course:hasCourseName>
@@ -53,7 +53,7 @@
   </rdf:Description>
 
   <!-- Course: System Engineering -->
-  <rdf:Description rdf:about="http://tuc/course#SystemEngineering">
+  <rdf:Description rdf:about="http://tuc/course#TUCSystemEngineering">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System Engineering</course:hasCourseName>
@@ -64,7 +64,7 @@
   </rdf:Description>
 
     <!-- Course: Mathematik -->
-  <rdf:Description rdf:about="http://tuc/course#Mathematik">
+  <rdf:Description rdf:about="http://tuc/course#TUCMathematik">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematik</course:hasCourseName>
@@ -76,7 +76,7 @@
   </rdf:Description>
 
 <!--BU Programmes and Courses-->
-<rdf:Description rdf:about="http://tuc/course#BUMSCS">
+<rdf:Description rdf:about="http://tuc/course#BUComputerScience">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Science</course:hasCourseName>
@@ -86,7 +86,7 @@
     <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://tuc/course#BUMA">
+  <rdf:Description rdf:about="http://tuc/course#BUArchitecture">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Architecture</course:hasCourseName>
@@ -96,7 +96,7 @@
     <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
 
-   <rdf:Description rdf:about="http://tuc/course#BUME">
+   <rdf:Description rdf:about="http://tuc/course#BUElectricalEngineering">
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Engineering</course:hasCourseName>
@@ -106,7 +106,7 @@
     <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://tuc/course#BUMM"> 
+  <rdf:Description rdf:about="http://tuc/course#BUMechanicalEngineering"> 
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanical Engineering</course:hasCourseName>
@@ -116,7 +116,7 @@
     <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
 
-   <rdf:Description rdf:about="http://tuc/course#BUCE"> 
+   <rdf:Description rdf:about="http://tuc/course#BUCivilEngineeringandEnvironmentalSciences"> 
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Civil Engineering and Environmental Sciences</course:hasCourseName>
@@ -126,7 +126,7 @@
     <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
 
- <rdf:Description rdf:about="http://tuc/course#BUEM"> 
+ <rdf:Description rdf:about="http://tuc/course#BUEngineeringManagement"> 
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineering Management</course:hasCourseName>
@@ -136,7 +136,7 @@
     <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
 
-   <rdf:Description rdf:about="http://tuc/course#BUCES"> 
+   <rdf:Description rdf:about="http://tuc/course#BUCivilandEarthSciences"> 
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Civil and Earth Sciences</course:hasCourseName>
@@ -146,7 +146,7 @@
     <university:belongsToUniversity rdf:resource="http://across/university#BU"/>
   </rdf:Description>
 
-<rdf:Description rdf:about="http://tuc/course#BUCBE"> 
+<rdf:Description rdf:about="http://tuc/course#BUBiomedicalEngineering"> 
     <rdf:type rdf:resource="http://tuc/course#"/>
     <course:hasCourseNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</course:hasCourseNumber>
     <course:hasCourseName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biomedical Engineering</course:hasCourseName>
