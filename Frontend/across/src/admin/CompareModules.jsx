@@ -5,6 +5,7 @@ import { FiCheckCircle } from "react-icons/fi";
 import "../assets/css/FileUpload.css";
 import { useNavigate } from "react-router-dom";
 import AdminNavbar from "./components/Navbar/AdminNavbar";
+import { api} from "../api/externalApi";
 
 
 const CompareModules = () => {
@@ -14,16 +15,13 @@ const CompareModules = () => {
     //const [message, setMessage] = useState("Preparing Tool");
     const navigate = useNavigate();
 
-    useEffect(() => {
-        //cleanUpAndPrepare();
-    }, []);
+    // useEffect(() => {
+    //     //cleanUpAndPrepare();
+    // }, []);
     // const cleanUpAndPrepare = () => {
-    //     fetch("http://127.0.0.1:8000/adminapp/deleteclean", {
-    //         method: "POST",
-    //         headers: {
-    //             Accept: "application/json",
-    //             "Content-Type": "application/json",
-    //         },
+    //     api.post
+    //     ("/adminapp/deleteclean", {
+            
     //         body: JSON.stringify({}),
     //     })
     //         .then((response) => {
@@ -47,8 +45,8 @@ const CompareModules = () => {
                 formData.append("files", file);
             });
 
-            const response = await axios.post(
-                "http://127.0.0.1:8000/adminapp/upload",
+            const response = await api.post(
+                "/adminapp/upload",
                 formData
             );
 

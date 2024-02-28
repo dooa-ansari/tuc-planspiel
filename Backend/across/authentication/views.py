@@ -259,9 +259,10 @@ def update_user_role(request):
     if request.method == 'POST':
         try:
             # Parse JSON data from the request body
-            data = json.loads(request.body.decode('utf-8'))
+            data = json.loads(request.body)
             # Extract email from the data
-            email = data.get('email', '')
+            emailObj = json.loads(data.get('data', ''))
+            email = emailObj.get('email', '')
 
             user_profile = UserProfile.objects.get(email=email)
             

@@ -5,6 +5,7 @@ import { FiCheckCircle } from "react-icons/fi";
 import "../assets/css/FileUpload.css";
 import { useNavigate } from "react-router-dom";
 import { telecastFile } from "../api/adminApi";
+import { api } from "../api/externalApi";
 
 const FileUpload = () => {
   const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -17,12 +18,8 @@ const FileUpload = () => {
     cleanUpAndPrepare();
   }, []);
   const cleanUpAndPrepare = () => {
-    fetch("http://127.0.0.1:8000/adminapp/deleteclean", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+    api.post("/adminapp/deleteclean", {
+      
       body: JSON.stringify({}),
     })
       .then(response => {

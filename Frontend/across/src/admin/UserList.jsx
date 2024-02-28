@@ -6,6 +6,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AdminNavbar from "./components/Navbar/AdminNavbar";
+import { api } from "../api/externalApi";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
@@ -21,8 +22,8 @@ const UserList = () => {
   }, []);
 
   const fetchUsers = () => {
-    fetch("http://127.0.0.1:8000/auth/fetchUsers")
-      .then(response => response.json())
+    api.get("/auth/fetchUsers")
+      .then(response => response.data)
       .then(data => {
         // Check if data is an array
         if (Array.isArray(data.user_data)) {
@@ -46,57 +47,68 @@ const UserList = () => {
       });
   };
   
-  const deleteUser = email => {
-    fetch("http://127.0.0.1:8000/auth/deleteUser", {
-      method: "DELETE",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email
-      }),
-    })
-      .then(response => response.json())
-      .then(json => {
-        if (json.message === "User deletion successful.") {
-          setUsers(users.filter(user => user.email !== email));
-          toast("User Deleted Successfully");
-        } else {
-          toast("Failed to delete user");
-        }
-      })
-      .catch(error => {
-        console.error("Error deleting user:", error);
-        toast("Failed to delete user");
-      });
+  const deleteUser = async (email) => {
+    const data = {"email": email};
+    const body = JSON.stringify(data);
+   
+    try {
+      const response = await api.delete("/auth/deleteUser", {
+        data: body,
+        headers: {
+          "Content-Type": "application/json"
+        }})
+      const retrievedMsg = response.data.message;
+      if (retrievedMsg === "User deletion successful.") {
+            setUsers(users.filter(user => user.email !== email));
+            toast("User Deleted Successfully");
+          } else {
+            toast("Failed to delete user");
+          }
+    } catch (error) {
+      console.error("Error deleting user:", error);
+      toast("Failed to delete user");
+    }
   };
 
-  const updateUser = email => {
-    fetch("http://127.0.0.1:8000/auth/updateUserRole", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email
-        // Add other fields you want to update here
-      }),
-    })
-      .then(response => response.json())
-      .then(json => {
-        if (json.message === "User update successful.") {
-          toast("User Updated Successfully");
-            fetchUsers();
-        } else {
-          toast("Failed to update user");
-        }
-      })
-      .catch(error => {
-        console.error("Error updating user:", error);
+  const updateUser = async (email) => {
+    const data1 = {"email": email};
+    const body = JSON.stringify(data1);
+    try {
+      const response = await api.post("/auth/updateUserRole", {
+       data: body,
+        headers: {
+          "Content-Type": "application/json"
+        }})
+
+        console.log(response);
+      
+    } catch (error) {
+      console.error("Error updating user:", error);
         toast("Failed to update user");
-      });
+    }
+    // ("http://127.0.0.1:8000/auth/updateUserRole", {
+    //   method: "POST",
+    //   headers: {
+    //     Accept: "application/json",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     email: email
+    //     // Add other fields you want to update here
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(json => {
+    //     if (json.message === "User update successful.") {
+    //       toast("User Updated Successfully");
+    //         fetchUsers();
+    //     } else {
+    //       toast("Failed to update user");
+    //     }
+    //   })
+    //   .catch(error => {
+        
+    //   });
   };
   
   return (
