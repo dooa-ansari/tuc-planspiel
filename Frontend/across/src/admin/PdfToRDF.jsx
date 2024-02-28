@@ -5,7 +5,7 @@ import { FiCheckCircle } from "react-icons/fi";
 import { Form, Col, Row, Container, Button, Modal } from "react-bootstrap";
 import "../assets/css/FileUpload.css";
 import { useNavigate } from "react-router-dom";
-import { fetchDepartmentsData } from "../api/adminApi";
+import { api, fetchDepartmentsData } from "../api/adminApi";
 import { getUniversities } from "../api/compareModuleApi";
 
 const PdfToRdf = () => {
@@ -146,9 +146,12 @@ const PdfToRdf = () => {
         // Append JSON data to FormData
         filesFormData.append("jsonData", JSON.stringify(jsonData));
 
-        const response = await axios.post(
-          "http://127.0.0.1:8000/pdf_To_rdf/api/pdfToRdf",
-          filesFormData
+        const response = await api.post(
+          "/pdf_To_rdf/api/pdfToRdf", filesFormData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          }
+        }
         );
         if (response.status == 200) {
           const filePath = response.data.rdf_File_Path;
