@@ -198,7 +198,8 @@ def get_all_modules(request):
                 'belongs_to_university': row['sampleUniversityName']['value'],
                 'belongs_to_course': row['sampleCourseName']['value'],
                 'belongs_to_program': row['sampleModuleBelongsToProgram']['value'],
-                'belongs_to_department': row['sampleModuleBelongsToDepartment']['value']
+                'belongs_to_department': row['sampleModuleBelongsToDepartment']['value'],
+                'has_language': row['sampleModuleHasLanguage']['value']
             }
             data_list.append(data_dict)
 
@@ -208,3 +209,37 @@ def get_all_modules(request):
             "message": f"An unexpected error occurred: {e}"
         }
         return JsonResponse(response, status =500)
+
+
+@csrf_exempt
+@require_GET
+def get_searched_modules(request):
+    search_term = request.GET.get('queryTerm', '')
+    try:
+        
+        server = sparql.SPARQLServer('http://13.51.109.79/bigdata/sparql')
+        searchedResponse = server.query(get_searched_modules_query(search_term))
+
+        retrievedModules_list = []
+        for row in searchedResponse['results']['bindings']:
+            searched_modules = {
+                'module_uri': row['moduleUri']['value'],
+                'module_number': row['sampleModuleNumber']['value'],
+                'module_name': row['sampleModuleName']['value'],
+                'module_content': row['sampleModuleContent']['value'],
+                'module_credit_points': row['sampleModuleCreditPoints']['value'],
+                'module_workload': row.get('sampleModuleWorkLoad', {}).get('value', ''),
+                'belongs_to_university': row['sampleUniversityName']['value'],
+                'belongs_to_course': row['sampleCourseName']['value'],
+                'belongs_to_program': row['sampleModuleBelongsToProgram']['value'],
+                'belongs_to_department': row['sampleModuleBelongsToDepartment']['value'],
+                'has_language': row['sampleModuleHasLanguage']['value']
+            }
+            retrievedModules_list.append(searched_modules)
+
+        return JsonResponse(retrievedModules_list, safe=False, json_dumps_params={'indent': 2})
+    except Exception as e:
+        response = {
+            "message": f"An unexpected error occurred: {e}"
+        }
+        return JsonResponse(response, status=500)
