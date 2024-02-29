@@ -48,7 +48,8 @@ const Modules = () => {
   const renderedModulesInGridView = modules.map((module, index) => {
     return (
       <div key={index} className="moduleCard">
-        <h2 className="moduleName">{module.module_name}</h2><br />
+        <h2 className="moduleName">{module.module_name}</h2>
+        <br />
         <h4 className="moduleWorkLoad">
           Module Work Load: {module.module_workload} hours
         </h4>
@@ -56,9 +57,13 @@ const Modules = () => {
           Module Credits: {module.module_credit_points}
         </h4>
         <h4 className="moduleUniversityName">{module.belongs_to_university}</h4>
-        <p>Course: {module.belongs_to_course}<br />
-          Department: {module.belongs_to_department}<br />
-          Program: {module.belongs_to_program}</p>
+        <p>
+          Course: {module.belongs_to_course}
+          <br />
+          Department: {module.belongs_to_department}
+          <br />
+          Program: {module.belongs_to_program}
+        </p>
         <button type="button">More Details</button>
       </div>
     );
@@ -66,7 +71,7 @@ const Modules = () => {
 
   const renderedModulesInListView = modules.map((module, idx) => {
     return (
-      <div key={idx}>
+      <div key={idx} style={{ borderRadius: "25px", marginBottom: "15px" }}>
         <section className="list-group-item listItems">
           <h2 className="moduleName">{module.module_name}</h2>
           <h4 className="moduleWorkLoad">
@@ -78,18 +83,22 @@ const Modules = () => {
           <h4 className="moduleUniversityName">
             {module.belongs_to_university}
           </h4>
-          <p>Course: {module.belongs_to_course}<br />
-            Department: {module.belongs_to_department}<br />
-            Program: {module.belongs_to_program}</p>
+          <p>
+            Course: {module.belongs_to_course}
+            <br />
+            Department: {module.belongs_to_department}
+            <br />
+            Program: {module.belongs_to_program}
+          </p>
           <p>
             Module Contents: {getFirstNCharacters(module?.module_content, 200)}
           </p>
+
           <button type="button">More Details</button>
         </section>
       </div>
     );
   });
-  console.log(modules);
 
   return (
     <>
@@ -99,7 +108,7 @@ const Modules = () => {
           <div className="modules">
             <h1>Modules Offered by Universities</h1>
             <div className="filterSectionContents">
-              <SearchBox />
+              <SearchBox placeholderText="Search Modules" />
               <div className="viewIcons">
                 <span>Change View</span>
                 {isGridView ? (

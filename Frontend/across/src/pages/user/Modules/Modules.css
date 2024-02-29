@@ -51,9 +51,15 @@
   outline: none;
   padding: 9px 16px 10px 18px;
   background: #BCD8C1;
+  border-radius: 25px;
   color: #121212;
   font-weight: 500;
   margin-bottom: 0;
+}
+
+renderedListItems {
+  border-radius: 25px;
+  margin-bottom: 15px;
 }
 
 .listItems {
