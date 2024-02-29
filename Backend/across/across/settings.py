@@ -121,10 +121,10 @@ CHANNEL_LAYERS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sample2',
-        'USER': 'root',
-        'PASSWORD': 'root@123',
-        'HOST': '127.0.0.1',  # or the hostname where your MySQL server is running
+        'NAME': 'across',
+        'USER': 'admin',
+        'PASSWORD': 'MasterAdmin123',
+        'HOST': 'across.czeu6468ix6a.eu-north-1.rds.amazonaws.com',  # or the hostname where your MySQL server is running
         'PORT': '3306',      # or the port on which your MySQL server is listening
     }
 }

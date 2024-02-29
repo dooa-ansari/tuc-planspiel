@@ -17,7 +17,6 @@ import PyPDF2
 import wget
 from os import listdir
 from os.path import isfile, join
-import tabula
 import pdfplumber
 
 @csrf_exempt
