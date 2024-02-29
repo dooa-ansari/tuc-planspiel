@@ -1,5 +1,5 @@
 list_with_similar_modules_query = """
-SELECT ?module (SAMPLE(?moduleId) as ?sampleModuleId) (SAMPLE(?moduleName) as ?sampleModuleName) (SAMPLE(?moduleContent) as ?sampleModuleContent)(SAMPLE(?moduleCreditPoints) as ?sampleModuleCreditPoints) (SAMPLE(?universityName) as ?sampleUniversity) (SAMPLE(?courseName) as ?sampleCourse) (SAMPLE(?similarModule) as ?sampleSimiliarModule) (SAMPLE(?similarModuleId) as ?sampleSimilarModuleId)  (SAMPLE(?similarModuleName) as ?sampleSimilarModuleName) (SAMPLE(?similarModuleContent) as ?sampleSimilarModuleContent)(SAMPLE(?similarModuleCreditPoints) as ?sampleSimilarModuleCreditPoints) (SAMPLE(?universityNameSimilar) as ?sampleSimilarUnivserity) (SAMPLE(?courseNameSimilar) as ?sampleSimilarCourse)
+SELECT ?module ?similarModule (SAMPLE(?moduleId) as ?sampleModuleId) (SAMPLE(?moduleName) as ?sampleModuleName) (SAMPLE(?moduleContent) as ?sampleModuleContent)(SAMPLE(?moduleCreditPoints) as ?sampleModuleCreditPoints) (SAMPLE(?universityName) as ?sampleUniversity) (SAMPLE(?courseName) as ?sampleCourse) (SAMPLE(?similarModuleId) as ?sampleSimilarModuleId)  (SAMPLE(?similarModuleName) as ?sampleSimilarModuleName) (SAMPLE(?similarModuleContent) as ?sampleSimilarModuleContent)(SAMPLE(?similarModuleCreditPoints) as ?sampleSimilarModuleCreditPoints) (SAMPLE(?universityNameSimilar) as ?sampleSimilarUnivserity) (SAMPLE(?courseNameSimilar) as ?sampleSimilarCourse)
         WHERE {{
             ?module <http://tuc.web.engineering/module#hasName> ?moduleName ;
                 <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
@@ -20,7 +20,7 @@ SELECT ?module (SAMPLE(?moduleId) as ?sampleModuleId) (SAMPLE(?moduleName) as ?s
             ?similarCourse <http://tuc/course#hasCourseName> ?courseNameSimilar .
 
         }}
-GROUP BY ?module
+GROUP BY ?module ?similarModule
 """
 
 def get_similar_module_against_module_uri_query(moduleUri):
