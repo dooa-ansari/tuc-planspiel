@@ -18,6 +18,7 @@ import wget
 from os import listdir
 from os.path import isfile, join
 import pdfplumber
+from django.conf import settings
 
 @csrf_exempt
 @require_POST
@@ -304,7 +305,8 @@ def upload_transcript(request):
             other_data = json.loads(request.POST.dict().get("data"))
             moudle_list = other_data.get("modules")
             saved_files=saveFiles(uploaded_files)
-            pdf_file = open(f"Backend/across/uploads/{saved_files}", "rb")  
+            test = os.path.join(settings.BASE_DIR, 'uploads')
+            pdf_file = open(os.path.join(test, saved_files), "rb")
             pdf_reader = PyPDF2.PdfReader(pdf_file)
             noOfPages = len(pdf_reader.pages)
             text = ""
@@ -349,7 +351,7 @@ def upload_transcript(request):
 uploadLoaction =""
 def saveFiles(uploaded_files):
     # Specify the directory where you want to save the files
-    upload_directory = 'Backend/across/uploads/'
+    upload_directory = os.path.join(settings.BASE_DIR, 'uploads')
 
     # Create a FileSystemStorage instance with the upload directory
     fs = FileSystemStorage(location=upload_directory)
