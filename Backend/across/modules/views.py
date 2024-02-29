@@ -194,8 +194,11 @@ def get_all_modules(request):
                 'module_name': row['sampleModuleName']['value'],
                 'module_content': row['sampleModuleContent']['value'],
                 'module_credit_points': row['sampleModuleCreditPoints']['value'],
+                'module_workload': row['sampleModuleWorkLoad']['value'],
                 'belongs_to_university': row['sampleUniversityName']['value'],
                 'belongs_to_course': row['sampleCourseName']['value'],
+                'belongs_to_program': row['sampleModuleBelongsToProgram']['value'],
+                'belongs_to_department': row['sampleModuleBelongsToDepartment']['value']
             }
             data_list.append(data_dict)
 

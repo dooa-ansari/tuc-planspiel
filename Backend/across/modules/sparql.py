@@ -85,16 +85,19 @@ def get_modules_from_course_and_university_query(courseUri, courseName, universi
 
 def get_all_modules_query():
     query = f"""
-        SELECT ?moduleUri (SAMPLE(?moduleNumber) as ?sampleModuleNumber) (SAMPLE(?moduleName) as ?sampleModuleName) (SAMPLE(?moduleContent) as ?sampleModuleContent) (SAMPLE(?moduleCreditPoints) as ?sampleModuleCreditPoints) (SAMPLE(?universityName) as ?sampleUniversityName) (SAMPLE(?courseName) as ?sampleCourseName)
+         SELECT ?moduleUri (SAMPLE(?courseBelongsToDepartment) as ?sampleModuleBelongsToDepartment) (SAMPLE(?courseProgram) as ?sampleModuleBelongsToProgram) (SAMPLE(?moduleWorkLoad) as ?sampleModuleWorkLoad) (SAMPLE(?moduleNumber) as ?sampleModuleNumber) (SAMPLE(?moduleName) as ?sampleModuleName) (SAMPLE(?moduleContent) as ?sampleModuleContent) (SAMPLE(?moduleCreditPoints) as ?sampleModuleCreditPoints) (SAMPLE(?universityName) as ?sampleUniversityName) (SAMPLE(?courseName) as ?sampleCourseName)
         WHERE {{       
                     ?module rdf:type <http://tuc.web.engineering/module#> .
                     ?module <http://tuc.web.engineering/module#hasName> ?moduleName .
                     ?module <http://tuc.web.engineering/module#hasModuleNumber> ?moduleNumber .
                     ?module <http://tuc.web.engineering/module#hasContent> ?moduleContent .
                     ?module <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints .
+          			?module <http://tuc.web.engineering/module#hasWorkLoad> ?moduleWorkLoad .
                     ?course rdf:type <http://tuc/course#> .
                     ?module <http://tuc/course#hasCourse> ?course .
                     ?course <http://tuc/course#hasCourseName> ?courseName .
+          			?course <http://tuc/course#belongsToProgram> ?courseProgram .
+                    ?course <http://tuc/course#belongsToDepartment> ?courseBelongsToDepartment .
                     ?university rdf:type <http://across/university#> .
                     ?course <http://across/university#belongsToUniversity> ?university .  
                     ?university <http://across/university#hasUniversityName> ?universityName .

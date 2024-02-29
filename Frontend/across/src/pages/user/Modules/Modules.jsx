@@ -48,12 +48,17 @@ const Modules = () => {
   const renderedModulesInGridView = modules.map((module, index) => {
     return (
       <div key={index} className="moduleCard">
-        <h2 className="moduleName">{module.module_name}</h2>
+        <h2 className="moduleName">{module.module_name}</h2><br />
+        <h4 className="moduleWorkLoad">
+          Module Work Load: {module.module_workload} hours
+        </h4>
         <h4 className="moduleCreditPoints">
           Module Credits: {module.module_credit_points}
         </h4>
         <h4 className="moduleUniversityName">{module.belongs_to_university}</h4>
-        <p>Course: {module.belongs_to_course}</p>
+        <p>Course: {module.belongs_to_course}<br />
+          Department: {module.belongs_to_department}<br />
+          Program: {module.belongs_to_program}</p>
         <button type="button">More Details</button>
       </div>
     );
@@ -64,13 +69,18 @@ const Modules = () => {
       <div key={idx}>
         <section className="list-group-item listItems">
           <h2 className="moduleName">{module.module_name}</h2>
+          <h4 className="moduleWorkLoad">
+            Module Work Load: {module.module_workload} hours
+          </h4>
           <h4 className="moduleCreditPoints">
             Module Credits: {module.module_credit_points}
           </h4>
           <h4 className="moduleUniversityName">
             {module.belongs_to_university}
           </h4>
-          <p>Course: {module.belongs_to_course}</p>
+          <p>Course: {module.belongs_to_course}<br />
+            Department: {module.belongs_to_department}<br />
+            Program: {module.belongs_to_program}</p>
           <p>
             Module Contents: {getFirstNCharacters(module?.module_content, 200)}
           </p>
