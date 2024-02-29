@@ -45,16 +45,16 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     --mount=type=bind,source=requirements.txt,target=requirements.txt \
     python -m pip install -r requirements.txt
 
-
-
 # Switch to the non-privileged user to run the application.
-USER appuser
+USER root
 
 # Copy the source code into the container.
 COPY . .
 
 # RUN python manage.py cron_job
 
+# RUN chmod +rw uploads
+RUN chown -R root:root uploads
 
 # Expose the port that the application listens on.
 EXPOSE 8000
