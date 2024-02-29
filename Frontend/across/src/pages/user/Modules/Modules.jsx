@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import "./Modules.css";
-import { getAllModules } from "../../../api/externalApi";
+import { getAllModules, getSearchedModules } from "../../../api/externalApi";
 import { toast } from "react-toastify";
 import Loader from "../../../components/Loader/Loader";
 import SearchBox from "../../../components/user/SearchBox/SearchBox";
@@ -10,6 +10,7 @@ const Modules = () => {
   const [modules, setModules] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isGridView, setIsGridView] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const toggleView = () => {
     setIsGridView(prevState => !prevState);
@@ -30,8 +31,9 @@ const Modules = () => {
 
     async function fetchModules() {
       try {
-        const response = await getAllModules();
-
+        const response = searchTerm
+          ? await getSearchedModules(searchTerm)
+          : await getAllModules();
         if (response.status === 200 && response.statusText === "OK") {
           const shuffledModules = response.data.sort(() => Math.random() - 0.5);
           setModules(shuffledModules);
@@ -43,7 +45,7 @@ const Modules = () => {
       }
     }
     fetchModules();
-  }, []);
+  }, [searchTerm]);
 
   const renderedModulesInGridView = modules.map((module, index) => {
     return (
@@ -57,13 +59,6 @@ const Modules = () => {
           Module Credits: {module.module_credit_points}
         </h4>
         <h4 className="moduleUniversityName">{module.belongs_to_university}</h4>
-        <p>
-          Course: {module.belongs_to_course}
-          <br />
-          Department: {module.belongs_to_department}
-          <br />
-          Program: {module.belongs_to_program}
-        </p>
         <button type="button">More Details</button>
       </div>
     );
@@ -84,13 +79,6 @@ const Modules = () => {
             {module.belongs_to_university}
           </h4>
           <p>
-            Course: {module.belongs_to_course}
-            <br />
-            Department: {module.belongs_to_department}
-            <br />
-            Program: {module.belongs_to_program}
-          </p>
-          <p>
             Module Contents: {getFirstNCharacters(module?.module_content, 200)}
           </p>
 
@@ -100,6 +88,7 @@ const Modules = () => {
     );
   });
 
+  console.log(searchTerm);
   return (
     <>
       {loading && <Loader text="Modules" />}
@@ -108,7 +97,10 @@ const Modules = () => {
           <div className="modules">
             <h1>Modules Offered by Universities</h1>
             <div className="filterSectionContents">
-              <SearchBox placeholderText="Search Modules" />
+              <SearchBox
+                placeholderText="Search Modules"
+                setSearchTerm={setSearchTerm}
+              />
               <div className="viewIcons">
                 <span>Change View</span>
                 {isGridView ? (
@@ -140,6 +132,10 @@ const Modules = () => {
                 )}
               </div>
             </div>
+
+            <p style={{ textAlign: "center" }}>
+              Total number of modules: {modules.length}
+            </p>
             {isGridView ? (
               <div className="moduleCards">{renderedModulesInGridView}</div>
             ) : (

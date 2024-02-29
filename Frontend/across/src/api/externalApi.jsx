@@ -18,6 +18,18 @@ export const getAllModules = async () => {
   return response;
 };
 
+export const getSearchedModules = async data => {
+  let response;
+  try {
+    response = await api.get("/modules/search", {
+      params: { queryTerm: data },
+    });
+  } catch (error) {
+    return error;
+  }
+  return response;
+};
+
 export const getUniversityUri = async data => {
   let response;
   try {
@@ -64,7 +76,10 @@ export const retrieveNotifications = async data => {
 export const retrieveTransferCreditRequestsforUser = async data => {
   let response;
   try {
-    response = await api.post("/transferCredits/fetchTransferCreditsRequests", data);
+    response = await api.post(
+      "/transferCredits/fetchTransferCreditsRequests",
+      data
+    );
   } catch (error) {
     return error;
   }
