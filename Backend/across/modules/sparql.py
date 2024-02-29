@@ -25,7 +25,7 @@ GROUP BY ?module ?similarModule
 
 def get_similar_module_against_module_uri_query(moduleUri):
     list_all_against_uri_with_similar_modules_query = f"""
-        SELECT ?module ?moduleId ?moduleName ?moduleContent ?moduleCreditPoints ?universityName ?courseName ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityNameSimilar ?courseNameSimilar
+        SELECT ?module ?similarModuleWorkLoad ?similarMouleLanguage ?similarModuleProgram ?similarModuleDepartment ?moduleId ?moduleName ?moduleContent ?moduleCreditPoints ?universityName ?courseName ?similarModule ?similarModuleName ?similarModuleContent ?similarModuleCreditPoints ?similarModuleId ?universityNameSimilar ?courseNameSimilar
         WHERE {{
             ?module <http://tuc.web.engineering/module#hasName> ?moduleName ;
                 <http://tuc.web.engineering/module#hasModuleNumber> ?moduleId ;
@@ -40,10 +40,14 @@ def get_similar_module_against_module_uri_query(moduleUri):
                         <http://tuc.web.engineering/module#hasModuleNumber> ?similarModuleId ;
                         <http://tuc.web.engineering/module#hasContent> ?similarModuleContent;
                         <http://tuc.web.engineering/module#hasCreditPoints> ?similarModuleCreditPoints ;
+                        <http://tuc.web.engineering/module#hasWorkLoad> ?similarModuleWorkLoad ;
                         <http://across/university#hasUniversity> ?similarUniversity ;
                         <http://tuc/course#hasCourse> ?similarCourse .
             ?similarUniversity <http://across/university#hasUniversityName> ?universityNameSimilar .
             ?similarCourse <http://tuc/course#hasCourseName> ?courseNameSimilar .
+            ?similarCourse <http://tuc/course#belongsToProgram> ?similarModuleProgram .
+            ?similarCourse <http://tuc/course#hasLanguage> ?similarMouleLanguage  .
+            ?similarCourse <http://tuc/course#belongsToDepartment> ?similarModuleDepartment .
 
             BIND(str(?module) AS ?moduleUri)
             

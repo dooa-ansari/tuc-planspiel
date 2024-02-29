@@ -76,6 +76,12 @@ def get_similar_module_against_given_module_uri(request):
                 'similarModuleCreditPoints': str(row['similarModuleCreditPoints']['value']),
                 'similarUniversity': str(row['universityNameSimilar']['value']),
                 'courseNameSimilar': str(row['courseNameSimilar']['value']),
+                
+                'similarModuleWorkLoad': str(row['similarModuleWorkLoad']['value']),
+                'similarMouleLanguage': str(row['similarMouleLanguage']['value']),
+                'similarModuleProgram': str(row['similarModuleProgram']['value']),
+                'similarModuleDepartment': str(row['similarModuleDepartment']['value']),
+
                 'moduleUri': str(row['module']['value']),
                 'similarModuleUri': str(row['similarModule']['value']),
                 }
