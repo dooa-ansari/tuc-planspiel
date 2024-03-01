@@ -162,7 +162,7 @@ def get_searched_modules_query(search_term):
 
                     BIND(str(?module) AS ?moduleUri)
                     FILTER (
-                        regex(?moduleName, "{search_term}", "i") || regex(?moduleContent, "{search_term}", "i")
+                        regex(?moduleName, "{search_term}", "i")
                     )
         }}
         GROUP BY ?moduleUri
