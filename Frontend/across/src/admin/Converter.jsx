@@ -16,10 +16,10 @@ const Converter = () => {
   // Access the state object from location
   const { state } = location;
   // Destructure email and full_name from the state object
-  const { filePath, universityName, belongs_to_department, course_name, course_uri, belongs_to_program, has_language } = state || {};
+  const { rdf_File_Path, university_name, belongs_to_department, course_name, course_uri, belongs_to_program, has_language } = state || {};
 
 
-  console.log("FROM CONVERTER", filePath, universityName, belongs_to_department)
+  console.log("FROM CONVERTER", rdf_File_Path, university_name, belongs_to_department)
   const {
     sendMessage,
     sendJsonMessage,
@@ -44,8 +44,8 @@ const Converter = () => {
   const sendDataToServer = useCallback(() => setTimeout(() => {
     sendJsonMessage({
       'message': "start",
-      'university_name': universityName,
-      'rdf_File_Path': filePath,
+      'university_name': university_name,
+      'rdf_File_Path': rdf_File_Path,
       'belongs_to_department': belongs_to_department,
       'course_name': course_name,
       'course_uri': course_uri,

@@ -28,7 +28,7 @@ const GenerateRDF = () => {
 
     const [departments, setDepartments] = useState([]);
 
-    const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(false);
     const [universityOptions, setUniversityOptions] = useState([]);
     const navigate = useNavigate();
 
@@ -106,8 +106,8 @@ const GenerateRDF = () => {
     const handleRedirect = () => {
         if (redirectData) {
             const {
-                filePath,
-                universityName,
+                rdf_File_Path,
+                university_name,
                 belongs_to_department,
                 course_name,
                 course_uri,
@@ -118,8 +118,8 @@ const GenerateRDF = () => {
             // Navigate to the target page
             navigate("/admin/automation", {
                 state: {
-                    filePath,
-                    universityName,
+                    rdf_File_Path,
+                    university_name,
                     belongs_to_department,
                     course_name,
                     course_uri,
@@ -169,7 +169,7 @@ const GenerateRDF = () => {
                         has_language,
                         message,
                     } = response.data;
-                    console.log(response.data)
+                    console.log(rdf_File_Path, university_name)
                     setRedirectData({
                         rdf_File_Path,
                         university_name,
@@ -201,17 +201,53 @@ const GenerateRDF = () => {
         <Container className="file-upload-container">
             <div className="instructions">
                 <p className="instructions-font">
-                    This is utility to update or insert modules in RDF file using PDF
-                    files
+                    This is utility to find similar modules based on their <b>department, program, language and workload</b>. The purpose of this utility is to reduce the human-effort for
+                    finding if two modules can be deemed similar
                 </p>
                 <p className="instructions-font-subtext">How to use this utility</p>
                 <ul>
                     <li>
-                        Upload PDF files with modules you want to update or insert in RDF
-                        file.
+                        <b>Upload your PDF files </b> with modules you want to find similarities
+                        between
+                    </li>
+                    <li>
+                        After processing a new RDF file will be generated with a relation
+                        identifying similar modules
+                    </li>
+                    <li>
+                        The newly generated files will get <b>automatically updated in the database,</b> so that you can see that
+                        in <b>Compare Modules</b> section in our user profile.
                     </li>
                 </ul>
             </div>
+            <div
+                {...getRootProps()}
+                className={`dropzone ${isDragActive ? "active" : ""}`}
+            >
+                <input {...getInputProps()} />
+                {isDragActive ? (
+                    <p>Drop the files here ...</p>
+                ) : (
+                    <p>
+                        Drag 'n' drop University module files here, or click to select files
+                    </p>
+                )}
+            </div>
+
+            {uploadedFiles.length > 0 && (
+                <div className="upload-info">
+                    <h3>Uploaded Files:</h3>
+                    <ul>
+                        {uploadedFiles.map(file => (
+                            <li key={file.name}>{file.name}</li>
+                        ))}
+                    </ul>
+                    <div className="upload-status">
+                        <FiCheckCircle size={24} color="#4CAF50" />
+                        <p>{uploadStatus}</p>
+                    </div>
+                </div>
+            )}
             <div>
                 {/* Modal component */}
                 <Modal show={showModalFinal} onHide={handleClose}>
@@ -345,7 +381,7 @@ const GenerateRDF = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-            <div
+            {/* <div
                 {...getRootProps()}
                 className={`dropzone ${isDragActive ? "active" : ""}`}
             >
@@ -372,7 +408,7 @@ const GenerateRDF = () => {
                         <p>{uploadStatus}</p>
                     </div>
                 </div>
-            )}
+            )} */}
         </Container>
     );
 };
