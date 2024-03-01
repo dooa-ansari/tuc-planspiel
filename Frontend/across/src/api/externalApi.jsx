@@ -30,6 +30,18 @@ export const getSearchedModules = async data => {
   return response;
 };
 
+export const getModuleDetails = async data => {
+  let response;
+  try {
+    response = await api.get("/modules", {
+      params: { moduleUri: data },
+    });
+  } catch (error) {
+    return error;
+  }
+  return response;
+};
+
 export const getUniversityUri = async data => {
   let response;
   try {

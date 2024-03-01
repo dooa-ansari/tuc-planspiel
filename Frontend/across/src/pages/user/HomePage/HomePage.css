@@ -35,7 +35,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 1rem;
   padding-top: 10px;
@@ -47,7 +47,7 @@
 }
 
 .quicklink {
-  width: 22%;
+  width: 30%;
   height: 200px;
   padding: 3rem;
   background: var(--primary-color);

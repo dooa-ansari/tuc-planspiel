@@ -81,7 +81,10 @@ const HomePage = () => {
             <section className="homePage__quick__links">
               <h2>Quick Links for the Services</h2>
               <div className="quicklinksWrapper">
-                <NavLink className="quicklink quicklinkOne">
+                <NavLink
+                  className="quicklink quicklinkOne"
+                  to="/campus-flow/user/universities"
+                >
                   <h4>List of Across Universities</h4>
                   <p>
                     Information of the Across Universities, their departments
@@ -107,10 +110,6 @@ const HomePage = () => {
                     Transferring the selected credits from one university to
                     another
                   </p>
-                </NavLink>
-                <NavLink className="quicklink quicklinkFour">
-                  <h4>Studying Abroad</h4>
-                  <p>Suggestions on studying abroad,</p>
                 </NavLink>
               </div>
             </section>

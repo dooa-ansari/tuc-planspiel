@@ -168,3 +168,37 @@ def get_searched_modules_query(search_term):
         GROUP BY ?moduleUri
         """
     return query
+
+
+def get_module_details_query(moduleUri):
+    query = f"""
+        SELECT ?moduleUri  ?courseBelongsToDepartment ?courseHasLanguage ?courseProgram ?moduleWorkLoad ?moduleNumber ?moduleName ?moduleCreditPoints ?universityName ?courseName ?moduleContent
+        WHERE {{       
+                    ?module rdf:type <http://tuc.web.engineering/module#> .
+                    ?module <http://tuc.web.engineering/module#hasName> ?moduleName .
+                    ?module <http://tuc.web.engineering/module#hasModuleNumber> ?moduleNumber .
+                    ?module <http://tuc.web.engineering/module#hasContent> ?moduleContent .
+                    ?module <http://tuc.web.engineering/module#hasCreditPoints> ?moduleCreditPoints .
+                    ?module <http://tuc.web.engineering/module#hasWorkLoad> ?moduleWorkLoad .
+                    ?course rdf:type <http://tuc/course#> .
+                    ?module <http://tuc/course#hasCourse> ?course .
+                    ?course <http://tuc/course#hasCourseName> ?courseName .
+                    ?course <http://tuc/course#belongsToProgram> ?courseProgram .
+                    ?course <http://tuc/course#belongsToDepartment> ?courseBelongsToDepartment .
+                    ?course <http://tuc/course#hasLanguage> ?courseHasLanguage .
+                    ?university rdf:type <http://across/university#> .
+                    ?course <http://across/university#belongsToUniversity> ?university .  
+                    ?university <http://across/university#hasUniversityName> ?universityName .
+
+            BIND(str(?module) AS ?moduleUri)
+            
+            OPTIONAL {{
+        		?module <http://tuc.web.engineering/module#hasSimilarModule> ?similarModule .
+    		}}
+            
+            FILTER (
+                    ?moduleUri = "{moduleUri}"
+            )
+        }}
+    """
+    return query

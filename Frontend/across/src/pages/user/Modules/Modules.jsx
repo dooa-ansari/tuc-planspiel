@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import "./Modules.css";
-import { getAllModules, getSearchedModules } from "../../../api/externalApi";
+import {
+  getAllModules,
+  getSearchedModules,
+  getModuleDetails,
+} from "../../../api/externalApi";
 import { toast } from "react-toastify";
 import Loader from "../../../components/Loader/Loader";
 import SearchBox from "../../../components/user/SearchBox/SearchBox";
@@ -47,19 +51,37 @@ const Modules = () => {
     fetchModules();
   }, [searchTerm]);
 
+  const handleModuleDetails = async moduleUri => {
+    try {
+      console.log(moduleUri);
+      const response = await getModuleDetails(moduleUri);
+      if (response.status === 200 && response.statusText === "OK") {
+        console.log("Module details:", response.data);
+        // Handle displaying module details, e.g., open a modal
+      } else {
+        toast.error("Failed to retrieve module details.");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("An error occurred while fetching module details.");
+    }
+  };
+
   const renderedModulesInGridView = modules.map((module, index) => {
     return (
       <div key={index} className="moduleCard">
         <h2 className="moduleName">{module.module_name}</h2>
         <br />
-        <h4 className="moduleWorkLoad">
-          Module Work Load: {module.module_workload} hours
-        </h4>
         <h4 className="moduleCreditPoints">
           Module Credits: {module.module_credit_points}
         </h4>
         <h4 className="moduleUniversityName">{module.belongs_to_university}</h4>
-        <button type="button">More Details</button>
+        <button
+          type="button"
+          onClick={() => handleModuleDetails(module.module_uri)}
+        >
+          More Details
+        </button>
       </div>
     );
   });
@@ -69,9 +91,6 @@ const Modules = () => {
       <div key={idx} style={{ borderRadius: "25px", marginBottom: "15px" }}>
         <section className="list-group-item listItems">
           <h2 className="moduleName">{module.module_name}</h2>
-          <h4 className="moduleWorkLoad">
-            Module Work Load: {module.module_workload} hours
-          </h4>
           <h4 className="moduleCreditPoints">
             Module Credits: {module.module_credit_points}
           </h4>
@@ -82,13 +101,17 @@ const Modules = () => {
             Module Contents: {getFirstNCharacters(module?.module_content, 200)}
           </p>
 
-          <button type="button">More Details</button>
+          <button
+            type="button"
+            onClick={() => handleModuleDetails(module.module_uri)}
+          >
+            More Details
+          </button>
         </section>
       </div>
     );
   });
 
-  console.log(searchTerm);
   return (
     <>
       {loading && <Loader text="Modules" />}

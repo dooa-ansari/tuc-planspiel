@@ -7,4 +7,5 @@ urlpatterns = [
     path('similarModules', get_similar_module_against_given_module_uri, name='get-similar-modules'),
     path('getAllModules', get_all_modules, name='get-all-modules'),
     path('search', get_searched_modules, name='searched-modules'),
+    path('moduleDetails', get_module_details, name="module-details"),
 ]
