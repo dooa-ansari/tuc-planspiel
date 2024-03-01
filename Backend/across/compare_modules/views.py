@@ -50,7 +50,7 @@ def create_course_entry_in_rdf(data):
         rdf_file_path = f"{university_name}_{course_name[index:]}"
         course_code = course_uri.split('#')[1]
         response_data = {
-                        'message': "Given Course already exist, starting comparing with existing course",
+                        'message': "Given Course already exist",
                         'university_name': belongs_to_university,
                         'university_code': university_code,
                         'course_code': course_code,
@@ -73,7 +73,7 @@ def create_course_entry_in_rdf(data):
     
     if result.status_code == 200:
         response_data = {
-                        'message': "New Course Entry Created in RDF",
+                        'message': "New Course Entry Created in our database",
                         'university_name': belongs_to_university,
                         'university_code': university_code,
                         'course_code': course_code,

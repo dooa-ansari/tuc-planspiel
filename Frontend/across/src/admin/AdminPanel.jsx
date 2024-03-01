@@ -11,6 +11,7 @@ import TransferCredits from "./TransferCredits";
 import CompareModules from "./CompareModules";
 import UsersofTransferCredits from "./UsersofTransferCredits";
 import { useAuth } from "../context/AuthContext";
+import GenerateRDF from "./GenerateRDF";
 
 const AdminPanel = () => {
   const [auth, setAuth] = useAuth();
@@ -36,6 +37,7 @@ const AdminPanel = () => {
         <Route path="transferCredits" element={<TransferCredits />} />
         <Route path="users/transferCreditRequests" element={<UsersofTransferCredits />} />
         <Route path="comparemodules" element={<CompareModules />} />
+        <Route path="generateRDF" element={<GenerateRDF />} />
       </Routes>
     </div>
   );

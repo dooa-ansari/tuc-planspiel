@@ -50,7 +50,7 @@ function PageBody({ auth }) {
       description:
         "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
       buttonText: "Run Automation",
-      link: "/admin/comparemodules",
+      link: "/admin/generateRDF",
     },
     {
       title: "Similar Modules",
@@ -64,7 +64,7 @@ function PageBody({ auth }) {
       description:
         "Facilitate the management and coordination of universities, fostering collaboration and excellence across educational institutions.",
       buttonText: "Convert to RDF",
-      link: "/admin/pdfToRdf",
+      link: "/admin/generateRDF",
     },
     {
       title: "Transfer Credit Requests",
