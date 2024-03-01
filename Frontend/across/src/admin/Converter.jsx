@@ -19,7 +19,7 @@ const Converter = () => {
   const { filePath, universityName, belongs_to_department, course_name, course_uri, belongs_to_program, has_language } = state || {};
 
 
-
+  console.log("FROM CONVERTER", filePath, universityName, belongs_to_department)
   const {
     sendMessage,
     sendJsonMessage,
