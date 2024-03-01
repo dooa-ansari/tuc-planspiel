@@ -50,6 +50,10 @@
   color: rgba(0, 0, 0, 0.75);
 }
 
+.navbar__link>svg {
+  font-size: 1.25rem;
+}
+
 .userName span {
   font-size: 0.75rem;
   display: block;

@@ -33,7 +33,7 @@ export const getSearchedModules = async data => {
 export const getModuleDetails = async data => {
   let response;
   try {
-    response = await api.get("/modules", {
+    response = await api.get("/modules/moduleDetails", {
       params: { moduleUri: data },
     });
   } catch (error) {

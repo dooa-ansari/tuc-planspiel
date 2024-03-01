@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Button, Alert } from "react-bootstrap";
 import "./HomePage.css";
-import SearchBox from "../../../components/user/SearchBox/SearchBox";
 import MainLayout from "../../../components/user/MainLayout/MainLayout";
 import { NavLink } from "react-router-dom";
 import Loader from "../../../components/Loader/Loader";
@@ -48,7 +47,6 @@ const HomePage = () => {
       {!loading && (
         <MainLayout>
           <div className="homePage">
-            <SearchBox />
             <div className="app__features">
               <h2>Welcome to CampusFlow</h2>
               <h4>

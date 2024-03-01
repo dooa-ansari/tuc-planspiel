@@ -9,12 +9,15 @@ import {
 import { toast } from "react-toastify";
 import Loader from "../../../components/Loader/Loader";
 import SearchBox from "../../../components/user/SearchBox/SearchBox";
+import { useNavigate } from "react-router-dom";
 
 const Modules = () => {
   const [modules, setModules] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isGridView, setIsGridView] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const navigate = useNavigate();
 
   const toggleView = () => {
     setIsGridView(prevState => !prevState);
@@ -53,11 +56,12 @@ const Modules = () => {
 
   const handleModuleDetails = async moduleUri => {
     try {
-      console.log(moduleUri);
       const response = await getModuleDetails(moduleUri);
       if (response.status === 200 && response.statusText === "OK") {
-        console.log("Module details:", response.data);
-        // Handle displaying module details, e.g., open a modal
+        const moduleId = response.data[0].module_uri.split("#")[1];
+        navigate(`/campus-flow/user/modules/${moduleId}`, {
+          state: { moduleData: response.data[0] },
+        });
       } else {
         toast.error("Failed to retrieve module details.");
       }
@@ -134,7 +138,7 @@ const Modules = () => {
                       height="20"
                       viewBox="0 0 20 20"
                     >
-                      <g fill="currentColor" fill-rule="nonzero">
+                      <g fill="currentColor" fillRule="nonzero">
                         <path d="M8 0H0v8h8V0zM7 1v6H1V1h6zM8 12H0v8h8v-8zm-1 1v6H1v-6h6zM20 0h-8v8h8V0zm-1 1v6h-6V1h6zM20 12h-8v8h8v-8zm-1 1v6h-6v-6h6z"></path>
                       </g>
                     </svg>
@@ -147,7 +151,7 @@ const Modules = () => {
                       height="19"
                       viewBox="0 0 20 19"
                     >
-                      <g fill="currentColor" fill-rule="evenodd">
+                      <g fill="currentColor" fillRule="evenodd">
                         <path d="M0 6h20v1H0zM0 0h20v1H0zM0 12h20v1H0zM0 18h20v1H0z"></path>
                       </g>
                     </svg>
