@@ -15,6 +15,7 @@ import {
   getCoursesOfParticularUniversity,
   getModulesOfCourse,
 } from "../../../api/compareModuleApi";
+import { ToastContainer, toast } from "react-toastify";
 
 const MyProfile = () => {
   const [auth] = useAuth();
@@ -73,7 +74,7 @@ const MyProfile = () => {
       const response = await saveCompletedModules(requestData);
       console.log(response);
       if (response.status === 200 && response.statusText === "OK") {
-        alert("Modules submitted successfully!");
+        toast.success("Modules submitted successfully");
         setCompletedModules(response.data.data);
         setSelectedCourse(null);
         setActiveTab("profileDetails");
@@ -325,6 +326,8 @@ const MyProfile = () => {
               </div>
             </Tab>
           </Tabs>
+
+          <ToastContainer />
         </div>
       </MainLayout>
     </>
