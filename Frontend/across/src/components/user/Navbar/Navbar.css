@@ -1,6 +1,5 @@
 #navbar {
   background: #dcdbdb;
-  border-bottom: 5px solid var(--primary-color);
   position: fixed;
   left: 0;
   top: 0;

@@ -10,7 +10,7 @@ import { useAuth } from "../../../context/AuthContext";
 import MenuOpenButton from "../../MenuOpenButton/MenuOpenButton";
 import MenuCloseButton from "../../MenuCloseButton/MenuCloseButton";
 
-const Navbar = () => {
+const Navbar = ({ borderColor }) => {
   const [auth, setAuth] = useAuth();
 
   const handleSignOut = () => {
@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <>
-      <section id="navbar">
+      <section id="navbar" style={{ borderBottom: `5px solid ${borderColor}` }}>
         <div className="navbar__container">
           <header className="navbar__contents">
             <h1 className="navbar__brand">

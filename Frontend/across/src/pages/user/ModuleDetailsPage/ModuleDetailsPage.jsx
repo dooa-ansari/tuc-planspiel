@@ -2,8 +2,11 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import tucImage from "../../../assets/universities_images/tucImage.jpg";
 import bialystokImage from "../../../assets/universities_images/bialystokImage.jpg";
-import { ListGroup } from "react-bootstrap";
-import { MdTranslate } from "react-icons/md";
+import tucLogo from "../../../assets/universities_images/tucLogo.webp";
+import bialystokLogo from "../../../assets/universities_images/bialystokLogo.png";
+import "./ModuleDetailsPage.css";
+import Navbar from "../../../components/user/Navbar/Navbar";
+import Footer from "../../../components/user/Footer/Footer";
 
 const ModuleDetailsPage = () => {
   const location = useLocation();
@@ -16,6 +19,7 @@ const ModuleDetailsPage = () => {
   };
   return (
     <div>
+      <Navbar />
       {moduleData.belongs_to_university === "Bialystok University" ? (
         <img
           style={{ width: "100%", height: "60vh", objectFit: "cover" }}
@@ -29,31 +33,49 @@ const ModuleDetailsPage = () => {
           alt=""
         />
       )}
-      <ListGroup>
-        <ListGroup.Item>
-          Module Number: {moduleData.module_number}
-        </ListGroup.Item>
-        <ListGroup.Item>Module Name: {moduleData.module_name}</ListGroup.Item>
-        <ListGroup.Item>
-          Module Offered By: {moduleData.belongs_to_university}
-        </ListGroup.Item>
-        <ListGroup.Item>
-          Module Content: {moduleData.module_content}
-        </ListGroup.Item>
-        <ListGroup.Item>
-          Credit Points: {moduleData.module_credit_points}
-        </ListGroup.Item>
-        <ListGroup.Item>
-          Module Workload: {moduleData.module_workload}
-        </ListGroup.Item>
-        <ListGroup.Item>Language: {moduleData.has_language}</ListGroup.Item>
-      </ListGroup>
-      <h2 style={{ textAlign: "center" }}>Styling to be done</h2>
-      <div
-        style={{
-          position: "relative",
-        }}
-      >
+
+      <div className="moduleDetailsContainer">
+        <div className="moduleDetails">
+          <div className="moduleDetails__left">
+            <img
+              className="uniLogo"
+              src={
+                moduleData.belongs_to_university === "Bialystok University"
+                  ? bialystokLogo
+                  : tucLogo
+              }
+              alt=""
+            />
+          </div>
+          <div className="moduleDetails__right">
+            <div className="u_name">{moduleData.belongs_to_university}</div>
+            <h1 className="module_name">{moduleData.module_name}</h1>
+            <div className="module_contents">
+              Contents: {moduleData.module_content}
+            </div>
+
+            <div className="module_features">
+              <div className="module_feature">
+                <h4>{moduleData.module_credit_points}</h4>
+                <p>Credit Points</p>
+              </div>
+              <div className="module_feature">
+                <h4>{moduleData.has_language}</h4>
+                <p>Language</p>
+              </div>
+              <div className="module_feature">
+                <h4>{moduleData.module_workload}</h4>
+                <p>Workload</p>
+              </div>
+              <div className="module_feature">
+                <h4>{moduleData.module_number}</h4>
+                <p>Module Identifier</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
         <button
           style={{
             display: "block",
@@ -61,13 +83,9 @@ const ModuleDetailsPage = () => {
             outline: "none",
             padding: " 9px 16px 10px 18px",
             background: "#bcd8c1",
-            borderRadius: "25px",
             color: "#121212",
             fontWeight: "500",
-            marginBottom: 0,
-            position: "absolute",
-            left: "50%",
-            transform: "translate(-50%)",
+            marginBottom: "20px",
           }}
           type="button"
           onClick={handleBtnClick}
@@ -75,6 +93,7 @@ const ModuleDetailsPage = () => {
           Go back
         </button>
       </div>
+      <Footer />
     </div>
   );
 };

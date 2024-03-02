@@ -133,3 +133,11 @@ renderedListItems {
   }
 
 }
+
+@media screen and (max-width: 768px) {
+  .filterSectionContents {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
