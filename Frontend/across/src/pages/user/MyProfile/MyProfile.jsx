@@ -287,8 +287,8 @@ const MyProfile = () => {
                       {modules &&
                         modules.map((module, idx) => {
                           return (
-                            <tbody key={idx}>
-                              <tr>
+                            <tbody className="cmodulesList" key={idx}>
+                              <tr className="cmoduleRow">
                                 <td>{module.moduleNumber}</td>
                                 <td>{module.moduleName}</td>
                                 <td>{module.moduleCreditPoints}</td>

@@ -29,7 +29,7 @@ const Navbar = ({ borderColor }) => {
 
   return (
     <>
-      <section id="navbar" style={{ borderBottom: `5px solid ${borderColor}` }}>
+      <section id="navbar" style={{ borderBottom: `4px solid ${borderColor}` }}>
         <div className="navbar__container">
           <header className="navbar__contents">
             <h1 className="navbar__brand">
