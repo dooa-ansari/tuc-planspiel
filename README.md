@@ -50,6 +50,12 @@ python3 -m pip install Django
 python3 -m pip install -r requirements.txt
 ```
 ```bash
+python3 manage.py makemigrations
+```
+```bash
+python3 manage.py migrate
+```
+```bash
 python3 manage.py runserver
 ```
 **Note:** Please replace python3 with python incase python3 doesn't work on your system
@@ -83,29 +89,33 @@ java -server -Xmx4g -jar blazegraph.jar
 
 _Hit this URL on your browser to access the blazegraph [LINK](http://localhost:9999/blazegraph/)_
 
+In order head start with data you can upload some of the RDF files available at the [LINK](https://github.com/blazegraph/database/wiki/Quick_Start) to the blazegraph
 
-## Usage
+## Deployment (Optional)
+**Create and AWS account and run EC2 instances and S3 bucket before moving on the deployment**
+**Install Docker on your machine [LINK](https://www.docker.com/)**
 
-```python
-import foobar
 
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+### Blazegraph
+Create an image for linux based machine using the Dockerfile available in the Blazegraph folder
+```bash
+docker build -t blazegraph . --platform linux/amd64
+```
+Tag the image
+```bash
+docker tag across-server acrosswebwizards/blazegraph:latest 
+```
+Push the image to dockerhub
+```bash
+docker push acrosswebwizards/blazegraph:latest   
+```
+Pull the image to your running EC2 instance
+```bash
+docker pull acrosswebwizards/blazegraph:latest   
 ```
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+Run the image using the following command on your EC2
+```bash
+docker run -d -p 80:9999 blazegraph
+```
+**Note: Please update the above commands accordingly as per your docker hub account name**
