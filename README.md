@@ -29,6 +29,11 @@ CampusFlow is a student and administration management web-based system built for
 
 **Note:** Please use appropriate installation guides provided by the software providers based on your OS requirements
 
+### API Documentation
+
+Api documentation can be access through this [LINK](https://documenter.getpostman.com/view/31802738/2sA2xb7vjD)
+
+
 # Installation
 
 ### MySQL
