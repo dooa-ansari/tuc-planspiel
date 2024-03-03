@@ -93,7 +93,7 @@ In order head start with data you can upload some of the RDF files available at 
 
 ## Deployment (Optional)
 **Create and AWS account and run EC2 instances and S3 bucket before moving on the deployment**
-**Install Docker on your machine [LINK](https://www.docker.com/)**
+**and also Install Docker on your machine [LINK](https://www.docker.com/)**
 
 
 ### Blazegraph
@@ -118,4 +118,39 @@ Run the image using the following command on your EC2
 ```bash
 docker run -d -p 80:9999 blazegraph
 ```
-**Note: Please update the above commands accordingly as per your docker hub account name**
+**Note: Please update the above commands accordingly as per your docker hub account name, you can also use any other deployment platforms for deployment**
+
+### Backend
+Create an image for linux based machine using the Dockerfile available in the across folder
+```bash
+docker build -t across-server . --platform linux/amd64
+```
+Tag the image
+```bash
+docker tag across-server acrosswebwizards/across-server:latest 
+```
+Push the image to dockerhub
+```bash
+docker push acrosswebwizards/across-server:latest   
+```
+Pull the image to your running EC2 instance
+```bash
+docker pull acrosswebwizards/across-server:latest   
+```
+
+Run the image using the following command on your EC2
+```bash
+docker run -d -p 80:9999 across-server
+```
+**Note: Please update the above commands accordingly as per your docker hub account name, you can also use any other deployment platforms for deployment**
+
+### Frontend
+Configure AWS S3 bucket for static hosting
+
+```bash
+npm run build
+```
+Push to S3
+```bash
+aws s3 sync dist/ s3://[yourbucketname] 
+```
