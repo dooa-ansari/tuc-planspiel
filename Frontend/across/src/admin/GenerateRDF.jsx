@@ -23,12 +23,13 @@ const GenerateRDF = () => {
         belongsToUniversity: "",
         belongsToProgram: "",
         belongsToDepartment: "",
+        customDepartment: "",
         hasLanguage: "",
     });
 
     const [departments, setDepartments] = useState([]);
 
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(true);
     const [universityOptions, setUniversityOptions] = useState([]);
     const navigate = useNavigate();
 
@@ -96,13 +97,12 @@ const GenerateRDF = () => {
 
     const handleChange = e => {
         const { name, value } = e.target;
-
         setFormData(prevData => ({
             ...prevData,
+            belongsToDepartment: name === "belongsToDepartment" && prevData.belongsToDepartment === "Other" ? prevData.customDepartment : prevData.belongsToDepartment,
             [name]: value,
-        }));
+        }));   
     };
-
     const handleRedirect = () => {
         if (redirectData) {
             const {
@@ -144,7 +144,7 @@ const GenerateRDF = () => {
                     courseName: formData.courseName,
                     belongsToUniversity: formData.belongsToUniversity,
                     belongsToProgram: formData.belongsToProgram,
-                    belongsToDepartment: formData.belongsToDepartment,
+                    belongsToDepartment: formData.customDepartment,
                     hasLanguage: formData.hasLanguage,
                 };
 
@@ -335,6 +335,7 @@ const GenerateRDF = () => {
                                         aria-label="Default select example"
                                         onChange={handleChange}
                                         name="belongsToDepartment"
+                                        value={formData.belongsToDepartment}
                                     >
                                         <option>Select Department</option>
                                         {departments.map((dept, idx) => {
@@ -354,7 +355,10 @@ const GenerateRDF = () => {
                                 <Col>
                                     <Form.Group controlId="specifyDepartment">
                                         <Form.Label>Specify your Department:</Form.Label>
-                                        <Form.Control type="text" />
+                                        <Form.Control type="text"
+                                            name="customDepartment"
+                                            value={formData.customDepartment}
+                                            onChange={handleChange} />
                                     </Form.Group>
                                 </Col>
                             </Row>
