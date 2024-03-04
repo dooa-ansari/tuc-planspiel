@@ -304,13 +304,10 @@ def upload_transcript(request):
             uploaded_files = request.FILES.getlist('files')
             other_data = json.loads(request.POST.dict().get("data"))
             moudle_list = other_data.get("modules")
-            saved_files, temp_dir =saveFiles(uploaded_files)
-            print(saved_files)
-            print(temp_dir)
-            # test = os.path.join(settings.BASE_DIR, 'uploads')
-            pdf_file = open(os.path.join(temp_dir, saved_files), "rb")
+            saved_files=saveFiles(uploaded_files)
+            pdf_file = open(f"Backend/across/uploads/{saved_files}", "rb")  
             pdf_reader = PyPDF2.PdfReader(pdf_file)
-            # noOfPages = len(pdf_reader.pages)
+            noOfPages = len(pdf_reader.pages)
             text = ""
             result = []
             duplicates = set()
@@ -349,24 +346,19 @@ def upload_transcript(request):
             return JsonResponse({'message': 'Transcript uploaded successfully', 'grades_modules': result}, status=200)
     except Exception as e:
             return JsonResponse({'message': f'Transcript upload failed: {str(e)}'}, status=500)
-    finally:
-        os.remove(saved_files)
-        os.rmdir(temp_dir)
-        
 
 uploadLoaction =""
 def saveFiles(uploaded_files):
     # Specify the directory where you want to save the files
-    temp_dir = tempfile.mkdtemp()
-    # upload_directory = os.path.join(settings.BASE_DIR, 'uploads')
+    upload_directory = 'Backend/across/uploads/'
 
     # Create a FileSystemStorage instance with the upload directory
-    # fs = FileSystemStorage(location=upload_directory)
-    # uploadLoaction= fs.location
-    # print(fs.location)
+    fs = FileSystemStorage(location=upload_directory)
+    uploadLoaction= fs.location
+    print(fs.location)
     # Process and save the uploaded files
     saved_files = []
     for file in uploaded_files:
-        saved_file = os.path.join(temp_dir, file.name)
+        saved_file = fs.save(file.name, file)
         saved_files.append(saved_file)
-    return saved_files[0],temp_dir 
+    return saved_files[0]
