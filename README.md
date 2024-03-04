@@ -32,7 +32,7 @@ CampusFlow is a student and administration management web-based system built for
 
 ## API Documentation
 
-***Note: acessesable till 20/March/2024** Postman Api documentation can be access through this [LINK](https://documenter.getpostman.com/view/31802738/2sA2xb7vjD)
+***Note: accessible till 20/March/2024** Postman Api documentation can be access through this [LINK](https://documenter.getpostman.com/view/31802738/2sA2xb7vjD)
 
 
 # Installation
@@ -95,7 +95,7 @@ java -server -Xmx4g -jar blazegraph.jar
 
 _Hit this URL on your browser to access the blazegraph [LINK](http://localhost:9999/blazegraph/)_
 
-In order head start with data you can upload some of the RDF files available at the [LINK](https://github.com/blazegraph/database/wiki/Quick_Start) to the blazegraph
+***Note: accessible till 20/March/2024** In order head start with data you can upload some of the RDF files available at the [LINK](https://drive.google.com/drive/folders/1MjLmdYIQXa9I-gnUay1zUhH3CfGY0c_d?usp=sharing) to the blazegraph
 
 ## Deployment (Optional)
 **Create and AWS account and run EC2 instances and S3 bucket before moving on the deployment**
