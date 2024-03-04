@@ -101,9 +101,8 @@ const GenerateRDF = () => {
             ...prevData,
             belongsToDepartment: name === "belongsToDepartment" && prevData.belongsToDepartment === "Other" ? prevData.customDepartment : prevData.belongsToDepartment,
             [name]: value,
-        }));
+        }));   
     };
-
     const handleRedirect = () => {
         if (redirectData) {
             const {
@@ -145,7 +144,7 @@ const GenerateRDF = () => {
                     courseName: formData.courseName,
                     belongsToUniversity: formData.belongsToUniversity,
                     belongsToProgram: formData.belongsToProgram,
-                    belongsToDepartment: formData.belongsToDepartment,
+                    belongsToDepartment: formData.customDepartment,
                     hasLanguage: formData.hasLanguage,
                 };
 
@@ -357,7 +356,7 @@ const GenerateRDF = () => {
                                     <Form.Group controlId="specifyDepartment">
                                         <Form.Label>Specify your Department:</Form.Label>
                                         <Form.Control type="text"
-                                            name="belongsToDepartment"
+                                            name="customDepartment"
                                             value={formData.customDepartment}
                                             onChange={handleChange} />
                                     </Form.Group>
