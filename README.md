@@ -32,7 +32,7 @@ CampusFlow is a student and administration management web-based system built for
 
 ## API Documentation
 
-***Note: acessesable till 20/March/2024** Swagger Api documentation can be access through this [LINK](https://documenter.getpostman.com/view/31802738/2sA2xb7vjD)
+***Note: acessesable till 20/March/2024** Postman Api documentation can be access through this [LINK](https://documenter.getpostman.com/view/31802738/2sA2xb7vjD)
 
 
 # Installation
