@@ -19,9 +19,10 @@ CampusFlow is a student and administration management web-based system built for
   - [Blazegraph](https://github.com/blazegraph/blazegraph-python) 
   - [Python >= 3](https://www.python.org/downloads/)
   - [Nodejs >= 16](https://nodejs.org/en/download)
+  - [Java >= 8](https://www.oracle.com/java/technologies/downloads/)
 
 - Deployment Requirements
-  - AWS RDF - For Mysql
+  - AWS RDS - For Mysql
   - AWS EC2 - For backend
   - AWS EC2 - For Blazegraph
   - AWS S3 - For frontend
