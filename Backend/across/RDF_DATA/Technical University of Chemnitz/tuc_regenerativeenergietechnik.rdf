@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://tuc.web.engineering/module#"
+   xmlns:ns2="http://across/university#"
+   xmlns:ns3="http://tuc/course#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e3813-da6b-11ee-b1c5-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">244038-010(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seminar Energiespeichersysteme</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Lehrveranstaltung vermittelt vertiefende Inhalte zu Energiespeichersystemen. Folgende Themenkomplexe sind Gegenstand der Lehrveranstaltungen:  Übersicht zu Energiespeicher und -wandler-Mechanismen und deren Anwendungen  Elektrochemische Grundlagen  Batterie: Zellaufbau, Zellmodul, Batteriesystem  Systemsicherheit  Simulation des elektrischen und thermischen Verhaltens  Diagnoseverfahren für elektrochemische Systeme  Alternative Speicher und Wandler: Doppelschichtkondensatoren, Brennstoffzellen, Redox-Flow Batterien, Hybride Zellkonzepte  Powermanagement Systeme</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e9fe3-da6b-11ee-8fdb-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-012(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Praktikum fortgeschrittene Regelungstechnik</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Praktikum zu modernen Verfahren der Regelungstechnik, die in den Lehrveranstaltungen Fortgeschrittene Methoden der Regelungstechnik sowie Dynamik und Regelung vernetzter Systeme behandelt werden. Dabei werden auch Aspekte aus der Nichtlinearen Regelung, der Optimalen Regelung sowie der Modellbildung und Identifikation dynamischer Systeme mit einbezogen. Die Studenten wählen zu Beginn des Semesters, welche konkreten Versuche bzw. Miniprojekte bearbeitet werden.</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ec875-da6b-11ee-b15f-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T28024-003(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Factors</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> kognitive Ergonomie  Arbeitsplatz- und Arbeitsmittelgestaltung  Produktdesign  Mensch-Maschine-Systeme  Automatisierung</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e7307-da6b-11ee-8949-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-004(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modellbildung und Identifikation dynamischer Systeme 1</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Modellbegriff  Methoden der Modellbildung  Blackbox- und Whitebox-Modelle  Modellvalidierung  Konkrete Beispiele aus Elektrotechnik, Mechanik, Thermodynamik, Biologie, Chemie</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ec879-da6b-11ee-b28d-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231231-002(Version03)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erfolgsfaktor Mensch</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Arbeitsphysiologische Grundlagen  Methoden zur Ermittlung physiologischer Belastungen und Beanspruchungen  Ausgewählte Fähigkeitsänderungen durch Altern, Behinderung und Krankheit  Gesundheit im Arbeitsleben  Betriebliches Kompetenzmanagement  Ausgewählte Methoden und Instrumente zur Entwicklung von Selbst-, Sozial- und Methodenkompetenzen (z. B. Kommunikation, Führungskompetenz, Selbstmanagement)  Veränderungsprozesse</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ea52e-da6b-11ee-b11e-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">244038-009(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Praxisseminar Mess- und Sensortechnik</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Grundlagen der Sensorik  Messsysteme und Sensorik in Medizin und Biologie  Messverfahren und Sensorik in der Umwelttechnik  Messsysteme und Sensorik in der Verkehrstechnik  Energieversorgung von Sensorsystemen  Impedanzspektroskopie  Trends der Mess- und Sensortechnik  Einsatz neuer Materialien und Technologien in der Sensortechnik</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e3812-da6b-11ee-a682-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242032-004(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zuverlässigkeit und Robustheit leistungselektronischer Systeme</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Aufbau- und Verbindungstechnik sowie thermo-mechanische Probleme von leistungselektronischen Systemen  Berechnung, Design, Realisierung eines Leistungshalbleiterbauelements, Auslegung, Qualitätsanforderungen, Projektmanagement  Zerstörungsmechanismen in Leistungsbauelementen, charakteristische Ausfallbilder  Schaltnetzteile und Gleichspannungswandler: Topologien, exemplarische Auslegung  Ausgewählte Themen der elektromagnetischen Verträglichkeit  Integration leistungselektronischer Systeme: monolithische Integration, Integration auf Leiterplattenbasis, hybride Integration  Simulation von ausgewählten dynamischen Schalt- und Überlastfällen</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e7308-da6b-11ee-9577-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-005(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modellbildung und Identifikation dynamischer Systeme 2</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Einführung in die Systemidentifikation  Parametrische dynamische Modelle  Schätzverfahren (Bezeichnungen, Bias, Konsistenz, Ausgleichsrechnung, mengenbasierte Verfahren, Zustandsschätzverfahren, u.a.)  Optimierungsverfahren und -algorithmen  erweiterte Konzepte</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ea531-da6b-11ee-ae18-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231433-001(Version05)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strömungslehre</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Strömungslehre ist eine fundamentale Ingenieurdisziplin. Zur Auslegung und Entwicklung von Maschinen, Geräten und Apparaten gehört die Strömungslehre als Grundlage zum ingenieurtechnischen Handwerkszeug. Hierbei stehen oftmals das Bewegungsverhalten von Flüssigkeiten und Gasen sowie ihre Wirkung auf feste Bauteile im Vordergrund. Der Fokus der Vorlesung liegt dabei sowohl in der theoretischen Herleitung als auch in der Anwendung grundlegender Gesetzmäßigkeiten, die für die Technik von besonderer Bedeutung sind. Die Behandlung dieser theoretischen Zusammenhänge geschieht unter dem Aspekt, den Studenten eine tragfähige Basis für die eigenständige Lösung strömungsmechanischer Problemstellungen zu vermitteln. Dieses Vorhaben wird durch die Erörterung ausgewählter Anwendungsbeispiele unterstützt.</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ea533-da6b-11ee-accb-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">264031-209(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundlagen des Energierechts</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allgemeiner Teil Einteilung: Schnittstellen von Energie- und Umweltrecht o Begriffe, Konzepte, Prinzipien des Umweltschutzes o Rechtsquellen des Umwelt(schutz)- und Energierechts o Umweltschutz in Bundes- und Landes(verfassungs)recht o Instrumente/Verfahren des Umweltschutzes mit Bezug zu Energie o Haftung für Umweltschäden und Sanktionen o Umwelt-Information o Rechtsschutz o Besonderes Umweltrecht Immissionsschutzrecht mit Bezug zum Energierecht o Atomrecht mit Bezug zum Energierecht o Abfallrecht o Wasser-, Boden-, Naturschutzrecht mit Bezug zum Energierecht o Allgemeines Umweltrecht (Systematik, Allgemeine Prinzipien des Umweltschutzes, Rechtsquellen des Umweltschutzrechts international/europäisch/national, Umweltschutz in Bundes- und Landes[verfassungs]recht, Instrumente des staatlichen Umweltschutzes, Haftung für Umweltschäden, Sanktionen bei Verstößen), Besonderes Umweltrecht (Fokus auf Immissionsschutzrecht, Abfall- und Bodenschutzrecht, Wasserrecht) Einzelthemen sind u.a.: Verursacher-/Vorsorgeprinzip, o Umweltverträglichkeit, o Verbandsklagen, o Ökoaudit, o integrierte Verfahren, o Kontrollerlaubnis, o Planfeststellung/-genehmigung inkl. Öffentlichkeits-/Behördenbeteiligung, o Kreislaufwirtschaftsmodelle, „Eingriff“ in Natur und Landschaft o</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ea530-da6b-11ee-b4d0-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">243032-005(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multisensorial Systems</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Einführung in die Modellierung vager Sachverhalte  Modellierung vager Sachverhalte mit Hilfe der Wahrscheinlichkeitstheorie  Modellierung dynamischer Systeme mit dem Schwerpunkt Zustandsraumbeschreibung  Dynamische Modelle und Störungsmodellierung  Messmodelle (u. a. Laser-Scanner, Radar, Videobilder)  Grundlagen der Schätztheorie  Kalman-Filterung  Kalman-Filter in Beispielen und Anwendungen  Kalman-Filter für das Tracking von Objekten (z.B. Fahrzeuge oder Fußgänger)  Multi-Kalman-Filter für das gleichzeitige Verfolgen mehrerer Objekte  Sensor-Daten-Fusion (u.a. Laser-Scanner und Videobilder)  Erweiterungen und Spezialfälle des Kalman-Filters</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e1002-da6b-11ee-a327-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242033-006(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beanspruchung von Betriebsmitteln</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Beanspruchungen von Isolierungen durch äußere und innere Überspannungen  Wanderwellenausbreitung und Überspannungsschutz  Beherrschung des Leistungslichtbogens  Schaltlichtbögen und Kontakttheorie  Thermische und mechanische Beanspruchung von Betriebsmitteln</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e1001-da6b-11ee-adc3-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242031-008(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wind- und Wasserkraftanlagen und deren Regelung</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Modellierung und Optimierung regelungstechnischer Systeme  Physikalische Grundlagen, Aufbau-/Wirkungsweise, Gesamtkonzept von Windenergieanlagen  Physikalische Grundlagen, Aufbau-/Wirkungsweise, Gesamtkonzept von konventionellen Wasserkraftwerken, Gezeiten- und Wellenkraftwerken  Generatoren von Wind- und Wasserkraftanlagen und deren Regelung  Eigenschaften von Batterien, Auswahlkriterien für deren Einsatz, Strom- und Spannungsregelung der erforderlichen Ladegeräte</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e5f3e-da6b-11ee-b828-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242031-007(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Traktions- und Magnetlagertechnik</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Traktionstechnik:  Kinematische Grundlagen, Spurführung, Rad-Schiene-Kontakt  Fahrwerke und Lastkollektive  Bahnstromversorgung  Fahrmotoren und deren Dimensionierung  Stromrichtertechnik Magnetlagertechnik:  Physikalische Grundlagen, Einteilung magnetischer Lagerung  Aufbau und Wirkungsweise aktiver Magnetlagerungen für Rotoren  Komponenten aktiver Magnetlagerungen  Regelung aktiver Magnetlagerungen  Dynamik magnetgelagerter Rotoren  Lagerlose Motoren  Technische Anwendungsgebiete, Trends</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e7304-da6b-11ee-8869-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T21024-002(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elektrochemische Energiespeicher</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorlesung „Grundlagen und Systeme elektrochemischer Energiespeicher“  Energieformen und -speicherung  Physik und Chemie der Energiewandlung und -speicherung  Komponenten und Funktionsprinzip elektrochemischer Zellen  Thermodynamik und Kinetik elektrochemischer Speicher und Wandler  Verfahren zur Untersuchung elektrochemischer Speicher  Batterien und Akkumulatoren  Supercaps  Wasserstoffelektrolyse und Brennstoffzellen Praktikum „Grundlagen elektrochemischer Energiespeicher“ Im Praktikum werden Versuche zu den in der Vorlesung behandelten Methoden vom Studenten durchgeführt.</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e3811-da6b-11ee-921a-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">232033-004(Version05)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brennstoffzellen und Brennstoffzellensysteme I</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Einführung in die Brennstoffzellen- und Wasserstofftechnologie (Energieproblematik, Historie, Typen und Einsatzbereiche, Wasserstoffeigenschaften)  Wasserstofftechnologie (Erzeugung, Speicherung, Energetische Gesamtbetrachtung)  Physikalisch-chemische Grundlagen der Brennstoffzellen (chemische Reaktionen, Thermodynamik)  Brennstoffzellensysteme (Aufbau, Modulkomponenten, Wirkungsgrade)</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ea52f-da6b-11ee-893c-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241032-004(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zuverlässigkeit und funktionale Sicherheit</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zuverlässigkeit (Auftreten von Störungen ohne Gefährdung) und Sicherheit (Störungen mit Gefährdungspotential) spielen in der Automatisierung eine wichtige Rolle. Die Szenarien reichen vom Flugzeugabsturz und GAU im Kernkraftwerk bis zum Ausfall einer Fertigungsstraße oder der Qualitätsendkontrolle in der Produktion. Bei Rechnersystemen muss zwischen Hardware- und Softwarezuverlässigkeit unterschieden werden. Daneben spielt menschliches Versagen eine immer bedeutendere Rolle. Diese Aspekte werden in der Vorlesung qualitativ und quantitativ erörtert, wobei zur mathematischen Beschreibung Methoden der Wahrscheinlichkeitstheorie eingeführt und verwendet werden. Gliederung:  Begriffsdefinitionen von Zuverlässigkeit und Sicherheit  Mathematische Methoden zur Analyse von Zuverlässigkeit und Sicherheit  Berechnung der Zuverlässigkeit von Systemen anhand ihrer Komponenten  Failure Mode, Effect, and Criticality Analysis  Besondere Aspekte der Softwarezuverlässigkeit  Maßnahmen zur Erhöhung der Zuverlässigkeit, redundante Systeme  Human Error: Menschliches Versagen, Ursachen und Gegenmaßnahmen</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e3810-da6b-11ee-9559-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242031-006(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theorie elektrischer Maschinen</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Kraft- und Drehmomentbildung, Raumzeigertheorie, Koordinatentransformationen  Dynamisches Verhalten von Wicklungsanordnungen  Dynamisches Verhalten und Untersuchung spezieller Betriebszustände von Asynchron- und Synchronmaschinen  Beschreibung des dynamischen Verhaltens der Gleichstrommaschine mit Hilfe von Zustandsgleichungen  Signalflusspläne der wichtigsten elektrischen Maschinen</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e730c-da6b-11ee-a56a-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-009(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dynamik und Regelung vernetzter Systeme /</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Modellierung vernetzter Systeme  Graphentheoretische Charakterisierung  Systemtheoretische und regelungstechnische Methoden für vernetzte Systeme  Synchronisation und Konsensus  Anwendungen</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11eff83-da6b-11ee-846a-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">240100-825(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master-Arbeit</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gegenstand des Moduls ist die Erstellung der Masterarbeit zu einer ingenieurwissenschaftlichen Aufgabe, deren schriftliche Darstellung und eine mündliche Prüfung. Das Thema der Masterarbeit soll auf dem Gebiet der Technik der regenerativen Energien liegen. Der Student wird dabei von einem wissenschaftlichen Betreuer der Fakultät unterstützt.</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e5f3d-da6b-11ee-899f-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242031-005(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automatisierte Antriebe</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Modellierung elektromechanischer Systeme  Antriebskomponenten und -systeme  Hard- und Softwarekomponenten der Signalverarbeitung des Antriebs- systems  Umrichterspeisung frequenzgesteuerter Antriebe  Pulssteuerverfahren zur Umrichterspeisung  Feldorientierte Regelung von Drehstrommaschinen  Wechselwirkungen von Stellglied und Motor</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e5f3c-da6b-11ee-b252-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242033-010(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energiespeicher und Energiewandlungssysteme</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> systemanalytische Aspekte der Energiespeicherung und Energiewandlung in einem nachhaltigen Energiesystem mit hohem Anteil erneuerbarer Energien  Begriff, Typen, Klassifizierung, physikalische Grundprinzipien und wichtige technische Kennwerte von Energiespeichern und Energiewandlern  physikalisch-chemische Grundlagen von elektrochemischen Energie- speichern  technische Batteriespeicher (z. B. Blei, Lithium-Ionen; Kennwerte, Ladeverfahren)  chemische Energiespeicherkonzepte (Wasserstoff, synthetisches Methan, Elektrolyse und Brennstoffzelle)  mechanische Energiespeicher (Pumpspeicher, Schwungradspeicher und Druckluftspeicher)  thermische Energiespeicher  Auslegung und Regelung von Multispeicher-Hybridsystemen (Kopplungs- und Steuerungskonzepte, Maximierung von Gesamteffizienz und Lebensdauer)</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ec877-da6b-11ee-ab75-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231232-003(Version06)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projektmanagement (MB)</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Projekte und Projektmanagement  Vorgehensmodelle und Projektdesign, Erfolgsfaktoren  Umfeld- und Stakeholderanalyse, Zieldefinition  Risikomanagement in Projekten  Projektorganisation  Projektstrukturierung, Leistungsobjekte  Projektplanung: Abläufe, Zeiten, Ressourcen, Kosten  Projektsteuerung  Information, Kommunikation, Dokumentation  Softwareunterstützung Die Veranstaltung baut auf einem international anerkannten Standard zum Projektmanagement, der International Competence Baseline (ICB) der IPMA/ GPM, auf.</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e7309-da6b-11ee-9708-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-007(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optimale Regelung / Optimal Control</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Endlich dimensionale Optimierung  Statische Optimierung  Dynamische Optimierung  Variationsprobleme mit endlichem Zeithorizont, LQ-Regelung  Modelprädiktive Regelung  Numerische Verfahren  Anwendungen aus verschiedenen Bereichen</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ea532-da6b-11ee-8fb3-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">264032-207(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recht und Technik (Technikrecht)</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Technikrecht/Technologierecht/Recht neuer Technologien  Aufzeigen der Schnittstellen von Recht und Technik  Produktverantwortung/-haftung (zivil- und strafrechtliche Grundlagen – auch rechtsvergleichend)  Normung, Zertifizierung und Akkreditierung  Europäische und nationale Marktüberwachung  Aktuelle Themen mit technikrechtlichem Bezug (je nach Teilnehmerkreis), z. B. Cloud-Computing, E-Commerce, Elektromobilität, Industrie 4.0, Künstliche Intelligenz</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e7306-da6b-11ee-8e3e-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242033-009(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netzberechnung und Schutztechnik</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Netztopologie, Lastflussberechnungen  Methoden zur Leistungsflussberechnung in Strahlen-, Ring- und Maschennetzen  Methoden zur Kurzschlussberechnung in Mittel- und Niederspannungsnetzen  Anwendung von Netzberechnungsprogrammen  Aufgaben und Kriterien für den Netzschutz  Zeitstaffel-, Differential- und Erdfehlerschutz  Schutz von Strahlen-, Ring- und Maschennetzen</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ec874-da6b-11ee-9efe-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">264031-210(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recht der erneuerbaren Energien</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Im Modul werden die Grundlagen des Rechts der erneuerbaren Energien im Allgemeinen behandelt – vorrangig die Darstellung der rechtlichen Zusammenhänge am Beispiel der Windenergie als der derzeit dominierenden Form der Energieerzeugung aus regenerativen Energieträgern.</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e730d-da6b-11ee-bbbb-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-010(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seminar komplexe Systeme / Complex Systems Seminar</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methoden der Analyse, Regelung und Identifikation komplexer vernetzter Systeme aus ausgewählten Anwendungsbereichen, z.B. Energiesysteme, Verfahrenstechnik, Automatisierungssysteme, Agrartechnik und Mechatronik</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e730a-da6b-11ee-b437-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241032-008(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prozessdatenkommunikation</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Die Automatisierung ist heute gekennzeichnet durch hochgradig dezentrale Systeme, wobei z. T. Hunderte von Rechnern und Tausende von Sensoren und Aktoren in einer Anlage verteilt sind. Dies erfordert die Vernetzung aller Komponenten durch so genannte Feldbussysteme. In der Vorlesung werden zunächst die Grundlagen der Datenkommunikation behandelt und anschließend die Techniken und Einsatzgebiete verschiedener Feldbusse erläutert. Da das Internet bzw. das Internetworking eine zunehmende Bedeutung für die Automatisierung erlangen, werden die grundlegenden Funktionsweisen ebenfalls behandelt. Gliederung:  Strukturen von Kommunikationssystemen, Topologien lokaler Netze  Philosophie des OSI-Referenzmodells  Protokolle der Bitübertragungsschicht  Protokolle der Sicherungsschicht  Gegenüberstellung von Feldbussystemen: z. B. Profibus, Interbus, CAN, Bitbus  Internet und Internetworking in der Automatisierung  Protokolle der TCP/IP Familie</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ec876-da6b-11ee-87db-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231232-001(Version04)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabrikorganisation</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Bedeutung der industriellen Produktion, Arten von Produkten, grundsätzliche Unternehmenstypen, Branchen  Systemtheoretische Grundlagen zur Beschreibung von Unternehmen  Aufbauorganisation, Ablauforganisation  Grundtypen der Produktionsorganisation  Lebenszyklusmodelle: Produktlebenszyklus, Fabriklebenszyklus  Funktionen zur Leistungserbringung: Produktentwicklung, Planung/ Arbeitsvorbereitung, Fertigung und Montage, Materialfluss/Logistik, Qualitätssicherung, Instandhaltung  Fabrikplanung  Fabrikbetrieb – Auftragsabwicklung  Fabrik-/Produktionsnetze  Trends: ökologische Aspekte, Industrie 4.0</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ea52d-da6b-11ee-8042-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">244038-007(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensorsignalverarbeitung</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Anforderungen an Sensoren und Messsysteme  Messsignale, Störeinflüsse und Schutzmaßnahmen  Modellieren von Sensorkennlinien  Parameterextraktionsverfahren  Kompensation von Einflusseffekten und Querempfindlichkeiten  Methoden der Selbstüberwachung und Selbstkalibrierung  Digitale Signalanalyse  Digitale Signalverarbeitung  Korrelationsmesstechnik</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e7305-da6b-11ee-9981-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242033-008(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnose- und Messtechnik</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Messung des Scheitelwertes hoher Spannungen, Transienten-Messsysteme  Teilentladungs- und Verlustfaktor-Messtechnik  Messung von Relaxiationsströmen und Wiederkehrspannungen  Diagnose und Messtechnik für Kabel, gasisolierte Schaltanlagen (GIS) und Transformatoren</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e730b-da6b-11ee-a973-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-006(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nichtlineare Regelung / Nonlinear Control</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Einführung und Allgemeine Eigenschaften nichtlinearer Systeme  Lyapunov-Theorie basierter Reglerentwurf  Dissipativität und Passivität  Differentialgeometrische Methoden  Moderne Verfahren der nichtlinearen Regelung</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e730e-da6b-11ee-ba44-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241031-011(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regelungstechnisches Praktikum</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Praktikum zu den Inhalten der Lehrveranstaltungen Nichtlineare Regelung, Optimale Regelung, Modellbildung und Identifikation dynamischer Systeme 1 sowie Modellbildung und Identifikation dynamischer Systeme 2. Die Studenten wählen zu Beginn des Semesters, welche konkreten Versuche bzw. Miniprojekte bearbeitet werden.</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ec878-da6b-11ee-9193-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">231232-011(Version04)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabrikökologie</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Im Modul werden Grundkenntnisse über ökologische Zusammenhänge beim Planen und Betreiben von Fabrikanlagen erworben. Die ökologische, wirtschaftliche und soziale Verantwortung des Ingenieurs wird im Rahmen der Gestaltung nachhaltiger Produktionsprozesse herausgestellt. An Beispielen werden typische betriebliche Umweltschutzmaßnahmen aufgezeigt und deren planerische Umsetzung behandelt. Einzelthemen sind u.a.:  Umweltsystemwissenschaftliche Grundlagen  Umweltproblemfelder im Industrieunternehmen  Energieeffizienz und Ressourceneffizienz  Umweltmanagementsystem (ISO bzw. EMAS)  Prozess- und produktintegrierter Umweltschutz  ökologieorientierte Fabrikplanung</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11ea52c-da6b-11ee-bea1-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">244038-003(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intelligente Sensorsysteme</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Grundlagen intelligenter Sensorsysteme  Sensoreigenschaften  Strukturen von Sensorsystemen  Störeinflüsse und Schutzmaßnahmen  Sensorsignale  Messdatenerfassung  Sensorschnittstellen und Messdatenerfassung  Reale Verstärker und Verstärkerschaltungen  Fortgeschrittene Verfahren der Analog-Digital-Umsetzung  Impedanzspektroskopie  Ausgewählte Sensoranwendungen</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11eff82-da6b-11ee-80cb-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">240100-425(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forschungs-/Auslandspraktikum</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Das Modul dient der praktischen Ausbildung im Bereich der Elektrotechnik, Informationstechnik und artverwandter Industriezweige im In- oder Ausland. Diese wird im Rahmen einer 20-wöchigen Tätigkeit in einem Unternehmen oder in einer Forschungs- und Entwicklungseinrichtung durchgeführt. Hauptziel ist es, die nationale und internationale Mobilität zu ermöglichen bzw. zu fördern. Dabei sollen die Kontakte der Professuren zur Industrie und zu Forschungszentren im In- und Ausland genutzt werden, um den Studenten anspruchsvolle und forschungsnahe Praktikumsaufenthalte zu vermitteln. Die Aufgabenstellung ist vor Beginn des Praktikums von einer Professur der Fakultät für Elektrotechnik und Informationstechnik schriftlich zu bestätigen.</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e1003-da6b-11ee-87bf-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242032-003(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bauelemente der Leistungselektronik / Power Semiconductor Devices</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1. Besonderheiten leistungselektronischer Bauelemente 2. Halbleiterphysikalische Grundlagen 2.1 Eigenschaften der Halbleiter, physikalische Grundlagen 2.2 pn-Übergänge 2.3 Einführung in die Herstellungstechnologie 3. Halbleiterbauelemente 3.1 pin Dioden 3.2 Schottky-Dioden 3.3 Bipolare Transistoren 3.4 Thyristoren 3.5 MOS-Transistoren 3.6 IGBTs 4. Einführung in die Aufbau- und Verbindungstechnik</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">270</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://tuc.web.engineering/module#d11e3814-da6b-11ee-9d72-cc153190a929">
+    <rdf:type rdf:resource="http://tuc.web.engineering/module#"/>
+    <ns1:hasModuleNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242033-007(Version01)</ns1:hasModuleNumber>
+    <ns1:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statistik, Zuverlässigkeit und Isolationskoordination</ns1:hasName>
+    <ns1:hasContent rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Empirische statistische und theoretische Verteilungsfunktionen  Nachweis der Unabhängigkeit von Messreihen durch statistische Testverfahren, Planung von Versuchen  Vergrößerungsgesetz  Anpassung des Isoliervermögens an zu erwartende Beanspruchungen  Ermittlung der Punktverfügbarkeit in elektrischen Netzen</ns1:hasContent>
+    <ns1:hasCreditPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns1:hasCreditPoints>
+    <ns1:hasWorkLoad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ns1:hasWorkLoad>
+    <ns2:hasUniversity rdf:resource="http://across/university#TUC"/>
+    <ns3:hasCourse rdf:resource="http://tuc/course#TUCRegenerativeEnergietechnik"/>
+  </rdf:Description>
+</rdf:RDF>
