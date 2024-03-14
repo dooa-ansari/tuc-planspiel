@@ -15,6 +15,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AdminNavbar from "./components/Navbar/AdminNavbar";
 import { api } from "../api/externalApi";
+import { getCoursesOfParticularUniversity, getModulesOfCourse, getUniversities } from "../api/compareModuleApi";
 
 const ModulesList = () => {
   const [universities, setUniversities] = useState([]);
@@ -186,29 +187,38 @@ const ModulesList = () => {
   };
 
   useEffect(() => {
-    api.get("adminapp/universitieslist")
-      .then(response => response.json())
-      .then(json => {
-        setUniversities(json);
-        setUniversitiesAdd(json);
-      })
-      .catch(error => console.error(error));
+    async function fetchUniversities() {
+      try {
+      const retrievedUniversities = await getUniversities();
+      console.log(retrievedUniversities);
+      if (
+      retrievedUniversities.status === 200 &&
+      retrievedUniversities.statusText === "OK"
+      ) {
+      setUniversities(retrievedUniversities.data);
+      }
+      } catch (error) {
+      console.log("error fetching universities");
+      }
+      }
+      fetchUniversities();
   }, []);
 
-  const onClickUniversity = item => {
-    getCoursesList(item.uri, item.name, false);
-  };
-
   const onClickCourse = item => {
+    console.log(item.courseName);
+    console.log(item.courseUri);
     setSelectedCourse(item.courseName);
     setSelectedCourseUri(item.courseUri);
-    setLoadingModules(1);
-    getModuleList(item.courseUri, item.courseName);
+    
+    getModuleList();
   };
 
   const onClickUniversityAdd = item => {
-    getCoursesList(item.uri, item.name, true);
-    setAddUniversityUri(item.name);
+    console.log(item.name, item.uri)
+    setSelectedUniversityName(item.name);
+    setSelectedUniversityUri(item.uri);
+    getCoursesList();
+    // setAddUniversityUri(item.name);
   };
 
   const onClickCourseAdd = item => {
@@ -216,41 +226,53 @@ const ModulesList = () => {
     setAddCourseUri(item.courseName);
   };
 
-  const getModuleList = (uri, name) => {
-    api.post("/modules/", {
-      body: JSON.stringify({
-        universityUri: selectedUniversityUri,
-        courseUri: uri,
-        courseName: name,
-      }),
-    })
-      .then(response => response.json())
-      .then(json => {
-        setModules(json.modules);
-        setLoadingModules(0);
-      })
-      .catch(error => console.error(error));
+  const getModuleList = async () => {
+    // api.post("/modules/", {
+    //   body: JSON.stringify({
+    //     universityUri: selectedUniversityUri,
+    //     courseUri: uri,
+    //     courseName: name,
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(json => {
+    //     setModules(json.modules);
+    //     setLoadingModules(0);
+    //   })
+    //   .catch(error => console.error(error));
+
+    try {
+      const courseUri = selectedCourseUri;
+      const courseName = selectedCourse;
+      const universityUri = selectedUniversityUri;
+ 
+      const data = { courseUri, courseName, universityUri };
+
+      const retrievedModules = await getModulesOfCourse(data);
+      console.log(retrievedModules);
+      setModules(retrievedModules.data.modules);
+    } catch (error) {
+      console.log("error fetching modules");
+    }
+
   };
 
-  const getCoursesList = (uri, name, isAdd) => {
-    api.post("/courses/", {
-      body: JSON.stringify({
-        universityUri: uri,
-        universityName: name,
-      }),
-    })
-      .then(response => response.json())
-      .then(json => {
-        if (!isAdd) {
-          setCourses(json.courses);
-        } else {
-          setCoursesAdd(json.courses);
-        }
-        setSelectedUniversityUri(uri);
-        setSelectedUniversityName(name);
-      })
-      .catch(error => console.error(error));
+  const getCoursesList = async () => {
+    try {
+      console.log(selectedUniversityName, setSelectedUniversityUri)
+      const universityName = selectedUniversityName;
+      const universityUri = selectedUniversityUri;
+
+      const data = { universityName, universityUri };
+
+      const retrievedCourses = await getCoursesOfParticularUniversity(data);
+      console.log(retrievedCourses);
+      setCourses(retrievedCourses.data.courses);
+    } catch (error) {
+      console.log("error fetching courses");
+    }
   };
+
 
   const getAddModuleFormModal = () => {
     return (
@@ -508,7 +530,7 @@ const ModulesList = () => {
           <Dropdown.Menu>
             {universities?.map(item => (
               <Dropdown.Item
-                onClick={() => onClickUniversity(item)}
+                onClick={() => onClickUniversityAdd(item)}
                 key={item.id}
               >
                 {item.name}
@@ -538,7 +560,7 @@ const ModulesList = () => {
           Add New Module
         </Button>
       </div>
-      {loadingModule == 0 && modules?.length > 0 && (
+      {modules?.length > 0 && (
         <div>
           <Table striped bordered hover>
             <thead>
