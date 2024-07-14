@@ -14,7 +14,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # the application crashes without emitting any logs due to buffering.
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /app
+WORKDIR /
 
 # Create a non-privileged user that the app will run under.
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
@@ -55,6 +55,7 @@ COPY . .
 
 # RUN chmod +rw uploads
 RUN chown -R root:root uploads
+RUN python -m spacy download en_core_web_sm
 
 # Expose the port that the application listens on.
 EXPOSE 8000
